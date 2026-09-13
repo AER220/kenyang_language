@@ -199,3 +199,96 @@ Some modern words are simply used as they are, by everyone, in ordinary conversa
     airport                     airport
 
 These are correct Kenyang usage, not a gap. Teach them plainly.
+### The prefix pattern — learn this and you can build hundreds of sentences
+
+The prefix is not decoration. It is WHO. The same verb takes a different prefix for each
+person, and the pattern repeats across every verb.
+
+    m' / Meh        I              m'pop      I am tired
+    O' / Wo         you            O'pop      you are tired   (also written Wo pop)
+    a' / à          he / she       a'tuor     he/she is coming
+    Sé              let us / we    Sé dok     let us go
+
+So to change who is doing something, change the prefix — do not change the verb.
+
+    m'pop           I am tired
+    O'pop           you are tired
+    Sé buereh       let us sleep
+    M'chi           I am
+    O'chi           you are
+
+A question to someone uses the O- form, because you are speaking TO them. A statement
+about yourself uses m-. Getting this backwards makes you say the opposite of what you meant.
+
+    Néyi, O'pop?        Good morning, are you tired?     (asking THEM)
+    Néyi, m'pop         Good morning, I am tired         (about MYSELF)
+
+## Eta'ya and Eta'ye — my father, your father
+
+The ending changes the owner. This is the same idea as the verb prefix, on the other end
+of the word.
+
+    Eta'ya          my father
+    Eta'ye          your father
+    Ma'ya           my mother
+
+    n-ném Eta'ya chi John       My father's name is John
+    n-ném Eta'ye chi Agha       What is your father's name?   (lit. your father's name is who)
+
+## Agha — who
+
+    Agha                        who
+    n-ném agha?                 whose name?
+    n-ném Eta'ye chi Agha       What is your father's name?
+
+## Yes and No — do not mix these up
+
+    Éh              yes
+    Éh Èh           no
+
+Éh Èh is NO. Never use it to agree with something.
+
+    Éh  M'chi siri              Yes, I am fine
+    Éh Èh  M'chi siri           NO, I am fine   — a contradiction, never write this
+
+## Being well, being unwell
+
+    siri            ok, fine, well
+    M'chi siri      I am fine
+    M'pu siri       I am not fine
+    Mma O'chi siri? Mma, are you ok?
+
+(siri is written here as it sounds, not as a formal spelling.)
+
+## Wanting, asking, keeping
+
+    Che mme         give me
+    Meh yan         I am looking for / I want   (literally: I am searching)
+    buereh          keep
+    buereh kenor    sleep
+
+    Éh Che mme ékwá!            Yes, give me plantain!
+    Meh yan buereh kenor        I want to sleep   (lit. I am looking to sleep)
+    M'pop, mma. Meh yan buereh kenor
+                                I am tired, Mum. I want to sleep.
+    Mma, buereh ékwá?           Mummy, shall I keep you plantain?
+    Éh! Sé buereh               Yes, let us sleep
+
+Careful: "M'pop ékwá" does NOT mean "I want plantain". It means "I am TIRED of plantain".
+To ask for something, use Che mme.
+
+## Greeting order
+
+Normally hello comes first, then good morning.
+
+    Mba'aaah! Néyi              Hello, good morning
+    Néyi, eh! M'chi siri        Good morning, yes! I am fine
+
+The order can be swapped, but that implies something else — it is what people do when
+they are gossiping. Teach the normal order.
+
+## mma used to a child
+
+mma means mother, but a parent also calls their own child mma as an affectionate name —
+the way an English speaker might call a child "sweetheart". So "Mma, buereh ékwá?" spoken
+by a mother TO her child is her using it as a pet name, not addressing her own mother.
