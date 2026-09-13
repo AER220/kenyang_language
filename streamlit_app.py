@@ -1120,6 +1120,9 @@ header[data-testid="stHeader"]{background:transparent;}
 html, body, [data-testid="stAppViewContainer"] *{
   font-family:'Inter','Gentium Book Plus',system-ui,sans-serif;
 }
+/* The whole app is designed light — cream page, dark text. Declaring the colour scheme
+   explicitly stops iOS Safari's dark mode from inverting bubbles, text or inputs on a
+   phone, which is what made the typed text invisible. */
 html{color-scheme: light;}
 [data-testid="stAppViewContainer"]{background:var(--paper); color-scheme: light;}
 .block-container{max-width:680px;padding-top:.6rem;padding-bottom:7rem;}
@@ -1184,17 +1187,44 @@ html{color-scheme: light;}
 [data-testid="stBottomBlockContainer"], [data-testid="stBottom"] > div,
 .stChatFloatingInputContainer{background:var(--paper) !important;}
 
+/* iOS Safari applies its own dark-mode colours to form fields, and it does so at a level
+   that beat my textarea rule — so on an iPhone the typed text came out dark on a dark
+   field and vanished. Three fixes together: force the dark ink colour on every element
+   inside the input (not just the textarea), tell the browser this control is light-scheme
+   so iOS stops recolouring it, and disable the -webkit text-fill that iOS uses to override
+   `color` on inputs. */
 [data-testid="stChatInput"]{
   background:#FFFFFF !important;
   border:1.5px solid #D6E3DA !important;
   border-radius:26px !important;
   box-shadow:0 2px 10px rgba(12,59,46,.06);
   transition:border-color .15s ease, box-shadow .15s ease;
+  color-scheme: light;                 /* stop iOS painting this control dark */
 }
 [data-testid="stChatInput"]:focus-within{
   border-color:var(--leaf) !important;
   box-shadow:0 2px 14px rgba(27,107,76,.16);
 }
+/* Force typed text dark, wherever Streamlit puts the box. The narrow selector
+   [data-testid="stChatInput"] textarea stopped matching on newer Streamlit, so this
+   targets the textarea AND text inputs app-wide, plus the bottom container by name.
+   Belt and braces on purpose — invisible input text is a total blocker on a phone. */
+/* THE ONE THAT MATTERS: this Streamlit version names the box stChatInputTextArea (one
+   word). Every earlier rule used "stChatInput textarea" with a space — a different
+   selector that never matched, which is why the text stayed invisible. This hits it. */
+textarea[data-testid="stChatInputTextArea"]{
+  color:#243029 !important;
+  -webkit-text-fill-color:#243029 !important;
+  caret-color:#1B6B4C !important;
+  font-size:16px !important;
+  opacity:1 !important;
+  background:transparent !important;
+}
+textarea[data-testid="stChatInputTextArea"]::placeholder{
+  color:#9AAAA1 !important;
+  -webkit-text-fill-color:#9AAAA1 !important;
+}
+
 textarea,
 input[type="text"],
 [data-testid="stChatInput"] textarea,
@@ -1212,15 +1242,21 @@ textarea::placeholder,
   color:#9AAAA1 !important;
   -webkit-text-fill-color:#9AAAA1 !important;
 }
+
+[data-testid="stChatInput"] textarea,
+[data-testid="stChatInput"] textarea *,
+[data-testid="stChatInput"] input{
   font-size:16px !important;
-  color:#243029 !important;
-  -webkit-text-fill-color:#243029 !important;
+  color:#243029 !important;            /* dark ink, spelled out so it can't be themed away */
+  -webkit-text-fill-color:#243029 !important;   /* iOS overrides `color` with this; pin it */
   background:transparent !important;
-  caret-color:#1B6B4C !important;
+  caret-color:#1B6B4C !important;      /* the blinking cursor, so it's visible too */
   opacity:1 !important;
 }
+[data-testid="stChatInput"] textarea::placeholder{
+  color:#9AAAA1 !important;
+  -webkit-text-fill-color:#9AAAA1 !important;
 }
-[data-testid="stChatInput"] textarea::placeholder{color:#9AAAA1 !important;}
 /* the send arrow */
 [data-testid="stChatInput"] button{color:var(--leaf) !important;}
 [data-testid="stChatInput"] button:hover{
@@ -1440,8 +1476,8 @@ if not st.session_state.messages:
     if c2.button("Test me"):
         starter = "Test me with a quick Kenyang question."
     c3, c4 = st.columns(2)
-    if c3.button("Teach me to count?"):
-        starter = "Teach me how to count in Kenyang, starting with one to five.?"
+    if c3.button("Teach me to count"):
+        starter = "Teach me how to count in Kenyang, starting with one to five."
     if c4.button("Start from the beginning"):
         starter = "I'm a complete beginner. Where should we start?"
 
