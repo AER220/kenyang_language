@@ -146,3 +146,56 @@ Kong covers both love and like — they are the same word in Kenyang.
 
     Juliet à Kong Besong        Juliet loves Besong
     M'kong                      I love / I like
+
+---
+
+## Possession — the thing comes FIRST, the owner after
+
+This is the opposite of English. English says "Besong's house"; Kenyang says house-Besong.
+
+    ɛkɛt Besong                 Besong's house          (house + Besong)
+    n-ném Eta'ya                my father's name        (name + my father)
+    n-ném Ma'ya                 my mother's name        (name + my mother)
+
+Put the whole sentence together and the owner still sits behind the thing:
+
+    n-ném Eta'ya chi John       My father's name is John
+    n-ném Ma'ya chi Manyi       My mother's name is Manyi
+
+NEVER write it the English way round. "Eta'ya n-ném" is wrong; it is "n-ném Eta'ya".
+
+## Noh and Chi — mother of, father of
+
+Noh and Chi already mean "mother of" and "father of". The owner follows directly. You do
+NOT add mma or eta as well — the relationship word carries it on its own.
+
+    Noh Paul                    Paul's mother       (mother-of + Paul)
+    Noh Kelvin                  Kelvin's mother
+    Chi Kelvin                  Kelvin's father     (father-of + Kelvin)
+
+    Noh Paul a'tuor             Paul's mother is coming
+
+WRONG: "Noh Paul mmá a'tuor". Noh already means mother of, so mmá must not appear too.
+
+Note that chi does double duty. Lower-case chi is "is" (n-ném Eta'ya chi John). Chi at
+the head of a name is "father of" (Chi Kelvin). The position tells you which.
+
+## mma — Mummy, used with a name out of respect
+
+mma means mother, but it is also how you address an older woman respectfully. We do not
+call an older woman by her bare name.
+
+    mma Lucy                    Mummy Lucy
+    mma Stephanie               Mummy Stephanie
+
+So mma Lucy is a way of addressing Lucy herself, with respect. It does not mean
+"Lucy's mother" — that would be Noh Lucy.
+
+## Words borrowed from English
+
+Some modern words are simply used as they are, by everyone, in ordinary conversation.
+
+    aeroplane                   aeroplane
+    airport                     airport
+
+These are correct Kenyang usage, not a gap. Teach them plainly.
