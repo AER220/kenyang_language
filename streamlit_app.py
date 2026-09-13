@@ -90,7 +90,13 @@ REFERENCE_FILES = {
     "man_to_his_family_ml_plain_text (1).txt",
     "gemini-code-1789075633901.md",
 }
-EXCLUDE_FILES = set()
+EXCLUDE_FILES = {
+    # The FULL.md is the proofreading dump of the lexicon — every entry in it is already
+    # in kenyang_lexicon_core.jsonl, but messier. Loading both doubles the dictionary and
+    # feeds the model two spellings of the same word. The .md stays in the folder so I can
+    # read it; it just doesn't go to Nɛpɛm.
+    "kenyang_lexicon_full.md",
+}
 
 # --- the grammar spine -------------------------------------------------------
 # Word order, concord and tone are needed for EVERY sentence I ask him to build, and a
@@ -100,10 +106,15 @@ EXCLUDE_FILES = set()
 #
 # The teaching chapters belong here more than the scholarly files do: a chapter SHOWS the
 # noun phrase built slot by slot, which is the pattern the model copies. Any file whose
-# name contains one of these words is pinned to the spine, so I don't have to list exact
-# filenames — Ch4_Possessives_core.txt, chapter-05-adjectives.txt all match on their own.
-SPINE_KEYWORDS = ("possess", "adjective", "conjugat", "negation", "preposition",
-                  "demonstrative", "plural", "orthography", "noun_ram")
+# name contains one of these words is pinned to the spine, so I never have to rename a
+# file to make it work — ch4_Relationship_chategories.txt matches on "relationship",
+# CH_5_prepositions_adjectives_etc.txt on "preposition", and so on.
+#
+# Only the COMPOSITIONAL machinery goes here. The spine rides in every single message, so
+# every character in it is paid for on every turn. Word lists (ch10 opposites, ch12 cheat
+# sheet, the dictionaries) retrieve perfectly well on their own and stay out.
+SPINE_KEYWORDS = ("possess", "relationship", "adjective", "conjugat", "negation",
+                  "preposition", "demonstrative", "plural", "orthography", "noun_ram")
 SPINE_FILES = {
     "kenyang_orthography_ref.jsonl",       # noun phrase order, AP, tone, tense, negation
 }
@@ -232,6 +243,67 @@ def repair_encoding(text):
 DROP_KEYS = {"document_id", "source", "source_file", "document", "author"}
 
 
+def parse_json_records(raw):
+    """
+    Turn JSON or JSONL text into readable lines, dropping the source-naming keys.
+
+    Split out of read_file because several of my files are JSONL saved with a .txt
+    extension, and routing on the extension alone meant those were fed to Nɛpɛm as raw
+    JSON — braces, quotes, and a document_id naming the source on every single line.
+    """
+    try:
+        blob = json.loads(raw)
+        items = blob if isinstance(blob, list) else [blob]
+    except Exception:
+        items = []
+        for line in raw.split("\n"):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                items.append(json.loads(line))
+            except Exception:
+                items.append(line)
+    rows = []
+    for o in items:
+        if not isinstance(o, dict):
+            rows.append(str(o))
+            continue
+        o = {k: v for k, v in o.items() if k.lower() not in DROP_KEYS}
+        if not o:
+            continue
+        # A flat record reads better as "key: value | key: value". A nested one — a
+        # grammar rule with a table of concords inside it — loses its shape that way, so
+        # keep the JSON. ensure_ascii=False matters: without it every ɛ, ɔ and tone mark
+        # becomes \\u025b and stops matching anything a learner types.
+        if all(not isinstance(v, (dict, list)) for v in o.values()):
+            rows.append(" | ".join(f"{k}: {v}" for k, v in o.items()))
+        else:
+            rows.append(json.dumps(o, ensure_ascii=False))
+    return "\n".join(rows)
+
+
+def looks_like_json(raw):
+    """True if the text is really JSON or JSONL, whatever the file is called."""
+    head = raw.lstrip()[:1]
+    if head not in "[{":
+        return False
+    for line in raw.split("\n"):
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            json.loads(line)
+            return True                  # a whole record on one line: JSONL
+        except Exception:
+            break
+    try:
+        json.loads(raw)                  # or one JSON document across many lines
+        return True
+    except Exception:
+        return False
+
+
 def read_file(path):
     """
     One reader for all four of my formats. Returns (text, problem).
@@ -256,43 +328,17 @@ def read_file(path):
             fixed, _ = repair_encoding(raw)
             return tidy(fixed), ""
 
-        if ext in ("jsonl", "json"):
-            with open(path, encoding="utf-8") as f:
-                raw = f.read().strip()
-            try:
-                blob = json.loads(raw)
-                items = blob if isinstance(blob, list) else [blob]
-            except Exception:
-                items = []
-                for line in raw.split("\n"):
-                    line = line.strip()
-                    if not line:
-                        continue
-                    try:
-                        items.append(json.loads(line))
-                    except Exception:
-                        items.append(line)
-            rows = []
-            for o in items:
-                if not isinstance(o, dict):
-                    rows.append(str(o))
-                    continue
-                o = {k: v for k, v in o.items() if k.lower() not in DROP_KEYS}
-                if not o:
-                    continue
-                # A flat record reads better as "key: value | key: value". A nested one —
-                # a grammar rule with a table of concords inside it — loses its shape that
-                # way, so keep the JSON. ensure_ascii=False matters: without it every ɛ, ɔ
-                # and tone mark becomes \u025b and stops matching anything a learner types.
-                if all(not isinstance(v, (dict, list)) for v in o.values()):
-                    rows.append(" | ".join(f"{k}: {v}" for k, v in o.items()))
-                else:
-                    rows.append(json.dumps(o, ensure_ascii=False))
-            return tidy("\n".join(rows)), ""
-
         with open(path, encoding="utf-8", errors="replace") as f:
-            fixed, _ = repair_encoding(f.read())      # .md conversions carry it too
-            return tidy(fixed), ""
+            raw = f.read().strip()
+
+        # Content, not extension. Several of my dictionaries are JSONL saved as .txt, and
+        # trusting the name meant they went in as raw JSON with the source name attached
+        # to every line. Sniff the content and route on what it actually is.
+        if ext in ("jsonl", "json") or looks_like_json(raw):
+            return tidy(parse_json_records(raw)), ""
+
+        fixed, _ = repair_encoding(raw)               # .md conversions carry the shift too
+        return tidy(fixed), ""
     except Exception as e:
         return "", f"{type(e).__name__}: {e}"
 
@@ -665,6 +711,38 @@ def exact_hits(query, chunks, per_term=4):
     return picks
 
 
+def drop_near_duplicates(chunks, picked, cap, threshold=0.72):
+    """
+    Remove passages that say the same thing as one already chosen.
+
+    I ended up with seven overlapping word lists — four old partial dictionaries, a new
+    one, the converted lexicon, and a proofreading dump. Ask for "dog" and retrieval would
+    happily spend six of its seventy slots on six copies of the same entry, crowding out
+    the grammar and the examples. This keeps the first copy and spends the freed slots on
+    something the model hasn't already been told.
+
+    Overlap is measured against the shorter passage, so a short dictionary line counts as
+    a duplicate of a longer one that contains it.
+    """
+    kept, kept_sets = [], []
+    for i in picked:
+        toks = set(tokenize(chunks[i]["text"]))
+        if len(toks) >= 8:
+            dupe = False
+            for s in kept_sets:
+                shorter = min(len(toks), len(s))
+                if shorter and len(toks & s) / shorter >= threshold:
+                    dupe = True
+                    break
+            if dupe:
+                continue
+        kept.append(i)
+        kept_sets.append(toks)
+        if len(kept) >= cap:
+            break
+    return kept
+
+
 def search(query, chunks, vectors, lexicon=None, cap=MAX_PASSAGES):
     """
     Hybrid, multi-probe retrieval: exact matches first, then meaning, then rarity.
@@ -680,9 +758,12 @@ def search(query, chunks, vectors, lexicon=None, cap=MAX_PASSAGES):
     qs = probes_for(query)
     picked, seen = [], set()
     boost = np.array([TIER_BOOST[c["tier"]] for c in chunks], dtype=np.float32)
+    # Collect half again as many as I need, so that dropping duplicates further down
+    # frees a slot for new material instead of just returning fewer passages.
+    room = int(cap * 1.6)
 
     # 1. exact matches, reserved a slice of the budget so meaning can't crowd them out
-    _merge(exact_hits(query, chunks), picked, seen, min(cap, EXACT_RESERVE))
+    _merge(exact_hits(query, chunks), picked, seen, min(room, EXACT_RESERVE * 2))
 
     # 2. meaning
     if vectors is not None and len(vectors) == len(chunks):
@@ -691,8 +772,8 @@ def search(query, chunks, vectors, lexicon=None, cap=MAX_PASSAGES):
             for n, row in enumerate(mat):
                 per = MAIN_PROBE_K if n == 0 else SUB_PROBE_K
                 sims = vectors @ row + boost
-                if _merge(np.argsort(-sims)[:per], picked, seen, cap):
-                    return [chunks[i] for i in picked]
+                if _merge(np.argsort(-sims)[:per], picked, seen, room):
+                    return [chunks[i] for i in drop_near_duplicates(chunks, picked, cap)]
 
     # 3. rarity-weighted keywords, now running alongside rather than instead
     if lexicon:
@@ -710,9 +791,9 @@ def search(query, chunks, vectors, lexicon=None, cap=MAX_PASSAGES):
                     scores.append((hit + TIER_BOOST[chunks[i]["tier"]], i))
             scores.sort(key=lambda s: s[0], reverse=True)
             per = MAIN_PROBE_K if n == 0 else SUB_PROBE_K
-            if _merge([i for _s, i in scores[:per]], picked, seen, cap):
+            if _merge([i for _s, i in scores[:per]], picked, seen, room):
                 break
-    return [chunks[i] for i in picked]
+    return [chunks[i] for i in drop_near_duplicates(chunks, picked, cap)]
 
 
 @st.cache_data(show_spinner=False, persist="disk")
@@ -1263,6 +1344,16 @@ with st.sidebar:
         if troubles:
             st.error("These files did not load:\n\n"
                      + "\n\n".join(f"**{t['file']}** — {t['problem']}" for t in troubles))
+
+        # Overlapping files aren't fatal — retrieval drops near-duplicates now — but they
+        # cost tokens and make it harder to tell which spelling Nɛpɛm is teaching from.
+        wordlists = [r["file"] for r in manifest
+                     if any(k in r["file"].lower() for k in ("dictionary", "lexicon"))]
+        if len(wordlists) > 2:
+            st.warning(f"{len(wordlists)} overlapping word lists loaded: "
+                       + ", ".join(wordlists)
+                       + ". Duplicate passages are filtered at retrieval, but trimming the "
+                         "superseded ones would make the corpus cheaper and clearer.")
 
         with st.expander("What loaded"):
             for row in manifest:
