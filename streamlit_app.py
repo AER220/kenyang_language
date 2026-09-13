@@ -1350,7 +1350,7 @@ THINKING = (f'<div class="row bot"><div class="ava ava-bot">{AVA_LEAF}</div>'
 # --- header FIRST ------------------------------------------------------------
 # This used to sit below the knowledge loading, which meant that on a cold start the
 # page was blank cream until every PDF had been parsed. Draw the app, then work.
-st.markdown('<div class="hero"><p class="name">Nɛpɛ́m -Life</p><div class="rule"></div>'
+st.markdown('<div class="hero"><p class="name">Nɛpɛ́m - Life</p><div class="rule"></div>'
             '<p class="tag">Kɛ́nyāŋ - the language of home</p></div>', unsafe_allow_html=True)
 
 # --- load the knowledge, out loud --------------------------------------------
