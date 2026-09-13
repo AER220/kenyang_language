@@ -1195,9 +1195,23 @@ html{color-scheme: light;}
   border-color:var(--leaf) !important;
   box-shadow:0 2px 14px rgba(27,107,76,.16);
 }
+textarea,
+input[type="text"],
 [data-testid="stChatInput"] textarea,
-[data-testid="stChatInput"] textarea *,
-[data-testid="stChatInput"] input{
+[data-baseweb="textarea"] textarea,
+[data-baseweb="input"] input,
+.stChatInput textarea,
+[data-testid="stBottomBlockContainer"] textarea{
+  color:#243029 !important;
+  -webkit-text-fill-color:#243029 !important;
+  caret-color:#1B6B4C !important;
+  opacity:1 !important;
+}
+textarea::placeholder,
+[data-testid="stChatInput"] textarea::placeholder{
+  color:#9AAAA1 !important;
+  -webkit-text-fill-color:#9AAAA1 !important;
+}
   font-size:16px !important;
   color:#243029 !important;
   -webkit-text-fill-color:#243029 !important;
