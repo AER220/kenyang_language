@@ -109,3 +109,40 @@ things, and is the word you would use affectionately with a small child.
 
 Kenyang uses the letters ɛ ɔ ŋ ʉ ɨ. Note that ɛ is the Kenyang letter (U+025B), NOT the
 Greek letter ε, which looks almost identical and is a different character entirely.
+
+---
+
+## Who is doing it — the prefix on the verb
+
+The prefix on the verb says WHO. Changing it changes the meaning completely, and getting
+it wrong is how you end up greeting someone when you meant to describe them.
+
+    a'tuor          is coming        (he / she)
+    O'tuor          have you come?   (addressed to YOU — this is a greeting)
+    M'kong          I love / I like
+    à Kong          he / she loves / likes
+
+O'tuor is a greeting, not a statement. "mma O'tuor?" is "Mother, have you come?" — you
+are speaking TO her. To say she IS coming, you need a'tuor.
+
+    John a'tuor                 John is coming
+    John mma a'tuor             John's mother is coming
+    mma O'tuor?                 Mother, have you come?          (a greeting)
+
+Never use O'tuor to say someone is coming. Never write a pronoun in brackets like [Yi] —
+choose the right form and write it plainly.
+
+## chi — "is"
+
+chi means "is". It joins a thing to what it is.
+
+    n-ném Eta'ya chi John       My father's name is John
+        n-ném Eta'ya  =  my father's name
+        chi John      =  is John
+
+## Loving and liking
+
+Kong covers both love and like — they are the same word in Kenyang.
+
+    Juliet à Kong Besong        Juliet loves Besong
+    M'kong                      I love / I like

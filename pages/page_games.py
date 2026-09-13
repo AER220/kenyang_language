@@ -34,9 +34,8 @@ WORDS_FILE = os.path.join(_ROOT, "words.jsonl")
 AUDIO_DIR = os.path.join(_ROOT, "audio")
 ROUNDS = 8                      # questions in one round of a game
 
-st.set_page_config(page_title="Nɛpɛm Games — Kenyang for children",
-                   page_icon="🌿", layout="centered",
-                   initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Nɛpɛm — Games", page_icon="🎮",
+                   layout="centered", initial_sidebar_state="collapsed")
 
 # =============================================================================
 # LOOK — same palette as the tutor, bigger targets because children use phones
