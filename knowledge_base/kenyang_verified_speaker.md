@@ -342,3 +342,81 @@ Both are heard, but moh Madem is the real Kenyang: moh is son, and Madem is God.
 taken from outside the language. When teaching Kenyang, teach moh Madem, and mention Yesu
 so a learner recognises it when they hear it.
     moh                     son
+
+    ---
+
+## Joining words — "but", "if", "when", "or"
+
+These connect two ideas. Without them you can only say single lines; with them you can
+tell a story.
+
+    ke              but
+    kpáte           except
+    mbák            if
+    mbo             like            (as in "like this")
+    ndu             as
+    tiki-mpok       when
+    yɛ chí          or
+    ndakayi         why
+
+## Where things are
+
+    amem            inside
+    amfay           above, on, up
+    anten           below
+    ammik           on the ground, down
+    kékwót          beside, near
+    nefí            outside
+    nnet            bottom
+    bákú-bákú       side by side
+
+## The people words (subject pronouns)
+
+    mme             I
+    wo              you
+    bá              they
+    besé            we
+    agha            who
+
+## When and how
+
+    fa              here
+    fá              where
+    afo             there
+    ambi            before, ahead
+    ansem           after
+    ansem mpok      later
+    kéfú            again
+    kembɛp          early
+    áyák            quickly
+    mandú-mandú     slowly
+    chenchem        together
+    na              how
+    kpák            never
+    beya            plenty, many
+
+## Yes and No — the everyday forms
+
+There is more than one way to say yes and no, and speakers move between them.
+
+    ě               yes
+    eh              yes            (the plain everyday "yes")
+    ǎyi             no
+    chá             no             (also said as "eh eh")
+
+So "eh eh" (chá) is no, even though "eh" on its own is yes. The doubling is what flips it.
+
+## Not — the negative "pú"
+
+pú makes a sentence negative — it is the "not". It sits after the person-word.
+
+    mme pú rong             I am not going
+    m'pú rong               I am not going    (the short, spoken form)
+
+So pú is how you turn "I am going" into "I am NOT going". The full form is "mme pú", and
+in fast speech people run it together as "m'pú". This is the ordinary way to say you are
+not doing something.
+
+Note: some sources also list pú and ké as negative markers used in commands ("do not…"),
+and bhiki as the negative in the past ("did not…"). Keep those for later; the everyday
+one to teach first is pú for "not".

@@ -1,0 +1,718 @@
+{"kenyang": "ammik", "english": "on the ground, down", "pos": "prep"}
+{"kenyang": "achák", "english": "next.", "pos": "adv"}
+{"kenyang": "afo", "english": "there.", "pos": "adv"}
+{"kenyang": "agha", "english": "who.", "pos": "pron"}
+{"kenyang": "ambi", "english": "before, ahead", "pos": "adv"}
+{"kenyang": "amem", "english": "inside.", "pos": "prep"}
+{"kenyang": "amfay", "english": "above, on, up.", "pos": "prep"}
+{"kenyang": "ánáy", "english": "intercourse.", "pos": "vi"}
+{"kenyang": "anɛfú", "english": "next.", "pos": "vi"}
+{"kenyang": "ansem", "english": "after.", "pos": "adv"}
+{"kenyang": "ansem mpok", "english": "later.", "pos": "adv"}
+{"kenyang": "anten", "english": "below.", "pos": "prep"}
+{"kenyang": "awu", "english": "there.", "pos": "adv"}
+{"kenyang": "áyák", "english": "quickly.", "pos": "adv"}
+{"kenyang": "áyák-áyák", "english": "very quickly.", "pos": "adv"}
+{"kenyang": "ǎyi", "english": "no.", "pos": "adv"}
+{"kenyang": "bá", "english": "they", "pos": "subj. pron."}
+{"kenyang": "bǎ", "english": "you.", "pos": "subj. pron"}
+{"kenyang": "bákú-bákú", "english": "side by side.", "pos": "prep"}
+{"kenyang": "báŋ", "english": "to gallop.", "pos": "vt"}
+{"kenyang": "barí", "english": "to groan.", "pos": "vi"}
+{"kenyang": "baróŋ-baróŋ", "english": "to stripe.", "pos": "vi"}
+{"kenyang": "baru", "english": "to be few.", "pos": "vi"}
+{"kenyang": "bati", "english": "to be wide, to be flat.", "pos": "vi"}
+{"kenyang": "baweré-bawet", "english": "to be oily.", "pos": "vi"}
+{"kenyang": "báy", "english": "to ferment.", "pos": "vt"}
+{"kenyang": "báyá-báyá", "english": "to be peppery.", "pos": "vi"}
+{"kenyang": "baytí", "english": "to kindle (a fire), to persuade.", "pos": "vt"}
+{"kenyang": "bé", "english": "to scold.", "pos": "vt"}
+{"kenyang": "bé bhón nsóntí", "english": "to sweat.", "pos": "vt"}
+{"kenyang": "bebe", "english": "to be in pain, to be in agony, to be harsh, to be rash.", "pos": "vi"}
+{"kenyang": "beberi-beberi", "english": "to be chalky.", "pos": "vi"}
+{"kenyang": "bebheri", "english": "to be dim.", "pos": "vi"}
+{"kenyang": "bébhérí-bébhérí", "english": "to be fuzzy.", "pos": "vi"}
+{"kenyang": "becháy", "english": "to be hideous, to be fierce.", "pos": "vi"}
+{"kenyang": "beghebhe-beghep", "english": "to be bony.", "pos": "vi"}
+{"kenyang": "beko", "english": "to be barren.", "pos": "vi"}
+{"kenyang": "bɛkɔk", "english": "to be old.", "pos": "vi"}
+{"kenyang": "bekot", "english": "to glimpse.", "pos": "vt"}
+{"kenyang": "békwáka", "english": "to cough.", "pos": "vt"}
+{"kenyang": "beri", "english": "to be beautiful.", "pos": "vi"}
+{"kenyang": "bɛri ndu nɛghó", "english": "to be attractive.", "pos": "vi"}
+{"kenyang": "berí-ńtí", "english": "to be grateful, to be kind.", "pos": "vi"}
+{"kenyang": "besé", "english": "we.", "pos": "pron"}
+{"kenyang": "besem", "english": "to be dent.", "pos": "vi"}
+{"kenyang": "bét", "english": "to drown.", "pos": "vi"}
+{"kenyang": "beya", "english": "plenty, many, several.", "pos": "adv"}
+{"kenyang": "bik", "english": "to scream, to shriek, to shout.", "pos": "vt"}
+{"kenyang": "bik ne maŋák", "english": "to uproar.", "pos": "vt"}
+{"kenyang": "biŋí", "english": "to call.", "pos": "vt"}
+{"kenyang": "binirí", "english": "to roll.", "pos": "vt"}
+{"kenyang": "bínírí", "english": "to become whole.", "pos": "vi"}
+{"kenyang": "bíŋírí-bíŋírí", "english": "to become round.", "pos": "vi"}
+{"kenyang": "bo-mankem", "english": "everyone.", "pos": "det"}
+{"kenyang": "bon", "english": "to stir.", "pos": "vt"}
+{"kenyang": "bhabharí", "english": "to guard.", "pos": "vt"}
+{"kenyang": "bhák chak", "english": "to be honest.", "pos": "vi"}
+{"kenyang": "bhák mak-nkay", "english": "to admire.", "pos": "vt"}
+{"kenyang": "bhák tíkí tiki tíkí", "english": "to be fragile.", "pos": "vi"}
+{"kenyang": "bháp", "english": "to smoke something, to warm, to bask.", "pos": "vt"}
+{"kenyang": "bhát", "english": "to recount, to repeat", "pos": "vt"}
+{"kenyang": "bháy", "english": "to marry.", "pos": "vt"}
+{"kenyang": "bhé", "english": "to give birth.", "pos": "vt"}
+{"kenyang": "bhesí", "english": "to appear.", "pos": "vt"}
+{"kenyang": "bheme", "english": "to bury.", "pos": "vt"}
+{"kenyang": "bhené", "english": "to embrace.", "pos": "vt"}
+{"kenyang": "bóŋ", "english": "to migrate.", "pos": "vt"}
+{"kenyang": "bók", "english": "to cook in a special way.", "pos": "vt"}
+{"kenyang": "bú neme", "english": "to heal.", "pos": "vt"}
+{"kenyang": "bu", "english": "to belch.", "pos": "vt"}
+{"kenyang": "bwé", "english": "to flee, to run", "pos": "vt"}
+{"kenyang": "bwere", "english": "to store, to reserve, to sleep, to lie down.", "pos": "vt"}
+{"kenyang": "bwere ammik", "english": "to lay down.", "pos": "vt"}
+{"kenyang": "bweré pépép", "english": "to keep clean.", "pos": "vt"}
+{"kenyang": "bweré-nkáp", "english": "to save money.", "pos": "vt"}
+{"kenyang": "bwét", "english": "to be still.", "pos": "vt"}
+{"kenyang": "bwɔptí", "english": "to pick up leaves.", "pos": "vt"}
+{"kenyang": "byák", "english": "to foresake.", "pos": "vt"}
+{"kenyang": "byák amó", "english": "to clap hands.", "pos": "vt"}
+{"kenyang": "byakarí", "english": "to fidget.", "pos": "vt"}
+{"kenyang": "byó betik", "english": "to supervise.", "pos": "vt"}
+{"kenyang": "byɔkɔtí", "english": "to erase.", "pos": "vt"}
+{"kenyang": "bhép", "english": "to ask, to request, to demand.", "pos": "vt"}
+{"kenyang": "bhese", "english": "to hide.", "pos": "vt"}
+{"kenyang": "bhésé-bhésé", "english": "to be hidden.", "pos": "vi"}
+{"kenyang": "bhiki", "english": "negative marker in the past tense.", "pos": "neg"}
+{"kenyang": "bhiŋí", "english": "to signal, to call.", "pos": "vt"}
+{"kenyang": "bho", "english": "to begin, to start, to resume.", "pos": "vt"}
+{"kenyang": "bhóŋ", "english": "to own, to have, to obtain, to recover, to afford", "pos": "vt"}
+{"kenyang": "bhóŋ mbwép", "english": "to be feverish.", "pos": "vi"}
+{"kenyang": "bhóŋ menye", "english": "to conceive.", "pos": "vt"}
+{"kenyang": "bhón-bó", "english": "to give birth.", "pos": "vt"}
+{"kenyang": "chá", "english": "no.", "pos": "neg"}
+{"kenyang": "chǎ", "english": "to overcome, to overpower, to win.", "pos": "vt"}
+{"kenyang": "cha ndu neka", "english": "to disgust.", "pos": "vt"}
+{"kenyang": "chak", "english": "to become straight, to be right.", "pos": "vi"}
+{"kenyang": "chák", "english": "to examine, to spray.", "pos": "vt"}
+{"kenyang": "chák-esyé", "english": "to gamble.", "pos": "vt"}
+{"kenyang": "chaptí", "english": "to sharpen.", "pos": "vt"}
+{"kenyang": "chay", "english": "to be damp.", "pos": "vi"}
+{"kenyang": "cháy", "english": "to fear.", "pos": "vt"}
+{"kenyang": "che", "english": "to peel.", "pos": "vt"}
+{"kenyang": "chemchem", "english": "to be deep.", "pos": "vi"}
+{"kenyang": "cheme", "english": "to be deep.", "pos": "vi"}
+{"kenyang": "chemtí", "english": "to mix, to add.", "pos": "vt"}
+{"kenyang": "chen", "english": "to refuse.", "pos": "vt"}
+{"kenyang": "chenchem", "english": "together.", "pos": "adv"}
+{"kenyang": "chenchém", "english": "to be sunken.", "pos": "vi"}
+{"kenyang": "chép", "english": "to lack.", "pos": "vt"}
+{"kenyang": "chí", "english": "to be.", "pos": "vt"}
+{"kenyang": "chiti", "english": "to choke.", "pos": "vt"}
+{"kenyang": "chik", "english": "to hobble.", "pos": "vt"}
+{"kenyang": "chiki", "english": "to sneeze.", "pos": "vt"}
+{"kenyang": "chiŋtí", "english": "to stagger, to fumble.", "pos": "vt"}
+{"kenyang": "chití besí", "english": "to frown.", "pos": "vt"}
+{"kenyang": "chók", "english": "to patch.", "pos": "vt"}
+{"kenyang": "choti", "english": "to squat, to bend down.", "pos": "vt"}
+{"kenyang": "chɔkó", "english": "to sit, to stay.", "pos": "vt"}
+{"kenyang": "chɔkó chábhé", "english": "to sit seperate from others.", "pos": "vt"}
+{"kenyang": "chɔkó gbok", "english": "to sit like a lifeless thing.", "pos": "vt"}
+{"kenyang": "chɔkó kuré", "english": "to sit steadily.", "pos": "vt"}
+{"kenyang": "chɔkó kpak", "english": "to sit quietly.", "pos": "vt"}
+{"kenyang": "chɔkó nɛbhwét", "english": "to settle in a place.", "pos": "vt"}
+{"kenyang": "chɔkó pyáŋ", "english": "to sit freely.", "pos": "vt"}
+{"kenyang": "chɔkó tɛp", "english": "to sit straight.", "pos": "vt"}
+{"kenyang": "chókó-chókó", "english": "remain seated.", "pos": "vt"}
+{"kenyang": "chokotí", "english": "to crumble.", "pos": "vt"}
+{"kenyang": "choŋtí", "english": "to spoil, to destroy, to condemn.", "pos": "vt"}
+{"kenyang": "choŋtí nkáp", "english": "to spoil money carelessly.", "pos": "vt"}
+{"kenyang": "chóp", "english": "to dilute.", "pos": "vt"}
+{"kenyang": "chop-mfok", "english": "to pollinate.", "pos": "vt"}
+{"kenyang": "choptí", "english": "to confuse.", "pos": "vt"}
+{"kenyang": "chorí mbi", "english": "to whitewash.", "pos": "vt"}
+{"kenyang": "chu", "english": "red.", "pos": "adj"}
+{"kenyang": "chube", "english": "to be wild.", "pos": "vi"}
+{"kenyang": "chwe", "english": "to enter, to intervene.", "pos": "vt"}
+{"kenyang": "chwé", "english": "to scrape.", "pos": "vt"}
+{"kenyang": "chwét", "english": "to peck.", "pos": "vt"}
+{"kenyang": "chwop", "english": "to contribute, to arrive, to attain.", "pos": "vt"}
+{"kenyang": "chyě", "english": "to give.", "pos": "vt"}
+{"kenyang": "chyě bakaysi", "english": "to give ones opinion.", "pos": "vt"}
+{"kenyang": "chyě efwet", "english": "to wound.", "pos": "vt"}
+{"kenyang": "chyě enyin", "english": "to deliver an object.", "pos": "vt"}
+{"kenyang": "chyě ɛyoŋ", "english": "to alarm, to command.", "pos": "vt"}
+{"kenyang": "chye nébhi", "english": "to breastfeed.", "pos": "vt"}
+{"kenyang": "chyě nekwak", "english": "to give assistance.", "pos": "vt"}
+{"kenyang": "chyě-esɔŋori", "english": "to disturb.", "pos": "vt"}
+{"kenyang": "chyě-ndak", "english": "to complain.", "pos": "vt"}
+{"kenyang": "chyet", "english": "to block.", "pos": "vt"}
+{"kenyang": "chyét", "english": "to obstruct, to interrupt, to defend.", "pos": "vt"}
+{"kenyang": "dak", "english": "to tear, to split.", "pos": "vt"}
+{"kenyang": "dén", "english": "to beat, to whip.", "pos": "vt"}
+{"kenyang": "dep", "english": "to stamp, to hit.", "pos": "vt"}
+{"kenyang": "dep έbhémé", "english": "to speak through signs.", "pos": "vt"}
+{"kenyang": "dep ne nɛkák awó", "english": "to slap.", "pos": "vt"}
+{"kenyang": "dep nsáp", "english": "to spank.", "pos": "vt"}
+{"kenyang": "depti", "english": "to flop.", "pos": "vt"}
+{"kenyang": "des", "english": "to be smooth.", "pos": "vi"}
+{"kenyang": "di", "english": "to cry, to sob, to wail.", "pos": "vt"}
+{"kenyang": "dík", "english": "to feed.", "pos": "vt"}
+{"kenyang": "din", "english": "to pound fufu.", "pos": "vt"}
+{"kenyang": "dók", "english": "to jump, to skip.", "pos": "vt"}
+{"kenyang": "dókó-chwop", "english": "to pounce.", "pos": "vt"}
+{"kenyang": "dokorí", "english": "to be troublesome.", "pos": "vt"}
+{"kenyang": "do", "english": "to let go, to release.", "pos": "vt"}
+{"kenyang": "dok", "english": "to be tasteless.", "pos": "vi"}
+{"kenyang": "duré", "english": "to kindle a fire, to light a fire.", "pos": "vt"}
+{"kenyang": "dyé", "english": "to drain, to pour in another vessel.", "pos": "vt"}
+{"kenyang": "ě", "english": "yes.", "pos": "adv"}
+{"kenyang": "£bhíki fwét chí", "english": "to be only.", "pos": "vi"}
+{"kenyang": "ébak", "english": "to sour (especially food).", "pos": "vi"}
+{"kenyang": "ébé", "english": "to be painful.", "pos": "vi"}
+{"kenyang": "ébep", "english": "to be bad.", "pos": "vi"}
+{"kenyang": "ebhe ɛné awu", "english": "over there.", "pos": "adv"}
+{"kenyang": "ebhó-ews", "english": "to be naked.", "pos": "vi"}
+{"kenyang": "ɛbhókórí", "english": "to be broken.", "pos": "vi"}
+{"kenyang": "échak", "english": "to germinate.", "pos": "vt"}
+{"kenyang": "écháp", "english": "to be sharp.", "pos": "vi"}
+{"kenyang": "échik", "english": "to be fat, to be big, to be rich.", "pos": "vi"}
+{"kenyang": "echinti", "english": "to be absurd.", "pos": "vi"}
+{"kenyang": "efe", "english": "to faint, to be unconcious.", "pos": "vt"}
+{"kenyang": "égu", "english": "to be broken.", "pos": "vi"}
+{"kenyang": "éjwí", "english": "to be full.", "pos": "vi"}
+{"kenyang": "éjwí raŋsi", "english": "to be full to the brim.", "pos": "vt"}
+{"kenyang": "ɛko", "english": "to be new, to be strange.", "pos": "vi"}
+{"kenyang": "ekwak", "english": "to desire, to need.", "pos": "vt"}
+{"kenyang": "ékway", "english": "to be correct, to be enough.", "pos": "vi"}
+{"kenyang": "ékwen", "english": "to be cold.", "pos": "vi"}
+{"kenyang": "ekpórók", "english": "to gobble.", "pos": "vi"}
+{"kenyang": "Emené-emene", "english": "to be hairy.", "pos": "vi"}
+{"kenyang": "ené", "english": "which.", "pos": "det"}
+{"kenyang": "ené-mboŋ", "english": "to own.", "pos": "vt"}
+{"kenyang": "énen", "english": "to be bitter.", "pos": "vi"}
+{"kenyang": "enton", "english": "to be half full.", "pos": "vi"}
+{"kenyang": "enyinti", "english": "to be sweet.", "pos": "vi"}
+{"kenyang": "enyu-échák", "english": "to be pregnant.", "pos": "vi"}
+{"kenyang": "enyu-émɔt", "english": "to be the same.", "pos": "vi"}
+{"kenyang": "épe", "english": "to be ripe.", "pos": "vi"}
+{"kenyang": "ɛpo", "english": "to be insolent, to be useless.", "pos": "vi"}
+{"kenyang": "épó", "english": "to become decay, to be rotten.", "pos": "vi"}
+{"kenyang": "epɔ nényén", "english": "bad tooth.", "pos": "adj"}
+{"kenyang": "ɛpɔ-newakari", "english": "to be rash.", "pos": "vi"}
+{"kenyang": "epútí", "english": "to argue.", "pos": "vt"}
+{"kenyang": "éri", "english": "to be correct, to be good.", "pos": "vi"}
+{"kenyang": "erin", "english": "to smear.", "pos": "vt"}
+{"kenyang": "erítí émfú", "english": "to wish something good.", "pos": "vt"}
+{"kenyang": "erórí", "english": "to be tall.", "pos": "vi"}
+{"kenyang": "esak", "english": "to be young.", "pos": "vi"}
+{"kenyang": "ésap", "english": "to be far, to be long.", "pos": "vi"}
+{"kenyang": "ɛsáyrí", "english": "to be superior.", "pos": "vi"}
+{"kenyang": "ésón", "english": "to be hot.", "pos": "vi"}
+{"kenyang": "ɛsyé", "english": "to trade.", "pos": "vt"}
+{"kenyang": "Esyɛsyɛ", "english": "to be long.", "pos": "vi"}
+{"kenyang": "étaŋ", "english": "to be hard, to be tough, to be strong", "pos": "vi"}
+{"kenyang": "éwo", "english": "to be empty, to be dry.", "pos": "vi"}
+{"kenyang": "eyɔŋ amfay", "english": "to be loud.", "pos": "vi"}
+{"kenyang": "ɛyu", "english": "to whisper a secret.", "pos": "v"}
+{"kenyang": "ɛyú", "english": "to be cruel.", "pos": "vi"}
+{"kenyang": "ɛyu-bechítí", "english": "to suffocate.", "pos": "vt"}
+{"kenyang": "fa", "english": "here.", "pos": "adv"}
+{"kenyang": "fá", "english": "where.", "pos": "adv"}
+{"kenyang": "fǎ", "english": "to move, to give way.", "pos": "vt"}
+{"kenyang": "fǎ ntyet", "english": "to run quickly.", "pos": "vt"}
+{"kenyang": "fakarí", "english": "to happen.", "pos": "vt"}
+{"kenyang": "faŋá", "english": "to join.", "pos": "vt"}
+{"kenyang": "fáp", "english": "to shell.", "pos": "vt"}
+{"kenyang": "faté", "english": "to rise up.", "pos": "vt"}
+{"kenyang": "fe", "english": "to lock.", "pos": "vt"}
+{"kenyang": "fén", "english": "to chase.", "pos": "vt"}
+{"kenyang": "fép", "english": "to tend a fire.", "pos": "vt"}
+{"kenyang": "feré", "english": "to remove, to dethrone.", "pos": "vt"}
+{"kenyang": "feré mbwép", "english": "to deflate.", "pos": "vt"}
+{"kenyang": "feré mmɔ ndu ámi", "english": "to wean.", "pos": "vt"}
+{"kenyang": "feré-mbwép", "english": "to deflate.", "pos": "vt"}
+{"kenyang": "feré-mmwét", "english": "to abstain.", "pos": "vt"}
+{"kenyang": "fiptí", "english": "to beat with a cain.", "pos": "vt"}
+{"kenyang": "fin", "english": "to fling.", "pos": "vt"}
+{"kenyang": "fok", "english": "to flap.", "pos": "vt"}
+{"kenyang": "fokori", "english": "to embarass.", "pos": "vt"}
+{"kenyang": "fon", "english": "to wink, to investigate.", "pos": "vt"}
+{"kenyang": "foŋorí", "english": "to excuse, to forgive, to pardon.", "pos": "vt"}
+{"kenyang": "forí", "english": "to dudge.", "pos": "vt"}
+{"kenyang": "fonó", "english": "to seize, to snatch.", "pos": "vt"}
+{"kenyang": "fú", "english": "to spill, to emerge, to free, to leak, to go out, to resemble.", "pos": "vt"}
+{"kenyang": "fú ambi", "english": "to succeed, to appear infront.", "pos": "vt"}
+{"kenyang": "fú nsóŋti", "english": "to sweat.", "pos": "vt"}
+{"kenyang": "fú nti amem", "english": "to be discourage.", "pos": "vt"}
+{"kenyang": "fúyák", "english": "to be light (in weight).", "pos": "vi"}
+{"kenyang": "fwefwep", "english": "to smoulder.", "pos": "vt"}
+{"kenyang": "fwét", "english": "to surpass, to overtake.", "pos": "vt"}
+{"kenyang": "fyé", "english": "to wear, to put.", "pos": "vt"}
+{"kenyang": "fyé ekak ndu ndak", "english": "to interfere.", "pos": "vt"}
+{"kenyang": "fyé ńkú", "english": "to dress.", "pos": "vt"}
+{"kenyang": "fyé nti", "english": "to encourage.", "pos": "vt"}
+{"kenyang": "fyé-besop", "english": "to design.", "pos": "vt"}
+{"kenyang": "fyé-kefo", "english": "to enthrone.", "pos": "vt"}
+{"kenyang": "fyé mbwép", "english": "to inflate", "pos": "vt"}
+{"kenyang": "fyepti", "english": "to flip", "pos": "vt"}
+{"kenyang": "gatí", "english": "to split.", "pos": "vt"}
+{"kenyang": "ginití", "english": "to delay.", "pos": "vt"}
+{"kenyang": "gó", "english": "to grow.", "pos": "vt"}
+{"kenyang": "gó chunchun", "english": "to flourish.", "pos": "vt"}
+{"kenyang": "gó ne mpi", "english": "to nail.", "pos": "vt"}
+{"kenyang": "gorí", "english": "to be stiff.", "pos": "vi"}
+{"kenyang": "gú", "english": "to be dead.", "pos": "vi"}
+{"kenyang": "gwa", "english": "to quarrel, to file.", "pos": "vt"}
+{"kenyang": "gwɛti", "english": "to wrinkle.", "pos": "vt"}
+{"kenyang": "gwo", "english": "to roast, to vomit.", "pos": "vt"}
+{"kenyang": "gwót", "english": "to fasten, to tie, to chain.", "pos": "vt"}
+{"kenyang": "gyép", "english": "to throw, to discard.", "pos": "vt"}
+{"kenyang": "gyép amík", "english": "to glance.", "pos": "vt"}
+{"kenyang": "gyép-ebháná", "english": "to cast lots.", "pos": "vt"}
+{"kenyang": "gyɛpsí", "english": "to thin.", "pos": "vt"}
+{"kenyang": "gbemé", "english": "to meet, to slam.", "pos": "vt"}
+{"kenyang": "gbók", "english": "to punch, to jab", "pos": "vt"}
+{"kenyang": "gbókótí-ghókótí", "english": "to be rough.", "pos": "vi"}
+{"kenyang": "ghábhárí-ghábhárí", "english": "to be round.", "pos": "vi"}
+{"kenyang": "ghaka ngáká", "english": "to yawn.", "pos": "vt"}
+{"kenyang": "gháŋ", "english": "to fry.", "pos": "vt"}
+{"kenyang": "ghaná", "english": "to plaster, to seal.", "pos": "vt"}
+{"kenyang": "gháp", "english": "to roam.", "pos": "vt"}
+{"kenyang": "gharé", "english": "to husk corn.", "pos": "vt"}
+{"kenyang": "ghasí", "english": "to pass round.", "pos": "vt"}
+{"kenyang": "ghát", "english": "to split.", "pos": "vt"}
+{"kenyang": "ghatí", "english": "to tell.", "pos": "vt"}
+{"kenyang": "ghay", "english": "to spread.", "pos": "vt"}
+{"kenyang": "ghem", "english": "to dig up, to harvest.", "pos": "vt"}
+{"kenyang": "ghép", "english": "to steal.", "pos": "vt"}
+{"kenyang": "ghép-mmu", "english": "to kidnap.", "pos": "vt"}
+{"kenyang": "ghók", "english": "to hear.", "pos": "vt"}
+{"kenyang": "ghokó", "english": "to make, to shape something, to repair, to mend, to decorate, to create, to frame.", "pos": "vt"}
+{"kenyang": "ghokotí", "english": "to taste, to listen.", "pos": "vt"}
+{"kenyang": "ghokotí eryep", "english": "to smell.", "pos": "vt"}
+{"kenyang": "ghó ntísó", "english": "to sympathize.", "pos": "vt"}
+{"kenyang": "ghóbhé", "english": "to decide.", "pos": "vt"}
+{"kenyang": "ghók nnyén", "english": "to swim.", "pos": "vt"}
+{"kenyang": "ghók-ekáti", "english": "to study.", "pos": "vt"}
+{"kenyang": "ghɔkó", "english": "to bend backward, to lean on.", "pos": "vt"}
+{"kenyang": "ghɔkó-ntik", "english": "to forget.", "pos": "vt"}
+{"kenyang": "jén", "english": "to jostle.", "pos": "vt"}
+{"kenyang": "jentí", "english": "to compare, to measure.", "pos": "vt"}
+{"kenyang": "ji", "english": "to excrete, lay eggs, to blame.", "pos": "vt"}
+{"kenyang": "jwé", "english": "to detain.", "pos": "vt"}
+{"kenyang": "jwi", "english": "to satisfy.", "pos": "vt"}
+{"kenyang": "jwití", "english": "to baptise.", "pos": "vt"}
+{"kenyang": "jyet", "english": "to run.", "pos": "vt"}
+{"kenyang": "kǎ", "english": "to obey, to submit, to allow, to affirm, to confirm.", "pos": "vt"}
+{"kenyang": "kak", "english": "to praise.", "pos": "vt"}
+{"kenyang": "kaká", "english": "to greet, to thank, to congratulate.", "pos": "vt"}
+{"kenyang": "kaká ne amó", "english": "shake hands.", "pos": "vt"}
+{"kenyang": "káŋ", "english": "to prevent.", "pos": "vt"}
+{"kenyang": "kaŋarí", "english": "to loosen.", "pos": "vt"}
+{"kenyang": "kap", "english": "to surround.", "pos": "vt"}
+{"kenyang": "káp", "english": "to defend, to encircle.", "pos": "vt"}
+{"kenyang": "kati", "english": "to slash.", "pos": "vt"}
+{"kenyang": "katí", "english": "to cut with a cutlass.", "pos": "vt"}
+{"kenyang": "kátí", "english": "to be pale.", "pos": "vi"}
+{"kenyang": "kaysí", "english": "to consider, to hope, to think, to suggest.", "pos": "vt"}
+{"kenyang": "kaysi bé", "english": "to mean.", "pos": "vt"}
+{"kenyang": "ke", "english": "but.", "pos": "conj"}
+{"kenyang": "ké", "english": "negative marker in the imperative.", "pos": "neg"}
+{"kenyang": "keboŋ", "english": "to be clever, to be intelligent.", "pos": "vi"}
+{"kenyang": "kebu", "english": "to be grey.", "pos": "vi"}
+{"kenyang": "kebwɛp", "english": "to stutter.", "pos": "vt"}
+{"kenyang": "kebwét", "english": "to gasp.", "pos": "vt"}
+{"kenyang": "kebhák-ndu-nté", "english": "to be in disorder.", "pos": "vi"}
+{"kenyang": "kebhé", "english": "to roost, to bend down.", "pos": "vt"}
+{"kenyang": "kebherí", "english": "to cover, to forfeit.", "pos": "vt"}
+{"kenyang": "kɛbhíré ngɔre ndu bɛtaŋ", "english": "to rape.", "pos": "vt"}
+{"kenyang": "kɛbhóŋ ɛkwak", "english": "to have loss of appetite.", "pos": "vi"}
+{"kenyang": "kéfú", "english": "again.", "pos": "adv"}
+{"kenyang": "kéka", "english": "to disagree.", "pos": "vt"}
+{"kenyang": "kɛkɛp", "english": "to be dull.", "pos": "vi"}
+{"kenyang": "kɛkép-ńtí", "english": "to be impatient.", "pos": "vi"}
+{"kenyang": "kekúrí", "english": "to be different.", "pos": "vi"}
+{"kenyang": "kékwót", "english": "beside, near.", "pos": "prep"}
+{"kenyang": "kém", "english": "to arrest, to catch, to govern, to clutch.", "pos": "vt"}
+{"kenyang": "kém etɔk", "english": "to reign.", "pos": "vt"}
+{"kenyang": "kembɛp", "english": "early.", "pos": "adv"}
+{"kenyang": "kěmbó", "english": "to be childish.", "pos": "vi"}
+{"kenyang": "kémbyáká", "english": "to disguise.", "pos": "vt"}
+{"kenyang": "kemé", "english": "to refund, to answer, to revenge, to replace.", "pos": "vt"}
+{"kenyang": "kenchemé", "english": "to be unwilling.", "pos": "vi"}
+{"kenyang": "kenókó-mmwét", "english": "to be humble.", "pos": "vi"}
+{"kenyang": "kenwaŋ", "english": "to be brave.", "pos": "vi"}
+{"kenyang": "kép nti", "english": "to be patient.", "pos": "vi"}
+{"kenyang": "kepere-ebhák-mbɔ", "english": "to be unusual.", "pos": "vi"}
+{"kenyang": "keri", "english": "to be inferior.", "pos": "vi"}
+{"kenyang": "kerini", "english": "to be ignorant.", "pos": "vi"}
+{"kenyang": "keriŋi mmwét", "english": "to be unconscious.", "pos": "vi"}
+{"kenyang": "kɛtaŋ", "english": "to be immature.", "pos": "vi"}
+{"kenyang": "kéyókó", "english": "to frighten.", "pos": "vt"}
+{"kenyang": "kini", "english": "to cross, to exceed.", "pos": "vt"}
+{"kenyang": "kó", "english": "to ascend, to climb, to pour wine.", "pos": "vt"}
+{"kenyang": "ko", "english": "to sniff (tobacco).", "pos": "vt"}
+{"kenyang": "kó mmem", "english": "to pour wine (in a glass).", "pos": "vt"}
+{"kenyang": "kók", "english": "to wedge, to shout.", "pos": "vt"}
+{"kenyang": "kokorí", "english": "to crawl.", "pos": "vt"}
+{"kenyang": "koŋó", "english": "to follow.", "pos": "vt"}
+{"kenyang": "kosí", "english": "to sniff (tobacco).", "pos": "vt"}
+{"kenyang": "kosi manywén", "english": "to sniff.", "pos": "vt"}
+{"kenyang": "ko esyé", "english": "to trade.", "pos": "vt"}
+{"kenyang": "ko jwet", "english": "to amble.", "pos": "vt"}
+{"kenyang": "kɔ kɛnŋ", "english": "to ride a bicycle.", "pos": "vt"}
+{"kenyang": "kok", "english": "to grind.", "pos": "vt"}
+{"kenyang": "koŋ", "english": "to like, to love.", "pos": "vt"}
+{"kenyang": "kóŋ", "english": "to preserve, to economise, to hoard.", "pos": "vt"}
+{"kenyang": "koré", "english": "to distribute, to share.", "pos": "vt"}
+{"kenyang": "kot", "english": "to be shiny, to glare, to strike.", "pos": "vi"}
+{"kenyang": "kot tamare", "english": "to vaccinate.", "pos": "vt"}
+{"kenyang": "ku", "english": "to buy.", "pos": "vt"}
+{"kenyang": "kutí ɛkáti", "english": "to fold a book.", "pos": "vt"}
+{"kenyang": "ku béríŋi", "english": "to do intentionally.", "pos": "vt"}
+{"kenyang": "ku bebé ntí", "english": "to offend.", "pos": "vt"}
+{"kenyang": "ku bebú", "english": "to do evil.", "pos": "vt"}
+{"kenyang": "ku becháy", "english": "to shock.", "pos": "vt"}
+{"kenyang": "ku betik", "english": "to work.", "pos": "vt"}
+{"kenyang": "ku endí", "english": "to make beautiful.", "pos": "vt"}
+{"kenyang": "ku maŋák", "english": "to satisfy.", "pos": "vt"}
+{"kenyang": "ku mbɔ", "english": "to pretend.", "pos": "vt"}
+{"kenyang": "kubhé", "english": "to bend forward, to sag.", "pos": "vt"}
+{"kenyang": "kwak", "english": "to support, to alleviate, to", "pos": "vt"}
+{"kenyang": "kwáŋkwáy", "english": "to be enough.", "pos": "vi"}
+{"kenyang": "kwan", "english": "cultivate.", "pos": "vt"}
+{"kenyang": "kwáy", "english": "to sing.", "pos": "vt"}
+{"kenyang": "kway kenor", "english": "to snore.", "pos": "vt"}
+{"kenyang": "kway tákó", "english": "to weed.", "pos": "vt"}
+{"kenyang": "kwén", "english": "to fall.", "pos": "vt"}
+{"kenyang": "kwén neme", "english": "to become sick.", "pos": "vi"}
+{"kenyang": "kwén nemɔ", "english": "to fail an exam.", "pos": "vt"}
+{"kenyang": "Kwen-kebhé", "english": "to coagulate.", "pos": "vt"}
+{"kenyang": "kwén-mmem", "english": "to be drunk.", "pos": "vi"}
+{"kenyang": "kwet", "english": "to knock, to tap.", "pos": "vt"}
+{"kenyang": "kwetí", "english": "to cover.", "pos": "vt"}
+{"kenyang": "kwere-mmwet", "english": "to flutter.", "pos": "vt"}
+{"kenyang": "kwɔ", "english": "to pay, to divide.", "pos": "vt"}
+{"kenyang": "Kyébhé nchwi", "english": "to cut corn.", "pos": "vt"}
+{"kenyang": "Kyébhé nden", "english": "to fold clothes.", "pos": "vt"}
+{"kenyang": "kyép ne amík", "english": "to blink.", "pos": "vt"}
+{"kenyang": "kyɛptí", "english": "to blink.", "pos": "vt"}
+{"kenyang": "kpák", "english": "never.", "pos": "adv"}
+{"kenyang": "kpan", "english": "to hook.", "pos": "vt"}
+{"kenyang": "kpaŋarí", "english": "to hug.", "pos": "vt"}
+{"kenyang": "kpáte", "english": "except.", "pos": "conj"}
+{"kenyang": "kpemé", "english": "to reinforce.", "pos": "vt"}
+{"kenyang": "kpók", "english": "to knock the head (with a finger), to gaze at something.", "pos": "vt"}
+{"kenyang": "kpót", "english": "to cut.", "pos": "vt"}
+{"kenyang": "mabharí", "english": "to snap, to grab.", "pos": "vt"}
+{"kenyang": "mábhárí", "english": "to be narrow.", "pos": "vi"}
+{"kenyang": "mabheri", "english": "to nibble.", "pos": "vt"}
+{"kenyang": "mábhérí", "english": "to be shallow.", "pos": "vi"}
+{"kenyang": "maká", "english": "to add, to accumulate.", "pos": "vt"}
+{"kenyang": "makatí", "english": "to doubt.", "pos": "vt"}
+{"kenyang": "mak-nkay", "english": "to amaze, to surprise.", "pos": "vt"}
+{"kenyang": "mamyák-mśmyák", "english": "to be spotted.", "pos": "vi"}
+{"kenyang": "mandu", "english": "to be small.", "pos": "vi"}
+{"kenyang": "mandú mpok", "english": "soon.", "pos": "adv"}
+{"kenyang": "mandú-mandú", "english": "slowly.", "pos": "adv"}
+{"kenyang": "mangwɔ", "english": "to cheat.", "pos": "vt"}
+{"kenyang": "manyɛbhé-manyɛp", "english": "to be watery.", "pos": "vi"}
+{"kenyang": "manyiŋti", "english": "to be tasty.", "pos": "vi"}
+{"kenyang": "manyɔkɔ", "english": "to incite.", "pos": "vt"}
+{"kenyang": "manyu-ɛsyé", "english": "to cost.", "pos": "vt"}
+{"kenyang": "manyu-mbiŋ", "english": "to be cheap.", "pos": "vi"}
+{"kenyang": "maŋák ntí", "english": "to be frantic.", "pos": "vi"}
+{"kenyang": "maŋsí bɛbhwep", "english": "to smack lips.", "pos": "vt"}
+{"kenyang": "mbák", "english": "if.", "pos": "conj"}
+{"kenyang": "mbáré-kepi", "english": "to exaggerate.", "pos": "vt"}
+{"kenyang": "mbé", "english": "to be plenty.", "pos": "vi"}
+{"kenyang": "mbik", "english": "to be alive.", "pos": "vi"}
+{"kenyang": "mbi-mbi", "english": "formerly.", "pos": "adv"}
+{"kenyang": "mbiŋ", "english": "to be short.", "pos": "vi"}
+{"kenyang": "mbo", "english": "like.", "pos": "conj"}
+{"kenyang": "mboŋ-tetep", "english": "to be trustworthy.", "pos": "vi"}
+{"kenyang": "men", "english": "to swallow.", "pos": "vt"}
+{"kenyang": "ménémé nkáp", "english": "loss of sales.", "pos": "vi"}
+{"kenyang": "menkem", "english": "altogether.", "pos": "adv"}
+{"kenyang": "menwɔp", "english": "to be heavy.", "pos": "vi"}
+{"kenyang": "mese", "english": "to drop.", "pos": "vt"}
+{"kenyang": "met", "english": "to pinch.", "pos": "vt"}
+{"kenyang": "met bé gháti", "english": "to hint.", "pos": "vt"}
+{"kenyang": "mfú ntí", "english": "to daze.", "pos": "vt"}
+{"kenyang": "mikirí", "english": "to dislocate.", "pos": "vt"}
+{"kenyang": "mimin", "english": "to be sweet.", "pos": "vi"}
+{"kenyang": "mme", "english": "I.", "pos": "pron"}
+{"kenyang": "mmwéré-tákó", "english": "to be green.", "pos": "adj"}
+{"kenyang": "mɔ", "english": "to try.", "pos": "vt"}
+{"kenyang": "mɔk nɛ ntí", "english": "to nod with the head.", "pos": "vt"}
+{"kenyang": "mɔk ntí", "english": "to nod, to accept.", "pos": "vt"}
+{"kenyang": "mɔkó", "english": "to pick (coffee, corn from cob etc).", "pos": "vt"}
+{"kenyang": "momop", "english": "to be soft.", "pos": "vi"}
+{"kenyang": "mop", "english": "to beat with the fist.", "pos": "vt"}
+{"kenyang": "mɔtí", "english": "to grope, to fell.", "pos": "vt"}
+{"kenyang": "mpá-nnyu", "english": "to be boastful.", "pos": "vi"}
+{"kenyang": "mpap", "english": "to grudge, to hate.", "pos": "vt"}
+{"kenyang": "mpap-amík", "english": "to be jealous.", "pos": "vi"}
+{"kenyang": "mpok anɛ a fwét", "english": "late.", "pos": "adv"}
+{"kenyang": "mpok nyáká", "english": "previously.", "pos": "adv"}
+{"kenyang": "mpok-éfú", "english": "sometimes.", "pos": "adv"}
+{"kenyang": "mpók nkɛm", "english": "always.", "pos": "adv"}
+{"kenyang": "mu", "english": "to shave.", "pos": "vt"}
+{"kenyang": "mwɔt", "english": "swell.", "pos": "vt"}
+{"kenyang": "myák", "english": "to sway.", "pos": "vt"}
+{"kenyang": "myakatí", "english": "to sprinkle.", "pos": "vt"}
+{"kenyang": "na", "english": "how", "pos": "adv"}
+{"kenyang": "ná", "english": "to cook.", "pos": "vt"}
+{"kenyang": "nak", "english": "to invite.", "pos": "vt"}
+{"kenyang": "naŋ", "english": "to confide.", "pos": "vt"}
+{"kenyang": "náŋárí-náŋárí", "english": "to be transparent.", "pos": "vi"}
+{"kenyang": "naŋtí", "english": "to slander, to gossip.", "pos": "vt"}
+{"kenyang": "nchóŋtí", "english": "to be extravagant.", "pos": "vi"}
+{"kenyang": "ndakayi", "english": "why.", "pos": "conj"}
+{"kenyang": "ndem ményábhɛ", "english": "erection of the penis.", "pos": "vi"}
+{"kenyang": "ndéndém", "english": "to be idle.", "pos": "vi"}
+{"kenyang": "ndí-epiŋ", "english": "to be gentle, to be kind.", "pos": "vi"}
+{"kenyang": "ndíndí", "english": "to be good.", "pos": "vi"}
+{"kenyang": "ndókórí", "english": "to be active,", "pos": "vi"}
+{"kenyang": "ndɔŋ échák", "english": "again.", "pos": "adv"}
+{"kenyang": "ndɔp-nsɛm", "english": "late.", "pos": "adv"}
+{"kenyang": "ndu", "english": "as.", "pos": "conj"}
+{"kenyang": "ne", "english": "to feed, to train.", "pos": "vt"}
+{"kenyang": "nebé mmwét", "english": "to be in difficulty.", "pos": "vi"}
+{"kenyang": "nebu", "english": "to be blue.", "pos": "vi"}
+{"kenyang": "nebhésé", "english": "to be private.", "pos": "vi"}
+{"kenyang": "nebhwet-nebhwet", "english": "to be level, to be horizontal.", "pos": "vi"}
+{"kenyang": "necha", "english": "to defeat somebody.", "pos": "vt"}
+{"kenyang": "necha mmu", "english": "to be above somebody.", "pos": "vi"}
+{"kenyang": "nefí", "english": "outside.", "pos": "prep"}
+{"kenyang": "nkem", "english": "all.", "pos": "adv"}
+{"kenyang": "nkoŋo", "english": "to flirt.", "pos": "vt"}
+{"kenyang": "nkwat", "english": "to meander.", "pos": "vt"}
+{"kenyang": "nkwó", "english": "also.", "pos": "adv"}
+{"kenyang": "nnet", "english": "bottom.", "pos": "prep"}
+{"kenyang": "nnyu-awó", "english": "To be toothless.", "pos": "vi"}
+{"kenyang": "nnyu-fú", "english": "Gasping for speech.", "pos": "vi"}
+{"kenyang": "nnywerí", "english": "To be shy.", "pos": "vi"}
+{"kenyang": "nók", "english": "To row.", "pos": "vt"}
+{"kenyang": "nokó", "english": "To trust, to believe.", "pos": "vt"}
+{"kenyang": "non", "english": "To wait.", "pos": "vt"}
+{"kenyang": "nɔkɔ", "english": "Habitual marker.", "pos": "adv"}
+{"kenyang": "nɔkó", "english": "To imitate.", "pos": "vt"}
+{"kenyang": "nsé", "english": "To lie, to flatter.", "pos": "vt"}
+{"kenyang": "nsi bépók", "english": "A type of fishing by bailing out water", "pos": "vi"}
+{"kenyang": "nsó-nsó", "english": "Sad.", "pos": "vi"}
+{"kenyang": "nsoŋ amɔt", "english": "To reconcile.", "pos": "vt"}
+{"kenyang": "nsók", "english": "To sigh.", "pos": "vt"}
+{"kenyang": "nsyɛ-nsyɛ", "english": "To be tall.", "pos": "vi"}
+{"kenyang": "nti-kerí", "english": "To be discontent.", "pos": "vi"}
+{"kenyang": "nti-nebú", "english": "To be wicked.", "pos": "vi"}
+{"kenyang": "nto", "english": "To be hollow.", "pos": "vi"}
+{"kenyang": "ntontɔp", "english": "Muddy.", "pos": "vi"}
+{"kenyang": "ntop", "english": "To be brown.", "pos": "vi"}
+{"kenyang": "nu", "english": "To wrestle, to fight.", "pos": "vt"}
+{"kenyang": "nyabhé", "english": "To stretch.", "pos": "vt"}
+{"kenyang": "nyaŋ ansɛm", "english": "To carry on the back.", "pos": "vt"}
+{"kenyang": "nyáŋá", "english": "To be different.", "pos": "vi"}
+{"kenyang": "nye ámén", "english": "Showing the teeth.", "pos": "vt"}
+{"kenyang": "nyeti", "english": "To smirk.", "pos": "vt"}
+{"kenyang": "nye", "english": "To push.", "pos": "vt"}
+{"kenyang": "nyé", "english": "To earn, to eat.", "pos": "vt"}
+{"kenyang": "nyé ámén", "english": "To grind teeth.", "pos": "vt"}
+{"kenyang": "nyé tákó", "english": "To graze.", "pos": "vt"}
+{"kenyang": "pa", "english": "To dry something in the sun.", "pos": "vt"}
+{"kenyang": "pá", "english": "To threaten. to plot (evil).", "pos": "vt"}
+{"kenyang": "pá batyé", "english": "To spit.", "pos": "vt"}
+{"kenyang": "pák", "english": "To comb.", "pos": "vt"}
+{"kenyang": "paka", "english": "To puff, to boast.", "pos": "vt"}
+{"kenyang": "pakarí", "english": "To clean something.", "pos": "vt"}
+{"kenyang": "pan", "english": "To cling.", "pos": "vt"}
+{"kenyang": "pap", "english": "To hate.", "pos": "vt"}
+{"kenyang": "pát", "english": "To urge.", "pos": "vt"}
+{"kenyang": "pay", "english": "To count, to read.", "pos": "vt"}
+{"kenyang": "páy", "english": "To pluck.", "pos": "vt"}
+{"kenyang": "pemé", "english": "To redeem, to rescue.", "pos": "vt"}
+{"kenyang": "pen", "english": "To warp.", "pos": "vt"}
+{"kenyang": "penpén", "english": "To curve.", "pos": "vt"}
+{"kenyang": "pépép", "english": "White.", "pos": "adj"}
+{"kenyang": "pere-bhák", "english": "Again.", "pos": "adv"}
+{"kenyang": "peti", "english": "Slowly.", "pos": "adv"}
+{"kenyang": "pí", "english": "To whistle.", "pos": "vt"}
+{"kenyang": "piti", "english": "To fill.", "pos": "vt"}
+{"kenyang": "pi", "english": "To sow, to plant.", "pos": "vt"}
+{"kenyang": "pɔ", "english": "To decay.", "pos": "vt"}
+{"kenyang": "pɔkó", "english": "To carry.", "pos": "vt"}
+{"kenyang": "pɔkó antí", "english": "To carry on head.", "pos": "vt"}
+{"kenyang": "pɔkó mɛnyɛ", "english": "To become pregnant.", "pos": "vi"}
+{"kenyang": "pɔkó nɛnki", "english": "To carry on shoulder.", "pos": "vt"}
+{"kenyang": "pop", "english": "To be tired.", "pos": "vi"}
+{"kenyang": "popó", "english": "To be ugly, to be clumsy.", "pos": "vi"}
+{"kenyang": "pot", "english": "Full.", "pos": "adv"}
+{"kenyang": "pú", "english": "Negative marker in the imperative.", "pos": "neg"}
+{"kenyang": "purí", "english": "To push.", "pos": "vt"}
+{"kenyang": "pere-nsem", "english": "To recede, to return.", "pos": "vt"}
+{"kenyang": "rakatí", "english": "To tear.", "pos": "vt"}
+{"kenyang": "pwɔ", "english": "To lend.", "pos": "vt"}
+{"kenyang": "pyo", "english": "Black.", "pos": "adj"}
+{"kenyang": "resé", "english": "To glide, to sneak.", "pos": "vt"}
+{"kenyang": "ransí", "english": "To level.", "pos": "vt"}
+{"kenyang": "ráŋsí", "english": "To be flat.", "pos": "vi"}
+{"kenyang": "rě", "english": "To fly.", "pos": "vt"}
+{"kenyang": "rem", "english": "To say, to talk.", "pos": "vt"}
+{"kenyang": "remtí", "english": "Steam.", "pos": "vt"}
+{"kenyang": "riki", "english": "To float.", "pos": "vt"}
+{"kenyang": "riŋí", "english": "To know.", "pos": "vt"}
+{"kenyang": "ro", "english": "To abandon, to leave.", "pos": "vt"}
+{"kenyang": "rwɔtí", "english": "To deceive.", "pos": "vt"}
+{"kenyang": "ryɛp ntó", "english": "To send a message.", "pos": "vt"}
+{"kenyang": "sá", "english": "Point.", "pos": "vt"}
+{"kenyang": "sakatí", "english": "To beat with the palm of the hand.", "pos": "vt"}
+{"kenyang": "sárérí-sárérí", "english": "To be clear.", "pos": "vi"}
+{"kenyang": "sáy", "english": "To bark, to yell.", "pos": "vt"}
+{"kenyang": "sayrí", "english": "To melt, to sip.", "pos": "v"}
+{"kenyang": "sáyrí-sáyrí", "english": "Very well.", "pos": "adv"}
+{"kenyang": "sé", "english": "To lie.", "pos": "vt"}
+{"kenyang": "sɛkok", "english": "Yellow.", "pos": "adj"}
+{"kenyang": "semé ndu nebhóŋ", "english": "To yearn.", "pos": "vt"}
+{"kenyang": "semtí", "english": "To adjust.", "pos": "vt"}
+{"kenyang": "sen", "english": "To flatulate, to burst.", "pos": "vt"}
+{"kenyang": "sen kesen", "english": "To fart.", "pos": "vt"}
+{"kenyang": "sénkpók", "english": "A knock on the head with one finger.", "pos": "vt"}
+{"kenyang": "sep", "english": "To decscend.", "pos": "vt"}
+{"kenyang": "septí", "english": "To dethrone, to reduce.", "pos": "vt"}
+{"kenyang": "septí mmwét", "english": "To be humble.", "pos": "vi"}
+{"kenyang": "septí mmwet", "english": "To humble one's self.", "pos": "vt"}
+{"kenyang": "sibhirí ammik", "english": "To sit on the floor.", "pos": "vt"}
+{"kenyang": "sikí", "english": "To slant.", "pos": "vt"}
+{"kenyang": "sín", "english": "To smoothen, to write.", "pos": "vt"}
+{"kenyang": "so", "english": "To wash.", "pos": "vt"}
+{"kenyang": "so epa", "english": "To celebrate.", "pos": "vt"}
+{"kenyang": "so mmɔ", "english": "To wash a child.", "pos": "vt"}
+{"kenyang": "so mmwét", "english": "To wash oneself.", "pos": "vt"}
+{"kenyang": "so nchán", "english": "To wash dishes.", "pos": "vt"}
+{"kenyang": "so nden", "english": "To wash clothes.", "pos": "vt"}
+{"kenyang": "sokorí", "english": "To discuss.", "pos": "vt"}
+{"kenyang": "son", "english": "To thrust.", "pos": "vt"}
+{"kenyang": "sók", "english": "To curse, to kiss, to suck.", "pos": "vt"}
+{"kenyang": "són", "english": "To burn, to scald.", "pos": "vt"}
+{"kenyang": "soŋorí", "english": "To suffer, to bother.", "pos": "vt"}
+{"kenyang": "soŋɔrí-mmwét", "english": "To worry.", "pos": "vt"}
+{"kenyang": "soŋtí", "english": "To be warm.", "pos": "vi"}
+{"kenyang": "sot", "english": "To receive, to take.", "pos": "vt"}
+{"kenyang": "sɔt mpok", "english": "To ask permission, to be careful.", "pos": "vt"}
+{"kenyang": "sotí-sótí", "english": "To be tasteless.", "pos": "vi"}
+{"kenyang": "su bɛbú", "english": "To confess.", "pos": "vt"}
+{"kenyang": "surí", "english": "To strangle, to hang.", "pos": "vt"}
+{"kenyang": "syép", "english": "To circumcise, to break.", "pos": "vt"}
+{"kenyang": "syɛptí", "english": "To become weak, to disable.", "pos": "vt"}
+{"kenyang": "ták", "english": "To splash.", "pos": "vt"}
+{"kenyang": "taká bakaysi", "english": "To fluster.", "pos": "vt"}
+{"kenyang": "táká-ɛyɔŋ", "english": "To have a hoarse throat.", "pos": "vi"}
+{"kenyang": "takatí", "english": "To separate, to scatter, to reach out.", "pos": "vt"}
+{"kenyang": "takatí-mbok", "english": "To proclaim.", "pos": "vt"}
+{"kenyang": "táká-nnet", "english": "To disapprove.", "pos": "vt"}
+{"kenyang": "támchók", "english": "To be abrupt.", "pos": "vi"}
+{"kenyang": "tame", "english": "To despair.", "pos": "vt"}
+{"kenyang": "támpérí", "english": "To sommersault.", "pos": "vt"}
+{"kenyang": "táŋgábhárí", "english": "To loiter.", "pos": "vt"}
+{"kenyang": "táŋgáp", "english": "To wander.", "pos": "vt"}
+{"kenyang": "tan", "english": "To be mature.", "pos": "vi"}
+{"kenyang": "tan awɔ", "english": "To be stingy.", "pos": "vi"}
+{"kenyang": "tán esyé", "english": "To bargain.", "pos": "vt"}
+{"kenyang": "taŋá", "english": "To deny.", "pos": "vt"}
+{"kenyang": "taŋá-nsé", "english": "To denounce.", "pos": "vt"}
+{"kenyang": "té", "english": "To gush out, to burst.", "pos": "vt"}
+{"kenyang": "tě", "english": "To construct.", "pos": "vt"}
+{"kenyang": "té chák", "english": "Straight ahead.", "pos": "adv"}
+{"kenyang": "te chak", "english": "To be vertical, to stand straight.", "pos": "vi"}
+{"kenyang": "te annyu", "english": "To be brimfull, right to the mouth.", "pos": "vi"}
+{"kenyang": "te amfay", "english": "From the top.", "pos": "vi"}
+{"kenyang": "te amfǎy te ammik", "english": "From top to bottom.", "pos": "adv"}
+{"kenyang": "te ansem", "english": "To be extreme.", "pos": "vi"}
+{"kenyang": "te ngwéntí", "english": "Forever.", "pos": "adv"}
+{"kenyang": "tém", "english": "To shoot, to dig.", "pos": "vt"}
+{"kenyang": "tém mbok", "english": "To gouge.", "pos": "vt"}
+{"kenyang": "tém nɛ njɔ", "english": "To poison.", "pos": "vt"}
+{"kenyang": "témchók", "english": "Suddenly.", "pos": "adv"}
+{"kenyang": "temerí", "english": "To collide, to meet.", "pos": "vt"}
+{"kenyang": "temsí", "english": "To punish.", "pos": "vt"}
+{"kenyang": "tén", "english": "To stir fire, to crack.", "pos": "vt"}
+{"kenyang": "tentep", "english": "Long ago.", "pos": "adv"}
+{"kenyang": "tentep nyáká", "english": "A long time ago.", "pos": "adv"}
+{"kenyang": "tentí", "english": "To flow.", "pos": "vt"}
+{"kenyang": "tep", "english": "To prostrate.", "pos": "vt"}
+{"kenyang": "tep mánén ammik", "english": "To kneel down.", "pos": "vt"}
+{"kenyang": "tep ntí", "english": "To bow one's head, to nod the head (accept).", "pos": "vt"}
+{"kenyang": "tesé", "english": "To wipe.", "pos": "vt"}
+{"kenyang": "tetep", "english": "To be honest, to be true, to be loyal.", "pos": "vi"}
+{"kenyang": "tí", "english": "To sell, to betray, to summon.", "pos": "vt"}
+{"kenyang": "titi", "english": "Without.", "pos": "adv"}
+{"kenyang": "tik", "english": "To remember.", "pos": "vt"}
+{"kenyang": "tík", "english": "Escort.", "pos": "vt"}
+{"kenyang": "tiki-mpok", "english": "When.", "pos": "conj"}
+{"kenyang": "tiŋí", "english": "To endure.", "pos": "vt"}
+{"kenyang": "to", "english": "To pour.", "pos": "vt"}
+{"kenyang": "tó", "english": "To send.", "pos": "vt"}
+{"kenyang": "tók manyɛp", "english": "To fetch water.", "pos": "vt"}
+{"kenyang": "tontó", "english": "Very, really.", "pos": "adv"}
+{"kenyang": "toŋtí", "english": "To arrange, to plan.", "pos": "vt"}
+{"kenyang": "tok", "english": "To touch.", "pos": "vt"}
+{"kenyang": "tón", "english": "To teach, to show.", "pos": "vt"}
+{"kenyang": "twó", "english": "To come.", "pos": "vt"}
+{"kenyang": "tyé", "english": "To sting.", "pos": "vt"}
+{"kenyang": "tyě", "english": "To spit.", "pos": "vt"}
+{"kenyang": "tyép", "english": "To close.", "pos": "vt"}
+{"kenyang": "tyet", "english": "To sink.", "pos": "vt"}
+{"kenyang": "tyét", "english": "To brush.", "pos": "vt"}
+{"kenyang": "tyét-tyét", "english": "To be closed.", "pos": "vi"}
+{"kenyang": "wák", "english": "To reject, to despise.", "pos": "vt"}
+{"kenyang": "wakarí", "english": "To hurry.", "pos": "vt"}
+{"kenyang": "wakarí-nebhén", "english": "To trip.", "pos": "vt"}
+{"kenyang": "wărí", "english": "To bevel.", "pos": "vt"}
+{"kenyang": "watí", "english": "To rub.", "pos": "vt"}
+{"kenyang": "way", "english": "To laugh, to smile, to jeer.", "pos": "vt"}
+{"kenyang": "wáy", "english": "To slaughter, to kill.", "pos": "vt"}
+{"kenyang": "wáy mmu", "english": "To commit homicide.", "pos": "vt"}
+{"kenyang": "wáy mmwét", "english": "To trouble oneself.", "pos": "vt"}
+{"kenyang": "wené", "english": "To hurry.", "pos": "vt"}
+{"kenyang": "wet", "english": "To shiver, to tremble.", "pos": "vt"}
+{"kenyang": "wikirik", "english": "To be easy.", "pos": "vi"}
+{"kenyang": "wo", "english": "You.", "pos": "subj. pron."}
+{"kenyang": "wósí", "english": "To be dry.", "pos": "vi"}
+{"kenyang": "wupsí", "english": "To alternate, to change, to be pregnant.", "pos": "vt"}
+{"kenyang": "ya", "english": "To draw.", "pos": "vt"}
+{"kenyang": "yán", "english": "To look for.", "pos": "vt"}
+{"kenyang": "yán bé", "english": "To wish.", "pos": "vt"}
+{"kenyang": "yaŋarí", "english": "To wobble.", "pos": "vt"}
+{"kenyang": "yap", "english": "To choose.", "pos": "vt"}
+{"kenyang": "yat", "english": "To smash.", "pos": "vt"}
+{"kenyang": "yatí", "english": "To tread.", "pos": "vt"}
+{"kenyang": "yɛ chí", "english": "Or.", "pos": "conj"}
+{"kenyang": "ye-ntiki mpok", "english": "Always, often.", "pos": "adv"}
+{"kenyang": "yɛ-agha", "english": "Anyone.", "pos": "det"}
+{"kenyang": "ye-enyiŋ", "english": "None.", "pos": "pron"}
+{"kenyang": "yem", "english": "To pierce.", "pos": "vt"}
+{"kenyang": "yem nden", "english": "To sew clothe.", "pos": "v"}
+{"kenyang": "yentí", "english": "To measure.", "pos": "vt"}
+{"kenyang": "ye-ntiki-mmu", "english": "Everyone.", "pos": "det"}
+{"kenyang": "yep", "english": "To tow.", "pos": "vt"}
+{"kenyang": "yep mmwét", "english": "To squirm.", "pos": "vt"}
+{"kenyang": "yeptí", "english": "To twist.", "pos": "vt"}
+{"kenyang": "yéptí-yéptí", "english": "To be crooked.", "pos": "vi"}
+{"kenyang": "yét", "english": "To bless.", "pos": "vt"}
+{"kenyang": "yibhirí", "english": "To turn, to be pregnant.", "pos": "vt"}
+{"kenyang": "yibhirí mmwét", "english": "To revolt.", "pos": "vt"}
+{"kenyang": "yibhirí-bebu", "english": "To repent.", "pos": "vt"}
+{"kenyang": "yiré", "english": "Why.", "pos": "adv"}
+{"kenyang": "yiki", "english": "To swear.", "pos": "vt"}
+{"kenyang": "yikisí", "english": "To dangle.", "pos": "vt"}
+{"kenyang": "yiní", "english": "To look at, to watch.", "pos": "vt"}
+{"kenyang": "yiŋí dí", "english": "To stare wide eyed.", "pos": "vt"}
+{"kenyang": "yiŋí nɛ amík ábú", "english": "To covet.", "pos": "vt"}
+{"kenyang": "yók", "english": "To strip.", "pos": "vt"}
+{"kenyang": "yókó-yókó", "english": "Loose.", "pos": "vi"}
+{"kenyang": "yon", "english": "To jolt.", "pos": "vt"}
+{"kenyang": "yɔkó", "english": "To mock.", "pos": "vt"}
+{"kenyang": "yore", "english": "To disgrace.", "pos": "vt"}
+{"kenyang": "ywe-ěyú", "english": "To perspire.", "pos": "vt"}
+{"kenyang": "ywe-mmwét", "english": "To rest, to relax.", "pos": "vt"}
