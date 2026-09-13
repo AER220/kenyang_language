@@ -1,0 +1,84 @@
+{"document_id": "Ch2", "type": "instructional_text", "section": "Greetings Context", "content": "Use Bha'chi? When: 1) You meet people in the house 2) You're visiting. And they'll respond eh O'tuor"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Greetings Context", "content": "Sometimes you'll be spoken to first. You may enter the house and you're immediately greeted 'Otuor?' In which case you'll reply 'eh! bha'chi?'"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Greetings Context", "content": "When you're walking into one person you say O'chi? (Singular for Bha'chi). And they'll reply 'eh O'tuor'."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Greetings Context", "content": "If you're in a group or more than one person. The recipient(s) of O'chi or Bha'chi would reply Bha'tuor?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Greetings Context", "content": "Summary of incoming/visiting rules: O'chi (singular when coming in to one person), Bha'chi (plural when coming into more than 1 person), Otuor? (singular response to one person), Bha:tuo (plural response to more than one person)."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Greetings Context", "content": "Bha'chi and Bha'tuor also works even when there's no INCOMING or RECEPTION. You can say O'chi or Bha'chi even if you are passing by people who are in their houses. It'll work just the same."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Cultural Note (CN)", "content": "Note should be taken that almost every greeting in the Kenyang language is a question. And even the reply sometimes. E.g Bha'chi and Bha'tuor translated to English would be: Bha'chi = Are you there? Bha'tuor = Have you come?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Cultural Note (CN)", "content": "Neyii which is Good morning in English; directly translated is not Good Morning. Neyí means 'Has it dawned?' But it serves the same purpose. So try not to translate word for word from English."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Greetings Context", "content": "When it comes to Good Afternoon and Good Evening, there's a general way of greeting that helps us bypass the niceties. We simply say M'kaka? To which the recipient can choose any number of ways to reply depending on the circumstance."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Cultural Note (CN)", "content": "When using M'kaka to greet an elderly person it's always polite to attach Mma (when it's a woman) or Eta, pa, M'kaka (when it's a man) in front of M'kaka e.g Mma M'kaka / pa M'kaka."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Greetings Context", "content": "An alternative way to say Goodnight primarily when parting with someone is 'Erob M'bureh' which translated would mean 'See You tomorrow'. You can also say 'Erob M'bureh' even when you're not parting with someone. It could apply even if you're sleeping on the same bed."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Cultural Note (CN)", "content": "In some rare instances when showing respect to an older person you may just say 'Ey ey Mma Oki or ey ey Etah, Oki'. There's a lot of body language that goes with this. You're better off not using Oki if the body language isn't demonstrating humility and gratitude."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Cultural Note (CN)", "content": "Eta Ma' Ndem doesn't really mean GOD in a religious sense. Our ancestors saw the idea of God as the 'Male and Female Spirits behind the Universe' hence Eta Ma'Ndem."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Personal Introduction Context", "content": "When the reply to 'Echina?' (How is it) is negative you can reply in a number of ways: Epu sairi (not Good), Epu Kor (Things aren't moving well), or Ebeb (it's bad)."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Personal Introduction Context", "content": "By the way, the reason for the M' in M'chi is because it's the compressed form of Meh (I/Me)."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Personal Introduction Context", "content": "When asking 'Where are you coming from?' it's actually 'wɔ fu fa' but in actual speech the 'w' is always absent. Hence 'O'fu fa?'"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Personal Introduction Context", "content": "Note should be taken that 'wɔ chokor Fa?' is strictly a question about address. The person asking either lives in the same town/village or already knows the town, village or city you Live in."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "instructional_text", "section": "Polite Requests", "content": "Use 'M'nek' (PLEASE) before any request."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Good Morning", "kenyang_phrase": "Neyí", "kenyang_reply": "Eh Neyi nkwor"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Welcome (Singular)", "kenyang_phrase": "Otuor ?", "kenyang_reply": "eh bhachi?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Welcome (Plural)", "kenyang_phrase": "Bha:tuo"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Are you there? / I am coming in (Singular)", "kenyang_phrase": "O'chi?", "kenyang_reply": "eh O'tuor"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Are you there? / I am coming in (Plural)", "kenyang_phrase": "Bha'chi?", "kenyang_reply": "Bha'tuor?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Passing by sitting people (Singular)", "kenyang_phrase": "O'chokor ey", "kenyang_reply": "eh! Otuor, bha'tuor, or O'rong ey"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Passing by sitting people (Plural)", "kenyang_phrase": "Bha'chokor ey", "kenyang_reply": "eh! Otuor, bha'tuor, or O'rong ey"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Greeting someone on the go", "kenyang_phrase": "O'rong ey"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Greeting someone returning", "kenyang_phrase": "O'ped nsem eh? (Have you returned?)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Good Afternoon", "kenyang_phrase": "Erehti ngohsi", "kenyang_reply": "Ngohsi bheri bheri"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Good Evening", "kenyang_phrase": "Erehti bheku", "kenyang_reply": "bheku bheri bheri"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "General/Bypass Greeting", "kenyang_phrase": "M'kaka?", "kenyang_reply": "Depends on circumstance"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Good Night (Singular)", "kenyang_phrase": "O'buereh ah", "kenyang_reply": "O'buereh nkwor"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Good Night (Plural)", "kenyang_phrase": "Ma'buereh ah", "kenyang_reply": "Ma'buereh Nkwor"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "See you tomorrow / Goodnight", "kenyang_phrase": "Erob M'bureh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Thank You", "kenyang_phrase": "Oki'ah / M'kaka"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Thank you very much", "kenyang_phrase": "Oki tontoh / M'kaka tontoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Thank you (Very Respectful to elder)", "kenyang_phrase": "Ey ey Mma Oki / ey ey Etah, Oki"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "God bless You", "kenyang_phrase": "Madem ajiet woh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "To Ask", "kenyang_phrase": "Bheb"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Ask Me", "kenyang_phrase": "Bheb meh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Ask You", "kenyang_phrase": "Bheb Wo"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Ask Him/her", "kenyang_phrase": "Bheb yí"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Ask Them", "kenyang_phrase": "Bheb Bho"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Ask Us", "kenyang_phrase": "Bheb bheseh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "How is it", "kenyang_phrase": "Echina?", "kenyang_reply": "Ebheke Beb (Not bad) OR Echi Sairi (It is Good)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "How are You", "kenyang_phrase": "O'Chi eh nah?", "kenyang_reply": "M'chi Sairi (I am fine) OR Mpu Sairi (I'm not fine)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "How are You (HealthWise)", "kenyang_phrase": "Na Ne Mmuet", "kenyang_reply": "Muet achi Sairi (I'm well) OR Mmuet apu Sairi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "My Name is Bessem", "kenyang_phrase": "Nnyenne na chi Bessem"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "What's yours? (Name)", "kenyang_phrase": "Eneh chi yí? / eneh nyen chi yí?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "What are you called?", "kenyang_phrase": "bha bhenghe woh bhe yi?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Who are Your Parents?", "kenyang_phrase": "O'chi moh agh'a?", "kenyang_reply": "M'chi moh Oben-Akem"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Where are you from? (village, town, country)", "kenyang_phrase": "O'chi moh nteke etok?", "kenyang_reply": "M'chi moh... (village) OR Meh M'chi chi moh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Where are you (singular) coming from?", "kenyang_phrase": "O'fu fa?", "kenyang_reply": "M'Fu... (I'm from) OR M'fu ekati (I'm from School)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Where are you (plural) coming from?", "kenyang_phrase": "bha fu fa?", "kenyang_reply": "Se fu ekati (We're coming from School)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Are you Sure?", "kenyang_phrase": "Okahh?", "kenyang_reply": "Eh! (Yes)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Where do you live/stay? (Address)", "kenyang_phrase": "O'chokor Fa?", "kenyang_reply": "Meh Chokor Arreytek"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Where are You (singular) going to?", "kenyang_phrase": "O'rong Fa?", "kenyang_reply": "Meh rong..... (Insert destination)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Where are you (plural) going?", "kenyang_phrase": "bha rong fa?", "kenyang_reply": "se rong..... (Insert destination)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Please Come", "kenyang_phrase": "M'nek twor"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Please Give Me", "kenyang_phrase": "M'nek Chieh Meh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Please Give him/her", "kenyang_phrase": "M'nek Chieh yi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Please Give them", "kenyang_phrase": "M'nek Chieh Bhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Please Give us", "kenyang_phrase": "M'nek Chieh bhese"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Who?", "kenyang_phrase": "Agh'a"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "How", "kenyang_phrase": "Nah?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "What", "kenyang_phrase": "yi?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Which", "kenyang_phrase": "En\u00e9h?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Why?", "kenyang_phrase": "ndaki yi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "When?", "kenyang_phrase": "Nteke mpok"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Where?", "kenyang_phrase": "F\u00e1h"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "How many (in terms of things)", "kenyang_phrase": "Meni?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "How many (In terms of people)", "kenyang_phrase": "bhati ani?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Who's that?", "kenyang_phrase": "Chi agh'a noh? OR agh'a noh?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Who's there?", "kenyang_phrase": "[Chi]Agh'a achi afor"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "What's that?", "kenyang_phrase": "Chi'yi nor / yi nor?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "What's this?", "kenyang_phrase": "Chi'yi neh / yi neh?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "Who are those?", "kenyang_phrase": "(Chi)Bha gha nor?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "What are those?", "kenyang_phrase": "(Chi)Bho yi nor?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "What are these?", "kenyang_phrase": "(Chi)Bho yi neh?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "What did you say?", "kenyang_phrase": "Obhe Yi?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "What did they say? / what are they saying?", "kenyang_phrase": "Bho bhe yi?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "How many of them?", "kenyang_phrase": "Boh Bhati ani?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "How Many people?", "kenyang_phrase": "Bho Bhati ani?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "How many of them are coming?", "kenyang_phrase": "Boh bhati ani bh\u00e1 twor?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch2", "type": "phrase", "english_translation": "How many should I bring?", "kenyang_phrase": "M'tuor ne Meni"}

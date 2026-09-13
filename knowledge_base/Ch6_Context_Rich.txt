@@ -1,0 +1,107 @@
+{"document_id": "Ch6", "type": "instructional_text", "section": "Warm Liquids", "content": "The word 'Sohti' is used specifically to mean 'warm' for liquids/fluids (e.g., Manyiep á sohti - The water is warm)."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "instructional_text", "section": "Time Expressions (Literal Translation)", "content": "When speaking about actions in a part of the day, Kenyang uses 'ne' (with). For example, 'Meh tuor ne bhayti' (I'm coming in the morning) literally translates to 'I'm coming with the Morning', meaning 'As the morning comes I shall be coming with it'. Similarly, 'Seh nagha ne Ngohsi' literally means 'We shall finish with the afternoon'."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "instructional_text", "section": "Idiom - Today", "content": "The phrase 'Echong chi Echong' is an idiom that translates to 'The die is cast!'"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "It's raining", "kenyang_word": "Manyieb ah nay"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "It's drizzling", "kenyang_word": "Manyieb ah nyiaghati"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Heavy downpour", "kenyang_word": "Erembi Manyieb"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Wind", "kenyang_word": "Mbuop", "example": "Mbuop ah fok- Wind is blowing"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Thunder", "kenyang_word": "Nephang"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Thunder strike", "kenyang_word": "Nephang neh kwen/tiéh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Lightening [Lightning]", "kenyang_word": "Mamiang"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Lightning spark", "kenyang_word": "Mamiang ah kord"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Strong Winds", "kenyang_word": "Bha bhuop", "example": "Bha bhuop ah fok - Heavy Winds are blowing"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Clouds", "kenyang_word": "Nebu"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "The Clouds are rumbling", "kenyang_word": "Nebu neh remti"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "The clouds are dark(getting ready to rain)", "kenyang_word": "Nebu neh gih / Mbang ah gih"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Cold", "kenyang_word": "Kwuen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "It's cold", "kenyang_word": "Eh kwuen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Places are cold", "kenyang_word": "Mbang ah kwuen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Harmattan", "kenyang_word": "Nebhang"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Cloudy/Foggy", "kenyang_word": "bebheri bebheri"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "I feel Cold", "kenyang_word": "Mbuep ah ki meh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "To shiver with cold", "kenyang_word": "Wird"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "I'm shivering with cold", "kenyang_word": "Meh Wird ne Mbuop"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Sun", "kenyang_word": "Mmok"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "The Sun is Shinning", "kenyang_word": "Mmok ah tieh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "The Sun is overhead/too hot", "kenyang_word": "Mmok ah tang"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Burn/heat up", "kenyang_word": "Song"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Places are hot", "kenyang_word": "Mbang ah song"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Heat/sweat", "kenyang_word": "Nsonghti"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "I feel hot/I'm feeling heat in my body", "kenyang_word": "Nsonghti ah ki meh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Wipe off your sweat", "kenyang_word": "Teseh nsonghti"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "warm (for liquids/fluids)", "kenyang_word": "Sohti", "example": "Manyiep \u00e1 sohti (The water is warm)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Moon", "kenyang_word": "Ntang"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "The moon is out & shinning", "kenyang_word": "Ntang ah f\u00f9"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Lamb/Electric bulb/light", "kenyang_word": "Erongho"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Light is shinning", "kenyang_word": "Erongho eh du"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "The Light's gone off", "kenyang_word": "Erongho eh nemeh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Month", "kenyang_word": "Tan", "example": "Months = Batan"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "12 Months", "kenyang_word": "Batan byo neh bepay"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "January", "kenyang_word": "Moh Newan"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "February", "kenyang_word": "Noh Newan"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "March", "kenyang_word": "Noh Song-Song"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "April", "kenyang_word": "Moh Song-Song"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "May", "kenyang_word": "Noh Ntoo"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "June", "kenyang_word": "Moh Ntoo"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "July", "kenyang_word": "Noh Sieh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "August", "kenyang_word": "Moh Sieh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "September", "kenyang_word": "Noh Manyep Veti"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "October", "kenyang_word": "Moh Manyep Veti"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "November", "kenyang_word": "Noh Ankagare"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "December", "kenyang_word": "Moh Ankagare"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Morning", "kenyang_word": "Bhayti"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "It's a new dawn/Morning/the day has unfolded", "kenyang_word": "Mbang akanghari"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "I'm coming in the morning", "kenyang_word": "Meh tuor ne bhayti"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Afternoon", "kenyang_word": "Ngohsi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "We shall finish in the afternoon", "kenyang_word": "Seh nagha ne Ngohsi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Evening", "kenyang_word": "Bheyku"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "It's evening/evening has come", "kenyang_word": "bheyku bh\u00e8 tuor"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Evening is Coming", "kenyang_word": "Bheyku bh\u00e9 tuor"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Night", "kenyang_word": "Bhiti"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "It's nightfall", "kenyang_word": "Bhiti bhe girh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Places are dark", "kenyang_word": "Mbang ah giri"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "2Days Ago", "kenyang_word": "Ndong Ebhuere epai"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "3Days Ago", "kenyang_word": "Ndong Ebhuere erad"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "4Days Ago", "kenyang_word": "Ndong Ebhuere Enui"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "5Days Ago", "kenyang_word": "Ndong Ebhuere etai"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "6Days Ago", "kenyang_word": "Ndong Ebhuere tandard"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "In 2Days", "kenyang_word": "Ndong echong epai"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "In 3Days", "kenyang_word": "Ndong echong erad"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "In 4Days", "kenyang_word": "Ndong echong enui"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "In 5Days", "kenyang_word": "Ndong echong etai"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "In 6Days", "kenyang_word": "Ndong echong tandard"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Today", "kenyang_word": "Echong"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Yesterday", "kenyang_word": "Ey\u00fau / Ey\u00f9"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Tomorrow", "kenyang_word": "Mbureh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "This Week", "kenyang_word": "Sunday N\u00e9h"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Next week", "kenyang_word": "Sunday ne ambeuh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "This Month", "kenyang_word": "Ntang'a N\u00e9h"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Next Month", "kenyang_word": "Ntang an\u00e9 ambeuh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Last Week", "kenyang_word": "Sunday an\u00e9 asem"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Last Month", "kenyang_word": "Ntang an\u00e9 asem"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "This Year", "kenyang_word": "Mmieh n\u00e8n"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Last Year", "kenyang_word": "Mmieh ey\u00fau"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Next Year", "kenyang_word": "Mmieh Mbureh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Suddenly", "kenyang_word": "bhe ribhe nyu"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Immediate Past", "kenyang_word": "Mbi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Unspecified Distant Past", "kenyang_word": "Enyaka"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "I came yesterday", "kenyang_word": "M'tour Ey\u00f9"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "You came yesterday", "kenyang_word": "O'tuor Ey\u00f9u"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "He/she came yesterday", "kenyang_word": "[Yi]a tuor Ey\u00f9"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "They Came Yesterday", "kenyang_word": "Bha tuor Ey\u00f9"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "We came yesterday", "kenyang_word": "S\u00e9 tuor Ey\u00f9"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "I came today", "kenyang_word": "M'tour Echong"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "You came today (as a question)", "kenyang_word": "O'tuor Echong"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "He/She Came Today", "kenyang_word": "[Yi]\u00c0 tuor Echong"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "They Came Today", "kenyang_word": "Bha tuor Echong"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "We came today", "kenyang_word": "S\u00e9 tuor Echong"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "I'm coming tomorrow", "kenyang_word": "Meh Tuor Mbureh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Are you coming tomorrow?", "kenyang_word": "O'tuor Mbureh?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "He/She is coming tomorrow", "kenyang_word": "\u00c0 tuor Mbureh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "They are coming tomorrow", "kenyang_word": "Bh\u00e1 Tuor Mbureh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "We are Coming Tomorrow", "kenyang_word": "S\u00e9h tuor Mbureh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "I came this Week", "kenyang_word": "M'tour Sunday N\u00e9h"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "Did you come this week?", "kenyang_word": "O'tuor Sunday N\u00e9h?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "She/He came this Week", "kenyang_word": "\u00c0 tuor Sunday N\u00e9h"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "They Came this Week", "kenyang_word": "Bha Tuor Sunday N\u00e9h"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch6", "type": "vocabulary", "english_translation": "We Came this week", "kenyang_word": "S\u00e9 tuor Sunday N\u00e9h"}

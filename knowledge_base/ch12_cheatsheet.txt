@@ -1,0 +1,118 @@
+{"chapter": "12", "topic": "Urgent Needs & Survival", "kenyang": "N'nek quak meh", "english": "Help me!"}
+{"chapter": "12", "topic": "Urgent Needs & Survival", "kenyang": "ewu echi fa?", "english": "Where is the toilet?"}
+{"chapter": "12", "topic": "Urgent Needs & Survival", "kenyang": "Nsai ah nu meh", "english": "I am hungry."}
+{"chapter": "12", "topic": "Urgent Needs & Survival", "kenyang": "manyiep ah quak meh", "english": "I am thirsty."}
+{"chapter": "12", "topic": "Urgent Needs & Survival", "kenyang": "M'mpop or m'nang mpop", "english": "I am tired."}
+{"chapter": "12", "topic": "Urgent Needs & Survival", "kenyang": "M'nem or mbeke renghe mbï", "english": "I am lost.", "context": "(I do not know the road.)"}
+{"chapter": "12", "topic": "Health & Wellbeing", "kenyang": "Meh may or mmuet apu meh sairi", "english": "I am sick."}
+{"chapter": "12", "topic": "Health & Wellbeing", "kenyang": "Nti ah sai meh", "english": "My head hurts."}
+{"chapter": "12", "topic": "Health & Wellbeing", "kenyang": "Meh yang ngang or meh yang ekere bha'bhey", "english": "I need a doctor/hospital."}
+{"chapter": "12", "topic": "Health & Wellbeing", "kenyang": "Meh yangha bhére amek/kenor", "english": "I want to sleep."}
+{"chapter": "12", "topic": "Getting Around (Navigation)", "kenyang": "esieh echi fa?", "english": "Where is the market?"}
+{"chapter": "12", "topic": "Getting Around (Navigation)", "kenyang": "Meh rong Ekati", "english": "I am going to school."}
+{"chapter": "12", "topic": "Getting Around (Navigation)", "kenyang": "nong meh.", "english": "Wait for me."}
+{"chapter": "12", "topic": "Getting Around (Navigation)", "kenyang": "Sé dok", "english": "Let us go."}
+{"chapter": "12", "topic": "Getting Around (Navigation)", "kenyang": "wenti fa.", "english": "Stop here."}
+{"chapter": "12", "topic": "Social Safety Nets", "kenyang": "Mbeke jui mmem.", "english": "I don't understand."}
+{"chapter": "12", "topic": "Social Safety Nets", "kenyang": "Nnek rem mandu mandu", "english": "Please speak slowly."}
+{"chapter": "12", "topic": "Social Safety Nets", "kenyang": "Woh renghe rem Ndek'eh?", "english": "Do you speak English?"}
+{"chapter": "12", "topic": "Social Safety Nets", "kenyang": "Mpu ghok Kenyang.", "english": "I don't understand Kenyang"}
+{"chapter": "12", "topic": "Social Safety Nets", "kenyang": "M'beke Renghè bhe rem Kenyang", "english": "I can't Speak Kenyang"}
+{"chapter": "12", "topic": "Social Safety Nets", "kenyang": "M'beke Renghè rem eyong etok sairi", "english": "I can't speak the dialect very well"}
+{"chapter": "12", "topic": "Social Safety Nets", "kenyang": "Oki ah/nkaka", "english": "Thank you."}
+{"chapter": "12", "topic": "Helpful \"One-Word\" Responses", "kenyang": "Eh", "english": "Yes"}
+{"chapter": "12", "topic": "Helpful \"One-Word\" Responses", "kenyang": "eh eh/Aghai", "english": "No"}
+{"chapter": "12", "topic": "Helpful \"One-Word\" Responses", "kenyang": "oh", "english": "Okay"}
+{"chapter": "12", "topic": "Helpful \"One-Word\" Responses", "kenyang": "nnek", "english": "Please"}
+{"chapter": "12", "topic": "Helpful \"One-Word\" Responses", "kenyang": "tetep", "english": "True"}
+{"chapter": "12", "topic": "Traveler's Tip: The Power of \"NNEK\"", "kenyang": "Nnek", "english": "Please", "context": "In Kenyang, the word Nnek(Please) is your best friend. Adding it to the beginning of any request makes you sound much more polite and respectful to the locals."}
+{"chapter": "12", "topic": "Traveler's Tip: The Power of \"NNEK\"", "kenyang": "Nnek Chieh meh manyiep.", "english": "Instead of \"Give me water,\" say \"Please Give me water.\""}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Nkap", "english": "Money"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Chieh meh Nkap", "english": "Give me Money"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Mbeke bhong Nkap", "english": "I don't have Money"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Eyaah?", "english": "I'm Sorry"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Nnek Keh bey Ntih", "english": "Please don't be offended"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Meh ne woh", "english": "You and me"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Meh yang ngoreh", "english": "I'm looking for a Spouse (Female)"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Fatæ", "english": "arise", "context": "(Fatæ se dok - Arise let's go)"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Pokor", "english": "Carry", "context": "(pokor yi - Carry him/her)"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Yong", "english": "lift", "context": "(Nnek tuo yong ntu ne - Please come help me lift this load)"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Bhokosi", "english": "Help lift a load to someone's head", "context": "(Nnek tuo bhokosi meh - Please come help me get this load to my head)"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Twoh se dok", "english": "Come let's go"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Echina", "english": "How's it?"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Chie meh", "english": "Give Me"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Twø sot", "english": "Come and take"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Søt mpok", "english": "Be careful"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Chie meh mpok", "english": "Give me time"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Kusi", "english": "Silence!"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Chokor pkak", "english": "Keep quiet"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Chi yireh", "english": "What is it?"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Meh rong", "english": "I'm Going"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Mbeke renghe", "english": "I don't know"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Erehti moh", "english": "Good Child"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Erehti enyieng", "english": "Good thing"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Moh Manyang", "english": "Bayangian"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "M'chi Moh Manyang", "english": "I'm a Bayangian"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Meh nchi moh .... Oben Akem", "english": "I'm the Son/daughter of Oben Akem"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "M'pop", "english": "I'm Tired"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Wuai Amin", "english": "Laugh"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Dih kebhoh", "english": "Cry"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Ke di kebhoh", "english": "Don't cry"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "So mmuet", "english": "Bathe"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Ekucha", "english": "Sponge"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Esieh", "english": "Toothbrush"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Sati Amin", "english": "Brush teeth"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Buereh kenor", "english": "Sleep"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Ghemeh", "english": "Wake up(from sleep)"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Ku", "english": "Buy"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Ti", "english": "Sell"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Ghog", "english": "To Hawk"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Bhereuh", "english": "Beauty"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Bhereh Ndu", "english": "Kindness"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "E(h)songhori epu", "english": "No problem/There's no problem"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Eh!", "english": "Yes"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Eh eh", "english": "No"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Koh peti Peti", "english": "Walk slowly/carefully"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Koh Nya'ahh", "english": "Walking sluggishly", "context": "(A Koh Nya'ahh - He/she is walking sluggishly)"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Rem peti Peti", "english": "Speak calmly"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Nyangha eyong Amik", "english": "Keep your voice down"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Nyere", "english": "Press"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Mäp", "english": "Press (with hands)"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Nyiot", "english": "Squeeze"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Nyioti", "english": "Massage"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Nyioreh", "english": "Iron"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Orenghe rem Ndek eh?", "english": "Do you know how to speak English?"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Meh rem mandu", "english": "I speak a little", "context": "or Ndenghe rem mandu"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Nah ne nnereked", "english": "How's the family"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Bha chi sairi", "english": "They are fine"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Sing", "english": "Write"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Pai", "english": "Read"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Yang", "english": "Search/look for sth/sb"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Yang Mpai", "english": "To look for trouble"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Nesang", "english": "Disrespect"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Sang nesang", "english": "To be disrespectful", "context": "(Á sang nesang - He/She is [being] disrespectful)"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Kenoko", "english": "Respect/ Adoration"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Bhenghe", "english": "Call"}
+{"chapter": "12", "topic": "Frequently used Words and sentences", "kenyang": "Bhenghe ndong'o wah", "english": "Call/dial My number"}
+{"chapter": "12", "topic": "People and Descriptions", "kenyang": "Ndek", "english": "White Male"}
+{"chapter": "12", "topic": "People and Descriptions", "kenyang": "Ngoreh Ndek", "english": "White Female"}
+{"chapter": "12", "topic": "People and Descriptions", "kenyang": "Ngoreh Manyang", "english": "Bayangi Woman"}
+{"chapter": "12", "topic": "People and Descriptions", "kenyang": "Ngbok'ndem", "english": "Beautiful Woman"}
+{"chapter": "12", "topic": "People and Descriptions", "kenyang": "Mmu Kiri", "english": "Black Man/Woman"}
+{"chapter": "12", "topic": "People and Descriptions", "kenyang": "Bhoh Kiri", "english": "Africans"}
+{"chapter": "12", "topic": "People and Descriptions", "kenyang": "Etangti mmu", "english": "Strong Person"}
+{"chapter": "12", "topic": "People and Descriptions", "kenyang": "Ekwe-kwe mmu/ Esóh bhachai", "english": "Weak Person"}
+{"chapter": "12", "topic": "People and Descriptions", "kenyang": "Mmu Nkap", "english": "Rich Person"}
+{"chapter": "12", "topic": "People and Descriptions", "kenyang": "Mmu Nchep", "english": "Poor Person"}
+{"chapter": "12", "topic": "Common Animals", "kenyang": "Anghwa", "english": "Cat"}
+{"chapter": "12", "topic": "Common Animals", "kenyang": "Mmu", "english": "Dog"}
+{"chapter": "12", "topic": "Common Animals", "kenyang": "Akok", "english": "Pig"}
+{"chapter": "12", "topic": "Common Animals", "kenyang": "Mpong", "english": "Cow"}
+{"chapter": "12", "topic": "Common Animals", "kenyang": "Mmen", "english": "Goat"}
+{"chapter": "12", "topic": "Common Animals", "kenyang": "Aghong'o mmen", "english": "He-goat"}
+{"chapter": "12", "topic": "Common Animals", "kenyang": "Nnyioh", "english": "Snake"}
+{"chapter": "12", "topic": "Common Animals", "kenyang": "Nkok", "english": "Fowl"}
+{"chapter": "12", "topic": "Common Animals", "kenyang": "Nsih", "english": "Fish"}
+{"chapter": "12", "topic": "Common Animals", "kenyang": "Nnyah", "english": "Meat/Animal"}
+{"chapter": "12", "topic": "Common Animals", "kenyang": "Ngworh", "english": "Snail"}
+{"chapter": "12", "topic": "Common Animals", "kenyang": "Neh'ghai", "english": "Crab"}

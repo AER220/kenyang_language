@@ -1,0 +1,88 @@
+{"chapter": "5", "topic": "Prepositions and Locations", "kenyang": "Fâ", "english": "Here", "example_kenyang": "Fié Fâ", "example_english": "Put it Here"}
+{"chapter": "5", "topic": "Prepositions and Locations", "kenyang": "Afo", "english": "There", "example_kenyang": "Tæ Afo", "example_english": "Stand there"}
+{"chapter": "5", "topic": "Prepositions and Locations", "kenyang": "Awuh", "english": "Over there", "example_kenyang": "TÆ awuh", "example_english": "Stand Over there"}
+{"chapter": "5", "topic": "Prepositions and Locations", "kenyang": "ambeuh", "english": "In front", "example_kenyang": "Tæ ambeuh", "example_english": "Stand infront"}
+{"chapter": "5", "topic": "Prepositions and Locations", "kenyang": "ansem", "english": "Behind", "example_kenyang": "Tæ ansem", "example_english": "Stand behind"}
+{"chapter": "5", "topic": "Prepositions and Locations", "kenyang": "neku", "english": "Beside", "example_kenyang": "Nyangha Neku", "example_english": "Keep it beside"}
+{"chapter": "5", "topic": "Prepositions and Locations", "kenyang": "anfai", "english": "Up", "example_kenyang": "Yenghé anfai", "example_english": "Look Up"}
+{"chapter": "5", "topic": "Prepositions and Locations", "kenyang": "a'nfai", "english": "Ontop", "example_kenyang": "Nyangha a'nfai", "example_english": "Keep Ontop"}
+{"chapter": "5", "topic": "Prepositions and Locations", "kenyang": "amek", "english": "Down", "example_kenyang": "Chokor amek", "example_english": "Sit Down"}
+{"chapter": "5", "topic": "Prepositions and Locations", "kenyang": "amem", "english": "Inside", "example_kenyang": "Fié amem", "example_english": "Put inside"}
+{"chapter": "5", "topic": "Prepositions and Locations", "kenyang": "nefi", "english": "Outside", "example_kenyang": "Fu nefi", "example_english": "Step outside"}
+{"chapter": "5", "topic": "Prepositions and Locations", "kenyang": "a'nten", "english": "Under", "example_kenyang": "bió a'nten", "example_english": "Look under"}
+{"chapter": "5", "topic": "Demonstrative Pronouns", "kenyang": "Eneh", "english": "This one", "example_kenyang": "Chie meh Eneh", "example_english": "Give me this one"}
+{"chapter": "5", "topic": "Demonstrative Pronouns", "kenyang": "Eyor", "english": "That One", "example_kenyang": "Chie meh eyor", "example_english": "Give me that one"}
+{"chapter": "5", "topic": "Demonstrative Pronouns (Persons)", "kenyang": "Á neh", "english": "This one"}
+{"chapter": "5", "topic": "Demonstrative Pronouns (Persons)", "kenyang": "Á wu", "english": "That One"}
+{"chapter": "5", "topic": "Demonstrative Pronouns (Persons)", "kenyang": "À bhen", "english": "These ones"}
+{"chapter": "5", "topic": "Demonstrative Pronouns (Persons)", "kenyang": "Á bhoh", "english": "Those ones"}
+{"chapter": "5", "topic": "Demonstrative Pronouns (Things)", "kenyang": "É neh", "english": "This one"}
+{"chapter": "5", "topic": "Demonstrative Pronouns (Things)", "kenyang": "É yoh", "english": "That one"}
+{"chapter": "5", "topic": "Demonstrative Pronouns (Things)", "kenyang": "É bhoh", "english": "Those ones"}
+{"chapter": "5", "topic": "Demonstrative Pronouns (Things)", "kenyang": "É bhen", "english": "These ones"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Enyieng_e neh", "english": "This thing"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Enyieng_e yen", "english": "This thing"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Enyieng_e yoh", "english": "That thing"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Meh nyieng_e bhen", "english": "These things"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Meh nyieng_e bhoh", "english": "Those things"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Nenyieh noh", "english": "That Meal/dish"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Nenyieh nen", "english": "This meal/dish"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Menyienghe nyieh bhoh", "english": "Those dishes/meals"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Menghienghe nyieh bhen", "english": "These Meals/dishes"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "N'nyien_e nen", "english": "This stream"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "N'nyien_e Noh", "english": "That Stream"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Ma'nyien_e yoh", "english": "Those streams"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Ma'nyien_e yen", "english": "These streams"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Nti wu", "english": "That head"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Nti neh", "english": "This Head"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bhati neh", "english": "These heads"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bhati yoh", "english": "Those heads"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "N'nyese Noh", "english": "That Eye"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "N'nyese nen", "english": "This Eye"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Amik_e yoh", "english": "Those Eyes"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Amik_e yen", "english": "These Eyes"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Nkap_e wu", "english": "That Money"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Nkap_e wen", "english": "This Money"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bhakap_e neh", "english": "These Monies"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bhakap_e yoh", "english": "Those Monies"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bhisi bhen", "english": "This Face"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bhisi bhoh", "english": "That Face"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Manyieb_e moh", "english": "That Water"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Manyieb_e men", "english": "This Water"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Moh neh", "english": "This Child"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Moh wu", "english": "That Child"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Boh bhoh", "english": "Those Children"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bhóh bhen", "english": "These Children"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Mmu wu", "english": "That Person"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Mmu neh", "english": "This Person"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Esaka mu yoh", "english": "That Gentleman"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Esaka mu neh", "english": "This Gentleman"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bhesaka boh bhoh", "english": "Those Gentlemen"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bhesaka boh bhen", "english": "These Gentlemen"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Ngorsong_o wu", "english": "That Lady"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Ngorsong_o neh", "english": "This Lady"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bha'orsong bhen", "english": "These Ladies"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bha'orsong bhoh", "english": "Those Ladies"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Eket_e yoh", "english": "That House"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Eket_e Eneh", "english": "This House"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bheket_e ebhen", "english": "These Houses"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bheket_e ebhoh", "english": "Those Houses"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Ebhak_eneh", "english": "This Place"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Ebhak_e yoh", "english": "That Place"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Mbang_e yoh", "english": "Those Places"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Mbang_e neh", "english": "These Places"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Etok_o neh", "english": "This Town/City/Country"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Etok_e yoh", "english": "That Country/Town/City"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bhetok_o bhen", "english": "These Cities/Countries/Towns"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bhetok_o bhoh", "english": "Those Countries/Towns/Cities"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Mmik_e neh", "english": "This Land/Earth"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Mmik_e yoh", "english": "That Land"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Epeng_e yoh", "english": "That Attitude/Behavior"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Epeng_e neh", "english": "This Attitude/Behavior"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Epeng_eh yen", "english": "This Attitude/Behavior"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bh_epeng_e bhen", "english": "These Behaviors"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bh_epeng_e bhoh", "english": "Those Behaviors"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Mbi neh", "english": "This Road"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Mbi wu", "english": "That Road"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bha'bhi yoh", "english": "Those Roads"}
+{"chapter": "5", "topic": "Demonstrative Adjectives", "kenyang": "Bha'bhi neh", "english": "These Roads"}

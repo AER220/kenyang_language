@@ -1,0 +1,87 @@
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Ekong / map", "english": "Love / Hate"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Ekong Ereuh echa mpap", "english": "Love is better than hate", "context": "E.g"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Nènèh / Tiép", "english": "Open / Close"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Nènèh mbi'nyuope", "english": "open the door", "context": "E.g"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Tiép mbi'nyuope", "english": "close the door"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Søt / Chiéh", "english": "Take / Give", "context": "Note: Text has Give/Take (Søt/Chiéh), but Søt is Take and Chiéh is Give based on surrounding context."}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Chieh Meh", "english": "Give Me"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Chieh yi", "english": "Give him/her"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Chieh Bhoh", "english": "Give them"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Chieh bhese", "english": "Give us"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Nnek Chieh meh", "english": "Please Give Me", "context": "E.g"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Tu sot", "english": "come and take", "context": "Reply:"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Fúu / tiep or fay", "english": "Open(exposed) / locked"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "À roh Ekét Fúu", "english": "he/she has left the house Open", "context": "E.g"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "à tiep/fay Ekét", "english": "He/she has locked the house."}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Ekèt echi fúu", "english": "The House is open"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Ekèt echi titiep", "english": "The House is locked"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Fatæ / Chokor", "english": "Stand / Sit"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Fatæ meh m'Chokor", "english": "Stand up so I can sit"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "mbɨrng / Erohri", "english": "Short / tall"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "mbɨrng e mmu", "english": "A Short Person"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Erohri mmu", "english": "A Tall person"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "À sap", "english": "He/she is tall"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "À chi Mbɨrng", "english": "He/She is Short"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "niengti / nirn", "english": "Sweet / bitter"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Erohri Nti", "english": "Long Head"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Bherohri Amoh", "english": "long hands"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Bherohri bhekaka", "english": "Long legs"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "M'bong bherohri Bhekak", "english": "I have long legs", "context": "e.g"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "À Bhong bherohri Amoh", "english": "He/She has long legs"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "mbɨrng / sap", "english": "Short / Far or Long"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Nekoh nechi mbɨrng", "english": "The distance is Short"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Nekoh Neh sap", "english": "The distance is far"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Erohri Nekoh", "english": "Long Distance/journey"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Mandu / bheyah", "english": "Little / much"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "M'beke bhong Mandu nkap", "english": "I don't have small/little money"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "M'bong bheyah nkap", "english": "I have much money"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Ereuh / Ebeb", "english": "It's good / It's bad"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Ereuh echa(efued) / Ebeb echa(efued)", "english": "It's very good / It's very bad"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Eporh / Erehti", "english": "Good / Bad", "context": "Note: Text lists Good/Bad (Eporh/Erehti) but examples show Eporh is bad/ugly and Erehti is good/beautiful."}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Eporh Epeng", "english": "Bad attitude"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Erehti Epeng", "english": "Good Attitude"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Eporh / Erehti", "english": "Ugly / beautiful", "context": "Eporh/Erehti can also be opposites of Ugly/beautiful"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Erehti bhisi", "english": "Beautiful Face"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Eporh bhishi", "english": "ugly face"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "M'bong Erehti bhisi", "english": "I have a beautiful face"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Mmen abhong Eporh bhishi", "english": "A goat has an ugly face"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Bhereh'Ndu / Bhebirh", "english": "Goodness / Evil"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Oyah Bhereh'Ndu", "english": "You are full of Goodness"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Bha'yah bhebirh", "english": "They are full of Evil", "context": "Inferred translation for Bha'yah bhebirh"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Mandu-Nɨngé-Nɨngé / Ereme", "english": "Small / Big"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Mmoh abhuet Nɨngé-Nɨngé", "english": "The baby is still very small"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Mandu Mmoh", "english": "A small child", "context": "Mandu is mostly used in the place of Nɨnghé-Nɨnghé"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Ereme Mmoh", "english": "A big Child"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Peti-peti / ayak", "english": "Slow / fast"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Koh Peti-peti", "english": "Walk slowly and carefully", "context": "Peti peti is a more careful and often commended from of 'Slow'. It has a positive appeal."}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Koh ayak", "english": "walk fast"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Koh N'ayak", "english": "walk with fastness"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Gbo-ord / Nyia'ahh", "english": "Sluggish / Bad kind of slow", "context": "There is a form of slow in the dialect that's negative and frowned upon."}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "À Koh Nyia'ahh / Gbo-ord", "english": "She/he is walking so slow/sluggishly."}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Kirih / Piór", "english": "Black / White"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Achwi achi kirih", "english": "The Car is black"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Ndah ah chi piór", "english": "The ball is White"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Awoh Nem / Awoh ngorh", "english": "Right-hand / Left-hand"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Mmu Nchep / Mmu Nkap", "english": "Poor person / Rich person"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Fu ambi / kwen ndong", "english": "Succeed / Fail"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Kenem / keyoreh", "english": "Honor / Disgrace"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Kaah / Nisi", "english": "Accept / Refuse"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "M'Kaah", "english": "I accept"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "M'nisi", "english": "I refuse"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Ehh / Éh-éh", "english": "Yes / No"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "TETEP / Nsei", "english": "Truth / Lies"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Nepem / Newu", "english": "Life / Death"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Enem / Essoh", "english": "Dry Season / Rainy Season"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Gúed / Kanghari", "english": "Tie / Loosen"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Nep / kanghari", "english": "Wrap / unwrap"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Mandu / Bheyah", "english": "Little / Much or Plenty"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Fieh / Fereh", "english": "Put / Remove"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Nyokoti / Takati", "english": "Gather / Scatter"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Bey muet / Wekerek / ko'o ko'o", "english": "Difficult / Easy"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Yong (anfai) / Nyangha (amik)", "english": "Lift (Up) / Keep(Down)"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Nene / Kuti", "english": "Open / Close"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Søt / Chièh", "english": "Take / Give"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Tek / ghoko-tek", "english": "Remember / Forget"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Ninghe-Ninghe / Chirk", "english": "Small / Big(in size)"}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Mmen e ya ah chirk", "english": "My Goat is big", "context": "Ex."}
+{"chapter": "10", "topic": "Opposites & Adjectives", "kenyang": "Mmen e ya abhuet Ninghe-Ninghe", "english": "my goat is still small", "context": "Ex 2"}

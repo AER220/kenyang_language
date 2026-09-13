@@ -1,0 +1,94 @@
+{"document_id": "Ch1", "type": "instructional_text", "section": "Methodology", "content": "The 'Formula' Method: We provide simple sentence templates so you can start speaking immediately."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "Methodology", "content": "Cultural Insights: Scattered throughout the book are 'Cultural Notes (CN)' that explain the traditions behind the words."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "Methodology", "content": "A Complete Dictionary: A handy reference at the back for quick lookups."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "A Note on Pronunciation", "content": "Kenyang is a tonal and rhythmic language. As you read, don't be afraid to speak out loud!"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "A Note on Pronunciation", "content": "'Bh' is a soft, breathy 'b' sound."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "A Note on Pronunciation", "content": "'Ny' is like the 'ny' in 'canyon.'"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "A Note on Pronunciation", "content": "'Gh' is a soft sound made in the back of the throat."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "A Note on Pronunciation", "content": "The goal isn't to be perfect; the goal is to be understood. Every word you speak is a victory for the preservation of our heritage."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "A Note on Pronunciation", "content": "Let's begin. Peti peti chi nekoh (Slowly but Surely!)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "Introduction To Kenyang", "content": "Kenyang is a Southern Bantoid language spoken by the Bayang people in the Manyu and Meme divisions of Cameroon. It is a tonal language with a rich oral tradition and a complex noun-class system typical of the Bantu family."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "Phonology and Pronunciation", "content": "Kenyang utilizes seven vowel sounds (a, e, ɛ, i, o, ɔ, u) and distinct tonal patterns."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "Phonology and Pronunciation", "content": "High Tone (´): Indicates a higher pitch, often used for emphasis or specific verb tenses."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "Phonology and Pronunciation", "content": "Low Tone (`): The neutral/default pitch."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "Grammar Essentials", "content": "SVO Structure: Subject-Verb-Object."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "Grammar Essentials", "content": "Noun Classes: Nouns are categorized by prefixes (e.g., Mu- for singular persons, Bho- for plural)."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "Grammar Essentials", "content": "Agreement: Verbs and adjectives must 'agree' with the prefix of the noun they modify."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "Nouns and Plurals", "content": "In Kenyang, nouns are grouped into 'classes' based on their prefixes. To make a word plural, you usually change the prefix."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "Nouns and Plurals", "content": "Quick Tip: Some words look the same in singular and plural (Class 9/10), like nkok (fowl/fowls)."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "instructional_text", "section": "Personal Pronouns", "content": "Note: Whenever Yi is doing an action the ancillary sound à mostly accompanies or replaces it to help it move and do an action example Yi(á) tuor mostly becomes á tuor. The yi becomes silent. But 'yi' gets maintained when it's receiving an action as we'll witness as we progress."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "A", "letter_lower": "a", "kenyang_word": "Ana", "english_translation": "thigh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "B", "letter_lower": "b", "kenyang_word": "bawet", "english_translation": "Oil"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "Bh", "letter_lower": "bh", "kenyang_word": "bhép", "english_translation": "Ask"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "Ch", "letter_lower": "ch", "kenyang_word": "chwe", "english_translation": "enter"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "D", "letter_lower": "d", "kenyang_word": "dók", "english_translation": "Go"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "E", "letter_lower": "e", "kenyang_word": "Nyé", "english_translation": "Feed"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "Ɛ", "letter_lower": "ɛ", "kenyang_word": "ɛket", "english_translation": "House"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "F", "letter_lower": "f", "kenyang_word": "fa", "english_translation": "Here"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "G", "letter_lower": "g", "kenyang_word": "gwo", "english_translation": "Vomit"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "Gb", "letter_lower": "gb", "kenyang_word": "gbene", "english_translation": "grub"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "Gh", "letter_lower": "gh", "kenyang_word": "ghók", "english_translation": "hear"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "I", "letter_lower": "i", "kenyang_word": "tí", "english_translation": "sell"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "Ɨ", "letter_lower": "ɨ", "kenyang_word": "ɛti", "english_translation": "calabash"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "J", "letter_lower": "j", "kenyang_word": "ɛjɔ", "english_translation": "water pot"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "K", "letter_lower": "k", "kenyang_word": "akók", "english_translation": "pig"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "Kp", "letter_lower": "kp", "kenyang_word": "ɛkpɔk", "english_translation": "lump"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "M", "letter_lower": "m", "kenyang_word": "mmok", "english_translation": "sun"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "N", "letter_lower": "n", "kenyang_word": "nnok", "english_translation": "soup"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "Ŋ", "letter_lower": "ŋ", "kenyang_word": "ntaŋ", "english_translation": "moon"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "Ny", "letter_lower": "ny", "kenyang_word": "nyú", "english_translation": "drink"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "O", "letter_lower": "o", "kenyang_word": "nsok", "english_translation": "elephant"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "Ɔ", "letter_lower": "ɔ", "kenyang_word": "nkɔk", "english_translation": "fowl"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "P", "letter_lower": "p", "kenyang_word": "mpɔn", "english_translation": "Cow"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "R", "letter_lower": "r", "kenyang_word": "rě", "english_translation": "fly"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "S", "letter_lower": "s", "kenyang_word": "sǒ", "english_translation": "wash"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "T", "letter_lower": "t", "kenyang_word": "ntu", "english_translation": "load"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "U", "letter_lower": "u", "kenyang_word": "mmú", "english_translation": "dog"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "Ʉ", "letter_lower": "ʉ", "kenyang_word": "sɛpʉ", "english_translation": "camwood"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "alphabet", "letter_upper": "Y", "letter_lower": "y", "kenyang_word": "yem", "english_translation": "pierce"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "1", "kenyang_word": "émot"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "2", "kenyang_word": "bhépay"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "3", "kenyang_word": "bhérát"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "4", "kenyang_word": "ménwi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "5", "kenyang_word": "bhétay"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "6", "kenyang_word": "bhétándat"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "7", "kenyang_word": "tándrámɔt"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "8", "kenyang_word": "ménen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "9", "kenyang_word": "ménén nɛ amot"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "10", "kenyang_word": "byó"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "11", "kenyang_word": "byó nɛ amot"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "12", "kenyang_word": "byó nɛ bépay"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "13", "kenyang_word": "byó nɛ bérát"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "14", "kenyang_word": "byó nɛ ménwi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "15", "kenyang_word": "nɛkú"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "16", "kenyang_word": "nekú ne émot"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "17", "kenyang_word": "nɛkú nɛ bépay"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "18", "kenyang_word": "nɛkú ne bérát"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "19", "kenyang_word": "nɛkú nɛ ménwi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "20", "kenyang_word": "Esa"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "21", "kenyang_word": "ɛsa nsɛm émot"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "30", "kenyang_word": "ɛsa nsɛm byó"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "40", "kenyang_word": "bhesa bépay"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "50", "kenyang_word": "bhesa bépay nsɛm byó"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "60", "kenyang_word": "bhesa bhérát"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "70", "kenyang_word": "bhesa bhérát nsɛm byó"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "80", "kenyang_word": "bhɛsa ménwi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "90", "kenyang_word": "bhɛsa ménwi nsɛm byó"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "100", "kenyang_word": "bhesa bétay"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "200", "kenyang_word": "bhesa byó"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "300", "kenyang_word": "besa nekú"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "400", "kenyang_word": "bhesa ɛsa"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "500", "kenyang_word": "bhesa ɛsa nsɛm bétay"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "1000", "kenyang_word": "nká"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "number", "number_value": "1000000", "kenyang_word": "nká-nká"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "noun_class", "class_pair": "1 / 2", "singular_prefix": "N- / m-", "singular_example": "mfɔ (chief)", "plural_prefix": "ba-", "plural_example": "bafɔ (chiefs)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "noun_class", "class_pair": "3 / 6", "singular_prefix": "a-", "singular_example": "aŋwa (cat)", "plural_prefix": "ba- / ma-", "plural_example": "baŋwa (cats)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "noun_class", "class_pair": "5 / 6", "singular_prefix": "nɛ- / n-", "singular_example": "nɛpɛm (life)", "plural_prefix": "ba-", "plural_example": "bapɛm (lives)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "noun_class", "class_pair": "7 / 8", "singular_prefix": "ɛ-", "singular_example": "ɛtok (village)", "plural_prefix": "bɛ-", "plural_example": "bɛtok (villages)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "noun_class", "class_pair": "19 / 13", "singular_prefix": "sɛ-", "singular_example": "sɛkwɔp (spoon)", "plural_prefix": "kɛkwop", "plural_example": "(spoons)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "pronoun", "person": "1st Person", "number": "Singular", "independent": "meh", "possessive": "Eya", "example_in_action": "Chi Eyà - It's Mine"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "pronoun", "person": "2nd Person", "number": "Singular", "independent": "wo", "possessive": "Eye", "example_in_action": "Chi èyê - It's Yours"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "pronoun", "person": "3rd Person", "number": "Singular", "independent": "yí", "possessive": "Eyi", "example_in_action": "Chi Eyi - It's His/hers"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "pronoun", "person": "1st Person", "number": "Plural", "independent": "Besé", "possessive": "Eyesé", "example_in_action": "Chi Eyesé - It's Ours"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "pronoun", "person": "2nd Person", "number": "Plural", "independent": "Beka", "possessive": "Eyeka", "example_in_action": "Chi Eyê'Ka - It's Yours"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch1", "type": "pronoun", "person": "3rd Person", "number": "Plural", "independent": "Bó", "possessive": "Eyap", "example_in_action": "Chi Eyâp - It's theirs"}

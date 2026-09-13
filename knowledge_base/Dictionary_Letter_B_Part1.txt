@@ -1,0 +1,43 @@
+{"document_id": "Letter_B_Part1", "type": "dictionary_entry", "english_word": "birth mark", "kenyang_translation": "ɛbhɛ-Mándέm", "part_of_speech": "Noun", "plural_form": "bɛbhɛ-Mándέm", "example_english": "I have a birth mark on my chest", "example_kenyang": "Bhɔ́ŋ ɛbhɛ-mándέm ndú bɛbhik-ɛwat áwà"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "bit-by-bit", "kenyang_translation": "mándóú mándóú", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "bite", "kenyang_translation": "nέm", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "bitter", "kenyang_translation": "έnɛn", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "bitter leave", "kenyang_translation": "bɛchi", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "black", "kenyang_translation": "pyɔ", "part_of_speech": "Adjective", "example_english": "I love black plums", "example_kenyang": "Mmɛ kɔŋ bakwá pyɔ"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "black pepper", "kenyang_translation": "bi", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "black pepper leave", "kenyang_translation": "tanchót", "part_of_speech": "Noun", "example_english": "Cook soup and fufu", "example_kenyang": "Ná nɔk tanchót nɛ ákpú"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blackboard", "kenyang_translation": "ɛbhókó-ɛnɔk", "part_of_speech": "Noun", "plural_form": "bɛbhókó-ɛnɔk"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "bladder", "kenyang_translation": "ɛche", "part_of_speech": "Noun", "plural_form": "bɛche"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "bladder", "kenyang_translation": "ɛbhɛ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blade", "kenyang_translation": "ákáraŋ", "part_of_speech": "Noun", "plural_form": "bákáraŋ"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blame", "kenyang_translation": "ji", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blanket", "kenyang_translation": "ɛkpa", "part_of_speech": "Noun", "plural_form": "bɛkpa"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "bless", "kenyang_translation": "yέt", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "Blessing", "kenyang_translation": "áfók", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blight", "kenyang_translation": "ɛmɛnέ-ɛnɔk", "part_of_speech": "Noun", "plural_form": "ɛmɛnέ-mɛnɔk"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blind", "kenyang_translation": "amik nέmέ-nέmɛ", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blink", "kenyang_translation": "kyɛptí", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blister", "kenyang_translation": "nɛpɛp", "part_of_speech": "Noun", "plural_form": "bapɛp"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "block", "kenyang_translation": "chyɛt", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blood", "kenyang_translation": "manɔŋ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blood clot", "kenyang_translation": "manɔŋ bέkwέn kέbhɛ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blossom", "kenyang_translation": "nɛnɛ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "Blouse", "kenyang_translation": "ɛbùmbà", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blouse", "kenyang_translation": "mbiŋ-nkú-mfay", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blouse", "kenyang_translation": "nkú-mmwέt", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blue", "kenyang_translation": "nɛbu", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "blunt side of the cutlass", "kenyang_translation": "nsɛm ɛwat", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "boa", "kenyang_translation": "mbɔŋ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "boast", "kenyang_translation": "paka", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "boastful", "kenyang_translation": "mpá-nnyu", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "body", "kenyang_translation": "mmwέt", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "body bath", "kenyang_translation": "só mmwέt", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "body fats", "kenyang_translation": "bɛchik", "part_of_speech": "Noun", "example_english": "Cassava will add your body mass", "example_kenyang": "Kasára á maká bɛchik ɛyɛ"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "boils", "kenyang_translation": "nɛnyɔt", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "boldness", "kenyang_translation": "nɛtaŋ-ntɨ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "boldness", "kenyang_translation": "ngaŋ-ngaŋ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "bone", "kenyang_translation": "ɛghɛp", "part_of_speech": "Noun", "plural_form": "bɛghɛp", "example_english": "A bone burst my bicycle tire", "example_kenyang": "Ɛghɛp nnya sɛn ayárέ-motó kɛnɔŋ áwà"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "bony", "kenyang_translation": "bɛghɛbhέ-bɛghɛp", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "book", "kenyang_translation": "ɛkáti", "part_of_speech": "Noun", "example_english": "Read the book untill you understand", "example_kenyang": "Pay ɛkáti tɛ wɔ njwímɛm"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "bother", "kenyang_translation": "sɔŋɔrí", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_B_Part1", "type": "dictionary_entry", "english_word": "bottom", "kenyang_translation": "ntɛn", "part_of_speech": "Noun"}

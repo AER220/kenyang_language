@@ -1,0 +1,118 @@
+{"document_id": "Dictionary_Ch1", "type": "instructional_text", "section": "Origins", "content": "The Bayangi people's origins can be traced back to the expansive Kanem Borno Empire, connecting them to a heritage that stretches from Chad to Nigeria. The Kenyang language is of Bantoid descent."}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "instructional_text", "section": "Demographics", "content": "The Bayangi people are from the Manyu division. Their population stands at more than 231,000 unofficially, with more than 230 villages in an expanse of land of about 9565 square kilometers."}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "instructional_text", "section": "Traditions & Tribes", "content": "The Bayangi community comprises three main traditions: Bayangi, Ejagham, and Boki. Other indigenous tribes around the Manyu division include the Keakaas and Anyangs."}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "instructional_text", "section": "Language Variants", "content": "The Kenyang language has two closely related variants, the upper Banyang and lower Banyang, and also the Kitwii. Upper Kenyang is spoken mainly in the upper Bayang subdivision. Lower Kenyang is spoken in Mamfe Central and parts of Eyumojok subdivisions. Kitwii users are from around Manyemen."}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "instructional_text", "section": "Nsibidi Script", "content": "The Bayangi people possess a unique connection to the enigmatic Nsibidi script. Nsibidi is a traditional system of symbols greatly pioneered by the Ekpe society, though it faces a quick pace of extinction."}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "instructional_text", "section": "Traditional Dances", "content": "Traditional Bayangi dances include the Obasinjom, Nyankpe, and Moninkim. These serve to connect with the spiritual and natural world, carrying echoes of tradition to ancestral roots."}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "A", "letter_lower": "a"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "B", "letter_lower": "b"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "Bh", "letter_lower": "bh"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "Ch", "letter_lower": "ch"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "D", "letter_lower": "d"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "E", "letter_lower": "e"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "Ɛ", "letter_lower": "ɛ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "F", "letter_lower": "f"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "G", "letter_lower": "g"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "Gb", "letter_lower": "gb"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "Gh", "letter_lower": "gh"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "I", "letter_lower": "i"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "Ɨ", "letter_lower": "ɨ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "J", "letter_lower": "j"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "K", "letter_lower": "k"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "Kp", "letter_lower": "kp"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "M", "letter_lower": "m"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "N", "letter_lower": "n"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "Ŋ", "letter_lower": "ŋ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "Ny", "letter_lower": "ny"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "O", "letter_lower": "o"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "Ɔ", "letter_lower": "ɔ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "P", "letter_lower": "p"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "R", "letter_lower": "r"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "S", "letter_lower": "s"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "T", "letter_lower": "t"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "U", "letter_lower": "u"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "Ʉ", "letter_lower": "ʉ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "W", "letter_lower": "w"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "alphabet", "letter_upper": "Y", "letter_lower": "y"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "I", "kenyang_word": "mmɛ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "my", "kenyang_word": "áyà"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "mine", "kenyang_word": "áwà, áyà"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "we", "kenyang_word": "sɛ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "our", "kenyang_word": "ɛsɛ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "ours", "kenyang_word": "áyɛsɛ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "you (singular)", "kenyang_word": "wɔ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "your (singular)", "kenyang_word": "ɔ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "yours (singular)", "kenyang_word": "ɛyέ, áyɛ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "you (plural)", "kenyang_word": "bɛ, bɛka"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "your (plural)", "kenyang_word": "έyɛka"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "yours (plural)", "kenyang_word": "áyɛka"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "He/she/it", "kenyang_word": "a / yɔ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "His/Hers/its", "kenyang_word": "ayí"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "they", "kenyang_word": "bá / bo"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "their", "kenyang_word": "ayáp"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "theirs", "kenyang_word": "ayáp"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "1", "english_translation": "One", "kenyang_word": "Ɛmɔ́t"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "2", "english_translation": "Two", "kenyang_word": "Bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "3", "english_translation": "Three", "kenyang_word": "Bɛ́rát"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "4", "english_translation": "Four", "kenyang_word": "Mɛ́nwi"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "5", "english_translation": "Five", "kenyang_word": "Bɛ́tay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "6", "english_translation": "Six", "kenyang_word": "Tándat"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "7", "english_translation": "Seven", "kenyang_word": "Tándat nɛ amɔt"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "8", "english_translation": "Eight", "kenyang_word": "Mɛ́nɛn"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "9", "english_translation": "Nine", "kenyang_word": "Mɛ́nɛn nɛ amɔt"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "10", "english_translation": "Ten", "kenyang_word": "Byó"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "11", "english_translation": "Eleven", "kenyang_word": "Byó nɛ amɔt"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "12", "english_translation": "Twelve", "kenyang_word": "Byó nɛ bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "13", "english_translation": "Thirteen", "kenyang_word": "Byó nɛ bɛ́rát"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "14", "english_translation": "Fourteen", "kenyang_word": "Byó nɛ mɛ́nwi"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "15", "english_translation": "Fifteen", "kenyang_word": "Nɛkú"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "16", "english_translation": "Sixteen", "kenyang_word": "Nɛkú nɛ amɔ́t"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "17", "english_translation": "Seventeen", "kenyang_word": "Nɛkú nɛ bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "18", "english_translation": "Eighteen", "kenyang_word": "Nɛkú nɛ bɛ́rat"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "19", "english_translation": "Nineteen", "kenyang_word": "Nɛkú nɛ mɛ́nwi"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "20", "english_translation": "Twenty", "kenyang_word": "Ɛsa"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "21", "english_translation": "Twenty one", "kenyang_word": "Ɛsa nsɛm ɛ́mɔt"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "22", "english_translation": "Twenty two", "kenyang_word": "Ɛsa nsɛm bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "30", "english_translation": "Thirty", "kenyang_word": "Ɛsa nsɛm byó"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "31", "english_translation": "Thirty one", "kenyang_word": "Ɛsa nsɛm byó nɛ amɔ́t"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "32", "english_translation": "Thirty two", "kenyang_word": "Ɛsa nsɛm byó nɛ bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "40", "english_translation": "Forty", "kenyang_word": "Bɛsa bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "41", "english_translation": "Forty one", "kenyang_word": "Bɛsa bɛ́pay nɛ ɛ́mɔ́t"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "42", "english_translation": "Forty two", "kenyang_word": "Bɛsa bɛ́pay nɛ bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "50", "english_translation": "Fifty", "kenyang_word": "Bɛsa bɛ́pay nsɛm byó"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "51", "english_translation": "Fifty one", "kenyang_word": "Bɛsa bɛ́pay nsɛm byó nɛ ɛ́mɔ́t"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "52", "english_translation": "Fifty two", "kenyang_word": "Bɛsa bɛ́pay nsɛm byó nɛ bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "60", "english_translation": "Sixty", "kenyang_word": "Bɛsa bɛ́rat"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "61", "english_translation": "Sixty one", "kenyang_word": "Bɛsa bɛ́rat nɛ ɛ́mɔ́t"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "62", "english_translation": "Sixty two", "kenyang_word": "Bɛsa bɛ́rat nɛ bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "70", "english_translation": "Seventy", "kenyang_word": "Bɛsa bɛ́rat nsɛm byó"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "71", "english_translation": "Seventy one", "kenyang_word": "Bɛsa bɛ́rat nsɛm byó nɛ ɛ́mɔ́t"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "72", "english_translation": "Seventy two", "kenyang_word": "Bɛsa bɛ́rat nsɛm byó nɛ bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "80", "english_translation": "Eighty", "kenyang_word": "Bɛsa mɛ́nwi"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "81", "english_translation": "Eighty one", "kenyang_word": "Bɛsa mɛ́nwi nɛ ɛ́mɔ́t"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "82", "english_translation": "Eighty two", "kenyang_word": "Bɛsa mɛ́nwi nɛ bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "90", "english_translation": "Ninety", "kenyang_word": "Bɛsa mɛ́nwi nsɛm byó"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "91", "english_translation": "Ninety one", "kenyang_word": "Bɛsa mɛ́nwi nsɛm byó ɛ́mɔ́t"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "92", "english_translation": "Ninety two", "kenyang_word": "Bɛsa mɛ́nwi nsɛm byó bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "100", "english_translation": "One hundred", "kenyang_word": "Bɛsa bɛ́tay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "101", "english_translation": "One hundred and one", "kenyang_word": "Bɛsa bɛ́tay nɛ ɛ́mɔ́t"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "102", "english_translation": "One hundred and two", "kenyang_word": "Bɛsa bɛ́tay nɛ bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "110", "english_translation": "One hundred and ten", "kenyang_word": "Bɛsa bɛ́tay nɛ byó"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "115", "english_translation": "One hundred and fifteen", "kenyang_word": "Bɛsa bɛ́tay nɛ nɛkú"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "116", "english_translation": "One hundred and sixteen", "kenyang_word": "Bɛsa bɛ́tay nɛ nɛkú nɛ amɔ́t"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "120", "english_translation": "One hundred and twenty", "kenyang_word": "Bɛsa bɛ́tay ɛsa"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "200", "english_translation": "Two hundred", "kenyang_word": "Bɛsa byó"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "300", "english_translation": "Three hundred", "kenyang_word": "Bɛsa nɛkú"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "400", "english_translation": "Four hundred", "kenyang_word": "Bɛsa ɛsa"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "500", "english_translation": "Five hundred", "kenyang_word": "Ɛsa ɛsa nsɛm bɛ́tay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "1000", "english_translation": "One thousand", "kenyang_word": "Nká"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "1500", "english_translation": "One thousand five hundred", "kenyang_word": "Nká nɛ ɛsa ɛsa nsɛm bɛ́tay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "2000", "english_translation": "Two thousand", "kenyang_word": "Ba nká bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "3000", "english_translation": "Three thousand", "kenyang_word": "Ba nká bɛ́rát"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "4000", "english_translation": "Four thousand", "kenyang_word": "Ba nká mɛ́nwi"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "5000", "english_translation": "Five thousand", "kenyang_word": "Ba nká bɛ́tay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "1,000,000", "english_translation": "One Million", "kenyang_word": "Ba nká-nká"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "2,000,000", "english_translation": "Two Million", "kenyang_word": "Ba nká-nká bɛ́pay"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "3,000,000", "english_translation": "Three Million", "kenyang_word": "Ba nká-nká bɛ́rát"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "4,000,000", "english_translation": "Four Million", "kenyang_word": "Ba nká-nká mɛ́nwi"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "number_system", "number_value": "5,000,000", "english_translation": "Five Million", "kenyang_word": "Ba nká-nká bɛ́tay"}

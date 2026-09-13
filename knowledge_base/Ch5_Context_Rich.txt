@@ -1,0 +1,90 @@
+{"document_id": "Ch5", "type": "instructional_text", "section": "Demonstrative Pronouns (Persons)", "content": "The demonstratives 'Á neh' (This one), 'Á wu' (That One), 'À bhen' (These ones), and 'Á bhoh' (Those ones) are mostly used for persons."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "instructional_text", "section": "Demonstrative Pronouns (Things)", "content": "The demonstratives 'É neh' (This one), 'É yoh' (That one), 'É bhoh' (Those ones), and 'É bhen' (These ones) are generally used for things."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Here", "kenyang_word": "Fâ", "example": "Fié Fâ - Put it Here"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "There", "kenyang_word": "Afo", "example": "Tæ Afo - Stand there"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Over there", "kenyang_word": "Awuh", "example": "TÆ awuh - Stand Over there"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "In front", "kenyang_word": "ambeuh", "example": "Tæ ambeuh - Stand infront"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Behind", "kenyang_word": "ansem", "example": "Tæ ansem - Stand behind"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Beside", "kenyang_word": "neku", "example": "Nyangha Neku - Keep it beside"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Up", "kenyang_word": "anfai", "example": "Yenghé anfai - Look Up"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Ontop", "kenyang_word": "a'nfai", "example": "Nyangha a'nfai - Keep Ontop"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Down", "kenyang_word": "amek", "example": "Chokor amek - Sit Down"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Inside", "kenyang_word": "amem", "example": "Fié amem - Put inside"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Outside", "kenyang_word": "nefi", "example": "Fu nefi - Step outside"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Under", "kenyang_word": "a'nten", "example": "bió a'nten - Look under"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This one", "kenyang_word": "Eneh", "example": "Chie meh Eneh - Give me this one"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That One", "kenyang_word": "Eyor", "example": "Chie meh eyor- Give me that one"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This one (person)", "kenyang_word": "Á neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That One (person)", "kenyang_word": "Á wu"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These ones (persons)", "kenyang_word": "À bhen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those ones (persons)", "kenyang_word": "Á bhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This one (thing)", "kenyang_word": "É neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That one (thing)", "kenyang_word": "É yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those ones (things)", "kenyang_word": "É bhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These ones (things)", "kenyang_word": "É bhen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This thing", "kenyang_word": "Enyieng_e neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This thing (alternative)", "kenyang_word": "Enyieng_e yen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That thing", "kenyang_word": "Enyieng_e yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These things", "kenyang_word": "Meh nyieng_e bhen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those things", "kenyang_word": "Meh nyieng_e bhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Meal/dish", "kenyang_word": "Nenyieh noh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This meal/dish", "kenyang_word": "Nenyieh nen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those dishes/meals", "kenyang_word": "Menyienghe nyieh bhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These Meals/dishes", "kenyang_word": "Menghienghe nyieh bhen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This stream", "kenyang_word": "N'nyien_e nen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Stream", "kenyang_word": "N'nyien_e Noh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those streams", "kenyang_word": "Ma'nyien_e yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These streams", "kenyang_word": "Ma'nyien_e yen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That head", "kenyang_word": "Nti wu"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Head", "kenyang_word": "Nti neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These heads", "kenyang_word": "Bhati neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those heads", "kenyang_word": "Bhati yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Eye", "kenyang_word": "N'nyese Noh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Eye", "kenyang_word": "N'nyese nen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those Eyes", "kenyang_word": "Amik_e yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These Eyes", "kenyang_word": "Amik_e yen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Money", "kenyang_word": "Nkap_e wu"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Money", "kenyang_word": "Nkap_e wen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These Monies", "kenyang_word": "Bhakap_e neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those Monies", "kenyang_word": "Bhakap_e yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Face", "kenyang_word": "Bhisi bhen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Face", "kenyang_word": "Bhisi bhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Water", "kenyang_word": "Manyieb_e moh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Water", "kenyang_word": "Manyieb_e men"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Child", "kenyang_word": "Moh neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Child", "kenyang_word": "Moh wu"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those Children", "kenyang_word": "Boh bhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These Children", "kenyang_word": "Bhóh bhen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Person", "kenyang_word": "Mmu wu"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Person", "kenyang_word": "Mmu neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Gentleman", "kenyang_word": "Esaka mu yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Gentleman", "kenyang_word": "Esaka mu neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those Gentlemen", "kenyang_word": "Bhesaka boh bhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These Gentlemen", "kenyang_word": "Bhesaka boh bhen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Lady", "kenyang_word": "Ngorsong_o wu"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Lady", "kenyang_word": "Ngorsong_o neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These Ladies", "kenyang_word": "Bha'orsong bhen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those Ladies", "kenyang_word": "Bha'orsong bhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That House", "kenyang_word": "Eket_e yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This House", "kenyang_word": "Eket_e Eneh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These Houses", "kenyang_word": "Bheket_e ebhen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those Houses", "kenyang_word": "Bheket_e ebhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Place", "kenyang_word": "Ebhak_eneh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Place", "kenyang_word": "Ebhak_e yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those Places", "kenyang_word": "Mbang_e yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These Places", "kenyang_word": "Mbang_e neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Town/City/Country", "kenyang_word": "Etok_o neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Country/Town/City", "kenyang_word": "Etok_e yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These Cities/Countries/Towns", "kenyang_word": "Bhetok_o bhen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those Countries/Towns/Cities", "kenyang_word": "Bhetok_o bhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Land/Earth", "kenyang_word": "Mmik_e neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Land", "kenyang_word": "Mmik_e yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Attitude/Behavior", "kenyang_word": "Epeng_e yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Attitude/Behavior", "kenyang_word": "Epeng_e neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Attitude/Behavior (alternative)", "kenyang_word": "Epeng_eh yen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These Behaviors", "kenyang_word": "Bh_epeng_e bhen"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those Behaviors", "kenyang_word": "Bh_epeng_e bhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "This Road", "kenyang_word": "Mbi neh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "That Road", "kenyang_word": "Mbi wu"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "Those Roads", "kenyang_word": "Bha'bhi yoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch5", "type": "vocabulary", "english_translation": "These Roads", "kenyang_word": "Bha'bhi neh"}

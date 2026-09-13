@@ -1,0 +1,57 @@
+{"document_id": "Ch3", "type": "instructional_text", "section": "Cultural Note (CN) - Responding to a call", "content": "It's rude in Manyu culture to answer 'Éhhhh' when called by an elderly person. 'Éhhhh' is for anyone below and around your age bracket."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "instructional_text", "section": "Context - 'Ahyeh'", "content": "Ahyeh is 'No!' but this no is actually Yes. It's used when someone asks, 'Did I lie?' And you say No in agreement that they're telling the truth."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "instructional_text", "section": "Context - 'Éh-éh'", "content": "'Éh-éh' is an exclamation of surrender. More like, 'Very well then' or 'As You Say' or Let your will prevail. It has a sorrowful undertone."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "instructional_text", "section": "Context - 'O'oooor'", "content": "'O'oooor' is an exclamation of vindication especially when someone else echoes your viewpoint."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "instructional_text", "section": "Context - 'Mbeh ah/mbaa'a'", "content": "In usage it's the equivalent of 'Hello?' It's used to call attention to either someone or a crowd. Example 1 (Dialogue): To 'obhe yi?' (What did you say?), reply 'Mbeh ah', and the other person says 'Eh' to show they are following, then you proceed with your sentence. Example 2 (Greeting): Mba'aaah (Hello), reply Ehh(hi)."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "instructional_text", "section": "Context - 'Chiaahh'", "content": "Amazement. Can be both positive or negative depending on the context. Positive: 'chaaaah Bessem' (when someone exaggerates a story, followed by a smile). Negative: 'chaaaah O'beb ah' (You're not a good person)."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "instructional_text", "section": "Context - 'Aaaaaaaa-haiiii'", "content": "This is a lighthearted remark made when someone is either exaggerating the details of a Story or is over-performing or had over performed an act."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "instructional_text", "section": "Context - 'Hekehehhh'", "content": "[Irritated] Done When someone can no longer put up with an uncomfortable action/story/situation."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "instructional_text", "section": "Context - 'Chi nwoh eh!'", "content": "This is often said with an unfriendly somewhat disappointed demeanor. Exclamation of surprise & amazement or intense sarcasm. The difference between this and 'Noh eh?' lies in the tone and mannerism."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "instructional_text", "section": "Context - 'Mbeh!'", "content": "Responding in agreement like 'You took it right out of my mouth'."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "instructional_text", "section": "Context - 'Manor rem meh ngok'", "content": "Sister/brother speak I'm listening. Said in Joyful anticipation."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "instructional_text", "section": "Context - Parting vs. Threat ('Chong sé -ñ-goh')", "content": "When parting ways rhetorically ('Okay, see you later/we shall meet again, for sure?'): 'Chong sé -ñ-goh (bhó?)'. The reply is 'Eh, erup mpoko reh' (Sure see you later). When used as a threat ('We shall See!'): 'Chong sé -ñ-goh'. The difference lies in the tone and context. Please don't threaten people."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "instructional_text", "section": "Cultural Note (CN) - Elder Etiquette", "content": "When an elder is talking to you it's customary to have your head bowed with your hands crossed behind. It's considered rude to fold your arms in front of an elderly person when they're talking to you!"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Yes", "kenyang_phrase": "Èh!"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "No", "kenyang_phrase": "Éh Èh!"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "How you respond when you're called (peer/younger)", "kenyang_phrase": "Éhhhh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "How you respond to a call from your mother or elderly woman", "kenyang_phrase": "Máah"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "How you respond to a call from your father or elderly male", "kenyang_phrase": "Sáah"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "What? (Surprise or Shock)", "kenyang_phrase": "Éhh?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "WHAT DID YOU SAY? (shock, surprise or amazement)", "kenyang_phrase": "Éh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Oh really?", "kenyang_phrase": "Ehéhh?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Are you sure?", "kenyang_phrase": "O'káhh?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "No! (meaning Yes/agreement to 'Did I lie?')", "kenyang_phrase": "Ahyeh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Exclamation of surrender / Very well then / As You Say", "kenyang_phrase": "Éh-éh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Oh I get it", "kenyang_phrase": "Ahahhhhh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "I said it!", "kenyang_phrase": "Ahah'aa"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "I said it (exclamation of vindication)", "kenyang_phrase": "O'oooor"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "I'm saying... / Hello? (Call attention)", "kenyang_phrase": "Mbeh ah/mbaa'a"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Hello (to a crowd or person)", "kenyang_phrase": "Mba'aaah", "kenyang_reply": "Ehh(hi)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Amazement (Positive or negative)", "kenyang_phrase": "Chiaahh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Sorrowful/mournful exclamation (shocking/unpleasant)", "kenyang_phrase": "Chaai"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Exclamation of Protest or rebuke", "kenyang_phrase": "Qua'aic!"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Lighthearted remark (exaggerating/over-performing)", "kenyang_phrase": "Aaaaaaaa-haiiii"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "More Power to your elbow", "kenyang_phrase": "Akafro"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Used in Cheering someone on", "kenyang_phrase": "Ajah ooo"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "[Irritated] Can no longer put up with situation", "kenyang_phrase": "Hekehehhh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "What the hell, Who do you think you are?", "kenyang_phrase": "Chi agha chak areh mu!"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Oh really?/Is it so?", "kenyang_phrase": "Nwoh eh", "kenyang_reply": "eh chi nwoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Oh Really! (Surprise/sarcasm/disappointed)", "kenyang_phrase": "Chi nwoh eh!"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Really?", "kenyang_phrase": "Eheh?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "I've heard", "kenyang_phrase": "Óh!"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Astonishment", "kenyang_phrase": "Cháhh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Yes (Filler)", "kenyang_phrase": "Ehh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "No (Filler)", "kenyang_phrase": "Eh eh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "I'm telling you (Agreement)", "kenyang_phrase": "Mbeh!"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "What on earth!/What the heck/What in the World", "kenyang_phrase": "Mbáhh!!!"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "That's some real trouble there", "kenyang_phrase": "Ereme ndak ó"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Sister/brother speak I'm listening", "kenyang_phrase": "Manor rem meh ngok"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Are you listening?", "kenyang_phrase": "Woh ghok nor?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Are you Sure", "kenyang_phrase": "Okah?"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Not at all", "kenyang_phrase": "Ah'ey"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "It's true", "kenyang_phrase": "Chi tetep"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "You've raised a salient/great point/You're making sense", "kenyang_phrase": "O'rem chi ndak"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "I agree with you", "kenyang_phrase": "Nkah newoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "Okay, see you later/we shall meet again, for sure?", "kenyang_phrase": "Chong sé -ñ-goh (bhó?)", "kenyang_reply": "Eh, erup mpoko reh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "We shall See! (Threat)", "kenyang_phrase": "Chong sé -ñ-goh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch3", "type": "phrase", "english_translation": "To Nod (Non verbal)", "kenyang_phrase": "Nyiekisi ne nti"}

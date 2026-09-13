@@ -1,0 +1,45 @@
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Èh!", "english": "Yes"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Éh Èh!", "english": "No"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Éhhhh", "english": "How you respond when you're called.", "cultural_note": "But it's rude in Manyu culture to answer \"Éhhhh\" when called by an elderly person. \"Éhhhh\" is for anyone below and around your age bracket."}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Máah", "english": "How you respond to a call from your mother or elderly woman"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Sáah", "english": "How you respond to a call from your father or elderly male"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Éhh?", "english": "What?", "context": "(Surprise or Shock)."}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Éh", "english": "WHAT DID YOU SAY?", "context": "as a display of shock, surprise or amazement"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Ehéhh?", "english": "Oh really?"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "O'káhh?", "english": "Are you sure?"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Ahyeh", "english": "No!", "context": "but this no is actually Yes. It's used when someone asks, Did I lie? And you say No in agreement that they're telling the truth.", "example_kenyang": "nsei chi nsei?", "example_english": "Reply: Ahyeh!"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Éh-éh", "english": "Exclamation of surrender.", "context": "More like, \"Very well then\" or \"As You Say\" or Let your will prevail. It has a sorrowful undertone."}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Ahahhhhh", "english": "Oh I get it"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Ahah'aa", "english": "I said it!"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "O'oooor", "english": "I said it", "context": "(exclamation of vindication especially when someone else echoes your viewpoint)"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Mbeh ah / mbaa'a", "english": "I'm saying....", "context": "(But in usage it's the equivalent of \"Hello?\" It's used to call attention to either someone or a crowd.", "example_kenyang": "obhe yi? (What did you say) Reply: Mbeh ah, (the person has to respond that they're following up to this point like in dialogue. The reply has to mostly be \"Eh\". The person proceeds with their sentence) \"meh yangha buereh konor\"", "example_english": "(I want to sleep)"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Mba'aaah", "english": "Hello", "context": "When Mbaah is HELLO to someone or a crowd it goes like this.", "example_kenyang": "Mba'aaah", "example_english": "reply Ehh(hi)"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Chiaahh", "english": "Amazement.", "context": "Can be both positive or negative depending on the context. If someone exaggerates when telling a story you may say \"chaaaah Bessem\", often followed with a smile or a laugh. This is where it's positive. Or \"chaaaah O'beb ah\" (You're not a good person)"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Chaai", "english": "Sorrowful/mournful exclamation when something shocking or unpleasant happens"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Qua'aic!", "english": "Exclamation of Protest or rebuke when someone can no longer put up with something"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Aaaaaaaa-haiiii", "english": "This is a lighthearted remark made when someone is either exaggerating the details of a Story or is over-performing or had over performed an act"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Akafro", "english": "More Power to your elbow"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Ajah ooo", "english": "Used in Cheering someone on"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Hekehehhh", "english": "[Irritated] Done When someone can no longer put up with an uncomfortable action/story/situation"}
+{"chapter": "3", "topic": "Sound Codes & Filler Words", "kenyang": "Chi agha chak areh mu!", "english": "What the hell, Who do you think you are, who do you think you are talking to?", "context": "(Exclamation)"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Nwoh eh", "english": "Oh really?/Is it so?", "example_kenyang": "Reply eh chi nwoh"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Chi nwoh eh!", "english": "Oh Really!", "context": "(This is often said with an unfriendly somewhat disappointed demeanor) - (Exclamation of surprise & amazement or intense sarcasm) You could still say (Noh eh?) The difference lies in the tone and mannerism just like we have with Oh really?and Oh Really!"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Eheh?", "english": "Really?"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Óh!", "english": "I've heard"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Cháhh", "english": "Astonishment"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Ehh", "english": "Yes"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Eh eh", "english": "No"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Mbeh!", "english": "I'm telling you", "context": "(Responding in agreement like \"You took it right out of my mouth\")"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Mbáhh!!!", "english": "What on earth!/What the heck/What in the World", "context": "(from mbeh)"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Ereme ndak ó", "english": "That's some real trouble there"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Manor rem meh ngok", "english": "Sister/brother speak I'm listening", "context": "(In Joyful anticipation)"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Woh ghok nor?", "english": "Are you listening?"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Okah?", "english": "Are you Sure"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Ah'ey", "english": "Not at all"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Chi tetep", "english": "It's true"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "O'rem chi ndak", "english": "You've raised a salient/great point/You're making sense"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Nkah newoh", "english": "I agree with you"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Chong sé -ñ-goh (bhó?)", "english": "Okay, see you later/we shall meet again, for sure?", "context": "(Rhetorical). This is often said at the end of meet up and both parties are parting ways", "example_kenyang": "Reply goes - Eh, erup mpoko reh", "example_english": "Sure see you later"}
+{"chapter": "3", "topic": "Filler Words in Small Talk", "kenyang": "Chong sé -ñ-goh", "english": "We shall See!", "context": "(This is a threat) Please don't threaten people. Thank You! The difference lies in the tone and context."}
+{"chapter": "3", "topic": "Non verbal", "kenyang": "Nyiekisi ne nti", "english": "To Nod"}
+{"chapter": "3", "topic": "Non verbal", "kenyang": "Customary Body Language", "english": "Rules for speaking to Elders", "cultural_note": "When an elder is talking to you it's customary to have your head bowed with your hands crossed behind. It's considered rude to fold your arms in front of an elderly person when they're talking to you!"}

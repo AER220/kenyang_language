@@ -1,0 +1,184 @@
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Abang"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Achwo"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Agbor"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Anyi"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Arrah"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Arrey"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Arreyngang"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Ashu"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Atem"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Awuh"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Ayamba"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Ayuk"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Bate"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Bessem"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Bessong"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Bissong"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Defang"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Ebot"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Efim"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Egbe"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Enonchong"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Enow"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Etaka"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Etchi"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Etchu"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Eteng"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Etengeneng"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Etta"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Eya"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Eyong"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Ketchen"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Manyi"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Manyor"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Mbi"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Mbianyor"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Mbu"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Mbuagbaw"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Mpey"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Nchong"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Ndiep"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Ndip"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Njang"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Njwi"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Nkongho"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Nkonghonyor"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Nso"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Nyenty"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Obase"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Obasi"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Ofiong"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Ojong"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Orock"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Tabe"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Tabi"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Takang"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Takor"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Taku"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Tambong"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Tanyi"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "common_name", "name": "Tassong"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "abandon", "kenyang_translation": "r\u00f4", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "abscess", "kenyang_translation": "man\u0254\u014b", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "abdomen", "kenyang_translation": "\u025b\u0301k\u00fak\u00fambi", "part_of_speech": "Noun", "plural_form": "b\u025b\u0301k\u00fak\u00fambi"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "abdomen", "kenyang_translation": "nnik\u00ed-nt\u00ed", "part_of_speech": "Noun", "plural_form": "manik\u00ed-nt\u00ed"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "abit", "kenyang_translation": "mand\u00fa", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "abortion", "kenyang_translation": "m\u025bny\u025b b\u03ad\u0066\u03ad\u0072\u025b", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "abortion", "kenyang_translation": "n\u025by\u00f3k-mm\u0254", "part_of_speech": "Preposition"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "about", "kenyang_translation": "nt\u0254k\u00f3", "part_of_speech": "Preposition", "example_english": "Pour wine for the chiefs", "example_kenyang": "K\u00f3 mm\u025bm nt\u0254k\u00f3 baf\u0254"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "above", "kenyang_translation": "amfay", "part_of_speech": "Noun", "example_english": "Put love above hatred", "example_kenyang": "Fy\u025b n\u025bk\u0254\u014b amfay n\u025bpap"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "abrupt", "kenyang_translation": "t\u00e1mch\u00f3k", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "abscess", "kenyang_translation": "n\u025bny\u0254t", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "abstain", "kenyang_translation": "f\u025br\u03ad-mmw\u025b\u0301t", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "absurd", "kenyang_translation": "\u025bch\u00ed\u014bti", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "abuse", "kenyang_translation": "Suk\u00f3t\u00ed", "part_of_speech": "Noun", "example_english": "Do not insult her", "example_kenyang": "\u0186k\u025b suk\u00f3t\u00ed y\u00ed"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "accept", "kenyang_translation": "k\u00e1", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "acceptance fee (for marriage)", "kenyang_translation": "akandak", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "accident", "kenyang_translation": "\u025bbh\u025b", "part_of_speech": "Noun", "plural_form": "b\u025bbh\u025b", "example_english": "He made an accident in the market", "example_kenyang": "A ki \u025bbh\u025b nd\u00fa \u025bsy\u025b"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "accomplice", "kenyang_translation": "nkwak", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "accumulate", "kenyang_translation": "mak\u00e1", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "achille's tendon", "kenyang_translation": "ndi\u014b-\u03adkak", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "across", "kenyang_translation": "ch\u00edch\u00edch\u00ed", "part_of_speech": "Preposition"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "act", "kenyang_translation": "k\u0268", "part_of_speech": "Noun", "example_english": "You do much work", "example_kenyang": "W\u0254 k\u0268 beya b\u025btik"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "active", "kenyang_translation": "nd\u00f3k\u00f3r\u0268", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "adams apple", "kenyang_translation": "b\u03adk\u00f3r\u03ad-ngono", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "add", "kenyang_translation": "mak\u00e1", "part_of_speech": "Noun", "example_english": "Cassava will add your body mass", "example_kenyang": "Kas\u00e1ra \u00e1 mak\u00e1 b\u025bchik \u025by\u025b"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "adjust", "kenyang_translation": "s\u025bmt\u00ed", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "admire", "kenyang_translation": "bh\u00e1k mak-nkay", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "admit", "kenyang_translation": "k\u00e1", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "adopt", "kenyang_translation": "n\u025b", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "adultery", "kenyang_translation": "Ep\u00fas\u00ed", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "advise", "kenyang_translation": "mani\u025b", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "affirm", "kenyang_translation": "k\u01ce", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "afford", "kenyang_translation": "bh\u0254\u0301\u014b", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "afraid", "kenyang_translation": "ch\u00e1y", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "after", "kenyang_translation": "ans\u025bm", "part_of_speech": "Preposition"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "afternoon", "kenyang_translation": "ng\u00f3s\u00ed", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "again", "kenyang_translation": "k\u03adf\u00fa", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "again", "kenyang_translation": "nd\u0254\u014b \u03adch\u00e1k", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "again", "kenyang_translation": "p\u025br\u025b-bh\u00e1k", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "against", "kenyang_translation": "n\u025bt\u025b-mpap", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "Agama Lizard", "kenyang_translation": "\u025bgha\u014bagh\u00fa", "part_of_speech": "Noun", "plural_form": "b\u025bgha\u014bagh\u00fa"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "Agama lizard", "kenyang_translation": "akamba", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "age", "kenyang_translation": "mamy\u025b", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "agony", "kenyang_translation": "b\u025bbe", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "air", "kenyang_translation": "mbw\u03adp", "part_of_speech": "Noun", "plural_form": "babw\u03adp"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "alarm", "kenyang_translation": "chy\u025b \u025by\u0254n", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "albino", "kenyang_translation": "mbobo\u014b", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "alive", "kenyang_translation": "mb\u0268k", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "All", "kenyang_translation": "m\u01cenk\u025bm", "part_of_speech": "Determiner", "example_english": "All of them ate at the party", "example_kenyang": "Bo-mank\u025bm b\u00e1 ny\u025b nd\u00fa \u025bpa"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "all", "kenyang_translation": "nk\u025bm", "part_of_speech": "Noun", "example_english": "All of them ate at the party", "example_kenyang": "Bo-mank\u025bm b\u00e1 ny\u025b nd\u00fa \u025bpa"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "All together", "kenyang_translation": "k\u025bn k\u025bm", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "alligator", "kenyang_translation": "\u03adb\u0289", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "allow", "kenyang_translation": "k\u01ce", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "almighty god", "kenyang_translation": "\u03adt\u00e1-m\u00e1nd\u03adm", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "alms", "kenyang_translation": "m\u025bn\u0268\u0301\u014b\u0268\u0301", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "alow", "kenyang_translation": "d\u0254", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "already", "kenyang_translation": "nn\u00e0\u014ba", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "also", "kenyang_translation": "nkw\u0254", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "alter", "kenyang_translation": "n\u025bm\u0254t", "part_of_speech": "Verb", "example_english": "We have to bow in the alter", "example_kenyang": "S\u025b bh\u0254\u0301\u014b b\u025b nky\u025bt nd\u00fa n\u025bm\u0254t"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "alternate", "kenyang_translation": "wups\u00ed", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "although", "kenyang_translation": "y\u025b mb\u0254", "part_of_speech": "Conjunction", "example_english": "Although it is fragile, it works", "example_kenyang": "\u0190 mb\u0254 ch\u00ed bh\u00e1k tiki tiki a ki b\u025btik"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "altogether", "kenyang_translation": "m\u025bnk\u025bm", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "always", "kenyang_translation": "n\u0254k\u0254", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "always", "kenyang_translation": "y\u025b-nt\u0268k\u0268 mpok", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "always", "kenyang_translation": "mp\u00f3k nk\u025bm", "part_of_speech": "Adverb", "plural_form": "mp\u0254k\u0254-s\u025bbh\u025b"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "amaze", "kenyang_translation": "mak-nkay", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "amble", "kenyang_translation": "k\u0254 jw\u025bt", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "amount needed", "kenyang_translation": "nj\u03adnt\u00ed", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "an elder's cup", "kenyang_translation": "\u0190ka\u014b", "part_of_speech": "Noun", "plural_form": "b\u025bka\u014b"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "ancestor", "kenyang_translation": "bachi-mb\u0268", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "ancestral spirits", "kenyang_translation": "bar\u03adm", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "and", "kenyang_translation": "n\u025b", "part_of_speech": "Conjunction"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "angel", "kenyang_translation": "ngb\u00e1y", "part_of_speech": "Noun", "plural_form": "b\u00e1gb\u00e1y"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "anger", "kenyang_translation": "b\u025bb\u03ad-nt\u0268", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "angry", "kenyang_translation": "b\u03ad-nt\u0268", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "animal", "kenyang_translation": "nnya", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "animal leg", "kenyang_translation": "\u0190kak nnya", "part_of_speech": "Noun", "plural_form": "b\u025bkak nnya"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "animal skin", "kenyang_translation": "nk\u00fab\u025b nnya", "part_of_speech": "Noun", "example_english": "We make a drum with animal skin", "example_kenyang": "S\u025b ki nka n\u025b nk\u00fab\u025b nnya"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "animal sound", "kenyang_translation": "n\u025bkp\u025b", "part_of_speech": "Noun", "plural_form": "bakp\u025b"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "animal sounds", "kenyang_translation": "n\u025bdi", "part_of_speech": "Noun", "plural_form": "badi"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "animal sounds", "kenyang_translation": "n\u025bb\u025b", "part_of_speech": "Noun", "plural_form": "bab\u025b"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "animal sounds", "kenyang_translation": "n\u025bkok", "part_of_speech": "Noun", "plural_form": "bakok"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "animal trap (a type of)", "kenyang_translation": "aw\u0254bh\u025b", "part_of_speech": "Noun", "plural_form": "baw\u0254bh\u025b"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "ankle", "kenyang_translation": "n\u025bmi-\u025bkak", "part_of_speech": "Noun", "plural_form": "m\u025bmi-\u025bkak", "example_english": "The shoe makes my ankle swell", "example_kenyang": "Nkw\u00f3bh\u00e1-nnya \u025b ki n\u025bmi-\u025bkak \u00e1w\u00e0 \u025b mw\u0254t"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "ankle", "kenyang_translation": "nny\u03ads\u03ad-\u03adkak", "part_of_speech": "Noun", "plural_form": "am\u0268\u0301k\u0268\u0301-\u03adkak"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "announce", "kenyang_translation": "takat\u00ed-mbok", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "another", "kenyang_translation": "\u01cech\u00e1k", "part_of_speech": "Determiner", "example_english": "I need another meat", "example_kenyang": "Mm\u025b y\u00e1\u014b nnya \u01cech\u00e1k"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "another", "kenyang_translation": "an\u025bf\u00fa", "part_of_speech": "Pronoun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "another time", "kenyang_translation": "nd\u0254\u014b \u03adch\u00e1k", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "answer", "kenyang_translation": "k\u025bm\u025b", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "ant", "kenyang_translation": "\u0190sw\u0254", "part_of_speech": "Noun", "example_english": "The palm oil in the kitchen calls for ants", "example_kenyang": "Baw\u025br\u03ad-bhi nd\u00fa \u025bk\u025br\u03ad-n\u025bny\u025b a bi\u014b\u0268 \u025bsw\u0254"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "ant (a type of)", "kenyang_translation": "esy\u025b", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "ant (a type of)", "kenyang_translation": "\u025bf\u0268kis\u00ed", "part_of_speech": "Noun", "plural_form": "b\u025bf\u0268kis\u00ed"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "ant (a type of)", "kenyang_translation": "\u025bpap", "part_of_speech": "Noun", "plural_form": "b\u025bpap"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "ant (a type of)", "kenyang_translation": "\u025bt\u00f3\u014b\u00f3", "part_of_speech": "Noun", "plural_form": "b\u025bt\u00f3\u014b\u00f3"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "ant (a type of)", "kenyang_translation": "\u025bsw\u0254-b\u025bfabh\u03ad-njy\u025b", "part_of_speech": "Noun", "plural_form": "b\u025bsw\u0254-b\u025bsw\u0254-b\u025bfabh\u03ad-njy\u025b"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "ant (a type of)", "kenyang_translation": "\u025bt\u025bm-ng\u025b", "part_of_speech": "Noun", "plural_form": "b\u025bt\u025bm-ng\u025b"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "antelope", "kenyang_translation": "nkubhu", "part_of_speech": "Noun", "example_english": "Antelopes ate all the cassava", "example_kenyang": "Bor nkubhu b\u00e1 ny\u025b kas\u00e1ra nk\u025bm"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "antenna", "kenyang_translation": "s\u025bt\u0254\u014b", "part_of_speech": "Noun", "plural_form": "k\u025bt\u0254\u014b"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "ants", "kenyang_translation": "b\u025bs\u0268\u014b\u0268", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "anus", "kenyang_translation": "mbok\u00f3-nn\u025bt", "part_of_speech": "Pronoun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "anyone", "kenyang_translation": "y\u025b-agha", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "apology", "kenyang_translation": "m\u025bn\u0268\u0301\u014b\u0268\u0301", "part_of_speech": "Noun", "example_english": "He accepted my apology", "example_kenyang": "A k\u00e1 m\u025bn\u0268\u0301\u014b\u0268\u0301 \u00e1w\u00e0"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "apparel", "kenyang_translation": "\u025bgh\u00f3k\u00f3-mmw\u03adt", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "appear", "kenyang_translation": "f\u00fa ambi", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "appear", "kenyang_translation": "bhes\u00ed", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "appendix", "kenyang_translation": "\u03adnd\u00e1g", "part_of_speech": "Noun", "plural_form": "m\u03adnd\u00e1g"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "apprentice", "kenyang_translation": "mm\u0254-b\u025btik", "part_of_speech": "Noun", "plural_form": "bo-b\u025btik"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "april", "kenyang_translation": "nn\u0254 \u025bn\u025bm", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "aquatic turtle", "kenyang_translation": "n\u025bw\u025bn\u03ad-nny\u03adn", "part_of_speech": "Noun", "plural_form": "baw\u025bn\u03ad-nny\u03adn"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "area", "kenyang_translation": "mba\u014b", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "argue", "kenyang_translation": "ta\u014ba", "part_of_speech": "Verb", "example_english": "Do not argue with the teacher", "example_kenyang": "\u0186k\u025b b\u025bput\u00ed n\u025b nt\u0254\u014b"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "argue", "kenyang_translation": "ta\u014b-ny\u00fa", "part_of_speech": "Verb", "example_english": "Do not argue with the teacher", "example_kenyang": "\u0186k\u025b b\u025bput\u00ed n\u025b nt\u0254\u014b"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "argument", "kenyang_translation": "b\u025bput\u00ed", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "arm", "kenyang_translation": "\u025br\u025bp-\u00e1w\u0254", "part_of_speech": "Noun", "plural_form": "b\u025br\u025bp-\u00e1w\u0254"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "armpit", "kenyang_translation": "\u03adwap", "part_of_speech": "Noun", "plural_form": "b\u025bwap"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "armpit hair", "kenyang_translation": "\u025bm\u025bn\u025b-\u03adw\u00e1p", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "arrange", "kenyang_translation": "to\u014bt\u00ed", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "arrangement", "kenyang_translation": "nto\u014bt\u00ed", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "arrest", "kenyang_translation": "k\u03adm", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "arrive", "kenyang_translation": "chw\u0254p", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "arrive", "kenyang_translation": "ngh\u00e1k\u00e1", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "arrow", "kenyang_translation": "\u03adribh\u025b", "part_of_speech": "Noun", "plural_form": "b\u03adr\u00f3bh\u025b"}
+{"document_id": "EyaLingo_Dictionary_Letter_A", "type": "dictionary_entry", "english_word": "arrow", "kenyang_translation": "n\u025bk\u0254\u014b", "part_of_speech": "Noun", "plural_form": "bak\u0254\u014b"}

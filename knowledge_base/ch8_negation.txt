@@ -1,0 +1,66 @@
+{"chapter": "8", "topic": "Negations: To not be", "kenyang": "M'pu", "english": "I'm not", "example_kenyang": "M'pu Maghak", "example_english": "I'm not Happy"}
+{"chapter": "8", "topic": "Negations: To not be", "kenyang": "O'pu", "english": "You are Not", "example_kenyang": "O'pu tuor", "example_english": "You are not coming"}
+{"chapter": "8", "topic": "Negations: To not be", "kenyang": "[Yi]à'pu", "english": "They are Not / He/she is not", "example_kenyang": "A'pu Anyuop", "example_english": "He/she is not Home", "context": "Note: English translation in text says 'They are Not' but provides singular examples."}
+{"chapter": "8", "topic": "Negations: To not be", "kenyang": "Bhá'pu", "english": "They are not", "example_kenyang": "Bha'pu rong", "example_english": "they're not going"}
+{"chapter": "8", "topic": "Negations: To not be", "kenyang": "Sèh'pu", "english": "We are not", "example_kenyang": "Sèh Pu kah", "example_english": "We won't accept/allow"}
+{"chapter": "8", "topic": "Negations: To not have", "kenyang": "Meh m'beke bhong / M'beke bhong", "english": "I don't have", "example_kenyang": "M'beke bhong Nkap", "example_english": "I don't have Money"}
+{"chapter": "8", "topic": "Negations: To not have", "kenyang": "O'bheke bhong", "english": "You don't have", "example_kenyang": "O'bheke bhong bhetang", "example_english": "You don't have strength"}
+{"chapter": "8", "topic": "Negations: To not have", "kenyang": "[Yi]à bheke bhong", "english": "He/she does not have", "example_kenyang": "À bheke bhong mpok", "example_english": "He/She does not have time"}
+{"chapter": "8", "topic": "Negations: To not have", "kenyang": "Bha bheke bhong", "english": "They don't have", "example_kenyang": "Bha bheke bhong Ekèt", "example_english": "They don't have a house"}
+{"chapter": "8", "topic": "Negations: To not have", "kenyang": "Sèh bheke bhong", "english": "We don't have", "example_kenyang": "Sèh bheke bhong esonghori", "example_english": "We don't have a problem/issue"}
+{"chapter": "8", "topic": "Negations: To Not Have Yet", "kenyang": "Bekereh / Beghere", "english": "Not yet", "context": "Use this format for all 'Not Yet' verbs and Sentences"}
+{"chapter": "8", "topic": "Negations: To Not Have Yet", "kenyang": "M'beghere bhong", "english": "I don't have yet"}
+{"chapter": "8", "topic": "Negations: To Not Have Yet", "kenyang": "O'bheghere bhong", "english": "You don't have yet"}
+{"chapter": "8", "topic": "Negations: To Not Have Yet", "kenyang": "[Yi]à bheghere bhong", "english": "He/She hasn't had yet"}
+{"chapter": "8", "topic": "Negations: To Not Have Yet", "kenyang": "Bha bheghere bhong", "english": "They haven't had yet"}
+{"chapter": "8", "topic": "Negations: To Not Have Yet", "kenyang": "Sé bheghere bhong", "english": "We haven't had yet"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "M'chi", "english": "I am", "example_kenyang": "M'pû", "example_english": "I'm Not"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "O'chi", "english": "You Are", "example_kenyang": "O'pû", "example_english": "You are not"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "[Yi]à chi", "english": "He/she is", "example_kenyang": "A'pû", "example_english": "He/she is not"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Bha Chi", "english": "They Are", "example_kenyang": "Bha' pû", "example_english": "They're Not"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Sè Chi", "english": "We Are", "example_kenyang": "Sè Pû", "example_english": "We're Not"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Tuor", "english": "Come", "example_kenyang": "Ké tuor", "example_english": "Don't Come"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Dok", "english": "Go", "example_kenyang": "Ké Rong", "example_english": "Don't Go"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Chokor", "english": "Sit", "example_kenyang": "Ké Chokor", "example_english": "Don't Sit"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Fatæ", "english": "Stand", "example_kenyang": "Ké fatæ", "example_english": "Don't stand"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Rem", "english": "Say", "example_kenyang": "Ké Rem", "example_english": "Don't Say"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Rem Kepur", "english": "Talk", "example_kenyang": "Ké Rem Kepur", "example_english": "Don't Talk"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Chokor kpak", "english": "Sit Quiet", "example_kenyang": "Ké Chokor kpak / Ke Chokor kpak", "example_english": "Don't sit quiet"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Ghok", "english": "Hear", "example_kenyang": "Ké ghok", "example_english": "Don't hear"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Ghokoti", "english": "Listen", "example_kenyang": "Ké ghokoti", "example_english": "Don't listen"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Jiet", "english": "Run", "example_kenyang": "Ké jiet", "example_english": "don't run"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Nàh", "english": "Cook", "example_kenyang": "Ké nàh", "example_english": "Don't Cook"}
+{"chapter": "8", "topic": "Negating Verbs with pû or Ké", "kenyang": "Nàh Etay", "english": "Cook Food", "example_kenyang": "Ke Nàh Etay", "example_english": "Don't Cook Food"}
+{"chapter": "8", "topic": "Negating 'Come' in Present Tense", "kenyang": "M'pu tuor", "english": "I'm not Coming.", "example_kenyang": "Tuor", "example_english": "Reply: M'pu tuor (I'm not coming)"}
+{"chapter": "8", "topic": "Negating 'Come' in Present Tense", "kenyang": "M'Kè Tuor?", "english": "I Shouldn't Come?", "context": "Only when asking a question."}
+{"chapter": "8", "topic": "Negating 'Come' in Present Tense", "kenyang": "Ké tuor", "english": "Don't Come", "example_kenyang": "N'tour?", "example_english": "Reply: Eh eh Ké tuor (No, Don't Come)"}
+{"chapter": "8", "topic": "Negating 'Come' in Present Tense", "kenyang": "Ké tuor", "english": "Don't Come.", "example_kenyang": "Bhe O'Kè tuor", "example_english": "They said you Shouldn't Come"}
+{"chapter": "8", "topic": "Negating 'Come' in Present Tense", "kenyang": "[Yi]à'Ke Tuor", "english": "He/She Should not Come.", "example_kenyang": "ghâti yi à kè tuor", "example_english": "Tell Him/her to not come"}
+{"chapter": "8", "topic": "Negating 'Come' in Present Tense", "kenyang": "Bha Kè tuor", "english": "They shouldn't Come.", "example_kenyang": "Ma'n'tuor?", "example_english": "Reply: Eh eh, bha kè tuor (No, they shouldn't come)"}
+{"chapter": "8", "topic": "Negating 'Come' in Present Tense", "kenyang": "Sé Kè tuor", "english": "We Shouldn't Come.", "example_kenyang": "Sé'n'tuor?", "example_english": "Reply: eh eh kè tuor kah (No, you people should not come)"}
+{"chapter": "8", "topic": "Negating 'Come' in Present Continuous Tense", "kenyang": "Tuor sé dok", "english": "Come Let's Go"}
+{"chapter": "8", "topic": "Negating 'Come' in Present Continuous Tense", "kenyang": "M'pû tuor", "english": "I'm not coming", "context": "To respond in the negative"}
+{"chapter": "8", "topic": "Negating 'Come' in Present Continuous Tense", "kenyang": "O'pû tuor", "english": "You are not coming"}
+{"chapter": "8", "topic": "Negating 'Come' in Present Continuous Tense", "kenyang": "[Yi]á pû tuor", "english": "He/she is not coming"}
+{"chapter": "8", "topic": "Negating 'Come' in Present Continuous Tense", "kenyang": "Bhá Pû tuor", "english": "They are not coming"}
+{"chapter": "8", "topic": "Negating 'Come' in Present Continuous Tense", "kenyang": "Séh pû tuor", "english": "We are not coming"}
+{"chapter": "8", "topic": "Negating 'Go' (DOK)", "kenyang": "M'pu Rong", "english": "I'm not going"}
+{"chapter": "8", "topic": "Negating 'Go' (DOK)", "kenyang": "O'pu Rong", "english": "You're not Going"}
+{"chapter": "8", "topic": "Negating 'Go' (DOK)", "kenyang": "[Yi]à Pû Rong", "english": "He/she is not going"}
+{"chapter": "8", "topic": "Negating 'Go' (DOK)", "kenyang": "Bhá Pû Rong", "english": "They're not going"}
+{"chapter": "8", "topic": "Negating 'Go' (DOK)", "kenyang": "Sé pu Rong", "english": "We're not going"}
+{"chapter": "8", "topic": "Negating 'Know' (RENGHÉ)", "kenyang": "M'beke Renghè", "english": "I don't know"}
+{"chapter": "8", "topic": "Negating 'Know' (RENGHÉ)", "kenyang": "O'bheke Renghè", "english": "You Don't Know"}
+{"chapter": "8", "topic": "Negating 'Know' (RENGHÉ)", "kenyang": "[Yi]à bheke Renghè", "english": "He/She Doesn't Know"}
+{"chapter": "8", "topic": "Negating 'Know' (RENGHÉ)", "kenyang": "Bhá Bheke Renghè", "english": "They Don't Know"}
+{"chapter": "8", "topic": "Negating 'Know' (RENGHÉ)", "kenyang": "Sé Bheke Renghè", "english": "We don't know"}
+{"chapter": "8", "topic": "Negating 'Accept' (KAH)", "kenyang": "M'pu Kah", "english": "I do not/will not Accept"}
+{"chapter": "8", "topic": "Negating 'Accept' (KAH)", "kenyang": "O'bheke kah", "english": "You do not Accept"}
+{"chapter": "8", "topic": "Negating 'Accept' (KAH)", "kenyang": "[Yi]à Pu kah", "english": "He/she does not Accept/Isn't accepting"}
+{"chapter": "8", "topic": "Negating 'Accept' (KAH)", "kenyang": "Bhá Pu kah", "english": "They don't Accept/Aren't accepting"}
+{"chapter": "8", "topic": "Negating 'Accept' (KAH)", "kenyang": "Sé pu kah", "english": "We don't Accept/Aren't accepting"}
+{"chapter": "8", "topic": "Command to Reject", "kenyang": "O' Ke Kah / Ké kah", "english": "Don't Accept/Allow"}
+{"chapter": "8", "topic": "Command to Reject", "kenyang": "[Yi]à Ké kah", "english": "He/she Shouldn't Accept/Allow"}
+{"chapter": "8", "topic": "Command to Reject", "kenyang": "Bhá Kè kah", "english": "They Should not Accept/Allow"}
+{"chapter": "8", "topic": "Command to Reject", "kenyang": "Bhà Ké kah", "english": "You people should not accept/Allow"}
+{"chapter": "8", "topic": "Command to Reject", "kenyang": "Sé ke kah", "english": "We shouldn't Accept/Allow"}

@@ -1,0 +1,165 @@
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "bhong", "english": "Have"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "Ki-ntok", "english": "Play"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "Renghé", "english": "Know"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "Rem", "english": "Speak"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "bhuere kenoh", "english": "Sleep"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "Rem Kepeurh", "english": "Talk"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "ghok", "english": "Hear"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "ghor", "english": "See"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "tuor", "english": "Come"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "jiet", "english": "Run", "context": "jiet ntiet- run with speed"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "dok", "english": "Jump"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "bhen (nebhen)", "english": "Dance"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "sîng", "english": "Write"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "náh", "english": "Cook"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "yâh", "english": "Drive"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "wai (amîn)", "english": "Laugh"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "Di(kebhoh)", "english": "Cry"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "ki BETEK", "english": "Work"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "biak", "english": "Clap", "context": "clapping of hands would be Biak amoh"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "Koh (nekoh)", "english": "Walk"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "dok", "english": "Go"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "rong nekoh", "english": "Travel"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "birk(bhaari)", "english": "Shout"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "nyirhti", "english": "Smile"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "ghoko", "english": "Fix"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "yang", "english": "Search"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "Sóo", "english": "Wash"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "Sóo Amoh", "english": "Wash Hands"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "Wash Bhekak", "english": "Wash legs"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "Sóo muet", "english": "Bathe"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "Kong", "english": "Love", "context": "noun form is Ekong - Love"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "Pap", "english": "Hate"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "kwai (nekwai)", "english": "Sing"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "sei", "english": "Lie", "context": "Noun form Nsei or Bhapur"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "enangti", "english": "Gossip"}
+{"chapter": "7", "topic": "Common Verbs", "kenyang": "Kah", "english": "Accept"}
+{"chapter": "7", "topic": "Verb Conjugation: To Be", "kenyang": "M'chi", "english": "I am"}
+{"chapter": "7", "topic": "Verb Conjugation: To Be", "kenyang": "O' Chi", "english": "You are"}
+{"chapter": "7", "topic": "Verb Conjugation: To Be", "kenyang": "[Yi]aChi", "english": "He/She is"}
+{"chapter": "7", "topic": "Verb Conjugation: To Be", "kenyang": "Bha Chi", "english": "They are"}
+{"chapter": "7", "topic": "Verb Conjugation: To Be", "kenyang": "Sé Chi", "english": "We are"}
+{"chapter": "7", "topic": "Verb Conjugation: To Have (BHONG)", "kenyang": "M'bong", "english": "I have"}
+{"chapter": "7", "topic": "Verb Conjugation: To Have (BHONG)", "kenyang": "Woh Bhong", "english": "You Have"}
+{"chapter": "7", "topic": "Verb Conjugation: To Have (BHONG)", "kenyang": "[Yi]a bhong", "english": "He/She Has"}
+{"chapter": "7", "topic": "Verb Conjugation: To Have (BHONG)", "kenyang": "Bha' bhong", "english": "They Have"}
+{"chapter": "7", "topic": "Verb Conjugation: To Have (BHONG)", "kenyang": "Sé Bhong", "english": "We Have"}
+{"chapter": "7", "topic": "Verb Conjugation: To Go (Dok/Rong)", "kenyang": "Meh Rong", "english": "I'm going", "context": "Dok (Go) becomes Rong. This is an irregular verb even in Kenyang. This verb changes form in transition/ usage"}
+{"chapter": "7", "topic": "Verb Conjugation: To Go (Dok/Rong)", "kenyang": "O' Rong", "english": "You're Going"}
+{"chapter": "7", "topic": "Verb Conjugation: To Go (Dok/Rong)", "kenyang": "[Yi]à Rong", "english": "he/she is going"}
+{"chapter": "7", "topic": "Verb Conjugation: To Go (Dok/Rong)", "kenyang": "Bha rong", "english": "they're going"}
+{"chapter": "7", "topic": "Verb Conjugation: To Go (Dok/Rong)", "kenyang": "Sé Rong", "english": "We're Going"}
+{"chapter": "7", "topic": "Verb Conjugation: To Go (Dok/Rong)", "kenyang": "M'dong", "english": "I've gone, I'm gone.", "context": "The first person past tense of Go (dok) is M'dong. This applies only to the first person narrative."}
+{"chapter": "7", "topic": "Sentence Formation: To Go", "kenyang": "Meh rong ekati", "english": "I'm going to school"}
+{"chapter": "7", "topic": "Sentence Formation: To Go", "kenyang": "M'dong Ekàtí", "english": "I've gone to school"}
+{"chapter": "7", "topic": "Sentence Formation: To Go", "kenyang": "O' rong Fa?", "english": "Where are You going to?"}
+{"chapter": "7", "topic": "Sentence Formation: To Go", "kenyang": "à Rong BETEK", "english": "he/she is going to work"}
+{"chapter": "7", "topic": "Sentence Formation: To Go", "kenyang": "Bhá Rong esié", "english": "they're going to the market"}
+{"chapter": "7", "topic": "Sentence Formation: To Go", "kenyang": "Sé Rong anyuop", "english": "We're Going Home"}
+{"chapter": "7", "topic": "Sentence Formation: To Go", "kenyang": "Séh-n-dok", "english": "Let's Go", "context": "Exception."}
+{"chapter": "7", "topic": "Verb Conjugation: To Know (RENGHÉ)", "kenyang": "M'denghé", "english": "I Know"}
+{"chapter": "7", "topic": "Verb Conjugation: To Know (RENGHÉ)", "kenyang": "O'Renghé", "english": "You Know"}
+{"chapter": "7", "topic": "Verb Conjugation: To Know (RENGHÉ)", "kenyang": "[Yi]a Renghé", "english": "He/She Knows"}
+{"chapter": "7", "topic": "Verb Conjugation: To Know (RENGHÉ)", "kenyang": "Bha Renghé", "english": "They Know"}
+{"chapter": "7", "topic": "Verb Conjugation: To Know (RENGHÉ)", "kenyang": "Sé Renghé", "english": "We Know"}
+{"chapter": "7", "topic": "Verb Conjugation: To Lie (Sei nsei)", "kenyang": "Meh Sei nsei", "english": "I'm lying", "context": "When you use Nsei(noun). The verb becomes Sei or sei nsei"}
+{"chapter": "7", "topic": "Verb Conjugation: To Lie (Sei nsei)", "kenyang": "O' Sei nsei", "english": "You are lying"}
+{"chapter": "7", "topic": "Verb Conjugation: To Lie (Sei nsei)", "kenyang": "[Yi]à Sei nsei", "english": "He/she is lying"}
+{"chapter": "7", "topic": "Verb Conjugation: To Lie (Sei nsei)", "kenyang": "bha Sei nsei", "english": "They're lying"}
+{"chapter": "7", "topic": "Verb Conjugation: To Lie (Sei nsei)", "kenyang": "Sé sei nsei", "english": "We're lying"}
+{"chapter": "7", "topic": "Verb Conjugation: To Lie (Pu bhapu)", "kenyang": "Meh Pu bhapu", "english": "I'm telling lies", "context": "When you use Bhapu (Noun) The verb becomes Pu or pu bhapu"}
+{"chapter": "7", "topic": "Verb Conjugation: To Lie (Pu bhapu)", "kenyang": "O' Pu bhapu", "english": "You're telling lies"}
+{"chapter": "7", "topic": "Verb Conjugation: To Lie (Pu bhapu)", "kenyang": "à Pu bhapu", "english": "He/She is telling lies"}
+{"chapter": "7", "topic": "Verb Conjugation: To Lie (Pu bhapu)", "kenyang": "Bha Pu bhapu", "english": "They're telling lies"}
+{"chapter": "7", "topic": "Verb Conjugation: To Lie (Pu bhapu)", "kenyang": "Sé pu bhapu", "english": "We're telling lies"}
+{"chapter": "7", "topic": "Verb Conjugation: To Love (Kong)", "kenyang": "M'kong", "english": "I Love", "context": "The noun form of Love is Ekong"}
+{"chapter": "7", "topic": "Verb Conjugation: To Love (Kong)", "kenyang": "O' Kong", "english": "You Love"}
+{"chapter": "7", "topic": "Verb Conjugation: To Love (Kong)", "kenyang": "[Yi]à Kong", "english": "He/She Loves"}
+{"chapter": "7", "topic": "Verb Conjugation: To Love (Kong)", "kenyang": "Bha Kong", "english": "They Love"}
+{"chapter": "7", "topic": "Verb Conjugation: To Love (Kong)", "kenyang": "Sé Kong", "english": "We Love"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (1st Person)", "kenyang": "M'kong woh", "english": "I love You", "context": "This is when YOU is singular."}
+{"chapter": "7", "topic": "Sentence Formation: To Love (1st Person)", "kenyang": "M'kong bhey(Ka)", "english": "I Love You(plural)"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (1st Person)", "kenyang": "M'kong Yi", "english": "I Love Him/Her"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (1st Person)", "kenyang": "M'kong bhoh", "english": "I Love them", "context": "(bha- they/them becomes bhoh)"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (1st Person)", "kenyang": "N'kong bhe sé", "english": "I Love Us", "context": "since \"We\" becomes \"Us\" in transition, Sé(we) becomes bhe sé (us)"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (2nd Person)", "kenyang": "O' Kong meh", "english": "You Love me"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (2nd Person)", "kenyang": "O' Kong Yi", "english": "You Love Him/her"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (2nd Person)", "kenyang": "O' Kong bhoh", "english": "You love them"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (2nd Person)", "kenyang": "O' Kong bhe sé", "english": "You Love us"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (3rd Person)", "kenyang": "[Yi]à Kong meh", "english": "She/He Loves me"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (3rd Person)", "kenyang": "[Yi]à Kong woh", "english": "She/He Loves You"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (3rd Person)", "kenyang": "[Yi]à Kong bhoh", "english": "She/He Loves Them"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (3rd Person)", "kenyang": "[Yi]à Kong bhe sé", "english": "She/He Loves US"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (4th Person)", "kenyang": "Bha Kong meh", "english": "They Love Me"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (4th Person)", "kenyang": "Bha Kong woh", "english": "They Love you"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (4th Person)", "kenyang": "Bha Kong Yi", "english": "They love him/her"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (4th Person)", "kenyang": "Bha Kong bhoh", "english": "They love them"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (4th Person)", "kenyang": "Bha Kong bhe sé", "english": "They love us"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (5th Person)", "kenyang": "Sé Kong woh", "english": "We Love You", "context": "Since \"We\" can't love \"I\", we'll start with the second person"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (5th Person)", "kenyang": "Sé Kong bhey(Ka)", "english": "We Love You(plural)"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (5th Person)", "kenyang": "Sé Kong Yi", "english": "We Love Him/Her"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (5th Person)", "kenyang": "Sé Kong bhoh", "english": "We Love them"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (5th Person)", "kenyang": "Sé Kong bhe sé", "english": "We Love us"}
+{"chapter": "7", "topic": "Sentence Formation: To Love (5th Person)", "kenyang": "Sé Kong muere-yesé", "english": "We Love Ourselves"}
+{"chapter": "7", "topic": "Verb Conjugation: To Speak/Say (Rem)", "kenyang": "Meh Rem", "english": "I say/ I'm saying", "context": "This Verb takes the Past Present and present continuous in their usage"}
+{"chapter": "7", "topic": "Verb Conjugation: To Speak/Say (Rem)", "kenyang": "M'dem", "english": "I Said"}
+{"chapter": "7", "topic": "Verb Conjugation: To Speak/Say (Rem)", "kenyang": "O'Rem", "english": "You say"}
+{"chapter": "7", "topic": "Verb Conjugation: To Speak/Say (Rem)", "kenyang": "[Yi]À rem", "english": "He/She Says/is Saying/ Said"}
+{"chapter": "7", "topic": "Verb Conjugation: To Speak/Say (Rem)", "kenyang": "Bha Rem", "english": "They Say/said/are saying"}
+{"chapter": "7", "topic": "Verb Conjugation: To Speak/Say (Rem)", "kenyang": "Sé Rem", "english": "We say/said/are saying"}
+{"chapter": "7", "topic": "Verb Conjugation: To Speak/Say (Past Tense)", "kenyang": "Mbe", "english": "I said"}
+{"chapter": "7", "topic": "Verb Conjugation: To Speak/Say (Past Tense)", "kenyang": "Wo bhe", "english": "You Said"}
+{"chapter": "7", "topic": "Verb Conjugation: To Speak/Say (Past Tense)", "kenyang": "Yi bhe", "english": "He/She Said"}
+{"chapter": "7", "topic": "Verb Conjugation: To Speak/Say (Past Tense)", "kenyang": "Bho bhe", "english": "They Said"}
+{"chapter": "7", "topic": "Verb Conjugation: To Speak/Say (Past Tense)", "kenyang": "Bhese bhe", "english": "We said"}
+{"chapter": "7", "topic": "Verb Conjugation: To Play (Ki ntok)", "kenyang": "Meh ki ntok", "english": "I'm playing"}
+{"chapter": "7", "topic": "Verb Conjugation: To Play (Ki ntok)", "kenyang": "Woh Ki ntok", "english": "You're playing (singular"}
+{"chapter": "7", "topic": "Verb Conjugation: To Play (Ki ntok)", "kenyang": "Bhà ki ntok", "english": "You're playing (plural)"}
+{"chapter": "7", "topic": "Verb Conjugation: To Play (Ki ntok)", "kenyang": "[Yi]à ki ntok", "english": "He/she is playing"}
+{"chapter": "7", "topic": "Verb Conjugation: To Play (Ki ntok)", "kenyang": "Bhá ki ntok", "english": "They're playing"}
+{"chapter": "7", "topic": "Verb Conjugation: To Play (Ki ntok)", "kenyang": "Sé ki ntok", "english": "We're playing"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (TUOR)", "kenyang": "Meh Tuor", "english": "I'm coming"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (TUOR)", "kenyang": "Woh O'Tuor", "english": "You are Coming"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (TUOR)", "kenyang": "[Yi]á Tuor", "english": "He/She is Coming"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (TUOR)", "kenyang": "Bha Tuor", "english": "They're Coming"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (TUOR)", "kenyang": "Sé Tuor", "english": "We're Coming"}
+{"chapter": "7", "topic": "Related Usage: To Come", "kenyang": "[Yi]atuor mbi", "english": "He came before", "context": "Near past"}
+{"chapter": "7", "topic": "Related Usage: To Come", "kenyang": "atwo enyákà", "english": "He came a long time ago"}
+{"chapter": "7", "topic": "Related Usage: To Come", "kenyang": "Chong ǎ tuór", "english": "He/she will come", "context": "Future (certainty)"}
+{"chapter": "7", "topic": "Related Usage: To Come", "kenyang": "[Yi]à'mai tuór", "english": "He/She may come", "context": "Future (uncertainty)"}
+{"chapter": "7", "topic": "Related Usage: To Come", "kenyang": "[Yi]àtuor", "english": "He/She has come"}
+{"chapter": "7", "topic": "Related Usage: To Come", "kenyang": "[Yi]àtuor noko", "english": "He/She usually comes"}
+{"chapter": "7", "topic": "Verb Conjugation: To Give (Chieh)", "kenyang": "Meh Chièh", "english": "I'm giving/Gave"}
+{"chapter": "7", "topic": "Verb Conjugation: To Give (Chieh)", "kenyang": "O' Chièh", "english": "You're giving/Gave"}
+{"chapter": "7", "topic": "Verb Conjugation: To Give (Chieh)", "kenyang": "À Chièh", "english": "She/He gave/is giving"}
+{"chapter": "7", "topic": "Verb Conjugation: To Give (Chieh)", "kenyang": "Bha Chièh", "english": "They gave/are giving"}
+{"chapter": "7", "topic": "Verb Conjugation: To Give (Chieh)", "kenyang": "Sé Chièh", "english": "We gave/are giving"}
+{"chapter": "7", "topic": "Verb Conjugation: To Give (Past Tense - CHIÉH)", "kenyang": "M'Chiéh", "english": "I've Given/gave", "context": "Gave, Given/Have given"}
+{"chapter": "7", "topic": "Verb Conjugation: To Give (Past Tense - CHIÉH)", "kenyang": "O'Chiéh", "english": "You Gave"}
+{"chapter": "7", "topic": "Verb Conjugation: To Give (Past Tense - CHIÉH)", "kenyang": "[Yi]àChiéh", "english": "He/She gave"}
+{"chapter": "7", "topic": "Verb Conjugation: To Give (Past Tense - CHIÉH)", "kenyang": "Bha Chiéh", "english": "They gave"}
+{"chapter": "7", "topic": "Verb Conjugation: To Give (Past Tense - CHIÉH)", "kenyang": "Seh Chiéh", "english": "We gave"}
+{"chapter": "7", "topic": "Verbs in the Past Tenses", "kenyang": "tuor mbɨ", "english": "Simple Past (Come)", "context": "Come - Tuor"}
+{"chapter": "7", "topic": "Verbs in the Past Tenses", "kenyang": "nang tuor mbɨ", "english": "Past Perfect (Come)"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Simple Past)", "kenyang": "N'tuor mbɨ", "english": "I came"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Simple Past)", "kenyang": "O'tuor mbɨ", "english": "You Came"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Simple Past)", "kenyang": "[Yi]à tuor mbɨ", "english": "He/she came"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Simple Past)", "kenyang": "Bha tuor mbɨ", "english": "They Came"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Simple Past)", "kenyang": "Seh tuor mbɨ", "english": "We came", "context": "Come/Tuor In other past tense forms."}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Past Perfect / Had Already Come)", "kenyang": "M'nang tuor mbɨ", "english": "I had already come"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Past Perfect / Had Already Come)", "kenyang": "O'nang O'tuor mbɨ", "english": "You had already come"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Past Perfect / Had Already Come)", "kenyang": "[Yi]á nang àtuor mbɨ", "english": "He/She had already come"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Past Perfect / Had Already Come)", "kenyang": "Bha nang bha tuor mbɨ", "english": "They had already Come"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Past Perfect / Had Already Come)", "kenyang": "Seh nang sé tuor mbɨ", "english": "We had already Come"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Unspecified Past / ENYAKA)", "kenyang": "M'tour Enyaka", "english": "I Came Then"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Unspecified Past / ENYAKA)", "kenyang": "O'tuor Enyaka", "english": "You Came Then"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Unspecified Past / ENYAKA)", "kenyang": "[Yi]à tuor Enyaka", "english": "He/She Came Then"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Unspecified Past / ENYAKA)", "kenyang": "Bha tuor Enyaka", "english": "They Came Then"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Unspecified Past / ENYAKA)", "kenyang": "Seh tuor Enyaka", "english": "We Came Then"}
+{"chapter": "7", "topic": "Grammar Rules: Past Tenses", "kenyang": "mbɨ & Enyaka", "english": "Formats of Past Tenses", "context": "These 2 Formats of Past Tenses(mbɨ & Enyaka) apply to all verbs"}
+{"chapter": "7", "topic": "Grammar Rules: Future Tense", "kenyang": "Noun + Verb + Chong", "english": "Will Come / Future Tense Structure", "context": "This rule applies to all Verbs in the Future tense"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Future Tense)", "kenyang": "Meh tuor Chong", "english": "I will Come", "context": "(Chong M'tuor)"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Future Tense)", "kenyang": "O'tuor Chong", "english": "You will Come", "context": "(Chong O'tuor)"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Future Tense)", "kenyang": "[Yi]àtuor Chong", "english": "She/He will Come", "context": "(Chong á tuor)"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Future Tense)", "kenyang": "Bhá tuor Chong", "english": "They Will Come", "context": "(Chong ma tuor)"}
+{"chapter": "7", "topic": "Verb Conjugation: To Come (Future Tense)", "kenyang": "Séh tuor Chong", "english": "We Will Come", "context": "(Chong sé tuor)"}

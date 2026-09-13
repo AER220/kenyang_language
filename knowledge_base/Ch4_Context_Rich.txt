@@ -1,0 +1,51 @@
+{"document_id": "Ch4", "type": "instructional_text", "section": "Possessed Forms of Mother and Father", "content": "When 'Mother' takes a Possessed noun form (e.g., Ojong's Mother) it becomes 'Noh Ojong'. When 'Father' takes a Possessed noun form (e.g., Takang's Father) it becomes 'Chi Takang'. Those are the instances where 'Noh' and 'Chi' are used."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "instructional_text", "section": "Literal translation of Wife", "content": "There's no literal word for wife. We only have the word 'Woman'. The only way this becomes a Wife is when it's 'Possessed', such as Ngoré wah (My Woman) or when it's reported, such as Ngoreh Mmu (Somebody's woman)."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "instructional_text", "section": "Literal translation of Husband", "content": "Husband follows the same rule as Wife. N'Nem simply means Male. To say Husband, it is N'neme Wah (My Male/man)."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "instructional_text", "section": "Extended meanings of Manoh (Sister/Brother/Cousin)", "content": "Cousins and all forms of extended family relations are called 'Manoh'. 'Manoh' also includes any and all relationships from blood to tribal, ethnic, national, continental, and global."}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Mother", "kenyang_word": "Ma / Noh", "example_or_possessive": "My Mother - Ma'ya"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Your Mother (sing)", "kenyang_word": "Ma'yeh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Your Mother (plu)", "kenyang_word": "Ma'Yeka"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "His/Her Mother", "kenyang_word": "Ma'yi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Their Mother", "kenyang_word": "Ma'yap"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Our Mother", "kenyang_word": "Ma'yeseh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Father", "kenyang_word": "eta / Chi", "example_or_possessive": "My Father - Eta'ya"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Your Father (sing)", "kenyang_word": "Eta'yeh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Your Father (plu)", "kenyang_word": "Eta'yeka"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "His/Her Father", "kenyang_word": "Eta'yi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Their Father", "kenyang_word": "Eta'yap"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Our Father", "kenyang_word": "Eta'yeseh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Wife / Woman", "kenyang_word": "Ngoreh", "example_or_possessive": "My Woman/Wife - Ngoré wah | Somebody's woman - Ngoreh Mmu"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Husband / Male", "kenyang_word": "N'Nem", "example_or_possessive": "My Male/man/Husband - N'neme Wah"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Sister", "kenyang_word": "Manoh / Moh-Ma", "example_or_possessive": "My Sister - Manohwa / Moh Maya"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Brother", "kenyang_word": "Manoh / Moh-Ma", "example_or_possessive": "My Brother - Manohwa / Moh Maya (Same as Sister)"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Brothers & Sisters", "kenyang_word": "Bho Manoh", "example_or_possessive": "My brothers & Sisters - Bho Manoh bha / Bho Maya"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Son", "kenyang_word": "Moh", "example_or_possessive": "My Son - Mohwa"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Daughter", "kenyang_word": "Moh", "example_or_possessive": "My Daughter - Mohwa"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Children", "kenyang_word": "Boh", "example_or_possessive": "My Children - Boh bha"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Grand Mother", "kenyang_word": "Ma nsinsi", "example_or_possessive": "My Grandmother - Maya ne nsinsi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Grand Father", "kenyang_word": "Eta nsinsi", "example_or_possessive": "My Grandfather - Etaya Ne nsinsi"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Paternal Stepbrother", "kenyang_word": "Moh chi / moh eta", "example_or_possessive": "My Stepbrother - Moh etaya"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Boyfriend/Girlfriend/Fiance/Fiancee", "kenyang_word": "Nté / Muereh Ekong"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Person", "kenyang_word": "Mmu", "example_or_possessive": "My Person - Mmu-wah"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "People", "kenyang_word": "Bhoh", "example_or_possessive": "My People - Bhoh Bha"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Friend", "kenyang_word": "Muereh", "example_or_possessive": "My Friend - Muereh wah"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Family", "kenyang_word": "Nnereked", "example_or_possessive": "My Family - Nnerekere-wah"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Boy(Youth)/Gentleman", "kenyang_word": "Esak or Esaka'mu"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Boys(Youths)/Gentlemen", "kenyang_word": "Bhesak or bhesaka bhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Girl(Youth)/Lady", "kenyang_word": "Ngorsong"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Girls (Youths)/Ladies", "kenyang_word": "Bha'orsong"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Woman", "kenyang_word": "Ngoreh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Women", "kenyang_word": "bha'ghoreh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Baby (newborn)", "kenyang_word": "moh nkoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Child", "kenyang_word": "Mandu moh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Children", "kenyang_word": "Bharu Bhoh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Male Youths are playing football (Soccer)", "kenyang_word": "Bhesaka bho bhá deb Ndah"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Ladies (Young girls) are going to the stream", "kenyang_word": "Bha'orsong bhá rong nyien"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Male", "kenyang_word": "N'Nem"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Males", "kenyang_word": "bha'nem"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Female", "kenyang_word": "Ngorh"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Females", "kenyang_word": "bha'ghor"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Man", "kenyang_word": "mbakanem"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Men", "kenyang_word": "Bha' bhakanem"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Masculinity/Masculine Pride", "kenyang_word": "Ke' bhakanem"}
+{"document_id": "Conversational_Kenyang_Beginners_Ch4", "type": "vocabulary", "english_translation": "Femininity/Feminine Pride", "kenyang_word": "Ke'ghoré"}

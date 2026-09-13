@@ -1,0 +1,50 @@
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Ma / Noh", "english": "Mother", "context": "When Mother takes a Possessed noun form e.g Ojong's Mother it becomes Noh Ojong", "example_kenyang": "Ma'ya", "example_english": "My Mother", "citation": "[cite: 1]"}
+{"chapter": "4", "topic": "Possessives: Mother", "kenyang": "Ma'ya", "english": "My Mother", "citation": "[cite: 1]"}
+{"chapter": "4", "topic": "Possessives: Mother", "kenyang": "Ma'yeh", "english": "Your Mother (sing)", "citation": "[cite: 1]"}
+{"chapter": "4", "topic": "Possessives: Mother", "kenyang": "Ma'Yeka", "english": "Your Mother (plu)", "citation": "[cite: 1]"}
+{"chapter": "4", "topic": "Possessives: Mother", "kenyang": "Ma'yi", "english": "His/Her Mother", "citation": "[cite: 1]"}
+{"chapter": "4", "topic": "Possessives: Mother", "kenyang": "Ma'yap", "english": "Their Mother", "citation": "[cite: 1]"}
+{"chapter": "4", "topic": "Possessives: Mother", "kenyang": "Ma'yeseh", "english": "Our Mother", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "eta / Chi", "english": "Father", "context": "When Father takes a Possessed noun form e.g Takang's Father it becomes Chi Takang", "example_kenyang": "Eta'ya", "example_english": "My Father", "citation": "[cite: 1]"}
+{"chapter": "4", "topic": "Possessives: Father", "kenyang": "Eta'ya", "english": "My Father", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Possessives: Father", "kenyang": "Eta'yeh", "english": "Your Father", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Possessives: Father", "kenyang": "Eta'yeka", "english": "Your Father", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Possessives: Father", "kenyang": "Eta'yi", "english": "His/Her Father", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Possessives: Father", "kenyang": "Eta'yap", "english": "Their Father", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Possessives: Father", "kenyang": "Eta'yeseh", "english": "Our Father", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Ngoré wah", "english": "My Woman (Wife)", "context": "There's no literal word for wife. We only have the word \"Woman\". The only way this becomes a Wife is when it's \"Possessed\" Ngoré wah (My Woman)", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Ngoreh Mmu", "english": "Somebody's woman (Wife)", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "N'Nem", "english": "Male (used for Husband)", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "N'neme Wah", "english": "My Male/man (My Husband)", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Manoh / Moh-Ma", "english": "Sister / Brother", "example_kenyang": "Manohwa / Moh Maya", "example_english": "My Sister", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Bho Manoh", "english": "Brothers & Sisters", "example_kenyang": "Bho Manoh bha / Bho Maya", "example_english": "My brothers & Sisters", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Moh", "english": "Son / Daughter", "example_kenyang": "Mohwa", "example_english": "My Son / My Daughter", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Boh", "english": "Children", "example_kenyang": "Boh bha", "example_english": "My Children", "citation": "[cite: 2]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Ma nsinsi", "english": "Grand Mother", "example_kenyang": "Maya ne nsinsi", "example_english": "My Grandmother", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Eta nsinsi", "english": "Grand Father", "example_kenyang": "Etaya Ne nsinsi", "example_english": "My Grandfather", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Moh chi / moh eta", "english": "Paternal Stepbrother", "example_kenyang": "Moh etaya", "example_english": "My Stepbrother", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Manoh", "english": "Cousins and all forms of extended family relations", "context": "Manoh also includes any and all relationships from blood to tribal, ethnic, national, continental and global", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Nté / Muereh Ekong", "english": "Boyfriend / Girlfriend / Fiance / Fiancee", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Mmu", "english": "Person", "example_kenyang": "Mmu-wah", "example_english": "My Person", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Bhoh", "english": "People", "example_kenyang": "Bhoh Bha", "example_english": "My People", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Muereh", "english": "Friend", "example_kenyang": "Muereh wah", "example_english": "My Friend", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Nnereked", "english": "Family", "example_kenyang": "Nnerekere-wah", "example_english": "My Family", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Esak or Esaka'mu", "english": "Boy(Youth) / Gentleman", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Bhesak or bhesaka bhoh", "english": "Boys(Youths) / Gentlemen", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Ngorsong", "english": "Girl(Youth) Lady", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Bha'orsong", "english": "Girls (Youths) Ladies", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Ngoreh", "english": "Woman", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "bha'ghoreh", "english": "Women", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "moh nkoh", "english": "Baby (newborn)", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Mandu moh", "english": "Child", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Relationship Categories", "kenyang": "Bharu Bhoh", "english": "Children", "citation": "[cite: 3]"}
+{"chapter": "4", "topic": "Examples", "kenyang": "Bhesaka bho bhá deb Ndah", "english": "Male Youths are playing football (Soccer)", "citation": "[cite: 4]"}
+{"chapter": "4", "topic": "Examples", "kenyang": "Bha'orsong bhá rong nyien", "english": "Ladies (Young girls) are going to the stream", "citation": "[cite: 4]"}
+{"chapter": "4", "topic": "Sex", "kenyang": "N'Nem", "english": "Male", "citation": "[cite: 4]"}
+{"chapter": "4", "topic": "Sex", "kenyang": "bha'nem", "english": "Males", "citation": "[cite: 4]"}
+{"chapter": "4", "topic": "Sex", "kenyang": "Ngorh", "english": "Female", "citation": "[cite: 4]"}
+{"chapter": "4", "topic": "Sex", "kenyang": "bha'ghor", "english": "Females", "citation": "[cite: 4]"}
+{"chapter": "4", "topic": "Gender", "kenyang": "mbakanem", "english": "Man", "citation": "[cite: 4]"}
+{"chapter": "4", "topic": "Gender", "kenyang": "Bha' bhakanem", "english": "Men", "citation": "[cite: 4]"}
+{"chapter": "4", "topic": "Gender", "kenyang": "Ke' bhakanem", "english": "Masculinity/Masculine Pride", "citation": "[cite: 4]"}
+{"chapter": "4", "topic": "Gender", "kenyang": "Ke'ghoré", "english": "Femininity/ Feminine Pride", "citation": "[cite: 4]"}

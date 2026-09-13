@@ -1,0 +1,1491 @@
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "A - a", "example_kenyang": "Ana", "example_english": "thigh"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "B - b", "example_kenyang": "bawet", "example_english": "Oil"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "Bh - bh", "example_kenyang": "bhép", "example_english": "Ask"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "Ch - ch", "example_kenyang": "chwe", "example_english": "enter"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "D - d", "example_kenyang": "dók", "example_english": "Go"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "E - e", "example_kenyang": "Nyé", "example_english": "Feed"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "Ɛ - ɛ", "example_kenyang": "ɛket", "example_english": "House"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "F - f", "example_kenyang": "fa", "example_english": "Here"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "G - g", "example_kenyang": "gwo", "example_english": "Vomit"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "Gb - gb", "example_kenyang": "gbene", "example_english": "grub"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "Gh - gh", "example_kenyang": "ghók", "example_english": "hear"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "I - I", "example_kenyang": "tí", "example_english": "sell"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "Ɨ - ɨ", "example_kenyang": "ɛtɨ", "example_english": "calabash"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "J - j", "example_kenyang": "ɛjɔ", "example_english": "water pot"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "K - k", "example_kenyang": "akók", "example_english": "pig"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "Kp - kp.", "example_kenyang": "ɛkpɔk", "example_english": "lump"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "M - m", "example_kenyang": "mmok", "example_english": "sun"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "N - n", "example_kenyang": "nnok", "example_english": "soup"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "Ŋ - ŋ", "example_kenyang": "ntaŋ", "example_english": "moon"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "Ny - ny", "example_kenyang": "nyú", "example_english": "drink"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "O - o", "example_kenyang": "nsok", "example_english": "elephant"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "Ɔ - ɔ", "example_kenyang": "nkɔk", "example_english": "fowl"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "P - p", "example_kenyang": "mpɔn", "example_english": "Cow"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "R - r", "example_kenyang": "rě", "example_english": "fly"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "S - s", "example_kenyang": "sǒ", "example_english": "wash"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "T - t", "example_kenyang": "ntu", "example_english": "load"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "U - u", "example_kenyang": "mmú", "example_english": "dog"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "Ʉ - ʉ", "example_kenyang": "sɛpʉ.", "example_english": "camwood"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "W - w.", "example_kenyang": "wɔ", "example_english": "You"}
+{"chapter": "14", "topic": "The Kenyang Alphabet", "kenyang": "Y - y", "example_kenyang": "yem", "example_english": "pierce"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ammik", "english": "on the ground, down", "part_of_speech": "prep"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "abyo", "english": "collective hunting."}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ábhu", "english": "calabash for cup.", "plural_form": "bábhu"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "acha", "english": "divine.", "plural_form": "bacha"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "áchá mfo", "english": "chief's house.", "part_of_speech": "n", "plural_form": "báchá mfɔ"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "áchá nneré-eket", "english": "family compound.", "part_of_speech": "n", "plural_form": "báchá maneré-eket"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "achák", "english": "next.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "áchwi", "english": "car.", "part_of_speech": "n", "plural_form": "báchwi"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "áchwi-nnyén", "english": "canoe, ship.", "part_of_speech": "n", "plural_form": "báchwi-nnyén"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "adep", "english": "cold in the head (oriza), influenza", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "afo", "english": "there.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "áfók", "english": "glory, blessing.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "afómégwá", "english": "white cassava.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "agha", "english": "who.", "part_of_speech": "pron"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "aghép", "english": "plundering, stealing.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ághóŋɔ-mmén", "english": "sheep.", "part_of_speech": "n", "plural_form": "bághóŋɔ-mmén"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "aja", "english": "sea.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "akandak", "english": "acceptance fee (for marriage).", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "akap", "english": "gift.", "part_of_speech": "n", "plural_form": "bakap"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "akap", "english": "sacrifice.", "part_of_speech": "n", "plural_form": "bakap"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "akap ntí", "english": "peace offering.", "part_of_speech": "n", "plural_form": "bakap ntí"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ákáraŋ", "english": "blade (formally a traditional knife used for operating people).", "part_of_speech": "n", "plural_form": "bákáraŋ"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "akatáka", "english": "clay pot: a type.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ako", "english": "meeting group.", "part_of_speech": "n", "plural_form": "bako"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ako", "english": "meeting group.", "part_of_speech": "n", "plural_form": "bakong"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "akók", "english": "pig.", "part_of_speech": "n", "plural_form": "bakók"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "akon", "english": "drip.", "part_of_speech": "n", "plural_form": "bakoŋ"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ákóré", "english": "ration.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ákóré menyiŋ", "english": "share of property.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "akwɔ", "english": "payment.", "part_of_speech": "n", "plural_form": "bakwɔ"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ákwɔ-nkáp", "english": "salary.", "part_of_speech": "n", "plural_form": "bákwɔ-nkáp"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "akpákák", "english": "chair.", "part_of_speech": "n", "plural_form": "bakpákák"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ákpán", "english": "red yam.", "part_of_speech": "n", "plural_form": "bákpán"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "akpása", "english": "basket: a type.", "part_of_speech": "n", "plural_form": "bakpása"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ákpú", "english": "fufu ( made from cassava).", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "amaŋ", "english": "kernel.", "part_of_speech": "n 3"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "amaŋá-arík", "english": "coconut.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "amaŋ-kárárá", "english": "coconut.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "amaŋá-nebu", "english": "hail stone.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "amaŋá-nepen", "english": "testis.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "amaŋá-ntáy", "english": "kernel.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ámáy-kebhe", "english": "twigs.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ambi", "english": "before, ahead", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "amem", "english": "inside.", "part_of_speech": "prep"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ámén-beghók", "english": "molars.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "amfay", "english": "above, on, up.", "part_of_speech": "prep"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ámi", "english": "eczema.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "amík", "english": "grain, conjunctivitis", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "amík némé-némé", "english": "blind.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "amók", "english": "cup, glass.", "part_of_speech": "n", "plural_form": "mamók"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ámókótí-njye", "english": "landslide.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ámó", "english": "fishing trap: a type.", "part_of_speech": "n", "plural_form": "mámó"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "amɔk", "english": "calabash: a type.", "part_of_speech": "n", "plural_form": "mamɔk"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "amó-newú", "english": "funeral.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ámú", "english": "totem: a type.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ana", "english": "lap.", "part_of_speech": "n", "plural_form": "mana"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ana-ɛkak", "english": "thigh.", "part_of_speech": "n", "plural_form": "mana-ɛkak"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "anawúri", "english": "old men's society for clearing farms.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ánáy", "english": "intercourse.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "anɛfú", "english": "next.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ansem", "english": "after.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ansem", "english": "behind.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ansem mpok", "english": "later.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "anten", "english": "below.", "part_of_speech": "prep"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "anwa", "english": "cat.", "part_of_speech": "n", "plural_form": "banwa"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "apu", "english": "mushroom: a type", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "apwɔ", "english": "rent.", "part_of_speech": "n 3/6", "plural_form": "bapwɔ"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "apyóŋ", "english": "elephantiasis.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "arákenó", "english": "mimosa.", "part_of_speech": "n", "plural_form": "barákenó"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "áret", "english": "mucus.", "part_of_speech": "n", "plural_form": "báret"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "aron-ékwá", "english": "plantain: a type.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ási", "english": "net for catching fish.", "part_of_speech": "n", "plural_form": "bási"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ási nnya-táŋgáré", "english": "spider web.", "part_of_speech": "n", "plural_form": "bási nnya-táŋgáré"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ásirí", "english": "fishing line.", "part_of_speech": "n", "plural_form": "básirí"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "áso", "english": "firewood: a type.", "part_of_speech": "n", "plural_form": "báso"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "asore", "english": "clay pot: a type.", "part_of_speech": "n", "plural_form": "basore"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "atá", "english": "cheek, jaw.", "part_of_speech": "n", "plural_form": "batá"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "atá-nekwét", "english": "vulva.", "part_of_speech": "n", "plural_form": "batá-nekwét"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "atú", "english": "ear.", "part_of_speech": "n", "plural_form": "batú"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "atú-awó", "english": "ear ache.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "atú-ketet", "english": "ear infection.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "áwám", "english": "hook.", "part_of_speech": "n", "plural_form": "báwám"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "awó", "english": "hand.", "part_of_speech": "n", "plural_form": "amó"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "awó ete", "english": "handle of pot.", "part_of_speech": "n", "plural_form": "amó ete"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "awó ntay", "english": "stone for grinding.", "part_of_speech": "n", "plural_form": "amó ntay"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "awɔbhɛ", "english": "type of trap (for catching animals).", "part_of_speech": "n", "plural_form": "bawɔbhɛ"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "awó-ghɔ", "english": "left hand.", "part_of_speech": "n", "plural_form": "amó-ghɔ"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "awó-nném te awó-ghɔ", "english": "from left to right."}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "awó-nném", "english": "right hand.", "part_of_speech": "n", "plural_form": "amó-nném"}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "awu", "english": "there.", "part_of_speech": "adv"}
+
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "áyák", "english": "quickly.", "part_of_speech": "adv", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "áyák-áyák", "english": "very quickly.", "part_of_speech": "adv", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "ǎyi", "english": "no.", "part_of_speech": "adv", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "áyó-mme", "english": "regret, had I known.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: A", "kenyang": "áyóp", "english": "hook.", "part_of_speech": "n 3/6", "plural_form": "báyóp", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bá", "english": "they", "part_of_speech": "subj. pron.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bǎ", "english": "you.", "part_of_speech": "subj. pron", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "babu", "english": "belch.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "babyok", "english": "feather, fur.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "babhé", "english": "medicine.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "babhé-kaká", "english": "pesticide.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "babhese", "english": "tears.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "babhok-batá", "english": "dimple.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bache", "english": "urine.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bache", "english": "gonorrhoea.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bachi-mbi", "english": "ancestor.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bachɔkó nɛ bakók", "english": "Bakwerians.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bachyɛ́-ámén", "english": "premolar.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bachye-mbe", "english": "side flank of the body.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bafó", "english": "fat.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bajǐ-kɛbí ammik", "english": "Yorubas.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bákátí", "english": "chisel.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bakay", "english": "riddle, proverb.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bakaysi", "english": "thoughts, meditation, mind.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bakírí-ěták", "english": "soot.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bako", "english": "beans.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bakók-ánwi", "english": "square.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bákú", "english": "edge.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bákú-bákú", "english": "side by side.", "part_of_speech": "prep", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bakwap", "english": "dirt, sperm", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bámbáy", "english": "shade, shelter.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "báŋ", "english": "to gallop.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bapi-baghó", "english": "hell.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "barem", "english": "debt.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "barém", "english": "ancestral spirits.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "barém-amík", "english": "pupil.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "barí", "english": "to groan.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "barí", "english": "death cry.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "baróŋ-baróŋ", "english": "to stripe.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "baru", "english": "to be few.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "baryep", "english": "promise.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "basémé", "english": "feeling.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "básí", "english": "marrow.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "baso", "english": "desert.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bataŋ-átwóp", "english": "mushroom", "part_of_speech": "n", "context": "a type.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "batem", "english": "temporary hut.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "batɛbhé-batí ammik", "english": "moslems.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bati", "english": "to be wide, to be flat.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "batu", "english": "property, load.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "batwop", "english": "ashes.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "batyɛ́", "english": "spit, gland, saliva", "part_of_speech": "n 6a", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "baway-nsi", "english": "ijaws.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bawet", "english": "oil, ointment.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bawet-áchwi", "english": "petrol or gasoline.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "baweré-bawet", "english": "to be oily.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "baweré-betu", "english": "honey.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bawere-bhi", "english": "palm oil.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bawɛré-ɛróŋó", "english": "kerosine.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "baweré-njep", "english": "shea butter oil.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "baweré-njikísí", "english": "groundnut oil.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "báy", "english": "to ferment.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "báyá", "english": "pepper.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "báyá-báyá", "english": "to be peppery.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bayák", "english": "shelter.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "baytí", "english": "to kindle (a fire), to persuade.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bé", "english": "to scold.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "beku", "english": "evening.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "betí", "english": "morning.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bé", "english": "to.", "part_of_speech": "inf", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bé", "english": "that.", "part_of_speech": "pron", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bé", "english": "that.", "part_of_speech": "conj", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bé bhón nsóntí", "english": "to sweat.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bebe", "english": "to be in pain, to be in agony, to be harsh, to be rash.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bebe-nényén", "english": "toothache.", "part_of_speech": "n", "plural_form": "bebe-ámén", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bebé-ńtí", "english": "anger.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "beberi-beberi", "english": "to be chalky.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "beburi", "english": "mist, dew.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bebhen-bebhén", "english": "dusk.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bebheri", "english": "to be dim.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bébhérí-bébhérí", "english": "to be fuzzy.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bébhóko", "english": "porridge.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bɛbhók-ɛwat", "english": "chest.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "becháy", "english": "to be hideous, to be fierce.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "becháy", "english": "fear.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bechen", "english": "liver.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bechi", "english": "bitter leaves (for cooking soup).", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bechik", "english": "rank, fatness, bigness (in size), riches.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bechiki", "english": "sneezes.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bechókó", "english": "seat, society.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bechyet-chyet", "english": "crumb.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bedi", "english": "beard, moustache.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bedyéré", "english": "holiness.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "béfók", "english": "mucus, flu.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "begin", "english": "tramp.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "beghep", "english": "skeleton.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "beghebhe-beghep", "english": "to be bony.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "beghókó", "english": "ransom.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bejo-anyan", "english": "echo.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bekaka", "english": "firewood", "part_of_speech": "n", "plural_form": "bɔ bɛkaka", "context": "a type.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bekátí", "english": "paleness.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "beko", "english": "to be barren.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bɛkɔk", "english": "to be old.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bɛkok", "english": "senility.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bekók", "english": "bed, bridge", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bɛkók-kénkwá", "english": "bamboo bed.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bekot", "english": "to glimpse.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "békúndí", "english": "dancing society for death celebrations only.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "békwáka", "english": "to cough.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bekwéné", "english": "guilt.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bekpem", "english": "bush baby.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bépay", "english": "two.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bepáytí", "english": "filaria.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "berap", "english": "thread.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bérát", "english": "three.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bere", "english": "mushroom", "part_of_speech": "n", "context": "a type.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bɛrɛm-nkwanyɔ̃ŋ", "english": "cocoyam tubers.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "beremti", "english": "sound.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "beri", "english": "to be beautiful.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "béri", "english": "vegetable.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bɛri ndu nɛghó", "english": "to be attractive.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "beri-ékwá", "english": "plantain", "part_of_speech": "n", "context": "a type.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "berí-ńtí", "english": "to be grateful, to be kind.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "béróbhé", "english": "leftovers.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bɛrɔŋ", "english": "mangrove, firewood", "part_of_speech": "n", "context": "a type.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "berwɔ", "english": "camouflage, deceit.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besa bépay", "english": "forty.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besa bépay nsem byó", "english": "seventy.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besa bérát", "english": "sixty.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besa bérát nsem byó", "english": "seventy.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besa bétay", "english": "one hundred.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besa byó", "english": "two hundred.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besa esa", "english": "four hundred.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besa ménwi", "english": "eighty.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besa ménwi nsem byó", "english": "ninety.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besa nekú", "english": "three hundred.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bese", "english": "native spice used for cooking soup.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bese", "english": "firewood", "part_of_speech": "n", "plural_form": "bo besɛ", "context": "a type.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besé", "english": "we.", "part_of_speech": "pron", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besem", "english": "to be dent.", "part_of_speech": "vi", "citation": ""}
+
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besí", "english": "face.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besí-ewat", "english": "sharp edge of cutlass.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besini", "english": "ants.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besiŋí-bawet", "english": "soldier ant.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besini-chuchu", "english": "red ant.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bɛsiŋí-pyɔmpyɔ", "english": "soldier ant.", "part_of_speech": "n", "plural_form": "bɛsiŋí-pyɔ"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besok", "english": "termite.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "beson", "english": "bribe.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besop", "english": "dress: a type.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besóp-nebhen", "english": "dancing equipment.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besɔp-ntí", "english": "headress.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "besyet", "english": "bud.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bét", "english": "to drown.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "betábhá", "english": "trick, cunning.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bétándat", "english": "six."}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "betan", "english": "power, sinew.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bétay", "english": "five."}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "betémsí", "english": "ingredients.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "beti", "english": "night, siphilis.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "betiki-eket", "english": "housework.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bewáká", "english": "visit.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "beya", "english": "plenty, many, several.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bi", "english": "ginger.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bik", "english": "to scream, to shriek, to shout.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bik ne maŋák", "english": "to uproar.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "biŋí", "english": "to call.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "binirí", "english": "to roll.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bínírí", "english": "to become whole.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bíŋírí-bíŋírí", "english": "to become round.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bo", "english": "people.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bo-mankem", "english": "everyone.", "part_of_speech": "det"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bo-mmik-amɔt", "english": "Ewondos.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: B", "kenyang": "bon", "english": "to stir.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhabharí", "english": "to guard.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhák chak", "english": "to be honest.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhák mak-nkay", "english": "to admire.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhák tíkí tiki tíkí", "english": "to be fragile.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhák-menwɔp", "english": "importance.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bháp", "english": "to smoke something, to warm, to bask.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhát", "english": "to recount, to repeat", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bháy", "english": "to marry.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhé", "english": "to give birth.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhesí", "english": "to appear.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bheme", "english": "to bury.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhené", "english": "to embrace.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bóŋ", "english": "to migrate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bók", "english": "to cook in a special way.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "brup", "english": "quietness.", "part_of_speech": "ideo"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bú neme", "english": "to heal.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bu", "english": "to belch.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bwé", "english": "to flee, to run", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bwere", "english": "to store, to reserve, to sleep, to lie down.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bwere ammik", "english": "to lay down.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bweré pépép", "english": "to keep clean.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bweré-nkáp", "english": "to save money.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bwét", "english": "to be still.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bwɔptí", "english": "to pick up leaves.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "byábyát", "english": "firewood: a type.", "part_of_speech": "n", "plural_form": "bɔ-byábyát"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "byák", "english": "to foresake.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "byák amó", "english": "to clap hands.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "byakarí", "english": "to fidget.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "byáko", "english": "bean leaf.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "byó", "english": "ten.", "part_of_speech": "num"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "byó betik", "english": "to supervise.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "byó ne amɔt", "english": "eleven."}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "byó ne bepay", "english": "twelve."}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "byó ne bérát", "english": "thirteen."}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "byó ne ménwi", "english": "fourteen."}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "byɔkɔtí", "english": "to erase.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "byɔp", "english": "mushroom.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhép", "english": "to ask, to request, to demand.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhese", "english": "to hide.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhésé-bhésé", "english": "to be hidden.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhiki", "english": "negative marker in the past tense.", "part_of_speech": "neg"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhiŋí", "english": "to signal, to call.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bho", "english": "to begin, to start, to resume.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhóŋ", "english": "to own, to have, to obtain, to recover, to afford", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhóŋ mbwép", "english": "to be feverish.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhóŋ menye", "english": "to conceive.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Bh", "kenyang": "bhón-bó", "english": "to give birth.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chá", "english": "no.", "part_of_speech": "neg"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chǎ", "english": "to overcome, to overpower, to win.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "cha ndu neka", "english": "to disgust.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chak", "english": "to become straight, to be right.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chák", "english": "to examine, to spray.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "cháká-cháká", "english": "shaker.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chák-chák", "english": "minute (of time).", "part_of_speech": "n", "plural_form": "bo chák-cháu"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chák-esyé", "english": "to gamble.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chaptí", "english": "to sharpen.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chay", "english": "to be damp.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "cháy", "english": "to fear.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "che", "english": "to peel.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "che", "english": "to urinate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chemchem", "english": "to be deep.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "cheme", "english": "to be deep.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chemtí", "english": "to mix, to add.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chen", "english": "to refuse.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chenchem", "english": "together.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chenchém", "english": "to be sunken.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chép", "english": "to lack.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chi", "english": "father.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chí", "english": "to be.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chí", "english": "focus marker in Kenyang."}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chi-ane-nsénsí", "english": "grandfather.", "part_of_speech": "nl"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chíchichí", "english": "across.", "part_of_speech": "adv, prep"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chiti", "english": "to choke.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chik", "english": "to hobble.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chik", "english": "to hop, to limp.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chiki", "english": "to sneeze.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chiŋtí", "english": "to stagger, to fumble.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chití besí", "english": "to frown.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chók", "english": "to patch.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "choti", "english": "to squat, to bend down.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chɔkó", "english": "to sit, to stay.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chɔkó chábhé", "english": "to sit seperate from others.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chɔkó gbok", "english": "to sit like a lifeless thing.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chɔkó kuré", "english": "to sit steadily.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chɔkó kpak", "english": "to sit quietly.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chɔkó nɛbhwét", "english": "to settle in a place.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chɔkó pyáŋ", "english": "to sit freely.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chɔkó tɛp", "english": "to sit straight.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chókó-chókó", "english": "remain seated.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chókó-chókó", "english": "week, sunday.", "part_of_speech": "n 1"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chokotí", "english": "to crumble.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "choŋtí", "english": "to spoil, to destroy, to condemn.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "choŋtí nkáp", "english": "to spoil money carelessly.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chóp", "english": "to dilute.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chop-mfok", "english": "to pollinate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "choptí", "english": "to confuse.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chorí mbi", "english": "to whitewash.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chu", "english": "red.", "part_of_speech": "adj"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chube", "english": "to be wild.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chu-chu", "english": "flower.", "part_of_speech": "n5", "plural_form": "bo chu-chu"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chwe", "english": "to enter, to intervene.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chwé", "english": "to scrape.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chwét", "english": "to peck.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chwop", "english": "to contribute, to arrive, to attain.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyě", "english": "to give.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyě bakaysi", "english": "to give ones opinion.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyě efwet", "english": "to wound.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyě enyin", "english": "to deliver an object.", "part_of_speech": "vt"}
+
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyě ɛyoŋ", "english": "to alarm, to command.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chye nébhi", "english": "to breastfeed.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyě nekwak", "english": "to give assistance.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyě-esɔŋori", "english": "to disturb.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyέ-ɛyɔk", "english": "falcon.", "part_of_speech": "n 9"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyě-ndak", "english": "to complain.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyet", "english": "to block.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyét", "english": "to obstruct, to interrupt, to defend.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dak", "english": "to tear, to split.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dén", "english": "to beat, to whip.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dep", "english": "to stamp, to hit.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dep έbhémé", "english": "to speak through signs.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dep ne nɛkák awó", "english": "to slap.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dep nsáp", "english": "to spank.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "depti", "english": "to flop.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "des", "english": "to be smooth.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "di", "english": "to cry, to sob, to wail.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dík", "english": "to feed.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "din", "english": "to pound fufu.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dók", "english": "to jump, to skip.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dókó-chwop", "english": "to pounce.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dokorí", "english": "to be troublesome.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "do", "english": "to let go, to release.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dok", "english": "to be tasteless.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dók", "english": "to go.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "duré", "english": "to kindle a fire, to light a fire.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dyé", "english": "to drain, to pour in another vessel.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ě", "english": "yes.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "£bhíki fwét chí", "english": "to be only.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ébak", "english": "to sour (especially food).", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbáŋtí-eryɛp", "english": "horrible smell.", "part_of_speech": "adj 7"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ébé", "english": "to be painful.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ébep", "english": "to be bad.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbú", "english": "womb.", "part_of_speech": "n", "plural_form": "bebú"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ébu", "english": "aligator, placenta.", "part_of_speech": "n", "plural_form": "bébu"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebha", "english": "bag.", "part_of_speech": "n", "plural_form": "bebha"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhá", "english": "fence, barricade.", "part_of_speech": "n", "plural_form": "bebhá"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhá-akók", "english": "pig's fence.", "part_of_speech": "n", "plural_form": "bebhá-akók"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhá-manyé", "english": "courtyard.", "part_of_speech": "n", "plural_form": "bebhá-manyé"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhá-mmén", "english": "goat's fence.", "part_of_speech": "n", "plural_form": "bɛbhá-mmén"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ébháné", "english": "glue, gum.", "part_of_speech": "n", "plural_form": "bébháné"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ébháné", "english": "plaster.", "part_of_speech": "n", "plural_form": "bébháné"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhá-ńkú", "english": "pocket.", "part_of_speech": "n", "plural_form": "bɛbhá-ńkú"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbháŋá", "english": "sacrifice.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhaŋákwá", "english": "leprosy.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbháŋá-nkɔk", "english": "rooster.", "part_of_speech": "n", "plural_form": "bebháŋá-nkok"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhap", "english": "wing.", "part_of_speech": "n", "plural_form": "bɛbhap"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebháré", "english": "descendant.", "part_of_speech": "n", "plural_form": "bebháré"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbháy", "english": "fufu.", "part_of_speech": "n", "plural_form": "bebháy"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhe", "english": "bladder, accident.", "part_of_speech": "n", "plural_form": "bebhe"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhé", "english": "target, law, scar, illegal.", "part_of_speech": "n", "plural_form": "bebhé"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhé atú", "english": "earwax.", "part_of_speech": "n", "plural_form": "bɛbhé atú"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhe ɛné awu", "english": "over there.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhé-efwet", "english": "scar (from wound).", "part_of_speech": "n", "plural_form": "bebhé-befwet"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhé-Mándém", "english": "birthmark.", "part_of_speech": "n", "plural_form": "bɛbhé-Mándém"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhep", "english": "owl.", "part_of_speech": "n", "plural_form": "bebhep"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhép", "english": "question.", "part_of_speech": "n", "plural_form": "bebhép"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhi", "english": "bush.", "part_of_speech": "n", "plural_form": "bebhi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhó", "english": "hip, waist.", "part_of_speech": "n", "plural_form": "bebhó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhó-ews", "english": "to be naked.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ébhóko", "english": "lizard.", "part_of_speech": "n", "plural_form": "bébhóko"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhókórí", "english": "madness.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhó-ndem", "english": "upper part of penis.", "part_of_speech": "n", "plural_form": "bɛbhó-ndɛm"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhó-njɔ", "english": "a house for sacrifice.", "part_of_speech": "n", "plural_form": "bɛbhó-njɔ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhóŋó", "english": "pigeon.", "part_of_speech": "n", "plural_form": "bɛbhóŋó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhó sɛnŋ békak", "english": "part between toe and foot.", "part_of_speech": "n", "plural_form": "bɛbhó kɛnŋ békak"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhók", "english": "half.", "part_of_speech": "n", "plural_form": "bebhók"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhókó-ɛnɔk", "english": "blackboard.", "part_of_speech": "n", "plural_form": "bɛbhókó-menok"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhókó-nden", "english": "flag, a piece of cloth.", "part_of_speech": "n", "plural_form": "bɛbhókó-nden"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhɔkɔ", "english": "eagle.", "part_of_speech": "n", "plural_form": "bɛbhɔkɔ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhókórí", "english": "to be broken.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhop", "english": "mole.", "part_of_speech": "n", "plural_form": "bɛbhɔp"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhwebhé-nnyu", "english": "lips.", "part_of_speech": "n", "plural_form": "bebhwebhé-nnyu"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhwebhé-nnyu ntén", "english": "lower lip.", "part_of_speech": "n", "plural_form": "bebhwebhé-nnyu ntén"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛbhwebhé-nnyǔ mfáy", "english": "upper lip.", "part_of_speech": "n", "plural_form": "bebhwe bhé-nnyǔ mfáy"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ébhwet", "english": "cultivated land near the river.", "part_of_speech": "n", "plural_form": "bébhwet"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ébhwét", "english": "swamp.", "part_of_speech": "n", "plural_form": "bébhwét"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ebhweré-nnyu", "english": "lip.", "part_of_speech": "n", "plural_form": "bebhwere- nnyu"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "écha", "english": "squirrel.", "part_of_speech": "n", "plural_form": "becha"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "échak", "english": "to germinate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "échák", "english": "other.", "part_of_speech": "n", "plural_form": "béchák"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "écháká", "english": "caterpillar.", "part_of_speech": "n", "plural_form": "bécháká"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "echákárí-nden", "english": "rag.", "part_of_speech": "n", "plural_form": "bechákárí-nden"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "echákárí-mmu", "english": "clown.", "part_of_speech": "n", "plural_form": "bechákárí-bó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "écháká-ngyép", "english": "unripe palmnuts.", "part_of_speech": "n", "plural_form": "bechaká-ngyép"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "écháká-nsi", "english": "dorsal fin.", "part_of_speech": "n", "plural_form": "bécháká-nsi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "écháká-nsi", "english": "flipper (of a fish), caudal fin.", "part_of_speech": "n", "plural_form": "bécháká-nsi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "écháp", "english": "to be sharp.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eche", "english": "bladder.", "part_of_speech": "n", "plural_form": "beche"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "échik", "english": "to be fat, to be big, to be rich.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "echinti", "english": "to be absurd.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "echiŋtí-mmu", "english": "fool.", "part_of_speech": "n", "plural_form": "bechiŋtí-bó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěchók", "english": "basket: a type.", "part_of_speech": "n", "plural_form": "běchok"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛchókó-ɛyɔŋ", "english": "hoarse voice.", "part_of_speech": "n", "plural_form": "bechókó-ɛyoŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "echókó-ntí", "english": "temper.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛchókó-ékwá", "english": "a type of plantain.", "part_of_speech": "n", "plural_form": "bɛchókó-ékwá"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛchoŋ", "english": "today.", "part_of_speech": "n"}
+
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "échwárák", "english": "cockscomb, hoopoe.", "part_of_speech": "n", "plural_form": "béchwárák"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛfák", "english": "twin.", "part_of_speech": "n", "plural_form": "befák"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efap", "english": "scales, shell.", "part_of_speech": "n", "plural_form": "befap"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěfáp", "english": "island.", "part_of_speech": "n", "plural_form": "bĕfap"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěfát", "english": "shoulder blade.", "part_of_speech": "n", "plural_form": "bĕfát"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efat-éwat", "english": "handle of cutlass.", "part_of_speech": "n", "plural_form": "befat-éwat"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efe", "english": "to faint, to be unconcious.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efé", "english": "viper.", "part_of_speech": "n", "plural_form": "befé"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efebhe", "english": "thickness.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efen", "english": "foam, froth, spittle.", "part_of_speech": "n", "plural_form": "befen"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eféré-nden", "english": "piece of cloth from 5 to 8 yards.", "part_of_speech": "n", "plural_form": "beféré-nden"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efikirí-mmú", "english": "midget.", "part_of_speech": "n", "plural_form": "befikirí-bó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efikisi", "english": "a type of ant.", "part_of_speech": "n", "plural_form": "befikisi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efiní", "english": "key.", "part_of_speech": "n", "plural_form": "befiŋi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efiní-eket", "english": "house keys.", "part_of_speech": "n", "plural_form": "befiŋí-eket"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efok", "english": "poking stick (used for stirring food in the pot), fan for blowing the fire, plate for winnowing.", "part_of_speech": "n", "plural_form": "befok"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efokó", "english": "cultivated land.", "part_of_speech": "n", "plural_form": "befokó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efókó-nsi", "english": "fin.", "part_of_speech": "n", "plural_form": "befókó-nsi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛfóŋó", "english": "soul, spirit.", "part_of_speech": "n", "plural_form": "bɛfóŋó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efóŋó bedyéré", "english": "holy spirit.", "part_of_speech": "n", "plural_form": "befóŋó bedyéré"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛfon", "english": "round mortar.", "part_of_speech": "n", "plural_form": "befon"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "éfúkúyu", "english": "umbrella.", "part_of_speech": "n", "plural_form": "béfúkúyu"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efwet", "english": "sore, wound.", "part_of_speech": "n", "plural_form": "befwet"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "efweré-ngono", "english": "sore throat.", "part_of_speech": "n", "plural_form": "befweré-ngono"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "égíŋí-kenen", "english": "flock of birds.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "égo", "english": "overgrown.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛgu", "english": "a type of yam.", "part_of_speech": "n", "plural_form": "begu"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "egú", "english": "carcass.", "part_of_speech": "n", "plural_form": "begú"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "égu", "english": "to be broken.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛgú enyiŋ", "english": "dead thing, useless thing.", "part_of_speech": "n", "plural_form": "begu enyiŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "egú-mmu", "english": "dead person.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "egú-nnya", "english": "dead animal.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "égbáká-ńtáy", "english": "slate.", "part_of_speech": "n", "plural_form": "bégbáká-útáy"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "egháŋ", "english": "guinea fowl.", "part_of_speech": "n", "plural_form": "begháŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eghaŋaghú", "english": "rainbow lizard.", "part_of_speech": "n", "plural_form": "beghaŋaghú"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛgháŋá-ɛyɔŋ", "english": "hoarse voice.", "part_of_speech": "n", "plural_form": "begháŋá-ɛyɔŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "egháré", "english": "gap.", "part_of_speech": "n", "plural_form": "begháré"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eghep", "english": "bone.", "part_of_speech": "n", "plural_form": "beghep"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛghɛbhé-ɛghókó-mfáy", "english": "cheekbone.", "part_of_speech": "n", "plural_form": "bɛghɛbhέ-ɛghókó-mfáy"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eghebhé-ana", "english": "femur.", "part_of_speech": "n", "plural_form": "beghebhé-mana"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛghɛp-áwó", "english": "humorous.", "part_of_speech": "n", "plural_form": "bɛghɛp-ámó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eghebhé-mbe-ápak", "english": "clavicle.", "part_of_speech": "n", "plural_form": "beghebhé-mbe-ápak"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eghebhé-nnyák", "english": "lower maxilla.", "part_of_speech": "n", "plural_form": "beghebhé-nnyák"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eghebhé-nnyu ené mfáy", "english": "upper maxilla.", "part_of_speech": "n", "plural_form": "beghebhé-nnyu ené mfáy"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛghó", "english": "carp.", "part_of_speech": "n", "plural_form": "bɛghó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eghókó-mmwét", "english": "dress.", "part_of_speech": "n", "plural_form": "beghókó mmwét"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eghorí-babhwép", "english": "tornado.", "part_of_speech": "n", "plural_form": "beghorí-babwép"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eghorí-nnyén", "english": "flood.", "part_of_speech": "n", "plural_form": "beghorí-nnyén"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eghók", "english": "temple part of head.", "part_of_speech": "n", "plural_form": "beghók"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěghók", "english": "gills.", "part_of_speech": "n", "plural_form": "bĕghók"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛjɔ", "english": "water pot.", "part_of_speech": "n", "plural_form": "bɛjɔ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛju-ndak", "english": "rumour.", "part_of_speech": "n", "plural_form": "bejǔ-ndak"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛjuri", "english": "darkness, dark, remote.", "part_of_speech": "n", "plural_form": "bejuri"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛjurí-mmok", "english": "solar eclipse.", "part_of_speech": "n", "plural_form": "bejurí-mmok"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛjurí-ntaŋ", "english": "lunar eclipse.", "part_of_speech": "n", "plural_form": "bejurí-ntaŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "éjwí", "english": "to be full.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "éjwí raŋsi", "english": "to be full to the brim.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekak", "english": "stick used for stirring food in the fire, piece of bamboo, leg.", "part_of_speech": "n", "plural_form": "bekak"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkak akpákák", "english": "leg of chair.", "part_of_speech": "n", "plural_form": "bɛkak akpákák"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekak bekók", "english": "leg of bed.", "part_of_speech": "n", "plural_form": "bekak bɛkók"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkak éfémé", "english": "leg of table", "part_of_speech": "n", "plural_form": "bɛkak éfémé"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekak nnya", "english": "leg of an animal.", "part_of_speech": "n", "plural_form": "bekak nnya"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkan", "english": "a society based on age group.", "part_of_speech": "n", "plural_form": "bɛkan"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkaŋ", "english": "a cup used by the most senior person when people are drinking.", "part_of_speech": "n", "plural_form": "bekaŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékáŋak", "english": "bird: a type.", "part_of_speech": "n", "plural_form": "békáŋak"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkábhé-ndem", "english": "foreskin of penis.", "part_of_speech": "n", "plural_form": "bɛkábhé-ndem"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkáti", "english": "book.", "part_of_speech": "n", "plural_form": "bekáti"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekay", "english": "basket.", "part_of_speech": "n", "plural_form": "bekay"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eket", "english": "house.", "part_of_speech": "n", "plural_form": "bɛket"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekeré-nenyé", "english": "kitchen.", "part_of_speech": "n", "plural_form": "bekeré-nenye"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eket béso mmwét", "english": "bathroom.", "part_of_speech": "n", "plural_form": "beket béso mmwét"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekeré-babhé", "english": "dyspensary, hospital.", "part_of_speech": "n", "plural_form": "bekeré-babhé"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkeré-bechókó", "english": "society house.", "part_of_speech": "n", "plural_form": "bekeré-bɛchókó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekeré-echeme", "english": "Echeme meeting house.", "part_of_speech": "n", "plural_form": "bekeré-Echeme"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekeré-ékáti", "english": "school.", "part_of_speech": "n", "plural_form": "bekeré-ékáti"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekɛré-mankɔ", "english": "hotel.", "part_of_speech": "n", "plural_form": "bekeré-mankɔ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Ekerɛ-Mándém", "english": "church.", "part_of_speech": "n", "plural_form": "bɛkere-Mándém"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekeré-nenyé", "english": "kitchen.", "part_of_speech": "Pl", "plural_form": "bekeré-nenye"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekeré-njo", "english": "medicine house.", "part_of_speech": "n", "plural_form": "bekeré-njɔ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekeré-nnya", "english": "stable.", "part_of_speech": "n", "plural_form": "bekeré-nnya"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékíní", "english": "messenger of ngbe society (a secret society).", "part_of_speech": "n", "plural_form": "békíní"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékírí", "english": "compound.", "part_of_speech": "n", "plural_form": "békírí"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkirikak", "english": "chimpanzee, baboon, gorilla.", "part_of_speech": "n", "plural_form": "bekirikak"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkó-betu", "english": "colony of bees.", "part_of_speech": "n", "plural_form": "bɛkó-betu"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěkok", "english": "calabash for", "part_of_speech": "n", "plural_form": "běkók"}
+
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekoŋókoŋó mmɔ-ngó-sɛnɔŋ-áwó", "english": "ring finger.", "part_of_speech": "n", "plural_form": "bekoŋókoŋó bɔ-baghɔ-kɛnɔŋ-ámó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkoŋó-nném-sɛnɔŋ-áwɔ", "english": "forefinger or index finger.", "part_of_speech": "n", "plural_form": "bekoŋó-nném-sɛnɔŋ-ámó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Eko-tákátí", "english": "cross of calvary.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛko", "english": "to be new, to be strange.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkɔk-ékáŋ", "english": "grater.", "part_of_speech": "n", "plural_form": "bɛkɔk-ékáŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkɔŋ", "english": "love, harmony.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékóŋó", "english": "millipede.", "part_of_speech": "n", "plural_form": "békóŋó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekóré-ndém", "english": "wren.", "part_of_speech": "n", "plural_form": "bekóré-ndém"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékóré-ngono", "english": "larynx, adams apple.", "part_of_speech": "n", "plural_form": "békóré-ngono"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékúkúmbi", "english": "trunk of the body, abdomen.", "part_of_speech": "n", "plural_form": "békúkúmbi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekúti", "english": "diaphram.", "part_of_speech": "n", "plural_form": "bekúti"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékwá", "english": "plantain.", "part_of_speech": "n", "plural_form": "békwá"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékwá chuchu", "english": "banana.", "part_of_speech": "n", "plural_form": "békwá chuchu"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékwá-békwák", "english": "roasted plantain.", "part_of_speech": "n", "plural_form": "békwá-békwák"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékwá-ebhe", "english": "a type of plantain.", "part_of_speech": "n", "plural_form": "békwá-ebhe"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekwak", "english": "to desire, to need.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekwak", "english": "thirst.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkwáká", "english": "cough.", "part_of_speech": "n", "plural_form": "bɛkwáká"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékwá-mbóŋ", "english": "platain: a type.", "part_of_speech": "n", "plural_form": "békwá-mbóŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékwá-nsuré", "english": "banana.", "part_of_speech": "n", "plural_form": "békwá-nsuré"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekwap", "english": "pole of a house.", "part_of_speech": "n", "plural_form": "bekwap"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekwap nnyésé-eket", "english": "window frame.", "part_of_speech": "n", "plural_form": "bekwap nnyésé-eket"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekwap-mbi-nnywóp", "english": "door frame.", "part_of_speech": "n", "plural_form": "bekwap mbi-nnywóp"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekwabhé-nnywén", "english": "area between the eyes.", "part_of_speech": "n", "plural_form": "bekwabhe-nnywén"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékway", "english": "to be correct, to be enough.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékwen", "english": "to be cold.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekwese", "english": "maggot.", "part_of_speech": "n", "plural_form": "bekwesɛ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekwéré-nnyésé", "english": "corner of the eye.", "part_of_speech": "n", "plural_form": "bakwéré-amík"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkwɔp", "english": "peeling, husk, mortar: a type that is flat at the bottom.", "part_of_speech": "n", "plural_form": "bɛkwop"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekwɔbhé-nenyé-mmén", "english": "manger.", "part_of_speech": "n", "plural_form": "bekwɔbhé-nenye-mmén"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekwɔbhé-nnyu senen", "english": "beak.", "part_of_speech": "n", "plural_form": "bekwɔbhé-nnyu kenen"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěkwót", "english": "fist.", "part_of_speech": "n", "plural_form": "běkwót"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkyɛbhé", "english": "box.", "part_of_speech": "n", "plural_form": "bɛkyɛbhɛ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "skyebhé-ngú", "english": "coffin.", "part_of_speech": "n", "plural_form": "bekyebhé-ngủ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekpa", "english": "blanket.", "part_of_speech": "n", "plural_form": "bekpa"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekpakabhókó", "english": "grinding bowl for mangoes.", "part_of_speech": "n 7", "plural_form": "bekpákábhókó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekpákari", "english": "raven.", "part_of_speech": "n", "plural_form": "bekpákari"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekpákátém", "english": "bed bug.", "part_of_speech": "n", "plural_form": "bekpákátém"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkpá-ngó", "english": "shaft.", "part_of_speech": "n", "plural_form": "békpá-ngó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékpókó", "english": "loft", "part_of_speech": "n", "plural_form": "békpókó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkpɔk", "english": "lump.", "part_of_speech": "n", "plural_form": "bɛkpɔk"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkpɔkó-mpɔŋ", "english": "hump of cow.", "part_of_speech": "n", "plural_form": "bɛkpɔkó-mpoŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛkpɔkó-ntɔp", "english": "brick.", "part_of_speech": "n", "plural_form": "bɛkpɔkó-ntop"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekpórók", "english": "to gobble.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ekpure", "english": "native dish.", "part_of_speech": "n", "plural_form": "bekpure"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékpúrí", "english": "type of drum.", "part_of_speech": "n", "plural_form": "békpúrí"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ékpúrí-ndiŋ", "english": "sugar.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěmbó", "english": "mud bed.", "part_of_speech": "n", "plural_form": "měmbó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěmbóŋ-mambák", "english": "crow.", "part_of_speech": "n", "plural_form": "měmbóŋ-mambák"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Emene", "english": "hair, pubis.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "emene ebhó", "english": "pubic hair.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Emené-emene", "english": "to be hairy.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "emené-enɔk", "english": "blight.", "part_of_speech": "n", "plural_form": "memené-menɔk"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "emene-ěwáp", "english": "hair of the armpit.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Emené-nnyén", "english": "spirogyra (green algae).", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "emené-nnyésé", "english": "eye brow, eye lash.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "emi", "english": "neck", "part_of_speech": "n", "plural_form": "memi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "emikiri", "english": "sprain, dislocation.", "part_of_speech": "n", "plural_form": "memikiri"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "emi-nkú", "english": "collar.", "part_of_speech": "n", "plural_form": "memi-nkú"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "émot", "english": "one."}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "emú", "english": "palm nut.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "emú-bhó", "english": "palmnut: a type.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "emú-mbóŋ", "english": "palmnut: a type.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "emú-mmik", "english": "a type of palmnut (it grows from the ground).", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enap", "english": "den.", "part_of_speech": "n", "plural_form": "menap"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "endáŋ", "english": "hernia, appendix.", "part_of_speech": "n 7", "plural_form": "měndáŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "endon", "english": "caterpillar.", "part_of_speech": "n", "plural_form": "mendoŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ené", "english": "which.", "part_of_speech": "det"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Enebhe", "english": "divination.", "part_of_speech": "n", "plural_form": "menebhe"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enem", "english": "dry season.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Enem-bégháŋa", "english": "tombstone.", "part_of_speech": "n", "plural_form": "menem-bégháŋa"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ené-mboŋ", "english": "to own.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "énen", "english": "to be bitter.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ení", "english": "infection.", "part_of_speech": "n", "plural_form": "mení"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eniki", "english": "electric fish.", "part_of_speech": "n", "plural_form": "meniki"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěnkém", "english": "stump.", "part_of_speech": "n", "plural_form": "měnkém"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěnkó newen", "english": "shell of a tortoise.", "part_of_speech": "n", "plural_form": "měnkó newen"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěnkó ngwɔ", "english": "shell of a snail.", "part_of_speech": "n", "plural_form": "měnkó ngwɔ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěnkó-ntí", "english": "scull.", "part_of_speech": "n", "plural_form": "měnkó-ntí"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enɔk gwábha", "english": "guava tree.", "part_of_speech": "n", "plural_form": "menɔk gwáva"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛno", "english": "hoe.", "part_of_speech": "n", "plural_form": "mɛnɔ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enɔk", "english": "stick.", "part_of_speech": "n", "plural_form": "menɔk"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enɔk gwábha", "english": "guava tree.", "part_of_speech": "n", "plural_form": "menɔk gwábha"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛnɔk kaká", "english": "cocoa tree.", "part_of_speech": "n", "plural_form": "mɛnɔk kaká"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛnɔk kɔfi", "english": "coffee tree.", "part_of_speech": "n", "plural_form": "menɔk kɔfí"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enɔk nsúkúru-chyetchyet", "english": "lemon tree.", "part_of_speech": "n", "plural_form": "menɔk nsúkúru chyetchyet"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enɔkó-kɛfɔ", "english": "throne.", "part_of_speech": "n", "plural_form": "menɔkó-kɛfɔ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛnɔkó-ntí-akpákák", "english": "cushion.", "part_of_speech": "n", "plural_form": "menɔk-ntí-akpákák"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enson", "english": "sugar cane.", "part_of_speech": "n", "plural_form": "menson"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enton", "english": "to be half full.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enyaka", "english": "yam.", "part_of_speech": "n", "plural_form": "mɛnyaka"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enyaka-ebháy", "english": "white yam.", "part_of_speech": "n", "plural_form": "menyaka-ebháy"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enyaka-ékúní", "english": "white yam.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enyin", "english": "thing.", "part_of_speech": "n", "plural_form": "menyiŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enyiŋ", "english": "belonging.", "part_of_speech": "n", "plural_form": "menyiŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Enyin", "english": "bead.", "part_of_speech": "n", "plural_form": "menyiŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enyiŋí-bet", "english": "weapon.", "part_of_speech": "n", "plural_form": "menyiŋí-bet"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Enyiŋí-emi", "english": "necklace.", "part_of_speech": "n", "plural_form": "menyiŋí-emi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enyiní-mbáy", "english": "wedding gift.", "part_of_speech": "n", "plural_form": "menyiŋ-mbáy"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enyiní-mmik", "english": "domestic animals.", "part_of_speech": "n", "plural_form": "menyiŋí-mmik"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enyinti", "english": "to be sweet.", "part_of_speech": "vi"}
+
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ényóbhé", "english": "corruption.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enyu", "english": "form, way, rhyme.", "part_of_speech": "n", "plural_form": "menyu"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enyu-échák", "english": "to be pregnant.", "part_of_speech": "vi", "plural_form": "menyu-échák"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "enyu-émɔt", "english": "to be the same.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "epa", "english": "feast, ceremony, celebration.", "part_of_speech": "n", "plural_form": "bepa"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛpák", "english": "comb.", "part_of_speech": "n", "plural_form": "bepák"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛpap", "english": "a type of ant.", "part_of_speech": "n", "plural_form": "bepap"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "épe", "english": "to be ripe.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "epem", "english": "owl.", "part_of_speech": "n", "plural_form": "bepem"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛpem-njwi", "english": "mushroom: a type.", "part_of_speech": "n", "plural_form": "bepem-njwi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "epi", "english": "sacrifice.", "part_of_speech": "n", "plural_form": "bepi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Epiŋ", "english": "attitude, character.", "part_of_speech": "n", "plural_form": "bepiŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "épókó", "english": "cupboard.", "part_of_speech": "n", "plural_form": "bépókó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛpo", "english": "to be insolent, to be useless.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "épó", "english": "to become decay, to be rotten.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛpɔ ɛryɛp", "english": "unpleasant smell.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "epɔ nényén", "english": "bad tooth.", "part_of_speech": "adj", "plural_form": "ɛpɔ ámén"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛpɔ-newakari", "english": "to be rash.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛpúsí", "english": "adultery, fornication, lust.", "part_of_speech": "n", "plural_form": "bepúsí"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "epútí", "english": "to argue.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "érak", "english": "cage.", "part_of_speech": "n", "plural_form": "berak"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eráká-enyiŋ", "english": "unimportant.", "part_of_speech": "n", "plural_form": "beráká-enyiŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eráká-nnet", "english": "buttocks.", "part_of_speech": "n", "plural_form": "beráká-nnet"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "erě-aman", "english": "unripe palmnuts.", "part_of_speech": "n", "plural_form": "berě-aman"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "érémé", "english": "sweet yam.", "part_of_speech": "n", "plural_form": "bérémé"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛrep-áwó", "english": "arm.", "part_of_speech": "n", "plural_form": "berep áwó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eret", "english": "knot, hump..", "part_of_speech": "n", "plural_form": "beret"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ereré-enɔk", "english": "node.", "part_of_speech": "n", "plural_form": "bereré-enɔk"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "éríkán", "english": "match.", "part_of_speech": "pl.", "plural_form": "béríkán"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "erísi", "english": "rice.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "erí", "english": "bat.", "part_of_speech": "n", "plural_form": "beri"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "éri", "english": "to be correct, to be good.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "erin", "english": "to smear.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "erin", "english": "pestle, sample.", "part_of_speech": "n", "plural_form": "beriŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "erítí émfú", "english": "to wish something good.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛrítí-enyiŋ", "english": "precious.", "part_of_speech": "n", "plural_form": "berítí-menyin"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "erítí-epin", "english": "politeness, good habit.", "part_of_speech": "n", "plural_form": "berítí-bepiŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛróŋ", "english": "rodent.", "part_of_speech": "n", "plural_form": "bɛróŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "éróbhé", "english": "arrow.", "part_of_speech": "n", "plural_form": "béróbhé"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛrŋ", "english": "calabash: a type.", "part_of_speech": "n", "plural_form": "bɛroŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛrɔŋ ékwá", "english": "finger of plantain.", "part_of_speech": "n", "plural_form": "bɛrɔŋ ékwá"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛroŋ nchwi", "english": "cob.", "part_of_speech": "n", "plural_form": "beroŋ nchwi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "er nó-ngó", "english": "bullet.", "part_of_speech": "n", "plural_form": "beronó-ngó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛróŋó", "english": "lamp, flash.", "part_of_speech": "n", "plural_form": "bɛróŋó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛróŋó-nkpák", "english": "lamp: a type.", "part_of_speech": "n", "plural_form": "beróŋó-nkpák"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "erórí", "english": "to be tall.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "éru", "english": "eru vegetable.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "erwб", "english": "stool.", "part_of_speech": "n", "plural_form": "berwõ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "érwop", "english": "mouse.", "part_of_speech": "n", "plural_form": "bérwop"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eryep", "english": "odour.", "part_of_speech": "n", "plural_form": "beryep"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esa", "english": "basket: a type.", "part_of_speech": "n", "plural_form": "besa"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esa", "english": "twenty."}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esa esa nsem bétay", "english": "five hundred."}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esa nsem émɔt", "english": "twenty one."}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esa nsem byó", "english": "thirty."}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esak", "english": "to be young.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěsák", "english": "mat.", "part_of_speech": "n", "plural_form": "běsák"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esaká-mmú", "english": "boy.", "part_of_speech": "n", "plural_form": "besaká-bó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esáŋ", "english": "wand.", "part_of_speech": "n", "plural_form": "besáŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ésaŋá-saŋá táwo", "english": "swallow", "part_of_speech": "n", "plural_form": "bésaŋásaŋá-táwo"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ésap", "english": "to be far, to be long.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛsáyrí", "english": "to be superior.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛsáyrí", "english": "diarrhoea, dehydration, sifter.", "part_of_speech": "n", "plural_form": "besáyrí"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛsáyrí-mmu", "english": "an important person.", "part_of_speech": "n", "plural_form": "besáyrí bó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ésě", "english": "cricket.", "part_of_speech": "n", "plural_form": "bésě"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěse", "english": "cray fish, shrimp.", "part_of_speech": "n", "plural_form": "běse"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esě-báyá", "english": "utensil used for boiling pepper in a pot.", "part_of_speech": "n", "plural_form": "besě-báyá"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛsé-kɛfɔ", "english": "crown.", "part_of_speech": "n", "plural_form": "bɛsé-kɛfɔ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Esé-ngó", "english": "barrel.", "part_of_speech": "n", "plural_form": "bɛsé-ngó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ésíkoŋ", "english": "pipe (for smoking).", "part_of_speech": "n", "plural_form": "bésíkoŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Esí enyiŋ", "english": "an old thing.", "part_of_speech": "n", "plural_form": "bɛsí ɛnyiŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esí-mbok", "english": "legend.", "part_of_speech": "n", "plural_form": "best-mbok"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěsíŋ", "english": "termite hill.", "part_of_speech": "n", "plural_form": "běsíŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esiŋi", "english": "fight.", "part_of_speech": "n", "plural_form": "besiŋi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Eso", "english": "rainy season.", "part_of_speech": "n", "plural_form": "beso"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Esó", "english": "mallet.", "part_of_speech": "n", "plural_form": "besó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ésón", "english": "to be hot.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esɔɔri", "english": "danger, trouble.", "part_of_speech": "n", "plural_form": "bɛsɔŋɔri"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛsop", "english": "jackal.", "part_of_speech": "n", "plural_form": "bɛsɔp"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛsɔp-ényén", "english": "salamander.", "part_of_speech": "n", "plural_form": "bɛsɔp-ényén"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Eswɔ-befabhe-njyɛ", "english": "a type of ant.", "part_of_speech": "n", "plural_form": "beswo-beswo-befabhέ-njye"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esyé", "english": "market, business.", "part_of_speech": "n", "plural_form": "besyé"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛsyé", "english": "to trade.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "esyé", "english": "ant: a type (it forms a line across the road).", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěsyép", "english": "sand.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Esyɛsyɛ", "english": "to be long.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "étá", "english": "father.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "etak", "english": "libation.", "part_of_speech": "n", "plural_form": "betak"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěták", "english": "drying shelter, rack.", "part_of_speech": "n", "plural_form": "běták"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "étámbóŋ", "english": "floor mat.", "part_of_speech": "n", "plural_form": "bétámbóŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "étaŋ", "english": "to be hard, to be tough, to be strong", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛtati", "english": "delirium, coward.", "part_of_speech": "n", "plural_form": "bɛtati"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ete", "english": "pot.", "part_of_speech": "n", "plural_form": "bete"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛte-ntop", "english": "clay pot.", "part_of_speech": "n", "plural_form": "bɛte-ntɔp"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "etem", "english": "fever: a type.", "part_of_speech": "n 7/8", "plural_form": "betem"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "étem", "english": "hut.", "part_of_speech": "n", "plural_form": "bétem"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛtém-mbok", "english": "boring stick.", "part_of_speech": "n", "plural_form": "betém-mbok"}
+
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛtem-ngú", "english": "ant: a type.", "part_of_speech": "n", "plural_form": "betem-ngú"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛtémsí", "english": "ingredient.", "part_of_speech": "n", "plural_form": "betémsí"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "etén", "english": "bud.", "part_of_speech": "n", "plural_form": "betén"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "etesé-mmwét", "english": "towel.", "part_of_speech": "n", "plural_form": "betesÉ-mmwet"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěti", "english": "tadpole.", "part_of_speech": "n", "plural_form": "běti"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "etí-nsi", "english": "shoal.", "part_of_speech": "n", "plural_form": "betí-nsi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eti", "english": "calabash.", "part_of_speech": "n", "plural_form": "beti"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ětin", "english": "lake.", "plural_form": "bětin"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eto", "english": "bulb.", "part_of_speech": "n", "plural_form": "beto"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛtóŋó", "english": "a type of ant (red in colour).", "part_of_speech": "n", "plural_form": "bɛtóŋó"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eto", "english": "mane.", "part_of_speech": "n", "plural_form": "bɛtɔ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛtɔk", "english": "village, clan, wedge.", "part_of_speech": "n", "plural_form": "bɛtɔk"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "etɔti", "english": "charm.", "part_of_speech": "n", "plural_form": "bɛtɔti"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛtúrí", "english": "hoof.", "part_of_speech": "n", "plural_form": "betúrí"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěwáp", "english": "armpit.", "part_of_speech": "n", "plural_form": "bĕwáp"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ewat", "english": "cutlass.", "part_of_speech": "n", "plural_form": "bewat"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "éwókórí", "english": "lungs.", "part_of_speech": "n", "plural_form": "béwókórí"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ewo", "english": "cotton.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "éwo", "english": "to be empty, to be dry.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "éwó", "english": "wool, frond.", "part_of_speech": "n", "plural_form": "béwo"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛwo-ngyép", "english": "stalk of a palm tree.", "part_of_speech": "n", "plural_form": "bewo-ngyép"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Ewó-séndé", "english": "stalk of a palm tree.", "part_of_speech": "n", "plural_form": "bewo-séndé"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ewú", "english": "latrine.", "part_of_speech": "n", "plural_form": "bewú"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eyay", "english": "path, trail.", "part_of_speech": "n", "plural_form": "beyay"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eyé", "english": "leaf.", "part_of_speech": "n", "plural_form": "beyé"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "éyémé", "english": "ravine, valley.", "part_of_speech": "n", "plural_form": "béyémé"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛyon", "english": "limb.", "part_of_speech": "n", "plural_form": "beyon"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛyɔk", "english": "feather.", "part_of_speech": "n", "plural_form": "bɛyok"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛyon", "english": "word, voice.", "part_of_speech": "n", "plural_form": "bɛyɔŋ"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "eyɔŋ amfay", "english": "to be loud.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛyɔŋ-étɔk", "english": "language.", "part_of_speech": "n", "plural_form": "bɛyɔŋ-étɔk"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛyu", "english": "private.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛyu", "english": "to whisper a secret.", "part_of_speech": "v"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛyú", "english": "temper.", "part_of_speech": "n", "plural_form": "beyú"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛyú", "english": "to be cruel.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "éyú", "english": "yesterday.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ěyú", "english": "breath.", "part_of_speech": "n", "plural_form": "bĕyú"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛyu-bechítí", "english": "to suffocate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "éywărík", "english": "potatoe.", "part_of_speech": "n", "plural_form": "béywărík"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fa", "english": "here.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fá", "english": "where.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fǎ", "english": "to move, to give way.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fǎ ntyet", "english": "to run quickly.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fakarí", "english": "to happen.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "faŋá", "english": "to join.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fáp", "english": "to shell.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "faté", "english": "to rise up.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fe", "english": "to lock.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fén", "english": "to chase.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fép", "english": "to tend a fire.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "feré", "english": "to remove, to dethrone.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "feré mbwép", "english": "to deflate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "feré mmɔ ndu ámi", "english": "to wean.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "feré-mbwép", "english": "to deflate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "feré-mmwét", "english": "to abstain.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fiptí", "english": "to beat with a cain.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fin", "english": "to fling.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fin", "english": "hem.", "part_of_speech": "nl"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fok", "english": "to flap.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fokori", "english": "to embarass.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fon", "english": "to wink, to investigate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "foŋorí", "english": "to excuse, to forgive, to pardon.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "forí", "english": "to dudge.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fonó", "english": "to seize, to snatch.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fú", "english": "to spill, to emerge, to free, to leak, to go out, to resemble.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fú ambi", "english": "to succeed, to appear infront.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fú nsóŋti", "english": "to sweat.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fú nti amem", "english": "to be discourage.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fúyák", "english": "to be light (in weight).", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fúyák", "english": "to wilt.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fwefwep", "english": "to smoulder.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fwét", "english": "to surpass, to overtake.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fyé", "english": "to wear, to put.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fyé ekak ndu ndak", "english": "to interfere.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fyé ńkú", "english": "to dress.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fyé nti", "english": "to encourage.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fyé-besop", "english": "to design.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fyé-kefo", "english": "to enthrone.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fyé mbwép", "english": "to inflate", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: F", "kenyang": "fyepti", "english": "to flip", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gatí", "english": "to split.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "ginití", "english": "to delay.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gó", "english": "to grow.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gó chunchun", "english": "to flourish.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gó ne mpi", "english": "to nail.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gorí", "english": "to be stiff.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gú", "english": "to be dead.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gú", "english": "to die.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gwa", "english": "to quarrel, to file.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gwábha", "english": "guava fruit.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gwɛti", "english": "to wrinkle.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gwo", "english": "to roast, to vomit.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gwót", "english": "to fasten, to tie, to chain.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gyɛ-gye mmu", "english": "midget.", "part_of_speech": "nl"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gyép", "english": "to throw, to discard.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gyép amík", "english": "to glance.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gyép-ebháná", "english": "to cast lots.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: G", "kenyang": "gyɛpsí", "english": "to thin.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gb", "kenyang": "gbágbák", "english": "a sort of yam.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: Gb", "kenyang": "gbemé", "english": "to meet, to slam.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gb", "kenyang": "gbók", "english": "to punch, to jab", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gb", "kenyang": "gbókótí-ghókótí", "english": "to be rough.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: Gb", "kenyang": "gbók", "english": "to beckon.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghábhárí", "english": "area.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghábhárí-ghábhárí", "english": "to be round.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghaka ngáká", "english": "to yawn.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "gháŋ", "english": "to fry.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghaná", "english": "to plaster, to seal.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "gháp", "english": "to roam.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "gharé", "english": "to husk corn.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghasí", "english": "to pass round.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghát", "english": "to split.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghatí", "english": "to tell.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghay", "english": "to spread.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghem", "english": "to dig up, to harvest.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghép", "english": "to steal.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghép-mmu", "english": "to kidnap.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghók", "english": "to hear.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghokó", "english": "to make, to shape something, to repair, to mend, to decorate, to create, to frame.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghokotí", "english": "to taste, to listen.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghokotí eryep", "english": "to smell.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghó ntísó", "english": "to sympathize.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghóbhé", "english": "to decide.", "part_of_speech": "vt"}
+
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghók", "english": "to learn.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghók nnyén", "english": "to swim.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghók-ekáti", "english": "to study.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghɔkó", "english": "to bend backward, to lean on.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: Gh", "kenyang": "ghɔkó-ntik", "english": "to forget.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: J", "kenyang": "jén", "english": "to jostle.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: J", "kenyang": "jentí", "english": "to compare, to measure.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: J", "kenyang": "ji", "english": "to excrete, lay eggs, to blame.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: J", "kenyang": "jwé", "english": "to detain.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: J", "kenyang": "jwi", "english": "to satisfy.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: J", "kenyang": "jwití", "english": "to baptise.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: J", "kenyang": "jwɔ", "english": "miscarriage.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: J", "kenyang": "jyet", "english": "to run.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kǎ", "english": "to obey, to submit, to allow, to affirm, to confirm.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kak", "english": "to praise.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kaká", "english": "to greet, to thank, to congratulate.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kaká", "english": "cocoa.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kaká ne amó", "english": "shake hands.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "káŋ", "english": "to prevent.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kaŋarí", "english": "to loosen.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kap", "english": "to surround.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "káp", "english": "to defend, to encircle.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kasára", "english": "cassava.", "part_of_speech": "nl", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kati", "english": "to slash.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "katí", "english": "to cut with a cutlass.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kátí", "english": "to be pale.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kaysí", "english": "to consider, to hope, to think, to suggest.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kaysi bé", "english": "to mean.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ke", "english": "but.", "part_of_speech": "conj", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ke", "english": "however, then.", "part_of_speech": "adv", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ké", "english": "negative marker in the imperative.", "part_of_speech": "neg", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kebí", "english": "excretement.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "keboŋ", "english": "to be clever, to be intelligent.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "keboŋ", "english": "brain.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kebu", "english": "to be grey.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kebu", "english": "grey hair.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kebwě", "english": "a type of spice.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kebwɛp", "english": "to stutter.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kebwét", "english": "to gasp.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kebhák-ndu-nté", "english": "to be in disorder.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kebhé", "english": "to roost, to bend down.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kebherí", "english": "to cover, to forfeit.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kɛbhíré ngɔre ndu bɛtaŋ", "english": "to rape.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kebho", "english": "tear drop.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kɛbhóŋ ɛkwak", "english": "to have loss of appetite.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kɛfokó-enɔk", "english": "garri.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kefɔ", "english": "royal.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kéfú", "english": "again.", "part_of_speech": "adv", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kego", "english": "premature.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kɛgwɔ", "english": "vomit.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "keghok", "english": "scabies.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kéka", "english": "to disagree.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kekaŋ", "english": "whiskers, bard of a fish.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kɛkɛp", "english": "to be dull.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kɛkép-ńtí", "english": "to be impatient.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kekúrí", "english": "to be different.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kékwót", "english": "beside, near.", "part_of_speech": "prep", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kékyép", "english": "corner.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kém", "english": "to arrest, to catch, to govern, to clutch.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kém ántan", "english": "to insist.", "part_of_speech": "ví", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kém etɔk", "english": "to reign.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kembáytí", "english": "without ceasing.", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kembɛp", "english": "early.", "part_of_speech": "adv", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kěmbó", "english": "to be childish.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kembyáká", "english": "a snob.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kémbyáká", "english": "to disguise.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kemé", "english": "to refund, to answer, to revenge, to replace.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kenchemé", "english": "to be unwilling.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kénchi", "english": "a type of spice used as aroma.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kendákándyé", "english": "gravel.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kenden", "english": "shield, type of cap used for war.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kengok", "english": "termite.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kengwó", "english": "drought.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kenko", "english": "stranger.", "part_of_speech": "n", "plural_form": "manko", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kénkók-émi", "english": "a part of the neck.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kénkwésé-ngore", "english": "widow.", "part_of_speech": "n", "plural_form": "kénkwésé-baghɔre", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kénkwésé-mbakanɛm", "english": "widower.", "part_of_speech": "n", "plural_form": "kenkwésé-babhakanem", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kénkwóp", "english": "sheath.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kénókó", "english": "medal, title, respect, honour.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kenókó-mmwét", "english": "to be humble.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kɛnó", "english": "dream, sleep.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kenó-kebú", "english": "nightmare.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kɛnŋ", "english": "prison, bicycle.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kényóŋó", "english": "worms.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kenwaŋ", "english": "to be brave.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kép nti", "english": "to be patient.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kepere-ebhák-mbɔ", "english": "to be unusual.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kepi", "english": "speech, talks.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kepik", "english": "a type of mushroom, a type of spice.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kep-nti", "english": "perserverance.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "keri", "english": "to be inferior.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kerini", "english": "to be ignorant.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "keriŋi mmwét", "english": "to be unconscious.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kerot", "english": "sticky matter in the eye.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kesak", "english": "a joke.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kesen", "english": "flatulent.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kɛtaŋ", "english": "to be immature.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ketet", "english": "pus.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kéyókó", "english": "to frighten.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "keyʉré", "english": "denounce.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kini", "english": "to cross, to exceed.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kó", "english": "to ascend, to climb, to pour wine.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ko", "english": "to sniff (tobacco).", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kó mmem", "english": "to pour wine (in a glass).", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kók", "english": "to wedge, to shout.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kokorí", "english": "to crawl.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kókórók", "english": "to be tight, to be strong.", "part_of_speech": "ideo", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "koŋó", "english": "to follow.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kosí", "english": "to sniff (tobacco).", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kosi manywén", "english": "to sniff.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ko", "english": "to stroll, to trip, to trip, to walk.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ko esyé", "english": "to trade.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ko jwet", "english": "to amble.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kɔ kɛnŋ", "english": "to ride a bicycle.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kofí", "english": "coffee.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kok", "english": "to grind.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "koŋ", "english": "to like, to love.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kóŋ", "english": "to preserve, to economise, to hoard.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "koré", "english": "to distribute, to share.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kot", "english": "to be shiny, to glare, to strike.", "part_of_speech": "vi", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kot tamare", "english": "to vaccinate.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "Kristo", "english": "Christ.", "part_of_speech": "n", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ku", "english": "to buy.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kutí ɛkáti", "english": "to fold a book.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ku", "english": "to do.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ku béríŋi", "english": "to do intentionally.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ku bebé ntí", "english": "to offend.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ku bebú", "english": "to do evil.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ku becháy", "english": "to shock.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ku betik", "english": "to work.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ku endí", "english": "to make beautiful.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ku maŋák", "english": "to satisfy.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "ku mbɔ", "english": "to pretend.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kubhé", "english": "to bend forward, to sag.", "part_of_speech": "vt", "citation": ""}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwak", "english": "to support, to alleviate, to", "part_of_speech": "vt", "citation": ""}
+
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwáŋkwáy", "english": "to be enough.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwan", "english": "cultivate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwáy", "english": "to sing.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwáy", "english": "to be able.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwáy", "english": "worth.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kway kenor", "english": "to snore.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kway tákó", "english": "to weed.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwén", "english": "to fall.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwén neme", "english": "to become sick.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwén nemɔ", "english": "to fail an exam.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "Kwen-kebhé", "english": "to coagulate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwén-mmem", "english": "to be drunk.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwet", "english": "to knock, to tap.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwetí", "english": "to cover.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwere-mmwet", "english": "to flutter.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kwɔ", "english": "to pay, to divide.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "Kyébhé nchwi", "english": "to cut corn.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "Kyébhé nden", "english": "to fold clothes.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kyép ne amík", "english": "to blink.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: K", "kenyang": "kyɛptí", "english": "to blink.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Kp", "kenyang": "kpák", "english": "never.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: Kp", "kenyang": "kpák", "english": "to be mute, to be quiet.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: Kp", "kenyang": "kpan", "english": "to hook.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Kp", "kenyang": "kpaŋarí", "english": "to hug.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Kp", "kenyang": "kpáte", "english": "except.", "part_of_speech": "conj"}
+{"chapter": "14", "topic": "Dictionary: Kp", "kenyang": "kpemé", "english": "to reinforce.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Kp", "kenyang": "kpóŋóróŋ", "english": "light, transparent, in the open", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: Kp", "kenyang": "kpók", "english": "to knock the head (with a finger), to gaze at something.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Kp", "kenyang": "kpókpók", "english": "wood pecker.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: Kp", "kenyang": "kpót", "english": "to cut.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: Kp", "kenyang": "kpúsút", "english": "to be tough.", "part_of_speech": "ideo"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mabharí", "english": "to snap, to grab.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mábhárí", "english": "to be narrow.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mabheri", "english": "to nibble.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mábhérí", "english": "to be shallow.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "maká", "english": "to add, to accumulate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "makatí", "english": "to doubt.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mak-nkay", "english": "to amaze, to surprise.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "makwarákanja", "english": "small intestine.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mámbe-nchót", "english": "secondary forest.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mambyan", "english": "cankerworm.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mamparé", "english": "squinting.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mamyák-mśmyák", "english": "to be spotted.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mamyć", "english": "age.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mandu", "english": "to be small.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mandú mpok", "english": "soon.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mandú-mandú", "english": "slowly.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "maném-betu", "english": "wild honey.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mangwɔ", "english": "to cheat.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mangwɔ", "english": "bribe.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manić", "english": "advise.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mănkwó-ékwá", "english": "a very big bunch of plantain.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manon", "english": "blood.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manon", "english": "abcess.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manoŋ békwén kébhé", "english": "blood clot."}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manoŋ-ékwá", "english": "plantain: a type.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mano", "english": "brother, cousin.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manɔ étá", "english": "niece, uncle.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manɔ-anɛ-ngɔre", "english": "sister.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manɔ-mónkwɛn-ngɔre", "english": "younger sister.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manɔ-mónkwɛn", "english": "younger brother.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manɔ-nsénsí-ngɔre", "english": "older sister.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manɔ-nsénsí", "english": "older brother.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manton", "english": "toad.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mányáŋ", "english": "the native speakers of kenyang.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyé", "english": "case (in court).", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyé-mbi", "english": "detour.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyɛ-báyá", "english": "Barondos.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyɛ-békwá", "english": "Bafaw.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyɛ-nkwanyóŋ", "english": "Bakwerians.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyɛ-nnya", "english": "Betis.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyɛp", "english": "rain, water.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyɛbhé-manyɛp", "english": "to be watery.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyiki-mpɔŋ", "english": "Bororo.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyiŋti", "english": "to be tasty.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyɔkɔ", "english": "to incite.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyu", "english": "big river, fringe.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyu-ɛsyé", "english": "to cost.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyu-mbiŋ", "english": "to be cheap.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "manyu-ngo", "english": "ocean.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "maŋák", "english": "happiness.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "maŋák ntí", "english": "to be frantic.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "maŋɔk", "english": "joint.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "maŋsí bɛbhwep", "english": "to smack lips.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mba", "english": "wasp.", "part_of_speech": "n", "plural_form": "babha"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbá", "english": "stall.", "part_of_speech": "n", "plural_form": "babhá"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbá", "english": "trumpet.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbabhari-beti", "english": "night watch.", "part_of_speech": "n", "plural_form": "babhabheri-beti"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbabheri-mmén", "english": "shepherd.", "part_of_speech": "n", "plural_form": "babhabheri-mmén"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbabheri-mpɔy", "english": "herder.", "part_of_speech": "n", "plural_form": "babhabherí mpɔŋ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbabheri-nnywɔp", "english": "day watch.", "part_of_speech": "n", "plural_form": "babheri-nnywɔp"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mba-chyéchyét", "english": "gnat.", "part_of_speech": "n", "plural_form": "babha-chyéchyét"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbák", "english": "if.", "part_of_speech": "conj"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbáka", "english": "a type of basket.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbakanɛm", "english": "man, male.", "part_of_speech": "n", "plural_form": "babhakanem"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbǎ-ntɔp", "english": "wasp: a type.", "part_of_speech": "n", "plural_form": "babhǎ-ntɔp"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbaŋ", "english": "weather, farm, flute.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbaŋá-nsok", "english": "tusk.", "part_of_speech": "n", "plural_form": "babhaŋá-nsok"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbaŋa-támfóŋ", "english": "rainbow.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbare-bakók", "english": "veranda.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbáré-chak", "english": "mole.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbáré-kepi", "english": "to exaggerate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbé seti", "english": "axe handle.", "part_of_speech": "n", "plural_form": "babhé kɛti"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbe-ápak", "english": "chest, pneumonia.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbé-ɛkak", "english": "shin bone.", "part_of_speech": "n", "plural_form": "babhé ɛkak"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbé-enɔ", "english": "handle of hoe.", "part_of_speech": "n", "plural_form": "babhé-enɔ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbé", "english": "to be plenty.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbéntí", "english": "lame person.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbi", "english": "path, road.", "part_of_speech": "n", "plural_form": "babhi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbi-ndík", "english": "road used by vehicles and motorcycles", "part_of_speech": "n", "plural_form": "babhi-ndík"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbi-nnywóp", "english": "doorway.", "part_of_speech": "n", "plural_form": "babhi-nnywop"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbi", "english": "chalk, whitewash.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbi-ámén", "english": "incisor.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbi-ɛnɔk", "english": "stem.", "part_of_speech": "n", "plural_form": "mbi-mɛnɔk"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbi-ewat", "english": "sharp edge of cutlass.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbik", "english": "to be alive.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbi-mbi", "english": "formerly.", "part_of_speech": "adv"}
+
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbi-mbi", "english": "first.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbiŋ", "english": "to be short.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbiŋ-nkú-nten", "english": "skirt.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbiŋ-nkú-mfay", "english": "blouse, shirt.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mboboŋ", "english": "albino.", "part_of_speech": "n 1"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbok", "english": "story, proverb.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbok", "english": "pit, hole.", "part_of_speech": "n", "plural_form": "babhok"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbók", "english": "deaf, mute.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbok écha", "english": "squirrel hole.", "part_of_speech": "n", "plural_form": "babhok écha"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbok nnyó", "english": "snake hole.", "part_of_speech": "n", "plural_form": "babhok nnyó"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbok-awó", "english": "extravagance.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbokó-bache", "english": "urinary tract.", "part_of_speech": "n", "plural_form": "babhokó-bache"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbokó-mbwép", "english": "nasal cavity.", "part_of_speech": "n", "plural_form": "babhokó-mbwép"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbokó-ndem", "english": "seminal canal.", "part_of_speech": "n", "plural_form": "babhokó-barem"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbokó-nenyé", "english": "pharynx.", "part_of_speech": "n", "plural_form": "babhokó-nenye"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mboko-nko", "english": "news.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbokó-nnet", "english": "anus.", "part_of_speech": "n 1"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbokó-nnyén", "english": "spring, pond.", "part_of_speech": "n", "plural_form": "babhokó-nnyén"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbokó-nnywén", "english": "nostrils.", "part_of_speech": "n", "plural_form": "babhokó-nnywén"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbokó-nsi", "english": "fish pond.", "part_of_speech": "n", "plural_form": "babhokó-nsi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbóndó-achók-esa", "english": "plantain: a type.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbóndó-ékwá", "english": "plantain: a type.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbo", "english": "like.", "part_of_speech": "conj"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbok", "english": "residue, surplus.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbókɔ", "english": "men's society to bury the dead.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbɔŋ", "english": "owner.", "part_of_speech": "n", "plural_form": "babhoŋ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mboŋ", "english": "boa, dragon.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbɔŋó-éket", "english": "host.", "part_of_speech": "n", "plural_form": "babhɔŋó-ɛket"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mboŋ-éket", "english": "wall gecko.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mboŋóri", "english": "water leaf.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mboŋ-tetep", "english": "to be trustworthy.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbóp", "english": "rafter.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbúrí-nnyó", "english": "mamba.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbúrúnchí", "english": "egg plant.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbú", "english": "bile.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbú", "english": "near past marker."}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbwep", "english": "rat.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbwép", "english": "air.", "part_of_speech": "n", "plural_form": "babwép"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbwép", "english": "fever.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbwebhe-ndík", "english": "rabbit.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbwébhé-nnyén", "english": "storm.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbwó-ntay", "english": "grinding stone.", "part_of_speech": "n", "plural_form": "amó-ntay"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbwóré", "english": "tomorrow.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbyabhán", "english": "needle, injection.", "part_of_speech": "n", "plural_form": "babyabháŋ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbyábhán", "english": "dragon fly.", "part_of_speech": "n", "plural_form": "bábhyábhán"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbyay", "english": "women's dancing society.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbyáy", "english": "pumpkin leaves.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mbyó-betik", "english": "supervisor.", "part_of_speech": "n", "plural_form": "babyó-betik"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mekéndé", "english": "the native speakers of Ányá (a neighbouring language).", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "membaŋ", "english": "cobra.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "men", "english": "to swallow.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "menaŋ", "english": "gossip.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "ménémé", "english": "loss.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "ménémé nkáp", "english": "loss of sales.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "ménémé-mmok", "english": "sunset.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "ménen", "english": "eight."}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "ménén ne amɔt", "english": "nine."}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "méní", "english": "how many.", "part_of_speech": "rel pron"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "meniŋ", "english": "firewood: a type.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "meníŋí", "english": "beg, alms.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "menkem", "english": "altogether.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "menɔk", "english": "medicine: a type.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mɛnɔkó-nkɛm", "english": "clutches.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "ménwi", "english": "four."}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "menwɔp", "english": "to be heavy.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "menye", "english": "stomach.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "menye béfére", "english": "abortion.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "menyiŋ-éket", "english": "furniture.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "ményíŋí", "english": "rubbish, dirt, scum, manure.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "menyiŋínyé", "english": "food.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "menywɛ́ntí", "english": "murmuring.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "meŋémé", "english": "selfishness.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mese", "english": "to drop.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "met", "english": "to pinch.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "met bé gháti", "english": "to hint.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mfarɛkaŋ", "english": "rust.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mfay-atú", "english": "upper part of ear.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mfay-ɛket", "english": "roof.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mfay-neyat-ékak", "english": "instep.", "part_of_speech": "n 5/6", "plural_form": "mfay-bayat-ékak"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mfé-nsíŋí", "english": "bush mango (a bitter type).", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mfok", "english": "dust.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mfokó-chuchu", "english": "pollen.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mfokó-nchwi", "english": "flour.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mfóŋ", "english": "buffalo.", "part_of_speech": "n", "plural_form": "bafóŋ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mfɔ", "english": "chief.", "part_of_speech": "n", "plural_form": "bafɔ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mfɔ ngɔrɛ", "english": "queen.", "part_of_speech": "n", "plural_form": "bafɔ baghõrɛ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mfú ntí", "english": "to daze.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mi-mmwét", "english": "grimace.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mikirí", "english": "to dislocate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mimin", "english": "to be sweet.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmá", "english": "mother.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "Mándém", "english": "God.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmáré", "english": "spleen.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mme", "english": "I.", "part_of_speech": "pron"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmem", "english": "wine, beer.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mměm bagyέp", "english": "palm wine.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mměm batan-bataŋ", "english": "strong drink.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmem-nchwi", "english": "corn beer.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɛm-nnyu-mfay", "english": "palate.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmén", "english": "goat.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmik", "english": "ground, earth.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmiki-nkem", "english": "world.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmok", "english": "sun.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ", "english": "child.", "part_of_speech": "n", "plural_form": "bɔ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ áŋgáré", "english": "november.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ manyɛp bɛti", "english": "september.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ mbi ɛnɛm", "english": "march.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ mfɔ mbakanɛm", "english": "prince.", "part_of_speech": "n", "plural_form": "bɔ mfɔ mbakanɛm"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ mfɔ ngɔrɛe", "english": "princess.", "part_of_speech": "n", "plural_form": "bo mfɔ ngore"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ mmɔ étá eyi", "english": "nephew.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ nɛbháŋ", "english": "january.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ nérí", "english": "tonsil.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmó nnya-ɛróŋó", "english": "firefly.", "part_of_speech": "n", "plural_form": "bɔ nnya-ɛróŋó"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmó nnya-ménkó", "english": "beetle.", "part_of_speech": "n", "plural_form": "bɔ nnya-ménkó"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ nsyέ", "english": "july.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ ntó", "english": "may.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ-bɛtik", "english": "appretice.", "part_of_speech": "n", "plural_form": "bɔ-bɛtik"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmochi", "english": "cousin,", "part_of_speech": "n", "plural_form": "bochi"}
+
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmochi anɛ nsénsí", "english": "grandchild.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmó-ɛkɛt", "english": "room.", "part_of_speech": "n", "plural_form": "bɔ-ɛkɛt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmó-ɛnɔk", "english": "whip.", "part_of_speech": "n", "plural_form": "bɔ-ɛnɔk"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ ɛnŋ", "english": "illegitimate child, bastard.", "part_of_speech": "n", "plural_form": "bɔ ɛnŋ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmó-erǎ", "english": "orphan.", "part_of_speech": "n", "plural_form": "bó-berǎ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmó-etɔk", "english": "small village.", "part_of_speech": "n", "plural_form": "bó ɛtɔk"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ-mbi", "english": "heir.", "part_of_speech": "n", "plural_form": "bo-mbi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmó-ngak bé kyép", "english": "penknife.", "part_of_speech": "n", "plural_form": "bɔ-ngak békyép"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mongó", "english": "smoke.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmó-ngó-sɛnɔŋ-áwɔ", "english": "smallest finger.", "part_of_speech": "nl", "plural_form": "bɔ-baghó-kɛnɔŋ-ámó"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ nkɔ", "english": "new born child.", "part_of_speech": "n", "plural_form": "bɔ nkɔ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ-nkwen-ngɔrɛ", "english": "virgin.", "part_of_speech": "n", "plural_form": "mmo-nkwen-baghɔre"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ nnya", "english": "insect.", "part_of_speech": "n", "plural_form": "bɔ nnya"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmó-nnya-ŋwóŋwóŋ", "english": "weevil.", "part_of_speech": "n", "plural_form": "bɔ-nnya-nwóŋwóŋ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔp", "english": "a type of rope.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu", "english": "person.", "part_of_speech": "n", "plural_form": "bo"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmú", "english": "dog.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu anɛ áchík a mmwét", "english": "fat person.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-betábhá", "english": "ruffian, hypocrite.", "part_of_speech": "n", "plural_form": "bo-betábhá"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-betok", "english": "servant.", "part_of_speech": "n", "plural_form": "bo-betok"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-béwák", "english": "thin person.", "part_of_speech": "n", "plural_form": "bo-béwák"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-ebhaŋákwá", "english": "leper.", "part_of_speech": "n", "plural_form": "bo-ɛbháŋá"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-ébhókórí", "english": "madman.", "part_of_speech": "n", "plural_form": "bo-ɛbókórí"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-ɛtɔk", "english": "native.", "part_of_speech": "n", "plural_form": "bo-ɛtɔk"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-ɛyu", "english": "executive member, spy.", "part_of_speech": "n", "plural_form": "bo-ɛyu"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-kpák", "english": "wary.", "part_of_speech": "n", "plural_form": "bo-kpák"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-mbi", "english": "champion.", "part_of_speech": "n", "plural_form": "bo-mbi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-mbiŋ", "english": "dwarf.", "part_of_speech": "n", "plural_form": "bo-mbiŋ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-menaŋ", "english": "traitor.", "part_of_speech": "n", "plural_form": "bo-mɛnaŋ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-mɛnwɔp", "english": "leader.", "part_of_speech": "n 1/2", "plural_form": "bo-menwop"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-meŋókórí", "english": "weakling.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-mfáy", "english": "people from the grassfield.", "part_of_speech": "n", "plural_form": "bo-mfáy"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-mpap", "english": "enemy, victim.", "part_of_speech": "n", "plural_form": "bo-mpap"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-ngoŋo", "english": "glutton, greedy person.", "part_of_speech": "n", "plural_form": "bo-ngoŋo"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-niŋíníŋi", "english": "thin person.", "part_of_speech": "n", "plural_form": "bo-níŋíníŋi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-ńjáŋ", "english": "spy.", "part_of_speech": "n", "plural_form": "bo-njáŋ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-nneré-éket", "english": "relative.", "part_of_speech": "n", "plural_form": "bo-nneré-éket"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-nnyu", "english": "mouthy person.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmu-ntó", "english": "messenger.", "part_of_speech": "n", "plural_form": "bo-ntó"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmwere", "english": "friend.", "part_of_speech": "n", "plural_form": "mamwere"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmwét", "english": "body.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmwét ményíkiti", "english": "nausea.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmwét-béghó", "english": "menstruation.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmwet ɛnɔk", "english": "body of a tree.", "part_of_speech": "n", "plural_form": "mmwét mɛnɔk"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmwéré-tákó", "english": "to be green.", "part_of_speech": "adj"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmyáŋáráŋ", "english": "type of mushroom.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmyé", "english": "year.", "plural_form": "mamy"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmyć nɛkɔ", "english": "new year.", "part_of_speech": "n", "plural_form": "mamyć nɛkɔ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmyéŋ", "english": "catfish.", "part_of_speech": "n", "plural_form": "mmyéŋ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "móto-kpokpok", "english": "motorcycle.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mɔ", "english": "to try.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mɔk nɛ ntí", "english": "to nod with the head.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mɔk ntí", "english": "to nod, to accept.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mɔkó", "english": "to pick (coffee, corn from cob etc).", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mɔkóngɔ", "english": "dancing society for men.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mókwáká", "english": "tuberculosis.", "part_of_speech": "nl"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mókpure", "english": "women's dancing society.", "part_of_speech": "nl"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "momop", "english": "to be soft.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mɔnínkim", "english": "a type of dancing society.", "part_of_speech": "nl"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mop", "english": "to beat with the fist.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mɔrɔmbɛ", "english": "type of drum.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mɔtí", "english": "to grope, to fell.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpábhérí-mana", "english": "between the laps.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpampare", "english": "grasshopper.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpá-nnyu", "english": "to be boastful.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpap", "english": "hatred.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpap", "english": "to grudge, to hate.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpap-amík", "english": "to be jealous.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpap-amík", "english": "jealousy.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpeme", "english": "saviour.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpi", "english": "nail.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpok", "english": "time.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpok anɛ a fwét", "english": "late.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpok nyáká", "english": "previously.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpok-éfú", "english": "sometimes.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpok mmyέ", "english": "season.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpók nkɛm", "english": "always.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpɔkɔ-sɛbhɛ", "english": "bumble bee.", "part_of_speech": "n", "plural_form": "mpɔkɔ-kɛbhɛ"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpoŋ", "english": "cattle.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpɔŋɔ-baso", "english": "camel.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpɔŋɔ-batu", "english": "donkey.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpɔŋɔ-ndík", "english": "horse.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mu", "english": "to shave.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mutándá", "english": "men's society for burying the dead.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mwɔt", "english": "swell.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "myák", "english": "to sway.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "myakatí", "english": "to sprinkle.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "myamyaŋ", "english": "lightning.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "myɔ̃ndó", "english": "hair style: a type.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "na", "english": "how", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ná", "english": "to cook.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nak", "english": "to invite.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "naŋ", "english": "to confide.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "náŋárí-náŋárí", "english": "to be transparent.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "naŋtí", "english": "to slander, to gossip.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ncháká", "english": "crayfish.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ncháká sékway", "english": "a type of yam.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "úchán", "english": "plate.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchan", "english": "elephant grass, thatching grass.", "part_of_speech": "n"}
+
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nche", "english": "type of basket always kept at the roof of a house.", "part_of_speech": "n", "plural_form": "bache"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchép", "english": "poverty.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchók", "english": "plant parasite, tendril, plant epiphyte.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchokó-batú", "english": "to be deaf.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchoko-manywén", "english": "Igbo people.", "part_of_speech": "n", "plural_form": "bachoko-manywén"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchoko-senen", "english": "vulture.", "part_of_speech": "n", "plural_form": "nchokó-kenen"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ńchókorɔk", "english": "clock bird.", "part_of_speech": "n", "plural_form": "báchókɔrɔk"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchóŋtí", "english": "to be extravagant.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchoptí", "english": "mixture.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchót", "english": "forest.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchu", "english": "thatch.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchu-nkem", "english": "bamboo palm.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchwakanda", "english": "children's society.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchwé-menɔk", "english": "carpenter.", "part_of_speech": "n", "plural_form": "bachwé-mɛnɔk"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchwi", "english": "corn.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchwi-kefwót", "english": "guinea corn.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchyé-enɔk", "english": "bud.", "part_of_speech": "n", "plural_form": "bachyέ-menɔk"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchyɛ-esɔŋri", "english": "nuissance.", "part_of_speech": "n", "plural_form": "bachyě-besɔri"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchyep", "english": "rheumatism.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchyet-enebhe", "english": "fortune teller.", "part_of_speech": "n", "plural_form": "bachyet-enebhe"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nda", "english": "sling, rubber.", "part_of_speech": "n", "plural_form": "bara"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndakayi", "english": "why.", "part_of_speech": "conj"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndé", "english": "coat.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndem", "english": "penis.", "part_of_speech": "n", "plural_form": "barem"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndem ményábhɛ", "english": "erection of the penis.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndem égháŋá-nnyén", "english": "gutter.", "part_of_speech": "n", "plural_form": "barem bégháŋá-nnyén"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndémé-ńgó", "english": "trigger of gun, hearth, hell.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndeme-kepi-ńtí", "english": "prophet.", "part_of_speech": "n", "plural_form": "baremé-kepi-ńtí"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndém-nkaŋ-ɛnɔk", "english": "tap root.", "part_of_speech": "n", "plural_form": "barém-bakan-mɛnɔk"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndemtí ékwá", "english": "banana stalk.", "part_of_speech": "n", "plural_form": "baremtí ékwá"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nden", "english": "cloth.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndené-bɛkók", "english": "sheet.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndéndém", "english": "to be idle.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndɛp", "english": "hammer (of gun).", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ńdíkándi", "english": "shadow.", "part_of_speech": "n", "plural_form": "bádíkándi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndire", "english": "boundary.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndí-epiŋ", "english": "to be gentle, to be kind.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndíndí", "english": "to be good.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndiŋ", "english": "vein.", "part_of_speech": "n", "plural_form": "bariŋ"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndiŋ-ékak", "english": "achilles' tendon, back vein of foot.", "part_of_speech": "n", "plural_form": "bariŋ-ékak"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndo nepi", "english": "kola pod.", "part_of_speech": "n", "plural_form": "baro nɛpi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndo-emi", "english": "part of the neck.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndókórí", "english": "to be active,", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndókórí", "english": "troublesome", "part_of_speech": "n 1"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndo-nsem", "english": "arch chamber.", "part_of_speech": "n", "plural_form": "baro-nsem"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndɔk", "english": "type of rope.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndɔŋ", "english": "bamboo.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndóŋ", "english": "trail, line.", "part_of_speech": "n", "plural_form": "baróŋ"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ńdóŋ", "english": "jigger.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndóŋ", "english": "procession.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndɔŋ échák", "english": "again.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndɔp-nsɛm", "english": "late.", "part_of_speech": "adv"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndɔt", "english": "sacrifice.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndu", "english": "as.", "part_of_speech": "conj"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndu-mmwét", "english": "pneumonia.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ndyɛre", "english": "rope for climbing.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "ne", "english": "to feed, to train.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebé", "english": "animal sounds.", "part_of_speech": "n", "plural_form": "babé"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebé mmwét", "english": "to be in difficulty.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebu", "english": "to be blue.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebu", "english": "sky.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebú", "english": "witch.", "part_of_speech": "n", "plural_form": "babhú"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebú nemik", "english": "nightjar.", "part_of_speech": "n", "plural_form": "babú nɛmik"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nɛburi-mfɔ", "english": "wasp.", "part_of_speech": "n", "plural_form": "baburi-mfɔ"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nɛbhák ɛnyu échak", "english": "pregnancy.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nɛbháŋ", "english": "fog, harmattan.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nɛbhay", "english": "marriage.", "part_of_speech": "n", "plural_form": "babhay"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebhe", "english": "birth, delivery.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebhé", "english": "bald.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebhe-njye", "english": "mountain.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebhésé", "english": "to be private.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nébhi", "english": "breast.", "part_of_speech": "n", "plural_form": "ámi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nébhi-ngyép", "english": "floral bulb of a palm tree.", "part_of_speech": "n", "plural_form": "ámi-ngyép"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebho", "english": "beginning.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebhó", "english": "ridge.", "part_of_speech": "n", "plural_form": "babhó"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebhɔk", "english": "calabash: a type.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebhók", "english": "calabash for tapping", "part_of_speech": "n", "plural_form": "amók"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebhwet", "english": "plain.", "part_of_speech": "n", "plural_form": "babhwet"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebhwet", "english": "place.", "part_of_speech": "n", "plural_form": "babhwet"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebhwéré-eket", "english": "foundation of a house.", "part_of_speech": "n 5", "plural_form": "babhwéré-eket"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebhwet-nebhwet", "english": "to be level, to be horizontal.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nebhwét nki", "english": "farm plot.", "part_of_speech": "n 5/6", "plural_form": "babhwét nki"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "necha", "english": "overlapping, victory.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "necha", "english": "to defeat somebody.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "necha mmu", "english": "to be above somebody.", "part_of_speech": "vi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nechi", "english": "egg.", "part_of_speech": "n", "plural_form": "bachi"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nechɔko-ndíndí", "english": "health.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nedi", "english": "animal sounds: a type.", "part_of_speech": "n", "plural_form": "badǐ"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nefaŋ", "english": "yellow fever.", "part_of_speech": "n", "plural_form": "bafang"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nefaŋ", "english": "thunder, malaria, yellow fever.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nefí", "english": "outside.", "part_of_speech": "prep"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nefó", "english": "forehead.", "part_of_speech": "n", "plural_form": "bafó"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nefoŋori", "english": "forgiveness.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nefori", "english": "dodge.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nefú-mmok", "english": "sunrise.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nefwɔp", "english": "mistake.", "part_of_speech": "n", "plural_form": "bafwɔp"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "negwá", "english": "quarrel, file.", "part_of_speech": "n", "plural_form": "bagwá"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "negyét", "english": "mole.", "part_of_speech": "n", "plural_form": "bagyét"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nɛghát ékwá-nsure", "english": "hand of bananas.", "part_of_speech": "n", "plural_form": "baghát ékwá nsuré"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "neghay", "english": "crab.", "part_of_speech": "n", "plural_form": "baghay"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nɛghay-mbinywóp", "english": "lock.", "part_of_speech": "n", "plural_form": "baghay mbinywóp"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "neghép mmu", "english": "kidnap.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nɛghó", "english": "view.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nejwi", "english": "full stomach.", "part_of_speech": "n"}
+
+
+

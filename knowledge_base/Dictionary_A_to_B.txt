@@ -1,0 +1,136 @@
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "artery", "kenyang_translation": "nnɛm-ndiŋ", "part_of_speech": "Noun", "plural_form": "manɛm-bariŋ"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "as", "kenyang_translation": "mbór", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "as", "kenyang_translation": "ndírɛ", "part_of_speech": "Conjunction"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "ascend", "kenyang_translation": "kó", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "ashes", "kenyang_translation": "batwóp", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "ask permission", "kenyang_translation": "sɔt mpok", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "ask request demand", "kenyang_translation": "bhέp", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "assembly", "kenyang_translation": "nɛchɔkɔ́r", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "asshole", "kenyang_translation": "mbɔk-nnɛt", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "assist", "kenyang_translation": "kwák", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "at", "kenyang_translation": "ntɔkó", "part_of_speech": "Preposition"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "at", "kenyang_translation": "ntɔkɔ", "part_of_speech": "Preposition"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "at", "kenyang_translation": "nta", "part_of_speech": "Preposition"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "atmosphere", "kenyang_translation": "mbaŋ", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "attain", "kenyang_translation": "chwɔp", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "attitude", "kenyang_translation": "ɛpiŋ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "attractive", "kenyang_translation": "bɛri ndu nɛghɔ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "august", "kenyang_translation": "nnɔ nsyɛ", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "authority", "kenyang_translation": "ngángaŋ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "avocado", "kenyang_translation": "nέnkwá-ndík", "part_of_speech": "Noun", "plural_form": "bakwá-ndík"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "awaken", "kenyang_translation": "ŋɛmɛ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "axe", "kenyang_translation": "sɛtɨ", "part_of_speech": "Noun", "plural_form": "kɛtɨ", "example_english": "Split the wood with an axe", "example_kenyang": "Dak kέbay nɛ sɛtɨ"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "axe handle", "kenyang_translation": "mbɛ sɛtɨ", "part_of_speech": "Noun", "plural_form": "babhɛ kɛtɨ"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bachelor", "kenyang_translation": "nkway mmu", "part_of_speech": "Noun", "example_english": "He is a bachelor", "example_kenyang": "A chí nkway mmu"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "back", "kenyang_translation": "nsɛm", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "back foot vein", "kenyang_translation": "ndiŋ-έkak", "part_of_speech": "Noun", "plural_form": "bariŋ-έkak"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "back head", "kenyang_translation": "nnɛrɛ ntí", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "back head", "kenyang_translation": "manɛt ntí", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "back of the hand", "kenyang_translation": "nsɛm-nɛkak-awɔ", "part_of_speech": "Noun", "plural_form": "nɔɛm-bakák-amɔ"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "back of the head", "kenyang_translation": "nnɛrɛ ntí", "part_of_speech": "Noun", "plural_form": "manɛrɛ ntí"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "back of the knee", "kenyang_translation": "nsɛm nέnέn", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "back then", "kenyang_translation": "nyáká", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bad", "kenyang_translation": "έbɛp", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bad", "kenyang_translation": "ɛbέptí", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bad person", "kenyang_translation": "ɛbέptí mmu", "part_of_speech": "Noun", "example_english": "He is a bad person, he killed someone", "example_kenyang": "A chí ɛbέptí mmu a wáy mmu"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bad tooth", "kenyang_translation": "Ɛpɔ nέnyέn", "part_of_speech": "Noun", "plural_form": "ɛpɔ ámέn"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "Bafaw native", "kenyang_translation": "manyɛ-bέkwá", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bag", "kenyang_translation": "ɛbha", "part_of_speech": "Noun", "plural_form": "bɛbha", "example_english": "My school bag is torn", "example_kenyang": "Ɛbha έkáti áwà ɛ dak"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "Bahama grass", "kenyang_translation": "tákó mpóŋ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bait", "kenyang_translation": "ngɛm", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "Bakwerians", "kenyang_translation": "manyɛ-nkwányɔ́ŋ", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "Bakwerians", "kenyang_translation": "bachɔkɔ nɛ bakók", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "balance", "kenyang_translation": "nɛjyɛ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bald", "kenyang_translation": "nɛbhɛ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bamboo", "kenyang_translation": "ndóŋ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bamboo", "kenyang_translation": "sέnkwáy", "part_of_speech": "Noun", "plural_form": "kέnkwáy"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bamboo bed", "kenyang_translation": "bɛkók-kέnkwá", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bamboo palm", "kenyang_translation": "nchu-nkɛm", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "banana", "kenyang_translation": "έkwá chuchu", "part_of_speech": "Noun", "plural_form": "bέkwá chuchu"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "banana", "kenyang_translation": "έkwa-nsurɛ", "part_of_speech": "Noun", "plural_form": "bέkwá-nsurɛ"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "banana plant", "kenyang_translation": "nkɔk έkwá-nsurɛ", "part_of_speech": "Noun", "plural_form": "bakok bέkwá-nsurɛ"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "banana stalk", "kenyang_translation": "ndɛmtí έkwá", "part_of_speech": "Verb", "plural_form": "barɛmtí έkwá"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bandage", "kenyang_translation": "ngbat-έkwá", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "baptise", "kenyang_translation": "jwití", "part_of_speech": "Adjective", "example_english": "The clergy baptized Takang", "example_kenyang": "Nki-bɛtik mándέm a jwití takang"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bare", "kenyang_translation": "ngwɔ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bargain", "kenyang_translation": "táŋ ɛsyɛ", "part_of_speech": "Verb", "example_english": "It is expensive. Bargain with him", "example_kenyang": "A chí nɛyá-nkáp. Táŋ ɛsyɛ nɛ yí"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bark", "kenyang_translation": "nkwɔp-ɛnɔk", "part_of_speech": "Noun", "plural_form": "nkwɔp-mɛnɔk", "example_english": "Make the medicine with mango tree barks", "example_kenyang": "Ki babhɛ nɛ nkwɔp-ɛnɔk nsiŋɨ́-mέnyú"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bark", "kenyang_translation": "sáy", "part_of_speech": "Verb", "example_english": "Make the medicine with mango tree barks", "example_kenyang": "Ki babhɛ nɛ nkwɔp-ɛnɔk nsiŋɨ́-mέnyú"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "Barondos", "kenyang_translation": "manyɛ-báyá", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "barrel", "kenyang_translation": "ɛsέ-ngó", "part_of_speech": "Noun", "plural_form": "bɛsέ-ngó"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "barren", "kenyang_translation": "bɛko", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "barren woman", "kenyang_translation": "nko-ngorɛ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "barricade", "kenyang_translation": "ɛbhá", "part_of_speech": "Noun", "plural_form": "bɛbhá"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "Basin", "kenyang_translation": "monέm chan", "part_of_speech": "Noun", "example_english": "Take a basin of egussi with you", "example_kenyang": "Sɔt monέm chan nkway nɛ wɔ"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bask", "kenyang_translation": "bháp", "part_of_speech": "Verb", "example_english": "Wash the baby and bask him too", "example_kenyang": "Só mmɔ wɔ bháp yí nkwɔ"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "basket", "kenyang_translation": "ɛkay", "part_of_speech": "Noun", "plural_form": "bɛkay"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "basket (a type of)", "kenyang_translation": "ɛsa", "part_of_speech": "Noun", "plural_form": "bɛsa"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "basket (a type of)", "kenyang_translation": "akpása", "part_of_speech": "Noun", "plural_form": "bakpása"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "basket (a type of)", "kenyang_translation": "Ěchók", "part_of_speech": "Noun", "plural_form": "běchok"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "basket (a type of)", "kenyang_translation": "mbáka", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "basket (a type of)", "kenyang_translation": "nchɛ", "part_of_speech": "Noun", "plural_form": "bachɛ"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bat", "kenyang_translation": "Ɛrɨ", "part_of_speech": "Noun", "plural_form": "bέrɨ"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bathroom", "kenyang_translation": "ɛkɛt bέso mmwέt", "part_of_speech": "Noun", "plural_form": "ɛkɛt bέso mmwέt"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "be", "kenyang_translation": "mbak", "part_of_speech": "Verb", "example_english": "Study well, you will be a public figure", "example_kenyang": "Ghók-ɛkatí sayrí nɛmɔ wɔ mbak ɛsaka mmu"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "be able", "kenyang_translation": "kwáy", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "be feverish", "kenyang_translation": "bhóŋ mbwέp", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "be pregnant", "kenyang_translation": "bhóŋ mɛnyɛ", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "be still", "kenyang_translation": "bwέt", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beak", "kenyang_translation": "Ekwɔbhέ-nnyu senen", "part_of_speech": "Noun", "plural_form": "bɛkwɔbhέ-nnyu kɛnɛn", "example_english": "This bird has a nice beak", "example_kenyang": "Sɛnɛn anɛ a bhóŋ sayri ekwɔbhέ-nnyu senen"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beak", "kenyang_translation": "sɛkwɔbhέ-nnyú", "part_of_speech": "Noun", "plural_form": "kɛkwɔbhέ-nnyú", "example_english": "This bird has a nice beak", "example_kenyang": "Sɛnɛn anɛ a bhóŋ sayri ekwɔbhέ-nnyu senen"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beam", "kenyang_translation": "sɛnɔk", "part_of_speech": "Noun", "plural_form": "kɛnɔk"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beam", "kenyang_translation": "nkiŋ", "part_of_speech": "Noun", "plural_form": "bakiŋ"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bean leaf", "kenyang_translation": "byáko", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beans", "kenyang_translation": "bako", "part_of_speech": "Verb", "example_english": "The salt is enough in the beans", "example_kenyang": "Ngáŋ έkway ndú bako"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beard", "kenyang_translation": "bɛdi", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beat", "kenyang_translation": "dέb", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beat", "kenyang_translation": "dέn", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beat up", "kenyang_translation": "sakatí", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beat with the fist", "kenyang_translation": "mɔp", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beautiful", "kenyang_translation": "bɛri", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "because", "kenyang_translation": "ndaka", "part_of_speech": "Conjunction"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beckon", "kenyang_translation": "gbɔk", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "become whole", "kenyang_translation": "biŋirí", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bed bridge", "kenyang_translation": "bɛkók", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bed bug", "kenyang_translation": "ɛkpákátέm", "part_of_speech": "Noun", "plural_form": "bɛkpákátέm"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bed leg", "kenyang_translation": "Ɛkak bɛkók", "part_of_speech": "Noun", "plural_form": "Bɛkak bɛkók"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bed spread", "kenyang_translation": "ndɛnέ-bɛkók", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bee", "kenyang_translation": "tatu", "part_of_speech": "Verb", "plural_form": "bɛtu"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beer", "kenyang_translation": "mmɛm", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beetle", "kenyang_translation": "mmɔ-nnya-mέnkɔ", "part_of_speech": "Noun", "plural_form": "bo nnya-mέnkɔ"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "before", "kenyang_translation": "ambi", "part_of_speech": "Adverb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beg", "kenyang_translation": "mɛnɨ́ŋɨ́", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beg", "kenyang_translation": "nik-mmwέt", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beg", "kenyang_translation": "niŋɨ", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "begin", "kenyang_translation": "bhɔ", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beginning", "kenyang_translation": "nɛbhɔ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "behaviour", "kenyang_translation": "ɛpiŋ", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "behind", "kenyang_translation": "ansɛm", "part_of_speech": "Adverb", "example_english": "Leave the key behind the door", "example_kenyang": "Rɔ ɛfíŋí ansɛm mbi-nnywóp"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "belch", "kenyang_translation": "babʉ", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "belch", "kenyang_translation": "bʉ", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "believe", "kenyang_translation": "nkaysɨ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "believe", "kenyang_translation": "nokó", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bell", "kenyang_translation": "nkáŋέŋka", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "belly", "kenyang_translation": "mɛnyɛ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "below", "kenyang_translation": "antɛn", "part_of_speech": "Preposition"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "belt", "kenyang_translation": "ngbat", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bend", "kenyang_translation": "kubhɛ", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bend down", "kenyang_translation": "kɛbhɛ", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bend down", "kenyang_translation": "chɔti", "part_of_speech": "Verb"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "beside", "kenyang_translation": "nɛkú", "part_of_speech": "Preposition", "example_english": "The sheep is grazing beside the house", "example_kenyang": "Ághóŋɔ-mmέn a nyɛ tákɔ nɛkú ɛkɛt"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "Betis", "kenyang_translation": "manyɛ-nnya", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "betray", "kenyang_translation": "tí", "part_of_speech": "Preposition"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "between", "kenyang_translation": "nέntɨ", "part_of_speech": "Adjective"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "between the laps", "kenyang_translation": "mpábhέri-mana", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bevel", "kenyang_translation": "warí", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bicycle", "kenyang_translation": "kέnoŋ", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bicycle", "kenyang_translation": "kέnoŋ", "part_of_speech": "Noun", "plural_form": "bέrak"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "big", "kenyang_translation": "ɛmóptí", "part_of_speech": "Adjective", "example_english": "You will see a big tree in the forest", "example_kenyang": "Chɔŋ wɔ ngɔ ɛmóptí ɛnɔk ndú nchót"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "big man", "kenyang_translation": "ɛsaká mmu", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "big river", "kenyang_translation": "manyu", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "big toe", "kenyang_translation": "nnέm-sɛsɔŋ ɛkak", "part_of_speech": "Noun", "plural_form": "manέm-kɛnoŋ ɛkak"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bigness", "kenyang_translation": "bɛchik", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bile", "kenyang_translation": "mbú", "part_of_speech": "Noun"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bird", "kenyang_translation": "SƐNƐN", "part_of_speech": "Noun", "plural_form": "kɛnɛn", "example_english": "This bird has a nice beak", "example_kenyang": "Sɛnɛn anɛ a bhóŋ sayrɨ ekwɔbhέ-nnyu senen"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "bird (a type of)", "kenyang_translation": "έkáŋak", "part_of_speech": "Noun", "plural_form": "bέkáŋak"}
+{"document_id": "EyaLingo_Dictionary_A_to_B", "type": "dictionary_entry", "english_word": "birth", "kenyang_translation": "nɛbhɛ", "part_of_speech": "Noun"}
