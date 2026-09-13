@@ -1350,8 +1350,8 @@ THINKING = (f'<div class="row bot"><div class="ava ava-bot">{AVA_LEAF}</div>'
 # --- header FIRST ------------------------------------------------------------
 # This used to sit below the knowledge loading, which meant that on a cold start the
 # page was blank cream until every PDF had been parsed. Draw the app, then work.
-st.markdown('<div class="hero"><p class="name">Nɛpɛm</p><div class="rule"></div>'
-            '<p class="tag">Kɛ́nyāŋ — the language of home</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="hero"><p class="name">Nɛpɛ́m -Life</p><div class="rule"></div>'
+            '<p class="tag">Kɛ́nyāŋ - the language of home</p></div>', unsafe_allow_html=True)
 
 # --- load the knowledge, out loud --------------------------------------------
 # Deliberately plain: st.empty() and st.info() have existed forever. st.status() is newer

@@ -518,3 +518,57 @@ For a whole family loving someone, use bá (they):
     bá              they
 
 So bá kong is "they love", the same Kong verb with the "they" word in front.
+
+---
+
+## Words from scripture (John 1) — Bible spelling
+
+These use the spelling of the Kenyang New Testament, which is the true written form.
+Where an easier everyday spelling exists it is noted, but the Bible form is the one to teach.
+
+    Ɛyɔŋ            word, the Word
+    Mandɛm          God             (everyday: also written Madem / Mandem)
+    Nɛpɛ́m          life
+    ɛrɔ́ŋɔ́         light           (also lamp)
+    ɛjuri           darkness
+    bo              people
+    mɛnyɨŋ          things
+    mɛnkɛm          all             (matches the everyday nkem / menkem)
+    nɛbhʉɛt         place
+
+## "Of" between two nouns — possession, confirmed again
+
+Scripture confirms the possession rule: the thing comes first, the owner after.
+
+    Ɛyɔŋ Mandɛm         God's Word          (word + God)
+    Ɛyɔŋ Ma'ya          my mother's word    (word + my mother)
+    bo Manyu            the people of Manyu (people + Manyu)
+
+Same rule as ɛkɛt Besong (Besong's house) and n-ném Eta'ya (my father's name). It holds
+across ordinary speech and scripture alike.
+
+## abhak — "let it be", and "was / existed"
+
+abhak has two related uses.
+
+As "was" or "existed":
+
+    Abhak nɛ Mandɛm         he was with God
+    nɛ                      with, and
+
+As "let it be that…" — used to state a wish or a condition:
+
+    abhak bhe John a pú rong
+                    let it be that John is not going
+
+So nɛ is the little word for "with" and also "and" — it joins two things.
+
+## achi — "it is / it was"
+
+You already have chi (is) and the a- prefix (he/she/it). Together: achi = it is / it was.
+
+    achi fâ?            where is it?
+    mmu anɛ achi Ɛyɔŋ   the one who is the Word
+
+This is the same a- + chi you confirmed for a'tuor and à Kong. The rule holds: put a- in
+front, and you are speaking about "he / she / it".
