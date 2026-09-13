@@ -292,3 +292,53 @@ they are gossiping. Teach the normal order.
 mma means mother, but a parent also calls their own child mma as an affectionate name —
 the way an English speaker might call a child "sweetheart". So "Mma, buereh ékwá?" spoken
 by a mother TO her child is her using it as a pet name, not addressing her own mother.
+## Giving — who gives to whom
+
+Che is "give". The word after it says who receives.
+
+    Che mme         give me
+    Che wo          give you
+
+    wo              you
+
+WRONG: using "Che mme" when someone is giving TO you. Che mme means give ME — it is what
+you say when you are the one receiving. If Kelly gives John a biscuit, Kelly is not
+saying "give me".
+
+## Wanting to do something
+
+    mme yan bhe             I want to
+    mme yan                 I am looking / I am searching
+    mme yan wo              I am looking for you
+
+    mme yan bhe che wo      I want to give you
+
+So mme yan bhe goes in front of the thing you want to do. mme yan on its own is looking
+or searching, and mme yan wo is looking for a person.
+
+## Thank you
+
+    nkagha          thank you
+    Oki ah          you have done it
+
+nkagha is the plain word for thank you. Oki ah literally means "you have done it" — it is
+an acknowledgement, and people do use it to show appreciation, so it works as thanks too.
+When simply translating "thank you", use nkagha.
+
+## Words of faith
+
+    Madem                   good
+    ekati                   book
+    ekati Madem             the Holy Bible      (book + good)
+    moh Madem               Jesus               (son of God)
+
+        manor / manorh      brother, sister
+    Nereket             family
+    Nchemty             family, togetherness, gathering together
+        moh Madem               Jesus — literally "son of God", the true Kenyang name
+    Yesu                    Jesus — a borrowed form some people use
+
+Both are heard, but moh Madem is the real Kenyang: moh is son, and Madem is God. Yesu is
+taken from outside the language. When teaching Kenyang, teach moh Madem, and mention Yesu
+so a learner recognises it when they hear it.
+    moh                     son
