@@ -420,3 +420,101 @@ not doing something.
 Note: some sources also list pú and ké as negative markers used in commands ("do not…"),
 and bhiki as the negative in the past ("did not…"). Keep those for later; the everyday
 one to teach first is pú for "not".
+
+---
+
+## School, and building words from other words
+
+School is not its own word — it is built from two: house + books.
+
+    ɛkáti           book
+    ekeré-ékáti     school          (literally: house of books)
+
+So when the tutor is asked for "school", the answer is ekeré-ékáti, NOT a plain word for
+house. This is a good example of how Kenyang builds new meanings by joining words.
+
+## Going somewhere — the place goes at the end
+
+To say where you are going, the place comes after the verb.
+
+    mme pú rong ekeré-ékáti         I am not going to school
+    mma, mme pú rong ekeré-ékáti    Mum, I am not going to school
+    Sé dok amem eket                Let us go inside the house
+    Sé dok amem ekeré-ékáti         Let us go inside the school
+
+So a place word (like amem, inside) and then the place itself both come after the verb.
+
+## Today, and other time words
+
+    echong          today
+
+    mma, mme pú rong ekeré-ékáti echong
+                    Mum, I am not going to school today
+
+Time words like echong come at the very end, after the place.
+
+## "We" with pú — use sé, not besé
+
+For "we", everyday Kenyang uses sé, not besé, especially with a verb.
+
+    sé pú buereh kenor              we will not sleep / we are not sleeping
+    besé sé pú buereh kenor         WE, we will not sleep   (adding besé for emphasis)
+
+sé means "let us" or "we". So "let us go" (Sé dok) and "we will not sleep"
+(sé pú buereh kenor) use the same sé.
+
+## Hungry — a special shape
+
+"Hungry" does not behave like an ordinary verb. It has its own frame.
+
+    Nsai ah nu meh                 I am hungry
+    Nsai ah pú nu meh              I am not hungry
+
+Note where pú sits — inside the phrase, before "nu meh", not right after a person prefix.
+This is different from an ordinary verb like rong (mme pú rong). Teach the hungry phrase
+as a whole, do not try to build it like a normal verb.
+
+    Meh yan ékwá ke Nsai ah pú nu meh
+                    I want plantain, but I am not hungry
+
+## Looking — yan, yenghé, yiní
+
+    yan             to look for, to search        (Meh yan = I am looking for)
+    yenghé          to look at
+
+    Meh yan ékwá                   I am looking for plantain / I want plantain
+    Meh yenghé ékwá éneh           I am looking at this plantain
+    éneh            this
+    Meh yenghé békwá               I am looking at plantains   (békwá = plantains, plural)
+
+## Where is…? — add "a" before chi
+
+To ask where something is, put "a" before chi.
+
+    mmú a chi fá                   where is the dog?
+
+Without the "a", "mmú chi fá" reads as "dog is where" rather than a real question. The "a"
+is what makes it "where IS the dog".
+
+## Asking someone's father (short form)
+
+    n-ném Eta'ye chi Agha          what is your father's name?
+    Eta'ye chi Agha                who is your father?   (a shorter way to ask the same)
+
+## Husband, wife, and in-laws
+
+    Ngoré wah       my wife         (Ngoré = woman)
+    nném wah        my husband      (nném = husband)
+    wah             my / mine (possession)
+
+    M'kong Ngoré wah               I love my wife
+    M'kong nném wah                I love my husband
+
+For a whole family loving someone, use bá (they):
+
+    Nneré-eket Ngoré wah bá kong mme
+                    my wife's family loves me   (my in-laws love me)
+    nneré-eket      family
+    bá              they
+
+So bá kong is "they love", the same Kong verb with the "they" word in front.
