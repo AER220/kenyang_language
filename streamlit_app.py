@@ -1419,8 +1419,8 @@ if not st.session_state.messages:
     if c2.button("Test me"):
         starter = "Test me with a quick Kenyang question."
     c3, c4 = st.columns(2)
-    if c3.button("How do I say good morning?"):
-        starter = "How do you say good morning in Kenyang?"
+    if c3.button("Teach me to count?"):
+        starter = "Teach me how to count in Kenyang, starting with one to five.?"
     if c4.button("Start from the beginning"):
         starter = "I'm a complete beginner. Where should we start?"
 
