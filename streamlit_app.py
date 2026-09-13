@@ -115,9 +115,9 @@ EXCLUDE_FILES = {
 # sheet, the dictionaries) retrieve perfectly well on their own and stay out.
 SPINE_KEYWORDS = ("possess", "relationship", "adjective", "conjugat", "negation",
                   "preposition", "demonstrative", "plural")
-SPINE_FILES = {
-    "kenyang_orthography_ref.jsonl",       # noun phrase order, AP, tone, tense, negation
-}
+SPINE_FILES = set()   # the speaker-verified file now covers word order better than the
+                      # orthography guide did — the guide had only the colour half of the
+                      # rule. It stays in knowledge_base and is retrieved when relevant.
 SPINE_CHARS = 30_000        # total ceiling for the spine, shared across those files.
                              # Raised from 70k: the teaching chapters ARE the point of the
                              # spine now, and they must not be silently truncated away.
