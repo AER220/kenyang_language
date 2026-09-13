@@ -28,7 +28,7 @@ from openai import OpenAI
 # 1. CONFIG
 # =============================================================================
 
-MODEL = "gpt-4o-mini"                    # swap freely; temperature is guarded below
+MODEL = "gpt-4o"                    # swap freely; temperature is guarded below
 EMBED_MODEL = "text-embedding-3-small"   # ~$0.02 per million tokens, and indexed once
 TEMPERATURE = 0.3
 KB_ROOT = "knowledge_base"
