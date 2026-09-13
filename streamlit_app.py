@@ -60,7 +60,7 @@ FULL_CONTEXT_CHARS = 350_000   # ~87k tokens, the most I'd push into a 128k wind
 
 EXACT_RESERVE = 20           # of those, held for literal word matches so that a
                              # passage containing the asked-for word always gets in
-MAX_PASSAGES = 70            # retrieval mode: total passages per question, after merging
+MAX_PASSAGES = 30            # retrieval mode: total passages per question, after merging
 MAIN_PROBE_K = 18            # share for the whole question
 SUB_PROBE_K = 4              # share for each word probe and each grammar probe
 CHUNK_CHARS = 1_200          # passage size — roughly a page of a chapter
@@ -118,7 +118,7 @@ SPINE_KEYWORDS = ("possess", "relationship", "adjective", "conjugat", "negation"
 SPINE_FILES = {
     "kenyang_orthography_ref.jsonl",       # noun phrase order, AP, tone, tense, negation
 }
-SPINE_CHARS = 120_000        # total ceiling for the spine, shared across those files.
+SPINE_CHARS = 60_000        # total ceiling for the spine, shared across those files.
                              # Raised from 70k: the teaching chapters ARE the point of the
                              # spine now, and they must not be silently truncated away.
 
