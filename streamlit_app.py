@@ -1120,7 +1120,8 @@ header[data-testid="stHeader"]{background:transparent;}
 html, body, [data-testid="stAppViewContainer"] *{
   font-family:'Inter','Gentium Book Plus',system-ui,sans-serif;
 }
-[data-testid="stAppViewContainer"]{background:var(--paper);}
+html{color-scheme: light;}
+[data-testid="stAppViewContainer"]{background:var(--paper); color-scheme: light;}
 .block-container{max-width:680px;padding-top:.6rem;padding-bottom:7rem;}
 
 .hero{background:linear-gradient(150deg,var(--forest) 0%,#144A38 55%,var(--leaf) 100%);
@@ -1194,10 +1195,16 @@ html, body, [data-testid="stAppViewContainer"] *{
   border-color:var(--leaf) !important;
   box-shadow:0 2px 14px rgba(27,107,76,.16);
 }
-[data-testid="stChatInput"] textarea{
+[data-testid="stChatInput"] textarea,
+[data-testid="stChatInput"] textarea *,
+[data-testid="stChatInput"] input{
   font-size:16px !important;
-  color:var(--ink) !important;
+  color:#243029 !important;
+  -webkit-text-fill-color:#243029 !important;
   background:transparent !important;
+  caret-color:#1B6B4C !important;
+  opacity:1 !important;
+}
 }
 [data-testid="stChatInput"] textarea::placeholder{color:#9AAAA1 !important;}
 /* the send arrow */
