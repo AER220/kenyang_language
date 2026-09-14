@@ -572,3 +572,181 @@ You already have chi (is) and the a- prefix (he/she/it). Together: achi = it is 
 
 This is the same a- + chi you confirmed for a'tuor and à Kong. The rule holds: put a- in
 front, and you are speaking about "he / she / it".
+
+## Where each adjective goes — the refined rule
+
+The earlier rule ("size and quality before, colour and number after") was too broad.
+A native speaker confirmed the real split, word by word:
+
+BEFORE the noun:
+    Ereme           big         Ereme Mmɔ       big child       Ereme eket    big house
+    erítí           beautiful   erítí Mmɔ       beautiful child
+    Mandu           small       Mandu mmɔ       small child
+
+AFTER the noun:
+    Ndɨ́ndɨ́         good        Mmɔ Ndɨ́ndɨ́     good child      Nfor Ndɨ́ndɨ́   good king
+    pɛ́pɛ́p          white       ɛkɛt pɛ́pɛ́p     white house
+    pyɔ             black       mmú pyɔ         black dog
+    (numbers)                   beket bépay     two houses
+
+So "good" goes AFTER, like colours and numbers — not before, like big and beautiful. The
+safest guide: treat size words (big, small) and "beautiful" as BEFORE; treat good,
+colours, and numbers as AFTER. When unsure about a new adjective, a speaker should confirm
+which side it takes, because it is set per word, not by a single blanket rule.
+
+---
+
+## Reported speech — "saying that…"
+
+This is how you report what someone said or thought — the frame for telling any story.
+
+    arɛm            said, says, saying
+    bɛ              that
+    arɛm bɛ         says that / is saying that
+    arɛm nyaka bɛ   was saying that   (past)
+
+    Mandɛm arɛm bɛ              God is saying that
+    Mandɛm arɛm nyaka bɛ       God was saying that
+    Stephanie arɛm nyaka bɛ    Stephanie was saying that
+
+Then the reported thing follows:
+
+    Stephanie arɛm bɛ à Kong nném yi
+                    Stephanie says that she loves her husband
+    Stephanie arɛm nyaka bɛ à Kong nném yi
+                    Stephanie was saying that she loves her husband
+
+## nyaka — the past
+
+nyaka marks the past. Remove it and the sentence becomes present.
+
+    arɛm bɛ         is saying that
+    arɛm nyaka bɛ   WAS saying that
+
+(Seen so far with arɛm. A speaker should confirm whether nyaka marks the past on other
+verbs the same way — if it does, it is how Kenyang forms the past tense in general.)
+
+## yi — his / her (possession ending, third person)
+
+The possession ending changes with who owns it. This continues the pattern from Eta'ya
+(my father) / Eta'ye (your father).
+
+    wah             my              nném wah        my husband
+    yi              his / her       nném yi        his / her husband
+
+    à Kong nném wah            he/she loves my husband
+    à Kong nném yi            he/she loves his/her husband
+
+## More verbs
+
+    ángókó          fix
+    mbi             road            (also a personal name; in a sentence it means road)
+    ntó             send
+    twɔ             come
+    ɔ́ntwɔ          to come
+
+  ## Past tense — nyaka, confirmed across verbs
+
+nyaka makes a sentence past. It comes AFTER the verb, and it works on any verb — this is
+how Kenyang forms the past tense in general, not a one-off.
+
+    mme rong                I am going
+    mme rong nyaka          I was going
+
+    à Kong                  he/she loves
+    à Kong nyaka            he/she loved
+
+    arɛm bɛ                 is saying that
+    arɛm nyaka bɛ           was saying that
+
+So to put any verb in the past, add nyaka after it. The person prefix (mme, O', à, bá, sé)
+still marks who; nyaka marks when.
+
+Combining with negation (pú):
+    mme pú rong             I am not going
+    mme pú rong nyaka       I was not going   (a speaker should confirm this order)
+
+---
+
+## Time and "as / during" — Ndǔ
+
+    mpok            time
+    Ndǔ             as, during, in the course of
+    Ndǔ mpok yɔ     during that time
+    Ndǔ mme rong    as I was going
+
+So Ndǔ sets the scene — "during…", "as…" — and a time word or a whole clause follows it.
+
+## Coming from vs going to — afú and arɔk are opposites
+
+    afú             from, left (came away from)
+    arɔk            went (went toward), left for
+
+    afú ekeré-ékáti     he/she is from school / has come from school
+    arɔk ekeré-ékáti    he/she left for school / went to school
+    arɔk ɛkɛt           he/she went home
+
+So afú is movement FROM a place; arɔk is movement TO a place. They point in opposite
+directions — keep them apart.
+
+## afú for where someone is from (origin)
+
+afú also states where a person comes from.
+
+    afú Mamfe           he/she is from Mamfe
+    afú Násárɛt         he/she is from Nazareth
+
+## "in" a place — atú
+
+    atú             in
+    atú Gálili      in Galilee
+
+## Rivers and water
+
+    Nnyɛ́n              water body, river
+    Nnyɛ́n Manyu        the Manyu river
+    ndǔ Nnyɛ́n Jɔ́dan   in the river Jordan
+
+Note this follows the possession rule: Nnyɛ́n Manyu = "river of Manyu" (river + Manyu),
+the thing before the owner, same as ɛkɛt Besong.
+
+## More verbs
+
+    ajwiti yi       baptised him/her
+    Násárɛt         Nazareth   (place name)
+    Jɔ́dan          Jordan     (place name)
+    Gálili          Galilee    (place name)
+## Words from scripture (Mark 1, the baptism)
+
+    áfú anyɛ́n           came out of the water   (left the water)
+    anyɛ́n               water   (as a body one comes out of)
+    aghɔ́               he/she saw
+    aghɔ́ ndǔ           he/she saw as / saw how
+    nɛ́nɛ́nɛ́            opening, splitting
+    Ɛfóŋó               spirit
+    Ɛfóŋó Mandɛm        the Holy Spirit   (spirit of God — thing + owner)
+    asɛp                descended, came down
+    asɛp yi             descended on him/her   (put him/her down)
+    amʉɛt               body
+    asɛp yi amʉɛt       descended on his/her body
+
+Worked example, whole verse:
+    Ndǔ James áfú anyɛ́n
+                    As James came out of the water
+
+## Two rules confirmed again by scripture
+
+- ndǔ = "as / when": aghɔ́ ndǔ (saw as), Ndǔ James áfú anyɛ́n (as James came out). Same
+  ndǔ as Ndǔ mme rong (as I was going). The rule holds.
+- possession, thing-first: Ɛfóŋó Mandɛm (Spirit of God) = spirit + God, exactly like
+  Nnyɛ́n Manyu (Manyu river) and ɛkɛt Besong (Besong's house).
+
+      yi              his / her, him / her      nném yi     his/her husband
+                                              à Kong nném yi    he/she loves his/her husband
+                                              ajwiti yi         baptised him/her
+                                              asɛp yi           descended on him/her
+
+                                              yi does double duty: it is both "his/her" (the owner — nném yi, his husband) and
+"him/her" (the object of an action — ajwiti yi, baptised him). Same word, both roles.
+Earlier notes wrote it as "eyi" — that was the sound spelled out; the Bible spelling yi
+is the correct written form and the one to use.
