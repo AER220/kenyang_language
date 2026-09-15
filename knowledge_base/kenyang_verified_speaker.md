@@ -664,7 +664,19 @@ still marks who; nyaka marks when.
 
 Combining with negation (pú):
     mme pú rong             I am not going
-    mme pú rong nyaka       I was not going   (a speaker should confirm this order)
+    mme pú rong nyaka       I was not going   (confirmed)
+    
+The full stack — who + not + when — from a single verb (rong = go):
+
+    mme rong                I am going
+    mme pú rong             I am not going
+    mme rong nyaka          I was going
+    mme pú rong nyaka       I was not going
+    O' rong                 you are going
+    à rong nyaka            he/she was going
+    bá pú rong nyaka        they were not going
+
+Order is fixed: person prefix + pú (not) + verb + nyaka (past). This holds for any verb.
 
 ---
 
