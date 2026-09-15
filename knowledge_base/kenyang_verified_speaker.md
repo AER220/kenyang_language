@@ -762,3 +762,87 @@ Worked example, whole verse:
 "him/her" (the object of an action — ajwiti yi, baptised him). Same word, both roles.
 Earlier notes wrote it as "eyi" — that was the sound spelled out; the Bible spelling yi
 is the correct written form and the one to use.
+
+
+---
+
+## "Be doing / keep doing / always" — nɔkɔ
+
+nɔkɔ turns an action into an ongoing or repeated one — "keep doing," "always doing,"
+"be doing." It sits after the verb and its object.
+
+    gati bho                tell them
+    gati nɔkɔ bho           keep telling them / be warning them
+    Ndǔ mme gati wo         as I am telling you
+    Ndǔ mme gati nɔkɔ wo    as I am always telling you
+
+## To tell — gati and angati
+
+There are two related forms, and they are NOT interchangeable.
+
+gati = tell (the plain command to tell someone something directly):
+    gati yi             tell him/her
+    gati bho            tell them
+
+angati = to tell / to pass a message THROUGH someone (used when you want one person to
+carry a message to another):
+    angati bho          pass the message to them
+    angati nném yi      pass the message to her husband
+    angati Ngoré wah    I passed the message to my wife
+    angati nɔkɔ bho     keep passing the message to them / preach to them
+    angati nɔkɔ bho Ɛyɔŋ Mandɛm    preached the word of God to them
+
+Both together in one sentence:
+    gati yi angati bho bɛ m'chi bέ-ntɨ
+    tell him/her to tell them that I am angry
+    (gati yi = tell him · angati bho = to pass it onward to them · bɛ = that ·
+     m'chi bέ-ntɨ = I am angry)
+
+So gati is telling someone directly; angati is asking someone to relay a message onward.
+
+## To forgive — foŋori
+
+    foŋori              forgive
+    mmá amfoŋori        mother should forgive
+    étá amfoŋori        father should forgive
+    Mandɛm amfoŋori     God should forgive
+    mmá foŋori mme      mother forgive me
+    Mmá, nnek foŋorí meh    Mother, please forgive me
+
+Note the "should" form: a-...-mfoŋori (amfoŋori = should forgive). The a- prefix plus this
+shape gives "should / let (him/her/it) …".
+
+## "They should…" — the mántɨ́ form
+
+    tɨ́knsɛm            repent
+    mántɨ́knsɛm         they should repent
+    bɔ́                 they (as subject of "should")
+    bɔ́ mántɨ́knsɛm     they should repent
+
+## Angry, and "that"
+
+    bέ-ntɨ              angry
+    m'chi bέ-ntɨ        I am angry
+    bɛ                  that
+    bɛ m'chi bέ-ntɨ     that I am angry
+
+## Bad / evil, and "their"
+
+    bɛbʉ́               bad, evil
+    bhap                their
+    bɛbʉ́ bhap          their evil / their bad ways
+    ndǔ bɛbʉ́ bhap      from their bad ways
+
+Note bhap = "their," following its noun (bɛbʉ́ bhap = evil + their) — a companion to
+wah (my) and yi (his/her). The possession set so far: wah (my), yi (his/her), bhap (their).
+
+## Whole verse worked (Mark 1:4)
+
+    Ɛyɔŋ Mandɛm bɛ bɔ́ mántɨ́knsɛm ndǔ bɛbʉ́ bhap
+    God's word said they should repent from their evil ways.
+
+## More words
+
+    bho / bɔ́           them / they
+    Ɛyɔŋ Mandɛm        the word of God
+    Njwiti             the Baptist / baptiser
