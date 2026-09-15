@@ -776,29 +776,29 @@ nɔkɔ turns an action into an ongoing or repeated one — "keep doing," "always
     Ndǔ mme gati wo         as I am telling you
     Ndǔ mme gati nɔkɔ wo    as I am always telling you
 
-## To tell — gati and angati
+## To tell — gati (direct) and angati (relay through someone)
 
-There are two related forms, and they are NOT interchangeable.
+gati = tell someone something directly. This is the normal, everyday "tell". Use it for
+almost every "tell X that…" sentence.
 
-gati = tell (the plain command to tell someone something directly):
-    gati yi             tell him/her
-    gati bho            tell them
+    gati yi                     tell him/her
+    gati bho                    tell them
+    gati mma bɛ Nsai ah nu meh          tell mother that I am hungry
+    gati bho bɛ mme rong ekeré-Mandɛm   tell them that I am going to church
 
-angati = to tell / to pass a message THROUGH someone (used when you want one person to
-carry a message to another):
-    angati bho          pass the message to them
-    angati nném yi      pass the message to her husband
-    angati Ngoré wah    I passed the message to my wife
-    angati nɔkɔ bho     keep passing the message to them / preach to them
-    angati nɔkɔ bho Ɛyɔŋ Mandɛm    preached the word of God to them
+So "tell [someone] that [something]" is simply:  gati + [someone] + bɛ + [the message].
+Nothing else is needed. Do NOT add angati to a normal "tell that" sentence.
 
-Both together in one sentence:
+angati is ONLY for relaying a message onward — when you ask person A to pass a message to
+person B, a chain of two tellings. It is not used for a single, direct telling.
+
     gati yi angati bho bɛ m'chi bέ-ntɨ
-    tell him/her to tell them that I am angry
-    (gati yi = tell him · angati bho = to pass it onward to them · bɛ = that ·
+    tell him to tell them that I am angry
+    (gati yi = tell HIM directly · angati bho = so that he passes it to THEM · bɛ = that ·
      m'chi bέ-ntɨ = I am angry)
 
-So gati is telling someone directly; angati is asking someone to relay a message onward.
+The test: is there just one telling, or a chain? One telling → gati only. A chain where
+someone relays it onward → gati for the first person, angati for passing it on.
 
 ## To forgive — foŋori
 
@@ -895,4 +895,3 @@ Mmu = person.
     N-ném wah chi James, M'chi moh New York
     My name is James, I am from New York (a native of New York)
 
-    
