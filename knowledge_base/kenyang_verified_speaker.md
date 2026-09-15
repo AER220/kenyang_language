@@ -965,3 +965,42 @@ Eta'ye from earlier). Ma'ya = my mother; Ma'yeh = your mother.
     ámbyó wɔ           to look at you / inspect you
     Ánáŋ ámbyó wɔ      after he/she has seen (inspected) you
     yenghé             look
+
+---
+
+## "Their mother / father" — Yap
+
+Yap = their. It follows the noun, matching the possession set.
+
+    Mma Yap             their mother
+    Eta Yap             their father
+
+The full possession set now:
+    wah         my          Ngoré wah       my wife
+    yeh         your        Ma'yeh          your mother
+    yi          his/her     nném yi         his/her husband
+    bhap / Yap  their       Mma Yap         their mother
+
+(Note: earlier "their" appeared as bhap in bɛbʉ́ bhap = their evil. With family words it is
+Yap: Mma Yap = their mother. A speaker should confirm whether bhap and Yap are the same
+word spelled differently, or used with different kinds of nouns.)
+
+## ntá — "to your" clarified
+
+ntá means "to (someone)". With a family word it reads as "to your":
+
+    dɔ́k ntá Ma'yeh     go to your mother     (ntá = to, Ma'yeh = your mother)
+    dɔ́k ntá Eta'yeh    go to your father
+
+ntá can be dropped in some sentences without changing the meaning much:
+    Kɛ́ ghati ntá Eta'yeh ɛnyɨŋ ɛnɛ ɛ́fákárí    do not tell your father what happened
+    Kɛ́ ghati Eta'yeh ɛnyɨŋ ɛnɛ ɛ́fákárí        do not tell your father what happened (same)
+
+So "to your father" can be ntá Eta'yeh or just Eta'yeh — both are used.
+
+## Worked example (the one to confirm)
+
+    bá pú ghati Mma Yap bɛ Mme ɛ́may
+    they were not telling their mother that I am sick
+    (bá = they · pú = not · ghati = tell · Mma Yap = their mother · bɛ = that ·
+     Mme ɛ́may = I am sick)
