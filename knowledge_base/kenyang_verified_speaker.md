@@ -406,9 +406,9 @@ There is more than one way to say yes and no, and speakers move between them.
 
 So "eh eh" (chá) is no, even though "eh" on its own is yes. The doubling is what flips it.
 
-## Not — the negative "pú"
+## Not — the neghative "pú"
 
-pú makes a sentence negative — it is the "not". It sits after the person-word.
+pú makes a sentence neghative — it is the "not". It sits after the person-word.
 
     mme pú rong             I am not going
     m'pú rong               I am not going    (the short, spoken form)
@@ -417,8 +417,8 @@ So pú is how you turn "I am going" into "I am NOT going". The full form is "mme
 in fast speech people run it together as "m'pú". This is the ordinary way to say you are
 not doing something.
 
-Note: some sources also list pú and ké as negative markers used in commands ("do not…"),
-and bhiki as the negative in the past ("did not…"). Keep those for later; the everyday
+Note: some sources also list pú and ké as neghative markers used in commands ("do not…"),
+and bhiki as the neghative in the past ("did not…"). Keep those for later; the everyday
 one to teach first is pú for "not".
 
 ---
@@ -662,7 +662,7 @@ how Kenyang forms the past tense in general, not a one-off.
 So to put any verb in the past, add nyaka after it. The person prefix (mme, O', à, bá, sé)
 still marks who; nyaka marks when.
 
-Combining with negation (pú):
+Combining with neghation (pú):
     mme pú rong             I am not going
     mme pú rong nyaka       I was not going   (confirmed)
     
@@ -771,34 +771,34 @@ is the correct written form and the one to use.
 nɔkɔ turns an action into an ongoing or repeated one — "keep doing," "always doing,"
 "be doing." It sits after the verb and its object.
 
-    gati bho                tell them
-    gati nɔkɔ bho           keep telling them / be warning them
-    Ndǔ mme gati wo         as I am telling you
-    Ndǔ mme gati nɔkɔ wo    as I am always telling you
+    ghati bho                tell them
+    ghati nɔkɔ bho           keep telling them / be warning them
+    Ndǔ mme ghati wo         as I am telling you
+    Ndǔ mme ghati nɔkɔ wo    as I am always telling you
 
-## To tell — gati (direct) and angati (relay through someone)
+## To tell — ghati (direct) and anghati (relay through someone)
 
-gati = tell someone something directly. This is the normal, everyday "tell". Use it for
+ghati = tell someone something directly. This is the normal, everyday "tell". Use it for
 almost every "tell X that…" sentence.
 
-    gati yi                     tell him/her
-    gati bho                    tell them
-    gati mma bɛ Nsai ah nu meh          tell mother that I am hungry
-    gati bho bɛ mme rong ekeré-Mandɛm   tell them that I am going to church
+    ghati yi                     tell him/her
+    ghati bho                    tell them
+    ghati mma bɛ Nsai ah nu meh          tell mother that I am hungry
+    ghati bho bɛ mme rong ekeré-Mandɛm   tell them that I am going to church
 
-So "tell [someone] that [something]" is simply:  gati + [someone] + bɛ + [the message].
-Nothing else is needed. Do NOT add angati to a normal "tell that" sentence.
+So "tell [someone] that [something]" is simply:  ghati + [someone] + bɛ + [the message].
+Nothing else is needed. Do NOT add anghati to a normal "tell that" sentence.
 
-angati is ONLY for relaying a message onward — when you ask person A to pass a message to
+anghati is ONLY for relaying a message onward — when you ask person A to pass a message to
 person B, a chain of two tellings. It is not used for a single, direct telling.
 
-    gati yi angati bho bɛ m'chi bέ-ntɨ
+    ghati yi anghati bho bɛ m'chi bέ-ntɨ
     tell him to tell them that I am angry
-    (gati yi = tell HIM directly · angati bho = so that he passes it to THEM · bɛ = that ·
+    (ghati yi = tell HIM directly · anghati bho = so that he passes it to THEM · bɛ = that ·
      m'chi bέ-ntɨ = I am angry)
 
-The test: is there just one telling, or a chain? One telling → gati only. A chain where
-someone relays it onward → gati for the first person, angati for passing it on.
+The test: is there just one telling, or a chain? One telling → ghati only. A chain where
+someone relays it onward → ghati for the first person, anghati for passing it on.
 
 ## To forgive — foŋori
 
@@ -895,3 +895,73 @@ Mmu = person.
     N-ném wah chi James, M'chi moh New York
     My name is James, I am from New York (a native of New York)
 
+---
+
+## Do not — Kɛ́ (negating a command)
+
+Kɛ́ before a verb makes it "do not…". This is different from pú (which negates a statement
+like "I am not going"); Kɛ́ negates a command.
+
+    dɔ́k                go
+    Kɛ́ dɔ́k            do not go
+    ghati              tell
+    Kɛ́ ghati          do not tell
+
+## No one / nobody, and "thing"
+
+    yɛ̌ mmu             no one, nobody
+    ɛnyɨŋ              thing
+    ɛ́fákárí           it happened / happening
+    ɛnyɨŋ ɛ́fákárí      something is happening
+    ɛnɛ ɛ́fákárí       that happened
+    ɛnyɨŋ ɛnɛ ɛ́fákárí  the thing that happened / something that happened
+
+## "The thing that…" — the ɛnɛ relative pattern
+
+ɛnɛ links a thing to what happened to it — "the [thing] that [happened]".
+
+    ɛnyɨŋ ɛnɛ ɛ́fákárí          the thing that happened
+    Kɛ́ ghati yɛ̌ mmu ɛnyɨŋ ɛnɛ ɛ́fákárí
+        Do not tell anyone what happened  (tell no one the thing that happened)
+
+## Going to a person — ntá (to your)
+
+    ntá                to (someone), to your
+    dɔ́k ntá Ma'yeh    go to your mother
+    dɔ́k ntá Eta'yeh   go to your father
+    Kɛ́ dɔ́k ntá Ma'yeh    do not go to your mother
+
+Note: Ma'yeh = your mother, Eta'yeh = your father (the -yeh ending = "your", matching
+Eta'ye from earlier). Ma'ya = my mother; Ma'yeh = your mother.
+
+## "So that he should…" — bɛ yi á-
+
+    bɛ yi ángɔ́         that he/she should see
+    bɛ yi ángɔ́ wɔ      that he/she should see you
+    dɔ́k ntá Eta'yeh bɛ yi ángɔ́ wɔ
+        go to your father so that he should see you
+
+    wɔ                 you (object — "see YOU")
+
+## Sick
+
+    ɛ́may              sick
+    Mme ɛ́may          I am sick
+
+## Finishing / being done — naŋ and Ánáŋ
+
+    naŋ                finish
+    naŋ ekeré-ékáti    finish school
+    naŋ ekeré-ékáti dɔ́k anyuop     finish school and go home
+    anyuop             home
+
+    Ánáŋ               done, finished (past)
+    Ánáŋ ekeré-ékáti   done with school already (he/she has finished school)
+    Ánáŋ ne Mme        he/she is done with me
+
+## To inspect / look at — ámbyó
+
+    ámbyó              inspect, look at
+    ámbyó wɔ           to look at you / inspect you
+    Ánáŋ ámbyó wɔ      after he/she has seen (inspected) you
+    yenghé             look
