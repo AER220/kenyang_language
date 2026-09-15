@@ -846,3 +846,53 @@ wah (my) and yi (his/her). The possession set so far: wah (my), yi (his/her), bh
     bho / bɔ́           them / they
     Ɛyɔŋ Mandɛm        the word of God
     Njwiti             the Baptist / baptiser
+
+---
+
+## Compounds with "house of" — ekeré-
+
+ekeré- means "house of," and joins to another word to make a place.
+
+    ekeré-ékáti         school      (house of books — ékáti = book)
+    ekeré-Mandɛm        church      (house of God — Mandɛm = God)
+
+Do NOT use ekeré-ékáti (school) for church. Church is ekeré-Mandɛm.
+
+## "My name" — careful: wah, not Ma'ya
+
+N-ném means "name". "My name" uses wah (my), the same as Ngoré wah (my wife) and
+Nném wah (my husband).
+
+    N-ném wah           my name
+    N-ném wah chi James     my name is James
+
+Do NOT use Ma'ya for "my name". Ma'ya means "my mother", so N-ném Ma'ya = my MOTHER'S
+name, not "my name". These are different:
+    N-ném wah           my name        (name + my)
+    N-ném Ma'ya         my mother's name   (name + my mother)
+    N-ném mmá ya        my mother's name   (same, spelled out)
+
+## Where you are from — moh and Mmu
+
+moh = son/daughter; also used to say you are a native of a place.
+Mmu = person.
+
+    moh                 son, daughter
+    Mmu                 person
+    M'chi moh New York      I am a native of New York (lit. I am a son/daughter of New York)
+    M'chi Mmu New York      I am a New York person / a person from New York
+    M'fú New York           I am coming from New York
+    afú New York            he/she is from New York
+
+## "I am" and the from-forms
+
+    M'chi / Mme chi     I am
+    afú                 he/she is from
+    M'fú                I am from / I am coming from
+
+## Whole sentence worked
+
+    N-ném wah chi James, M'chi moh New York
+    My name is James, I am from New York (a native of New York)
+
+    
