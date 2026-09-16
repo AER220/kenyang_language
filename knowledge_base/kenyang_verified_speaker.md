@@ -383,7 +383,7 @@ tell a story.
     fa              here
     fá              where
     afo             there
-    ambi            before, ahead
+    ambi            Road, 
     ansem           after
     ansem mpok      later
     kéfú            again
@@ -1004,3 +1004,36 @@ So "to your father" can be ntá Eta'yeh or just Eta'yeh — both are used.
     they were not telling their mother that I am sick
     (bá = they · pú = not · ghati = tell · Mma Yap = their mother · bɛ = that ·
      Mme ɛ́may = I am sick)
+
+     ---
+
+## Position words — where something is
+
+    Fa              here                (confirmed)
+    Afo             there               (confirmed)
+    Awuh            over there          (further away than Afo)
+    ambeuh          in front
+    ansem           behind              (confirmed)
+    neku            beside, next to
+    kékwót          near you (nearness to a person, not the same as neku)
+    anfai           up  — as in direction, "look up"
+    a'nfai          on top — the one on top (position of a thing)
+    amik            ground; also "down" depending on use (get down / on the ground)
+    amem            inside              (confirmed)
+    nefi            outside             (confirmed)
+
+Note: anfai and a'nfai are different words, not spellings of one. anfai is "up" as a
+direction (look up); a'nfai is "on top of / the one on top". The apostrophe marks the
+difference — keep them apart.
+
+Note: ambi is NOT a position word — ambi means "road". Do not confuse it with ambeuh
+(in front).
+
+## "Come, let us go"
+
+    twɔ             come                (confirmed)
+    se'             we, us              (write se', pronounce "seh"; same word as sé)
+    ka              a linking word — "and / so" in this flow
+    dɔk             go                  (confirmed)
+
+    Twɔ ka se' dɔk      Come, let us go
