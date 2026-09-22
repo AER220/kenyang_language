@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nɛpɛm — learn Kenyang</title>
+<title>Nɛpɛm · Kenyang for the whole family</title>
 
-<meta name="description" content="Learn Kenyang, the language of the Bayangi people of Southwest Cameroon. Build a sentence, play a game, or talk to Nɛpɛm. Free.">
-<meta property="og:title" content="Nɛpɛm — learn Kenyang">
-<meta property="og:description" content="65,000 speakers. No app, no course — until now. Build a real Kenyang sentence right now.">
+<meta name="description" content="Learn Kenyang together. Build sentences, solve a Kenyang crossword, play a family duel. For the Bayangi diaspora and anyone who wants the language back.">
+<meta property="og:title" content="Nɛpɛm · Kenyang for the whole family">
+<meta property="og:description" content="Build a real Kenyang sentence, then sit down with your children and solve a Kenyang crossword.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://nepem.org">
-<meta property="og:image" content="https://nepem.org/share.png">
+<meta property="og:url" content="https://aer220.github.io/kenyang_language/">
+<meta property="og:image" content="https://aer220.github.io/kenyang_language/share.png">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,278 +19,373 @@
 
 <style>
 /* ═══════════════════════════════════════════════════════════════════════════
-   COLOUR CARRIES MEANING — it is not decoration.
+   This is a family tool, not a children's app.
 
-   Each grammatical role owns one hue, and that hue is used for that role
-   EVERYWHERE on the site: in the sentence engine, in the game tiles, in the
-   legend. A learner starts reading the colour before they can read the word.
-   That is the one idea the whole design rests on.
+   In a diaspora family the parent often cannot speak Kenyang either. They
+   understand it, they are embarrassed they cannot reply, and the grandmother
+   is the real authority. So nothing here talks down, and the two headline
+   activities are things two people do side by side.
 
-   The base is a near-black with a faint blue cast rather than pure black, so
-   the coloured type glows instead of vibrating against it.
+   Colour carries grammar. Each role keeps its hue everywhere, so you start
+   reading the colour before you read the word.
    ═══════════════════════════════════════════════════════════════════════════ */
 :root{
-  --who:#42E3BC;          /* person marker — mme O' à sé bá */
-  --not:#FF6A55;          /* negation      — pú             */
-  --root:#FFFFFF;         /* the verb root itself           */
-  --when:#B98BFF;         /* tense marker  — nyaka          */
-  --place:#FFC94D;        /* place, and the brand accent    */
-
-  --void:#05070C;
-  --lift:#0B1016;         /* panel                          */
-  --lift2:#121A25;        /* panel, one step up             */
-  --edge:rgba(255,255,255,.08);
-  --edge-hi:rgba(255,255,255,.2);
-  --text:#EDF1F5;
-  --mute:#7E8C9A;
+  --who:#42E3BC; --not:#FF6A55; --root:#FFFFFF; --when:#B98BFF; --place:#FFC94D;
+  --p1:#5BC8FF;            /* player one in the duel */
+  --p2:#FF9ECF;            /* player two, and anything about family */
+  --base:#060910;
+  --lift:rgba(255,255,255,.04); --lift2:rgba(255,255,255,.075);
+  --edge:rgba(255,255,255,.09); --edge-hi:rgba(255,255,255,.22);
+  --text:#EEF2F7; --mute:#8494A4;
   --serif:"Gentium Book Plus",Georgia,serif;
   --sans:"Archivo",system-ui,sans-serif;
-  --mx:50%; --my:28%;
+  --mx:50%; --my:18%; --r:20px;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--void);color:var(--text);font-family:var(--sans);
-  font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--base);color:var(--text);font-family:var(--sans);
+  font-size:17px;line-height:1.62;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
+.sky{position:fixed;inset:-25%;z-index:0;pointer-events:none;filter:blur(92px);opacity:.5}
+.blob{position:absolute;border-radius:50%}
+.b1{width:52vw;height:52vw;left:-8%;top:-8%;background:#0E7A63;animation:d1 36s ease-in-out infinite}
+.b2{width:42vw;height:42vw;right:-5%;top:4%;background:#5B3A9E;animation:d2 43s ease-in-out infinite}
+.b3{width:46vw;height:46vw;left:16%;bottom:-12%;background:#8A4A1E;animation:d3 49s ease-in-out infinite}
+.b4{width:32vw;height:32vw;right:12%;bottom:4%;background:#A8365C;animation:d4 40s ease-in-out infinite}
+@keyframes d1{0%,100%{transform:none}50%{transform:translate(9vw,7vh) scale(1.16)}}
+@keyframes d2{0%,100%{transform:none}50%{transform:translate(-8vw,10vh) scale(1.1)}}
+@keyframes d3{0%,100%{transform:none}50%{transform:translate(7vw,-9vh) scale(1.2)}}
+@keyframes d4{0%,100%{transform:none}50%{transform:translate(-6vw,-6vh) scale(1.14)}}
 #field{position:fixed;inset:0;z-index:0;pointer-events:none}
 .aura{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:radial-gradient(560px circle at var(--mx) var(--my),
-             rgba(255,201,77,.085), transparent 62%)}
+  background:radial-gradient(640px circle at var(--mx) var(--my),rgba(255,201,77,.10),transparent 60%)}
 
-.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,3vw,34px);
-  position:relative;z-index:1}
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(16px,3vw,32px);position:relative;z-index:1}
 a{color:inherit}
-:focus-visible{outline:2px solid var(--place);outline-offset:3px;border-radius:4px}
+:focus-visible{outline:2px solid var(--place);outline-offset:3px;border-radius:6px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.glass{background:var(--lift);border:1px solid var(--edge);border-radius:var(--r);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 
-/* ── nav, with the one loud button on the page ──────────────────── */
-nav{display:flex;align-items:center;justify-content:space-between;gap:14px;
-  padding:20px 0;flex-wrap:wrap}
-.brand{font-family:var(--serif);font-size:24px;font-weight:700;letter-spacing:-.01em}
-.brand small{display:block;font-family:var(--sans);font-size:11px;font-weight:400;
-  color:var(--mute);letter-spacing:.09em;margin-top:2px}
-.nav-r{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
-.nav-r a.q{text-decoration:none;color:var(--mute);font-size:14.5px;padding:8px 13px;
-  border-radius:99px;transition:color .2s,background .2s}
-.nav-r a.q:hover{color:var(--text);background:rgba(255,255,255,.06)}
-
-.cta{display:inline-flex;align-items:center;gap:9px;text-decoration:none;
-  font-weight:600;font-size:15px;padding:11px 21px;border-radius:99px;
-  color:#05070C;background:linear-gradient(135deg,var(--place),#FF9E2C);
-  box-shadow:0 6px 24px rgba(255,201,77,.22);
-  transition:transform .22s, box-shadow .32s}
-.cta:hover{transform:translateY(-2px);box-shadow:0 12px 38px rgba(255,201,77,.42)}
-.cta .dot{width:7px;height:7px;border-radius:99px;background:#05070C;opacity:.5;
+nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:16px 0;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-size:25px;font-weight:700;letter-spacing:-.01em}
+.brand small{display:block;font-family:var(--sans);font-size:10.5px;font-weight:400;
+  color:var(--mute);letter-spacing:.11em;margin-top:2px}
+.nav-r{display:flex;align-items:center;gap:3px;flex-wrap:wrap}
+.nav-r .q{text-decoration:none;color:var(--mute);font-size:14.5px;padding:8px 12px;
+  border-radius:99px;transition:color .2s,background .2s;cursor:pointer;
+  background:none;border:none;font-family:inherit}
+.nav-r .q:hover{color:var(--text);background:rgba(255,255,255,.07)}
+.cta{display:inline-flex;align-items:center;gap:9px;text-decoration:none;border:none;
+  font-family:inherit;font-weight:600;font-size:15px;padding:11px 20px;border-radius:99px;
+  cursor:pointer;color:#06090F;background:linear-gradient(135deg,var(--place),#FF9E2C);
+  box-shadow:0 6px 24px rgba(255,201,77,.24);transition:transform .22s,box-shadow .32s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(255,201,77,.45)}
+.cta .dot{width:7px;height:7px;border-radius:99px;background:#06090F;opacity:.5;
   animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:.25}50%{opacity:.85}}
 
-/* ── the sentence engine ────────────────────────────────────────── */
-.engine{padding:30px 0 6px}
-.kicker{font-size:15px;color:var(--mute);margin:0 0 22px;max-width:38em}
-.kicker b{color:var(--text);font-weight:600}
-
-.built{font-family:var(--serif);font-size:clamp(33px,6.8vw,86px);line-height:1.05;
-  margin:0 0 14px;letter-spacing:-.03em;display:flex;flex-wrap:wrap;gap:0 .24em;
+/* ── the builder, top of the page, for everybody ─────────────── */
+.hero{padding:22px 0 4px}
+.hlead{font-size:16px;color:var(--mute);margin:0 0 22px;max-width:44em}
+.hlead b{color:var(--text);font-weight:600}
+.built{font-family:var(--serif);font-size:clamp(32px,6.6vw,84px);line-height:1.05;
+  margin:0 0 12px;letter-spacing:-.03em;display:flex;flex-wrap:wrap;gap:0 .24em;
   align-items:baseline;min-height:1.1em}
 .m{display:inline-block;position:relative}
 .m.in{animation:pop .4s cubic-bezier(.2,.9,.25,1) both}
-@keyframes pop{from{opacity:0;transform:translateY(.14em) scale(.96)}
-               to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:translateY(.14em) scale(.96)}to{opacity:1;transform:none}}
 .m-who{color:var(--who)} .m-not{color:var(--not)} .m-root{color:var(--root)}
 .m-when{color:var(--when)} .m-place{color:var(--place)}
 .m::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:2px;
-  background:currentColor;opacity:.24;border-radius:2px}
-
+  background:currentColor;opacity:.26;border-radius:2px}
 .gloss{font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.2vw,26px);
-  color:var(--mute);margin:0 0 28px;min-height:1.4em}
-.g-who{color:var(--who);font-style:normal}
-.g-not{color:var(--not);font-style:normal}
-
-.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
-.ctl{border:1px solid var(--edge);border-radius:14px;padding:14px 15px;background:var(--lift)}
-.ctl-label{font-size:12px;color:var(--mute);margin:0 0 10px;display:flex;
-  align-items:center;gap:8px;letter-spacing:.03em}
+  color:var(--mute);margin:0 0 24px;min-height:1.4em}
+.g-who{color:var(--who);font-style:normal} .g-not{color:var(--not);font-style:normal}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px}
+.ctl{padding:13px 14px}
+.ctl-label{font-size:11.5px;color:var(--mute);margin:0 0 9px;display:flex;
+  align-items:center;gap:8px;letter-spacing:.09em}
 .swatch{width:8px;height:8px;border-radius:99px;flex:none}
 .opts{display:flex;flex-wrap:wrap;gap:6px}
-.opt{font-family:var(--serif);font-size:18px;background:none;color:var(--mute);
-  border:1px solid var(--edge);border-radius:99px;padding:6px 14px;cursor:pointer;
-  transition:color .2s,border-color .2s,background .2s,transform .2s}
+.opt{font-family:var(--serif);font-size:17px;background:none;color:var(--mute);
+  border:1px solid var(--edge);border-radius:99px;padding:6px 13px;cursor:pointer;transition:all .2s}
 .opt:hover{color:var(--text);border-color:var(--edge-hi);transform:translateY(-1px)}
-.opt[aria-pressed="true"]{color:#05070C;font-weight:700;border-color:transparent}
+.opt[aria-pressed="true"]{color:#06090F;font-weight:700;border-color:transparent}
 .c-who .swatch,.c-who .opt[aria-pressed="true"]{background:var(--who)}
 .c-when .swatch,.c-when .opt[aria-pressed="true"]{background:var(--when)}
 .c-not .swatch,.c-not .opt[aria-pressed="true"]{background:var(--not)}
 .c-place .swatch,.c-place .opt[aria-pressed="true"]{background:var(--place)}
-
-.recipe{font-size:14px;color:var(--mute);margin:20px 0 0}
-.recipe code{font-family:var(--sans);color:var(--text);font-size:14px}
-.legend{display:flex;flex-wrap:wrap;gap:15px;margin:18px 0 0;font-size:12.5px;
-  color:var(--mute)}
+.c-verb .swatch,.c-verb .opt[aria-pressed="true"]{background:var(--root);color:#06090F}
+.recipe{font-size:14px;color:var(--mute);margin:16px 0 0}
+.recipe code{font-family:var(--sans);color:var(--text)}
+.legend{display:flex;flex-wrap:wrap;gap:15px;margin:14px 0 0;font-size:12.5px;color:var(--mute)}
 .legend span{display:flex;align-items:center;gap:7px}
 .legend i{width:9px;height:9px;border-radius:99px;display:inline-block}
 
-/* ── sections ───────────────────────────────────────────────────── */
-.rule{border:none;border-top:1px solid var(--edge);margin:46px 0 0}
-.sec{padding:42px 0}
+/* ── sections ─────────────────────────────────────────────────── */
+.rule{border:none;border-top:1px solid var(--edge);margin:42px 0 0}
+.sec{padding:40px 0}
 h2.big{font-family:var(--serif);font-size:clamp(25px,3.3vw,39px);line-height:1.22;
   font-weight:700;margin:0 0 12px;max-width:27em}
-h2.big b{color:var(--place)}
-.lead{color:var(--mute);margin:0 0 26px;max-width:42em}
+h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
+.lead{color:var(--mute);margin:0 0 24px;max-width:44em}
 
-/* ── game chooser ───────────────────────────────────────────────── */
-.gpick{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:12px}
-.gcard{position:relative;text-align:left;border:1px solid var(--edge);
-  border-radius:16px;padding:19px 18px;background:var(--lift);cursor:pointer;
-  overflow:hidden;color:inherit;font-family:inherit;
-  transition:transform .25s,border-color .3s,background .3s}
-.gcard::after{content:"";position:absolute;inset:0;opacity:0;transition:opacity .35s;
-  background:radial-gradient(260px circle at var(--px,50%) var(--py,50%),
-             rgba(255,201,77,.10),transparent 58%)}
-.gcard:hover{transform:translateY(-4px);border-color:var(--edge-hi);background:var(--lift2)}
-.gcard:hover::after{opacity:1}
-.gcard[aria-selected="true"]{border-color:var(--place);background:var(--lift2)}
-.gnum{font-family:var(--serif);font-size:13px;color:var(--place);margin:0 0 7px}
-.gcard h3{font-family:var(--serif);font-size:21px;font-weight:700;margin:0 0 6px}
-.gcard p{font-size:14px;color:var(--mute);margin:0;line-height:1.55}
+/* ── choose an activity ───────────────────────────────────────── */
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.pickc{position:relative;text-align:left;border:1px solid var(--edge);border-radius:var(--r);
+  padding:19px 18px;background:var(--lift);cursor:pointer;color:inherit;font-family:inherit;
+  overflow:hidden;transition:transform .24s,border-color .3s,background .3s}
+.pickc::after{content:"";position:absolute;inset:0;opacity:0;transition:opacity .35s;
+  background:radial-gradient(240px circle at var(--px,50%) var(--py,50%),
+             rgba(255,201,77,.12),transparent 62%)}
+.pickc:hover{transform:translateY(-4px);border-color:var(--edge-hi);background:var(--lift2)}
+.pickc:hover::after{opacity:1}
+.pickc[aria-selected="true"]{border-color:var(--place);background:var(--lift2)}
+.pickc .ic{font-size:26px;line-height:1;margin-bottom:9px}
+.pickc h3{font-family:var(--serif);font-size:20px;font-weight:700;margin:0 0 5px}
+.pickc p{font-size:13.5px;color:var(--mute);margin:0;line-height:1.5}
+.pickc .tag{display:inline-block;margin-top:10px;font-size:11.5px;letter-spacing:.08em;
+  padding:3px 10px;border-radius:99px;border:1px solid var(--edge)}
+.tag.fam{color:var(--p2);border-color:rgba(255,158,207,.35)}
+.tag.solo{color:var(--who);border-color:rgba(66,227,188,.32)}
 
-/* ── the playing area ───────────────────────────────────────────── */
-.stage{margin-top:16px;border:1px solid var(--edge);border-radius:18px;
-  background:var(--lift);padding:clamp(18px,3vw,30px);min-height:310px}
+.stage{margin-top:16px;padding:clamp(16px,3vw,28px);min-height:340px}
+.shead{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;
+  flex-wrap:wrap;margin:0 0 18px}
+.shead h3{font-family:var(--serif);font-size:24px;margin:0 0 4px}
+.shead p{margin:0;color:var(--mute);font-size:14.5px;max-width:44em}
+
+/* ── arrowword ────────────────────────────────────────────────── */
+.xwrap{overflow-x:auto;padding-bottom:6px}
+.xgrid{display:grid;gap:3px;margin:0 auto;width:max-content}
+.cell{width:var(--cs);height:var(--cs);border-radius:5px;background:transparent}
+.cell.let{background:var(--lift2);border:1px solid var(--edge);display:flex;
+  align-items:center;justify-content:center;font-family:var(--serif);
+  font-size:calc(var(--cs) * .52);cursor:pointer;color:var(--text);padding:0;
+  transition:border-color .15s,background .15s}
+.cell.let:hover{border-color:var(--edge-hi)}
+.cell.let.on{border-color:var(--place);background:rgba(255,201,77,.16)}
+.cell.let.inword{background:rgba(255,201,77,.07)}
+.cell.let.good{border-color:var(--who);background:rgba(66,227,188,.16)}
+.cell.let.bad{border-color:var(--not);background:rgba(255,106,85,.14)}
+.cell.clue{background:rgba(255,255,255,.055);border:1px solid var(--edge);
+  font-size:calc(var(--cs) * .21);line-height:1.12;color:var(--mute);padding:3px;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  text-align:center;gap:1px;cursor:default;overflow:hidden}
+.cell.clue .ar{color:var(--place);font-size:calc(var(--cs) * .26);line-height:1}
+.xkeys{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin:18px 0 0}
+.k{font-family:var(--serif);font-size:18px;min-width:40px;padding:9px 6px;border-radius:9px;
+  border:1px solid var(--edge);background:var(--lift2);color:var(--text);cursor:pointer;
+  transition:all .15s}
+.k:hover{border-color:var(--place);transform:translateY(-2px)}
+.k.wide{min-width:66px;font-family:var(--sans);font-size:13.5px}
+.xnow{text-align:center;margin:14px 0 0;font-size:15px;color:var(--mute);min-height:1.5em}
+.xnow b{color:var(--place);font-family:var(--serif);font-size:1.15em}
+
+/* ── family duel ──────────────────────────────────────────────── */
+.duel{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 20px}
+.pl{padding:14px 16px;border-radius:15px;border:1px solid var(--edge);background:var(--lift2);
+  text-align:center;transition:border-color .25s,background .25s}
+.pl.turn{border-color:var(--place);background:rgba(255,201,77,.1)}
+.pl .nm{font-size:13px;color:var(--mute);margin:0 0 4px;letter-spacing:.05em}
+.pl .sc{font-family:var(--serif);font-size:32px;margin:0;line-height:1}
+.pl.one .sc{color:var(--p1)} .pl.two .sc{color:var(--p2)}
+.whoseturn{text-align:center;font-size:15px;margin:0 0 18px}
+.whoseturn b{font-family:var(--serif);font-size:1.2em}
+
+/* ── shared quiz bits ─────────────────────────────────────────── */
 .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;
-  font-size:13.5px;color:var(--mute);margin-bottom:20px;flex-wrap:wrap}
-.score{font-family:var(--serif);font-size:16px;color:var(--place)}
-.ask{font-family:var(--serif);font-size:clamp(22px,3.3vw,37px);line-height:1.2;
+  font-size:13.5px;color:var(--mute);margin-bottom:18px;flex-wrap:wrap}
+.pbar{flex:1;min-width:110px;height:6px;border-radius:99px;background:rgba(255,255,255,.08);
+  overflow:hidden}
+.pbar i{display:block;height:100%;border-radius:99px;width:0%;
+  background:linear-gradient(90deg,var(--who),var(--place));transition:width .45s ease}
+.ask{font-family:var(--serif);font-size:clamp(24px,3.6vw,42px);line-height:1.2;
   margin:0 0 6px;text-align:center}
-.askhint{text-align:center;color:var(--mute);font-size:14px;margin:0 0 24px}
-
+.askhint{text-align:center;color:var(--mute);font-size:14px;margin:0 0 22px}
 .choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-.choice{font-family:var(--serif);font-size:19px;padding:16px 14px;border-radius:13px;
-  border:1px solid var(--edge);background:var(--lift2);color:var(--text);
-  cursor:pointer;min-height:62px;transition:border-color .18s,transform .18s}
-.choice:hover:not(:disabled){border-color:var(--place);transform:translateY(-2px)}
+.choice{font-family:var(--serif);font-size:19px;padding:17px 14px;border-radius:14px;
+  border:1px solid var(--edge);background:var(--lift2);color:var(--text);cursor:pointer;
+  min-height:64px;transition:border-color .18s,transform .18s}
+.choice:hover:not(:disabled){border-color:var(--place);transform:translateY(-3px)}
 .choice:disabled{cursor:default;opacity:.5}
-.choice.right{border-color:var(--who);background:rgba(66,227,188,.14);opacity:1}
-.choice.wrong{border-color:var(--not);background:rgba(255,106,85,.14);opacity:1}
-
-.verdict{margin:20px 0 0;padding:14px 16px;border-radius:13px;font-size:15px;
-  line-height:1.58}
-.verdict.ok{background:rgba(66,227,188,.09);border:1px solid rgba(66,227,188,.28)}
-.verdict.no{background:rgba(255,106,85,.09);border:1px solid rgba(255,106,85,.28)}
+.choice.right{border-color:var(--who);background:rgba(66,227,188,.16);opacity:1;animation:ding .45s ease}
+.choice.wrong{border-color:var(--not);background:rgba(255,106,85,.16);opacity:1}
+@keyframes ding{0%{transform:none}35%{transform:scale(1.05)}100%{transform:none}}
+.verdict{margin:18px 0 0;padding:14px 16px;border-radius:14px;font-size:15px;line-height:1.58}
+.verdict.ok{background:rgba(66,227,188,.10);border:1px solid rgba(66,227,188,.3)}
+.verdict.no{background:rgba(255,106,85,.10);border:1px solid rgba(255,106,85,.3)}
 .verdict b{font-family:var(--serif);font-size:1.13em}
-
-.slotrow{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;min-height:62px;
-  align-items:center;padding:13px;border:1px dashed var(--edge-hi);
-  border-radius:13px;margin:0 0 18px}
-.slotrow:empty::before{content:"tap the words, in order";color:var(--mute);
-  font-size:14px;font-family:var(--sans)}
-.picked{font-family:var(--serif);font-size:20px;padding:8px 15px;border-radius:10px;
-  background:var(--lift2);border:1px solid var(--edge)}
-.tiles{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:0 0 4px}
-.tile{font-family:var(--serif);font-size:21px;padding:13px 19px;border-radius:12px;
-  border:1px solid var(--edge);background:var(--lift2);cursor:pointer;
-  color:var(--text);transition:transform .18s,border-color .18s,opacity .18s}
-.tile:hover:not(:disabled){transform:translateY(-3px);border-color:var(--edge-hi)}
-.tile:disabled{opacity:.25;cursor:default}
-.t-who{color:var(--who)} .t-not{color:var(--not)} .t-root{color:var(--root)}
-.t-when{color:var(--when)} .t-place{color:var(--place)}
-
-.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:9px}
-.pair{font-family:var(--serif);font-size:16.5px;padding:17px 10px;border-radius:12px;
-  border:1px solid var(--edge);background:var(--lift2);color:var(--text);
-  cursor:pointer;min-height:66px;line-height:1.3;transition:border-color .18s}
-.pair:hover:not(:disabled){border-color:var(--place)}
-.pair.sel{border-color:var(--place);background:rgba(255,201,77,.12)}
-.pair.done{opacity:.28;cursor:default;border-color:var(--who)}
-
 .act{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;justify-content:center}
-.btn{font-family:var(--sans);font-size:15px;font-weight:500;padding:11px 22px;
-  border-radius:99px;border:1px solid var(--edge-hi);background:none;
-  color:var(--text);cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.btn{font-family:var(--sans);font-size:15px;font-weight:500;padding:12px 23px;
+  border-radius:99px;border:1px solid var(--edge-hi);background:none;color:var(--text);
+  cursor:pointer;transition:all .2s}
 .btn:hover{border-color:var(--place);color:var(--place)}
-.btn.solid{background:var(--place);border-color:var(--place);color:#05070C;font-weight:600}
-.btn.solid:hover{background:#FFD873;color:#05070C}
-.final{text-align:center;padding:34px 0 4px}
-.final .n{font-family:var(--serif);font-size:54px;margin:0;color:var(--place);line-height:1}
-.final p{color:var(--mute);margin:8px 0 0}
+.btn.solid{background:var(--place);border-color:var(--place);color:#06090F;font-weight:600}
+.btn.solid:hover{background:#FFD873}
+.btn.fam{background:var(--p2);border-color:var(--p2);color:#1A0812;font-weight:600}
+.btn.fam:hover{background:#FFB8DC}
+.final{text-align:center;padding:22px 0 2px}
+.final .n{font-family:var(--serif);font-size:54px;margin:0;color:var(--place);line-height:1;
+  animation:rise .55s cubic-bezier(.2,.9,.25,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(16px) scale(.9)}to{opacity:1;transform:none}}
+.final p{color:var(--mute);margin:10px 0 0}
 
-/* ── closing ────────────────────────────────────────────────────── */
-.trust{display:grid;grid-template-columns:1fr 1.3fr;gap:46px;padding:38px 0 46px}
-.trust p{margin:0 0 15px;color:var(--mute);line-height:1.66}
-.trust p:last-child{margin:0}
-.trust b{color:var(--text);font-weight:500}
-footer{border-top:1px solid var(--edge);padding:28px 0 52px;display:flex;
-  justify-content:space-between;gap:22px;flex-wrap:wrap;font-size:14px;color:var(--mute)}
+/* ── the steps, for learning alone ────────────────────────────── */
+.path{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.step{position:relative;text-align:left;border:1px solid var(--edge);border-radius:15px;
+  padding:14px;background:var(--lift);cursor:pointer;color:inherit;font-family:inherit;
+  transition:transform .22s,border-color .28s,background .28s}
+.step:hover{transform:translateY(-3px);border-color:var(--edge-hi);background:var(--lift2)}
+.step[aria-selected="true"]{border-color:var(--place);background:var(--lift2)}
+.step.done{border-color:rgba(66,227,188,.4)}
+.step .sn{font-size:10.5px;letter-spacing:.13em;color:var(--mute);margin:0 0 6px}
+.step h4{font-family:var(--serif);font-size:17px;font-weight:700;margin:0;line-height:1.25}
+.tick{position:absolute;top:11px;right:11px;width:18px;height:18px;border-radius:99px;
+  background:var(--who);display:none;align-items:center;justify-content:center;
+  color:#06090F;font-size:11px;font-weight:700}
+.step.done .tick{display:flex}
+.wordlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.wcard{padding:15px 16px;border-radius:14px;background:var(--lift2);border:1px solid var(--edge)}
+.wcard .kk{font-family:var(--serif);font-size:24px;color:var(--place);line-height:1.2;margin:0 0 3px}
+.wcard .ee{font-size:14px;margin:0 0 5px}
+.wcard .nn{font-size:12.5px;color:var(--mute);margin:0;line-height:1.45}
+.mission{display:flex;align-items:flex-start;gap:12px;max-width:40em;margin:20px auto 0;
+  padding:15px 18px;border-radius:15px;background:rgba(255,158,207,.08);
+  border:1px solid rgba(255,158,207,.26);text-align:left}
+.mission .mi{font-size:21px;line-height:1;flex:none;margin-top:1px}
+.mission .mt{font-size:15.5px;line-height:1.55}
+.mission .mt b{color:var(--p2)}
+
+/* ── ask your family ──────────────────────────────────────────── */
+.gapgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px}
+.gap{padding:13px 14px;border-radius:14px;border:1px dashed rgba(255,158,207,.35);
+  background:rgba(255,158,207,.05);cursor:pointer;text-align:left;font-family:inherit;
+  color:inherit;transition:transform .2s,border-color .25s,background .25s}
+.gap:hover{transform:translateY(-3px);border-color:var(--p2);background:rgba(255,158,207,.1)}
+.gap .q{font-size:14.5px;margin:0 0 4px}
+.gap .a{font-family:var(--serif);font-size:18px;color:var(--p2);margin:0;min-height:1.3em}
+.gap .a:empty::before{content:"tap to add what they told you";font-family:var(--sans);
+  font-size:11.5px;color:var(--mute)}
+.gap.filled{border-style:solid;border-color:var(--p2)}
+.famcount{color:var(--p2)}
+
+/* ── numbers ──────────────────────────────────────────────────── */
+.numgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(108px,1fr));gap:9px}
+.num{padding:15px 8px;min-height:92px;text-align:center;cursor:pointer;
+  border:1px solid var(--edge);border-radius:14px;background:var(--lift);color:var(--text);
+  font-family:inherit;transition:transform .2s,border-color .25s,background .25s}
+.num:hover{transform:translateY(-4px);border-color:var(--place);background:var(--lift2)}
+.num .d{display:block;font-family:var(--serif);font-size:28px;line-height:1;margin-bottom:4px}
+.num .kx{display:block;font-family:var(--serif);font-size:17px;color:var(--place);line-height:1.2}
+.num.on{border-color:var(--place);background:rgba(255,201,77,.13)}
+.plural{margin-top:14px;padding:22px;text-align:center}
+.plural .row{font-family:var(--serif);font-size:clamp(24px,3.8vw,42px);line-height:1.3;margin:0 0 8px}
+.plural .row .n1{color:var(--who)} .plural .row .n2{color:var(--place)}
+.plural .en{color:var(--mute);font-size:15px;margin:0}
+.pchoose{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.lvl{font-family:inherit;font-size:14.5px;padding:8px 16px;border-radius:99px;
+  border:1px solid var(--edge);background:none;color:var(--mute);cursor:pointer;transition:all .2s}
+.lvl:hover{color:var(--text);border-color:var(--edge-hi)}
+.lvl[aria-pressed="true"]{background:var(--place);border-color:var(--place);color:#06090F;font-weight:600}
+
+/* ── about, chat, footer ──────────────────────────────────────── */
+.two{display:grid;grid-template-columns:1fr 1.25fr;gap:42px;align-items:start}
+.two p{color:var(--mute);margin:0 0 14px;line-height:1.7}
+.two p:last-child{margin:0}
+.two b{color:var(--text);font-weight:500}
+.li{display:inline-flex;align-items:center;gap:9px;text-decoration:none;margin-top:8px;
+  font-size:15px;font-weight:500;padding:11px 21px;border-radius:99px;
+  border:1px solid var(--edge-hi);transition:all .2s}
+.li:hover{border-color:var(--place);color:var(--place);background:rgba(255,201,77,.07)}
+.modal{position:fixed;inset:0;z-index:50;display:none;background:rgba(3,5,10,.84);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:clamp(10px,2vw,24px)}
+.modal.open{display:flex;flex-direction:column;animation:fade .3s ease both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.mhead{display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:0 4px 12px;flex-wrap:wrap}
+.mhead h3{font-family:var(--serif);font-size:21px;margin:0}
+.mhead .sub{font-size:13px;color:var(--mute);margin:2px 0 0}
+.mx{font-family:inherit;font-size:14.5px;padding:9px 17px;border-radius:99px;
+  border:1px solid var(--edge-hi);background:none;color:var(--text);cursor:pointer;
+  text-decoration:none;transition:all .2s}
+.mx:hover{border-color:var(--place);color:var(--place)}
+.mbody{flex:1;border-radius:var(--r);overflow:hidden;border:1px solid var(--edge);
+  background:#0B0F16;position:relative;min-height:0}
+.mbody iframe{width:100%;height:100%;border:none;display:block}
+.waking{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:12px;text-align:center;padding:24px;color:var(--mute);font-size:15px}
+.spin{width:30px;height:30px;border-radius:99px;border:2px solid rgba(255,201,77,.25);
+  border-top-color:var(--place);animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+footer{border-top:1px solid var(--edge);padding:26px 0 50px;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--mute)}
 footer p{margin:0}
-.flinks{display:flex;gap:6px;flex-wrap:wrap}
-.flinks a{text-decoration:none;padding:6px 12px;border-radius:99px;
-  transition:color .2s,background .2s}
+.flinks{display:flex;gap:4px;flex-wrap:wrap}
+.flinks a{text-decoration:none;padding:6px 12px;border-radius:99px;transition:all .2s}
 .flinks a:hover{color:var(--place);background:rgba(255,201,77,.07)}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition-duration:.01ms !important;animation-duration:.01ms !important}
-  #field,.aura{display:none}
+  #field,.aura{display:none} .sky{opacity:.32} .blob{animation:none !important}
 }
-@media (hover:none){ .gcard::after{display:none} }
-@media (max-width:860px){
-  .trust{grid-template-columns:1fr;gap:20px}
-  .engine{padding:20px 0 4px}
-  .sec{padding:32px 0}
-  nav{padding:15px 0}
-  .brand small{display:none}
+@media (hover:none){ .pickc::after{display:none} }
+@media (max-width:880px){
+  .two{grid-template-columns:1fr;gap:18px}
+  .sec{padding:30px 0} nav{padding:12px 0} .brand small{display:none}
+  .sky{filter:blur(70px)}
 }
 </style>
 </head>
 <body>
+<div class="sky" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="blob b3"></div><div class="blob b4"></div>
+</div>
 <canvas id="field" aria-hidden="true"></canvas>
 <div class="aura" aria-hidden="true"></div>
 
 <div class="wrap">
   <nav>
-    <span class="brand">Nɛpɛm<small>KƐ́NYĀŊ &middot; THE LANGUAGE OF HOME</small></span>
+    <span class="brand">Nɛpɛm<small>KƐ́NYĀŊ · THE LANGUAGE OF HOME</small></span>
     <div class="nav-r">
-      <a class="q" href="#play">Games</a>
-      <a class="q" href="#how">How it works</a>
-      <!--  ▸▸ PUT YOUR STREAMLIT URL IN THE href BELOW ◂◂  -->
-      <a class="cta" href="https://kenyanglanguage.streamlit.app"
-         target="_blank" rel="noopener">
-        <span class="dot"></span>Chat with Nɛpɛm</a>
+      <a class="q" href="#table">Play together</a>
+      <a class="q" href="#alone">Learn on your own</a>
+      <a class="q" href="#family">Ask your family</a>
+      <button class="cta" id="openChat"><span class="dot"></span>Ask Nɛpɛm</button>
     </div>
   </nav>
 
-  <!-- ══ 1 · THE SENTENCE ENGINE ═══════════════════════════════════════
-       The hero is not a picture of the product — it IS the product. Four
-       switches, and real Kenyang assembles itself. Nothing below is
-       hard-coded; every sentence is built from the confirmed rule.        -->
-  <section class="engine" aria-labelledby="engTitle">
-    <h1 class="sr" id="engTitle">Build a sentence in Kenyang</h1>
-    <p class="kicker">Kenyang builds a sentence out of parts.
-      <b>Change who, when, whether it happened, or where — and watch it
-      rebuild itself.</b></p>
+  <!-- ══ THE BUILDER, FIRST THING ON THE PAGE ═════════════════════════
+       Adults want this as much as children do. Many diaspora parents
+       understand Kenyang and cannot produce it, and have never once seen
+       the rule written down. So it goes at the top, not tucked away.     -->
+  <section class="hero" aria-labelledby="heroT">
+    <h1 class="sr" id="heroT">How a Kenyang sentence is built</h1>
+    <p class="hlead"><b>A Kenyang sentence is built from parts, in a fixed order.</b>
+      Change who, when, whether it happened, or where, and watch it rebuild. If you
+      grew up hearing this language but never learned to say it, start here.</p>
 
     <p class="built" id="built" aria-live="polite"></p>
     <p class="gloss" id="gloss"></p>
 
     <div class="controls">
-      <div class="ctl c-who">
-        <p class="ctl-label"><span class="swatch"></span>WHO</p>
-        <div class="opts" id="cWho" role="group" aria-label="Who"></div>
-      </div>
-      <div class="ctl c-when">
-        <p class="ctl-label"><span class="swatch"></span>WHEN</p>
-        <div class="opts" id="cWhen" role="group" aria-label="When"></div>
-      </div>
-      <div class="ctl c-not">
-        <p class="ctl-label"><span class="swatch"></span>DID IT HAPPEN</p>
-        <div class="opts" id="cNot" role="group" aria-label="Negation"></div>
-      </div>
-      <div class="ctl c-place">
-        <p class="ctl-label"><span class="swatch"></span>WHERE</p>
-        <div class="opts" id="cPlace" role="group" aria-label="Place"></div>
-      </div>
+      <div class="ctl glass c-who"><p class="ctl-label"><span class="swatch"></span>WHO</p>
+        <div class="opts" id="cWho" role="group" aria-label="Who"></div></div>
+      <div class="ctl glass c-verb"><p class="ctl-label"><span class="swatch"></span>DOING WHAT</p>
+        <div class="opts" id="cVerb" role="group" aria-label="Verb"></div></div>
+      <div class="ctl glass c-when"><p class="ctl-label"><span class="swatch"></span>WHEN</p>
+        <div class="opts" id="cWhen" role="group" aria-label="When"></div></div>
+      <div class="ctl glass c-not"><p class="ctl-label"><span class="swatch"></span>DID IT HAPPEN</p>
+        <div class="opts" id="cNot" role="group" aria-label="Negation"></div></div>
+      <div class="ctl glass c-place"><p class="ctl-label"><span class="swatch"></span>WHERE</p>
+        <div class="opts" id="cPlace" role="group" aria-label="Where"></div></div>
     </div>
 
-    <p class="recipe">The rule never changes: <code id="recipe"></code></p>
+    <p class="recipe">The order never changes: <code id="recipe"></code></p>
     <div class="legend" aria-hidden="true">
       <span><i style="background:var(--who)"></i>who</span>
       <span><i style="background:var(--not)"></i>not</span>
@@ -302,55 +397,95 @@ footer p{margin:0}
 
   <hr class="rule">
 
-  <!-- ══ 2 · THE GAMES ═════════════════════════════════════════════════
-       All three run in the browser. No server, no API call, nothing to
-       pay per play — which is why they can be free however many children
-       use them.                                                          -->
-  <section class="sec" id="play">
-    <h2 class="big">Three games, built only from words a speaker has
-      <b>confirmed</b>.</h2>
-    <p class="lead">They run right here in the page — nothing to install, nothing
-      to pay, and they work on a slow connection.</p>
+  <!-- ══ THINGS TO DO WITH SOMEBODY ══════════════════════════════════ -->
+  <section class="sec" id="table">
+    <h2 class="big">Sit down with somebody. <em>These two are better with a second
+      person.</em></h2>
+    <p class="lead">A crossword nobody in the world has been able to do before, and a
+      duel you can lose to your eight year old. Both work on one screen between two
+      people.</p>
 
-    <div class="gpick" role="tablist" aria-label="Choose a game">
-      <button class="gcard" data-game="build" role="tab" aria-selected="true">
-        <p class="gnum">One</p>
-        <h3>Build the sentence</h3>
-        <p>You are given the English. Tap the Kenyang words into the right order.</p>
-      </button>
-      <button class="gcard" data-game="mean" role="tab" aria-selected="false">
-        <p class="gnum">Two</p>
-        <h3>What does it mean?</h3>
-        <p>A Kenyang word, and four meanings. Only one of them is right.</p>
-      </button>
-      <button class="gcard" data-game="pairs" role="tab" aria-selected="false">
-        <p class="gnum">Three</p>
-        <h3>Find the pairs</h3>
-        <p>Match each word to its meaning. No timer and no pressure.</p>
-      </button>
-    </div>
-
-    <div class="stage" id="stage" role="tabpanel" aria-live="polite"></div>
+    <div class="picks" id="picks" role="tablist" aria-label="Choose an activity"></div>
+    <div class="stage glass" id="stage" role="tabpanel" aria-live="polite"></div>
   </section>
 
   <hr class="rule">
 
-  <!-- ══ 3 · WHY IT CAN BE TRUSTED ════════════════════════════════════ -->
-  <section class="sec" id="how">
-    <div class="trust">
-      <h2 class="big">It will not invent your language</h2>
+  <!-- ══ LEARNING ALONE ══════════════════════════════════════════════ -->
+  <section class="sec" id="alone">
+    <h2 class="big">Eight steps, when you have five minutes on your own.</h2>
+    <p class="lead">Each one ends with something to go and say to a person. That last
+      part is the point, whether you are nine or thirty nine.</p>
+    <div class="path" id="pathGrid" role="tablist" aria-label="Steps"></div>
+    <div class="stage glass" id="lesson" role="tabpanel" aria-live="polite"></div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══ ASK YOUR FAMILY ═════════════════════════════════════════════ -->
+  <section class="sec" id="family">
+    <h2 class="big">Words even Nɛpɛm does not know. <em>Go and find them.</em></h2>
+    <p class="lead">Nobody has written these down yet. Ask an elder, or call home.
+      When you find one, keep it here. <span class="famcount" id="famCount"></span></p>
+    <div class="gapgrid" id="gapGrid"></div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══ NUMBERS ═════════════════════════════════════════════════════ -->
+  <section class="sec" id="numbers">
+    <h2 class="big">Count to ten, and watch a word change when there is
+      <b>more than one</b>.</h2>
+    <p class="lead">Pick a thing and how many. The number comes after the thing, and
+      the thing itself changes shape. This is the part that surprises people who
+      thought they already knew the language.</p>
+    <div class="numgrid" id="numgrid" role="group" aria-label="Numbers one to ten"></div>
+    <div class="plural glass">
+      <p class="row" id="plRow"></p>
+      <p class="en" id="plEn"></p>
+      <div class="pchoose" id="plThings" role="group" aria-label="Pick a thing"></div>
+      <div class="pchoose" id="plCounts" role="group" aria-label="Pick how many"></div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section class="sec" id="about">
+    <div class="two">
+      <h2 class="big" style="margin:0">Who made this, and why</h2>
       <div>
-        <p>Ask a general-purpose AI for Kenyang and it answers confidently and
-          wrongly, because it has never seen the language. For a child learning,
-          that is worse than no answer at all — the invented words are learned as
-          real ones.</p>
-        <p>Everything here comes from Kenyang recovered from old dictionaries and
-          grammars, then checked by a native speaker.
-          <b>When Nɛpɛm does not know something, it says so.</b> Every word in
-          these games has been confirmed.</p>
-        <p>Kenyang is spoken by about 65,000 people in the Southwest Region of
-          Cameroon. It has never had an app, a course, or a page that teaches it.
-          This is the first.</p>
+        <p>I am <b>Agbor Edouard Ransome</b>, from Bachou Ntai in the Manyu Division of
+          Cameroon. Kenyang is my mother tongue.</p>
+        <p>I study <b>Applied Human-Centered AI</b> at Syracuse University and I build AI
+          for people the technology usually skips. I founded <b>GritGateway</b>, which
+          connects African students to universities and scholarships. I have been a
+          Chevening Scholar and a Mandela Washington Fellow.</p>
+        <p>I built this because a machine that speaks a hundred languages had never heard
+          mine. I recovered Kenyang from old dictionaries and grammars no computer could
+          read, then checked every word and every rule myself. <b>A tool that invents your
+          language is worse than no tool at all.</b></p>
+        <p>What I actually want is a father and a child arguing over a crossword clue in
+          Kenyang, and one of them going to ask the grandmother who is right.</p>
+        <a class="li" href="https://www.linkedin.com/in/agbor-edouard-ransome-52a755150/"
+           target="_blank" rel="noopener">Connect on LinkedIn →</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section class="sec">
+    <div class="two">
+      <h2 class="big" style="margin:0">It will not invent your language</h2>
+      <div>
+        <p>Ask a general purpose AI for Kenyang and it answers confidently and wrongly,
+          because it has never seen the language. For anyone learning, that is worse than
+          no answer. The invented words get learned as real ones.</p>
+        <p>Everything here comes from Kenyang recovered from old sources and then confirmed
+          by a native speaker. <b>When Nɛpɛm does not know something, it says so.</b> That
+          is why there is a whole section above of words it cannot help you with yet.</p>
+        <p>Kenyang is spoken by about 65,000 people in the Southwest Region of Cameroon.
+          It has never had an app, a course, or a crossword. This is the first.</p>
       </div>
     </div>
   </section>
@@ -358,425 +493,719 @@ footer p{margin:0}
   <footer>
     <p>Built by Agbor Edouard Ransome, of Bachou Ntai, Manyu Division.</p>
     <div class="flinks">
-      <a href="#play">Games</a>
-      <a href="/paper">How it was built</a>
-      <a href="mailto:hello@nepem.org">Get in touch</a>
+      <a href="#table">Play together</a>
+      <a href="#about">About</a>
+      <a href="mailto:agboredouard51@gmail.com">agboredouard51@gmail.com</a>
     </div>
   </footer>
 </div>
+
+<div class="modal" id="chatModal" role="dialog" aria-modal="true" aria-labelledby="chatT">
+  <div class="mhead">
+    <div><h3 id="chatT">Ask Nɛpɛm</h3>
+      <p class="sub">Ask in English. He answers only with Kenyang a speaker has
+        confirmed, and says so when he does not know.</p></div>
+    <div style="display:flex;gap:8px">
+      <a class="mx" id="newTab" href="https://kenyanglanguage.streamlit.app"
+         target="_blank" rel="noopener">Open in a new tab</a>
+      <button class="mx" id="closeChat">Close</button>
+    </div>
+  </div>
+  <div class="mbody" id="chatBody">
+    <div class="waking" id="waking"><div class="spin"></div>
+      <p style="margin:0">Waking Nɛpɛm up. He sleeps when nobody is talking to him,<br>
+        so the first few seconds are slow.</p></div>
+  </div>
+</div>
 <script>
 /* ═══════════════════════════════════════════════════════════════════════════
-   1 · THE DATA  —  this is the only part you will ever need to edit.
-
-   Every word here is speaker-confirmed. Add a line to any list and the engine
-   and all three games pick it up automatically. Nothing else to change.
+   1 · THE DATA. Every word below has been confirmed by a native speaker.
    ═══════════════════════════════════════════════════════════════════════════ */
 
-/* Only two verbs here, on purpose.
-   Both are confirmed by a speaker in the FULL pattern — mme rong, mme pú rong,
-   mme rong nyaka, bá pú rong nyaka, a'tuor — and both take a place sensibly.
-   I had four at first and the game produced "they were not telling to church",
-   which is nonsense: a place only belongs with a verb of movement. Two correct
-   verbs beat four with a wrong one, and the variety comes from the other
-   switches anyway — 5 persons x 2 tenses x 2 negations x 4 places = 80
-   sentences per verb.
-   Add a verb here only once a speaker has confirmed it takes prefixes AND that
-   a place reads naturally after it. */
 const VERBS = [
-  {ken:"rong", en:"going"},
-  {ken:"tuor", en:"coming"}
+  {ken:"rong", en:"going"}, {ken:"tuor", en:"coming"}, {ken:"dɔ́k", en:"going"}
 ];
-const WHO = [                        /* the person prefixes, and their English */
-  {ken:"mme", en:"I",   be:["am","was"]},
-  {ken:"O'",  en:"you", be:["are","were"]},
-  {ken:"à",   en:"he",  be:["is","was"]},
-  {ken:"sé",  en:"we",  be:["are","were"]},
-  {ken:"bá",  en:"they",be:["are","were"]}
+const WHO = [
+  {ken:"mme", en:"I", be:["am","was"]},  {ken:"O'", en:"you", be:["are","were"]},
+  {ken:"à", en:"he", be:["is","was"]},   {ken:"sé", en:"we", be:["are","were"]},
+  {ken:"bá", en:"they", be:["are","were"]}
 ];
-const WHEN  = [{ken:null, en:"now"}, {ken:"nyaka", en:"before"}];
-const NOTQ  = [{on:false, en:"it did"}, {on:true, en:"it did not"}];
-const PLACE = [
-  {ken:null,           en:"\u2014"},
-  {ken:"ɛkɛt",         en:"home"},
-  {ken:"ekeré-ékáti",  en:"to school"},
-  {ken:"ekeré-Mandɛm", en:"to church"}
+const WHEN  = [{ken:null,en:"now"},{ken:"nyaka",en:"before"}];
+const NOTQ  = [{on:false,en:"it did"},{on:true,en:"it did not"}];
+const PLACE = [{ken:null,en:"nowhere"},{ken:"ɛkɛt",en:"home"},
+  {ken:"ekeré-ékáti",en:"to school"},{ken:"ekeré-Mandɛm",en:"to church"},
+  {ken:"amem",en:"inside"},{ken:"nefi",en:"outside"}];
+
+const NUMBERS = [["1","ɛ́mɔt"],["2","bɛ́pay"],["3","bɛ́rát"],["4","mɛ́nwi"],["5","bɛ́tay"],
+  ["6","bɛ́tandat"],["7","tándrámɔt"],["8","mɛ́nɛn"],["9","mɛ́nɛn nɛ amɔt"],["10","byó"]];
+
+/* Only the plural pairs a speaker has confirmed. The shape changes per noun, so
+   guessing one would be exactly the mistake this project exists to avoid. */
+const PLURALS = [
+  {one:"ɛkɛt", many:"beket", en1:"house", en2:"houses"},
+  {one:"ékwá", many:"békwá", en1:"plantain", en2:"plantains"}
 ];
 
-/* the vocabulary pool for games two and three */
-const WORDS = [
-  ["mmá","mother"],["étá","father"],["mmɔ","child"],["manor","brother or sister"],
-  ["Mmu","person"],["moh","son or daughter"],["Nereket","family"],
-  ["mmú","dog"],["anwa","cat"],["akók","pig"],["nkok","fowl"],["nsok","elephant"],
-  ["ɛkɛt","house"],["ekeré-ékáti","school"],["ekeré-Mandɛm","church"],
-  ["ɛkáti","book"],["ntaŋ","moon"],["mmok","sun"],["manyɛp","water"],
-  ["ékwá","plantain"],["awó","hand"],["ɛkak","leg"],["besí","face"],["atú","ear"],
-  ["Ereme","big"],["Mandu","small"],["pɛ́pɛ́p","white"],["pyɔ","black"],
-  ["Ndɨ́ndɨ́","good"],["erítí","beautiful"],
-  ["Waï","laugh"],["Dì","cry"],["Rem","speak"],["ghokoti","listen"],
-  ["kong","love"],["ghati","tell"],["foŋori","forgive"],["nnek","please"],
-  ["Yenghé","look"],["Kaïsi","think"],["dɔ́k","go"],["twɔ","come"],
-  ["fa","here"],["afo","there"],["amem","inside"],["nefi","outside"],
-  ["anfai","up"],["ansɛm","behind"],["neku","beside"],["echong","today"],
-  ["ɛ́mɔt","one"],["bɛ́pay","two"],["bɛ́rát","three"],["mɛ́nwi","four"],
-  ["bɛ́tay","five"],["byó","ten"],
-  ["Mba'aaah","hello"],["néyi","good morning"],["nkagha","thank you"],
-  ["nnek","please"],["Nɛpɛ́m","life"],["Mandɛm","God"],["ɛrɔ́ŋɔ́","light"],
-  ["ɛjuri","darkness"],["Nchemty","togetherness"]
+/* The crossword. Laid out and verified by a generator, not by hand, then
+   embedded here so the browser never has to solve anything. Tone marks are
+   dropped for the grid because a crossword needs one letter per square, but
+   Kenyang's own letters stay: Ɛ Ɔ Ŋ are themselves, not E O N. The fully
+   written form appears when a word is solved. */
+const XW = {"w":12,"h":9,"words":[
+ {"g":"BƐTAY","w":"bɛ́tay","clue":"five","r":4,"c":4,"cr":4,"cc":3,"down":false},
+ {"g":"ETA","w":"étá","clue":"father","r":3,"c":6,"cr":2,"cc":6,"down":true},
+ {"g":"MANYƐP","w":"manyɛp","clue":"water","r":1,"c":8,"cr":0,"cc":8,"down":true},
+ {"g":"MMOK","w":"mmok","clue":"sun","r":1,"c":8,"cr":1,"cc":7,"down":false},
+ {"g":"KAISI","w":"Kaïsi","clue":"think","r":1,"c":11,"cr":0,"cc":11,"down":true},
+ {"g":"PYƆ","w":"pyɔ","clue":"black","r":6,"c":8,"cr":6,"cc":7,"down":false},
+ {"g":"NEFI","w":"nefi","clue":"outside","r":3,"c":8,"cr":3,"cc":7,"down":false},
+ {"g":"BƐRAT","w":"bɛ́rát","clue":"three","r":4,"c":4,"cr":3,"cc":4,"down":true},
+ {"g":"ANWA","w":"anwa","clue":"cat","r":7,"c":4,"cr":7,"cc":3,"down":false},
+ {"g":"ƐKƐT","w":"ɛkɛt","clue":"house","r":8,"c":1,"cr":8,"cc":0,"down":false}
+]};
+
+/* the Kenyang alphabet, for the crossword keyboard. Typing Ɛ teaches the
+   alphabet, which is half the reason the crossword is worth having. */
+const KEYS = ["A","B","CH","D","E","Ɛ","F","G","GH","I","Ɨ","J","K","L","M",
+              "N","NY","Ŋ","O","Ɔ","P","R","S","T","U","Ʉ","W","Y"];
+
+const STEPS = [
+{id:"hello", n:"Step 1", title:"Say hello",
+ sub:"Two words you can use before breakfast tomorrow.",
+ words:[["Mba'aaah","hello","Say it warmly and stretch it out. It works for anyone."],
+        ["néyi","good morning","The first thing you say when you wake up."]],
+ mission:"Tomorrow morning, before one word of English, say <b>néyi</b> to whoever you see first."},
+{id:"answer", n:"Step 2", title:"Answer properly",
+ sub:"In Bayangi homes, yes has more than one shape.",
+ words:[["Máah","yes, Mom","Only for your mother. It carries respect with it."],
+        ["Sáah","yes, Dad","For your father, or any elder."],
+        ["Èh!","yes","The plain yes, for anyone."],
+        ["Éh Èh!","no","Careful. Èh alone is yes. Doubled, it becomes no."]],
+ mission:"Next time your mother calls your name, answer <b>Máah</b>. Do not explain first."},
+{id:"howare", n:"Step 3", title:"Ask if someone is well",
+ sub:"A whole conversation, both halves of it.",
+ words:[["Mma O'chi siri?","Mother, are you well?","O' is the mark for you."],
+        ["Éh, M'chi siri","yes, I am well","M' is the mark for I. Same shape, other person."],
+        ["M'pu siri","I am not well","pu is the little word that turns it around."]],
+ mission:"Ask somebody at home <b>Mma O'chi siri?</b> and see whether they can answer."},
+{id:"polite", n:"Step 4", title:"Please and thank you",
+ sub:"The words that make people want to keep talking to you.",
+ words:[["nnek","please","Put it in front of what you are asking for."],
+        ["nkagha","thank you","The plain thank you."],
+        ["Oki ah","thank you","It really means you have done it."]],
+ mission:"Say <b>nkagha</b> next time somebody puts food in front of you. Then ask which one they would say."},
+{id:"family", n:"Step 5", title:"Everyone at home",
+ sub:"The people you see every day, in their own names.",
+ words:[["mmá","mother","Also used warmly for a small child."],["étá","father",""],
+        ["mmɔ","child",""],["manor","brother or sister","One word for both."],
+        ["Nereket","family",""],["Nchemty","family, togetherness","Bigger than it looks."]],
+ mission:"Point at each person at home and say their Kenyang name. Then ask who else belongs on the list."},
+{id:"count", n:"Step 6", title:"Count to five",
+ sub:"Then count real things, not numbers on a screen.",
+ words:[["ɛ́mɔt","one",""],["bɛ́pay","two",""],["bɛ́rát","three",""],
+        ["mɛ́nwi","four",""],["bɛ́tay","five",""]],
+ mission:"Count five things in your kitchen out loud. Get somebody to check you."},
+{id:"need", n:"Step 7", title:"Say what you need",
+ sub:"The three things everybody says most often.",
+ words:[["Nsai ah nu meh","I am hungry","This one has its own shape. Learn it whole."],
+        ["M'pop","I am tired",""],["Che mme","give me","Put what you want after it."],
+        ["Meh yan","I want","Really it means I am looking for."]],
+ mission:"Next time you are hungry, say <b>Nsai ah nu meh</b> before the English."},
+{id:"first", n:"Step 8", title:"Your first sentence",
+ sub:"Now you stop learning words and start building.",
+ words:[["mme rong","I am going",""],["bá rong","they are going","One piece changed."],
+        ["mme pú rong","I am not going","pú goes in the middle."],
+        ["mme rong nyaka","I was going","nyaka at the end puts it in the past."],
+        ["mme rong ɛkɛt","I am going home","Where you are going comes last."]],
+ mission:"Tell somebody where you are going today in Kenyang before you leave the room."}
 ];
 
-/* small helpers, used everywhere below */
-const $       = id => document.getElementById(id);
-const shuffle = a  => a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
-const pick    = a  => a[Math.floor(Math.random()*a.length)];
-const esc     = s  => String(s).replace(/[&<>"]/g,
-  c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const GAPS = ["tomorrow","yesterday","goodbye","good night","I am sorry","I love you",
+  "red","green","blue","bird","fish","tree","happy","sad","rain","road","friend","song"];
+
+const $ = id => document.getElementById(id);
+const shuffle = a => a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
+const pick = a => a[Math.floor(Math.random()*a.length)];
+const esc = s => String(s).replace(/[&<>"]/g,
+  c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+const KEY="nepem.v4";
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY))||{}; }catch(e){ return {}; } }
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+let S = Object.assign({done:{}, fam:{}, names:["Grown up","Child"]}, load());
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   2 · THE SENTENCE ENGINE
-
-   No sentence on this page was written out in advance. Each one is assembled
-   from the confirmed rule, in a fixed order:
-
-        person prefix  +  pú (not)  +  verb  +  nyaka (past)  +  place
-
-   That is why flipping the switches produces correct Kenyang for combinations
-   nobody ever typed in.
+   2 · THE BUILDER
+   Nothing is written out in advance. Each sentence is assembled from the
+   confirmed rule: person + pú (not) + verb + nyaka (past) + place.
    ═══════════════════════════════════════════════════════════════════════════ */
-let E = {who:0, when:0, not:0, place:0, verb:0};
-
-function chip(parent, label, group, i, on){
-  const b = document.createElement("button");
-  b.className = "opt"; b.type = "button"; b.textContent = label;
-  b.setAttribute("aria-pressed", on ? "true" : "false");
-  b.addEventListener("click", () => { E[group] = i; paint(group); });
+let E = {who:0, verb:0, when:0, not:0, place:0};
+function chip(parent,label,group,i,on){
+  const b=document.createElement("button");
+  b.className="opt"; b.type="button"; b.textContent=label;
+  b.setAttribute("aria-pressed", on?"true":"false");
+  b.addEventListener("click",()=>{E[group]=i; paint(group);});
   parent.appendChild(b);
 }
 function chips(){
-  ["cWho","cWhen","cNot","cPlace"].forEach(id => $(id).textContent = "");
-  WHO.forEach((o,i)   => chip($("cWho"),   o.ken, "who",   i, E.who===i));
-  WHEN.forEach((o,i)  => chip($("cWhen"),  o.en,  "when",  i, E.when===i));
-  NOTQ.forEach((o,i)  => chip($("cNot"),   o.en,  "not",   i, E.not===i));
-  PLACE.forEach((o,i) => chip($("cPlace"), o.en,  "place", i, E.place===i));
+  ["cWho","cVerb","cWhen","cNot","cPlace"].forEach(id=>$(id).textContent="");
+  WHO.forEach((o,i)=>chip($("cWho"),o.ken,"who",i,E.who===i));
+  VERBS.forEach((o,i)=>chip($("cVerb"),o.ken,"verb",i,E.verb===i));
+  WHEN.forEach((o,i)=>chip($("cWhen"),o.en,"when",i,E.when===i));
+  NOTQ.forEach((o,i)=>chip($("cNot"),o.en,"not",i,E.not===i));
+  PLACE.forEach((o,i)=>chip($("cPlace"),o.en,"place",i,E.place===i));
 }
 function paint(changed){
-  const who = WHO[E.who], when = WHEN[E.when], neg = NOTQ[E.not].on,
-        place = PLACE[E.place], verb = VERBS[E.verb];
-
-  const parts = [{t:who.ken, r:"who"}];
-  if (neg)       parts.push({t:"pú",       r:"not"});
-  parts.push({t:verb.ken, r:"root"});
-  if (when.ken)  parts.push({t:when.ken,  r:"when"});
-  if (place.ken) parts.push({t:place.ken, r:"place"});
-
-  const out = $("built"); out.textContent = "";
-  parts.forEach(pz => {
-    const el = document.createElement("span");
-    el.className = "m m-" + pz.r;
-    el.textContent = pz.t;
-    // animate only the piece that changed, so the whole line does not flicker
-    if (changed === undefined || changed === pz.r) el.classList.add("in");
+  const who=WHO[E.who], verb=VERBS[E.verb], when=WHEN[E.when],
+        neg=NOTQ[E.not].on, place=PLACE[E.place];
+  const parts=[{t:who.ken,r:"who"}];
+  if(neg) parts.push({t:"pú",r:"not"});
+  parts.push({t:verb.ken,r:"root"});
+  if(when.ken) parts.push({t:when.ken,r:"when"});
+  if(place.ken) parts.push({t:place.ken,r:"place"});
+  const out=$("built"); out.textContent="";
+  parts.forEach(p=>{
+    const el=document.createElement("span");
+    el.className="m m-"+p.r; el.textContent=p.t;
+    if(changed===undefined||changed===p.r||(changed==="verb"&&p.r==="root")) el.classList.add("in");
     out.appendChild(el);
   });
-
-  $("gloss").innerHTML =
-      `<b class="g-who">${who.en}</b> ${who.be[E.when]}`
-    + (neg ? ` <b class="g-not">not</b>` : "")
-    + ` ${verb.en}` + (place.ken ? ` ${place.en}` : "");
-
-  $("recipe").textContent = "who" + (neg ? "  +  not" : "")
-    + "  +  " + verb.ken + (when.ken ? "  +  past" : "")
-    + (place.ken ? "  +  where" : "");
-
-  [["c-who","who"],["c-when","when"],["c-not","not"],["c-place","place"]]
-    .forEach(([cls,grp]) => {
-      [...document.querySelector("."+cls).querySelectorAll(".opt")]
-        .forEach((b,i) => b.setAttribute("aria-pressed", E[grp]===i ? "true":"false"));
-    });
+  $("gloss").innerHTML=`<b class="g-who">${who.en}</b> ${who.be[E.when]}`
+    +(neg?` <b class="g-not">not</b>`:"")+` ${verb.en}`
+    +(place.ken?` ${place.en}`:"");
+  $("recipe").textContent="who"+(neg?"  +  not":"")+"  +  "+verb.ken
+    +(when.ken?"  +  past":"")+(place.ken?"  +  where":"");
+  [["c-who","who"],["c-verb","verb"],["c-when","when"],["c-not","not"],["c-place","place"]]
+    .forEach(([cls,g])=>[...document.querySelector("."+cls).querySelectorAll(".opt")]
+      .forEach((b,i)=>b.setAttribute("aria-pressed",E[g]===i?"true":"false")));
 }
 chips(); paint();
 
-/* the same assembly, used by game one to know what the right answer is */
-function target(st){
-  const who = WHO[st.who], parts = [who.ken];
-  if (st.not)   parts.push("pú");
-  parts.push(VERBS[st.verb].ken);
-  if (st.when)  parts.push("nyaka");
-  if (st.place) parts.push(PLACE[st.place].ken);
-  const en = `${who.en} ${who.be[st.when?1:0]}${st.not?" not":""} `
-           + VERBS[st.verb].en + (st.place ? " " + PLACE[st.place].en : "");
-  return {ken:parts, en};
-}
-
 /* ═══════════════════════════════════════════════════════════════════════════
-   3 · THE GAMES
-
-   Note what the wrong answers are made of: other REAL Kenyang words with
-   different meanings. There are no invented words anywhere in these games —
-   in a project about a machine that makes words up, showing a child a fake
-   one would be the exact mistake the whole thing exists to avoid.
+   3 · THINGS TO DO WITH SOMEBODY
    ═══════════════════════════════════════════════════════════════════════════ */
-const ROUNDS = 8;
-let G = {name:"build", n:0, score:0, state:null};
+const PICKS = [
+  {id:"xw",   ic:"🧩", t:"Kenyang crossword", tag:"fam",
+   d:"Ten words, clues in English, arrows showing the way. Argue about it."},
+  {id:"duel", ic:"⚔️", t:"Family duel", tag:"fam",
+   d:"Two players, one screen. Take turns. Children usually win."},
+  {id:"build",ic:"🔤", t:"Build the sentence", tag:"solo",
+   d:"You get the English. Put the Kenyang words in the right order."}
+];
+let A = {id:"xw"};
 const stage = $("stage");
 
-const bar = () =>
-  `<div class="bar"><span>Question ${Math.min(G.n+1,ROUNDS)} of ${ROUNDS}</span>
-   <span class="score">${G.score} right</span></div>`;
+function paintPicks(){
+  $("picks").innerHTML = PICKS.map(p=>`
+    <button class="pickc" data-pick="${p.id}" role="tab" aria-selected="${A.id===p.id}">
+      <div class="ic" aria-hidden="true">${p.ic}</div>
+      <h3>${p.t}</h3><p>${p.d}</p>
+      <span class="tag ${p.tag}">${p.tag==="fam"?"BETTER WITH TWO":"ON YOUR OWN"}</span>
+    </button>`).join("");
+  document.querySelectorAll(".pickc").forEach(c=>{
+    c.addEventListener("click",()=>{A.id=c.dataset.pick; runActivity();});
+    c.addEventListener("pointermove",e=>{
+      const r=c.getBoundingClientRect();
+      c.style.setProperty("--px",(e.clientX-r.left)+"px");
+      c.style.setProperty("--py",(e.clientY-r.top)+"px");
+    },{passive:true});
+  });
+}
 
-function finish(){
-  const msg = G.score === ROUNDS       ? "Every one correct."
-            : G.score >= ROUNDS * 0.6  ? "Well played."
-            :                            "Play again — these will stick.";
+/* ── the crossword ───────────────────────────────────────────── */
+let X = null;
+function xInit(){
+  const letters = {};                       /* key "r,c" -> the right letter */
+  const clues = {};
+  XW.words.forEach(w=>{
+    for(let i=0;i<w.g.length;i++){
+      const r = w.down ? w.r+i : w.r, c = w.down ? w.c : w.c+i;
+      letters[r+","+c] = w.g[i];
+    }
+    clues[w.cr+","+w.cc] = w;
+  });
+  X = {letters, clues, filled:{}, sel:null, dir:"across", checked:false};
+}
+function xCells(){
+  const out=[];
+  for(let r=0;r<XW.h;r++) for(let c=0;c<XW.w;c++){
+    const k=r+","+c;
+    if(X.clues[k]){
+      const w=X.clues[k];
+      out.push(`<div class="cell clue"><span>${esc(w.clue)}</span>
+        <span class="ar" aria-hidden="true">${w.down?"↓":"→"}</span></div>`);
+    } else if(X.letters[k]){
+      const v = X.filled[k] || "";
+      let cls = "cell let";
+      if(X.sel===k) cls+=" on";
+      else if(xInSelWord(r,c)) cls+=" inword";
+      if(X.checked && v) cls += (v===X.letters[k] ? " good" : " bad");
+      out.push(`<button class="${cls}" data-cell="${k}">${esc(v)}</button>`);
+    } else {
+      out.push(`<div class="cell"></div>`);
+    }
+  }
+  return out.join("");
+}
+function xInSelWord(r,c){
+  if(!X.sel) return false;
+  const [sr,sc]=X.sel.split(",").map(Number);
+  return X.dir==="across" ? (r===sr && xSameRun(sr,sc,r,c,false))
+                          : (c===sc && xSameRun(sr,sc,r,c,true));
+}
+function xSameRun(sr,sc,r,c,down){
+  const w = XW.words.find(w=>{
+    if(w.down!==down) return false;
+    for(let i=0;i<w.g.length;i++){
+      const rr=w.down?w.r+i:w.r, cc=w.down?w.c:w.c+i;
+      if(rr===sr && cc===sc) return true;
+    }
+    return false;
+  });
+  if(!w) return false;
+  for(let i=0;i<w.g.length;i++){
+    const rr=w.down?w.r+i:w.r, cc=w.down?w.c:w.c+i;
+    if(rr===r && cc===c) return true;
+  }
+  return false;
+}
+function xSolvedWords(){
+  return XW.words.filter(w=>{
+    for(let i=0;i<w.g.length;i++){
+      const r=w.down?w.r+i:w.r, c=w.down?w.c:w.c+i;
+      if((X.filled[r+","+c]||"")!==w.g[i]) return false;
+    }
+    return true;
+  });
+}
+function xRender(){
+  const solved = xSolvedWords();
+  const size = Math.min(52, Math.max(30, Math.floor(620/XW.w)));
   stage.innerHTML =
-    `<div class="final"><p class="n">${G.score} / ${ROUNDS}</p><p>${msg}</p></div>
-     <div class="act"><button class="btn solid" data-again>Play again</button>
-     <button class="btn" data-switch>Another game</button></div>`;
+    `<div class="shead"><div><h3>Kenyang crossword</h3>
+      <p>Clues are in English, answers in Kenyang. The arrow in each clue square
+      shows which way its answer runs. Tone marks are left off in the squares, and
+      the full spelling appears when you get a word.</p></div>
+      <span class="tag fam">${solved.length} of ${XW.words.length} solved</span></div>`
+    + `<div class="xwrap"><div class="xgrid" style="--cs:${size}px;
+        grid-template-columns:repeat(${XW.w},${size}px)">${xCells()}</div></div>`
+    + `<p class="xnow" id="xnow"></p>`
+    + `<div class="xkeys">` + KEYS.map(k=>`<button class="k" data-k="${esc(k)}">${esc(k)}</button>`).join("")
+      + `<button class="k wide" data-k="DEL">delete</button></div>`
+    + `<div class="act"><button class="btn" data-xhint>Give me a letter</button>
+       <button class="btn solid" data-xcheck>Check the grid</button>
+       <button class="btn" data-xclear>Start again</button></div>`;
+  xNow();
+}
+function xNow(){
+  const el=$("xnow"); if(!el) return;
+  const solved = xSolvedWords();
+  if(solved.length === XW.words.length){
+    el.innerHTML = `All ten. Now read them out loud to whoever is next to you.`;
+    return;
+  }
+  if(!X.sel){ el.textContent = "Tap a square to start."; return; }
+  const [r,c]=X.sel.split(",").map(Number);
+  const w = XW.words.find(w=>{
+    for(let i=0;i<w.g.length;i++){
+      const rr=w.down?w.r+i:w.r, cc=w.down?w.c:w.c+i;
+      if(rr===r&&cc===c&&w.down===(X.dir==="down")) return true;
+    }
+    return false;
+  }) || XW.words.find(w=>{
+    for(let i=0;i<w.g.length;i++){
+      const rr=w.down?w.r+i:w.r, cc=w.down?w.c:w.c+i;
+      if(rr===r&&cc===c) return true;
+    }
+    return false;
+  });
+  if(!w){ el.textContent=""; return; }
+  const done = solved.includes(w);
+  el.innerHTML = done
+    ? `${esc(w.clue)} is <b>${esc(w.w)}</b>. That is how it is really written.`
+    : `${esc(w.clue)}, ${w.g.length} letters, ${w.down?"downwards":"across"}.`;
+}
+function xAdvance(){
+  if(!X.sel) return;
+  let [r,c]=X.sel.split(",").map(Number);
+  for(let n=0;n<XW.w+XW.h;n++){
+    if(X.dir==="across") c++; else r++;
+    const k=r+","+c;
+    if(X.letters[k]){ X.sel=k; return; }
+    if(r>=XW.h||c>=XW.w) return;
+  }
 }
 
-/* ── game one · build the sentence ──────────────────────────────── */
-function gBuild(){
-  if (G.n >= ROUNDS) return finish();
-  const st = {
-    who:  Math.floor(Math.random()*WHO.length),
-    when: Math.random() < .5 ? 1 : 0,
-    not:  Math.random() < .5,
-    place:Math.random() < .6 ? 1 + Math.floor(Math.random()*(PLACE.length-1)) : 0,
-    verb: Math.floor(Math.random()*VERBS.length)
-  };
-  const t = target(st);
-
-  /* colour each tile by the role it plays, so the colours teach as you play */
-  const role = {};
-  role[WHO[st.who].ken] = "who";
-  role["pú"] = "not";
-  role["nyaka"] = "when";
-  role[VERBS[st.verb].ken] = "root";
-  PLACE.forEach(p => { if (p.ken) role[p.ken] = "place"; });
-  WHO.forEach(w => { if (!(w.ken in role)) role[w.ken] = "who"; });
-
-  /* two extra real words as distractors */
-  const extras = shuffle(
-    [...WHO.map(w=>w.ken), "nyaka", "pú",
-     ...PLACE.filter(p=>p.ken).map(p=>p.ken)].filter(w => !t.ken.includes(w))
-  ).slice(0,2);
-
-  G.state = {t, chosen:[]};
-  stage.innerHTML = bar()
-    + `<p class="ask">${esc(t.en)}</p>`
-    + `<p class="askhint">Tap the Kenyang words in the right order</p>`
-    + `<div class="slotrow" id="slots"></div>`
-    + `<div class="tiles">` + shuffle([...t.ken, ...extras]).map((w,i) =>
-        `<button class="tile t-${role[w]||"root"}" data-tile="${i}"
-           data-w="${esc(w)}">${esc(w)}</button>`).join("") + `</div>`
-    + `<div class="act"><button class="btn" data-undo>Undo</button>
-       <button class="btn solid" data-check>Check it</button></div>`;
+/* ── the duel ────────────────────────────────────────────────── */
+let D = null;
+const ALL_WORDS = STEPS.flatMap(s=>s.words.map(w=>[w[0],w[1]]));
+function duelInit(){
+  D = {turn:0, score:[0,0], n:0, rounds:10, q:null, names:S.names.slice()};
 }
-function buildCheck(){
-  const {t, chosen} = G.state;
-  const ok = chosen.length === t.ken.length && chosen.every((w,i) => w === t.ken[i]);
-  if (ok) G.score++;
-  G.n++;
-  stage.querySelectorAll("[data-tile],[data-check],[data-undo]")
-       .forEach(b => b.disabled = true);
-  stage.insertAdjacentHTML("beforeend",
-    `<div class="verdict ${ok?"ok":"no"}">` + (ok
-      ? `Yes. <b>${esc(t.ken.join(" "))}</b> — and that order IS the rule:
-         who, then not, then the verb, then when, then where.`
-      : `Not quite. It is <b>${esc(t.ken.join(" "))}</b>.
-         The order never changes: who, not, verb, when, where.`)
-    + `</div><div class="act">
-       <button class="btn solid" data-next>Next</button></div>`);
-}
-
-/* ── game two · what does it mean ───────────────────────────────── */
-function gMean(){
-  if (G.n >= ROUNDS) return finish();
-  const answer = pick(WORDS);
-  const opts = shuffle([answer,
-    ...shuffle(WORDS.filter(w => w[1] !== answer[1])).slice(0,3)]);
-  G.state = {answer};
-  stage.innerHTML = bar()
+function duelRender(){
+  if(D.n >= D.rounds) return duelEnd();
+  const answer = pick(ALL_WORDS);
+  const others = shuffle(ALL_WORDS.filter(w=>w[1]!==answer[1])).slice(0,3);
+  D.q = {answer};
+  const t = D.turn;
+  stage.innerHTML =
+    `<div class="shead"><div><h3>Family duel</h3>
+      <p>Ten questions, taking turns. Tap a name to change it. Whoever is behind
+      gets to pick the next activity.</p></div></div>`
+    + `<div class="duel">
+        <div class="pl one ${t===0?"turn":""}">
+          <p class="nm"><button class="lvl" data-rename="0"
+             style="padding:2px 10px;font-size:12px">${esc(D.names[0])}</button></p>
+          <p class="sc">${D.score[0]}</p></div>
+        <div class="pl two ${t===1?"turn":""}">
+          <p class="nm"><button class="lvl" data-rename="1"
+             style="padding:2px 10px;font-size:12px">${esc(D.names[1])}</button></p>
+          <p class="sc">${D.score[1]}</p></div></div>`
+    + `<p class="whoseturn">Question ${D.n+1} of ${D.rounds}.
+        <b style="color:${t===0?"var(--p1)":"var(--p2)"}">${esc(D.names[t])}</b>, your turn.</p>`
     + `<p class="ask" style="color:var(--place)">${esc(answer[0])}</p>`
     + `<p class="askhint">What does this mean?</p>`
-    + `<div class="choices">` + opts.map(o =>
-        `<button class="choice" data-en="${esc(o[1])}">${esc(o[1])}</button>`
-      ).join("") + `</div>`;
+    + `<div class="choices">` + shuffle([answer,...others]).map(o=>
+        `<button class="choice" data-den="${esc(o[1])}">${esc(o[1])}</button>`).join("")
+    + `</div>`;
+}
+function duelEnd(){
+  const [a,b]=D.score;
+  const msg = a===b ? "A draw. Play again to settle it."
+    : `${a>b?D.names[0]:D.names[1]} wins.`;
+  stage.innerHTML = `<div class="final">
+      <p class="n">${a} <span style="color:var(--mute);font-size:.6em">to</span> ${b}</p>
+      <p>${esc(msg)}</p></div>
+    <div class="act"><button class="btn solid" data-dagain>Play again</button></div>`;
 }
 
-/* ── game three · find the pairs ────────────────────────────────── */
-function gPairs(){
-  const set = shuffle(WORDS).slice(0,6);
-  G.state = {
-    set,
-    cards: shuffle([...set.map((w,i)=>({face:w[0], pair:i, side:"k"})),
-                    ...set.map((w,i)=>({face:w[1], pair:i, side:"e"}))]),
-    sel:[], done:[], note:"", noteOk:false
-  };
-  paintPairs();
-}
-function paintPairs(){
-  const S = G.state;
-  if (S.done.length === S.cards.length){
-    stage.innerHTML =
-      `<div class="final"><p class="n" style="color:var(--who)">All found</p>
-       <p>Every pair matched.</p></div>
-       <div class="act"><button class="btn solid" data-again>Play again</button>
-       <button class="btn" data-switch>Another game</button></div>`;
-    return;
-  }
+/* ── build the sentence, alone ───────────────────────────────── */
+let B = null;
+function buildNew(){
+  if(B && B.n >= 8) return buildEnd();
+  const st = {who:Math.floor(Math.random()*WHO.length),
+              when:Math.random()<.5?1:0, not:Math.random()<.5,
+              place:Math.random()<.6?1+Math.floor(Math.random()*(PLACE.length-1)):0,
+              verb:Math.floor(Math.random()*2)};   /* rong or tuor, both take a place */
+  const who=WHO[st.who], parts=[who.ken];
+  if(st.not) parts.push("pú");
+  parts.push(VERBS[st.verb].ken);
+  if(st.when) parts.push("nyaka");
+  if(st.place) parts.push(PLACE[st.place].ken);
+  const en = `${who.en} ${who.be[st.when?1:0]}${st.not?" not":""} `
+    + VERBS[st.verb].en + (st.place?" "+PLACE[st.place].en:"");
+  const role={"pú":"not","nyaka":"when"};
+  WHO.forEach(w=>role[w.ken]="who");
+  VERBS.forEach(v=>role[v.ken]="root");
+  PLACE.forEach(p=>{if(p.ken) role[p.ken]="place";});
+  const extras = shuffle([...WHO.map(w=>w.ken),"nyaka","pú",
+    ...PLACE.filter(p=>p.ken).map(p=>p.ken)].filter(w=>!parts.includes(w))).slice(0,2);
+  B.t={ken:parts,en}; B.chosen=[];
   stage.innerHTML =
-    `<div class="bar"><span>Match each word to its meaning</span>
-     <span class="score">${S.done.length/2} of ${S.set.length} found</span></div>`
-  + `<div class="pairs">` + S.cards.map((c,i) =>
-      `<button class="pair ${S.done.includes(i)?"done":S.sel.includes(i)?"sel":""}"
-         data-card="${i}" ${S.done.includes(i)?"disabled":""}>${esc(c.face)}</button>`
-    ).join("") + `</div>`
-  + (S.note ? `<div class="verdict ${S.noteOk?"ok":"no"}">${S.note}</div>` : "");
+    `<div class="shead"><div><h3>Build the sentence</h3>
+      <p>The order never changes: who, then not, then the verb, then when,
+      then where.</p></div></div>`
+    + `<div class="bar"><span>Question ${B.n+1} of 8</span>
+       <span class="pbar"><i style="width:${(B.n/8)*100}%"></i></span>
+       <span style="color:var(--place)">${B.score} right</span></div>`
+    + `<p class="ask">${esc(en)}</p><p class="askhint">Tap them into the right order</p>`
+    + `<div class="slotrow" id="slots" style="display:flex;flex-wrap:wrap;gap:8px;
+        justify-content:center;min-height:60px;align-items:center;padding:13px;
+        border:1px dashed var(--edge-hi);border-radius:14px;margin:0 0 18px"></div>`
+    + `<div style="display:flex;flex-wrap:wrap;gap:9px;justify-content:center">`
+    + shuffle([...parts,...extras]).map((w,i)=>
+        `<button class="choice" style="font-size:20px;min-height:0;padding:12px 18px;
+          color:var(--${role[w]==="root"?"root":role[w]})"
+          data-tile="${i}" data-w="${esc(w)}">${esc(w)}</button>`).join("")
+    + `</div><div class="act"><button class="btn" data-bundo>Undo</button>
+       <button class="btn solid" data-bcheck>Check it</button></div>`;
+}
+function buildEnd(){
+  stage.innerHTML = `<div class="final"><p class="n">${B.score} / 8</p>
+    <p>${B.score>=6?"That is the rule working.":"Try once more. The order is always the same."}</p></div>
+    <div class="act"><button class="btn solid" data-bagain>Play again</button></div>`;
 }
 
-/* ── one click handler for everything inside the stage ──────────── */
-stage.addEventListener("click", e => {
-  const t = e.target.closest("button");
-  if (!t) return;
+function runActivity(){
+  document.querySelectorAll(".pickc").forEach(c=>
+    c.setAttribute("aria-selected", c.dataset.pick===A.id?"true":"false"));
+  if(A.id==="xw"){ if(!X) xInit(); xRender(); }
+  else if(A.id==="duel"){ duelInit(); duelRender(); }
+  else { B={n:0,score:0}; buildNew(); }
+}
 
-  if (t.dataset.again  !== undefined) return startGame(G.name);
-  if (t.dataset.switch !== undefined)
-    return $("play").scrollIntoView({block:"start"});
-  if (t.dataset.next   !== undefined) return runGame();
+/* one handler for everything inside the activity stage */
+stage.addEventListener("click", e=>{
+  const b = e.target.closest("button"); if(!b) return;
 
-  /* game one — placing a tile */
-  if (t.dataset.tile !== undefined){
-    G.state.chosen.push(t.dataset.w);
-    t.disabled = true;
-    $("slots").insertAdjacentHTML("beforeend",
-      `<span class="picked">${esc(t.dataset.w)}</span>`);
-    return;
+  /* crossword */
+  if(b.dataset.cell){
+    if(X.sel===b.dataset.cell) X.dir = X.dir==="across"?"down":"across";
+    X.sel=b.dataset.cell; X.checked=false; xRender(); return;
   }
-  if (t.dataset.undo !== undefined){
-    const last = G.state.chosen.pop();
-    if (last === undefined) return;
-    $("slots").lastElementChild.remove();
-    const tile = [...stage.querySelectorAll("[data-tile]")]
-      .find(b => b.dataset.w === last && b.disabled);
-    if (tile) tile.disabled = false;
-    return;
+  if(b.dataset.k){
+    if(!X.sel) return;
+    if(b.dataset.k==="DEL"){ delete X.filled[X.sel]; }
+    else { X.filled[X.sel]=b.dataset.k; xAdvance(); }
+    X.checked=false; xRender(); return;
   }
-  if (t.dataset.check !== undefined) return buildCheck();
+  if(b.dataset.xcheck!==undefined){ X.checked=true; xRender(); return; }
+  if(b.dataset.xclear!==undefined){ xInit(); xRender(); return; }
+  if(b.dataset.xhint!==undefined){
+    const empty = Object.keys(X.letters).filter(k=>X.filled[k]!==X.letters[k]);
+    if(empty.length){ const k=pick(empty); X.filled[k]=X.letters[k]; X.sel=k; }
+    X.checked=false; xRender(); return;
+  }
 
-  /* game two — choosing a meaning */
-  if (t.dataset.en !== undefined){
-    const right = G.state.answer, ok = t.dataset.en === right[1];
-    if (ok) G.score++;
-    G.n++;
-    stage.querySelectorAll(".choice").forEach(b => {
-      b.disabled = true;
-      if (b.dataset.en === right[1]) b.classList.add("right");
-      else if (b === t) b.classList.add("wrong");
+  /* duel */
+  if(b.dataset.rename!==undefined){
+    const i=+b.dataset.rename;
+    const v=prompt("Who is playing?", D.names[i]);
+    if(v && v.trim()){ D.names[i]=v.trim().slice(0,14); S.names=D.names.slice(); save(); }
+    duelRender(); return;
+  }
+  if(b.dataset.den!==undefined){
+    const right=D.q.answer, ok=b.dataset.den===right[1];
+    if(ok) D.score[D.turn]++;
+    stage.querySelectorAll(".choice").forEach(c=>{
+      c.disabled=true;
+      if(c.dataset.den===right[1]) c.classList.add("right");
+      else if(c===b) c.classList.add("wrong");
     });
     stage.insertAdjacentHTML("beforeend",
-      `<div class="verdict ${ok?"ok":"no"}">` + (ok
+      `<div class="verdict ${ok?"ok":"no"}">`+(ok
         ? `Yes. <b>${esc(right[0])}</b> is ${esc(right[1])}.`
         : `Not that one. <b>${esc(right[0])}</b> is ${esc(right[1])}.`)
-      + `</div><div class="act">
-         <button class="btn solid" data-next>Next</button></div>`);
+      +`</div><div class="act"><button class="btn solid" data-dnext>Next</button></div>`);
     return;
   }
+  if(b.dataset.dnext!==undefined){ D.n++; D.turn=1-D.turn; duelRender(); return; }
+  if(b.dataset.dagain!==undefined){ duelInit(); duelRender(); return; }
 
-  /* game three — turning a card */
-  if (t.dataset.card !== undefined){
-    const i = +t.dataset.card, S = G.state;
-    if (S.done.includes(i) || S.sel.includes(i)) return;
-    S.sel.push(i);
-    if (S.sel.length === 2){
-      const [a,b] = S.sel.map(k => S.cards[k]);
-      if (a.pair === b.pair && a.side !== b.side){
-        S.done.push(...S.sel);
-        S.note = `<b>${esc(S.set[a.pair][0])}</b> is ${esc(S.set[a.pair][1])}.`;
-        S.noteOk = true;
-      } else {
-        S.note = `${esc(a.face)} and ${esc(b.face)} are not a pair. Try again.`;
-        S.noteOk = false;
-      }
-      S.sel = [];
-    }
-    paintPairs();
+  /* build */
+  if(b.dataset.tile!==undefined){
+    B.chosen.push(b.dataset.w); b.disabled=true;
+    $("slots").insertAdjacentHTML("beforeend",
+      `<span style="font-family:var(--serif);font-size:19px;padding:8px 14px;
+       border-radius:10px;background:var(--lift2);border:1px solid var(--edge)"
+       >${esc(b.dataset.w)}</span>`);
+    return;
   }
+  if(b.dataset.bundo!==undefined){
+    const last=B.chosen.pop(); if(last===undefined) return;
+    $("slots").lastElementChild.remove();
+    const t=[...stage.querySelectorAll("[data-tile]")].find(x=>x.dataset.w===last&&x.disabled);
+    if(t) t.disabled=false; return;
+  }
+  if(b.dataset.bcheck!==undefined){
+    const ok = B.chosen.length===B.t.ken.length && B.chosen.every((w,i)=>w===B.t.ken[i]);
+    if(ok) B.score++;
+    B.n++;
+    stage.querySelectorAll("[data-tile],[data-bcheck],[data-bundo]").forEach(x=>x.disabled=true);
+    stage.insertAdjacentHTML("beforeend",
+      `<div class="verdict ${ok?"ok":"no"}">`+(ok
+        ? `Yes. <b>${esc(B.t.ken.join(" "))}</b>`
+        : `Not quite. It is <b>${esc(B.t.ken.join(" "))}</b>.`)
+      +`</div><div class="act"><button class="btn solid" data-bnext>Next</button></div>`);
+    return;
+  }
+  if(b.dataset.bnext!==undefined){ buildNew(); return; }
+  if(b.dataset.bagain!==undefined){ B={n:0,score:0}; buildNew(); return; }
 });
 
-function runGame(){
-  if (G.name === "build")      gBuild();
-  else if (G.name === "mean")  gMean();
-  else                         gPairs();
-}
-function startGame(name){
-  G = {name, n:0, score:0, state:null};
-  document.querySelectorAll(".gcard").forEach(c =>
-    c.setAttribute("aria-selected", c.dataset.game === name ? "true" : "false"));
-  runGame();
-}
-document.querySelectorAll(".gcard").forEach(card => {
-  card.addEventListener("click", () => startGame(card.dataset.game));
-  card.addEventListener("pointermove", e => {
-    const r = card.getBoundingClientRect();
-    card.style.setProperty("--px", (e.clientX - r.left) + "px");
-    card.style.setProperty("--py", (e.clientY - r.top) + "px");
-  }, {passive:true});
+/* physical keyboard for the crossword, because adults will use one */
+addEventListener("keydown", e=>{
+  if(A.id!=="xw" || !X || !X.sel) return;
+  if(e.key==="Backspace"){ delete X.filled[X.sel]; X.checked=false; xRender(); e.preventDefault(); return; }
+  const up=e.key.toUpperCase();
+  if(KEYS.includes(up)){ X.filled[X.sel]=up; xAdvance(); X.checked=false; xRender(); }
 });
-startGame("build");
+
+paintPicks(); runActivity();
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   4 · ATMOSPHERE
-   A light that follows the cursor, and a slow drift of the language's own
-   letters on a canvas. Both switch off completely for anyone who has asked
-   their system for reduced motion, and the cursor light is skipped on touch
-   devices where there is no cursor to follow.
+   4 · THE STEPS, FOR LEARNING ALONE
    ═══════════════════════════════════════════════════════════════════════════ */
-const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
-const fine = matchMedia("(hover: hover)").matches;
-
-if (fine && !calm){
-  let frame;
-  addEventListener("pointermove", e => {
-    if (frame) return;                       // one update per animation frame
-    frame = requestAnimationFrame(() => {
-      frame = null;
-      document.documentElement.style.setProperty("--mx", e.clientX + "px");
-      document.documentElement.style.setProperty("--my", e.clientY + "px");
-    });
-  }, {passive:true});
+let L={step:0, phase:"learn", n:0, score:0, q:null};
+const ROUNDS=6, PASS=4;
+function paintPath(){
+  $("pathGrid").innerHTML = STEPS.map((s,i)=>
+    `<button class="step ${S.done[s.id]>=2?"done":""}" data-step="${i}" role="tab"
+      aria-selected="${L.step===i}"><span class="tick" aria-hidden="true">✓</span>
+      <p class="sn">${s.n.toUpperCase()}</p><h4>${s.title}</h4></button>`).join("");
+  document.querySelectorAll(".step").forEach(c=>
+    c.addEventListener("click",()=>{L.step=+c.dataset.step; L.phase="learn"; renderL();}));
 }
+function renderL(){
+  const s=STEPS[L.step]; paintPath();
+  const head=`<div class="shead"><div><h3>${s.title}</h3><p>${s.sub}</p></div></div>`;
+  if(L.phase==="learn"){
+    $("lesson").innerHTML = head + `<div class="wordlist">` + s.words.map(w=>
+      `<div class="wcard"><p class="kk">${esc(w[0])}</p><p class="ee">${esc(w[1])}</p>
+       ${w[2]?`<p class="nn">${esc(w[2])}</p>`:""}</div>`).join("")
+      + `</div><div class="act"><button class="btn solid" data-lgo>I have read them</button></div>`;
+    return;
+  }
+  if(L.phase==="practise"){
+    if(L.n>=ROUNDS){ if(L.score>=PASS&&(S.done[s.id]||0)<1){S.done[s.id]=1;save();}
+      L.phase="mission"; return renderL(); }
+    const pool=s.words.map(w=>[w[0],w[1]]);
+    const answer=pick(pool);
+    let others=shuffle(pool.filter(w=>w[1]!==answer[1])).slice(0,3);
+    while(others.length<3){
+      const x=pick(ALL_WORDS.filter(w=>w[1]!==answer[1]&&!others.some(o=>o[1]===w[1])));
+      if(!x) break; others.push(x);
+    }
+    L.q={answer};
+    $("lesson").innerHTML = head
+      + `<div class="bar"><span>Question ${L.n+1} of ${ROUNDS}</span>
+         <span class="pbar"><i style="width:${(L.n/ROUNDS)*100}%"></i></span>
+         <span style="color:var(--place)">${L.score} right</span></div>`
+      + `<p class="ask" style="color:var(--place)">${esc(answer[0])}</p>`
+      + `<p class="askhint">What does this mean?</p><div class="choices">`
+      + shuffle([answer,...others]).map(o=>
+          `<button class="choice" data-len="${esc(o[1])}">${esc(o[1])}</button>`).join("")
+      + `</div>`;
+    return;
+  }
+  $("lesson").innerHTML = head
+    + `<div class="final"><p class="n">${L.score} / ${ROUNDS}</p>
+       <p>Now the part that actually matters.</p></div>`
+    + `<div class="mission"><span class="mi" aria-hidden="true">🏠</span>
+       <span class="mt">${s.mission}</span></div>`
+    + `<div class="act"><button class="btn fam" data-lmission>${
+        S.done[s.id]>=2?"You did it ✓":"I did it"}</button>`
+    + (L.step<STEPS.length-1?`<button class="btn" data-lnext>Next step</button>`:"")
+    + `</div>`;
+}
+$("lesson").addEventListener("click", e=>{
+  const b=e.target.closest("button"); if(!b) return;
+  if(b.dataset.lgo!==undefined){ L.phase="practise"; L.n=0; L.score=0; renderL(); return; }
+  if(b.dataset.lnext!==undefined){ L.step=Math.min(L.step+1,STEPS.length-1);
+    L.phase="learn"; renderL(); return; }
+  if(b.dataset.lmission!==undefined){ S.done[STEPS[L.step].id]=2; save(); renderL(); return; }
+  if(b.dataset.lnextq!==undefined){ L.n++; renderL(); return; }
+  if(b.dataset.len!==undefined){
+    const right=L.q.answer, ok=b.dataset.len===right[1];
+    if(ok) L.score++;
+    $("lesson").querySelectorAll(".choice").forEach(c=>{
+      c.disabled=true;
+      if(c.dataset.len===right[1]) c.classList.add("right");
+      else if(c===b) c.classList.add("wrong");
+    });
+    $("lesson").insertAdjacentHTML("beforeend",
+      `<div class="verdict ${ok?"ok":"no"}">`+(ok
+        ? `Yes. <b>${esc(right[0])}</b> is ${esc(right[1])}.`
+        : `Not that one. <b>${esc(right[0])}</b> is ${esc(right[1])}.`)
+      +`</div><div class="act"><button class="btn solid" data-lnextq>Next</button></div>`);
+  }
+});
+renderL();
 
-if (!calm){
-  const c = $("field"), x = c.getContext("2d");
-  const GLYPH = ["ɛ","ɔ","ŋ","ɨ","ʉ","á","à","ǎ","ɛ́","ɔ́"];
-  const HUE = ["rgba(66,227,188,","rgba(185,139,255,",
-               "rgba(255,106,85,","rgba(255,201,77,"];
-  const glyph = () => GLYPH[Math.floor(Math.random()*GLYPH.length)];
-  let dots = [], w = 0, h = 0;
+/* ═══════════════════════════════════════════════════════════════════════════
+   5 · ASK YOUR FAMILY, NUMBERS, CHAT, ATMOSPHERE
+   ═══════════════════════════════════════════════════════════════════════════ */
+function paintGaps(){
+  const n=Object.keys(S.fam).filter(k=>S.fam[k]).length;
+  $("famCount").textContent = n?`You have brought back ${n} word${n>1?"s":""}.`:"";
+  $("gapGrid").innerHTML = GAPS.map(g=>
+    `<button class="gap ${S.fam[g]?"filled":""}" data-gap="${esc(g)}">
+      <p class="q">${esc(g)}</p><p class="a">${esc(S.fam[g]||"")}</p></button>`).join("");
+}
+$("gapGrid").addEventListener("click", e=>{
+  const b=e.target.closest("[data-gap]"); if(!b) return;
+  const g=b.dataset.gap;
+  const got=prompt(`Somebody told you the Kenyang for "${g}".\nWrite it exactly as they said it:`, S.fam[g]||"");
+  if(got===null) return;
+  const v=got.trim();
+  if(v) S.fam[g]=v; else delete S.fam[g];
+  save(); paintGaps();
+});
+paintGaps();
 
+let P={thing:0,count:2};
+$("numgrid").innerHTML = NUMBERS.map(([d,k],i)=>
+  `<button class="num" data-num="${i}"><span class="d">${d}</span>
+    <span class="kx">${esc(k)}</span></button>`).join("");
+$("numgrid").addEventListener("click", e=>{
+  const b=e.target.closest("[data-num]"); if(!b) return;
+  [...$("numgrid").children].forEach(c=>c.classList.remove("on"));
+  b.classList.add("on");
+  const i=+b.dataset.num; if(i<5){ P.count=i+1; paintPlural(); }
+});
+function paintPlural(){
+  const t=PLURALS[P.thing], n=P.count, one=n===1;
+  $("plRow").innerHTML=`<span class="n1">${esc(one?t.one:t.many)}</span>
+    <span class="n2">${esc(NUMBERS[n-1][1])}</span>`;
+  $("plEn").textContent=`${n} ${one?t.en1:t.en2}. The number comes after the thing, `
+    +`and the thing changes shape.`;
+  $("plThings").innerHTML=PLURALS.map((p,i)=>
+    `<button class="lvl" data-thing="${i}" aria-pressed="${P.thing===i}">${esc(p.en1)}</button>`).join("");
+  $("plCounts").innerHTML=[1,2,3,4,5].map(c=>
+    `<button class="lvl" data-count="${c}" aria-pressed="${P.count===c}">${c}</button>`).join("");
+}
+document.addEventListener("click", e=>{
+  const th=e.target.closest("[data-thing]"), ct=e.target.closest("[data-count]");
+  if(th){P.thing=+th.dataset.thing; paintPlural();}
+  if(ct){P.count=+ct.dataset.count; paintPlural();}
+});
+paintPlural();
+
+const CHAT_URL=$("newTab").href;
+let chatLoaded=false;
+$("openChat").addEventListener("click",()=>{
+  $("chatModal").classList.add("open"); document.body.style.overflow="hidden";
+  if(chatLoaded) return;
+  const f=document.createElement("iframe");
+  f.src=CHAT_URL+(CHAT_URL.includes("?")?"&":"?")+"embed=true";
+  f.title="Nɛpɛm, the Kenyang tutor";
+  f.addEventListener("load",()=>{const w=$("waking"); if(w) w.remove();});
+  $("chatBody").appendChild(f); chatLoaded=true;
+  setTimeout(()=>{const w=$("waking"); if(w) w.innerHTML=
+    `<p style="margin:0">He is slow to wake.<br><a href="${CHAT_URL}" target="_blank"
+     rel="noopener" style="color:var(--place)">Open him in a new tab instead →</a></p>`;},25000);
+});
+function closeChat(){ $("chatModal").classList.remove("open"); document.body.style.overflow=""; }
+$("closeChat").addEventListener("click",closeChat);
+$("chatModal").addEventListener("click",e=>{if(e.target.id==="chatModal") closeChat();});
+addEventListener("keydown",e=>{if(e.key==="Escape") closeChat();});
+
+const calm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const fine=matchMedia("(hover: hover)").matches;
+if(fine&&!calm){
+  let frame;
+  addEventListener("pointermove",e=>{
+    if(frame) return;
+    frame=requestAnimationFrame(()=>{frame=null;
+      document.documentElement.style.setProperty("--mx",e.clientX+"px");
+      document.documentElement.style.setProperty("--my",e.clientY+"px");});
+  },{passive:true});
+}
+if(!calm){
+  const c=$("field"), x=c.getContext("2d");
+  const GLYPH=["ɛ","ɔ","ŋ","ɨ","ʉ","á","à","ǎ","ɛ́","ɔ́"];
+  const HUE=["rgba(66,227,188,","rgba(185,139,255,","rgba(255,106,85,","rgba(255,201,77,"];
+  const g=()=>GLYPH[Math.floor(Math.random()*GLYPH.length)];
+  let dots=[],w=0,h=0;
   function size(){
-    w = c.width = innerWidth; h = c.height = innerHeight;
-    dots = Array.from({length: Math.min(40, Math.round(w*h/38000))}, () => ({
-      x:Math.random()*w, y:Math.random()*h, g:glyph(),
-      s:12 + Math.random()*18, vx:(Math.random()-.5)*.10,
-      vy:-.04 - Math.random()*.09, a:.03 + Math.random()*.06,
-      hue:HUE[Math.floor(Math.random()*HUE.length)]
-    }));
+    w=c.width=innerWidth; h=c.height=innerHeight;
+    dots=Array.from({length:Math.min(34,Math.round(w*h/44000))},()=>({
+      x:Math.random()*w,y:Math.random()*h,g:g(),s:12+Math.random()*15,
+      vx:(Math.random()-.5)*.08,vy:-.03-Math.random()*.07,
+      a:.022+Math.random()*.045,hue:HUE[Math.floor(Math.random()*HUE.length)]}));
   }
   function tick(){
     x.clearRect(0,0,w,h);
-    for (const d of dots){
-      d.x += d.vx; d.y += d.vy;
-      if (d.y < -30){ d.y = h + 20; d.x = Math.random()*w; d.g = glyph(); }
-      if (d.x < -30) d.x = w + 20; else if (d.x > w + 30) d.x = -20;
-      x.font = `${d.s}px "Gentium Book Plus", Georgia, serif`;
-      x.fillStyle = d.hue + d.a + ")";
-      x.fillText(d.g, d.x, d.y);
+    for(const d of dots){
+      d.x+=d.vx; d.y+=d.vy;
+      if(d.y<-30){d.y=h+20; d.x=Math.random()*w; d.g=g();}
+      if(d.x<-30) d.x=w+20; else if(d.x>w+30) d.x=-20;
+      x.font=`${d.s}px "Gentium Book Plus", Georgia, serif`;
+      x.fillStyle=d.hue+d.a+")"; x.fillText(d.g,d.x,d.y);
     }
     requestAnimationFrame(tick);
   }
-  size(); tick();
-  addEventListener("resize", size);
+  size(); tick(); addEventListener("resize",size);
 }
 </script>
 </body>
