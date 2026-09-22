@@ -24,6 +24,21 @@ import numpy as np
 import streamlit as st
 from openai import OpenAI
 
+# ─── FUNCTION CALLING ────────────────────────────────────────────────────────
+# tools.py sits beside this file. It gives the model four things it can ASK me to
+# do, instead of me guessing what it needs:
+#
+#   look_up_kenyang    the MODEL picks the search term, not my code
+#   is_this_real       checks a word against the whole corpus before it is taught
+#   get_grammar_rule   hands back a speaker-verified rule word for word
+#   build_verb_forms   assembles a verb by the fixed rule, so the order cannot
+#                      come out wrong
+#
+# The gain that matters most: when a learner types "use it in a sentence", my
+# retrieval code has no content words to search on — but the model knows what the
+# sentence is about and can say so. Retrieval stops being a guess.
+import tools
+
 # =============================================================================
 # 1. CONFIG
 # =============================================================================
@@ -1015,6 +1030,14 @@ truly need an answer to go on. No "great job" or "keep practising". Warmth lives
 correct someone, not in exclamation marks.
 """
 
+# ─── TELLING THE MODEL THE TOOLS ARE THERE ───────────────────────────────────
+# Defining tools is not enough. A model will cheerfully ignore them and answer
+# from memory, which is the exact behaviour I am trying to stop. These lines say
+# plainly WHEN to call each one, and they are appended to the REMINDER rather
+# than the static prompt because the reminder sits closest to the learner's
+# question — and instructions placed there are followed noticeably better.
+RULES_REMINDER = RULES_REMINDER + tools.TOOL_INSTRUCTIONS
+
 # --- what has been taught so far ---------------------------------------------
 # Kenyang words carry marks English words don't: ɛ ɔ ŋ ʉ ɨ, tone accents, or the
 # apostrophe in forms like O'chi. That's enough to spot them without another API call.
@@ -1377,6 +1400,40 @@ except Exception as e:
     # blank page every time.
     boot.error(f"The knowledge wouldn't load: {type(e).__name__}: {e}")
 
+
+# ─── INDEXES THE TOOLS NEED ──────────────────────────────────────────────────
+# Two lookups, built once and cached on the corpus signature, so they refresh
+# only when the knowledge folder actually changes.
+#
+# word_index  Every Kenyang-looking token in the WHOLE corpus, with the best
+#             trust tier it appears under. This is what makes is_this_real
+#             trustworthy. The amber flag under each reply compares the answer
+#             against the passages retrieved THAT TURN — which is why it wrongly
+#             flagged real words like Ndǔ and afú when I asked it to read Mark
+#             1:9: their definitions simply had not come back that turn.
+#             Checking the whole corpus ends that false alarm.
+#
+# rule_book   The verified file sliced up by its own "## " headings, so the model
+#             can ask for "adjective_order" and get that rule verbatim. Verbatim
+#             is the point — paraphrasing a rule is exactly how the wrong
+#             adjective order got in the first time.
+@st.cache_data(show_spinner=False)
+def build_tool_indexes(sig):
+    _always, ch, _man, _over, _tr = build_corpus(sig)
+    return (tools.build_word_index(ch),
+            tools.load_rules(os.path.join(KB_ROOT, "kenyang_verified_speaker.md")))
+
+
+word_index, rule_book = {}, {}
+try:
+    if chunks:
+        word_index, rule_book = build_tool_indexes(signature)
+except Exception as e:
+    # If this fails the tools degrade instead of breaking: is_this_real reports
+    # nothing found, get_grammar_rule says no rules are stored. Better than
+    # taking the whole app down over an index.
+    st.warning(f"Tool indexes unavailable: {type(e).__name__}: {e}")
+
 # The static half of the prompt. It never changes between messages, so OpenAI caches it
 # and I pay the reduced rate on everything except this turn's passages.
 # --- which context mode is actually live -------------------------------------
@@ -1424,6 +1481,20 @@ with st.sidebar:
                        f"Raise MAX_CHUNKS or trim the folder.")
         if USE_EMBEDDINGS and vectors is None and api_key():
             st.warning("The index didn't build, so search fell back to keyword matching.")
+        # ─── ARE THE TOOLS ACTUALLY BEING USED? ──────────────────────────
+        # Models ignore tools more often than you would expect, and the four
+        # definitions cost roughly 800 input tokens on EVERY request. So this
+        # line tells me plainly whether I am paying for something that works.
+        # If it keeps saying "answered without tools", the fix is sharper
+        # instructions — not more tools.
+        st.caption(f"tools: {len(tools.TOOLS)} offered · "
+                   f"{len(word_index):,} words indexed · "
+                   f"{len(rule_book)} rules available")
+        if "last_tool_round" in st.session_state:
+            st.caption("last answer: "
+                       + ("used a tool" if st.session_state.last_tool_round
+                          else "answered without tools"))
+
         if troubles:
             st.error("These files did not load:\n\n"
                      + "\n\n".join(f"**{t['file']}** — {t['problem']}" for t in troubles))
@@ -1568,13 +1639,42 @@ if st.session_state.pending:
 
         # GPT-5 and GPT-6 models reject `temperature` outright — the parameter being
         # present is the error, whatever value it holds. So I send it only where it's taken.
-        params = dict(model=MODEL, messages=api_messages, stream=True)
+        # Note `stream` is NOT set here — it is added only on the final call below,
+        # because the first call has to come back whole.
+        params = dict(model=MODEL, messages=api_messages)
         if not MODEL.startswith(("gpt-5", "gpt-6", "o1", "o3", "o4")):
             params["temperature"] = TEMPERATURE
 
+        # ─── THE TOOL ROUND ──────────────────────────────────────────────────
+        # Streaming and tool calls do not mix. A tool request arrives in fragments
+        # spread across the stream, and I cannot act on half a request. So a turn
+        # now runs in two parts:
+        #
+        #   round 1  ask WITHOUT streaming, with the tools on offer. Either the
+        #            model answers, or it asks me to look something up.
+        #   round 2  if it asked, run the tools, append their results to the
+        #            messages, then stream the real answer with that output in view.
+        #
+        # If it asks for nothing, round 1 is discarded and round 2 streams exactly
+        # as before. The cost is one extra short call per turn — the price of the
+        # model being able to look things up for itself instead of me guessing.
+        client = OpenAI(api_key=api_key())
         reply, painted = "", 0
         try:
-            stream = OpenAI(api_key=api_key()).chat.completions.create(**params)
+            probe = client.chat.completions.create(
+                **params, tools=tools.TOOLS, tool_choice="auto")
+
+            # run whatever it asked for; api_messages comes back with the results
+            api_messages, used_tools = tools.run_tool_calls(
+                probe, api_messages, chunks, vectors, lexicon,
+                search, word_index, rule_book)
+
+            st.session_state.last_tool_round = used_tools
+            if used_tools:
+                params["messages"] = api_messages     # point at the enriched thread
+
+            stream = client.chat.completions.create(
+                **params, stream=True, tools=tools.TOOLS, tool_choice="auto")
             for chunk in stream:
                 if not chunk.choices:
                     continue
