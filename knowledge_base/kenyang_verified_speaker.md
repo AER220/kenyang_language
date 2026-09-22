@@ -1037,3 +1037,48 @@ Note: ambi is NOT a position word — ambi means "road". Do not confuse it with 
     dɔk             go                  (confirmed)
 
     Twɔ ka se' dɔk      Come, let us go
+
+    ---
+
+## Action words
+
+    Waï             laugh, laughing
+    wuaí amín       laugh, laughing   (how it is said locally — both are correct)
+    Dì              cry
+    Rem             speak
+    ghokoti         listen
+    Yenghé          look
+    Kaïsi           think
+
+Note: Rem is the bare root "speak". Put the third-person prefix on it and you get arɛm
+(he/she said) — the same a- prefix as in a'tuor and à Kong. The prefix rule holds:
+the root stays, the person marker goes in front.
+
+## Relatives with "my" attached
+
+    Ma'ya           my mother
+    Eta'ya          my father
+    Manor-wah       my brother
+    Manor-wah       my sister       (the same word — Kenyang does not split these)
+    Moh'wa          my child
+    Mmuere-wa       my friend
+    Ngoré wah       my wife
+    nném wah        my husband
+
+Kenyang uses one word, Manor-wah, for both brother and sister.
+
+On spelling: wah and wa are the same word. Write wah as the standard; wa appears where
+someone is spelling out the pronunciation. Either is understood.
+
+## Boh — making things plural
+
+Boh in front of a word makes it plural.
+
+    Manor-wah           my brother / my sister
+    Boh Manor bha       my brothers and sisters
+
+This is a rule, not just a word: Boh + the thing = more than one of it.
+
+Note also the be- / bé- prefix doing the same job on other nouns:
+    ɛkɛt  →  beket       house  →  houses      (beket bépay = two houses)
+    ékwá  →  békwá       plantain → plantains
