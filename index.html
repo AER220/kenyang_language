@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nɛpɛm — learn Kenyang</title>
+
+<meta name="description" content="Learn Kenyang, the language of the Bayangi people of Southwest Cameroon. Build a sentence, play a game, or talk to Nɛpɛm. Free.">
+<meta property="og:title" content="Nɛpɛm — learn Kenyang">
+<meta property="og:description" content="65,000 speakers. No app, no course — until now. Build a real Kenyang sentence right now.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nepem.org">
+<meta property="og:image" content="https://nepem.org/share.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Archivo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════════════════════════
+   COLOUR CARRIES MEANING — it is not decoration.
+
+   Each grammatical role owns one hue, and that hue is used for that role
+   EVERYWHERE on the site: in the sentence engine, in the game tiles, in the
+   legend. A learner starts reading the colour before they can read the word.
+   That is the one idea the whole design rests on.
+
+   The base is a near-black with a faint blue cast rather than pure black, so
+   the coloured type glows instead of vibrating against it.
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root{
+  --who:#42E3BC;          /* person marker — mme O' à sé bá */
+  --not:#FF6A55;          /* negation      — pú             */
+  --root:#FFFFFF;         /* the verb root itself           */
+  --when:#B98BFF;         /* tense marker  — nyaka          */
+  --place:#FFC94D;        /* place, and the brand accent    */
+
+  --void:#05070C;
+  --lift:#0B1016;         /* panel                          */
+  --lift2:#121A25;        /* panel, one step up             */
+  --edge:rgba(255,255,255,.08);
+  --edge-hi:rgba(255,255,255,.2);
+  --text:#EDF1F5;
+  --mute:#7E8C9A;
+  --serif:"Gentium Book Plus",Georgia,serif;
+  --sans:"Archivo",system-ui,sans-serif;
+  --mx:50%; --my:28%;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--void);color:var(--text);font-family:var(--sans);
+  font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+#field{position:fixed;inset:0;z-index:0;pointer-events:none}
+.aura{position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(560px circle at var(--mx) var(--my),
+             rgba(255,201,77,.085), transparent 62%)}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,3vw,34px);
+  position:relative;z-index:1}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--place);outline-offset:3px;border-radius:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ── nav, with the one loud button on the page ──────────────────── */
+nav{display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:20px 0;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-size:24px;font-weight:700;letter-spacing:-.01em}
+.brand small{display:block;font-family:var(--sans);font-size:11px;font-weight:400;
+  color:var(--mute);letter-spacing:.09em;margin-top:2px}
+.nav-r{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.nav-r a.q{text-decoration:none;color:var(--mute);font-size:14.5px;padding:8px 13px;
+  border-radius:99px;transition:color .2s,background .2s}
+.nav-r a.q:hover{color:var(--text);background:rgba(255,255,255,.06)}
+
+.cta{display:inline-flex;align-items:center;gap:9px;text-decoration:none;
+  font-weight:600;font-size:15px;padding:11px 21px;border-radius:99px;
+  color:#05070C;background:linear-gradient(135deg,var(--place),#FF9E2C);
+  box-shadow:0 6px 24px rgba(255,201,77,.22);
+  transition:transform .22s, box-shadow .32s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 38px rgba(255,201,77,.42)}
+.cta .dot{width:7px;height:7px;border-radius:99px;background:#05070C;opacity:.5;
+  animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.25}50%{opacity:.85}}
+
+/* ── the sentence engine ────────────────────────────────────────── */
+.engine{padding:30px 0 6px}
+.kicker{font-size:15px;color:var(--mute);margin:0 0 22px;max-width:38em}
+.kicker b{color:var(--text);font-weight:600}
+
+.built{font-family:var(--serif);font-size:clamp(33px,6.8vw,86px);line-height:1.05;
+  margin:0 0 14px;letter-spacing:-.03em;display:flex;flex-wrap:wrap;gap:0 .24em;
+  align-items:baseline;min-height:1.1em}
+.m{display:inline-block;position:relative}
+.m.in{animation:pop .4s cubic-bezier(.2,.9,.25,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(.14em) scale(.96)}
+               to{opacity:1;transform:none}}
+.m-who{color:var(--who)} .m-not{color:var(--not)} .m-root{color:var(--root)}
+.m-when{color:var(--when)} .m-place{color:var(--place)}
+.m::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:2px;
+  background:currentColor;opacity:.24;border-radius:2px}
+
+.gloss{font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.2vw,26px);
+  color:var(--mute);margin:0 0 28px;min-height:1.4em}
+.g-who{color:var(--who);font-style:normal}
+.g-not{color:var(--not);font-style:normal}
+
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.ctl{border:1px solid var(--edge);border-radius:14px;padding:14px 15px;background:var(--lift)}
+.ctl-label{font-size:12px;color:var(--mute);margin:0 0 10px;display:flex;
+  align-items:center;gap:8px;letter-spacing:.03em}
+.swatch{width:8px;height:8px;border-radius:99px;flex:none}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opt{font-family:var(--serif);font-size:18px;background:none;color:var(--mute);
+  border:1px solid var(--edge);border-radius:99px;padding:6px 14px;cursor:pointer;
+  transition:color .2s,border-color .2s,background .2s,transform .2s}
+.opt:hover{color:var(--text);border-color:var(--edge-hi);transform:translateY(-1px)}
+.opt[aria-pressed="true"]{color:#05070C;font-weight:700;border-color:transparent}
+.c-who .swatch,.c-who .opt[aria-pressed="true"]{background:var(--who)}
+.c-when .swatch,.c-when .opt[aria-pressed="true"]{background:var(--when)}
+.c-not .swatch,.c-not .opt[aria-pressed="true"]{background:var(--not)}
+.c-place .swatch,.c-place .opt[aria-pressed="true"]{background:var(--place)}
+
+.recipe{font-size:14px;color:var(--mute);margin:20px 0 0}
+.recipe code{font-family:var(--sans);color:var(--text);font-size:14px}
+.legend{display:flex;flex-wrap:wrap;gap:15px;margin:18px 0 0;font-size:12.5px;
+  color:var(--mute)}
+.legend span{display:flex;align-items:center;gap:7px}
+.legend i{width:9px;height:9px;border-radius:99px;display:inline-block}
+
+/* ── sections ───────────────────────────────────────────────────── */
+.rule{border:none;border-top:1px solid var(--edge);margin:46px 0 0}
+.sec{padding:42px 0}
+h2.big{font-family:var(--serif);font-size:clamp(25px,3.3vw,39px);line-height:1.22;
+  font-weight:700;margin:0 0 12px;max-width:27em}
+h2.big b{color:var(--place)}
+.lead{color:var(--mute);margin:0 0 26px;max-width:42em}
+
+/* ── game chooser ───────────────────────────────────────────────── */
+.gpick{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:12px}
+.gcard{position:relative;text-align:left;border:1px solid var(--edge);
+  border-radius:16px;padding:19px 18px;background:var(--lift);cursor:pointer;
+  overflow:hidden;color:inherit;font-family:inherit;
+  transition:transform .25s,border-color .3s,background .3s}
+.gcard::after{content:"";position:absolute;inset:0;opacity:0;transition:opacity .35s;
+  background:radial-gradient(260px circle at var(--px,50%) var(--py,50%),
+             rgba(255,201,77,.10),transparent 58%)}
+.gcard:hover{transform:translateY(-4px);border-color:var(--edge-hi);background:var(--lift2)}
+.gcard:hover::after{opacity:1}
+.gcard[aria-selected="true"]{border-color:var(--place);background:var(--lift2)}
+.gnum{font-family:var(--serif);font-size:13px;color:var(--place);margin:0 0 7px}
+.gcard h3{font-family:var(--serif);font-size:21px;font-weight:700;margin:0 0 6px}
+.gcard p{font-size:14px;color:var(--mute);margin:0;line-height:1.55}
+
+/* ── the playing area ───────────────────────────────────────────── */
+.stage{margin-top:16px;border:1px solid var(--edge);border-radius:18px;
+  background:var(--lift);padding:clamp(18px,3vw,30px);min-height:310px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;
+  font-size:13.5px;color:var(--mute);margin-bottom:20px;flex-wrap:wrap}
+.score{font-family:var(--serif);font-size:16px;color:var(--place)}
+.ask{font-family:var(--serif);font-size:clamp(22px,3.3vw,37px);line-height:1.2;
+  margin:0 0 6px;text-align:center}
+.askhint{text-align:center;color:var(--mute);font-size:14px;margin:0 0 24px}
+
+.choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.choice{font-family:var(--serif);font-size:19px;padding:16px 14px;border-radius:13px;
+  border:1px solid var(--edge);background:var(--lift2);color:var(--text);
+  cursor:pointer;min-height:62px;transition:border-color .18s,transform .18s}
+.choice:hover:not(:disabled){border-color:var(--place);transform:translateY(-2px)}
+.choice:disabled{cursor:default;opacity:.5}
+.choice.right{border-color:var(--who);background:rgba(66,227,188,.14);opacity:1}
+.choice.wrong{border-color:var(--not);background:rgba(255,106,85,.14);opacity:1}
+
+.verdict{margin:20px 0 0;padding:14px 16px;border-radius:13px;font-size:15px;
+  line-height:1.58}
+.verdict.ok{background:rgba(66,227,188,.09);border:1px solid rgba(66,227,188,.28)}
+.verdict.no{background:rgba(255,106,85,.09);border:1px solid rgba(255,106,85,.28)}
+.verdict b{font-family:var(--serif);font-size:1.13em}
+
+.slotrow{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;min-height:62px;
+  align-items:center;padding:13px;border:1px dashed var(--edge-hi);
+  border-radius:13px;margin:0 0 18px}
+.slotrow:empty::before{content:"tap the words, in order";color:var(--mute);
+  font-size:14px;font-family:var(--sans)}
+.picked{font-family:var(--serif);font-size:20px;padding:8px 15px;border-radius:10px;
+  background:var(--lift2);border:1px solid var(--edge)}
+.tiles{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:0 0 4px}
+.tile{font-family:var(--serif);font-size:21px;padding:13px 19px;border-radius:12px;
+  border:1px solid var(--edge);background:var(--lift2);cursor:pointer;
+  color:var(--text);transition:transform .18s,border-color .18s,opacity .18s}
+.tile:hover:not(:disabled){transform:translateY(-3px);border-color:var(--edge-hi)}
+.tile:disabled{opacity:.25;cursor:default}
+.t-who{color:var(--who)} .t-not{color:var(--not)} .t-root{color:var(--root)}
+.t-when{color:var(--when)} .t-place{color:var(--place)}
+
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:9px}
+.pair{font-family:var(--serif);font-size:16.5px;padding:17px 10px;border-radius:12px;
+  border:1px solid var(--edge);background:var(--lift2);color:var(--text);
+  cursor:pointer;min-height:66px;line-height:1.3;transition:border-color .18s}
+.pair:hover:not(:disabled){border-color:var(--place)}
+.pair.sel{border-color:var(--place);background:rgba(255,201,77,.12)}
+.pair.done{opacity:.28;cursor:default;border-color:var(--who)}
+
+.act{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;justify-content:center}
+.btn{font-family:var(--sans);font-size:15px;font-weight:500;padding:11px 22px;
+  border-radius:99px;border:1px solid var(--edge-hi);background:none;
+  color:var(--text);cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.btn:hover{border-color:var(--place);color:var(--place)}
+.btn.solid{background:var(--place);border-color:var(--place);color:#05070C;font-weight:600}
+.btn.solid:hover{background:#FFD873;color:#05070C}
+.final{text-align:center;padding:34px 0 4px}
+.final .n{font-family:var(--serif);font-size:54px;margin:0;color:var(--place);line-height:1}
+.final p{color:var(--mute);margin:8px 0 0}
+
+/* ── closing ────────────────────────────────────────────────────── */
+.trust{display:grid;grid-template-columns:1fr 1.3fr;gap:46px;padding:38px 0 46px}
+.trust p{margin:0 0 15px;color:var(--mute);line-height:1.66}
+.trust p:last-child{margin:0}
+.trust b{color:var(--text);font-weight:500}
+footer{border-top:1px solid var(--edge);padding:28px 0 52px;display:flex;
+  justify-content:space-between;gap:22px;flex-wrap:wrap;font-size:14px;color:var(--mute)}
+footer p{margin:0}
+.flinks{display:flex;gap:6px;flex-wrap:wrap}
+.flinks a{text-decoration:none;padding:6px 12px;border-radius:99px;
+  transition:color .2s,background .2s}
+.flinks a:hover{color:var(--place);background:rgba(255,201,77,.07)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition-duration:.01ms !important;animation-duration:.01ms !important}
+  #field,.aura{display:none}
+}
+@media (hover:none){ .gcard::after{display:none} }
+@media (max-width:860px){
+  .trust{grid-template-columns:1fr;gap:20px}
+  .engine{padding:20px 0 4px}
+  .sec{padding:32px 0}
+  nav{padding:15px 0}
+  .brand small{display:none}
+}
+</style>
+</head>
+<body>
+<canvas id="field" aria-hidden="true"></canvas>
+<div class="aura" aria-hidden="true"></div>
+
+<div class="wrap">
+  <nav>
+    <span class="brand">Nɛpɛm<small>KƐ́NYĀŊ &middot; THE LANGUAGE OF HOME</small></span>
+    <div class="nav-r">
+      <a class="q" href="#play">Games</a>
+      <a class="q" href="#how">How it works</a>
+      <!--  ▸▸ PUT YOUR STREAMLIT URL IN THE href BELOW ◂◂  -->
+      <a class="cta" href="https://kenyanglanguage.streamlit.app"
+         target="_blank" rel="noopener">
+        <span class="dot"></span>Chat with Nɛpɛm</a>
+    </div>
+  </nav>
+
+  <!-- ══ 1 · THE SENTENCE ENGINE ═══════════════════════════════════════
+       The hero is not a picture of the product — it IS the product. Four
+       switches, and real Kenyang assembles itself. Nothing below is
+       hard-coded; every sentence is built from the confirmed rule.        -->
+  <section class="engine" aria-labelledby="engTitle">
+    <h1 class="sr" id="engTitle">Build a sentence in Kenyang</h1>
+    <p class="kicker">Kenyang builds a sentence out of parts.
+      <b>Change who, when, whether it happened, or where — and watch it
+      rebuild itself.</b></p>
+
+    <p class="built" id="built" aria-live="polite"></p>
+    <p class="gloss" id="gloss"></p>
+
+    <div class="controls">
+      <div class="ctl c-who">
+        <p class="ctl-label"><span class="swatch"></span>WHO</p>
+        <div class="opts" id="cWho" role="group" aria-label="Who"></div>
+      </div>
+      <div class="ctl c-when">
+        <p class="ctl-label"><span class="swatch"></span>WHEN</p>
+        <div class="opts" id="cWhen" role="group" aria-label="When"></div>
+      </div>
+      <div class="ctl c-not">
+        <p class="ctl-label"><span class="swatch"></span>DID IT HAPPEN</p>
+        <div class="opts" id="cNot" role="group" aria-label="Negation"></div>
+      </div>
+      <div class="ctl c-place">
+        <p class="ctl-label"><span class="swatch"></span>WHERE</p>
+        <div class="opts" id="cPlace" role="group" aria-label="Place"></div>
+      </div>
+    </div>
+
+    <p class="recipe">The rule never changes: <code id="recipe"></code></p>
+    <div class="legend" aria-hidden="true">
+      <span><i style="background:var(--who)"></i>who</span>
+      <span><i style="background:var(--not)"></i>not</span>
+      <span><i style="background:var(--root)"></i>the verb</span>
+      <span><i style="background:var(--when)"></i>when</span>
+      <span><i style="background:var(--place)"></i>where</span>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══ 2 · THE GAMES ═════════════════════════════════════════════════
+       All three run in the browser. No server, no API call, nothing to
+       pay per play — which is why they can be free however many children
+       use them.                                                          -->
+  <section class="sec" id="play">
+    <h2 class="big">Three games, built only from words a speaker has
+      <b>confirmed</b>.</h2>
+    <p class="lead">They run right here in the page — nothing to install, nothing
+      to pay, and they work on a slow connection.</p>
+
+    <div class="gpick" role="tablist" aria-label="Choose a game">
+      <button class="gcard" data-game="build" role="tab" aria-selected="true">
+        <p class="gnum">One</p>
+        <h3>Build the sentence</h3>
+        <p>You are given the English. Tap the Kenyang words into the right order.</p>
+      </button>
+      <button class="gcard" data-game="mean" role="tab" aria-selected="false">
+        <p class="gnum">Two</p>
+        <h3>What does it mean?</h3>
+        <p>A Kenyang word, and four meanings. Only one of them is right.</p>
+      </button>
+      <button class="gcard" data-game="pairs" role="tab" aria-selected="false">
+        <p class="gnum">Three</p>
+        <h3>Find the pairs</h3>
+        <p>Match each word to its meaning. No timer and no pressure.</p>
+      </button>
+    </div>
+
+    <div class="stage" id="stage" role="tabpanel" aria-live="polite"></div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══ 3 · WHY IT CAN BE TRUSTED ════════════════════════════════════ -->
+  <section class="sec" id="how">
+    <div class="trust">
+      <h2 class="big">It will not invent your language</h2>
+      <div>
+        <p>Ask a general-purpose AI for Kenyang and it answers confidently and
+          wrongly, because it has never seen the language. For a child learning,
+          that is worse than no answer at all — the invented words are learned as
+          real ones.</p>
+        <p>Everything here comes from Kenyang recovered from old dictionaries and
+          grammars, then checked by a native speaker.
+          <b>When Nɛpɛm does not know something, it says so.</b> Every word in
+          these games has been confirmed.</p>
+        <p>Kenyang is spoken by about 65,000 people in the Southwest Region of
+          Cameroon. It has never had an app, a course, or a page that teaches it.
+          This is the first.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built by Agbor Edouard Ransome, of Bachou Ntai, Manyu Division.</p>
+    <div class="flinks">
+      <a href="#play">Games</a>
+      <a href="/paper">How it was built</a>
+      <a href="mailto:hello@nepem.org">Get in touch</a>
+    </div>
+  </footer>
+</div>
+<script>
+/* ═══════════════════════════════════════════════════════════════════════════
+   1 · THE DATA  —  this is the only part you will ever need to edit.
+
+   Every word here is speaker-confirmed. Add a line to any list and the engine
+   and all three games pick it up automatically. Nothing else to change.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Only two verbs here, on purpose.
+   Both are confirmed by a speaker in the FULL pattern — mme rong, mme pú rong,
+   mme rong nyaka, bá pú rong nyaka, a'tuor — and both take a place sensibly.
+   I had four at first and the game produced "they were not telling to church",
+   which is nonsense: a place only belongs with a verb of movement. Two correct
+   verbs beat four with a wrong one, and the variety comes from the other
+   switches anyway — 5 persons x 2 tenses x 2 negations x 4 places = 80
+   sentences per verb.
+   Add a verb here only once a speaker has confirmed it takes prefixes AND that
+   a place reads naturally after it. */
+const VERBS = [
+  {ken:"rong", en:"going"},
+  {ken:"tuor", en:"coming"}
+];
+const WHO = [                        /* the person prefixes, and their English */
+  {ken:"mme", en:"I",   be:["am","was"]},
+  {ken:"O'",  en:"you", be:["are","were"]},
+  {ken:"à",   en:"he",  be:["is","was"]},
+  {ken:"sé",  en:"we",  be:["are","were"]},
+  {ken:"bá",  en:"they",be:["are","were"]}
+];
+const WHEN  = [{ken:null, en:"now"}, {ken:"nyaka", en:"before"}];
+const NOTQ  = [{on:false, en:"it did"}, {on:true, en:"it did not"}];
+const PLACE = [
+  {ken:null,           en:"\u2014"},
+  {ken:"ɛkɛt",         en:"home"},
+  {ken:"ekeré-ékáti",  en:"to school"},
+  {ken:"ekeré-Mandɛm", en:"to church"}
+];
+
+/* the vocabulary pool for games two and three */
+const WORDS = [
+  ["mmá","mother"],["étá","father"],["mmɔ","child"],["manor","brother or sister"],
+  ["Mmu","person"],["moh","son or daughter"],["Nereket","family"],
+  ["mmú","dog"],["anwa","cat"],["akók","pig"],["nkok","fowl"],["nsok","elephant"],
+  ["ɛkɛt","house"],["ekeré-ékáti","school"],["ekeré-Mandɛm","church"],
+  ["ɛkáti","book"],["ntaŋ","moon"],["mmok","sun"],["manyɛp","water"],
+  ["ékwá","plantain"],["awó","hand"],["ɛkak","leg"],["besí","face"],["atú","ear"],
+  ["Ereme","big"],["Mandu","small"],["pɛ́pɛ́p","white"],["pyɔ","black"],
+  ["Ndɨ́ndɨ́","good"],["erítí","beautiful"],
+  ["Waï","laugh"],["Dì","cry"],["Rem","speak"],["ghokoti","listen"],
+  ["kong","love"],["ghati","tell"],["foŋori","forgive"],["nnek","please"],
+  ["Yenghé","look"],["Kaïsi","think"],["dɔ́k","go"],["twɔ","come"],
+  ["fa","here"],["afo","there"],["amem","inside"],["nefi","outside"],
+  ["anfai","up"],["ansɛm","behind"],["neku","beside"],["echong","today"],
+  ["ɛ́mɔt","one"],["bɛ́pay","two"],["bɛ́rát","three"],["mɛ́nwi","four"],
+  ["bɛ́tay","five"],["byó","ten"],
+  ["Mba'aaah","hello"],["néyi","good morning"],["nkagha","thank you"],
+  ["nnek","please"],["Nɛpɛ́m","life"],["Mandɛm","God"],["ɛrɔ́ŋɔ́","light"],
+  ["ɛjuri","darkness"],["Nchemty","togetherness"]
+];
+
+/* small helpers, used everywhere below */
+const $       = id => document.getElementById(id);
+const shuffle = a  => a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
+const pick    = a  => a[Math.floor(Math.random()*a.length)];
+const esc     = s  => String(s).replace(/[&<>"]/g,
+  c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   2 · THE SENTENCE ENGINE
+
+   No sentence on this page was written out in advance. Each one is assembled
+   from the confirmed rule, in a fixed order:
+
+        person prefix  +  pú (not)  +  verb  +  nyaka (past)  +  place
+
+   That is why flipping the switches produces correct Kenyang for combinations
+   nobody ever typed in.
+   ═══════════════════════════════════════════════════════════════════════════ */
+let E = {who:0, when:0, not:0, place:0, verb:0};
+
+function chip(parent, label, group, i, on){
+  const b = document.createElement("button");
+  b.className = "opt"; b.type = "button"; b.textContent = label;
+  b.setAttribute("aria-pressed", on ? "true" : "false");
+  b.addEventListener("click", () => { E[group] = i; paint(group); });
+  parent.appendChild(b);
+}
+function chips(){
+  ["cWho","cWhen","cNot","cPlace"].forEach(id => $(id).textContent = "");
+  WHO.forEach((o,i)   => chip($("cWho"),   o.ken, "who",   i, E.who===i));
+  WHEN.forEach((o,i)  => chip($("cWhen"),  o.en,  "when",  i, E.when===i));
+  NOTQ.forEach((o,i)  => chip($("cNot"),   o.en,  "not",   i, E.not===i));
+  PLACE.forEach((o,i) => chip($("cPlace"), o.en,  "place", i, E.place===i));
+}
+function paint(changed){
+  const who = WHO[E.who], when = WHEN[E.when], neg = NOTQ[E.not].on,
+        place = PLACE[E.place], verb = VERBS[E.verb];
+
+  const parts = [{t:who.ken, r:"who"}];
+  if (neg)       parts.push({t:"pú",       r:"not"});
+  parts.push({t:verb.ken, r:"root"});
+  if (when.ken)  parts.push({t:when.ken,  r:"when"});
+  if (place.ken) parts.push({t:place.ken, r:"place"});
+
+  const out = $("built"); out.textContent = "";
+  parts.forEach(pz => {
+    const el = document.createElement("span");
+    el.className = "m m-" + pz.r;
+    el.textContent = pz.t;
+    // animate only the piece that changed, so the whole line does not flicker
+    if (changed === undefined || changed === pz.r) el.classList.add("in");
+    out.appendChild(el);
+  });
+
+  $("gloss").innerHTML =
+      `<b class="g-who">${who.en}</b> ${who.be[E.when]}`
+    + (neg ? ` <b class="g-not">not</b>` : "")
+    + ` ${verb.en}` + (place.ken ? ` ${place.en}` : "");
+
+  $("recipe").textContent = "who" + (neg ? "  +  not" : "")
+    + "  +  " + verb.ken + (when.ken ? "  +  past" : "")
+    + (place.ken ? "  +  where" : "");
+
+  [["c-who","who"],["c-when","when"],["c-not","not"],["c-place","place"]]
+    .forEach(([cls,grp]) => {
+      [...document.querySelector("."+cls).querySelectorAll(".opt")]
+        .forEach((b,i) => b.setAttribute("aria-pressed", E[grp]===i ? "true":"false"));
+    });
+}
+chips(); paint();
+
+/* the same assembly, used by game one to know what the right answer is */
+function target(st){
+  const who = WHO[st.who], parts = [who.ken];
+  if (st.not)   parts.push("pú");
+  parts.push(VERBS[st.verb].ken);
+  if (st.when)  parts.push("nyaka");
+  if (st.place) parts.push(PLACE[st.place].ken);
+  const en = `${who.en} ${who.be[st.when?1:0]}${st.not?" not":""} `
+           + VERBS[st.verb].en + (st.place ? " " + PLACE[st.place].en : "");
+  return {ken:parts, en};
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   3 · THE GAMES
+
+   Note what the wrong answers are made of: other REAL Kenyang words with
+   different meanings. There are no invented words anywhere in these games —
+   in a project about a machine that makes words up, showing a child a fake
+   one would be the exact mistake the whole thing exists to avoid.
+   ═══════════════════════════════════════════════════════════════════════════ */
+const ROUNDS = 8;
+let G = {name:"build", n:0, score:0, state:null};
+const stage = $("stage");
+
+const bar = () =>
+  `<div class="bar"><span>Question ${Math.min(G.n+1,ROUNDS)} of ${ROUNDS}</span>
+   <span class="score">${G.score} right</span></div>`;
+
+function finish(){
+  const msg = G.score === ROUNDS       ? "Every one correct."
+            : G.score >= ROUNDS * 0.6  ? "Well played."
+            :                            "Play again — these will stick.";
+  stage.innerHTML =
+    `<div class="final"><p class="n">${G.score} / ${ROUNDS}</p><p>${msg}</p></div>
+     <div class="act"><button class="btn solid" data-again>Play again</button>
+     <button class="btn" data-switch>Another game</button></div>`;
+}
+
+/* ── game one · build the sentence ──────────────────────────────── */
+function gBuild(){
+  if (G.n >= ROUNDS) return finish();
+  const st = {
+    who:  Math.floor(Math.random()*WHO.length),
+    when: Math.random() < .5 ? 1 : 0,
+    not:  Math.random() < .5,
+    place:Math.random() < .6 ? 1 + Math.floor(Math.random()*(PLACE.length-1)) : 0,
+    verb: Math.floor(Math.random()*VERBS.length)
+  };
+  const t = target(st);
+
+  /* colour each tile by the role it plays, so the colours teach as you play */
+  const role = {};
+  role[WHO[st.who].ken] = "who";
+  role["pú"] = "not";
+  role["nyaka"] = "when";
+  role[VERBS[st.verb].ken] = "root";
+  PLACE.forEach(p => { if (p.ken) role[p.ken] = "place"; });
+  WHO.forEach(w => { if (!(w.ken in role)) role[w.ken] = "who"; });
+
+  /* two extra real words as distractors */
+  const extras = shuffle(
+    [...WHO.map(w=>w.ken), "nyaka", "pú",
+     ...PLACE.filter(p=>p.ken).map(p=>p.ken)].filter(w => !t.ken.includes(w))
+  ).slice(0,2);
+
+  G.state = {t, chosen:[]};
+  stage.innerHTML = bar()
+    + `<p class="ask">${esc(t.en)}</p>`
+    + `<p class="askhint">Tap the Kenyang words in the right order</p>`
+    + `<div class="slotrow" id="slots"></div>`
+    + `<div class="tiles">` + shuffle([...t.ken, ...extras]).map((w,i) =>
+        `<button class="tile t-${role[w]||"root"}" data-tile="${i}"
+           data-w="${esc(w)}">${esc(w)}</button>`).join("") + `</div>`
+    + `<div class="act"><button class="btn" data-undo>Undo</button>
+       <button class="btn solid" data-check>Check it</button></div>`;
+}
+function buildCheck(){
+  const {t, chosen} = G.state;
+  const ok = chosen.length === t.ken.length && chosen.every((w,i) => w === t.ken[i]);
+  if (ok) G.score++;
+  G.n++;
+  stage.querySelectorAll("[data-tile],[data-check],[data-undo]")
+       .forEach(b => b.disabled = true);
+  stage.insertAdjacentHTML("beforeend",
+    `<div class="verdict ${ok?"ok":"no"}">` + (ok
+      ? `Yes. <b>${esc(t.ken.join(" "))}</b> — and that order IS the rule:
+         who, then not, then the verb, then when, then where.`
+      : `Not quite. It is <b>${esc(t.ken.join(" "))}</b>.
+         The order never changes: who, not, verb, when, where.`)
+    + `</div><div class="act">
+       <button class="btn solid" data-next>Next</button></div>`);
+}
+
+/* ── game two · what does it mean ───────────────────────────────── */
+function gMean(){
+  if (G.n >= ROUNDS) return finish();
+  const answer = pick(WORDS);
+  const opts = shuffle([answer,
+    ...shuffle(WORDS.filter(w => w[1] !== answer[1])).slice(0,3)]);
+  G.state = {answer};
+  stage.innerHTML = bar()
+    + `<p class="ask" style="color:var(--place)">${esc(answer[0])}</p>`
+    + `<p class="askhint">What does this mean?</p>`
+    + `<div class="choices">` + opts.map(o =>
+        `<button class="choice" data-en="${esc(o[1])}">${esc(o[1])}</button>`
+      ).join("") + `</div>`;
+}
+
+/* ── game three · find the pairs ────────────────────────────────── */
+function gPairs(){
+  const set = shuffle(WORDS).slice(0,6);
+  G.state = {
+    set,
+    cards: shuffle([...set.map((w,i)=>({face:w[0], pair:i, side:"k"})),
+                    ...set.map((w,i)=>({face:w[1], pair:i, side:"e"}))]),
+    sel:[], done:[], note:"", noteOk:false
+  };
+  paintPairs();
+}
+function paintPairs(){
+  const S = G.state;
+  if (S.done.length === S.cards.length){
+    stage.innerHTML =
+      `<div class="final"><p class="n" style="color:var(--who)">All found</p>
+       <p>Every pair matched.</p></div>
+       <div class="act"><button class="btn solid" data-again>Play again</button>
+       <button class="btn" data-switch>Another game</button></div>`;
+    return;
+  }
+  stage.innerHTML =
+    `<div class="bar"><span>Match each word to its meaning</span>
+     <span class="score">${S.done.length/2} of ${S.set.length} found</span></div>`
+  + `<div class="pairs">` + S.cards.map((c,i) =>
+      `<button class="pair ${S.done.includes(i)?"done":S.sel.includes(i)?"sel":""}"
+         data-card="${i}" ${S.done.includes(i)?"disabled":""}>${esc(c.face)}</button>`
+    ).join("") + `</div>`
+  + (S.note ? `<div class="verdict ${S.noteOk?"ok":"no"}">${S.note}</div>` : "");
+}
+
+/* ── one click handler for everything inside the stage ──────────── */
+stage.addEventListener("click", e => {
+  const t = e.target.closest("button");
+  if (!t) return;
+
+  if (t.dataset.again  !== undefined) return startGame(G.name);
+  if (t.dataset.switch !== undefined)
+    return $("play").scrollIntoView({block:"start"});
+  if (t.dataset.next   !== undefined) return runGame();
+
+  /* game one — placing a tile */
+  if (t.dataset.tile !== undefined){
+    G.state.chosen.push(t.dataset.w);
+    t.disabled = true;
+    $("slots").insertAdjacentHTML("beforeend",
+      `<span class="picked">${esc(t.dataset.w)}</span>`);
+    return;
+  }
+  if (t.dataset.undo !== undefined){
+    const last = G.state.chosen.pop();
+    if (last === undefined) return;
+    $("slots").lastElementChild.remove();
+    const tile = [...stage.querySelectorAll("[data-tile]")]
+      .find(b => b.dataset.w === last && b.disabled);
+    if (tile) tile.disabled = false;
+    return;
+  }
+  if (t.dataset.check !== undefined) return buildCheck();
+
+  /* game two — choosing a meaning */
+  if (t.dataset.en !== undefined){
+    const right = G.state.answer, ok = t.dataset.en === right[1];
+    if (ok) G.score++;
+    G.n++;
+    stage.querySelectorAll(".choice").forEach(b => {
+      b.disabled = true;
+      if (b.dataset.en === right[1]) b.classList.add("right");
+      else if (b === t) b.classList.add("wrong");
+    });
+    stage.insertAdjacentHTML("beforeend",
+      `<div class="verdict ${ok?"ok":"no"}">` + (ok
+        ? `Yes. <b>${esc(right[0])}</b> is ${esc(right[1])}.`
+        : `Not that one. <b>${esc(right[0])}</b> is ${esc(right[1])}.`)
+      + `</div><div class="act">
+         <button class="btn solid" data-next>Next</button></div>`);
+    return;
+  }
+
+  /* game three — turning a card */
+  if (t.dataset.card !== undefined){
+    const i = +t.dataset.card, S = G.state;
+    if (S.done.includes(i) || S.sel.includes(i)) return;
+    S.sel.push(i);
+    if (S.sel.length === 2){
+      const [a,b] = S.sel.map(k => S.cards[k]);
+      if (a.pair === b.pair && a.side !== b.side){
+        S.done.push(...S.sel);
+        S.note = `<b>${esc(S.set[a.pair][0])}</b> is ${esc(S.set[a.pair][1])}.`;
+        S.noteOk = true;
+      } else {
+        S.note = `${esc(a.face)} and ${esc(b.face)} are not a pair. Try again.`;
+        S.noteOk = false;
+      }
+      S.sel = [];
+    }
+    paintPairs();
+  }
+});
+
+function runGame(){
+  if (G.name === "build")      gBuild();
+  else if (G.name === "mean")  gMean();
+  else                         gPairs();
+}
+function startGame(name){
+  G = {name, n:0, score:0, state:null};
+  document.querySelectorAll(".gcard").forEach(c =>
+    c.setAttribute("aria-selected", c.dataset.game === name ? "true" : "false"));
+  runGame();
+}
+document.querySelectorAll(".gcard").forEach(card => {
+  card.addEventListener("click", () => startGame(card.dataset.game));
+  card.addEventListener("pointermove", e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty("--px", (e.clientX - r.left) + "px");
+    card.style.setProperty("--py", (e.clientY - r.top) + "px");
+  }, {passive:true});
+});
+startGame("build");
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   4 · ATMOSPHERE
+   A light that follows the cursor, and a slow drift of the language's own
+   letters on a canvas. Both switch off completely for anyone who has asked
+   their system for reduced motion, and the cursor light is skipped on touch
+   devices where there is no cursor to follow.
+   ═══════════════════════════════════════════════════════════════════════════ */
+const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const fine = matchMedia("(hover: hover)").matches;
+
+if (fine && !calm){
+  let frame;
+  addEventListener("pointermove", e => {
+    if (frame) return;                       // one update per animation frame
+    frame = requestAnimationFrame(() => {
+      frame = null;
+      document.documentElement.style.setProperty("--mx", e.clientX + "px");
+      document.documentElement.style.setProperty("--my", e.clientY + "px");
+    });
+  }, {passive:true});
+}
+
+if (!calm){
+  const c = $("field"), x = c.getContext("2d");
+  const GLYPH = ["ɛ","ɔ","ŋ","ɨ","ʉ","á","à","ǎ","ɛ́","ɔ́"];
+  const HUE = ["rgba(66,227,188,","rgba(185,139,255,",
+               "rgba(255,106,85,","rgba(255,201,77,"];
+  const glyph = () => GLYPH[Math.floor(Math.random()*GLYPH.length)];
+  let dots = [], w = 0, h = 0;
+
+  function size(){
+    w = c.width = innerWidth; h = c.height = innerHeight;
+    dots = Array.from({length: Math.min(40, Math.round(w*h/38000))}, () => ({
+      x:Math.random()*w, y:Math.random()*h, g:glyph(),
+      s:12 + Math.random()*18, vx:(Math.random()-.5)*.10,
+      vy:-.04 - Math.random()*.09, a:.03 + Math.random()*.06,
+      hue:HUE[Math.floor(Math.random()*HUE.length)]
+    }));
+  }
+  function tick(){
+    x.clearRect(0,0,w,h);
+    for (const d of dots){
+      d.x += d.vx; d.y += d.vy;
+      if (d.y < -30){ d.y = h + 20; d.x = Math.random()*w; d.g = glyph(); }
+      if (d.x < -30) d.x = w + 20; else if (d.x > w + 30) d.x = -20;
+      x.font = `${d.s}px "Gentium Book Plus", Georgia, serif`;
+      x.fillStyle = d.hue + d.a + ")";
+      x.fillText(d.g, d.x, d.y);
+    }
+    requestAnimationFrame(tick);
+  }
+  size(); tick();
+  addEventListener("resize", size);
+}
+</script>
+</body>
+</html>
