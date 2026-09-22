@@ -191,7 +191,7 @@ h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
 .pl.turn{border-color:var(--place);background:rgba(255,201,77,.1)}
 .pl .nm{font-size:13px;color:var(--mute);margin:0 0 4px;letter-spacing:.05em}
 .pl .sc{font-family:var(--serif);font-size:32px;margin:0;line-height:1}
-.pl.one .sc{color:var(--p1)} .pl.two .sc{color:var(--p2)}
+.pl.pA .sc{color:var(--p1)} .pl.pB .sc{color:var(--p2)}
 .whoseturn{text-align:center;font-size:15px;margin:0 0 18px}
 .whoseturn b{font-family:var(--serif);font-size:1.2em}
 
@@ -522,9 +522,12 @@ footer p{margin:0}
    1 · THE DATA. Every word below has been confirmed by a native speaker.
    ═══════════════════════════════════════════════════════════════════════════ */
 
-const VERBS = [
-  {ken:"rong", en:"going"}, {ken:"tuor", en:"coming"}, {ken:"dɔ́k", en:"going"}
-];
+/* Two verbs, and only two. Both are confirmed by a speaker in the full pattern
+   (mme rong, mme pú rong, mme rong nyaka, a'tuor) and both take a place after
+   them. dɔ́k was here briefly and came out glossed "going" as well, which made
+   two buttons produce the same English. It belongs with Sé dok (let us go),
+   which is a different shape, so it is out until that is worked through. */
+const VERBS = [{ken:"rong", en:"going"}, {ken:"tuor", en:"coming"}];
 const WHO = [
   {ken:"mme", en:"I", be:["am","was"]},  {ken:"O'", en:"you", be:["are","were"]},
   {ken:"à", en:"he", be:["is","was"]},   {ken:"sé", en:"we", be:["are","were"]},
@@ -551,17 +554,21 @@ const PLURALS = [
    dropped for the grid because a crossword needs one letter per square, but
    Kenyang's own letters stay: Ɛ Ɔ Ŋ are themselves, not E O N. The fully
    written form appears when a word is solved. */
-const XW = {"w":12,"h":9,"words":[
- {"g":"BƐTAY","w":"bɛ́tay","clue":"five","r":4,"c":4,"cr":4,"cc":3,"down":false},
- {"g":"ETA","w":"étá","clue":"father","r":3,"c":6,"cr":2,"cc":6,"down":true},
- {"g":"MANYƐP","w":"manyɛp","clue":"water","r":1,"c":8,"cr":0,"cc":8,"down":true},
- {"g":"MMOK","w":"mmok","clue":"sun","r":1,"c":8,"cr":1,"cc":7,"down":false},
- {"g":"KAISI","w":"Kaïsi","clue":"think","r":1,"c":11,"cr":0,"cc":11,"down":true},
- {"g":"PYƆ","w":"pyɔ","clue":"black","r":6,"c":8,"cr":6,"cc":7,"down":false},
- {"g":"NEFI","w":"nefi","clue":"outside","r":3,"c":8,"cr":3,"cc":7,"down":false},
- {"g":"BƐRAT","w":"bɛ́rát","clue":"three","r":4,"c":4,"cr":3,"cc":4,"down":true},
- {"g":"ANWA","w":"anwa","clue":"cat","r":7,"c":4,"cr":7,"cc":3,"down":false},
- {"g":"ƐKƐT","w":"ɛkɛt","clue":"house","r":8,"c":1,"cr":8,"cc":0,"down":false}
+const XW = {"w":13,"h":9,"words":[
+ {"g":"NNEK","w":"nnek","clue":"please","r":2,"c":5,"cr":2,"cc":4,"down":false},
+ {"g":"ƐKATI","w":"ɛkáti","clue":"book","r":1,"c":8,"cr":0,"cc":8,"down":true},
+ {"g":"NKAGHA","w":"nkagha","clue":"thank you","r":2,"c":5,"cr":1,"cc":5,"down":true},
+ {"g":"MMA","w":"mmá","clue":"mother","r":4,"c":3,"cr":4,"cc":2,"down":false},
+ {"g":"MMOK","w":"mmok","clue":"sun","r":4,"c":3,"cr":3,"cc":3,"down":true},
+ {"g":"SIRI","w":"siri","clue":"well, fine","r":5,"c":7,"cr":5,"cc":6,"down":false},
+ {"g":"ƐKWA","w":"ékwá","clue":"plantain","r":7,"c":2,"cr":7,"cc":1,"down":false},
+ {"g":"NEFI","w":"nefi","clue":"outside","r":2,"c":10,"cr":1,"cc":10,"down":true},
+ {"g":"AMEM","w":"amem","clue":"inside","r":3,"c":8,"cr":3,"cc":7,"down":false},
+ {"g":"REM","w":"Rem","clue":"speak","r":5,"c":1,"cr":5,"cc":0,"down":false},
+ {"g":"MANOR","w":"manor","clue":"brother or sister","r":1,"c":1,"cr":0,"cc":1,"down":true},
+ {"g":"RONG","w":"rong","clue":"going","r":5,"c":9,"cr":4,"cc":9,"down":true},
+ {"g":"MOH","w":"moh","clue":"son or daughter","r":1,"c":1,"cr":1,"cc":0,"down":false},
+ {"g":"NEYI","w":"néyi","clue":"good morning","r":7,"c":9,"cr":7,"cc":8,"down":false}
 ]};
 
 /* the Kenyang alphabet, for the crossword keyboard. Typing Ɛ teaches the
@@ -780,7 +787,12 @@ function xSolvedWords(){
 }
 function xRender(){
   const solved = xSolvedWords();
-  const size = Math.min(52, Math.max(30, Math.floor(620/XW.w)));
+  /* Size the squares to the screen. On a phone the grid still scrolls sideways
+     a little, which is normal for a crossword, but 34px keeps every square big
+     enough to tap without zooming. */
+  const avail = Math.min(680, (innerWidth || 900) - 70);
+  const size = Math.max(34, Math.min(52, Math.floor(avail / XW.w)));
+  const scrolls = size * XW.w > avail;
   stage.innerHTML =
     `<div class="shead"><div><h3>Kenyang crossword</h3>
       <p>Clues are in English, answers in Kenyang. The arrow in each clue square
@@ -789,6 +801,8 @@ function xRender(){
       <span class="tag fam">${solved.length} of ${XW.words.length} solved</span></div>`
     + `<div class="xwrap"><div class="xgrid" style="--cs:${size}px;
         grid-template-columns:repeat(${XW.w},${size}px)">${xCells()}</div></div>`
+    + (scrolls ? `<p style="text-align:center;font-size:12.5px;color:var(--mute);
+        margin:8px 0 0">slide the grid sideways to see the rest</p>` : "")
     + `<p class="xnow" id="xnow"></p>`
     + `<div class="xkeys">` + KEYS.map(k=>`<button class="k" data-k="${esc(k)}">${esc(k)}</button>`).join("")
       + `<button class="k wide" data-k="DEL">delete</button></div>`
@@ -853,11 +867,11 @@ function duelRender(){
       <p>Ten questions, taking turns. Tap a name to change it. Whoever is behind
       gets to pick the next activity.</p></div></div>`
     + `<div class="duel">
-        <div class="pl one ${t===0?"turn":""}">
+        <div class="pl pA ${t===0?"turn":""}">
           <p class="nm"><button class="lvl" data-rename="0"
              style="padding:2px 10px;font-size:12px">${esc(D.names[0])}</button></p>
           <p class="sc">${D.score[0]}</p></div>
-        <div class="pl two ${t===1?"turn":""}">
+        <div class="pl pB ${t===1?"turn":""}">
           <p class="nm"><button class="lvl" data-rename="1"
              style="padding:2px 10px;font-size:12px">${esc(D.names[1])}</button></p>
           <p class="sc">${D.score[1]}</p></div></div>`
@@ -886,7 +900,7 @@ function buildNew(){
   const st = {who:Math.floor(Math.random()*WHO.length),
               when:Math.random()<.5?1:0, not:Math.random()<.5,
               place:Math.random()<.6?1+Math.floor(Math.random()*(PLACE.length-1)):0,
-              verb:Math.floor(Math.random()*2)};   /* rong or tuor, both take a place */
+              verb:Math.floor(Math.random()*VERBS.length)};
   const who=WHO[st.who], parts=[who.ken];
   if(st.not) parts.push("pú");
   parts.push(VERBS[st.verb].ken);
@@ -1206,6 +1220,16 @@ if(!calm){
     requestAnimationFrame(tick);
   }
   size(); tick(); addEventListener("resize",size);
+}
+
+/* the crossword squares are sized from the screen, so redraw when it changes */
+{
+  let rt;
+  addEventListener("resize", () => {
+    if (A.id !== "xw" || !X) return;
+    clearTimeout(rt);
+    rt = setTimeout(xRender, 180);
+  });
 }
 </script>
 </body>
