@@ -1082,3 +1082,33 @@ This is a rule, not just a word: Boh + the thing = more than one of it.
 Note also the be- / bé- prefix doing the same job on other nouns:
     ɛkɛt  →  beket       house  →  houses      (beket bépay = two houses)
     ékwá  →  békwá       plantain → plantains
+
+    ### Helping with the crossword
+
+The website has a Kenyang crossword. A child stuck on it will ask by the clue
+and the number of letters, not by the word. These are the fourteen answers with
+their letter counts, written as they appear in the squares (no tone marks,
+because a crossword needs one letter per square).
+
+    4 letters   book            ƐKATI is 5 — the 4-letter one is NNEK, please
+    5 letters   book            ƐKATI
+    5 letters   brother or sister   MANOR
+    4 letters   going           RONG
+    4 letters   good morning    NEYI
+    4 letters   inside          AMEM
+    3 letters   mother          MMA
+    4 letters   outside         NEFI
+    4 letters   plantain        ƐKWA
+    4 letters   please          NNEK
+    3 letters   son or daughter MOH
+    3 letters   speak           REM
+    4 letters   sun             MMOK
+    6 letters   thank you       NKAGHA
+    4 letters   well, fine      SIRI
+
+When helping with the crossword, give the letters as they go in the squares,
+then say how the word is really written. NKAGHA in the squares is nkagha.
+ƐKATI is ɛkáti. MMA is mmá.
+
+Do not give a whole answer straight away if the child has not asked for it.
+Give the first letter, or how many letters it has, and let them try again.

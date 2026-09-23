@@ -300,26 +300,76 @@ h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
   font-size:15px;font-weight:500;padding:11px 21px;border-radius:99px;
   border:1px solid var(--edge-hi);transition:all .2s}
 .li:hover{border-color:var(--place);color:var(--place);background:rgba(255,201,77,.07)}
-.modal{position:fixed;inset:0;z-index:50;display:none;background:rgba(3,5,10,.84);
-  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:clamp(10px,2vw,24px)}
-.modal.open{display:flex;flex-direction:column;animation:fade .3s ease both}
-@keyframes fade{from{opacity:0}to{opacity:1}}
-.mhead{display:flex;justify-content:space-between;align-items:center;gap:12px;
-  padding:0 4px 12px;flex-wrap:wrap}
-.mhead h3{font-family:var(--serif);font-size:21px;margin:0}
-.mhead .sub{font-size:13px;color:var(--mute);margin:2px 0 0}
-.mx{font-family:inherit;font-size:14.5px;padding:9px 17px;border-radius:99px;
-  border:1px solid var(--edge-hi);background:none;color:var(--text);cursor:pointer;
-  text-decoration:none;transition:all .2s}
-.mx:hover{border-color:var(--place);color:var(--place)}
-.mbody{flex:1;border-radius:var(--r);overflow:hidden;border:1px solid var(--edge);
-  background:#0B0F16;position:relative;min-height:0}
-.mbody iframe{width:100%;height:100%;border:none;display:block}
+/* ── Nɛpɛm's corner ───────────────────────────────────────────────
+   He sits in the bottom corner and says hello on his own. The greeting is
+   plain HTML and costs nothing, so every visitor gets it instantly. The
+   Streamlit iframe behind the chat only loads when somebody actually wants
+   to talk, because loading it on arrival would wake the container for people
+   who never open it: slow for them, and it costs me money.                 */
+.dock{position:fixed;right:clamp(14px,2.4vw,26px);bottom:clamp(14px,2.4vw,26px);
+  z-index:60;display:flex;align-items:flex-end;gap:12px;flex-direction:row-reverse}
+.drum{width:60px;height:60px;border-radius:50%;border:none;cursor:pointer;flex:none;
+  background:linear-gradient(145deg,var(--place),#E0761F);position:relative;
+  box-shadow:0 8px 30px rgba(255,201,77,.36);transition:transform .25s,box-shadow .3s}
+.drum:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 14px 40px rgba(255,201,77,.5)}
+.drum span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:27px;color:#1B1004;font-weight:700}
+.drum::after{content:"";position:absolute;inset:-5px;border-radius:50%;
+  border:2px solid rgba(255,201,77,.45);animation:ring 2.6s ease-out infinite}
+@keyframes ring{0%{transform:scale(.9);opacity:.8}70%,100%{transform:scale(1.35);opacity:0}}
+.drum.quiet::after{display:none}
+
+.greet{max-width:min(310px,72vw);padding:15px 17px;border-radius:18px 18px 4px 18px;
+  background:var(--lift2);border:1px solid var(--edge);backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);box-shadow:0 12px 40px rgba(0,0,0,.5);
+  animation:greetin .45s cubic-bezier(.2,.9,.25,1) both}
+@keyframes greetin{from{opacity:0;transform:translateY(12px) scale(.94)}to{opacity:1;transform:none}}
+.greet .hi{font-family:var(--serif);font-size:21px;color:var(--place);margin:0 0 4px}
+.greet p{font-size:13.5px;color:var(--mute);margin:0 0 11px;line-height:1.5}
+.greet .sugg{display:flex;flex-direction:column;gap:6px}
+.greet .sugg button{font-family:inherit;font-size:13px;text-align:left;padding:8px 12px;
+  border-radius:11px;border:1px solid var(--edge);background:rgba(255,255,255,.04);
+  color:var(--text);cursor:pointer;transition:all .18s}
+.greet .sugg button:hover{border-color:var(--place);color:var(--place)}
+.greet .shut{position:absolute;top:8px;right:10px;background:none;border:none;
+  color:var(--mute);font-size:17px;cursor:pointer;line-height:1;padding:2px 4px}
+.greet{position:relative}
+
+/* the chat window itself. One element: small in the corner, or full screen. */
+.pane{position:fixed;z-index:61;display:none;flex-direction:column;overflow:hidden;
+  right:clamp(14px,2.4vw,26px);bottom:calc(clamp(14px,2.4vw,26px) + 74px);
+  width:min(400px,calc(100vw - 28px));height:min(560px,calc(100vh - 130px));
+  border-radius:20px;border:1px solid var(--edge);background:#080C13;
+  box-shadow:0 22px 70px rgba(0,0,0,.6);
+  animation:panein .3s cubic-bezier(.2,.9,.25,1) both}
+@keyframes panein{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+.pane.open{display:flex}
+.pane.big{right:clamp(10px,2vw,24px);left:clamp(10px,2vw,24px);
+  top:clamp(10px,2vw,24px);bottom:clamp(10px,2vw,24px);
+  width:auto;height:auto;border-radius:22px}
+.phead{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:12px 14px;border-bottom:1px solid var(--edge);background:var(--lift);flex:none}
+.phead .who{display:flex;align-items:center;gap:10px;min-width:0}
+.phead .av{width:32px;height:32px;border-radius:50%;flex:none;
+  background:linear-gradient(145deg,var(--place),#E0761F);display:flex;
+  align-items:center;justify-content:center;font-family:var(--serif);
+  font-size:15px;color:#1B1004;font-weight:700}
+.phead h3{font-family:var(--serif);font-size:17px;margin:0;line-height:1.2}
+.phead .st{font-size:11.5px;color:var(--who);margin:0;display:flex;align-items:center;gap:5px}
+.phead .st i{width:6px;height:6px;border-radius:99px;background:var(--who);display:inline-block}
+.pbtns{display:flex;gap:4px;flex:none}
+.pbtns button, .pbtns a{background:none;border:1px solid transparent;color:var(--mute);
+  cursor:pointer;border-radius:9px;padding:6px 9px;font-size:14px;line-height:1;
+  font-family:inherit;text-decoration:none;transition:all .18s}
+.pbtns button:hover,.pbtns a:hover{color:var(--place);border-color:var(--edge)}
+.pbody{flex:1;position:relative;min-height:0;background:#080C13}
+.pbody iframe{width:100%;height:100%;border:none;display:block}
 .waking{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;gap:12px;text-align:center;padding:24px;color:var(--mute);font-size:15px}
-.spin{width:30px;height:30px;border-radius:99px;border:2px solid rgba(255,201,77,.25);
+  justify-content:center;gap:12px;text-align:center;padding:22px;color:var(--mute);font-size:14px}
+.spin{width:28px;height:28px;border-radius:99px;border:2px solid rgba(255,201,77,.25);
   border-top-color:var(--place);animation:spin 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
+
 footer{border-top:1px solid var(--edge);padding:26px 0 50px;display:flex;
   justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--mute)}
 footer p{margin:0}
@@ -500,23 +550,49 @@ footer p{margin:0}
   </footer>
 </div>
 
-<div class="modal" id="chatModal" role="dialog" aria-modal="true" aria-labelledby="chatT">
-  <div class="mhead">
-    <div><h3 id="chatT">Ask Nɛpɛm</h3>
-      <p class="sub">Ask in English. He answers only with Kenyang a speaker has
-        confirmed, and says so when he does not know.</p></div>
-    <div style="display:flex;gap:8px">
-      <a class="mx" id="newTab" href="https://kenyanglanguage.streamlit.app"
-         target="_blank" rel="noopener">Open in a new tab</a>
-      <button class="mx" id="closeChat">Close</button>
+<!-- ══ NƐPƐM'S CORNER ═══════════════════════════════════════════════
+     He greets you himself when the page opens. The greeting is plain HTML,
+     so it is instant and free. The chat behind it only loads when somebody
+     taps, which keeps the Streamlit container asleep for the many visitors
+     who never open it.                                                      -->
+<div class="dock">
+  <button class="drum" id="drum" aria-label="Talk to Nɛpɛm"><span>N</span></button>
+  <div class="greet" id="greet" role="status">
+    <button class="shut" id="greetShut" aria-label="Hide">&times;</button>
+    <p class="hi">Mba'aaah!</p>
+    <p>I am Nɛpɛm. I only speak Kenyang that a real speaker has checked, and I
+      say so when I do not know something.</p>
+    <div class="sugg">
+      <button data-ask>How do I greet my mother?</button>
+      <button data-ask>What does <em>bá pú rong nyaka</em> mean?</button>
+      <button data-ask>Just let me type</button>
     </div>
   </div>
-  <div class="mbody" id="chatBody">
+</div>
+
+<div class="pane" id="pane" role="dialog" aria-modal="false" aria-labelledby="paneT">
+  <div class="phead">
+    <div class="who">
+      <span class="av" aria-hidden="true">N</span>
+      <div style="min-width:0">
+        <h3 id="paneT">Nɛpɛm</h3>
+        <p class="st"><i aria-hidden="true"></i><span id="pstat">here with you</span></p>
+      </div>
+    </div>
+    <div class="pbtns">
+      <button id="paneBig" title="Make it bigger" aria-label="Make it bigger">&#9713;</button>
+      <a id="newTab" href="https://kenyanglanguage.streamlit.app" target="_blank"
+         rel="noopener" title="Open in a new tab" aria-label="Open in a new tab">&#8599;</a>
+      <button id="paneShut" title="Close" aria-label="Close">&times;</button>
+    </div>
+  </div>
+  <div class="pbody" id="chatBody">
     <div class="waking" id="waking"><div class="spin"></div>
-      <p style="margin:0">Waking Nɛpɛm up. He sleeps when nobody is talking to him,<br>
+      <p style="margin:0">Waking up. He sleeps when nobody is talking to him,<br>
         so the first few seconds are slow.</p></div>
   </div>
 </div>
+
 <script>
 /* ═══════════════════════════════════════════════════════════════════════════
    1 · THE DATA. Every word below has been confirmed by a native speaker.
@@ -1165,24 +1241,99 @@ document.addEventListener("click", e=>{
 });
 paintPlural();
 
-const CHAT_URL=$("newTab").href;
-let chatLoaded=false;
-$("openChat").addEventListener("click",()=>{
-  $("chatModal").classList.add("open"); document.body.style.overflow="hidden";
-  if(chatLoaded) return;
-  const f=document.createElement("iframe");
-  f.src=CHAT_URL+(CHAT_URL.includes("?")?"&":"?")+"embed=true";
-  f.title="Nɛpɛm, the Kenyang tutor";
-  f.addEventListener("load",()=>{const w=$("waking"); if(w) w.remove();});
-  $("chatBody").appendChild(f); chatLoaded=true;
-  setTimeout(()=>{const w=$("waking"); if(w) w.innerHTML=
-    `<p style="margin:0">He is slow to wake.<br><a href="${CHAT_URL}" target="_blank"
-     rel="noopener" style="color:var(--place)">Open him in a new tab instead →</a></p>`;},25000);
+/* ═══════════════════════════════════════════════════════════════════════════
+   NƐPƐM'S CORNER
+
+   Three states, and the order matters for cost:
+     1. greeting   plain HTML, shown on arrival, free and instant
+     2. pane       small window in the corner, iframe loads HERE for the first
+                   time, so only people who actually tap wake the container
+     3. big        the same element made full screen. Same DOM node, so the
+                   conversation is not lost and the iframe does not reload.
+   ═══════════════════════════════════════════════════════════════════════════ */
+const CHAT_URL = $("newTab").href;
+let chatLoaded = false;
+
+function loadChat(){
+  if (chatLoaded) return;
+  const f = document.createElement("iframe");
+  f.src = CHAT_URL + (CHAT_URL.includes("?") ? "&" : "?") + "embed=true";
+  f.title = "Nɛpɛm, the Kenyang tutor";
+  f.addEventListener("load", () => {
+    const w = $("waking"); if (w) w.remove();
+    $("pstat").textContent = "here with you";
+  });
+  $("chatBody").appendChild(f);
+  chatLoaded = true;
+  $("pstat").textContent = "waking up";
+  setTimeout(() => {
+    const w = $("waking");
+    if (w) w.innerHTML = `<p style="margin:0">He is slow to wake.<br>
+      <a href="${CHAT_URL}" target="_blank" rel="noopener"
+         style="color:var(--place)">Open him in a new tab instead &rarr;</a></p>`;
+  }, 25000);
+}
+
+function hideGreet(){
+  const g = $("greet");
+  if (g) g.style.display = "none";
+  $("drum").classList.add("quiet");      // stop the pulse once he has been seen
+}
+
+function openPane(big){
+  hideGreet();
+  const p = $("pane");
+  p.classList.add("open");
+  if (big) p.classList.add("big");
+  loadChat();
+}
+function shutPane(){
+  $("pane").classList.remove("open", "big");
+  document.body.style.overflow = "";
+}
+
+$("drum").addEventListener("click", () => {
+  const p = $("pane");
+  if (p.classList.contains("open")) shutPane(); else openPane(false);
 });
-function closeChat(){ $("chatModal").classList.remove("open"); document.body.style.overflow=""; }
-$("closeChat").addEventListener("click",closeChat);
-$("chatModal").addEventListener("click",e=>{if(e.target.id==="chatModal") closeChat();});
-addEventListener("keydown",e=>{if(e.key==="Escape") closeChat();});
+$("greetShut").addEventListener("click", e => { e.stopPropagation(); hideGreet(); });
+document.querySelectorAll("[data-ask]").forEach(b =>
+  b.addEventListener("click", () => openPane(false)));
+
+$("paneShut").addEventListener("click", shutPane);
+$("paneBig").addEventListener("click", () => {
+  const p = $("pane"), big = p.classList.toggle("big");
+  document.body.style.overflow = big ? "hidden" : "";
+  $("paneBig").innerHTML = big ? "&#9724;" : "&#9713;";
+  $("paneBig").title = big ? "Make it smaller" : "Make it bigger";
+});
+
+/* the button in the nav opens the big version, since that is what someone who
+   came looking for the tutor is after */
+$("openChat").addEventListener("click", () => {
+  openPane(true);
+  document.body.style.overflow = "hidden";
+  $("paneBig").innerHTML = "&#9724;";
+});
+
+addEventListener("keydown", e => { if (e.key === "Escape") shutPane(); });
+
+/* He waits a moment before speaking, so the page has settled first. Once he
+   has been greeted in this browser he stays quiet, because a greeting that
+   fires on every single visit stops feeling like a greeting. */
+try {
+  if (!sessionStorage.getItem("nepem.greeted")) {
+    $("greet").style.display = "none";
+    setTimeout(() => {
+      const g = $("greet");
+      if (g && !$("pane").classList.contains("open")) g.style.display = "";
+      sessionStorage.setItem("nepem.greeted", "1");
+    }, 2200);
+  } else {
+    $("greet").style.display = "none";
+    $("drum").classList.add("quiet");
+  }
+} catch(e){ /* private browsing refuses storage; he just greets every time */ }
 
 const calm=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const fine=matchMedia("(hover: hover)").matches;
