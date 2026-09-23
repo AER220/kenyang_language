@@ -38,6 +38,11 @@ def unlocked():
         return False
     if st.session_state.get("review_ok"):
         return True
+    st.markdown("**Only for verified contributors.**")
+    st.caption("Submissions carry people's names and villages, and approving "
+               "one changes what Nɛpɛm teaches everybody. If you have taught "
+               "Nɛpɛm something and would like to help review, write to "
+               "agboredouard51@gmail.com.")
     got = st.text_input("Password", type="password")
     if got and got == want:
         st.session_state.review_ok = True

@@ -272,6 +272,120 @@ h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
 .gap.filled{border-style:solid;border-color:var(--p2)}
 .famcount{color:var(--p2)}
 
+/* ── words of the week ───────────────────────────────────────────
+   The gap list was a nice idea sitting still. Turning six of them into a
+   weekly board gives speakers a reason to come back, and gives children
+   something to chase their parents about. The six rotate on their own, the
+   same six for everybody, so a family can talk about the same words.      */
+.weekhead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 18px}
+.weekno{font-family:var(--serif);font-size:13px;letter-spacing:.1em;color:var(--p2);
+  padding:6px 14px;border-radius:99px;border:1px solid rgba(255,158,207,.3);
+  background:rgba(255,158,207,.07)}
+.weekbar{flex:1;min-width:140px;height:7px;border-radius:99px;
+  background:rgba(255,255,255,.08);overflow:hidden}
+.weekbar i{display:block;height:100%;border-radius:99px;width:0%;
+  background:linear-gradient(90deg,var(--p2),var(--place));transition:width .5s ease}
+.weekcount{font-family:var(--serif);font-size:15px;color:var(--p2)}
+
+.wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px}
+.wcardx{position:relative;padding:18px 17px 16px;border-radius:17px;
+  border:1px dashed rgba(255,158,207,.34);background:rgba(255,158,207,.045);
+  transition:transform .22s,border-color .28s,background .28s}
+.wcardx:hover{transform:translateY(-3px);border-color:var(--p2);
+  background:rgba(255,158,207,.09)}
+.wcardx.found{border-style:solid;border-color:rgba(66,227,188,.42);
+  background:rgba(66,227,188,.06)}
+.wcardx .en{font-size:16.5px;margin:0 0 3px}
+.wcardx .hint{font-size:12.5px;color:var(--mute);margin:0 0 12px;line-height:1.45}
+.wcardx .ken{font-family:var(--serif);font-size:24px;color:var(--who);margin:0 0 10px;
+  min-height:1.3em}
+.wbtns{display:flex;gap:7px;flex-wrap:wrap}
+.wbtns button{font-family:inherit;font-size:13px;padding:7px 13px;border-radius:99px;
+  border:1px solid var(--edge);background:none;color:var(--text);cursor:pointer;
+  transition:all .18s}
+.wbtns button:hover{border-color:var(--p2);color:var(--p2)}
+.wbtns button.go{background:var(--p2);border-color:var(--p2);color:#1A0812;font-weight:600}
+.wbtns button.go:hover{background:#FFB8DC;color:#1A0812}
+.wfoot{margin:20px 0 0;font-size:13.5px;color:var(--mute);line-height:1.6}
+
+/* ── teaching Nɛpɛm, from the website ───────────────────────────
+   The old version put a browser prompt() box on screen, which is ugly, has no
+   room for a name, and cannot explain itself. This is a real form.            */
+.tform{margin-top:14px;padding:20px;border-radius:17px;
+  background:rgba(255,158,207,.055);border:1px solid rgba(255,158,207,.28)}
+.tform .eyebrow{font-size:11.5px;letter-spacing:.11em;color:var(--p2);margin:0 0 8px}
+.tform h4{font-family:var(--serif);font-size:20px;margin:0 0 4px}
+.tform .sub{font-size:13.5px;color:var(--mute);margin:0 0 16px;line-height:1.55}
+.frow{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px;
+  margin:0 0 11px}
+.fld label{display:block;font-size:12.5px;color:var(--mute);margin:0 0 5px}
+.fld input,.fld textarea{width:100%;font-family:var(--sans);font-size:15px;
+  padding:11px 13px;border-radius:11px;color:var(--text);
+  background:rgba(255,255,255,.05);border:1px solid var(--edge);outline:none}
+.fld input:focus,.fld textarea:focus{border-color:var(--p2)}
+.fld input::placeholder,.fld textarea::placeholder{color:#5C6B78}
+.fld textarea{min-height:76px;resize:vertical;line-height:1.5}
+.fld .ken input{font-family:var(--serif);font-size:19px}
+.fnote{font-size:12.5px;color:var(--mute);margin:2px 0 14px;line-height:1.5}
+.fsend{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.fmsg{margin:13px 0 0;padding:12px 15px;border-radius:12px;font-size:14px;line-height:1.55}
+.fmsg.ok{background:rgba(66,227,188,.1);border:1px solid rgba(66,227,188,.3)}
+.fmsg.bad{background:rgba(255,106,85,.1);border:1px solid rgba(255,106,85,.3)}
+.fmsg b{font-family:var(--serif);font-size:1.1em}
+
+/* ── the two ways to help ────────────────────────────────────────
+   The teach form used to be reachable only by tapping a word of the week,
+   which meant a speaker who wanted to give a different word could not find
+   it at all. Two plain buttons now, side by side, each opening its own form.  */
+.helps{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:12px;
+  margin:0 0 4px}
+.helpc{position:relative;text-align:left;border-radius:var(--r);padding:20px 19px;
+  cursor:pointer;font-family:inherit;color:inherit;overflow:hidden;
+  transition:transform .24s,border-color .3s,background .3s}
+.helpc.teach{background:rgba(255,158,207,.06);border:1px solid rgba(255,158,207,.3)}
+.helpc.teach:hover{background:rgba(255,158,207,.11);border-color:var(--p2)}
+.helpc.wrong{background:rgba(255,106,85,.055);border:1px solid rgba(255,106,85,.28)}
+.helpc.wrong:hover{background:rgba(255,106,85,.1);border-color:var(--not)}
+.helpc:hover{transform:translateY(-4px)}
+.helpc[aria-expanded="true"]{transform:none}
+.helpc .ic{font-size:25px;line-height:1;margin-bottom:9px}
+.helpc h3{font-family:var(--serif);font-size:20px;font-weight:700;margin:0 0 5px}
+.helpc.teach h3{color:var(--p2)} .helpc.wrong h3{color:var(--not)}
+.helpc p{font-size:13.5px;color:var(--mute);margin:0;line-height:1.52}
+.helpc .arrow{position:absolute;right:18px;top:20px;font-size:15px;color:var(--mute);
+  transition:transform .25s}
+.helpc[aria-expanded="true"] .arrow{transform:rotate(90deg)}
+
+/* ── the contributors' door ──────────────────────────────────────── */
+.door{margin:26px 0 0;padding:17px 20px;border-radius:15px;background:var(--lift);
+  border:1px solid var(--edge);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.door .dt{flex:1;min-width:200px}
+.door h4{font-family:var(--serif);font-size:17px;margin:0 0 3px}
+.door p{font-size:13.5px;color:var(--mute);margin:0;line-height:1.5}
+.door .lock{font-size:19px;opacity:.6;flex:none}
+.doormsg{margin:14px 0 0;padding:13px 16px;border-radius:12px;font-size:14px;
+  line-height:1.55;background:rgba(255,201,77,.07);
+  border:1px solid rgba(255,201,77,.28);display:none}
+.doormsg.show{display:block}
+
+/* ── who has taught Nɛpɛm ──────────────────────────────────────── */
+.wall{display:flex;flex-wrap:wrap;gap:9px;margin:6px 0 0}
+.gave{display:inline-flex;align-items:baseline;gap:8px;padding:9px 15px;
+  border-radius:99px;background:rgba(255,158,207,.07);
+  border:1px solid rgba(255,158,207,.26);font-size:14.5px}
+.gave .v{font-size:12px;color:var(--mute)}
+.gave .n{font-family:var(--serif);font-size:12px;color:var(--p2)}
+.wallnote{font-size:13.5px;color:var(--mute);margin:16px 0 0;line-height:1.6}
+
+/* ── what is kept, and what is not ─────────────────────────────── */
+.honest{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:12px}
+.hcard{padding:17px 18px;border-radius:16px;background:var(--lift);
+  border:1px solid var(--edge)}
+.hcard h4{font-family:var(--serif);font-size:17px;margin:0 0 7px}
+.hcard.yes h4{color:var(--who)} .hcard.no h4{color:var(--not)}
+.hcard ul{margin:0;padding-left:19px}
+.hcard li{font-size:13.5px;color:var(--mute);margin:0 0 5px;line-height:1.5}
+
 /* ── numbers ──────────────────────────────────────────────────── */
 .numgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(108px,1fr));gap:9px}
 .num{padding:15px 8px;min-height:92px;text-align:center;cursor:pointer;
@@ -474,10 +588,192 @@ footer p{margin:0}
 
   <!-- ══ ASK YOUR FAMILY ═════════════════════════════════════════════ -->
   <section class="sec" id="family">
-    <h2 class="big">Words even Nɛpɛm does not know. <em>Go and find them.</em></h2>
-    <p class="lead">Nobody has written these down yet. Ask an elder, or call home.
-      When you find one, keep it here. <span class="famcount" id="famCount"></span></p>
-    <div class="gapgrid" id="gapGrid"></div>
+    <h2 class="big">Six words Nɛpɛm does not know. <em>This week.</em></h2>
+    <p class="lead">Nobody has written these down, so Nɛpɛm cannot help with them
+      yet. Anyone who speaks Kenyang can fix that in about ten seconds. Six new
+      ones appear every Monday.</p>
+
+    <div class="weekhead">
+      <span class="weekno" id="weekno"></span>
+      <span class="weekbar"><i id="weekbar"></i></span>
+      <span class="weekcount" id="weekcount"></span>
+    </div>
+
+    <div class="wgrid" id="wgrid"></div>
+
+    <p class="wfoot">If you do not know these, that is the point. Go and ask
+      somebody who does, then come back and write it in. That is how a language
+      gets written down for the next person.</p>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══ THE TWO WAYS TO HELP ═════════════════════════════════════════
+       Both forms start closed and each has its own button. Before this the
+       teach form could only be reached by tapping a word of the week, so a
+       speaker who wanted to give some other word had nowhere to put it.   -->
+  <section class="sec" id="help">
+    <h2 class="big">Nɛpɛm is built from old books and one speaker's checking.
+      <em>Anyone who knows the language can make him better.</em></h2>
+    <p class="lead">Two things are worth sending. A word he does not have, and
+      an answer he got wrong. The second is rarer and more valuable.</p>
+
+    <div class="helps">
+      <button class="helpc teach" id="btnTeach" aria-expanded="false"
+              aria-controls="tform">
+        <span class="arrow" aria-hidden="true">›</span>
+        <div class="ic" aria-hidden="true">🌿</div>
+        <h3>Teach Nɛpɛm a word</h3>
+        <p>Any Kenyang word or phrase he does not know yet. A word with a sentence
+          around it is worth far more than the word alone.</p>
+      </button>
+      <button class="helpc wrong" id="btnWrong" aria-expanded="false"
+              aria-controls="rform">
+        <span class="arrow" aria-hidden="true">›</span>
+        <div class="ic" aria-hidden="true">✎</div>
+        <h3>Nɛpɛm got something wrong</h3>
+        <p>He invents things when he does not know, and he has been corrected
+          before. Say what he should have said, and why.</p>
+      </button>
+    </div>
+
+    <!-- teach ------------------------------------------------------------ -->
+    <div class="tform" id="tform" style="display:none">
+      <p class="eyebrow" id="tfEyebrow">TEACH NƐPƐM A WORD</p>
+      <h4 id="tfTitle">What is the Kenyang for this?</h4>
+      <p class="sub">Write it the way it is said. Spelling gets tidied later;
+        getting it written down at all is the hard part.</p>
+
+      <div class="frow">
+        <div class="fld"><label for="tfEn">The English</label>
+          <input id="tfEn" placeholder="tomorrow" autocomplete="off"></div>
+        <div class="fld ken"><label for="tfKen">The Kenyang</label>
+          <input id="tfKen" placeholder="type it as you say it" autocomplete="off"></div>
+      </div>
+
+      <div class="fld"><label for="tfNote">Use it in a sentence, if you can</label>
+        <textarea id="tfNote" placeholder="mbuere mme rong ekere-wah, meaning tomorrow I am going to my house"></textarea></div>
+      <p class="fnote">A sentence is worth far more than the word on its own. It
+        shows where the word sits and what changes around it.</p>
+
+      <div class="frow">
+        <div class="fld"><label for="tfWho">Your name, so you can be credited</label>
+          <input id="tfWho" placeholder="leave it blank to stay unnamed" autocomplete="name"></div>
+        <div class="fld"><label for="tfVil">Your village</label>
+          <input id="tfVil" placeholder="Bachou Ntai, Mamfe, anywhere" autocomplete="off"></div>
+      </div>
+
+      <div class="fsend">
+        <button class="btn fam" id="tfSend">Send it</button>
+        <button class="btn" id="tfCancel">Not now</button>
+      </div>
+      <div id="tfMsg"></div>
+    </div>
+
+    <!-- report ----------------------------------------------------------- -->
+    <div class="tform" id="rform" style="display:none;
+         border-color:rgba(255,106,85,.3);background:rgba(255,106,85,.05)">
+      <p class="eyebrow" style="color:var(--not)">TELL NƐPƐM HE IS WRONG</p>
+      <h4>What did he get wrong?</h4>
+      <p class="sub">Nothing sent here changes what Nɛpɛm teaches until a speaker
+        has read it. That gate is deliberate.</p>
+
+      <div class="fld"><label for="rfQ">What did you ask him?</label>
+        <input id="rfQ" placeholder="how do you say tell them I am going to church"
+               autocomplete="off"></div>
+      <div class="fld"><label for="rfA">What did he answer?</label>
+        <textarea id="rfA" placeholder="paste or type what he said"></textarea></div>
+      <div class="fld ken"><label for="rfK">What should he have said?</label>
+        <input id="rfK" placeholder="ghati bho bɛ mme rong ekeré-Mandɛm"
+               autocomplete="off"></div>
+      <div class="fld"><label for="rfN">Why is his version wrong?</label>
+        <textarea id="rfN" placeholder="angati is only for passing a message through somebody else. One telling needs just ghati."></textarea></div>
+      <p class="fnote">The reason matters more than the correction. One explained
+        reason fixes a whole family of sentences; a bare correction fixes one.</p>
+
+      <div class="frow">
+        <div class="fld"><label for="rfWho">Your name, so you can be credited</label>
+          <input id="rfWho" placeholder="leave it blank to stay unnamed" autocomplete="name"></div>
+        <div class="fld"><label for="rfVil">Your village</label>
+          <input id="rfVil" placeholder="Bachou Ntai, Mamfe, anywhere" autocomplete="off"></div>
+      </div>
+
+      <div class="fsend">
+        <button class="btn" id="rfSend" style="background:var(--not);
+          border-color:var(--not);color:#1A0805;font-weight:600">Send the correction</button>
+        <button class="btn" id="rfCancel">Not now</button>
+      </div>
+      <div id="rfMsg"></div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══ WHO HAS TAUGHT HIM, AND THE DOOR FOR CONTRIBUTORS ═══════════ -->
+  <section class="sec" id="wall">
+    <h2 class="big">Who has taught Nɛpɛm so far</h2>
+    <p class="lead">Every word he knows came from a person. These are the people
+      who gave one.</p>
+    <div class="wall" id="wallList"></div>
+    <p class="wallnote" id="wallNote"></p>
+
+    <div class="door">
+      <span class="lock" aria-hidden="true">🔒</span>
+      <div class="dt">
+        <h4>Reviewing what has come in</h4>
+        <p>Submissions are read by a verified contributor before Nɛpɛm learns
+          anything. If that is you, this is the way in.</p>
+      </div>
+      <button class="btn" id="doorBtn">Review submissions</button>
+    </div>
+    <div class="doormsg" id="doorMsg"></div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══ WHAT IS KEPT ════════════════════════════════════════════════
+       Plain, specific, and near the forms rather than buried in a policy
+       page. A project whose whole argument is that it does not do things
+       behind people's backs has to say what it does.                      -->
+  <section class="sec" id="honest">
+    <h2 class="big">What Nɛpɛm keeps, and what he does not</h2>
+    <p class="lead">This project exists because AI was careless with a language.
+      Being careless with the people teaching it would be the same mistake.</p>
+
+    <div class="honest">
+      <div class="hcard yes">
+        <h4>Kept</h4>
+        <ul>
+          <li>Words and corrections sent through the forms above</li>
+          <li>The name and village given with them, if any were given</li>
+          <li>The date it was sent</li>
+        </ul>
+      </div>
+      <div class="hcard no">
+        <h4>Not kept</h4>
+        <ul>
+          <li>Conversations with Nɛpɛm. What is typed in the chat is not stored</li>
+          <li>Any account, email address, or login. There are none</li>
+          <li>Anything at all from the games. They run in the browser and send nothing</li>
+        </ul>
+      </div>
+      <div class="hcard">
+        <h4>What happens to it</h4>
+        <ul>
+          <li>A native speaker reads every submission before Nɛpɛm learns it</li>
+          <li>Approved words go into the material he teaches from, credited</li>
+          <li>Nothing is passed to anybody outside the project</li>
+          <li>To have a submission removed, write to
+            <a href="mailto:agboredouard51@gmail.com"
+               style="color:var(--place)">agboredouard51@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="wallnote">Nɛpɛm is not trained on what people send. There is no
+      learning that happens on its own. A speaker confirms a word, writes it into
+      the material by hand, and only then can Nɛpɛm say it. That is slower than
+      an AI that teaches itself, and it is the reason this one can be trusted with
+      a child.</p>
   </section>
 
   <hr class="rule">
@@ -703,8 +999,42 @@ const STEPS = [
  mission:"Tell somebody where you are going today in Kenyang before you leave the room."}
 ];
 
-const GAPS = ["tomorrow","yesterday","goodbye","good night","I am sorry","I love you",
-  "red","green","blue","bird","fish","tree","happy","sad","rain","road","friend","song"];
+/* The words nobody has confirmed yet. Six of these go up each week, chosen by
+   the week number so every family sees the same six and can talk about them.
+   The hint matters: "red" on its own is ambiguous, and a speaker who is not
+   sure what is being asked will not answer at all. */
+const GAPS = [
+  ["tomorrow","the day after today"],
+  ["yesterday","the day before today"],
+  ["goodbye","when somebody is leaving"],
+  ["good night","the last thing you say before bed"],
+  ["I am sorry","when you have done something wrong"],
+  ["I love you","to a person, not a thing"],
+  ["red","the colour"],
+  ["green","the colour"],
+  ["blue","the colour"],
+  ["bird","any bird"],
+  ["fish","the animal, in water"],
+  ["tree","a big one, growing"],
+  ["happy","how you feel on a good day"],
+  ["sad","how you feel on a bad one"],
+  ["rain","the thing that falls"],
+  ["road","the one you walk on"],
+  ["friend","somebody you choose"],
+  ["song","one you would sing"],
+  ["market","where things are sold"],
+  ["night","when it is dark"],
+  ["morning","early, when you wake"],
+  ["food","anything you eat"],
+  ["money","what you buy with"],
+  ["name","what you are called"],
+  ["work","what grown ups go and do"],
+  ["sleep","what you do at night"],
+  ["run","fast, on your legs"],
+  ["sit","on a chair or the ground"],
+  ["cold","how water feels in the morning"],
+  ["hot","how the sun feels"]
+];
 
 const $ = id => document.getElementById(id);
 const shuffle = a => a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
@@ -1195,23 +1525,263 @@ renderL();
 /* ═══════════════════════════════════════════════════════════════════════════
    5 · ASK YOUR FAMILY, NUMBERS, CHAT, ATMOSPHERE
    ═══════════════════════════════════════════════════════════════════════════ */
-function paintGaps(){
-  const n=Object.keys(S.fam).filter(k=>S.fam[k]).length;
-  $("famCount").textContent = n?`You have brought back ${n} word${n>1?"s":""}.`:"";
-  $("gapGrid").innerHTML = GAPS.map(g=>
-    `<button class="gap ${S.fam[g]?"filled":""}" data-gap="${esc(g)}">
-      <p class="q">${esc(g)}</p><p class="a">${esc(S.fam[g]||"")}</p></button>`).join("");
+/* ═══════════════════════════════════════════════════════════════════════════
+   WORDS OF THE WEEK, AND TEACHING NƐPƐM
+
+   Six words rotate by week number rather than at random, so every family sees
+   the same six and can talk about them.
+
+   Submissions go straight from this page into the database. The key below can
+   only INSERT, never read, because of the row level security policy on the
+   table. So a person who digs it out of this file cannot pull the table back
+   and read contributors' names. Reading happens on the review page, with a
+   different key that never leaves the server.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/*  ▸▸ PUT YOUR SUPABASE VALUES HERE ◂◂
+    url : Project Settings → Data API → the base URL, no /rest/v1 on the end
+    key : Project Settings → API Keys → the publishable / anon one
+    If these are left blank the forms still work and say plainly that nothing
+    was saved, rather than pretending it went somewhere.                      */
+const SUPA = {
+  url: "https://xkrjlihldrrwyeglszyg.supabase.co",
+  key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhrcmpsaWhsZHJyd3llZ2xzenlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAxNjA0MTAsImV4cCI6MjEwNTczNjQxMH0.beVrzxSzO8IEZueiSw5J9Y4_IPprPyZ5pG25bsTIWXA"
+};
+
+function weekNumber(){
+  const d = new Date();
+  const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  t.setUTCDate(t.getUTCDate() + 4 - (t.getUTCDay() || 7));
+  const first = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+  return Math.ceil(((t - first) / 86400000 + 1) / 7);
 }
-$("gapGrid").addEventListener("click", e=>{
-  const b=e.target.closest("[data-gap]"); if(!b) return;
-  const g=b.dataset.gap;
-  const got=prompt(`Somebody told you the Kenyang for "${g}".\nWrite it exactly as they said it:`, S.fam[g]||"");
-  if(got===null) return;
-  const v=got.trim();
-  if(v) S.fam[g]=v; else delete S.fam[g];
-  save(); paintGaps();
+function weekWords(){
+  const wk = weekNumber(), out = [], n = GAPS.length;
+  for (let i = 0; i < 6; i++) out.push(GAPS[(wk * 6 + i) % n]);
+  return out;
+}
+
+/* one id per submission, the same shape the Streamlit side makes */
+function newId(){
+  return ([...crypto.getRandomValues(new Uint8Array(6))]
+    .map(b => b.toString(16).padStart(2, "0")).join(""));
+}
+
+async function sendToSupabase(row){
+  if (!SUPA.url || !SUPA.key){
+    return {ok:false, why:"nothing is connected yet, so this was not saved"};
+  }
+  try {
+    const r = await fetch(SUPA.url.replace(/\/$/, "") + "/rest/v1/submissions", {
+      method: "POST",
+      headers: {
+        "apikey": SUPA.key,
+        "Authorization": "Bearer " + SUPA.key,
+        "Content-Type": "application/json",
+        "Prefer": "return=minimal"
+      },
+      body: JSON.stringify(row)
+    });
+    if (r.ok) return {ok:true};
+    return {ok:false, why:"the database said " + r.status};
+  } catch (e){
+    return {ok:false, why:"could not reach the database"};
+  }
+}
+
+function paintWeek(){
+  const six = weekWords();
+  const found = six.filter(([en]) => S.fam[en]).length;
+  $("weekno").textContent = "WEEK " + weekNumber();
+  $("weekbar").style.width = (found / 6 * 100) + "%";
+  $("weekcount").textContent = found === 6 ? "all six answered"
+                                           : `${found} of 6 answered`;
+  $("wgrid").innerHTML = six.map(([en, hint]) => {
+    const got = S.fam[en];
+    return `<div class="wcardx ${got ? "found" : ""}">
+      <p class="en">${esc(en)}</p>
+      <p class="hint">${esc(hint)}</p>
+      <p class="ken">${esc(got || "")}</p>
+      <div class="wbtns">
+        ${got
+          ? `<button data-useit="${esc(en)}">Ask Nɛpɛm to use it</button>
+             <button data-open="${esc(en)}">Send a better one</button>`
+          : `<button class="go" data-open="${esc(en)}">I know this one</button>`}
+      </div></div>`;
+  }).join("");
+}
+
+/* ── the teach form ─────────────────────────────────────────────── */
+function openTeach(english){
+  $("tfEn").value = english || "";
+  $("tfKen").value = S.fam[english] || "";
+  $("tfMsg").innerHTML = "";
+  $("tfTitle").textContent = english
+    ? `What is the Kenyang for “${english}”?`
+    : "What is the Kenyang for this?";
+  showForm("teach");
+}
+/* Only one form open at a time, so the page never has two competing sets of
+   fields on screen. Opening one closes the other. */
+function showForm(which){
+  const t = $("tform"), r = $("rform");
+  const openT = which === "teach", openR = which === "wrong";
+  t.style.display = openT ? "" : "none";
+  r.style.display = openR ? "" : "none";
+  $("btnTeach").setAttribute("aria-expanded", openT ? "true" : "false");
+  $("btnWrong").setAttribute("aria-expanded", openR ? "true" : "false");
+  const shown = openT ? t : openR ? r : null;
+  if (shown){
+    shown.scrollIntoView({block:"center", behavior:"smooth"});
+    setTimeout(() => (openT ? $("tfKen") : $("rfQ")).focus(), 350);
+  }
+}
+$("btnTeach").addEventListener("click", () => {
+  const already = $("btnTeach").getAttribute("aria-expanded") === "true";
+  if (already){ showForm(null); return; }
+  $("tfTitle").textContent = "What is the Kenyang for this?";
+  $("tfEn").value = ""; $("tfKen").value = ""; $("tfMsg").innerHTML = "";
+  showForm("teach");
 });
-paintGaps();
+$("btnWrong").addEventListener("click", () => {
+  const already = $("btnWrong").getAttribute("aria-expanded") === "true";
+  showForm(already ? null : "wrong");
+});
+$("tfCancel").addEventListener("click", () => showForm(null));
+$("rfCancel").addEventListener("click", () => showForm(null));
+
+/* ── the contributors' door ───────────────────────────────────────
+   The review page lives in the tutor and has its own password gate. This only
+   says so before sending anybody there, rather than letting somebody click
+   through and meet a bare password box with no explanation. */
+$("doorBtn").addEventListener("click", () => {
+  const m = $("doorMsg");
+  const url = CHAT_URL.replace(/\/+$/, "") + "/Review";
+  m.innerHTML = `This is only for verified contributors. You will be asked for a
+    password on the next page.<br><br>
+    <a href="${url}" target="_blank" rel="noopener"
+       style="color:var(--place);font-weight:600">Go to the review page &rarr;</a>
+    <span style="color:var(--mute)"> &nbsp;or if you have taught Nɛpɛm something
+    and would like to help review, write to
+    <a href="mailto:agboredouard51@gmail.com" style="color:var(--place)">
+    agboredouard51@gmail.com</a>.</span>`;
+  m.classList.add("show");
+});
+
+$("tfSend").addEventListener("click", async () => {
+  const en = $("tfEn").value.trim(), ken = $("tfKen").value.trim();
+  const msg = $("tfMsg");
+  if (!ken){
+    msg.innerHTML = `<div class="fmsg bad">The Kenyang is the part Nɛpɛm needs.
+      Nothing was sent.</div>`;
+    return;
+  }
+  $("tfSend").disabled = true;
+  $("tfSend").textContent = "Sending…";
+
+  /* keep it on this device too, so the card shows it straight away */
+  if (en){ S.fam[en] = ken; save(); paintWeek(); }
+
+  const res = await sendToSupabase({
+    id: newId(), kind: "new_word", question: en, answer: "",
+    correction: ken, note: $("tfNote").value.trim(),
+    speaker: $("tfWho").value.trim(), village: $("tfVil").value.trim(),
+    source: "words of the week", status: "new"
+  });
+
+  $("tfSend").disabled = false;
+  $("tfSend").textContent = "Send it";
+  if (res.ok){
+    msg.innerHTML = `<div class="fmsg ok">Thank you. <b>${esc(ken)}</b> has been
+      written down. A speaker reads every one of these before Nɛpɛm teaches it
+      to anybody.</div>`;
+    $("tfNote").value = "";
+    loadWall();
+  } else {
+    msg.innerHTML = `<div class="fmsg bad">It was kept on this device, but
+      ${esc(res.why)}. Please also send it to
+      <a href="mailto:agboredouard51@gmail.com?subject=Kenyang: ${encodeURIComponent(en)}"
+         style="color:var(--place)">agboredouard51@gmail.com</a>
+      so it is not lost.</div>`;
+  }
+});
+
+/* ── the report form ────────────────────────────────────────────── */
+$("rfSend").addEventListener("click", async () => {
+  const ken = $("rfK").value.trim(), msg = $("rfMsg");
+  if (!ken){
+    msg.innerHTML = `<div class="fmsg bad">Nɛpɛm needs to know what it should
+      have said. Nothing was sent.</div>`;
+    return;
+  }
+  $("rfSend").disabled = true;
+  $("rfSend").textContent = "Sending…";
+  const res = await sendToSupabase({
+    id: newId(), kind: "correction",
+    question: $("rfQ").value.trim(), answer: $("rfA").value.trim(),
+    correction: ken, note: $("rfN").value.trim(),
+    speaker: $("rfWho").value.trim(), village: $("rfVil").value.trim(),
+    source: "website", status: "new"
+  });
+  $("rfSend").disabled = false;
+  $("rfSend").textContent = "Send the correction";
+  if (res.ok){
+    msg.innerHTML = `<div class="fmsg ok">Thank you. This is the most useful
+      thing anybody sends. A speaker will read it before anything changes.</div>`;
+    ["rfQ","rfA","rfK","rfN"].forEach(id => $(id).value = "");
+    loadWall();
+  } else {
+    msg.innerHTML = `<div class="fmsg bad">Nothing was saved, because
+      ${esc(res.why)}. Please send it to
+      <a href="mailto:agboredouard51@gmail.com?subject=Nepem got something wrong"
+         style="color:var(--place)">agboredouard51@gmail.com</a> instead.</div>`;
+  }
+});
+
+/* ── who has taught him ─────────────────────────────────────────── */
+async function loadWall(){
+  const list = $("wallList"), note = $("wallNote");
+  if (!SUPA.url || !SUPA.key){
+    list.innerHTML = "";
+    note.textContent = "The list of contributors appears here once the database "
+      + "is connected.";
+    return;
+  }
+  try {
+    const r = await fetch(
+      SUPA.url.replace(/\/$/, "") + "/rest/v1/contributors?select=*",
+      { headers: { "apikey": SUPA.key, "Authorization": "Bearer " + SUPA.key } });
+    if (!r.ok) throw 0;
+    const rows = await r.json();
+    if (!rows.length){
+      list.innerHTML = "";
+      note.textContent = "Nobody yet. The first name here could be yours.";
+      return;
+    }
+    list.innerHTML = rows.map(p => `<span class="gave">
+        ${esc(p.speaker)}
+        ${p.village ? `<span class="v">${esc(p.village)}</span>` : ""}
+        <span class="n">${p.taught}</span></span>`).join("");
+    const total = rows.reduce((a, p) => a + Number(p.taught || 0), 0);
+    note.textContent = `${rows.length} ${rows.length === 1 ? "person" : "people"} `
+      + `have taught Nɛpɛm ${total} ${total === 1 ? "thing" : "things"} between them. `
+      + "Only names given with a submission appear here, and only once a speaker "
+      + "has confirmed the word.";
+  } catch (e){
+    list.innerHTML = "";
+    note.textContent = "The contributors list could not be read just now.";
+  }
+}
+
+/* one handler for the week cards */
+document.addEventListener("click", e => {
+  const open = e.target.closest("[data-open]");
+  if (open){ openTeach(open.dataset.open); return; }
+  const use = e.target.closest("[data-useit]");
+  if (use){ openPaneWith("use", use.dataset.useit, S.fam[use.dataset.useit]); return; }
+});
+
+paintWeek(); loadWall();
 
 let P={thing:0,count:2};
 $("numgrid").innerHTML = NUMBERS.map(([d,k],i)=>
@@ -1278,6 +1848,29 @@ function hideGreet(){
   const g = $("greet");
   if (g) g.style.display = "none";
   $("drum").classList.add("quiet");      // stop the pulse once he has been seen
+}
+
+/* Open the chat carrying a word, so the Streamlit app can pick it up from the
+   query string and either show the teach form already filled in, or ask Nɛpɛm
+   to use the word in a sentence. This is the join between the two halves: the
+   website gathers intent, the app does the storing. */
+function openPaneWith(mode, english, kenyang){
+  const q = new URLSearchParams({ embed:"true", mode, word: english });
+  if (kenyang) q.set("ken", kenyang);
+  const url = CHAT_URL + (CHAT_URL.includes("?") ? "&" : "?") + q.toString();
+  hideGreet();
+  const pane = $("pane");
+  const old = $("chatBody").querySelector("iframe");
+  if (old) old.remove();                 // carrying a new word means a new load
+  chatLoaded = false;
+  const f = document.createElement("iframe");
+  f.src = url;
+  f.title = "Nɛpɛm, the Kenyang tutor";
+  $("chatBody").appendChild(f);
+  chatLoaded = true;
+  pane.classList.add("open", "big");
+  document.body.style.overflow = "hidden";
+  $("paneBig").innerHTML = "&#9724;";
 }
 
 function openPane(big){
