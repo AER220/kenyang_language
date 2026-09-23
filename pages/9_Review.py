@@ -73,10 +73,13 @@ a.metric("Waiting for me", len(new))
 b.metric("Approved", len(ok))
 c.metric("Set aside", len(no))
 d.metric("All of it", len(rows))
-st.caption(f"Reading from the {where}. "
-           + ("This survives the app sleeping." if where == "sheet" else
-              "⚠️ This is the container's disk, which Streamlit wipes when the "
-              "app sleeps. Configure the sheet before relying on it."))
+# Only the local file is at risk. The database and the sheet both survive the
+# app sleeping, and warning about them was my mistake.
+if where in ("database", "sheet"):
+    st.caption(f"Reading from the {where}. This survives the app sleeping.")
+else:
+    st.caption("⚠️ Reading from the container's disk, which Streamlit wipes "
+               "when the app sleeps. Check the [supabase] block in secrets.")
 
 st.divider()
 
@@ -88,7 +91,15 @@ KIND_LABEL = {"correction": "Nɛpɛm was wrong",
               "issue": "something else"}
 
 
-def show(r, allow_decide=True):
+def show(r, allow_decide=True, tab=""):
+    """
+    Render one submission.
+
+    `tab` exists because the same row appears in both "Waiting for me" and
+    "Everything". Streamlit keys widgets by their key string, so two buttons
+    built from the same submission id crash the page with a duplicate key.
+    Prefixing with the tab name makes them distinct.
+    """
     with st.container(border=True):
         top = st.columns([3, 1])
         top[0].markdown(f"**{KIND_LABEL.get(r.get('kind'), r.get('kind'))}**")
@@ -110,11 +121,11 @@ def show(r, allow_decide=True):
 
         if allow_decide:
             yes, nope = st.columns(2)
-            if yes.button("Approve", key="y" + r["id"], type="primary",
+            if yes.button("Approve", key=f"y{tab}{r['id']}", type="primary",
                           use_container_width=True):
                 community.set_status(r["id"], "approved", dict(st.secrets))
                 st.rerun()
-            if nope.button("Set aside", key="n" + r["id"],
+            if nope.button("Set aside", key=f"n{tab}{r['id']}",
                            use_container_width=True):
                 community.set_status(r["id"], "rejected", dict(st.secrets))
                 st.rerun()
@@ -124,14 +135,14 @@ with tab_new:
     if not new:
         st.success("Nothing waiting.")
     for r in reversed(new):
-        show(r)
+        show(r, tab="new")
 
 with tab_all:
     only = st.multiselect("Show", ["new", "approved", "rejected"],
                           default=["new", "approved", "rejected"])
     for r in reversed(rows):
         if status_of(r) in only:
-            show(r, allow_decide=status_of(r) == "new")
+            show(r, allow_decide=status_of(r) == "new", tab="all")
 
 with tab_out:
     st.subheader("Paste this into the verified file")
