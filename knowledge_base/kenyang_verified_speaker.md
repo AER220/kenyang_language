@@ -1112,3 +1112,43 @@ then say how the word is really written. NKAGHA in the squares is nkagha.
 
 Do not give a whole answer straight away if the child has not asked for it.
 Give the first letter, or how many letters it has, and let them try again.
+---
+
+## Two modifiers at once: the noun stays in the middle
+
+The adjective rule above gives one modifier at a time. When a word takes BOTH a
+before-adjective AND a number, they go on opposite sides and the noun sits between
+them. The noun is never pushed to the end.
+
+    Mandu ɛkɛt bɛ́pay            two small houses
+                                (small + house + two)
+
+    Mandu       before the noun, because size goes before
+    ɛkɛt        the noun itself
+    bɛ́pay      after the noun, because numbers go after
+
+WRONG: Mandu bɛ́pay ɛkɛt. That puts the number before the noun, which is the one
+place it never goes. Build it by asking which side each modifier takes, then placing
+the noun between them, rather than lining the modifiers up together.
+
+The same holds for a colour and a size together:
+
+    Ereme ɛkɛt Piór             a big white house
+                                (big + house + white)
+
+## Boh already means children: do not add mmɔ as well
+
+Boh in front of a word makes it plural. On its own, with a number, Boh means the
+children. The word for child must NOT be added after it.
+
+    Boh bɛ́pay                   two children
+                                (children + two)
+
+WRONG: Boh bɛ́pay mmɔ. Boh already carries it, so mmɔ must not appear too.
+
+This is the same trap as Noh Paul mmá a'tuor: a word that already contains the
+relationship does not take the plain noun as well.
+
+[TO CONFIRM: does Boh on its own mean "children", or is it a plural marker that
+happens to mean children when nothing follows it? And does Boh bɛ́pay also work for
+other people-words, the way Boh Manor bha does?]

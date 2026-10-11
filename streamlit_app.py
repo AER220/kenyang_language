@@ -43,7 +43,10 @@ import tools
 # 1. CONFIG
 # =============================================================================
 
-MODEL = "gpt-4o"                    # swap freely; temperature is guarded below
+MODEL = "gpt-4o-mini"               # swap freely; temperature is guarded below
+# Back to mini now that retrieval is fixed. If sentence building gets sloppy,
+# "gpt-4o" is a one-word change back: mini is weaker at holding several ordering
+# rules in mind at once, which is where it failed last time.
 EMBED_MODEL = "text-embedding-3-small"   # ~$0.02 per million tokens, and indexed once
 TEMPERATURE = 0.3
 KB_ROOT = "knowledge_base"
@@ -70,12 +73,21 @@ ALWAYS_ON_CHARS = 40_000     # ceiling for the verified tier, which travels ever
 #   "auto"     — full when it fits under FULL_CONTEXT_CHARS, retrieve when it doesn't.
 #
 # The sidebar tells me which mode is actually live and why.
-CONTEXT_MODE = "auto"
+# Pinned to retrieve, not auto. On "auto" the app posts the whole corpus whenever
+# it fits under FULL_CONTEXT_CHARS, and 350,000 characters is about 87k tokens —
+# which would fit mini's 128k window on paper, then fail the moment the prompt and
+# history are added on top. Retrieval is also what the fixes below repair.
+CONTEXT_MODE = "retrieve"
 FULL_CONTEXT_CHARS = 350_000   # ~87k tokens, the most I'd push into a 128k window
 
-EXACT_RESERVE = 20           # of those, held for literal word matches so that a
-                             # passage containing the asked-for word always gets in
-MAX_PASSAGES = 20            # retrieval mode: total passages per question, after merging
+EXACT_RESERVE = 12           # a SLICE held for literal word matches, not the whole
+                             # budget. It was 20 against MAX_PASSAGES 20, and the call
+                             # site doubled it, so exact matching could take every slot
+                             # and the meaning search never ran at all.
+MAX_PASSAGES = 40            # retrieval mode: total passages per question, after merging.
+                             # Back up from 20 now that the rate limit is lifted. More
+                             # passages is the other half of "it does not know what it
+                             # has", and on mini the extra tokens cost very little.
 MAIN_PROBE_K = 18            # share for the whole question
 SUB_PROBE_K = 4              # share for each word probe and each grammar probe
 CHUNK_CHARS = 1_200          # passage size — roughly a page of a chapter
@@ -702,7 +714,7 @@ def _merge(order, picked, seen, cap):
     return False
 
 
-def exact_hits(query, chunks, per_term=4):
+def exact_hits(query, chunks, lexicon=None, per_term=3):
     """
     Find passages that literally contain the words asked about.
 
@@ -710,15 +722,44 @@ def exact_hits(query, chunks, per_term=4):
     holding it goes into context — it cannot be outranked, outvoted or crowded out.
     Embeddings are good at "something like this" and bad at "this exact rare word", which
     is most of what a language tutor is actually asked for.
+
+    Matching is on whole TOKENS now, not substrings, and that single change is the fix
+    for "it says it cannot count". The old line was `if t in c["text"].lower()`, so the
+    needle "one" matched money, stone, listen and someone, and "1" matched 1998 and 21.
+    A counting question produced dozens of false hits, they filled the entire budget,
+    and the passage actually holding the numbers never got in. The comment on TOKEN two
+    hundred lines above says "one must not match money" — it was true of tokenize and
+    never true here.
+
+    Rarest needle first, so a specific word like ɛkɛt spends the budget before a common
+    one like count.
     """
-    picks = []
-    # expand() first: the material may write the number a different way than the learner
-    # typed it ("1.000.000" vs "1 million"), and this pass is the guarantee.
     needles = {t for t in expand(terms(query)) if len(t) >= 3 or t.isdigit()}
+    if not needles:
+        return []
+
+    if lexicon:
+        sets, df = lexicon
+        picks = []
+        for t in sorted(needles, key=lambda w: (df.get(w, 0), -len(w))):
+            n = 0
+            for i, toks in enumerate(sets):
+                if t in toks:
+                    picks.append(i)
+                    n += 1
+                    if n >= per_term:
+                        break
+        return picks
+
+    # No lexicon: keyword-only fallback. Still whole-word, and the Kenyang letters
+    # count as word characters so ɛkɛt is not cut at the ɛ.
+    picks = []
+    WORDCHAR = r"\wɛɔŋʉɨ"          # \w plus the Kenyang letters
     for t in sorted(needles, key=len, reverse=True):
+        pat = re.compile(rf"(?<![{WORDCHAR}]){re.escape(t)}(?![{WORDCHAR}])", re.I)
         n = 0
         for i, c in enumerate(chunks):
-            if t in c["text"].lower():
+            if pat.search(c["text"]):
                 picks.append(i)
                 n += 1
                 if n >= per_term:
@@ -778,7 +819,7 @@ def search(query, chunks, vectors, lexicon=None, cap=MAX_PASSAGES):
     room = int(cap * 1.6)
 
     # 1. exact matches, reserved a slice of the budget so meaning can't crowd them out
-    _merge(exact_hits(query, chunks), picked, seen, min(room, EXACT_RESERVE * 2))
+    _merge(exact_hits(query, chunks, lexicon), picked, seen, min(room, EXACT_RESERVE))
 
     # 2. meaning
     if vectors is not None and len(vectors) == len(chunks):
@@ -1661,31 +1702,45 @@ if st.session_state.pending:
         client = OpenAI(api_key=api_key())
         reply, painted = "", 0
         try:
+            # Round 1. Tools are on offer, so this one cannot stream.
             probe = client.chat.completions.create(
-                **params, tools=tools.TOOLS, tool_choice="auto")
+                **params, tools=tools.TOOLS, tool_choice="none")
 
             # run whatever it asked for; api_messages comes back with the results
             api_messages, used_tools = tools.run_tool_calls(
                 probe, api_messages, chunks, vectors, lexicon,
                 search, word_index, rule_book)
-
             st.session_state.last_tool_round = used_tools
-            if used_tools:
-                params["messages"] = api_messages     # point at the enriched thread
 
-            stream = client.chat.completions.create(
-                **params, stream=True, tools=tools.TOOLS, tool_choice="auto")
-            for chunk in stream:
-                if not chunk.choices:
-                    continue
-                piece = chunk.choices[0].delta.content or ""
-                if not piece:
-                    continue
-                reply += piece
-                if len(reply) - painted >= STREAM_FLUSH_CHARS:
-                    slot.markdown(bubble("assistant", reply, streaming=True),
-                                  unsafe_allow_html=True)
+            if not used_tools:
+                # It asked for nothing, which means round 1 IS the answer. The old code
+                # threw it away and generated the whole reply a second time, so every
+                # ordinary question paid for two full calls and waited through both.
+                # Most turns use no tool, so this halves the cost and the wait.
+                # What it costs: no typing effect on those turns. The reply lands whole,
+                # and it lands sooner than the first word used to.
+                reply = (probe.choices[0].message.content or "").strip()
+                if reply:
+                    slot.markdown(bubble("assistant", reply), unsafe_allow_html=True)
                     painted = len(reply)
+            else:
+                # It asked for a lookup. Stream the real answer with the tool output in
+                # view. Tools are NOT offered again: one lookup round is enough, and
+                # leaving them on invites a second request mid-stream, which a stream
+                # cannot answer.
+                params["messages"] = api_messages
+                stream = client.chat.completions.create(**params, stream=True)
+                for chunk in stream:
+                    if not chunk.choices:
+                        continue
+                    piece = chunk.choices[0].delta.content or ""
+                    if not piece:
+                        continue
+                    reply += piece
+                    if len(reply) - painted >= STREAM_FLUSH_CHARS:
+                        slot.markdown(bubble("assistant", reply, streaming=True),
+                                      unsafe_allow_html=True)
+                        painted = len(reply)
 
             if reply.strip():
                 slot.markdown(bubble("assistant", reply), unsafe_allow_html=True)
