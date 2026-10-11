@@ -1425,3 +1425,145 @@ Nepem is the name of this tutor, and it means life.
 
 Nnem is male, and it is also used for husband. Ngoreh is woman, and is also used
 for wife. The root names the sex; the marriage sense comes from how it is used.
+---
+
+# The Kenyang alphabet
+
+Thirty letters, in upper and lower case. This is the standard set, the one the
+General Alphabet of Cameroon Languages adopted, and it is what a learner will
+meet in print.
+
+    A a     B b     Bh bh   Ch ch   D d
+    E e     Ɛ ɛ     F f     G g     Gb gb
+    Gh gh   I i     Ɨ ɨ     J j     K k
+    Kp kp   M m     N n     Ŋ ŋ     Ny ny
+    O o     Ɔ ɔ     P p     R r     S s
+    T t     U u     Ʉ ʉ     W w     Y y
+
+Five of these do not exist in English: **ɛ ɔ ŋ ɨ ʉ**. Four are two letters
+standing for one sound: **bh, ch, gb, gh, kp, ny**.
+
+There is no C, H, L, Q, V, X or Z on its own. A word that seems to need one is
+either borrowed or is written with one of the pairs above.
+
+**A warning for anyone typing Kenyang.** The letter ɛ (U+025B) looks almost the
+same as the Greek ε, and ɔ (U+0254) like a reversed c. If the wrong character is
+used the word looks right and every search for it fails. Always use the Kenyang
+letters.
+
+---
+
+# The person words, the full set
+
+This is the complete paradigm, including the forms for more than one person,
+which were missing from this file.
+
+## Doing the action
+
+    mmɛ             I
+    wɔ              you
+    a               he, she, it
+    yɔ              he, she, it
+    sɛ              we
+    bɛ́, bɛ́ka        you, more than one
+    bá              they
+    bo              them
+
+## Whose it is
+
+    áyà             my
+    ɔ               your
+    ayí             his, her, its
+    ɛsɛ             our
+    ɛ́yɛka           your, more than one
+    ayáp            their
+
+## Standing on its own
+
+    áwà, áyà        mine
+    ɛyɛ́, áyɛ        yours
+    áyɛsɛ           ours
+    áyɛka           yours, more than one
+    ayáp            theirs
+
+Note that **ayáp** is both *their* and *theirs*: one form does both jobs.
+
+[TO CONFIRM: this file already has wah for my and áwà appears here for mine. Are
+they the same word, one bound to the noun and one standing alone? The same
+question applies to yeh and ɛyɛ́, and to Yap and ayáp.]
+
+---
+
+# Counting, the whole system
+
+## One to twenty
+
+    1   Ɛmɔ́t                2   Bɛ́pay              3   Bɛ́rát
+    4   Mɛ́nwi               5   Bɛ́tay              6   Tándat
+    7   Tándat nɛ amɔt      8   Mɛ́nɛn              9   Mɛ́nɛn nɛ amɔt
+    10  Byó                 11  Byó nɛ amɔt        12  Byó nɛ bɛ́pay
+    13  Byó nɛ bɛ́rát        14  Byó nɛ mɛ́nwi       15  Nɛkú
+    16  Nɛkú nɛ amɔ́t        17  Nɛkú nɛ bɛ́pay      18  Nɛkú nɛ bɛ́rat
+    19  Nɛkú nɛ mɛ́nwi       20  Ɛsa
+
+## How the system works
+
+Kenyang counts in fives and twenties, not in tens the way English does.
+
+**nɛ** means *and*, and joins a smaller number onto a bigger one.
+
+    Byó nɛ bɛ́pay           ten and two, so twelve
+    Nɛkú nɛ amɔ́t           fifteen and one, so sixteen
+
+**Fifteen has its own word, Nɛkú**, rather than being built from ten and five.
+So does twenty, **Ɛsa**. These are the hinges the system turns on.
+
+**nsɛm** builds the tens above twenty.
+
+    Ɛsa nsɛm byó           twenty and ten, so thirty
+    Bɛsa bɛ́pay             two twenties, so forty
+    Bɛsa bɛ́pay nsɛm byó    two twenties and ten, so fifty
+    Bɛsa bɛ́rat             three twenties, so sixty
+    Bɛsa mɛ́nwi             four twenties, so eighty
+    Bɛsa bɛ́tay             five twenties, so one hundred
+
+So one hundred is literally five twenties. The whole system counts in twenties
+once it passes twenty, which is why forty is *two twenties* and not *four tens*.
+
+## Hundreds and above
+
+    100     Bɛsa bɛ́tay                      five twenties
+    200     Bɛsa byó                        ten twenties
+    300     Bɛsa nɛkú                       fifteen twenties
+    400     Bɛsa ɛsa                        twenty twenties
+    500     Ɛsa ɛsa nsɛm bɛ́tay
+    1,000   Nká
+    2,000   Ba nká bɛ́pay
+    3,000   Ba nká bɛ́rát
+    1,000,000   Ba nká-nká
+    2,000,000   Ba nká-nká bɛ́pay
+
+[TO CONFIRM: this file already has bɛ́tandat for six and tándrámɔt for seven. The
+EyaLingo book writes Tándat and Tándat nɛ amɔt. If Tándat is six, then seven is
+simply six and one, which fits the pattern better. Which do you say?]
+
+---
+
+# Bayangi family names
+
+The names of our people. A learner meeting one of these should know it is a
+Bayangi name, and a child should be able to find their own in the list.
+
+    Abang       Achwo       Agbor       Anyi        Arrah
+    Arrey       Arreyngang  Ashu        Atem        Awuh
+    Ayamba      Ayuk        Bate        Bessem      Bessong
+    Bissong     Defang      Ebot        Efim        Egbe
+    Enonchong   Enow        Etaka       Etchi       Etchu
+    Eteng       Etengeneng  Etta        Eya         Eyong
+    Ketchen     Manyi       Manyor      Mbi         Mbianyor
+    Mbu         Mbuagbaw    Mpey        Nchong      Ndiep
+    Ndip        Njang       Njwi        Nkongho     Nkonghonyor
+    Nso         Nyenty      Obase       Obasi       Ofiong
+    Ojong       Orock       Tabe        Tabi        Takang
+    Takor       Taku        Tambong     Tanyi       Tassong
+
