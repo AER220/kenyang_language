@@ -1149,6 +1149,129 @@ WRONG: Boh bɛ́pay mmɔ. Boh already carries it, so mmɔ must not appear too.
 This is the same trap as Noh Paul mmá a'tuor: a word that already contains the
 relationship does not take the plain noun as well.
 
-[TO CONFIRM: does Boh on its own mean "children", or is it a plural marker that
-happens to mean children when nothing follows it? And does Boh bɛ́pay also work for
-other people-words, the way Boh Manor bha does?]
+ Boh on its own mean "childrens"its plural while mmo is just a child . like Boh Manyu = children of Manyu
+
+  ---
+
+## Two spellings, one language: the academic and the spoken
+
+Kenyang has a standard written form, used in the published lexicon, in scripture and in
+schools. It is not always how a word is spelled by the people who speak it. Both are
+real. This file keeps both so that a learner who meets either one finds the word, and so
+that nothing of how we actually write it is lost.
+
+**The pattern is always the same.** Where the two differ, the spoken spelling uses a plain
+letter and the written standard uses the Kenyang letter in its place:
+
+    e  ->  ɛ          o  ->  ɔ          n  ->  ŋ
+
+Eleven of my own words differ in exactly this way, and in no other way. The sound is the
+same; only the letter chosen to write it changes.
+
+### The pairs
+
+    spoken          written           meaning
+    ------          -------           -------
+    étá             ɛ́tá              father
+    anwa            aŋwa              cat
+    ékwá            ɛ́kwá             plantain
+    awó             awɔ́              hand
+    besí            bɛsí              face
+    Ereme           ɛ́rɛ́mɛ́          big
+    ansem           ansɛm             behind
+    afo             afɔ               there
+    nefi            nɛfí              outside
+    amem            amɛm              inside
+    neku            nɛkú              beside
+
+These differ only in the tone mark:
+
+    spoken          written           meaning
+    ------          -------           -------
+    nkok            nkók              fowl
+    Mandu           mandu             small
+
+**Which to teach.** Teach the written standard, because that is what a learner will meet
+in a book, in scripture and in a classroom, and mention the spoken form so they recognise
+it when they hear it written by family. Treat the two as the same word. Never correct one
+into the other as if it were an error.
+
+### Already identical
+
+These are spelled the same in both, letter for letter and tone for tone, which is why the
+list above is a spelling habit and not a disagreement about the language:
+
+    mmá, mmɔ, mmú, akók, nsok, ɛkɛt, ntaŋ, mmok, manyɛp, ɛkak, atú, pɛ́pɛ́p, pyɔ, ɛkáti, agha
+
+# New words the lexicon can give Nɛpɛm
+
+Words Nɛpɛm does not have, that the Kenyang Lexicon does. Written in the book's standard
+spelling, with the page so you can check it.
+
+**Confirm each one as a speaker before it goes into the verified file.** Where the book's
+spelling differs from how you say it, record both, the way the spelling bridge does.
+
+Several of these confirm words you already gave me, in the written standard:
+your Mbuere is the book's **mbwɔ́rɛ́**, your echong is **ɛchɔŋ**, your Ngoré is **ngɔrɛ**,
+your mmochi is **mmɔchi**, your ke is **kɛ**.
+
+---
+
+## Family and people
+
+- **manɔ ɛ́tá** `6`: uncle  (p.27)
+- **manɔ** `6`: cousin  (p.27)
+- **mmɔchi** `1/2`: cousin · plural bɔchi  (p.30)
+- **ngɔrɛ** `1/2`: woman · plural baghɔrɛ  (p.36)
+- **mmwɛrɛ** `1/2`: friend · plural mamwɛrɛ  (p.31)
+
+## Time
+
+- **mbwɔ́rɛ́** `5`: tomorrow  (p.29)
+- **ɛ́yú** `7`: yesterday  (p.23)
+- **ɛchɔŋ** `7`: today  (p.17)
+- **betí** `8`: morning  (p.12)
+- **beku** `8`: evening  (p.12)
+- **bɛti** `8`: night  (p.14)
+- **nnywɔp** `5/6`: day · plural manywɔp  (p.39)
+
+## Colours
+
+- **chu**: red  (p.15)
+- **sɛkɔk**: yellow  (p.43)
+- **nkwɔ-mmwɛ́t** `5`: colour  (p.37)
+
+## Around you
+
+- **sɛnɛn** `19/13`: bird · plural kɛnɛn  (p.43)
+- **nsi** `9/10`: fish  (p.39)
+- **manyɛp** `6a`: rain  (p.27)
+- **mbi** `5/6`: road · plural babhi  (p.28)
+- **ɛsyɛ́** `7/8`: market · plural bɛsyɛ́  (p.22)
+- **mɛnyɨŋínyɛ́** `8`: food  (p.29)
+- **nkáp** `5/6`: money · plural bakáp  (p.37)
+- **nnyɛ́n** `5/6`: name · plural manyɛ́n  (p.39)
+
+## Feeling and doing
+
+- **ɛkɔŋ** `7`: love  (p.19)
+- **nɛkɔŋ** `5`: love  (p.33)
+- **kɛnɔ́** `13`: sleep  (p.26)
+- **nsó-nsó**: sad  (p.39)
+
+## Small words
+
+- **kɛ**: but  (p.25)
+- **bɛ́**: that  (p.12)
+- **bɛ́**: that  (p.12)
+
+---
+
+## Still missing, even from the book
+
+The lexicon does not have these either. Only a speaker can give them, which is exactly
+what the thirty days with Grandma are for:
+
+    grandmother   grandfather   aunt   goodbye   sorry   green   blue
+    tree   work   come   go   happy   sick   cold   hot   with   and   because
+
