@@ -1,0 +1,393 @@
+# Kenyang sentences, confirmed by a native speaker
+
+Whole sentences, each one checked by me, Agbor Edouard Ransome, a native Kenyang
+speaker from Bachou Ntai. Every sentence here is correct Kenyang and can be
+taught as it stands.
+
+They are grouped by what each one shows, because the point is not the sentence
+itself but the pattern inside it. A sentence shows where every piece sits and
+what changes around it, which a word on its own never does.
+
+**181 sentences.**
+
+---
+
+## Saying what someone did
+
+- A ká mɛnɨ́ŋɨ́ áwà
+  - He accepted my apology
+- A chí nkway mmu
+  - He is a bachelor
+- A chí ɛbɛ́ptí mmu a wáy mmu
+  - He is a bad person, he killed someone
+- A kɛ́m ɛtɔk sayrɨ
+  - He is governing well
+- A chí kɛnókó-mmwɛ́t
+  - He is humble
+- A kí ɛbhɛ ndú ɛsyɛ
+  - He made an accident in the market
+- A kɨ ɛbhɛ ndú ɛsyɛ
+  - He made an accident in the market
+- A kɨ nkáp ndú kaká nɛ nkway
+  - He makes money from cocoa and pumpkin seeds
+- A kaysí bɛ yí riŋi kɛ a chí kɛriŋi
+  - He thinks he knows but he is ignorant
+- A kaysí bɛ yí rɨŋɨ kɛ a chí kɛriŋɨ
+  - He thinks he knows but he is ignorant
+- Mmɛ ku áchwi
+  - I am buying a car
+- Mmɛ twɔ nnywɔp nɛ kɛnkɔ
+  - I am coming home with a stranger
+- Mmɛ chí gwa ɛwat áwà
+  - I am filing my matchet
+- Mmɛ chyɛ nkɔk ndu akap
+  - I gave the fowl as sacrifice
+- Mmɛ chɨk nɛ ɛkak ɛ́mɔ́t
+  - I hop with one foot
+- Mmɛ kɔŋ bakwá pyɔ
+  - I love black plums
+- Mmɛ kɔŋ sɛrɔk amɛm nkwanyɔ́ŋ bɛ́bhóko
+  - I love whole onion in cocoyam porridge
+- Mmɛ yáŋ nnya ǎchák
+  - I need another meat
+- Mmɛ yáŋ nnya ăchák
+  - I need another meat
+- Mmɛ tí nɛnyɛ manyu-mbiŋ
+  - I sell food cheap
+- Mmɛ yáŋ bɛ síŋ nɛkway
+  - I want to write a song
+- Á chí ntaŋ ɛkɔ ndú mmyɛ kɛkúrí
+  - It is a new month in a different year
+- A chí nɛyá-nkáp. Táŋ ɛsyɛ nɛ yí
+  - It is expensive. Bargain with him
+- Sɛ gyɛ́p-ɛbháŋá bɛ yap mfɔ
+  - Let us cast lots to choose the chief
+- Á bɛkɛ ná nɛnyɛ sayrɨ
+  - She did not cook the food well
+- Á gú mpok nɛ mmɛ chí ɛsak
+  - She died when I was a child
+- A ya mmɛ amɛm ndak
+  - She dragged me into a problem
+- A chí ntɔŋ
+  - She is a teacher
+- Yí a chí mmu njámbɨ ndú nnɛrɛ́-ɛkɛt
+  - She is the elder of the family
+- Á fyɛ bɛtɛ́msí amɛm nɔk
+  - She put ingredients in the soup
+- Bá gó nayák
+  - They grow fast
+- Bá pap yí beya
+  - They hate him much
+- Sɛ bɛrɨ ɛrɨtɨ ɛkɛt nɛ ɛ̌syɛ́p
+  - We are building a beautiful house with sand
+- Sɛ kɔrɛ batu nnɛrɛ́-ɛkɛt ɛsɛ
+  - We are sharing our family property
+- Sɛ pu nyɛ nɛ́ráŋá-nnyɔ
+  - We don't eat green snakes
+- Sɛ nu ɛsɨŋɨ bo ɛsɛ
+  - We fight fights for our people
+- Sɛ bɛ́kɛ kwɛ́n nɛmɔ
+  - We have not failed the exam
+- Sɛ bhóŋ bɛ nkyɛt ndú nɛmɔt
+  - We have to bow in the alter
+- Sɛ kɨ nka nɛ nkúbɛ nnya
+  - We make a drum with animal skin
+- Sɛ niɛrɛ́h ɛmʉ bɛ ɛ bawɛt
+  - We press palm nuts to get oil
+- Sɛ takatí mmu-bɛtok ndú ɛtɔk
+  - We spread servants in the town
+- Wɔ kɨ beya bɛtik
+  - You do much work
+- Wɔ kɨ beya bɛtɨk
+  - You do much work
+- Wɔ pứ cháy mándɛ́m
+  - You don't fear God
+
+## Telling someone not to
+
+- Ɔkɛ kɨ mbɔ wɔ rɨŋɨ bɛnyiŋ mǎnkɛm
+  - Do not act like you know everything
+- Ɔkɛ bɛpʉtí nɛ ntɔŋ
+  - Do not argue with the teacher
+- Ɔkɛ ku mbiŋ-nkú-mfay nɛyá-nkáp
+  - Do not buy an expensive shirt
+- Ɔkɛ kɨŋɨ ndɔ́ŋ chu
+  - Do not cross the red line
+- Ɔkɛ sukótí yí
+  - Do not insult her
+- Ɔkɛ nyú táwɔ taŋ taŋ
+  - Do not smoke marijuana
+- Ɔkɛ yáŋ ɛsɔ́ŋɔri
+  - Don't look for trouble
+- Ɔkɛ kɨ ntok nɛ nnyɔ
+  - Don't play with a snake
+
+## Negatives
+
+- Ná nɔk tanchɔ́t nɛ ákpú
+  - Cook soup and fufu
+- Epúsí ɛ bɛ́kɛ rɨ ntɔkɔ bɔ́-mandɛm
+  - Fornication is not good for God's people
+- Mmá á bɛ́kɛ ghaŋ kɛfokó-ɛnɔk nɛnyɛ́-mmuɛt
+  - Mother did not fry garri on Sunday
+- Ghatí yí bɛ nsɛ ɛ bɛ́kɛ rɨ
+  - Tell him that a lie is not good
+- Nchyɛt-ɛnɛbhɛ a pu mándɛ́m
+  - The fortune teller is not God
+- Njɔ ɛ pứ ɛnyíŋ nɛ mmɛ yáŋ
+  - Voodoo is not what I want
+
+## Questions
+
+- Nɛchókɔ ɛ chí ntɨkɨ mpok?
+  - What time is the meeting?
+- Agha a bwɛ nayák? Chí mpɔŋɔ-ndɨ́k ke chí nɛsɛm
+  - Which runs fast? Is it a horse or a fox?
+- Agha ɛ chí mmu-mɛnwɔp ɛyɛ́?
+  - Who is your leader?
+
+## Commands and requests
+
+- Sɔt mpok nɛ mmwɛrɛ ɛyɛ
+  - Be careful with your friend
+- Twɔ nɛ ɛnyaka ndú amɔ́-nɛ́wú
+  - Bring yams to the funeral
+- Twɔ nɛ ɛnyaka ndú amɔ-nɛ́wú
+  - Bring yams to the funeral
+- Kó nkók mbɔ ɛ́bhóko
+  - Climb the wall like a lizard
+- Síŋ ndɔ́ŋ ndú ndirɛ
+  - Draw a line at the boundary
+- Pɛtí mbok nɛ kɛndákándyɛ
+  - Fill the hole with gravel
+- Ghɔkɔti áchwi mpok a fwɛ́t
+  - Fix the car, it is late
+- Dɔ́k nɛ ɛbhɔ́kɔ́rí nɛkɨ́ŋ ɛyɛ
+  - Go away with your broken radio
+- Dɔ́k nɛ ɛbhókórí nɛkɨ́ŋ ɛyɛ
+  - Go away with your broken radio
+- Dɔ́k che pɛrɛ-nsɛm nayák
+  - Go urinate and come back quick
+- Dɔ́k nɛ mmɛn ndú ɛsyɛ
+  - Go with the goat to the market
+- Kɛ́m awɔ áwà
+  - Hold my hand
+- Rɔ ɛfíŋí ansɛm mbi-nnywɔ́p
+  - Leave the key behind the door
+- Yɨ́ŋɨ ɛmɔ́ptí nsi chí
+  - Look at a big fish
+- Kɨ babhɛ nɛ nkwɔp-ɛnɔk nsɨŋɨ́-mɛ́nyú
+  - Make the medicine with mango tree barks
+- Kɨ babhɛ nɛ nkwɔp-ɛnɔk nsɨ́ŋɨ́-mɛ́nyú
+  - Make the medicine with mango tree barks
+- Faŋá báyá chu nɛ sɛkɔk
+  - Mix the red and yellow pepper
+- Nɨk pakarí ammɨk ɛkɛrɛ́-nɛnyɛ
+  - Please clean the kitchen floor
+- Nɨk rɔ yí annywɔp
+  - Please leave her home
+- Kó mmɛm ntɔkó bafɔ
+  - Pour wine for the chiefs
+- Fyɛ chu-chu amfay nnɛm ayí
+  - Put a flower on her grave
+- Fyɛ kɛniorɛ ndú áyɔ́p
+  - Put a worm on the hook
+- Fyɛ nɛkɔŋ amfay nɛpap
+  - Put love above hatred
+- Fyɛ ntàh ɛyɛ mmok chí nɛfí
+  - Put on your cap, there is sun outside
+- Fyɛ nkùh amɛm ɛ́kyɛbhɛ áwà
+  - Put the uniform in my box
+- Pay ɛkáti tɛ wɔ njwímɛm
+  - Read the book untill you understand
+- Tɔ́ŋ me ɛ́rɨtí ɛnyiŋ
+  - Show me something good
+- Tɔ́ŋ mɛ ɛ́rɨtɨ́ ɛnyiŋ
+  - Show me something good
+- Nyɨkɨsí, kasára gyɛ́p
+  - Sieve cassava and throw the chaves
+- Kwáy nɛkway nɛkɔŋ
+  - Sing a song of love
+- Dak kɛ́bay nɛ sɛtɨ
+  - Split the wood with an axe
+- Ŋá mbyáy sayrɨ
+  - Squeeze well the pumpkin leaves
+- Ghɔ́k-ɛkatí sayrí nɛmɔ wɔ mbak ɛsaka mmu
+  - Study well, you will be a public figure
+- Ghɔ́k-ɛkatí sayrɨ́ nɛmɔ wɔ mbak ɛsaka mmu
+  - Study well, you will be a public figure
+- Ghɔ́k-ɛkatí sayrɨ nɛmɔ wɔ mbak ɛsaka mmu
+  - Study well, you will be a public figure
+- Sɔt monɛ́m chan nkway nɛ wɔ
+  - Take a basin of egussi with you
+- Só mmɔ wɔ bháp yí nkwɔ
+  - Wash the baby and bask him too
+
+## More sentences
+
+- Ɛghɛp nnya sɛn ayárɛ́-motó kɛnɔŋ áwà
+  - A bone burst my bicycle tire
+- Ɛrɨ ɛnɔ kwak nkwaŋ nki
+  - A good hoe helps till the farm
+- Ɛrɨ ɛnɔ kwak nkwaŋ nkɨ
+  - A good hoe helps till the farm
+- Ɛrɨtí ntɛ́mɛ́-nnya ghɔkó-ntɛk ngó ayí
+  - A good hunter does not forget his gun
+- Ɛrɨ mmu-nkú a nyɛ sayrɨ
+  - A good soldier eats well
+- Ntai dɛ́b a ntí ayí
+  - A stone hit his head
+- Mmu kɛbɔŋ nɛfú a rɛm mbok anɛ
+  - A wiseman said this proverb
+- Bo-mankɛm bá nyɛ ndú ɛpa
+  - All of them ate at the party
+- Ɛ mbɔ chí bhák tɨki tɨki a ki bɛtik
+  - Although it is fragile, it works
+- Ɛ mbɔ chí bhák tɨkɨ tɨkɨ a kɨ bɛtik
+  - Although it is fragile, it works
+- Ngak ɛ́ru á bhóŋ bɛ mbak ɛ́cháp
+  - An eru knife has to be sharp
+- Ngak ɛ́ru á bhɔ́ŋ bɛ mbak ɛ́cháp
+  - An eru knife has to be sharp
+- Bor nkubhu bá nyɛ kasára nkɛm
+  - Antelopes ate all the cassava
+- Mandoú mandoú sɛ rháká chɔŋ afɔ
+  - Bit by bit, we shall reach there
+- Ku ntɔŋɔ́-bɛyɔŋ bɛ ghɔ́k kenyaŋ
+  - Buy a dictionary to learn kenyang
+- Kasára á maká bɛchik ɛyɛ
+  - Cassava will add your body mass
+- Ɛfɔ́k a chyɛ mmɛ ɛgháŋá-ɛyɔŋ
+  - Catarrh gave me a hoarse voice
+- Bafɔ bá chí ba-nkwɔ
+  - Chiefs are tigers
+- Sĩŋ ndóŋ ndú ndirɛ
+  - Draw a line at the boundary
+- Kwak manɔ ɛyɛ ndú bɛbe
+  - Help your brother in pain
+- Mbabhɛri-mpɔŋ ɛ yɨ́ŋɨ beya mpɔŋ
+  - Herdsmen watch on many cows
+- Nsúkúru yí a chí níɛŋtí
+  - His orange is sweet
+- Nsúkúru yí á chí níɛŋtí
+  - His orange is sweet
+- Bawɛrɛ́-bɛtu nɛ soukourou chyɛtchyɛt bɛ́rɨ ntɔkɔ bɛ́kwáká
+  - Honey and limes are good for cough
+- Wakarí nɛ nɛnyɛ
+  - Hurry up with the food
+- Bhóŋ ɛbhɛ-mándɛ́m ndú bɛbhik-ɛwat áwà
+  - I have a birth mark on my chest
+- Bhɔ́ŋ ɛrɨtí ɛ́mfú ntɔkɔ yí
+  - I have good wishes for him
+- Mbák wɔ pɔp, sibhirí ammɨk ywe-mmwɛ́t
+  - If you are tired, sit down and rest
+- Mbák wɔ pɔp, sibhirí ammik ywe-mmwɛ́t
+  - If you are tired, sit down and rest
+- Chí kɛnɔ mmu nkáp
+  - It is a rich man's dream
+- Chí kɛ́nókó bɛ bhɔ́ŋ wɔ fa
+  - It is an honor to have you here
+- Ɛ chí bɛdyɛ bɛ nɛfɔŋori
+  - It is holy to forgive
+- Manyɛp á nnyɛ nnywɔp nkɛm
+  - It rained the whole day
+- Beya támpɛ́mpɛm nkinkiri ba twɔ ndú nnɔ áŋgárɛ
+  - Many butterflies come in December
+- Támbɛ bá chyɛ wɔ nɛme
+  - Mosquitoes will give you sickness
+- Mmɔ-chi áwà a kpɔ́t nnyɛ́sɛ́-nku nkú-mana áwà
+  - My brother cut my trouser button
+- Mmɔ-chi áwà a kpót nnyɛ́sɛ́-nku nkú-mana áwà
+  - My brother cut my trouser button
+- Ngan áwà a bú nɛme nsak
+  - My doctor heals cancer
+- Ngaŋ áwà a bú nɛme nsak
+  - My doctor heals cancer
+- Ɛtá áyà á chwe ɛ́kpɛ
+  - My father entered the Ekpe
+- Gwábha áwà ɛ chí chu
+  - My guava is red
+- Nnak áwà a twɔ mbwɔ́rɛ
+  - My in-law will come tomorrow
+- Batu ɛsyɛ áwà bá chí amɛm áchwi-nnyɛ́n
+  - My market cargo is in the ship
+- Ɛmbó áwà ɛ bú nɛme nsɛm bɛbe áwà
+  - My mud bed heals my back pain
+- Ɛbha ɛ́káti áwà ɛ dak
+  - My school bag is torn
+- Mmwɛrɛ ɛ́káti áwà á chí manyɨ́kɨ́-mpoŋ
+  - My school friend is Mbororo
+- Ɛtɔk áwà ɛ sap
+  - My village is far
+- Ngɔrɛ áwà á pɔkɔ mɛnyɛ ntaŋ bɛ́pay
+  - My wife is two months pregnant
+- Ăyi mpok kɛsak
+  - No time for jokes
+- Ntaŋ-a-nyú ɛsɛ ɛ chà manyɛ
+  - Our lawyer has won the case
+- jyɛt nayák chɔŋ wɔ chà
+  - Run fast, will you win
+- Nyɨkɨsɨ, kasára gyɛ́p
+  - Sieve cassava and throw the chaves
+- Nɛbɛ mmwɛ́t a kɨ ɛmɛnɛ yí ɛ rɔŋ
+  - Stress made his hair go off
+- Fɛrɛ mbiŋ-nkú-mfay ɛyɛ chí mpok mbyábháŋ
+  - Take off your shirt, it is time for the injections
+- Kɛkaŋ aŋwa ɛ ɛsap
+  - The cat's whisker is long
+- Nki-bɛtik mándɛ́m a jwití takang
+  - The clergy baptized Takang
+- Nki-bɛtɨk mándɛ́m a jwití takang
+  - The clergy baptized Takang
+- Mbaŋ á nkaŋarí sayri ɛchɔŋ
+  - The day broke well today
+- Ɛghɛp nsi a chyɛ ɛfwɛt nnyu áwà
+  - The fish bone wounded my mouth
+- Ngú-menɛ́m á chɔkɔ ngɔkɔ-nnyɛ́n
+  - The ghost resides in the shore
+- Mɔ a bhóŋ bɛ rɔ́ŋ ɛ́káti
+  - The kid has to go to school
+- Bawɛrɛ́-bhi ndú ɛkɛrɛ́-nɛnyɛ a biŋi ɛswɔ
+  - The palm oil in the kitchen calls for ants
+- Bawɛrɛ́-bhi ndú ɛkɛrɛ́-nɛnyɛ a biŋɨ ɛswɔ
+  - The palm oil in the kitchen calls for ants
+- Ɛpa bhɔ nɛ nɛpɛú nɛ mmɛm
+  - The party starts with cola nuts and wine
+- Mmu nɛme a chí sayrɨ nɛ́nɛ
+  - The patient is fine now
+- Ngáŋ ɛ́kway ndú bako
+  - The salt is enough in the beans
+- Ághɔ́ŋɔ-mmɛ́n a nyɛ tákɔ nɛkú ɛkɛt
+  - The sheep is grazing beside the house
+- Nkwóbhá-nnya ɛ ki nɛmi-ɛkak áwà ɛ mwɔt
+  - The shoe makes my ankle swell
+- Nkwɔ́bhá-nnya ɛ kɨ nɛmi-ɛkak áwà ɛ mwɔt
+  - The shoe makes my ankle swell
+- Nchú á bhɔ́ŋ beya nnyɛ́sɛ́-nnywɔp
+  - The thatch has much thatch roof holes
+- Nghɛ́p anɛ sɛ kɛ́m a chí kɛnɔŋ
+  - The thieve we caught is in prison
+- Bɛnyiŋ wɔ ghɔk ba chí mɛnaŋ
+  - The things you heard are lies
+- Mbaŋ ɛ́sɔ́ŋ ɛchɔŋ
+  - The weather is hot today
+- Sɛnɛn anɛ a bhóŋ sayrɨ ekwɔbhɛ́-nnyu senen
+  - This bird has a nice beak
+- Ɛkɛt anɛ chí amfay kókórók
+  - This house is on a foundation
+- Ɛnyiŋ anɛ wɔ rɛm ɛ chí mbɔr mbok ndɛk
+  - This thing you are saying is like a white man's speech
+- Bɛ chà dɔ́k amfay nnɨk
+  - To win, jump over the rope
+- Bɛsɛ nkɛm sɛ bhɔ́ŋ bɛ kɔŋ nkpák
+  - We all have to love peace
+- Kway tákɔ tákɔ ndú ɛ́kírí
+  - Weed grasses in the compound
+- Kɛbɔŋ chí ɛnyiŋ mmu a bhɔ́ŋ
+  - Wisdom is something which man has
+- Chɔŋ wɔ ngɔ ɛmɔ́ptí ɛnɔk ndú nchót
+  - You will see a big tree in the forest
+- Chɔŋ wɔ ngɔ ɛmóptí ɛnɔk ndú nchɔ́t
+  - You will see a big tree in the forest
+- Nɛnyɛ ɛyɛ ɛ bak
+  - Your food is sour
