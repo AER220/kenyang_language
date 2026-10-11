@@ -1275,3 +1275,153 @@ what the thirty days with Grandma are for:
     grandmother   grandfather   aunt   goodbye   sorry   green   blue
     tree   work   come   go   happy   sick   cold   hot   with   and   because
 
+    ---
+
+## nsinsi: senior, older, bigger
+
+nsinsi follows the person it describes and marks them as the senior one. It is how
+you build the older relations rather than learning a separate word for each.
+
+    Ma nsinsi           grandmother      (senior mother)
+    manor nsinsi        older brother or sister
+    étá  nsinsi         Grand Father
+
+
+---
+
+# Standing alone, and bound to the word
+
+Kenyang has two sets of these. The short ones glue to a verb or follow a noun. The
+long ones stand on their own. Both are correct and they are not alternatives: each
+has its place.
+
+## The person words, standing alone
+
+    meh             I, me
+    Wo              you
+    Yí              he, she
+    Beseh           we, us
+    Beka            you, more than one
+    Bó              they
+
+Against the bound markers already in this file:
+
+    bound       standing alone
+    mme         meh             I
+    O'          Wo              you
+    à           Yí              he, she
+    sé          Beseh           we
+    bá          Bó              they
+
+So mme rong is I am going, with the marker glued to the verb, and meh is I or me
+standing by itself.
+
+[TO CONFIRM: Beseh here and sé in this file are both we. Are they the same word, or
+is Beseh the long form of sé the way besé is?]
+
+## Whose it is, standing alone
+
+    Eya             mine
+    Eyèh            yours
+    Eyí             his, hers
+    Eyeseh          ours
+    Eyeka           yours, more than one
+    Eyap            theirs
+
+These are built from the short possessives already in this file. Ey goes in front:
+
+    short       standing alone
+    wah         Eya             my, mine
+    yeh         Eyèh            your, yours
+    yi          Eyí             his, hers
+    Yap         Eyap            their, theirs
+
+So Ngoré wah is my wife, with the short form following the noun, and Eya is mine
+standing on its own.
+
+[TO CONFIRM: does Ey plus the short form always give the standing-alone one? If it
+does, every possessive in this file can be built both ways.]
+
+---
+
+# Big and senior: two words that take meaning from the noun
+
+## ɛsaká: the grown one, the big one
+
+ɛsaká goes in front of the noun, and what it means depends on the noun it sits with.
+
+    ɛsaká mmú           a gentleman         (mmú = person, man)
+    ɛsaká mmɔ           a big child         (mmɔ = child; boy or girl, either)
+
+So it is not two separate words. It is one word taking its sense from what follows.
+A published lexicon glosses ɛsaká-mmú as boy; that is the child sense attached to
+the wrong noun. With mmú it is a gentleman.
+
+## nsinsi: the senior one, the older one
+
+nsinsi goes AFTER the noun, and marks the senior one.
+
+    Ma nsinsi           grandmother         (senior mother)
+    manor nsinsi        older brother or sister
+
+Note the two sit on opposite sides: ɛsaká before the noun, nsinsi after it. This
+follows the adjective rule already in this file, where each word has its own side.
+
+[TO CONFIRM: does nsinsi work with étá to give grandfather? And is there a matching
+word for the junior one?]
+
+---
+
+# More words
+
+## Moving
+
+    Jiet            run
+    Koh             walk
+    Tæ              stand
+    Chokor          sit
+    Kó              ascend, climb
+    Seb             descend, come down
+
+Jiet and Koh are opposites, as are Tæ and Chokor, and Kó and Seb.
+
+[TO CONFIRM: a published lexicon has té meaning to gush out, to burst. Tæ here is
+stand. If those are two different words that look alike, both belong; if one is
+wrong, this file wins.]
+
+## Gathering and scattering
+
+    Nyiokoti        gather
+    takati          scatter
+
+## Good and bad
+
+    Bhereur-ndu     goodness
+    bhebɨ           evil
+
+bhebɨ and bɛbʉ́, already in this file, are the same word written two ways.
+
+## The seasons
+
+    Esoh            rainy season
+    enem            dry season
+
+## Life and death
+
+    Nepem           life
+    Newu            death
+    Mandem          God
+
+Nepem is the name of this tutor, and it means life.
+
+## People
+
+    Nnem            male
+    Ngorh           female
+    Mbaghanem       man
+    Ngoreh          woman
+    Ngorsong        lady
+    ɛsaká mmú       gentleman
+
+Nnem is male, and it is also used for husband. Ngoreh is woman, and is also used
+for wife. The root names the sex; the marriage sense comes from how it is used.
