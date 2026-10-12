@@ -701,4 +701,403 @@ This is the yɛ-ntɨkɨ already in this file for *every*.
     ntí           head                 mmwɛ́t       body
     ɛbhɨ          bush                 awu          over there
 
-    
+    ---
+
+# Text 5: Going to study abroad, spoken to the ancestors
+
+The longest of the blessings. Text 4 speaks to the traveller; this one speaks
+over his head to the ancestors about him, which is why everything here is *he*
+and *him* rather than *you*.
+
+## Giving him into their care
+
+    Bawú abhɛ́n báchí ammɨk
+    Our ancestors that are below
+
+    ghó mmɔ ɛywɛka nɔ
+    this is your child
+
+    ǎyáŋ rɔ́ŋ ɛtɔk barɨk
+    He wants to travel abroad
+
+    mǎnjiŋɨ nɔkɔ yí sáyrí
+    You should take care of him
+
+    bakɛ́ ka ntí ánsáy yí
+    He should not have any headache
+
+    Ánnyú mfok chí ansɛm
+    Let him breath dust only behind
+
+    ákɛ́ nyú ambi
+    let him not breath dust in front
+
+    ánjat chí kebí
+    Let him step only on faeces
+
+    ákɛ́ yat nse.
+    let him not step on thorns
+
+    Bátɔ́ŋ ɛkáti ɛ́nchwe nɔkɔ yí antí
+    He should assimilate what is taught in school
+
+    ndu nɛmɔ, ansɔt chí awɔ́-nɛ́m
+    During exams, let him take the right hand
+
+    ákɛ́ sɔt awɔ́-ghɔ.
+    let him not take the left hand
+
+## Carrying him there and back
+
+    Bakɛ́ ka ntí ánsáy yí
+    He should not have headache
+
+    mǎmpɔkɔ yí pɛtii
+    You should carry him safely
+
+    kpát tɛ yí ágháká awu
+    until he reaches his destination
+
+    ɛ́pók ɛnɛ́ yí ǎrɔ́ŋ
+    where he is going
+
+    ghó awɔ́ áywɛsɛ́ abhɛ́n sɛ́chí wɛn nɛ
+    These are the hands of those of us who are alive
+
+    ghó awɔ́ aywɛka bawú nɛ.
+    these are the hands of the ancestors
+
+    Abhírɛ́ kɛnɔ́, angɔ́ chí bɛsɛ́
+    When he sleeps, he should see nothing but us
+
+    ákɛ́ ghɔ́ ɛnyiŋ ɛnɛ́ ɛbúbú
+    he should not see evil
+
+    yɛ yi ágháká awu, ndɨk ákɛ́ pyoti yí
+    Whatever happens, white people should not deceive him
+
+    kpát tɛ yí amperɛ-nsɛm
+    until he comes back
+
+    ákɛ́ kwɛ́n yí bɛ́yáŋ ndɨk ndu nɛbhay
+    he should not fall into temptation of marrying a white woman
+
+    kpát tɛ bɛsɛ́ babhɔŋ sɛ́nka bɛ́
+    until we all agree that
+
+    ě aywɛsɛ́ mmɔ kɛ ábhɔ́ŋ bɛ́kóŋo yí
+    it is our child that has to follow
+
+    mbɔnyunɛ́ ɛyap ɛ́kway bɛ́bhák ɛ́mɔt.
+    because it is good to be one
+
+---
+
+# What Text 5 teaches
+
+## The nasal in the marker changes to match the next sound
+
+This explains something that has looked inconsistent since Text 1. The marker
+mán- is sometimes written mám-, and á- is sometimes ám- and sometimes án-. It is
+not carelessness. The nasal takes the shape of the sound that follows it.
+
+**m before the lip sounds b, p and f:**
+
+    Má-bɛp      becomes   Mámbɛp          they will ask
+    mǎ-pɔkɔ     becomes   mǎmpɔkɔ         you should carry
+    á-bak       becomes   ámbak           it should be
+    ɛ́-fú       becomes   ɛ́mfú           it should come
+    á-pɛrɛ      becomes   amperɛ          he comes back
+
+**n before everything else:**
+
+    Mán-twó     stays     Mántwó          let them come
+    Mán-sɔt     stays     Mánsɔt          let them take
+    á-sɔt       becomes   ánsɔt           he should take
+    ɛ́-chwe     becomes   ɛ́nchwe         it should enter
+    mǎn-jiŋɨ    stays     mǎnjiŋɨ         you should care for
+    mɛ́-twɔ     becomes   mɛ́ntwɔ         they should come
+
+Across five texts there is no example of m before a non-lip sound, or n before a
+lip sound. So when building a word with one of these markers, look at the sound
+that follows and write m or n to match it.
+
+## kpát tɛ: until
+
+    kpát tɛ yí ágháká awu           until he reaches there
+    kpát tɛ yí amperɛ-nsɛm          until he comes back
+    kpát tɛ bɛsɛ́ babhɔŋ sɛ́nka     until we all agree
+
+This joins kpátɛ, which this file already has for *except*, and tɛ for *until*.
+
+## chí: only this and nothing else
+
+Placed after the verb, chí narrows it to one thing. The line that follows then
+shuts out the opposite.
+
+    Ánnyú mfok chí ansɛm            let him breathe dust ONLY behind
+    ákɛ́ nyú ambi                   let him not breathe it in front
+
+    ánjat chí kebí                  let him step ONLY on faeces
+    ákɛ́ yat nse                    let him not step on thorns
+
+    ansɔt chí awɔ́-nɛ́m             let him take ONLY the right hand
+    ákɛ́ sɔt awɔ́-ghɔ               let him not take the left
+
+    angɔ́ chí bɛsɛ́                 let him see ONLY us
+    ákɛ́ ghɔ́ ɛnyiŋ ɛnɛ́ ɛbúbú      let him not see evil
+
+This is the shape of a blessing: say the good thing, then shut the door on its
+opposite. Four times in this one speech.
+
+## kɛ singles out, a fourth time
+
+    ě aywɛsɛ́ mmɔ kɛ ábhɔ́ŋ bɛ́kóŋo yí
+    it is OUR CHILD that has to follow
+
+With the three from the earlier texts, the pattern holds: noun, then kɛ, then
+the verb.
+
+## Speaking to the ancestors
+
+The whole speech is built on one arrangement. The living address the dead as
+*you people*, and talk about the traveller as *him*.
+
+    mǎnjiŋɨ nɔkɔ yí         YOU should take care of HIM
+    mǎmpɔkɔ yí pɛtii        YOU should carry HIM
+
+    ánsáy yí                let it pain him
+    ákɛ́ nyú ambi           let him not breathe in front
+    ágháká awu              until he reaches there
+
+So mǎn- for the ancestors being asked, and á- for the boy being spoken about.
+
+## Words this text confirms in use
+
+    bawú         the ancestors, the dead     kɛnɔ́       sleep
+    ɛtɔk barɨk   abroad                      ndɨk        white person
+    nɛmɔ         exam, test                  nɛbhay      marriage
+    ɛkáti        book, school                kebí        faeces
+    nse          thorns                      mfok        dust
+    ammɨk        below, on the ground        awu         over there
+    ágháká       reaches                     amperɛ-nsɛm comes back
+    ɛ́kway       is good, is enough          ɛ́mɔt       one
+
+    ---
+
+# Text 6: The morning prayer
+
+Not a blessing spoken over someone else, but a man speaking for himself. This is
+why it matters: every other text says *let him* and *let them*, and this one says
+*I*. It is where the first person lives.
+
+**How it is done.** When an elder gets up in the village, he puts water in the
+clay pot and starts looking at the direction of the sun. He will wash his hands
+and face and starts reciting:
+
+    Ndu mmu nsɛ́nsí ɛtɔk áfaté bɛtí, ǎfyɛ́ manyɛp ndu ɛte ntɔp anjɛ́t
+    anjiŋi nɔkɔ ɛbhak mmok áfú anso amɔ́ ambɨk nɔkɔ
+
+## Waking
+
+    Ɛtá Mandɛm, ɛ́yú mbɨrɛ kɛnɔ́
+    My Lord, yesterday, I slept
+
+    kɛnɔ́ kɛ́ chí nɛwú.
+    that sleep was death
+
+    Nɛ́nɛ ḿfáté
+    right now, I have woken up
+
+    chí bɛtaŋ ɛbhɛ́n wɔ ɔ́chyɛ́ mmɛ kɛ ḿfáté
+    It is by your strength that I have woken up
+
+    mbɔnyunɛ́ kɛnɔ́ chí manɔ nɛwú.
+    because sleep is the brother of death
+
+    Kɛ ndu wɔ ɔ́kú mmɛ ḿfáté,
+    But, as you have allowed me to wake up
+
+    nchí kaka wɔ.
+    I am thanking you
+
+## Asking for the day
+
+    Yɛ̌ mmɛ mfu chí nɛfí
+    Even if I go out
+
+    ɔ́kɛ́ ka mmɛ ńtɛ́m ɛkak ndu ntay
+    do not allow me to hit my leg on a stone
+
+    yɛ̌ ndɔŋ chí ɛbhɨ,
+    Even if I go to the bush
+
+    ɔ́kɛ́ ka nnyɔ́ ámfú mmɛ kɛ́kwɔ́t mmwɛ́t
+    don't allow a snake to come near me
+
+    yɛ̌ mmɛ ndɔŋ chí kɛntɛ́mɛ́,
+    Even if I go hunting
+
+    nnya amfu nɔkɔ mmɛ bɛsí.
+    let animals appear in front of me
+
+## Asking to be held to his own heart
+
+    Kɛ Ɛtá ndu mmɛ ghati wɔ mɛnyiŋ ɛbhɛn,
+    However Father, as I am telling you these things
+
+    ndu mmɛ nchí nɛ
+    as you know me
+
+    mmɛ ńgɔ́ mmɔ mmu ndu áfwɛ́t,
+    if I see somebody's child passing by
+
+    ńjíŋí amík abú-ábú
+    I look at him with evil intentions
+
+    ɔ́kɛ́ ka nɛ mmɛ.
+    do not agree with me
+
+    Ḿbák ńchɔ́kɔ́ ɛrɨ́tɨ́ ɛnyiŋ mmɛ mbɛ́ mmɛ kɛ nkwáy bɛ́bhɔ́ŋ yɔ́,
+    If I have somebody's thing, I get angry that it is only me to have it
+
+    Ɛtá ɔ́kɛ́ ka nɛ mmɛ.
+    Father, do not agree with me
+
+## But if his heart is good
+
+    Kɛ, ḿbák mmɛ ngɔ ɛnyiŋ tɔkɔ́ mmú mbɛ́ ɛ́ndɔ́k ɛrɨ́rɨ́
+    but, if I see somebody's thing and wish blessings
+
+    ngɔ mmɔ mmu ḿpwɛ bɛ́ mbɛ́ mmɔ awa
+    if I see somebody's child and say it is my child
+
+    ángɔ́ ámbák nnɛ́m mmɔ́
+    let him grow and become great
+
+    ngɔ ngɔrɛ mmu, ámfwɛ́t mbɛ́ eé
+    I see a woman and I wish her to be a mother of children
+
+    mámkwak yí ambé bó
+    let them help her to bear children
+
+    Ḿbák mbɔŋ chí nti nɔ,
+    if I possess such a heart
+
+    Ɛtá ɔkway bɛ́kwak mmɛ ḿbɔ́ŋ bɔ́.
+    Father, help me to have children
+
+    Kwak mmɛ bɛ́ mmɔ awa ákɛ́ me.
+    help me so that my child should not be sick
+
+    kwak mmɛ bɛ́ mmu nnɛrɛ́-ɛkɛt awa ákɛ́ me
+    help me so that none of my family members should be sick
+
+    mbɔ nti ɛna nɛ́chí fú
+    because I have a plain heart
+
+    bɛ́ nnɛrɛ́-ɛkɛt ánchák nkɛm.
+    that the family should increase
+
+    Ɛtá nkáká wɔ tontó.
+    Father, many thanks to You
+
+---
+
+# What Text 6 teaches
+
+## I is ḿ- or ń-, and the nasal rule holds
+
+Every other text speaks about other people. This one speaks for the man himself,
+so it is where the first person finally appears, and it follows the same sound
+rule found in Text 5.
+
+**m before the lip sounds:**
+
+    ḿfáté           I have woken up
+    ḿbák            if I
+    ḿpwɛ            I say
+    ḿbɔ́ŋ           I have
+    mbɨrɛ           I slept
+
+**n before everything else:**
+
+    ńtɛ́m           I hit
+    ńgɔ́            I see
+    ńchɔ́kɔ́        I have
+    ńjíŋí           I look
+    nchí            I am
+    nkáká           I thank
+    nkwáy           I can
+
+So the nasal rule covers every person in the language. Twenty-three examples
+across the texts, with no exception.
+
+## ka: to allow, to agree
+
+This settles a word that has appeared since Text 1 without a meaning.
+
+    ɔ́kɛ́ ka mmɛ ńtɛ́m ɛkak           do not ALLOW me to hit my leg
+    ɔ́kɛ́ ka nnyɔ́ ámfú mmɛ          do not ALLOW a snake to come near me
+    ɔ́kɛ́ ka nɛ mmɛ                  do not AGREE with me
+    sɛ́nka bɛ́                       until we AGREE that
+
+So in Text 5, bakɛ́ ka ntí ánsáy yí is *let them not allow the head to pain him*.
+One word, and it carries both allowing and agreeing.
+
+## The shape of a plea: do not allow me to
+
+    ɔ́kɛ́ ka + person + verb
+
+    ɔ́kɛ́ ka mmɛ ńtɛ́m ɛkak ndu ntay      do not allow ME to hit MY leg
+    ɔ́kɛ́ ka nnyɔ́ ámfú mmɛ              do not allow a SNAKE to come near me
+
+The one being stopped comes after ka, and the verb then carries that person's
+own marker: mmɛ with ń-, nnyɔ́ with á-.
+
+## mbɔnyunɛ́: because
+
+    mbɔnyunɛ́ kɛnɔ́ chí manɔ nɛwú      because sleep is the brother of death
+
+## Yɛ̌ ... chí: even if
+
+    Yɛ̌ mmɛ mfu chí nɛfí               even if I go out
+    yɛ̌ ndɔŋ chí ɛbhɨ                  even if to the bush
+    yɛ̌ mmɛ ndɔŋ chí kɛntɛ́mɛ́         even if I go hunting
+
+With Ḿbák for a plain *if*, there are two kinds of condition: Ḿbák sets a case,
+and Yɛ̌ ... chí grants it in advance, the way *even if* does.
+
+## The marker answers the noun, now for kɛ- words too
+
+    kɛnɔ́ kɛ́ chí nɛwú           sleep, it is death
+
+So kɛnɔ́ takes kɛ́, alongside ɛnyiŋ taking ɛ́, mɛnyiŋ taking mɛ́, and nɛnyɛ́
+taking nɛ́. The marker is the beginning of the noun said again.
+
+## kɛ singles out, in prayer too
+
+    chí bɛtaŋ ɛbhɛ́n wɔ ɔ́chyɛ́ mmɛ kɛ ḿfáté
+    it is YOUR STRENGTH that woke me
+
+    mbɛ́ mmɛ kɛ nkwáy bɛ́bhɔ́ŋ yɔ́
+    that it is ONLY ME who can have it
+
+## Saying it twice, for evil
+
+    amík abú-ábú            eyes full of evil
+
+With ɛbúbú for evil in Text 3, and ɛrɨ́rɨ́ for good, the doubling runs through
+the whole vocabulary of good and bad.
+
+## Words this text confirms in use
+
+    kɛnɔ́        sleep                  nɛwú        death
+    bɛtaŋ       strength               manɔ        brother
+    ntay        stone                  nnyɔ́       snake
+    nnya        animal                 ɛbhɨ        bush
+    nɛfí        outside                bɛsí        face, in front
+    nti         heart                  bó          children
+    ngɔrɛ       woman                  nnɛrɛ́-ɛkɛt family
+    kwak        help                   kaka        thank
+    ɛte ntɔp    clay pot               mmok        sun
