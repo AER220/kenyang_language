@@ -111,8 +111,19 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
 .tabs button[aria-current="true"]{color:var(--place)}
 .tabs button:focus-visible{outline:2px solid var(--place);outline-offset:-2px}
 
-/* the top nav does the same job on a wider screen */
-.nav-r .q[aria-current="true"]{color:var(--place);background:rgba(255,201,77,.1)}
+/* On a wide screen the switcher is a row of pills under the header rather
+   than a bar stuck to the bottom, which is a phone idea. */
+@media (min-width:881px){
+  .tabs{position:static;display:flex;justify-content:flex-start;gap:7px;
+    background:none;border:none;backdrop-filter:none;-webkit-backdrop-filter:none;
+    padding:2px 0 0;margin:0 0 10px}
+  .tabs button{flex:0 0 auto;flex-direction:row;gap:9px;font-size:14.5px;
+    letter-spacing:0;padding:9px 17px;border:1px solid var(--edge);border-radius:99px}
+  .tabs button:hover{border-color:var(--edge-hi);color:var(--text)}
+  .tabs button[aria-current="true"]{border-color:var(--place);
+    background:rgba(255,201,77,.1)}
+  .tabs button .ti{font-size:15px}
+}
 
 @media (max-width:880px){
   .tabs{display:flex}
@@ -531,6 +542,35 @@ h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
 @keyframes ring{0%{transform:scale(.9);opacity:.8}70%,100%{transform:scale(1.35);opacity:0}}
 .drum.quiet::after{display:none}
 
+/* ── the mark ─────────────────────────────────────────────────────
+   It was a Latin N on flat gold, which is what every other app looks like. It
+   is now ɛ́: the letter at the heart of the name Nɛpɛ́m, and the one letter
+   that says Kenyang at a glance. The gold is lit from the top left so it reads
+   as a round object rather than a coloured disc. */
+.drum{width:62px;height:62px;
+  background:radial-gradient(125% 125% at 32% 22%,
+    #FFEFBE 0%, #FFCF5E 30%, #EDA42B 62%, #B5701A 100%);
+  box-shadow:0 10px 30px rgba(230,160,45,.42),
+             inset 0 1.5px 0 rgba(255,255,255,.6),
+             inset 0 -4px 10px rgba(110,55,0,.3)}
+.drum span{font-size:31px;color:#4A2B06;
+  text-shadow:0 1px 0 rgba(255,255,255,.34);padding-bottom:3px}
+.drum::after{inset:-6px;border-color:rgba(255,201,77,.4)}
+.drum:hover{transform:translateY(-3px) scale(1.05);
+  box-shadow:0 16px 42px rgba(230,160,45,.58),
+             inset 0 1.5px 0 rgba(255,255,255,.6),
+             inset 0 -4px 10px rgba(110,55,0,.3)}
+.phead .av{background:radial-gradient(125% 125% at 32% 22%,
+    #FFEFBE 0%, #FFCF5E 30%, #EDA42B 62%, #B5701A 100%);
+  color:#4A2B06;font-size:17px}
+
+/* Play, as the place games are chosen from */
+.pickc.more{background:linear-gradient(140deg,rgba(255,201,77,.12),
+            rgba(185,139,255,.09));border-color:rgba(255,201,77,.3);
+            text-decoration:none;display:block}
+.pickc.more:hover{border-color:var(--place)}
+.pickc.more h3{color:var(--place)}
+
 .greet{max-width:min(310px,72vw);padding:15px 17px;border-radius:18px 18px 4px 18px;
   background:var(--lift2);border:1px solid var(--edge);backdrop-filter:blur(16px);
   -webkit-backdrop-filter:blur(16px);box-shadow:0 12px 40px rgba(0,0,0,.5);
@@ -615,10 +655,6 @@ footer p{margin:0}
   <nav>
     <span class="brand">Nɛpɛm<small>KƐ́NYĀŊ · THE LANGUAGE OF HOME</small></span>
     <div class="nav-r">
-      <a class="q" href="#table">Play together</a>
-      <a class="q" href="#alone">Learn on your own</a>
-      <a class="q" href="#family">Ask your family</a>
-      <a class="q" href="games.html">Games</a>
       <button class="q" id="share" type="button">Share</button>
       <button class="cta" id="openChat"><span class="dot"></span>Ask Nɛpɛm</button>
     </div>
@@ -963,7 +999,7 @@ footer p{margin:0}
 <nav class="tabs" id="tabs" aria-label="Sections"></nav>
 
 <div class="dock">
-  <button class="drum" id="drum" aria-label="Talk to Nɛpɛm"><span>N</span></button>
+  <button class="drum" id="drum" aria-label="Talk to Nɛpɛm"><span>ɛ́</span></button>
   <span class="saylabel" id="saylabel">Ask <b>Nɛpɛm</b> anything</span>
   <div class="greet" id="greet" role="status">
     <button class="shut" id="greetShut" aria-label="Hide">&times;</button>
@@ -981,7 +1017,7 @@ footer p{margin:0}
 <div class="pane" id="pane" role="dialog" aria-modal="false" aria-labelledby="paneT">
   <div class="phead">
     <div class="who">
-      <span class="av" aria-hidden="true">N</span>
+      <span class="av" aria-hidden="true">ɛ́</span>
       <div style="min-width:0">
         <h3 id="paneT">Nɛpɛm</h3>
         <p class="st"><i aria-hidden="true"></i><span id="pstat">here with you</span></p>
@@ -1215,19 +1251,28 @@ const PICKS = [
   {id:"duel", ic:"⚔️", t:"Family duel", tag:"fam",
    d:"Two players, one screen. Take turns. Children usually win."},
   {id:"build",ic:"🔤", t:"Build the sentence", tag:"solo",
-   d:"You get the English. Put the Kenyang words in the right order."}
+   d:"You get the English. Put the Kenyang words in the right order."},
+  {id:"more", ic:"🎲", t:"More games", tag:"solo", href:"games.html",
+   d:"Four levels that each ask you to do something new. Tells you the rule when you get one wrong."}
 ];
 let A = {id:"xw"};
 const stage = $("stage");
 
 function paintPicks(){
-  $("picks").innerHTML = PICKS.map(p=>`
-    <button class="pickc" data-pick="${p.id}" role="tab" aria-selected="${A.id===p.id}">
-      <div class="ic" aria-hidden="true">${p.ic}</div>
+  $("picks").innerHTML = PICKS.map(p=>{
+    const body = `<div class="ic" aria-hidden="true">${p.ic}</div>
       <h3>${p.t}</h3><p>${p.d}</p>
-      <span class="tag ${p.tag}">${p.tag==="fam"?"BETTER WITH TWO":"ON YOUR OWN"}</span>
-    </button>`).join("");
+      <span class="tag ${p.tag}">${p.href?"OPENS A PAGE":
+        p.tag==="fam"?"BETTER WITH TWO":"ON YOUR OWN"}</span>`;
+    /* a card that goes somewhere is a link, so it can be opened in a new tab
+       and read out as a link rather than a button */
+    return p.href
+      ? `<a class="pickc more" href="${p.href}">${body}</a>`
+      : `<button class="pickc" data-pick="${p.id}" role="tab"
+           aria-selected="${A.id===p.id}">${body}</button>`;
+  }).join("");
   document.querySelectorAll(".pickc").forEach(c=>{
+    if (!c.dataset.pick) return;          /* the games card is a plain link */
     c.addEventListener("click",()=>{A.id=c.dataset.pick; runActivity();});
     c.addEventListener("pointermove",e=>{
       const r=c.getBoundingClientRect();
@@ -1792,7 +1837,7 @@ $("tfSend").addEventListener("click", async () => {
   $("tfSend").textContent = "Sending…";
 
   /* keep it on this device too, so the card shows it straight away */
-  if (en){ S.fam[en] = ken; save(); paintWeek(); }
+  if (en){ S.fam[en] = ken; save(); if ($("wgrid")) paintWeek(); }
 
   const res = await sendToSupabase({
     id: newId(), kind: "new_word", question: en, answer: "",
@@ -1893,7 +1938,8 @@ document.addEventListener("click", e => {
   if (use){ openPaneWith("use", use.dataset.useit, S.fam[use.dataset.useit]); return; }
 });
 
-paintWeek(); loadWall();
+if ($("wgrid")) paintWeek();
+loadWall();
 
 let P={thing:0,count:2};
 $("numgrid").innerHTML = NUMBERS.map(([d,k],i)=>
@@ -2242,11 +2288,10 @@ if(!calm){
    instead of leaving the site.
    ═══════════════════════════════════════════════════════════════════════════ */
 const PLAN = [
-  ["learn", "Learn", "✦", [".hero", "#numbers"]],
-  ["play",  "Play",  "🧩", ["#table"]],
-  ["steps", "Steps", "↗",  ["#alone"]],
-  ["teach", "Teach", "🌿", ["#family", "#help", "#wall"]],
-  ["about", "About", "◇",  ["#honest", "#about", "#invent"]]
+  ["learn",    "Learn",    "✦", [".hero", "#numbers", "#alone"]],
+  ["play",     "Play",     "🧩", ["#table"]],
+  ["feedback", "Feedback", "🌿", ["#help", "#wall"]],
+  ["about",    "About",    "◇",  ["#honest", "#about", "#invent"]]
 ];
 
 (function buildViews(){
@@ -2255,6 +2300,11 @@ const PLAN = [
   const holder = document.createElement("div");
   holder.className = "views";
   wrap.insertBefore(holder, foot);
+
+  /* words of the week is gone: a speaker who knows a word sends it through
+     Feedback instead, which is the same act with less machinery round it */
+  const week = wrap.querySelector("#family");
+  if (week) week.remove();
 
   PLAN.forEach(([id, , , sels]) => {
     const v = document.createElement("div");
@@ -2275,7 +2325,10 @@ const PLAN = [
     if (el.tagName === "HR" && el.classList.contains("rule")) el.remove();
   });
 
-  /* the bar along the bottom */
+  /* under the header on a wide screen, along the bottom on a phone */
+  const navEl = wrap.querySelector("nav");
+  if (navEl) wrap.insertBefore($("tabs"), navEl.nextSibling);
+
   $("tabs").innerHTML = PLAN.map(([id, label, icon]) =>
     `<button data-view="${id}" aria-current="false">
        <span class="ti" aria-hidden="true">${icon}</span>${label}</button>`).join("");
@@ -2294,8 +2347,9 @@ const PLAN = [
 /* the old section ids still live in the footer links, and in any address
    somebody has already bookmarked, so they are pointed at the right view
    rather than silently dropping back to the first one */
-const WAS = {table:"play", alone:"steps", family:"teach", help:"teach",
-             wall:"teach", honest:"about", numbers:"learn", invent:"about"};
+const WAS = {table:"play", alone:"learn", steps:"learn", family:"feedback",
+             teach:"feedback", help:"feedback", wall:"feedback",
+             honest:"about", numbers:"learn", invent:"about"};
 
 function showView(id, push){
   if (WAS[id]) id = WAS[id];
