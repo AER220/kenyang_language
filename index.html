@@ -88,6 +88,27 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
 
 /* ── the builder, top of the page, for everybody ─────────────── */
 .hero{padding:22px 0 4px}
+/* ── the headline ─────────────────────────────────────────────────
+   Somebody arriving has about two seconds to work out what this is. The old
+   page spent them on a sentence rebuilding itself, which is lovely once you
+   know what you are looking at and meaningless before. */
+.htitle{font-family:var(--serif);font-size:clamp(31px,5.6vw,58px);line-height:1.06;
+  font-weight:700;letter-spacing:-.025em;margin:10px 0 16px;max-width:15em}
+.hsub{font-size:clamp(16px,1.9vw,19px);color:var(--mute);max-width:38em;
+  margin:0 0 18px;line-height:1.62}
+.hsub b{color:var(--text);font-weight:500}
+.hproof{display:inline-flex;align-items:center;gap:9px;font-size:13px;
+  color:var(--mute);margin:0 0 30px;padding:7px 15px;border-radius:99px;
+  border:1px solid var(--edge);background:var(--lift)}
+.hproof i{width:7px;height:7px;border-radius:99px;background:var(--place);flex:none}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,16px);
+  z-index:80;padding:12px 20px;border-radius:99px;font-size:14.5px;
+  background:var(--lift2);border:1px solid var(--edge-hi);color:var(--text);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 12px 40px rgba(0,0,0,.5);opacity:0;pointer-events:none;
+  transition:opacity .22s,transform .22s}
+.toast.up{opacity:1;transform:translate(-50%,0)}
+@media (max-width:880px){ .htitle{margin-top:4px} .hproof{margin-bottom:22px} }
 .hlead{font-size:16px;color:var(--mute);margin:0 0 22px;max-width:44em}
 .hlead b{color:var(--text);font-weight:600}
 .built{font-family:var(--serif);font-size:clamp(32px,6.6vw,84px);line-height:1.05;
@@ -550,6 +571,8 @@ footer p{margin:0}
       <a class="q" href="#table">Play together</a>
       <a class="q" href="#alone">Learn on your own</a>
       <a class="q" href="#family">Ask your family</a>
+      <a class="q" href="games.html">Games</a>
+      <button class="q" id="share" type="button">Share</button>
       <button class="cta" id="openChat"><span class="dot"></span>Ask Nɛpɛm</button>
     </div>
   </nav>
@@ -559,7 +582,13 @@ footer p{margin:0}
        understand Kenyang and cannot produce it, and have never once seen
        the rule written down. So it goes at the top, not tucked away.     -->
   <section class="hero" aria-labelledby="heroT">
-    <h1 class="sr" id="heroT">How a Kenyang sentence is built</h1>
+    <h1 class="htitle" id="heroT">Kenyang, for the people it belongs to</h1>
+    <p class="hsub">A free tutor for <b>Kɛ́nyāŋ</b>, the language of about 65,000
+      Bayangi people in Southwest Cameroon. Every word here was checked by a native
+      speaker, and <b>when Nɛpɛm does not know something, he says so.</b></p>
+    <p class="hproof"><i aria-hidden="true"></i>2nd place, Syracuse University
+      Libraries LaunchPad Ideas Fest 2026</p>
+
     <p class="hlead"><b>A Kenyang sentence is built from parts, in a fixed order.</b>
       Change who, when, whether it happened, or where, and watch it rebuild. If you
       grew up hearing this language but never learned to say it, start here.</p>
@@ -882,6 +911,8 @@ footer p{margin:0}
      so it is instant and free. The chat behind it only loads when somebody
      taps, which keeps the Streamlit container asleep for the many visitors
      who never open it.                                                      -->
+<div class="toast" id="toast" role="status"></div>
+
 <div class="dock">
   <button class="drum" id="drum" aria-label="Talk to Nɛpɛm"><span>N</span></button>
   <div class="greet" id="greet" role="status">
@@ -1852,6 +1883,36 @@ paintPlural();
      3. big        the same element made full screen. Same DOM node, so the
                    conversation is not lost and the iframe does not reload.
    ═══════════════════════════════════════════════════════════════════════════ */
+/* ── sharing ──────────────────────────────────────────────────────
+   WhatsApp is where this actually travels, so the phone's own share sheet is
+   the right thing to open. Desktop has no share sheet, so the link is copied
+   instead and the person is told that is what happened. */
+function toast(words){
+  const t = $("toast");
+  t.textContent = words;
+  t.classList.add("up");
+  clearTimeout(t._t);
+  t._t = setTimeout(() => t.classList.remove("up"), 2600);
+}
+
+$("share").addEventListener("click", async () => {
+  const link = "https://nepem.org";
+  const note = {
+    title: "Nɛpɛm, Kenyang for the whole family",
+    text: "A free tutor for Kenyang. It only teaches what a speaker has checked.",
+    url: link
+  };
+  try {
+    if (navigator.share){ await navigator.share(note); return; }
+  } catch(e){ return; }          /* they closed the sheet; say nothing */
+  try {
+    await navigator.clipboard.writeText(link);
+    toast("Link copied. Paste it anywhere.");
+  } catch(e){
+    toast(link);
+  }
+});
+
 const CHAT_URL = $("newTab").href;
 let chatLoaded = false;
 
