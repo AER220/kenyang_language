@@ -1101,3 +1101,700 @@ the whole vocabulary of good and bad.
     ngɔrɛ       woman                  nnɛrɛ́-ɛkɛt family
     kwak        help                   kaka        thank
     ɛte ntɔp    clay pot               mmok        sun
+
+    ---
+
+# Text 7: A marriage
+
+Spoken when a woman is brought to her husband's family. The living greet her, then
+call every kind of ancestor by name and place, and ask for children, health and
+good harvest.
+
+## Welcoming her
+
+    Ngɔrɛ ǎtwɔ́ ɛchɔŋ
+    A woman is coming today
+
+    sɛ́nkwáy sɛ́nkáká yí.
+    let us sing and praise her
+
+    Nnɛ́m achí yí nɛpak mmwɛ́t
+    Her husband is besides her
+
+    sɛ́nkwáy sɛ́nsyɛ́ptí yí.
+    let us welcome him
+
+    Mmɔ anak bɛsɛ́;
+    Our child has invited us
+
+    sɛ́twɔ bɛ́chémti ndu ɛ́pók ɛnɛ́n ɛchɔŋ
+    we have gathered here today
+
+    sɛ́nkwáy sɛ́nkáká wɔ
+    It is good for us to greet you
+
+## Calling the ancestors, place by place
+
+    yɛ chí mamɨrɛ ɛywɛka
+    He is your friend
+
+    abhɛ́n bachí awu ammɨk,
+    those of you below
+
+    bɔ ɛ́tá ɛywɛsɛ́ abhɛ́n báchí amfay
+    our fathers who are above
+
+    barɛ́m abhɛ́n báchí bɛtɔk bɔ ɛ́tá ɛywɛsɛ́
+    the ancestors that are in our fathers' villages
+
+    abhɛ́n báchí amɛm nchɔ́t
+    those who are in the forest
+
+    sɛ́bhɨŋɨ beka ɛchɔŋ bɛ́
+    we are calling on you today
+
+    mantwɔ́ mangók
+    you people should come and hear
+
+    bɔ bɛsɛ́ báchémtí ɛchɔŋ
+    our children have gathered today
+
+## Asking for her health
+
+    anɛ ngɔrɛ ndu áchí nɔ
+    As for this woman
+
+    apɔ́kɔ́ nɔ́kɔ́ mɛnyɛ
+    when she is pregnant
+
+    ákɛ́ kwɛ́n nɛme
+    she should not be sick
+
+    akwɛ́n nɛme
+    if she is sick
+
+    nɛme nɛ́kɛ́taŋ.
+    the sickness should not be serious
+
+## Asking for children and harvest
+
+    Sɛ́bhɨŋɨ beka, ghók ka
+    we are calling on you people, listen
+
+    chyɛ ka nɛbhe
+    you should give birth
+
+    chyɛ ka mbwɔ́t
+    give also good harvest
+
+    Akɛm ɛnɔ ankwaŋ ɛnyiŋ, ɛ́ngɔ́ghɔ́
+    if she handles a hoe, let food come forth
+
+    apɨ ɛnyiŋ ammɨk,
+    if she plants something
+
+    ɛ́ngɔ́ ɛ́kɛ́ bhɔ́ŋ ɛsɔŋɔri
+    let it grow and not get rotten
+
+    ɛkɔŋ, maŋák, kɛfɔ, kɛ́nkono nɔkɔ yí
+    love, happiness, and respect should follow her
+
+## Asking for the children, in order
+
+    manɛ́m mántwɔ nɔkɔ
+    Let the male children come first
+
+    abhɛ́n baghɔrɛ mánkono nɔkɔ
+    let the female children follow
+
+    bɛfák mɛ́ntwɔ́
+    let twin children come forth
+
+    nnɛ́m ɛyi ambak Tanyi
+    let the father be Tanyi
+
+    yí ambak Mányi
+    let the wife be Manyi
+
+## Committing them
+
+    sɛ́bhɨŋɨ beka
+    we are calling on you
+
+    sɛ́ghati beka
+    we are telling you
+
+    sɛ́nik beka mmwɛ́t bɛ́ mankwak
+    we are calling on you to help
+
+    bɔ bɛsɛ́ chyɛ́ beka ɛchɔŋ ndu nɛbhay
+    our children we have given for marriage
+
+    nɛpɛ́m ɛnap
+    we commit their lives to you
+
+    nɛchɔkɔ ɛnap.
+    we commit their well being to you
+
+---
+
+# What Text 7 teaches
+
+## There is no word for and between two verbs
+
+Where English joins two actions with *and*, Kenyang says the person marker again
+on the second verb. The marker is repeated, not a joining word.
+
+    sɛ́nkwáy sɛ́nkáká yí          let us sing, let us praise her
+    sɛ́nkwáy sɛ́nsyɛ́ptí yí       let us sing, let us welcome him
+    mantwɔ́ mangók                let them come, let them hear
+    ɛ́ngɔ́ ɛ́kɛ́ bhɔ́ŋ ɛsɔŋɔri    let it grow, let it not have trouble
+
+The earlier texts do the same, which means this is how the language works and
+not a habit of one speaker:
+
+    Mánsɔt mmɛm amɛn mánnyú      let them take these drinks, let them drink
+    Sɛ́nku sɛ́mbɛ́n babhɛ́n       let us rise, let us dance
+
+So to say *come and eat*, do not look for a word for *and*. Say the marker
+twice.
+
+## The marker answers the noun, again
+
+    nɛme nɛ́kɛ́taŋ               let the sickness not be hard     nɛ- takes nɛ́-
+    ɛnyiŋ ɛ́ngɔ́                 let the thing grow               ɛ- takes ɛ́-
+    manɛ́m mántwɔ nɔkɔ           let the boys keep coming         ma- takes mán-
+
+With ɛnyiŋ taking ɛ́-, mɛnyiŋ taking mɛ́-, nɛnyɛ́ taking nɛ́-, and kɛnɔ́ taking
+kɛ́-, the rule holds through every text so far: the marker is the beginning of
+the noun said again.
+
+## Naming the ancestors by where they are
+
+The speech does not call the dead with one word. It names each place they may be,
+and calls them separately.
+
+    abhɛ́n bachí awu ammɨk                     those of you below
+    bɔ ɛ́tá ɛywɛsɛ́ abhɛ́n báchí amfay         our fathers who are above
+    barɛ́m abhɛ́n báchí bɛtɔk bɔ ɛ́tá ɛywɛsɛ́  the ancestors in our fathers' villages
+    abhɛ́n báchí amɛm nchɔ́t                   those who are in the forest
+
+abhɛ́n báchí is *those who are*, and what follows says where. Below, above, in
+the villages, in the forest. Nobody is left out.
+
+## The order asked for in children
+
+    manɛ́m mántwɔ nɔkɔ               let the male children come first
+    abhɛ́n baghɔrɛ mánkono nɔkɔ      let the female children follow
+    bɛfák mɛ́ntwɔ́                   let twin children come forth
+
+With kɛ́nkono for *follow*, the same koŋo already in this file.
+
+## Tanyi and Manyi: what twins make of their parents
+
+    bɛfák mɛ́ntwɔ́                   let twin children come forth
+    nnɛ́m ɛyi ambak Tanyi            let the father be Tanyi
+    yí ambak Mányi                  let the wife be Manyi
+
+These lines follow the asking for twins, so Tanyi and Manyi are what the parents
+of twins become. They are not ordinary names: they are earned. Both are in the
+list of Bayangi family names, which is why so many people carry them.
+
+## Words this text confirms in use
+
+    ngɔrɛ       woman, wife           nnɛ́m        husband, male
+    nɛbhay      marriage              nɛbhe        birth
+    mɛnyɛ       pregnancy             bɛfák        twins
+    nɛme        sickness              kwɛ́n nɛme   to fall sick
+    ɛnɔ         hoe                   kwaŋ         to cultivate
+    pɨ          to plant              ɛkɔŋ         love
+    maŋák       happiness             nchɔt        forest
+    amfay       above                 ammɨk        below
+    barɛ́m       ancestors             bɛtɔk        villages
+    nɛpɛ́m       life                  nak          to invite
+    kwak        to help               mamɨrɛ       friends
+
+---
+
+# Text 8: A widow's lament
+
+A woman sings over her husband. Unlike the other texts this one is not addressed
+to the ancestors or to God. She is speaking to him, and she gives him messages to
+carry.
+
+It is sung, not spoken, and it circles back on itself. Lines repeat because grief
+repeats.
+
+## He has gone
+
+    Nnɛ́m arɔŋ nɛkɔ.
+    My husband has travelled
+
+    Nnɛ́m arɔŋ nɛkɔ.
+    My husband has travelled
+
+    Ngɔbhu arɔŋ nɛkɔ
+    Nursing mother has travelled
+
+    Nnɛ́m awa akʉ bɛtɨk ndɛ́m.
+    My husband has worked in vain
+
+    Nnɛ́m awa akʉ bɛtɨk ndɛ́m.
+    My husband has worked in vain
+
+    Nnɛ́m arɔŋ nɛkɔ á.
+    Oh, my husband has travelled
+
+    Nnɛ́m arɔ́ mmɛ bɔ awɔ́.
+    My husband has left me with children
+
+## It was all for nothing
+
+    Nnɛ́m akʉ bɛtɨk ndɛ́m.
+    My husband has worked for nothing
+
+    Sɛ́kʉ bɛtɨk ndɛ́m.
+    We have worked for nothing
+
+    Nnɛ́m awa é.
+    oh, my husband
+
+    Nnɛ́m awa é.
+    oh, my husband
+
+    Nnɛ́m kɛ mbɔ́.
+    oh, my first husband of my youth
+
+    Nnɛ́m awa é.
+    oh, my husband
+
+    Nnɛ́m awa arɔŋ nɛkɔ é.
+    my husband has travelled
+
+    Nnɛ́m awa arɔ́ mmɛ bɔ awɔ́.
+    My husband has left me with children
+
+## Carry my greetings
+
+    Ɔ́nkaka mamí awa.
+    You should greet my mother
+
+    Ɔ́nkaka Sofí Ayók.
+    You should greet Sophie Ayuk
+
+    Ɔ́nkaka mmɛ Tambɛ.
+    You should greet Tambe for me
+
+    Ɔ́nkaka mmɛ mamí Matá
+    You should greet Martha
+
+    Ɔ́nkaka mmɛ Ben Ayók.
+    You should greet me Ben Ayuk
+
+    Bén akʉ bɛtɨk ndɛ́ndɛ́m
+    Ben has worked in vain
+
+    O ó nnɛ́m awa é
+    Oh, my husband
+
+    nnɛ́m kɛ mbɔ́
+    husband of my youth
+
+    Ɔ́nkaka mmɛ mmá ɛya é
+    You should greet my mother
+
+    Ɔ́nkaka mmɛ Sofí Ayók
+    Greet Sophie Ayuk for me
+
+    Ɔ́nkaka bo mankɛm
+    Greet everybody
+
+    O ó nnɛ́m awa e
+    Oh, my husband
+
+---
+
+# What Text 8 teaches
+
+## Dying is spoken of as travelling
+
+The title of this song is Nɛwú, death. Inside the song that word is never said
+once. What is said instead is that he has gone on a journey.
+
+    Nnɛ́m arɔŋ nɛkɔ.            My husband has travelled
+    Ngɔbhu arɔŋ nɛkɔ            Nursing mother has travelled
+
+nɛkɔ is the same word Text 3 uses for a real journey, where the family blesses a
+man who is about to travel. The living are sent off with corn and blessings; the
+dead are spoken of the same way.
+
+So when teaching nɛkɔ, teach both: a journey a man takes, and the journey he does
+not come back from.
+
+## kʉ: to do
+
+    Nnɛ́m awa akʉ bɛtɨk ndɛ́m.      my husband has done work for nothing
+    Sɛ́kʉ bɛtɨk ndɛ́m.              we have done work for nothing
+    Bén akʉ bɛtɨk ndɛ́ndɛ́m         Ben has done work in vain
+
+With Text 3's ɔ́rɔ́ŋ kʉ chí beya bɛtɨk, *you are going to do a lot of work*, this
+is the same verb. To work is to do work: kʉ bɛtɨk.
+
+## Doubling, for grief
+
+    ndɛ́m               in vain
+    ndɛ́ndɛ́m           in vain, said of Ben
+
+The same doubling that strengthens bataŋ-bataŋ and ɛrɨ́rɨ́ is used here to make a
+loss heavier.
+
+## The cry at the end of a line
+
+In this song a line often ends in á, é or ó, and sometimes opens with O ó. Where
+these appear, the English carries an *oh*.
+
+    Nnɛ́m arɔŋ nɛkɔ á.          Oh, my husband has travelled
+    Nnɛ́m awa é.                oh, my husband
+    O ó nnɛ́m awa é             Oh, my husband
+
+They are not words with meanings. They are the sound of the crying, written down.
+
+## Ɔ́n-: you should, said to the dead
+
+    Ɔ́nkaka mamí awa.           you should greet my mother
+    Ɔ́nkaka mmɛ Tambɛ.          you should greet Tambe for me
+    Ɔ́nkaka bo mankɛm           greet everybody
+
+This is the ɔ́- for *you* from Texts 3 and 4, with n before k exactly as the sound
+rule says. What is striking is who it is addressed to. She is still speaking to
+him, and still asking him to do something.
+
+## Bayangi names, written in Kenyang
+
+The song names real people, and shows how the family names are written in Kenyang
+rather than in English spelling.
+
+    Ayók            Ayuk
+    Tambɛ           Tambe
+    Sofí            Sophie
+    Matá            Martha
+    Bén             Ben
+
+Ayuk and Tambe are both in the list of Bayangi family names.
+
+## Words this text confirms in use
+
+    nɛwú        death                 nɛkɔ        journey
+    nnɛ́m        husband               bɔ          children
+    bɛtɨk       work                  kʉ          to do
+    rɔ          to leave              kaka        to greet
+    mmá         mother                ɛ́tá        father
+    bo mankɛm   everybody             awu         over there
+
+    ---
+
+# Text 9: Installing a chief
+
+The longest of the speeches, and the one that holds the whole village in it. The
+speaker calls every kind of ancestor, sets the left hand against anyone who means
+harm, blesses the farm and the animals one by one, then raises the right hand for
+everyone who works.
+
+## Calling every ancestor, wherever they are
+
+    Beka abhɛ́n ammɨk, ghók ka
+    Those of you who are below, listen
+
+    abhɛ́n awu amfay, mǎŋgok nɔkɔ nkwɔ́
+    Those of you above, listen
+
+    bɛ̌ barɛ́m abhɛ́n annyɛ́n
+    Those ancestors that are in the river
+
+    nɛ abhɛ́n ammɨk abhɛ́n amfay njiyɛ
+    those who are in the hills
+
+    abhɛ́n nchɔ́t
+    those who are in the forest
+
+    ghók ka bɛ̌ abhɛ́n báchí ngɔk nnyɛ́n
+    those who are at the river banks
+
+    sɛ́bhíkí fap be
+    I have not despised you also
+
+    ghók beyɔŋ ɛbhɛ́n mmɛ twɔ́ rɛm.
+    Listen to what I am going to say
+
+## The gathering, and the left hand of the dead
+
+    Sɛ́nyókótí fa ndu nnywɔp ɛnɛ́n ɛchɔŋ.
+    We are all gathered here today
+
+    Manyu nkɛm anyókótí fa ɛchɔŋ.
+    The whole of Manyu has gathered here today
+
+    Sɛ́twɔ́ fyɛ́ mfɔ ɛywɛsɛ́
+    We are going to install our chief
+
+    kɛ sɛ́bhɨŋɨ beka bawú
+    We are calling on you the ancestors
+
+    beka abhɛ́n báchí awu antɛn
+    those of you who are below
+
+    abhɛ́n bɔ ɛ́tá ɛywɛsɛ́ báyámbɨ
+    our fathers who have gone ahead
+
+    beka mansɔt mmɛ́n nɛ awɔ́-ghɔ
+    you should take wine with the left hand
+
+    nɔ chí awɔ́-ghɔ ɛywɛka anɛ́ bawú.
+    that is the left hand of the dead
+
+    Mmu áyɨ́ŋɨ́ bɛsɛ́ amík abú-abú
+    Any person who looks at us with evil intention
+
+    awɔ́-ghɔ ɛywi átɛ nɛ.
+    this is his left hand
+
+    Mmu áyɨ́ŋɨ́ mmu ankyɛp amɨ́k
+    Anybody who looks at somebody and blinks the eye
+
+    awɔ́-ghɔ ɛywi átɛ nɛ
+    this is his left hand
+
+    Mmu áyɨ́ŋɨ́ mmɔ nti nɛ nti nɛbúbú
+    Anybody who looks at his friend with evil intentions
+
+    awɔ́-ghɔ ɛywi átɛ nɛ.
+    this is his left hand
+
+## Against the one who plots in secret
+
+    Sɛ́bhɨŋɨ beka abhɛ́n báchí awu nɔ́nɔ́
+    We are calling on those of you who are over there
+
+    nti abhɔŋ nɛbɛ́ nti nɛ nti
+    if a friend is angry with another one
+
+    antwɔ́ angati kpɔ́ŋɔ́rɔ́ŋ.
+    let him come openly and say it
+
+    ḿbák ámpwɛ́ bɛ ándɔ́k ánchɔ́kɔ́ ansɛm
+    If he is planning in his heart behind
+
+    ánchyɛ́ yí ɛnyiŋ ndu nɛnyɛ́ annyɛ́
+    let him put something in food so that he can eat
+
+    ámfyɛ́ yí ɛnyiŋ ndu mmɛm ánnyú
+    let him put something in his drink let him drink
+
+    bɛ́ ákɛ́ chɔkɔ
+    that he should not live
+
+    ghó awɔ́-ghɔ ɛywi átɛ nɛ
+    this is his left hand
+
+    Yí nkwɔ́ manywɔp tándrámɔt, byó nɛ ánwi
+    He should follow after seven days, after fourteen days
+
+    ankwɛsɛ nɔkɔ beka awu nɔ ammɨk.
+    let him meet you below
+
+    Kɛ ḿbák tɛnɛ́ bɛsɛ́ abhɛ́n sɛ́chí chɔ́kɔ́-chɔ́kɔ́
+    But, to those of us who are alive
+
+    ghó awɔ́-nɛ́m aywɛsɛ́ átɛ nɛ
+    this is our hand
+
+    yɛ̌-ntiki ɛnyiŋ ɛnɛ́ sɛ́kʉ fa ammɨk
+    Whatever we are doing here
+
+    sɛ́nsɔt nɔkɔ chí awɔ́-nɛ́m
+    let us take the right hand
+
+    yɛ̌-ntiki ɛnyiŋ ɛnɛ́ bɛsɛ́ kʉ fa amfay
+    Whatever we are doing here above
+
+    sɛ́kʉ sɛ́nsɔt nɔkɔ chí awɔ́-nɛ́m
+    let us do everything and take it with the right hand
+
+## Blessing the farm and the animals
+
+    Mmu ánkʉ mmɛ́n, mmɛ́n ɛyɔ ambɛ́ chí bɛfák.
+    If somebody buys a goat, let the goat deliver twins
+
+    Mmu atɔk awɔ́ ndu nkɨ, nkɨ ɛwu ɛrɨ́rɨ́ ɛ́mfu nɔkɔ
+    If somebody farms, let it yield good crops
+
+    apɨ chí nchwi ankyɛ́p ampati amfay ɛkɛt ɛ́njwi
+    If he plants corn, let it fill the barn
+
+    akwaŋ chí bako, ankɔ́k mɔ́ tontó
+    If he plants beans, let him have a good harvest
+
+    mántɨ́, nkáp ántwɔ nɔkɔ.
+    Let them sell and let them have much money
+
+    Apɨ chí bɛ́kwá
+    If he plants plantains
+
+    atí nɔ́kɔ́ bakáp ánchwe nɔkɔ yí awɔ́
+    let them grow and let him sell some
+
+    Aku mmɛ́n, mmɛ́n ambyɛ́rɛ́-byɛ́t
+    If he buys a goat, let it grow fat
+
+    mmɛ́n ɛyɔ angɔŋ nɔkɔ nnɛrɛ́-ɛkɛt.
+    let the goat multiply and feed the family
+
+    Aku nkɔk, nkɔk ambyɛ́rɛ́-byɛ́t
+    If he buys a fowl, let it grow fat
+
+    bachi ánja nɔkɔ yɔ́ mɛnyɛ
+    let there be many eggs in the hens womb
+
+    ankɔk nɔkɔ bɛya bɔ́.
+    let it produce several chicks
+
+## The right hand, for everyone who works
+
+    Kɛ sɛ́bhɨŋɨ nɔ beka bɛ́
+    But we are calling on you people today
+
+    mangók fa ndu bɛsɛ́ chɔ́kɔ́ ndu nnywɔp ɛnɛ́n ɛchɔŋ
+    you should listen as we are seated here today
+
+    bɛ́ awɔ́-nɛ́m ɛywɛsɛ́ átɛ nɛ
+    This is our right hand
+
+    bɛsɛ́ abhɛ́n sɛ́chɔ́kɔ́ nɛ abhɛ́n bákʉ bɛtik ndɨ́k.
+    those of us who are here and those in the Whiteman's job
+
+    Mmu achɔ́kɔ́ ɛbhak ɛyi bɛ́kʉ bɛtik ndɨ́k ɛrɨ́rɨ́ ɛ́nkono nɔkɔ yí
+    let luck follow us
+
+    apwɛ́ bɛ́ yí ɛ́nsɨ́ŋ ɛkáti nɛ ante chí ambi
+    If he writes an exam, let him be first in class
+
+    ampwɛ bɛ́ ɛ́nkʉ bɛtik nɛ
+    If he decides to work
+
+    mánkosi nɔkɔ yí
+    let him be promoted always
+
+    bápɛt mámmaka nɔkɔ bakáp
+    let him always have salary increase
+
+    ghó awɔ́-nɛ́m bɛsɛ́ abhɛ́n sɛ́chí wɛn amfay
+    this is the right hand of those of us who are above
+
+    yɛ̌-ntiki ɛnyiŋ ɛnɛ́ bɛsɛ́ kʉ sɛ́mbɔŋ nɔkɔ chí awɔ́-nɛ́m
+    whatever we are doing with the right hand
+
+---
+
+# What Text 9 teaches
+
+## A condition can be made without any word for if
+
+This file already has Ḿbák for *if* and Yɛ̌ ... chí for *even if*. The blessing
+over the farm uses neither. It simply says what a man does, then says what should
+follow, and the two clauses sitting side by side carry the condition.
+
+    Mmu ánkʉ mmɛ́n, mmɛ́n ɛyɔ ambɛ́ chí bɛfák
+    if somebody buys a goat, let the goat deliver twins
+
+    apɨ chí nchwi ankyɛ́p ampati amfay ɛkɛt ɛ́njwi
+    if he plants corn, let it fill the barn
+
+    akwaŋ chí bako, ankɔ́k mɔ́ tontó
+    if he plants beans, let him have a good harvest
+
+    Aku nkɔk, nkɔk ambyɛ́rɛ́-byɛ́t
+    if he buys a fowl, let it grow fat
+
+The first clause is a plain statement with its person marker. The second carries
+the *let* marker. No joining word stands between them.
+
+## The whole blessing runs on one shape
+
+Every line of the farm blessing names the thing, then blesses that same thing by
+name. The noun is said twice, and the second time it takes its marker.
+
+    mmɛ́n ... mmɛ́n ɛyɔ ambɛ́          the goat ... let that goat bear
+    nkɨ ... nkɨ ɛwu ɛrɨ́rɨ́ ɛ́mfu      the farm ... let that farm yield good
+    nkɔk ... nkɔk ambyɛ́rɛ́-byɛ́t      the fowl ... let that fowl grow fat
+
+ɛyɔ and ɛwu are *that one*, pointing back at what was just named.
+
+## chí marks the thing itself
+
+In Text 5 chí narrowed a blessing to one thing and shut out its opposite. Here it
+points at what exactly is planted or taken.
+
+    apɨ chí nchwi               he plants, namely corn
+    akwaŋ chí bako              he farms, namely beans
+    Apɨ chí bɛ́kwá              he plants, namely plantains
+    sɛ́nsɔt nɔkɔ chí awɔ́-nɛ́m   let us take, namely the right hand
+
+## The numbers, alive in a sentence
+
+    Yí nkwɔ́ manywɔp tándrámɔt, byó nɛ ánwi
+    He should follow after seven days, after fourteen days
+
+tándrámɔt is seven, and byó nɛ ánwi is ten and four. This is the first time the
+counting appears in real speech rather than in a list, and it confirms that
+bigger numbers are built with nɛ, and.
+
+## ka: to accept, again
+
+    mmu ngo ambɨŋɨ yí anka
+    if the big man calls him, let him agree
+
+This is the ka of Text 6, to allow or to agree, now shown as something a man does
+when he is called.
+
+## Saying it twice, for growing fat
+
+    ambyɛ́rɛ́-byɛ́t          let it grow fat
+
+Beside bataŋ-bataŋ for strong drink and chɔ́kɔ́-chɔ́kɔ́ for still living.
+
+## bɛtik ndɨ́k: the white man's work
+
+    abhɛ́n bákʉ bɛtik ndɨ́k          those in the Whiteman's job
+
+ndɨk is a white person. So salaried work, with exams and a boss and a pay packet,
+is named *the white man's work*, and it stands apart from bɛtik alone, which is
+the work of the farm. The speech blesses both, in turn: first the farm, then the
+office.
+
+## Calling the dead by where they lie
+
+The speech does not call the ancestors with one word. It names every place they
+may be, so that none is left out.
+
+    abhɛ́n ammɨk                 those below
+    abhɛ́n awu amfay             those above
+    barɛ́m abhɛ́n annyɛ́n         the ancestors in the river
+    abhɛ́n amfay njiyɛ           those in the hills
+    abhɛ́n nchɔ́t                those in the forest
+    abhɛ́n báchí ngɔk nnyɛ́n     those at the river banks
+
+## Words this text confirms in use
+
+    mfɔ         chief                 kɛfɔ        chieftaincy
+    barɛ́m       ancestors             bawú        the dead
+    njiyɛ       hill                  nnyɛ́n       river
+    ngɔk nnyɛ́n  river bank            nchɔt       forest
+    mmɛ́n       goat                  nkɔk        fowl
+    bachi       eggs                  bɛfák       twins
+    nchwi       corn                  bako        beans
+    bɛ́kwá      plantains             nkɨ         farm
+    nkáp        money                 bakáp       pay
+    tí          to sell               ku          to buy
+    kwaŋ        to farm               pɨ          to plant
+    sɨ́ŋ        to write              ɛkáti       book, exam
+    tándrámɔt   seven                 byó nɛ ánwi fourteen
