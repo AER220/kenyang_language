@@ -9,8 +9,8 @@
 <meta property="og:title" content="Nɛpɛm · Kenyang for the whole family">
 <meta property="og:description" content="Build a real Kenyang sentence, then sit down with your children and solve a Kenyang crossword.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://aer220.github.io/kenyang_language/">
-<meta property="og:image" content="https://aer220.github.io/kenyang_language/share.png">
+<meta property="og:url" content="https://nepem.org/">
+<meta property="og:image" content="https://nepem.org/share.png">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -503,6 +503,7 @@ footer p{margin:0}
   .sky{filter:blur(70px)}
 }
 </style>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "befbccb9132f459eb44dd05e676d8832"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
 <div class="sky" aria-hidden="true">
@@ -877,7 +878,7 @@ footer p{margin:0}
     </div>
     <div class="pbtns">
       <button id="paneBig" title="Make it bigger" aria-label="Make it bigger">&#9713;</button>
-      <a id="newTab" href="https://kenyanglanguage.streamlit.app" target="_blank"
+      <a id="newTab" href="https://nepem.onrender.com" target="_blank"
          rel="noopener" title="Open in a new tab" aria-label="Open in a new tab">&#8599;</a>
       <button id="paneShut" title="Close" aria-label="Close">&times;</button>
     </div>

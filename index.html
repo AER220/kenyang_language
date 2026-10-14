@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nɛpɛm · Kenyang for the whole family</title>
 
 <meta name="description" content="Learn Kenyang together. Build sentences, solve a Kenyang crossword, play a family duel. For the Bayangi diaspora and anyone who wants the language back.">
@@ -420,8 +420,38 @@ h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
    Streamlit iframe behind the chat only loads when somebody actually wants
    to talk, because loading it on arrival would wake the container for people
    who never open it: slow for them, and it costs me money.                 */
-.dock{position:fixed;right:clamp(14px,2.4vw,26px);bottom:clamp(14px,2.4vw,26px);
-  z-index:60;display:flex;align-items:flex-end;gap:12px;flex-direction:row-reverse}
+.dock{position:fixed;right:clamp(14px,2.4vw,26px);
+  bottom:calc(clamp(14px,2.4vw,26px) + env(safe-area-inset-bottom,0px));
+  z-index:60;display:flex;align-items:flex-end;gap:12px;flex-direction:row-reverse;
+  touch-action:none}
+/* dragged to the left half, so the greeting opens the other way */
+.dock.left{flex-direction:row}
+.dock.moving{transition:none}
+.dock.settling{transition:left .26s cubic-bezier(.2,.9,.25,1),
+                          top .26s cubic-bezier(.2,.9,.25,1)}
+.drum{touch-action:none}
+.drum.held{transform:scale(1.12);box-shadow:0 16px 44px rgba(255,201,77,.55)}
+
+/* ── the chat on a phone ──────────────────────────────────────────────
+   A 400px corner pane is wider than most phones, so small and large looked
+   the same. On a narrow screen it becomes a sheet from the bottom instead:
+   the shape people already know from every messaging app. */
+@media (max-width:640px){
+  .pane{right:0;left:0;bottom:0;top:auto;width:auto;
+        height:min(82vh,calc(100vh - 70px));
+        border-radius:22px 22px 0 0;border-bottom:none;
+        padding-bottom:env(safe-area-inset-bottom,0px);
+        animation:sheetup .32s cubic-bezier(.2,.9,.25,1) both}
+  .pane.big{top:0;height:auto;border-radius:0;
+            padding-top:env(safe-area-inset-top,0px)}
+  @keyframes sheetup{from{transform:translateY(100%)}to{transform:none}}
+  /* the grab handle, only on a phone */
+  .phead::before{content:"";position:absolute;top:7px;left:50%;
+    transform:translateX(-50%);width:38px;height:4px;border-radius:99px;
+    background:var(--edge-hi)}
+  .phead{position:relative;padding-top:18px;touch-action:none}
+  .dock.hidden{display:none}
+}
 .drum{width:60px;height:60px;border-radius:50%;border:none;cursor:pointer;flex:none;
   background:linear-gradient(145deg,var(--place),#E0761F);position:relative;
   box-shadow:0 8px 30px rgba(255,201,77,.36);transition:transform .25s,box-shadow .3s}
@@ -1879,17 +1909,129 @@ function openPane(big){
   const p = $("pane");
   p.classList.add("open");
   if (big) p.classList.add("big");
+  /* on a phone the sheet covers the button, so take it out of the way */
+  if (innerWidth <= 640){
+    document.querySelector(".dock").classList.add("hidden");
+    document.body.style.overflow = "hidden";
+  }
   loadChat();
 }
 function shutPane(){
   $("pane").classList.remove("open", "big");
   document.body.style.overflow = "";
+  document.querySelector(".dock").classList.remove("hidden");
 }
 
-$("drum").addEventListener("click", () => {
-  const p = $("pane");
-  if (p.classList.contains("open")) shutPane(); else openPane(false);
+/* ── dragging the button ────────────────────────────────────────────
+   A tap and a drag start the same way, so the two are told apart by distance:
+   under 6px is a tap and opens the chat, over 6px is a drag. Without that
+   threshold every drag would also open the chat on release.                */
+const dock = document.querySelector(".dock");
+const PAD = 12;
+
+function placeDock(x, y){
+  const w = dock.offsetWidth, h = dock.offsetHeight;
+  const topPad = PAD, botPad = PAD + 6;
+  x = Math.max(PAD, Math.min(innerWidth - w - PAD, x));
+  y = Math.max(topPad, Math.min(innerHeight - h - botPad, y));
+  dock.style.left = x + "px";
+  dock.style.top = y + "px";
+  dock.style.right = "auto";
+  dock.style.bottom = "auto";
+  dock.classList.toggle("left", x + w / 2 < innerWidth / 2);
+}
+
+function rememberDock(){
+  try {
+    const r = dock.getBoundingClientRect();
+    localStorage.setItem("nepem.dock", JSON.stringify({
+      side: r.left + r.width / 2 < innerWidth / 2 ? "l" : "r",
+      y: r.top / innerHeight
+    }));
+  } catch(e){}
+}
+
+function restoreDock(){
+  let p = null;
+  try { p = JSON.parse(localStorage.getItem("nepem.dock") || "null"); } catch(e){}
+  if (!p) return;                       /* never moved: leave the CSS corner */
+  const w = dock.offsetWidth;
+  placeDock(p.side === "l" ? PAD : innerWidth - w - PAD, p.y * innerHeight);
+}
+
+function settleDock(){
+  const r = dock.getBoundingClientRect();
+  const toLeft = r.left + r.width / 2 < innerWidth / 2;
+  dock.classList.add("settling");
+  placeDock(toLeft ? PAD : innerWidth - r.width - PAD, r.top);
+  setTimeout(() => dock.classList.remove("settling"), 280);
+  rememberDock();
+}
+
+let dragging = false, moved = false, sx = 0, sy = 0, ox = 0, oy = 0;
+
+$("drum").addEventListener("pointerdown", e => {
+  dragging = true; moved = false;
+  sx = e.clientX; sy = e.clientY;
+  const r = dock.getBoundingClientRect();
+  ox = r.left; oy = r.top;
+  dock.classList.add("moving");
+  $("drum").classList.add("held");
+  try { $("drum").setPointerCapture(e.pointerId); } catch(err){}
 });
+
+addEventListener("pointermove", e => {
+  if (!dragging) return;
+  const dx = e.clientX - sx, dy = e.clientY - sy;
+  if (!moved && Math.hypot(dx, dy) > 6){ moved = true; hideGreet(); }
+  if (moved){ placeDock(ox + dx, oy + dy); e.preventDefault(); }
+}, {passive:false});
+
+addEventListener("pointerup", () => {
+  if (!dragging) return;
+  dragging = false;
+  dock.classList.remove("moving");
+  $("drum").classList.remove("held");
+  if (moved){ settleDock(); return; }
+  const p = $("pane");                  /* it was a tap */
+  if (p.classList.contains("open")) shutPane();
+  else openPane(innerWidth <= 640);     /* a phone opens straight to the sheet */
+});
+
+/* a rotation or a resized window can leave it off screen */
+addEventListener("resize", () => {
+  if (dock.style.left) restoreDock();
+});
+restoreDock();
+
+/* ── flick the sheet away on a phone ────────────────────────────────
+   Dragging the header down closes it, the way a sheet should. Short drags
+   spring back, so a mis-touch does not lose the conversation.            */
+{
+  const head = document.querySelector(".phead");
+  let sheetY = 0, sheeting = false;
+  head.addEventListener("pointerdown", e => {
+    if (innerWidth > 640) return;
+    if (e.target.closest("button, a")) return;   /* let the buttons work */
+    sheeting = true; sheetY = e.clientY;
+    $("pane").style.transition = "none";
+  });
+  addEventListener("pointermove", e => {
+    if (!sheeting) return;
+    const dy = Math.max(0, e.clientY - sheetY);
+    $("pane").style.transform = "translateY(" + dy + "px)";
+  });
+  addEventListener("pointerup", e => {
+    if (!sheeting) return;
+    sheeting = false;
+    const pane = $("pane");
+    const dy = Math.max(0, e.clientY - sheetY);
+    pane.style.transition = "transform .25s cubic-bezier(.2,.9,.25,1)";
+    if (dy > 110){ pane.style.transform = "translateY(100%)";
+      setTimeout(() => { shutPane(); pane.style.transform = ""; }, 240); }
+    else pane.style.transform = "";
+  });
+}
 $("greetShut").addEventListener("click", e => { e.stopPropagation(); hideGreet(); });
 document.querySelectorAll("[data-ask]").forEach(b =>
   b.addEventListener("click", () => openPane(false)));
