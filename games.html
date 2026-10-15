@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Play Kenyang · Nɛpɛm</title>
+<meta name="description" content="Seven Kenyang games. Every word checked by a native speaker, and the rule explained when you get one wrong.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+/* before anything paints, so the wrong colours never flash */
+(function(){try{var t=localStorage.getItem("nepem.theme");
+if(!t)t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";
+document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="dark";}})();
+</script>
+<style>
+/* The same palette as the rest of the site, so this does not read as a page
+   from somewhere else. Both themes, switched the same way. */
+:root{
+  --base:#060910; --lift:rgba(255,255,255,.04); --lift2:rgba(255,255,255,.075);
+  --edge:rgba(255,255,255,.09); --edge-hi:rgba(255,255,255,.22);
+  --text:#EEF2F7; --mute:#8494A4;
+  --who:#42E3BC; --not:#FF6A55; --gold:#FFC94D; --onGold:#06090F;
+  --serif:"Gentium Book Plus",Georgia,serif; --sans:"Archivo",system-ui,sans-serif;
+  color-scheme:dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+:root[data-theme="light"]{
+  --base:#FAF7F0; --lift:rgba(16,34,28,.035); --lift2:rgba(16,34,28,.062);
+  --edge:rgba(16,34,28,.13); --edge-hi:rgba(16,34,28,.28);
+  --text:#15201B; --mute:#56665E;
+  --who:#077A58; --not:#B2351C; --gold:#E8A61B; --onGold:#1A1206;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--base);color:var(--text);font-family:var(--sans);
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:620px;margin:0 auto;padding:14px 16px 46px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:8px}
+
+nav{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:10px 0 20px}
+.home{text-decoration:none;color:var(--mute);font-size:14.5px;padding:8px 13px;
+  border-radius:99px;transition:color .2s,background .2s}
+.home:hover{color:var(--text);background:var(--lift2)}
+.modesw{width:36px;height:36px;border-radius:99px;border:1px solid var(--edge);
+  background:none;color:var(--mute);cursor:pointer;font-size:15px;font-family:inherit}
+.modesw:hover{color:var(--gold);border-color:var(--edge-hi)}
+
+h1{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.08;
+  margin:0 0 8px;letter-spacing:-.02em}
+.sub{color:var(--mute);margin:0 0 6px;font-size:15.5px}
+
+/* the streak, which is most of the reason anybody comes back */
+.streak{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;
+  color:var(--mute);margin:10px 0 22px;padding:7px 15px;border-radius:99px;
+  border:1px solid var(--edge);background:var(--lift)}
+.streak b{color:var(--gold);font-family:var(--serif);font-size:1.15em}
+
+.grid{display:grid;gap:11px}
+.g{display:flex;align-items:center;gap:14px;width:100%;text-align:left;
+  background:var(--lift);border:1px solid var(--edge);border-radius:17px;
+  padding:15px 16px;cursor:pointer;font:inherit;color:inherit;
+  transition:transform .2s,border-color .25s,background .25s}
+.g:hover{transform:translateY(-3px);border-color:var(--edge-hi);background:var(--lift2)}
+.g .ic{flex:0 0 44px;height:44px;border-radius:13px;display:flex;align-items:center;
+  justify-content:center;font-size:21px;background:var(--lift2);
+  border:1px solid var(--edge);font-family:var(--serif)}
+.g .t{flex:1;min-width:0}
+.g .t b{display:block;font-family:var(--serif);font-size:18.5px;font-weight:700;
+  line-height:1.2}
+.g .t span{display:block;font-size:13px;color:var(--mute);margin-top:3px;line-height:1.45}
+.g .sc{flex:none;text-align:right;font-size:12px;color:var(--mute)}
+.g .sc b{display:block;font-family:var(--serif);font-size:19px;color:var(--gold)}
+.g.hard .ic{border-color:rgba(255,106,85,.32)}
+.g.done{border-color:rgba(66,227,188,.34)}
+
+#play{display:none}
+.bar{display:flex;align-items:center;gap:12px;margin:0 0 18px}
+.back{background:none;border:0;font:inherit;color:var(--gold);cursor:pointer;
+  padding:6px 2px;font-weight:500}
+.track{flex:1;height:6px;background:var(--lift2);border-radius:99px;overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--who),var(--gold));
+  border-radius:99px;transition:width .35s}
+.pts{font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
+
+.ask{text-align:center;margin:20px 0 18px}
+.ask .lead{font-size:13.5px;color:var(--mute);margin:0 0 10px;letter-spacing:.03em}
+.ask .big{font-family:var(--serif);font-size:clamp(34px,8.5vw,54px);line-height:1.1;
+  color:var(--gold);font-weight:700;word-break:break-word}
+.ask .big.en{font-family:var(--sans);font-size:clamp(20px,4.6vw,27px);
+  font-weight:600;color:var(--text)}
+
+.opts{display:grid;gap:10px}
+.o{width:100%;background:var(--lift);border:1.5px solid var(--edge);border-radius:14px;
+  padding:16px 14px;font:inherit;font-size:1.03rem;cursor:pointer;color:inherit;
+  text-align:center;min-height:60px;transition:border-color .15s,transform .15s}
+.o:hover:not(:disabled){border-color:var(--gold);transform:translateY(-2px)}
+.o:disabled{cursor:default}
+.o.kny{font-family:var(--serif);font-size:1.3rem;font-weight:700}
+.o.yes{border-color:var(--who);background:rgba(66,227,188,.14);color:var(--who)}
+.o.no{border-color:var(--not);background:rgba(255,106,85,.13);color:var(--not)}
+[data-theme="light"] .o.yes{background:rgba(7,122,88,.1)}
+[data-theme="light"] .o.no{background:rgba(178,53,28,.09)}
+
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.c{aspect-ratio:3/4;border-radius:12px;border:1.5px solid var(--edge);
+  background:var(--lift);cursor:pointer;font:inherit;color:transparent;
+  display:flex;align-items:center;justify-content:center;padding:4px;
+  font-size:13px;line-height:1.2;text-align:center;word-break:break-word;
+  transition:border-color .18s,background .18s,color .18s}
+.c:hover:not(:disabled){border-color:var(--edge-hi)}
+.c.up{color:var(--text);background:var(--lift2);border-color:var(--gold)}
+.c.up.kny{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--gold)}
+.c.gone{opacity:.28;border-color:var(--who);color:var(--who);cursor:default}
+@media (max-width:420px){ .cards{gap:6px} .c{font-size:11.5px} .c.up.kny{font-size:14px} }
+
+.slots{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;min-height:62px;
+  align-items:center;border:1.5px dashed var(--edge-hi);border-radius:14px;
+  padding:12px;margin:0 0 14px}
+.slots:empty::after{content:"Tap the words below, in order";color:var(--mute);font-size:13.5px}
+.chip{font-family:var(--serif);font-size:1.2rem;border-radius:11px;
+  padding:9px 15px;cursor:pointer;border:1.5px solid var(--edge);
+  background:var(--lift2);color:var(--text);font-weight:700}
+.chip:disabled{opacity:.25;cursor:default}
+.pool{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.go{width:100%;margin-top:14px;background:var(--gold);color:var(--onGold);border:0;
+  border-radius:14px;padding:15px;font:inherit;font-size:1.02rem;font-weight:600;
+  cursor:pointer}
+.go:disabled{opacity:.35;cursor:default}
+
+/* why it was wrong, which is the whole point of the thing */
+.why{margin:16px 0 0;border-radius:14px;padding:14px 16px;font-size:14.8px;
+  line-height:1.55;display:none}
+.why.good{background:rgba(66,227,188,.1);border:1px solid rgba(66,227,188,.3)}
+.why.bad{background:rgba(255,106,85,.09);border:1px solid rgba(255,106,85,.28)}
+[data-theme="light"] .why.good{background:rgba(7,122,88,.08)}
+[data-theme="light"] .why.bad{background:rgba(178,53,28,.07)}
+.why b{font-family:var(--serif);font-size:1.1em}
+.why .rule{display:block;margin-top:9px;padding-top:9px;
+  border-top:1px solid var(--edge);color:var(--mute);font-size:13.8px}
+.next{width:100%;margin-top:12px;background:var(--gold);color:var(--onGold);border:0;
+  border-radius:14px;padding:15px;font:inherit;font-size:1.02rem;font-weight:600;
+  cursor:pointer;display:none}
+
+#end{display:none;text-align:center;padding:26px 0}
+#end .n{font-family:var(--serif);font-size:58px;color:var(--gold);margin:0;line-height:1}
+#end .w{font-family:var(--serif);font-size:26px;margin:14px 0 4px}
+#end p.sm{color:var(--mute);margin:0 0 22px}
+#end button{width:100%;margin-bottom:10px}
+
+footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--edge);
+  color:var(--mute);font-size:13px;line-height:1.55}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav>
+  <a class="home" href="/">&larr; Nɛpɛm</a>
+  <button class="modesw" id="modesw" type="button" aria-label="Light or dark"></button>
+</nav>
+
+<div id="menu">
+  <h1>Play Kenyang</h1>
+  <p class="sub">Seven games. Every word checked by a speaker, and the rule
+    explained whenever you get one wrong.</p>
+  <p class="streak" id="streak"></p>
+  <div class="grid" id="grid"></div>
+  <footer>
+    Nothing here is sent anywhere. Your scores live in this browser and go no
+    further.
+  </footer>
+</div>
+
+<div id="play">
+  <div class="bar">
+    <button class="back" id="quit">&larr; Games</button>
+    <div class="track"><div class="fill" id="fill"></div></div>
+    <div class="pts" id="pts">0</div>
+  </div>
+  <div id="round"></div>
+  <div class="why" id="why"></div>
+  <button class="next" id="next">Next</button>
+</div>
+
+<div id="end">
+  <p class="n" id="endN"></p>
+  <p class="w" id="endW"></p>
+  <p class="sm" id="endP"></p>
+  <button class="go" id="again">Play again</button>
+  <button class="back" id="toMenu" style="width:100%">Back to the games</button>
+</div>
+
+</div>
+<script>
+/* ═══════════════════════════════════════════════════════════════════════════
+   Every Kenyang word below has been confirmed by a native speaker. A game
+   teaches whatever it shows, so nothing unconfirmed is in here.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+const GROUPS = {
+  "animals":   [["mmú","dog"],["anwa","cat"],["nkok","fowl"],["nsok","elephant"],
+                ["akók","pig"]],
+  "the body":  [["awó","hand"],["ɛkak","leg"],["besí","face"],["atú","ear"]],
+  "family":    [["mmá","mother"],["étá","father"],["mmɔ","child"],
+                ["manor","brother or sister"],["Ngoré","woman"],["nném","husband"]],
+  "things at home":[["ɛkɛt","house"],["ɛkáti","book"],["ékwá","plantain"],
+                ["manyɛp","rain"],["enok","stick"],["nfor","king"]],
+  "describing words":[["Ereme","big"],["Mandu","small"],["erítí","beautiful"],
+                ["Ndɨ́ndɨ́","good"],["pɛ́pɛ́p","white"],["pyɔ","black"],["esaptí","long"]],
+  "numbers":   [["ɛ́mɔt","one"],["bɛ́pay","two"],["bɛ́rát","three"],["mɛ́nwi","four"],
+                ["bɛ́tay","five"]],
+  "doing words":[["rong","going"],["tuor","coming"],["dɔ́k","go"],["Kong","love"],
+                ["Che","give"],["ghati","tell"],["naŋ","finish"]],
+  "greetings": [["Mba'aaah","hello"],["néyi","good morning"],["nnek","please"],
+                ["nkagha","thank you"],["Máah","yes, Mom"],["Sáah","yes, Dad"]],
+  "when and where":[["echong","today"],["mbuere","tomorrow"],["fa","here"],
+                ["afo","there"],["amem","inside"],["nefi","outside"],["ansem","behind"]]
+};
+const WORDS = Object.values(GROUPS).flat();
+
+/* The alphabet, asked as "which word has this letter in it". An earlier
+   version asked which spelling was right and marked eket, mmo and ekati
+   wrong, when the verified file records all three as variants. Asking which
+   word contains a letter is a fact, and cannot call anybody's spelling an
+   error. */
+const LETTERS = [
+  ["ɛ","the open e, as in bed",["ɛkɛt","ɛkáti","manyɛp","bɛ́pay"],["mmú","anwa","ntaŋ","rong"]],
+  ["ɔ","the open o, as in thought",["mmɔ","pyɔ","dɔ́k","ɛ́mɔt"],["mmá","besí","nkagha","tuor"]],
+  ["ŋ","the sound at the end of sing",["ntaŋ","naŋ"],["mmá","besí","ékwá","rong"]],
+  ["ɨ","said further back than i",["Ndɨ́ndɨ́"],["mmú","ɛkɛt","afo","Kong"]],
+  ["ʉ","said with rounded lips",["amʉɛt"],["mmá","nkok","echong","dɔ́k"]]
+];
+
+/* which side of the noun each describing word sits. The rule a speaker
+   confirmed, after a published guide had only half of it. */
+const BEFORE = [["Ereme","big"],["Mandu","small"],["erítí","beautiful"],["esaptí","long"]];
+const AFTER  = [["pɛ́pɛ́p","white"],["pyɔ","black"],["Ndɨ́ndɨ́","good"]];
+const NOUNS  = [["ɛkɛt","house"],["mmú","dog"],["mmɔ","child"],["nsok","elephant"]];
+
+const SENTENCES = [
+  {p:["mme","rong"], en:"I am going", r:"mme is I, and it goes in front of the verb."},
+  {p:["bá","rong"], en:"they are going", r:"Change the marker, change who is doing it."},
+  {p:["mme","pú","rong"], en:"I am not going", r:"pú sits after the person and before the verb."},
+  {p:["mme","rong","nyaka"], en:"I was going", r:"nyaka comes after the verb and puts it in the past."},
+  {p:["mme","rong","ɛkɛt"], en:"I am going home", r:"The place comes last."},
+  {p:["bá","pú","rong","nyaka","ekeré-ékáti"], en:"they were not going to school",
+   r:"person, then pú, then the verb, then nyaka, then the place."},
+  {p:["Mandu","ɛkɛt","bɛ́pay"], en:"two small houses",
+   r:"Mandu goes before the noun, the number after it, and the noun sits between them."},
+  {p:["Ereme","ɛkɛt","pɛ́pɛ́p"], en:"a big white house",
+   r:"Ereme is size so it goes first, pɛ́pɛ́p is colour so it goes last."}
+];
+
+/* The tone rule, out of nine recorded speeches: high is THEY, rising is YOU
+   PEOPLE, fourteen examples with no exception.
+
+   Every form below appears in a text. An earlier version showed the pair, but
+   half of each pair had to be built by applying the rule rather than taken
+   from a speech, and a game that teaches must not show Kenyang nobody has
+   said. So the form is real and the question is who it means. */
+const TONE = [
+  ["bátwɔ́",    "they",       "they have come"],
+  ["bábhɔ́ŋ",   "they",       "they have"],
+  ["báchay-nnya","they",      "they are sick of convulsion"],
+  ["Bápɨ́",     "they",       "they plant"],
+  ["Mántwó",    "they",       "let them come"],
+  ["Mánsɔt",    "they",       "let them take"],
+  ["bǎríŋí",    "you people", "you know"],
+  ["bǎghok",    "you people", "you have heard"],
+  ["bǎyɛ́t",    "you people", "you bless"],
+  ["Mănto",     "you people", "you should be pouring"],
+  ["mǎŋgok",    "you people", "you should be listening"],
+  ["mǎnchɨk",   "you people", "you should protect"]
+];
+
+const GAMES = [
+  {id:"match", ic:"✦", t:"Know the word",   d:"See the Kenyang, choose what it means", n:8},
+  {id:"pairs", ic:"❖", t:"Pairs",           d:"Turn the cards over and find each pair", n:6},
+  {id:"spell", ic:"ɛ", t:"Find the letter", d:"The five letters English does not have", n:8},
+  {id:"odd",   ic:"◇", t:"Odd one out",     d:"Three belong together. One does not", n:8},
+  {id:"side",  ic:"↔", t:"Which side?",     d:"Before the noun, or after it?", n:8},
+  {id:"build", ic:"⚒", t:"Build a sentence",d:"Put the pieces in the right order", n:6, hard:1},
+  {id:"tone",  ic:"ǎ", t:"Them, or you?",   d:"One mark changes who you mean", n:8, hard:1}
+];
+
+const $ = i => document.getElementById(i);
+const pick = a => a[Math.floor(Math.random()*a.length)];
+const mix  = a => a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(p=>p[1]);
+const esc  = s => String(s).replace(/[&<>"]/g,
+  c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function load(){ try{ return JSON.parse(localStorage.getItem("nepem.play")||"{}"); }
+                 catch(e){ return {}; } }
+function save(){ try{ localStorage.setItem("nepem.play", JSON.stringify(P)); }catch(e){} }
+let P = Object.assign({best:{}, days:0, last:""}, load());
+
+function today(){ return new Date().toISOString().slice(0,10); }
+function markDay(){
+  const t = today();
+  if (P.last === t) return;
+  const y = new Date(Date.now() - 864e5).toISOString().slice(0,10);
+  P.days = (P.last === y) ? (P.days || 0) + 1 : 1;
+  P.last = t; save();
+}
+function drawStreak(){
+  const d = P.days || 0;
+  $("streak").innerHTML = d
+    ? `<b>${d}</b> ${d === 1 ? "day" : "days"} in a row`
+    : "Play one game to start a streak";
+}
+
+function drawMenu(){
+  drawStreak();
+  $("grid").innerHTML = GAMES.map(g => {
+    const b = P.best[g.id];
+    return `<button class="g ${g.hard ? "hard" : ""} ${b === g.n ? "done" : ""}"
+        data-g="${g.id}">
+      <span class="ic" aria-hidden="true">${g.ic}</span>
+      <span class="t"><b>${g.t}</b><span>${g.d}</span></span>
+      <span class="sc">${b !== undefined ? `<b>${b}</b>of ${g.n}` : ""}</span>
+    </button>`;
+  }).join("");
+}
+
+let G = null, step = 0, hits = 0, done = false;
+
+function start(id){
+  G = GAMES.find(g => g.id === id); step = 0; hits = 0;
+  $("menu").style.display = "none"; $("end").style.display = "none";
+  $("play").style.display = "block";
+  turn();
+}
+
+function finish(){
+  markDay();
+  $("play").style.display = "none"; $("end").style.display = "block";
+  if (P.best[G.id] === undefined || hits > P.best[G.id]){ P.best[G.id] = hits; save(); }
+  const all = hits === G.n;
+  $("endN").textContent = hits + "/" + G.n;
+  $("endW").textContent = all ? "Nkagha!" : hits >= G.n * .6 ? "Ndɨ́ndɨ́" : "Kéfú";
+  $("endP").textContent = all
+    ? "Every one. Now go and say one of them to somebody today."
+    : hits >= G.n * .6 ? "That is good. See if you can get them all."
+    : "Kéfú means again. Have another go.";
+}
+
+function turn(){
+  if (step >= G.n) return finish();
+  done = false;
+  $("why").style.display = "none"; $("next").style.display = "none";
+  $("pts").textContent = hits;
+  $("fill").style.width = (step / G.n * 100) + "%";
+  ({match:rMatch, pairs:rPairs, spell:rSpell, odd:rOdd,
+    side:rSide, build:rBuild, tone:rTone})[G.id]();
+}
+
+function judge(ok, head, body, rule){
+  if (done) return; done = true;
+  if (ok) hits++;
+  const w = $("why");
+  w.className = "why " + (ok ? "good" : "bad");
+  w.innerHTML = head + " " + body + (rule ? `<span class="rule">${rule}</span>` : "");
+  w.style.display = "block";
+  $("pts").textContent = hits;
+  $("next").style.display = "block";
+  $("next").textContent = (step + 1 >= G.n) ? "See how you did" : "Next";
+}
+
+/* choose one of the options; shared by five of the games */
+function choose(stem, opts, right, body, rule, kny){
+  $("round").innerHTML = stem + `<div class="opts">` + mix(opts).map(o =>
+      `<button class="o ${kny ? "kny" : ""}" data-o="${esc(o)}">${esc(o)}</button>`).join("")
+    + `</div>`;
+  $("round").querySelectorAll(".o").forEach(b => b.onclick = () => {
+    const ok = b.dataset.o === right;
+    $("round").querySelectorAll(".o").forEach(x => {
+      x.disabled = true;
+      if (x.dataset.o === right) x.classList.add("yes");
+      else if (x === b) x.classList.add("no");
+    });
+    judge(ok, ok ? "<b>Yes.</b>" : "<b>Not that one.</b>", body, rule);
+  });
+}
+
+/* ── 1. know the word ──────────────────────────────────────────────── */
+function rMatch(){
+  const w = pick(WORDS);
+  const others = mix(WORDS.filter(x => x[1] !== w[1])).slice(0,3).map(x => x[1]);
+  choose(`<div class="ask"><p class="lead">What does this mean?</p>
+          <div class="big">${esc(w[0])}</div></div>`,
+    [w[1], ...others], w[1], `<b>${esc(w[0])}</b> is ${esc(w[1])}.`);
+}
+
+/* ── 2. pairs ──────────────────────────────────────────────────────── */
+let pairs = null;
+function rPairs(){
+  const chosen = mix(WORDS).slice(0,6);
+  pairs = {cards: mix(chosen.flatMap((w,i) =>
+            [{k:i, txt:w[0], kny:true}, {k:i, txt:w[1], kny:false}])),
+           up:[], found:0, tries:0};
+  drawCards();
+}
+function drawCards(){
+  $("round").innerHTML =
+    `<div class="ask"><p class="lead">Find the six pairs. Fewer turns is better.</p>
+       <div class="big en">${pairs.found} of 6 &middot; ${pairs.tries} turns</div></div>
+     <div class="cards">` + pairs.cards.map((c,i) =>
+      `<button class="c ${c.kny ? "kny" : ""} ${c.gone ? "gone" : ""} ${c.open ? "up" : ""}"
+        data-c="${i}" ${c.gone ? "disabled" : ""}>${esc(c.txt)}</button>`).join("")
+    + `</div>`;
+  $("round").querySelectorAll(".c").forEach(b => b.onclick = () => flip(+b.dataset.c));
+}
+function flip(i){
+  const c = pairs.cards[i];
+  if (c.gone || c.open || pairs.up.length >= 2) return;
+  c.open = true; pairs.up.push(i); drawCards();
+  if (pairs.up.length < 2) return;
+  pairs.tries++;
+  const [a,b] = pairs.up.map(n => pairs.cards[n]);
+  if (a.k === b.k){
+    a.gone = b.gone = true; pairs.found++; pairs.up = [];
+    drawCards();
+    if (pairs.found === 6){
+      /* one long round rather than six short ones, scored on turns taken */
+      /* judge() adds one for a right answer, so the score is set one below */
+      const score = Math.max(1, Math.min(G.n, G.n - Math.max(0, pairs.tries - 9)));
+      hits = score - 1;
+      step = G.n - 1;
+      const clean = pairs.tries <= 9;
+      judge(true, clean ? "<b>Well done.</b>" : "<b>Found them all.</b>",
+        `Six pairs in ${pairs.tries} turns.`,
+        clean ? "Nine turns or fewer is a good score."
+              : "Try to hold where each one was. Nine turns or fewer wins it.");
+    }
+    return;
+  }
+  setTimeout(() => { a.open = b.open = false; pairs.up = []; drawCards(); }, 850);
+}
+
+/* ── 3. find the letter ───────────────────────────────────────────── */
+function rSpell(){
+  const [L, how, has, hasnt] = pick(LETTERS);
+  const right = pick(has);
+  choose(`<div class="ask"><p class="lead">Which word has this letter in it?</p>
+          <div class="big">${esc(L)}</div></div>`,
+    [right, ...mix(hasnt).slice(0,3)], right,
+    `<b>${esc(right)}</b> has ${esc(L)} in it.`,
+    `${L} is ${how}. It is one of the five letters Kenyang has that English does not.`,
+    true);
+}
+
+/* ── 4. odd one out ────────────────────────────────────────────────── */
+function rOdd(){
+  const names = Object.keys(GROUPS).filter(n => GROUPS[n].length >= 4);
+  const from = pick(names);
+  const other = pick(names.filter(n => n !== from));
+  const three = mix(GROUPS[from]).slice(0,3);
+  const odd = pick(GROUPS[other]);
+  choose(`<div class="ask"><p class="lead">Three of these belong together.
+            Which one does not?</p></div>`,
+    [...three.map(w => w[0]), odd[0]], odd[0],
+    `<b>${esc(odd[0])}</b> is ${esc(odd[1])}.`,
+    `The other three are all ${from}.`, true);
+}
+
+/* ── 5. which side ─────────────────────────────────────────────────── */
+function rSide(){
+  const first = Math.random() < .5;
+  const adj = first ? pick(BEFORE) : pick(AFTER);
+  const noun = pick(NOUNS);
+  const right = first ? `${adj[0]} ${noun[0]}` : `${noun[0]} ${adj[0]}`;
+  const wrong = first ? `${noun[0]} ${adj[0]}` : `${adj[0]} ${noun[0]}`;
+  choose(`<div class="ask"><p class="lead">How do you say this?</p>
+          <div class="big en">${esc(adj[1])} ${esc(noun[1])}</div></div>`,
+    [right, wrong], right, `It is <b>${esc(right)}</b>.`,
+    first ? `${adj[0]} is a size or quality word, so it goes BEFORE the noun.`
+          : `${adj[0]} goes AFTER the noun, the way colours and numbers do.`, true);
+}
+
+/* ── 6. build a sentence ───────────────────────────────────────────── */
+let built = [], target = null;
+function rBuild(){
+  target = pick(SENTENCES); built = [];
+  $("round").innerHTML =
+    `<div class="ask"><p class="lead">Build this sentence</p>
+      <div class="big en">${esc(target.en)}</div></div>
+     <div class="slots" id="slots"></div>
+     <div class="pool" id="pool">` + mix([...target.p]).map(w =>
+       `<button class="chip" data-w="${esc(w)}">${esc(w)}</button>`).join("")
+    + `</div><button class="go" id="go" disabled>Check it</button>`;
+  $("pool").querySelectorAll(".chip").forEach(b => b.onclick = () => {
+    if (done) return;
+    built.push(b.dataset.w); b.disabled = true; drawSlots();
+  });
+  $("go").onclick = () => {
+    const ok = built.join(" ") === target.p.join(" ");
+    $("round").querySelectorAll(".chip").forEach(x => x.disabled = true);
+    $("go").disabled = true;
+    judge(ok, ok ? "<b>Yes, that is it.</b>" : "<b>Not in that order.</b>",
+      `It is <b>${esc(target.p.join(" "))}</b>.`, target.r);
+  };
+}
+function drawSlots(){
+  const s = $("slots");
+  s.innerHTML = built.map((w,i) =>
+    `<button class="chip" data-i="${i}">${esc(w)}</button>`).join("");
+  s.querySelectorAll(".chip").forEach((b,i) => b.onclick = () => {
+    if (done) return;
+    const w = built.splice(i,1)[0];
+    const back = [...$("pool").querySelectorAll(".chip")]
+      .find(x => x.dataset.w === w && x.disabled);
+    if (back) back.disabled = false;
+    drawSlots();
+  });
+  $("go").disabled = built.length !== target.p.length;
+}
+
+/* ── 7. them, or you ───────────────────────────────────────────────── */
+function rTone(){
+  const [form, who, en] = pick(TONE);
+  choose(`<div class="ask"><p class="lead">Who is this talking about?</p>
+          <div class="big">${esc(form)}</div></div>`,
+    ["they", "you people"], who, `<b>${esc(form)}</b> means ${esc(en)}.`,
+    "The letters are the same either way. Only the mark over the vowel says "
+    + "who you mean: á is them, ǎ is you people. This one is "
+    + (who === "they" ? "the high mark, so it is them."
+                      : "the rising mark, so it is you people."));
+}
+
+/* ── wiring ────────────────────────────────────────────────────────── */
+$("grid").addEventListener("click", e => {
+  const b = e.target.closest("[data-g]"); if (b) start(b.dataset.g);
+});
+$("next").onclick = () => { step++; turn(); };
+$("quit").onclick = () => { $("play").style.display = "none";
+  $("menu").style.display = "block"; drawMenu(); };
+$("toMenu").onclick = () => { $("end").style.display = "none";
+  $("menu").style.display = "block"; drawMenu(); };
+$("again").onclick = () => start(G.id);
+
+{
+  const root = document.documentElement;
+  const paint = () => $("modesw").textContent =
+    root.dataset.theme === "light" ? "☾" : "☀";
+  paint();
+  $("modesw").onclick = () => {
+    root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
+    try { localStorage.setItem("nepem.theme", root.dataset.theme); } catch(e){}
+    paint();
+  };
+}
+
+drawMenu();
+</script>
+</body>
+</html>

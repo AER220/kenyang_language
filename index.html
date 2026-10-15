@@ -216,7 +216,17 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
    sitting there meaning nothing to anybody who came back a week later. It
    stays now, and cycles through things Nɛpɛm can actually answer, so it asks
    to be tapped and teaches what to ask in the same breath. */
-.saylabel{max-width:min(54vw,230px);overflow:hidden}
+/* Hung off the button rather than sitting beside it in the row. The dock is
+   now the size of the button alone, so the button cannot be pushed about by
+   however long the current question happens to be. */
+.saylabel{position:absolute;top:50%;transform:translateY(-50%);
+  right:calc(100% + 12px);max-width:min(52vw,220px);overflow:hidden}
+.dock.left .saylabel{right:auto;left:calc(100% + 12px)}
+.dock{position:fixed;width:62px;height:62px}
+.dock .greet{position:absolute;bottom:calc(100% + 12px);right:0;left:auto}
+.dock.left .greet{right:auto;left:0;border-radius:18px 18px 18px 4px}
+/* while the greeting is up, the label stays quiet */
+.dock.greeting .saylabel{display:none}
 .saylabel span{display:block;transition:opacity .3s,transform .3s}
 .saylabel.turning span{opacity:0;transform:translateY(-5px)}
 @media (prefers-reduced-motion:reduce){.saylabel{animation:none}}
@@ -2503,13 +2513,26 @@ showView(location.hash.slice(1) || "learn", false);
     "Teach me something new"
   ];
   const label = $("saylabel");
+  const dock = document.querySelector(".dock");
   label.innerHTML = "<span>Ask <b>Nɛpɛm</b> anything</span>";
+
+  /* the greeting and the label are both bubbles in the same corner, so only
+     one of them talks at a time */
+  const greetUp = () => {
+    const g = $("greet");
+    return g && g.style.display !== "none" && !!g.offsetParent;
+  };
+  const watch = () => dock.classList.toggle("greeting", greetUp());
+  watch();
+  new MutationObserver(watch).observe($("greet"),
+    {attributes:true, attributeFilter:["style"]});
   label.addEventListener("click", () => $("drum").click());
 
   let i = -1;
   const turn = () => {
     if (document.hidden) return;             /* do not churn in a hidden tab */
     if ($("pane").classList.contains("open")) return;
+    if (dock.classList.contains("greeting")) return;
     i = (i + 1) % ASKS.length;
     label.classList.add("turning");
     setTimeout(() => {
