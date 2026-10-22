@@ -643,23 +643,31 @@ h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
    It was a Latin N on flat gold, which is what every other app looks like. It
    is now ɛ́: the letter at the heart of the name Nɛpɛ́m, and the one letter
    that says Kenyang at a glance. The gold is lit from the top left so it reads
-   as a round object rather than a coloured disc. */
-.drum{width:62px;height:62px;
-  background:radial-gradient(125% 125% at 32% 22%,
-    #FFEFBE 0%, #FFCF5E 30%, #EDA42B 62%, #B5701A 100%);
-  box-shadow:0 10px 30px rgba(230,160,45,.42),
-             inset 0 1.5px 0 rgba(255,255,255,.6),
-             inset 0 -4px 10px rgba(110,55,0,.3)}
-.drum span{font-size:31px;color:#4A2B06;
-  text-shadow:0 1px 0 rgba(255,255,255,.34);padding-bottom:3px}
+   as a round object rather than a coloured disc: a soft highlight where the
+   light lands, a fine darker rim so the edge is struck rather than blurred, and
+   the letter pressed into the face, lit along its lower edge. */
+.drum,.phead .av{
+  --mark:radial-gradient(40% 28% at 34% 19%,rgba(255,251,234,.8),rgba(255,251,234,0) 72%),
+    radial-gradient(120% 120% at 32% 22%,#FFE9AE 0%,#FFCB55 32%,#E9A02A 64%,#A9661A 100%);
+  --face:inset 0 0 0 1px rgba(122,66,6,.36),
+    inset 0 1.5px 0 rgba(255,250,230,.7),
+    inset 0 -5px 12px rgba(120,58,0,.26);
+  --drop:0 2px 4px rgba(96,50,0,.28),0 10px 28px rgba(230,160,45,.34);
+  --drop-hi:0 3px 6px rgba(96,50,0,.26),0 16px 40px rgba(230,160,45,.5);
+  background:var(--mark);color:#4A2B06;
+  text-shadow:0 1px 0 rgba(255,240,200,.55),0 -.5px 0 rgba(80,40,0,.28)}
+.drum{width:62px;height:62px;box-shadow:var(--face),var(--drop)}
+.drum span{font-size:31px;color:inherit;padding-bottom:3px}
 .drum::after{inset:-6px;border-color:rgba(255,201,77,.4)}
-.drum:hover{transform:translateY(-3px) scale(1.05);
-  box-shadow:0 16px 42px rgba(230,160,45,.58),
-             inset 0 1.5px 0 rgba(255,255,255,.6),
-             inset 0 -4px 10px rgba(110,55,0,.3)}
-.phead .av{background:radial-gradient(125% 125% at 32% 22%,
-    #FFEFBE 0%, #FFCF5E 30%, #EDA42B 62%, #B5701A 100%);
-  color:#4A2B06;font-size:17px}
+.drum:hover{transform:translateY(-3px) scale(1.05);box-shadow:var(--face),var(--drop-hi)}
+.drum.held{box-shadow:var(--face),var(--drop-hi)}
+.phead .av{font-size:17px;
+  box-shadow:inset 0 0 0 1px rgba(122,66,6,.36),inset 0 1px 0 rgba(255,250,230,.7),
+    inset 0 -3px 6px rgba(120,58,0,.24),0 1px 2px rgba(96,50,0,.25)}
+/* on paper a gold glow turns to a stain, so the shadow is tighter and cooler */
+[data-theme="light"] .drum{
+  --drop:0 1.5px 3px rgba(96,50,0,.26),0 8px 20px rgba(150,104,10,.2);
+  --drop-hi:0 2.5px 5px rgba(96,50,0,.24),0 12px 30px rgba(150,104,10,.28)}
 
 /* Play, as the place games are chosen from */
 .pickc.more{background:linear-gradient(140deg,rgba(255,201,77,.12),
@@ -699,10 +707,8 @@ h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
 .phead{display:flex;align-items:center;justify-content:space-between;gap:10px;
   padding:12px 14px;border-bottom:1px solid var(--edge);background:var(--lift);flex:none}
 .phead .who{display:flex;align-items:center;gap:10px;min-width:0}
-.phead .av{width:32px;height:32px;border-radius:50%;flex:none;
-  background:linear-gradient(145deg,var(--place),#E0761F);display:flex;
-  align-items:center;justify-content:center;font-family:var(--serif);
-  font-size:15px;color:#1B1004;font-weight:700}
+.phead .av{width:32px;height:32px;border-radius:50%;flex:none;display:flex;
+  align-items:center;justify-content:center;font-family:var(--serif);font-weight:700}
 .phead h3{font-family:var(--serif);font-size:17px;margin:0;line-height:1.2}
 .phead .st{font-size:11.5px;color:var(--who);margin:0;display:flex;align-items:center;gap:5px}
 .phead .st i{width:6px;height:6px;border-radius:99px;background:var(--who);display:inline-block}
