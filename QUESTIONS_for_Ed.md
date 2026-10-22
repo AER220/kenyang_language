@@ -1,0 +1,72 @@
+# Questions for Ed
+
+Open questions and unresolved readings. Nothing here is confirmed.
+
+This file must never go in knowledge_base/. If it were indexed, Nɛpɛm would treat
+these guesses as Kenyang he can teach.
+
+Each note was moved out of a verified file. The line number is where it sat
+before it was moved, and the section is the rule it belongs to.
+
+---
+
+## 1. The person words, standing alone
+
+From `knowledge_base/kenyang_verified_speaker.md`, line 1319
+Part: Standing alone, and bound to the word → The person words, standing alone
+
+[TO CONFIRM: Beseh here and sé in this file are both we. Are they the same word, or
+is Beseh the long form of sé the way besé is?]
+
+---
+
+## 2. Whose it is, standing alone
+
+From `knowledge_base/kenyang_verified_speaker.md`, line 1342
+Part: Standing alone, and bound to the word → Whose it is, standing alone
+
+[TO CONFIRM: does Ey plus the short form always give the standing-alone one? If it
+does, every possessive in this file can be built both ways.]
+
+---
+
+## 3. nsinsi: the senior one, the older one
+
+From `knowledge_base/kenyang_verified_speaker.md`, line 1370
+Part: Big and senior: two words that take meaning from the noun → nsinsi: the senior one, the older one
+
+[TO CONFIRM: does nsinsi work with étá to give grandfather? And is there a matching
+word for the junior one?]
+
+---
+
+## 4. Moving
+
+From `knowledge_base/kenyang_verified_speaker.md`, line 1388
+Part: More words → Moving
+
+[TO CONFIRM: a published lexicon has té meaning to gush out, to burst. Tæ here is
+stand. If those are two different words that look alike, both belong; if one is
+wrong, this file wins.]
+
+---
+
+## 5. Standing on its own
+
+From `knowledge_base/kenyang_verified_speaker.md`, line 1491
+Part: The person words, the full set → Standing on its own
+
+[TO CONFIRM: this file already has wah for my and áwà appears here for mine. Are
+they the same word, one bound to the noun and one standing alone? The same
+question applies to yeh and ɛyɛ́, and to Yap and ayáp.]
+
+---
+
+## 6. Hundreds and above
+
+From `knowledge_base/kenyang_verified_speaker.md`, line 1546
+Part: Counting, the whole system → Hundreds and above
+
+[TO CONFIRM: this file already has bɛ́tandat for six and tándrámɔt for seven. The
+EyaLingo book writes Tándat and Tándat nɛ amɔt. If Tándat is six, then seven is
+simply six and one, which fits the pattern better. Which do you say?]

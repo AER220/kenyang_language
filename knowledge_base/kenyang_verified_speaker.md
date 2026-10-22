@@ -1316,9 +1316,6 @@ Against the bound markers already in this file:
 So mme rong is I am going, with the marker glued to the verb, and meh is I or me
 standing by itself.
 
-[TO CONFIRM: Beseh here and sé in this file are both we. Are they the same word, or
-is Beseh the long form of sé the way besé is?]
-
 ## Whose it is, standing alone
 
     Eya             mine
@@ -1338,9 +1335,6 @@ These are built from the short possessives already in this file. Ey goes in fron
 
 So Ngoré wah is my wife, with the short form following the noun, and Eya is mine
 standing on its own.
-
-[TO CONFIRM: does Ey plus the short form always give the standing-alone one? If it
-does, every possessive in this file can be built both ways.]
 
 ---
 
@@ -1367,9 +1361,6 @@ nsinsi goes AFTER the noun, and marks the senior one.
 Note the two sit on opposite sides: ɛsaká before the noun, nsinsi after it. This
 follows the adjective rule already in this file, where each word has its own side.
 
-[TO CONFIRM: does nsinsi work with étá to give grandfather? And is there a matching
-word for the junior one?]
-
 ---
 
 # More words
@@ -1384,10 +1375,6 @@ word for the junior one?]
     Seb             descend, come down
 
 Jiet and Koh are opposites, as are Tæ and Chokor, and Kó and Seb.
-
-[TO CONFIRM: a published lexicon has té meaning to gush out, to burst. Tæ here is
-stand. If those are two different words that look alike, both belong; if one is
-wrong, this file wins.]
 
 ## Gathering and scattering
 
@@ -1488,10 +1475,6 @@ which were missing from this file.
 
 Note that **ayáp** is both *their* and *theirs*: one form does both jobs.
 
-[TO CONFIRM: this file already has wah for my and áwà appears here for mine. Are
-they the same word, one bound to the noun and one standing alone? The same
-question applies to yeh and ɛyɛ́, and to Yap and ayáp.]
-
 ---
 
 # Counting, the whole system
@@ -1542,10 +1525,6 @@ once it passes twenty, which is why forty is *two twenties* and not *four tens*.
     3,000   Ba nká bɛ́rát
     1,000,000   Ba nká-nká
     2,000,000   Ba nká-nká bɛ́pay
-
-[TO CONFIRM: this file already has bɛ́tandat for six and tándrámɔt for seven. The
-EyaLingo book writes Tándat and Tándat nɛ amɔt. If Tándat is six, then seven is
-simply six and one, which fits the pattern better. Which do you say?]
 
 ---
 
