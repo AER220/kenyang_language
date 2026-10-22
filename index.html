@@ -376,6 +376,8 @@ h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
 .choice:disabled{cursor:default;opacity:.5}
 .choice.right{border-color:var(--who);background:rgba(66,227,188,.16);opacity:1;animation:ding .45s ease}
 .choice.wrong{border-color:var(--not);background:rgba(255,106,85,.16);opacity:1}
+.choice .ce{display:block;font-family:var(--sans);font-size:13px;color:var(--mute);
+  margin-top:5px;line-height:1.35}
 @keyframes ding{0%{transform:none}35%{transform:scale(1.05)}100%{transform:none}}
 .verdict{margin:18px 0 0;padding:14px 16px;border-radius:14px;font-size:15px;line-height:1.58}
 .verdict.ok{background:rgba(66,227,188,.10);border:1px solid rgba(66,227,188,.3)}
@@ -817,7 +819,7 @@ footer p{margin:0}
 
   <!-- ══ LEARNING ALONE ══════════════════════════════════════════════ -->
   <section class="sec" id="alone">
-    <h2 class="big">Eight steps, when you have five minutes on your own.</h2>
+    <h2 class="big">Nine steps, when you have five minutes on your own.</h2>
     <p class="lead">Each one ends with something to go and say to a person. That last
       part is the point, whether you are nine or thirty nine.</p>
     <div class="path" id="pathGrid" role="tablist" aria-label="Steps"></div>
@@ -1199,43 +1201,53 @@ const STEPS = [
  words:[["Mba'aaah","hello","Say it warmly and stretch it out. It works for anyone."],
         ["néyi","good morning","The first thing you say when you wake up."]],
  mission:"Tomorrow morning, before one word of English, say <b>néyi</b> to whoever you see first."},
-{id:"answer", n:"Step 2", title:"Answer properly",
+{id:"greetback", n:"Step 2", title:"Greet, and greet back",
+ sub:"A greeting is half of something. Learn the half that comes back.",
+ words:[["Neyi","good morning","Say it first, in the morning."],
+        ["Neyi nkuo","good morning to you too","The answer when somebody says Neyi to you."],
+        ["Echina?","how are you?","A question. Abekubep is the answer."],
+        ["Abekubep","I am fine","Also means I am ok. The answer to Echina."],
+        ["Nnah","a greeting, a way of asking how","Put what you are asking about after it."],
+        ["Nnah neh ɛkati","how is school?",""],
+        ["Nnah neh Ma'yeh","how is your mother?","Ma'yeh is your mother."]],
+ mission:"Greet somebody at home with <b>Neyi</b> and see if they answer <b>Neyi nkuo</b>."},
+{id:"answer", n:"Step 3", title:"Answer properly",
  sub:"In Bayangi homes, yes has more than one shape.",
  words:[["Máah","yes, Mom","Only for your mother. It carries respect with it."],
         ["Sáah","yes, Dad","For your father, or any elder."],
         ["Èh!","yes","The plain yes, for anyone."],
         ["Éh Èh!","no","Careful. Èh alone is yes. Doubled, it becomes no."]],
  mission:"Next time your mother calls your name, answer <b>Máah</b>. Do not explain first."},
-{id:"howare", n:"Step 3", title:"Ask if someone is well",
+{id:"howare", n:"Step 4", title:"Ask if someone is well",
  sub:"A whole conversation, both halves of it.",
  words:[["Mma O'chi siri?","Mother, are you well?","O' is the mark for you."],
         ["Éh, M'chi siri","yes, I am well","M' is the mark for I. Same shape, other person."],
         ["M'pu siri","I am not well","pu is the little word that turns it around."]],
  mission:"Ask somebody at home <b>Mma O'chi siri?</b> and see whether they can answer."},
-{id:"polite", n:"Step 4", title:"Please and thank you",
+{id:"polite", n:"Step 5", title:"Please and thank you",
  sub:"The words that make people want to keep talking to you.",
  words:[["nnek","please","Put it in front of what you are asking for."],
         ["nkagha","thank you","The plain thank you."],
         ["Oki ah","thank you","It really means you have done it."]],
  mission:"Say <b>nkagha</b> next time somebody puts food in front of you. Then ask which one they would say."},
-{id:"family", n:"Step 5", title:"Everyone at home",
+{id:"family", n:"Step 6", title:"Everyone at home",
  sub:"The people you see every day, in their own names.",
  words:[["mmá","mother","Also used warmly for a small child."],["étá","father",""],
         ["mmɔ","child",""],["manor","brother or sister","One word for both."],
         ["Nereket","family",""],["Nchemty","family, togetherness","Bigger than it looks."]],
  mission:"Point at each person at home and say their Kenyang name. Then ask who else belongs on the list."},
-{id:"count", n:"Step 6", title:"Count to five",
+{id:"count", n:"Step 7", title:"Count to five",
  sub:"Then count real things, not numbers on a screen.",
  words:[["ɛ́mɔt","one",""],["bɛ́pay","two",""],["bɛ́rát","three",""],
         ["mɛ́nwi","four",""],["bɛ́tay","five",""]],
  mission:"Count five things in your kitchen out loud. Get somebody to check you."},
-{id:"need", n:"Step 7", title:"Say what you need",
+{id:"need", n:"Step 8", title:"Say what you need",
  sub:"The three things everybody says most often.",
  words:[["Nsai ah nu meh","I am hungry","This one has its own shape. Learn it whole."],
         ["M'pop","I am tired",""],["Che mme","give me","Put what you want after it."],
         ["Meh yan","I want","Really it means I am looking for."]],
  mission:"Next time you are hungry, say <b>Nsai ah nu meh</b> before the English."},
-{id:"first", n:"Step 8", title:"Your first sentence",
+{id:"first", n:"Step 9", title:"Your first sentence",
  sub:"Now you stop learning words and start building.",
  words:[["mme rong","I am going",""],["bá rong","they are going","One piece changed."],
         ["mme pú rong","I am not going","pú goes in the middle."],
@@ -1349,6 +1361,8 @@ const PICKS = [
    d:"Two players, one screen. Take turns. Children usually win."},
   {id:"build",ic:"🔤", t:"Build the sentence", tag:"solo",
    d:"You get the English. Put the Kenyang words in the right order."},
+  {id:"greet",ic:"👋", t:"Greet back", tag:"solo",
+   d:"Somebody greets you. Pick what you say back."},
   {id:"more", ic:"🎲", t:"More games", tag:"solo", href:"games.html",
    d:"Seven games that each ask you to do something new. Tells you the rule when you get one wrong."}
 ];
@@ -1600,11 +1614,49 @@ function buildEnd(){
     <div class="act"><button class="btn solid" data-bagain>Play again</button></div>`;
 }
 
+/* ── greet back, alone ───────────────────────────────────────── */
+/* Only the greetings whose reply a speaker has given. Nnah is in the steps but
+   not here: nobody has said yet what comes back to it. */
+const GREETS = [
+  {ken:"Neyi",    en:"good morning", back:"Neyi nkuo", backEn:"good morning to you too"},
+  {ken:"Echina?", en:"how are you?", back:"Abekubep",  backEn:"I am fine"}
+];
+/* wrong answers are real greetings, just not the answer to this one */
+const GREET_OTHERS = [["Nnah","a greeting"],["Nnah neh ɛkati","how is school?"],
+  ["Nnah neh Ma'yeh","how is your mother?"],["Neyi","good morning"],["Echina?","how are you?"]];
+let G = null;
+const G_ROUNDS = 6, G_PASS = 4;
+function greetNew(){
+  if(G.n >= G_ROUNDS) return greetEnd();
+  const q = pick(GREETS), right = [q.back,q.backEn];
+  const otherBack = GREETS.filter(x=>x!==q).map(x=>[x.back,x.backEn]);
+  const filler = shuffle(GREET_OTHERS.filter(o=>o[0]!==q.ken)).slice(0,2-otherBack.length);
+  G.q = q;
+  stage.innerHTML =
+    `<div class="shead"><div><h3>Greet back</h3>
+      <p>Somebody says this to you. What do you say back?</p></div></div>`
+    + `<div class="bar"><span>Question ${G.n+1} of ${G_ROUNDS}</span>
+       <span class="pbar"><i style="width:${(G.n/G_ROUNDS)*100}%"></i></span>
+       <span style="color:var(--place)">${G.score} right</span></div>`
+    + `<p class="ask" style="color:var(--place)">${esc(q.ken)}</p>`
+    + `<p class="askhint">${esc(q.en)}</p><div class="choices">`
+    + shuffle([right,...otherBack,...filler]).map(o=>
+        `<button class="choice" data-gback="${esc(o[0])}">${esc(o[0])}
+          <span class="ce">${esc(o[1])}</span></button>`).join("")
+    + `</div>`;
+}
+function greetEnd(){
+  stage.innerHTML = `<div class="final"><p class="n">${G.score} / ${G_ROUNDS}</p>
+    <p>${G.score>=G_PASS?"Now try it on somebody who will answer.":"Try once more. Each greeting has its own answer."}</p></div>
+    <div class="act"><button class="btn solid" data-gagain>Play again</button></div>`;
+}
+
 function runActivity(){
   document.querySelectorAll(".pickc").forEach(c=>
     c.setAttribute("aria-selected", c.dataset.pick===A.id?"true":"false"));
   if(A.id==="xw"){ if(!X) xInit(); xRender(); }
   else if(A.id==="duel"){ duelInit(); duelRender(); }
+  else if(A.id==="greet"){ G={n:0,score:0}; greetNew(); }
   else { B={n:0,score:0}; buildNew(); }
 }
 
@@ -1694,6 +1746,26 @@ stage.addEventListener("click", e=>{
   }
   if(b.dataset.bnext!==undefined){ buildNew(); return; }
   if(b.dataset.bagain!==undefined){ B={n:0,score:0}; buildNew(); return; }
+
+  /* greet back */
+  if(b.dataset.gback!==undefined){
+    const q=G.q, ok=b.dataset.gback===q.back;
+    if(ok) G.score++;
+    G.n++;
+    stage.querySelectorAll(".choice").forEach(c=>{
+      c.disabled=true;
+      if(c.dataset.gback===q.back) c.classList.add("right");
+      else if(c===b) c.classList.add("wrong");
+    });
+    stage.insertAdjacentHTML("beforeend",
+      `<div class="verdict ${ok?"ok":"no"}">`+(ok?"Yes. ":"Not that one. ")
+      +`<b>${esc(q.ken)}</b> (${esc(q.en)}) is answered with
+        <b>${esc(q.back)}</b> (${esc(q.backEn)}).`
+      +`</div><div class="act"><button class="btn solid" data-gnext>Next</button></div>`);
+    return;
+  }
+  if(b.dataset.gnext!==undefined){ greetNew(); return; }
+  if(b.dataset.gagain!==undefined){ G={n:0,score:0}; greetNew(); return; }
 });
 
 /* physical keyboard for the crossword, because adults will use one */

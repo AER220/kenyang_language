@@ -70,3 +70,16 @@ Part: Counting, the whole system → Hundreds and above
 [TO CONFIRM: this file already has bɛ́tandat for six and tándrámɔt for seven. The
 EyaLingo book writes Tándat and Tándat nɛ amɔt. If Tándat is six, then seven is
 simply six and one, which fits the pattern better. Which do you say?]
+
+---
+
+## 7. Greetings: the reply to Nnah, and néyi beside Neyi
+
+From `knowledge_base/kenyang_verified_speaker.md`, Greetings and their replies
+
+[TO CONFIRM: what does somebody say back to Nnah, or to Nnah neh ɛkati? The Greet
+back game leaves Nnah out until this is known.]
+
+[TO CONFIRM: Step 1 on the site writes néyi with a tone mark, and the crossword
+does too. The greetings list writes Neyi without one. Same word, both right? Should
+Neyi nkuo carry a mark as well?]

@@ -1570,3 +1570,23 @@ Ma nsinsi ya or anything of that shape.
 Note the whole sentence together: the thing owned comes first, so N-ném leads,
 then whose it is, then chi.
 
+
+---
+
+## Greetings and their replies
+
+A greeting and the answer that comes back, as a speaker uses them.
+
+    Nnah                        general greeting, a way of asking "how?"
+    Nnah neh ɛkati              how is school?
+    Nnah neh Ma'yeh            how is your mother?
+    Neyi                        good morning
+    Neyi nkuo                   good morning to you too    (the reply to Neyi)
+    Echina?                     how are you?
+    Abekubep                    I am ok, I am fine         (the reply to Echina)
+
+        Neyi nkuo                   good morning to you too    (reply to Neyi;
+                                also written Neyi nkwor)
+
+                                    étá nsinsi                  grandfather
+    Eta'ya nsinsi               my grandfather
