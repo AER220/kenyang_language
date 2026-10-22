@@ -405,14 +405,14 @@
 {"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chye nébhi", "english": "to breastfeed.", "part_of_speech": "vt"}
 {"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyě nekwak", "english": "to give assistance.", "part_of_speech": "vt"}
 {"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyě-esɔŋori", "english": "to disturb.", "part_of_speech": "vt"}
-{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyέ-ɛyɔk", "english": "falcon.", "part_of_speech": "n 9"}
+{"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyɛ́-ɛyɔk", "english": "falcon.", "part_of_speech": "n 9"}
 {"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyě-ndak", "english": "to complain.", "part_of_speech": "vt"}
 {"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyet", "english": "to block.", "part_of_speech": "vt"}
 {"chapter": "14", "topic": "Dictionary: Ch", "kenyang": "chyét", "english": "to obstruct, to interrupt, to defend.", "part_of_speech": "vt"}
 {"chapter": "14", "topic": "Dictionary: D", "kenyang": "dak", "english": "to tear, to split.", "part_of_speech": "vt"}
 {"chapter": "14", "topic": "Dictionary: D", "kenyang": "dén", "english": "to beat, to whip.", "part_of_speech": "vt"}
 {"chapter": "14", "topic": "Dictionary: D", "kenyang": "dep", "english": "to stamp, to hit.", "part_of_speech": "vt"}
-{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dep έbhémé", "english": "to speak through signs.", "part_of_speech": "vt"}
+{"chapter": "14", "topic": "Dictionary: D", "kenyang": "dep ɛ́bhémé", "english": "to speak through signs.", "part_of_speech": "vt"}
 {"chapter": "14", "topic": "Dictionary: D", "kenyang": "dep ne nɛkák awó", "english": "to slap.", "part_of_speech": "vt"}
 {"chapter": "14", "topic": "Dictionary: D", "kenyang": "dep nsáp", "english": "to spank.", "part_of_speech": "vt"}
 {"chapter": "14", "topic": "Dictionary: D", "kenyang": "depti", "english": "to flop.", "part_of_speech": "vt"}
@@ -537,7 +537,7 @@
 {"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛgháŋá-ɛyɔŋ", "english": "hoarse voice.", "part_of_speech": "n", "plural_form": "begháŋá-ɛyɔŋ"}
 {"chapter": "14", "topic": "Dictionary: E", "kenyang": "egháré", "english": "gap.", "part_of_speech": "n", "plural_form": "begháré"}
 {"chapter": "14", "topic": "Dictionary: E", "kenyang": "eghep", "english": "bone.", "part_of_speech": "n", "plural_form": "beghep"}
-{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛghɛbhé-ɛghókó-mfáy", "english": "cheekbone.", "part_of_speech": "n", "plural_form": "bɛghɛbhέ-ɛghókó-mfáy"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛghɛbhé-ɛghókó-mfáy", "english": "cheekbone.", "part_of_speech": "n", "plural_form": "bɛghɛbhɛ́-ɛghókó-mfáy"}
 {"chapter": "14", "topic": "Dictionary: E", "kenyang": "eghebhé-ana", "english": "femur.", "part_of_speech": "n", "plural_form": "beghebhé-mana"}
 {"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛghɛp-áwó", "english": "humorous.", "part_of_speech": "n", "plural_form": "bɛghɛp-ámó"}
 {"chapter": "14", "topic": "Dictionary: E", "kenyang": "eghebhé-mbe-ápak", "english": "clavicle.", "part_of_speech": "n", "plural_form": "beghebhé-mbe-ápak"}
@@ -767,7 +767,7 @@
 {"chapter": "14", "topic": "Dictionary: E", "kenyang": "esɔɔri", "english": "danger, trouble.", "part_of_speech": "n", "plural_form": "bɛsɔŋɔri"}
 {"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛsop", "english": "jackal.", "part_of_speech": "n", "plural_form": "bɛsɔp"}
 {"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛsɔp-ényén", "english": "salamander.", "part_of_speech": "n", "plural_form": "bɛsɔp-ényén"}
-{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Eswɔ-befabhe-njyɛ", "english": "a type of ant.", "part_of_speech": "n", "plural_form": "beswo-beswo-befabhέ-njye"}
+{"chapter": "14", "topic": "Dictionary: E", "kenyang": "Eswɔ-befabhe-njyɛ", "english": "a type of ant.", "part_of_speech": "n", "plural_form": "beswo-beswo-befabhɛ́-njye"}
 {"chapter": "14", "topic": "Dictionary: E", "kenyang": "esyé", "english": "market, business.", "part_of_speech": "n", "plural_form": "besyé"}
 {"chapter": "14", "topic": "Dictionary: E", "kenyang": "ɛsyé", "english": "to trade.", "part_of_speech": "vt"}
 {"chapter": "14", "topic": "Dictionary: E", "kenyang": "esyé", "english": "ant: a type (it forms a line across the road).", "part_of_speech": "n"}
@@ -1258,7 +1258,7 @@
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmáré", "english": "spleen.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mme", "english": "I.", "part_of_speech": "pron"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmem", "english": "wine, beer.", "part_of_speech": "n"}
-{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mměm bagyέp", "english": "palm wine.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mměm bagyɛ́p", "english": "palm wine.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mměm batan-bataŋ", "english": "strong drink.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmem-nchwi", "english": "corn beer.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɛm-nnyu-mfay", "english": "palate.", "part_of_speech": "n"}
@@ -1277,7 +1277,7 @@
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ nérí", "english": "tonsil.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmó nnya-ɛróŋó", "english": "firefly.", "part_of_speech": "n", "plural_form": "bɔ nnya-ɛróŋó"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmó nnya-ménkó", "english": "beetle.", "part_of_speech": "n", "plural_form": "bɔ nnya-ménkó"}
-{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ nsyέ", "english": "july.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ nsyɛ́", "english": "july.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ ntó", "english": "may.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmɔ-bɛtik", "english": "appretice.", "part_of_speech": "n", "plural_form": "bɔ-bɛtik"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mmochi", "english": "cousin,", "part_of_speech": "n", "plural_form": "bochi"}
@@ -1357,7 +1357,7 @@
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpok anɛ a fwét", "english": "late.", "part_of_speech": "adv"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpok nyáká", "english": "previously.", "part_of_speech": "adv"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpok-éfú", "english": "sometimes.", "part_of_speech": "adv"}
-{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpok mmyέ", "english": "season.", "part_of_speech": "n"}
+{"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpok mmyɛ́", "english": "season.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpók nkɛm", "english": "always.", "part_of_speech": "adv"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpɔkɔ-sɛbhɛ", "english": "bumble bee.", "part_of_speech": "n", "plural_form": "mpɔkɔ-kɛbhɛ"}
 {"chapter": "14", "topic": "Dictionary: M", "kenyang": "mpoŋ", "english": "cattle.", "part_of_speech": "n"}
@@ -1398,7 +1398,7 @@
 {"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchwé-menɔk", "english": "carpenter.", "part_of_speech": "n", "plural_form": "bachwé-mɛnɔk"}
 {"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchwi", "english": "corn.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchwi-kefwót", "english": "guinea corn.", "part_of_speech": "n"}
-{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchyé-enɔk", "english": "bud.", "part_of_speech": "n", "plural_form": "bachyέ-menɔk"}
+{"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchyé-enɔk", "english": "bud.", "part_of_speech": "n", "plural_form": "bachyɛ́-menɔk"}
 {"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchyɛ-esɔŋri", "english": "nuissance.", "part_of_speech": "n", "plural_form": "bachyě-besɔri"}
 {"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchyep", "english": "rheumatism.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: N", "kenyang": "nchyet-enebhe", "english": "fortune teller.", "part_of_speech": "n", "plural_form": "bachyet-enebhe"}
@@ -1615,7 +1615,7 @@
 {"chapter": "14", "topic": "Dictionary: Nny", "kenyang": "nnyé-newú", "english": "Inheritance.", "part_of_speech": "n", "plural_form": "manyé-newú"}
 {"chapter": "14", "topic": "Dictionary: Nny", "kenyang": "nnyésé", "english": "Eye.", "part_of_speech": "n", "plural_form": "amik"}
 {"chapter": "14", "topic": "Dictionary: Nny", "kenyang": "nnyésé-eket", "english": "Window.", "part_of_speech": "n", "plural_form": "amíkí-eket"}
-{"chapter": "14", "topic": "Dictionary: Nny", "kenyang": "nnyésé-ékak", "english": "Ankle.", "part_of_speech": "n", "plural_form": "amíkí-έkak"}
+{"chapter": "14", "topic": "Dictionary: Nny", "kenyang": "nnyésé-ékak", "english": "Ankle.", "part_of_speech": "n", "plural_form": "amíkí-ɛ́kak"}
 {"chapter": "14", "topic": "Dictionary: Nny", "kenyang": "nnyésé-ngó", "english": "Target point (of gun).", "part_of_speech": "n", "plural_form": "amíkí-ngó"}
 {"chapter": "14", "topic": "Dictionary: Nny", "kenyang": "nnyésé-nku", "english": "Button.", "part_of_speech": "n", "plural_form": "amíkí-nku"}
 {"chapter": "14", "topic": "Dictionary: Nny", "kenyang": "nnyésé-nnywop", "english": "Transparent area at the roof of a house.", "part_of_speech": "n"}
@@ -1688,7 +1688,7 @@
 {"chapter": "14", "topic": "Dictionary: Ns", "kenyang": "ńsúkúru", "english": "Orange.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: Ns", "kenyang": "nsyé", "english": "Mold.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: Ns", "kenyang": "nsyɛ-nsyɛ", "english": "To be tall.", "part_of_speech": "vi"}
-{"chapter": "14", "topic": "Dictionary: Ns", "kenyang": "nsyép", "english": "Circumcision.", "part_of_speech": "n", "plural_form": "basyέp"}
+{"chapter": "14", "topic": "Dictionary: Ns", "kenyang": "nsyép", "english": "Circumcision.", "part_of_speech": "n", "plural_form": "basyɛ́p"}
 {"chapter": "14", "topic": "Dictionary: Ns", "kenyang": "nsyét", "english": "Seedling.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: Nt", "kenyang": "nta", "english": "Hat.", "part_of_speech": "n", "plural_form": "bata"}
 {"chapter": "14", "topic": "Dictionary: Nt", "kenyang": "ntené-myéŋ", "english": "Groins.", "part_of_speech": "n"}
@@ -1812,8 +1812,8 @@
 {"chapter": "14", "topic": "Dictionary: S", "kenyang": "sayrí", "english": "To filter, to be neat, to be nice.", "part_of_speech": "vi"}
 {"chapter": "14", "topic": "Dictionary: S", "kenyang": "sáyrí-sáyrí", "english": "Very well.", "part_of_speech": "adv"}
 {"chapter": "14", "topic": "Dictionary: S", "kenyang": "sé", "english": "To lie.", "part_of_speech": "vt"}
-{"chapter": "14", "topic": "Dictionary: S", "kenyang": "sebyέp", "english": "Mole.", "part_of_speech": "n 19/13", "plural_form": "kebyép"}
-{"chapter": "14", "topic": "Dictionary: S", "kenyang": "sɛbhoŋ-ngyέp", "english": "Type of palm tree.", "part_of_speech": "n 19/13", "plural_form": "kɛbhoŋ-ngуép"}
+{"chapter": "14", "topic": "Dictionary: S", "kenyang": "sebyɛ́p", "english": "Mole.", "part_of_speech": "n 19/13", "plural_form": "kebyép"}
+{"chapter": "14", "topic": "Dictionary: S", "kenyang": "sɛbhoŋ-ngyɛ́p", "english": "Type of palm tree.", "part_of_speech": "n 19/13", "plural_form": "kɛbhoŋ-ngуép"}
 {"chapter": "14", "topic": "Dictionary: S", "kenyang": "séchókánchu", "english": "Mole.", "part_of_speech": "n"}
 {"chapter": "14", "topic": "Dictionary: S", "kenyang": "sɛchókó", "english": "Back of leg.", "part_of_speech": "n", "plural_form": "kɛchókó"}
 {"chapter": "14", "topic": "Dictionary: S", "kenyang": "sekaŋ", "english": "Whisker.", "part_of_speech": "n", "plural_form": "kekaŋ"}
@@ -1839,7 +1839,7 @@
 {"chapter": "14", "topic": "Dictionary: S", "kenyang": "senon", "english": "Iron, ring.", "part_of_speech": "n", "plural_form": "kɛnŋ"}
 {"chapter": "14", "topic": "Dictionary: S", "kenyang": "sɛnɔŋ-áwó esén néntí", "english": "Middle finger.", "part_of_speech": "n", "plural_form": "kɛnɔŋ-ámó ɛkén néntí"}
 {"chapter": "14", "topic": "Dictionary: S", "kenyang": "sɛnŋ-áwó", "english": "Finger.", "part_of_speech": "n", "plural_form": "kɛnŋ áwó"}
-{"chapter": "14", "topic": "Dictionary: S", "kenyang": "sɛnɔŋ-έkak", "english": "Toe.", "part_of_speech": "n", "plural_form": "kɛnɔŋ- ɛkak"}
+{"chapter": "14", "topic": "Dictionary: S", "kenyang": "sɛnɔŋ-ɛ́kak", "english": "Toe.", "part_of_speech": "n", "plural_form": "kɛnɔŋ- ɛkak"}
 {"chapter": "14", "topic": "Dictionary: S", "kenyang": "sényóŋó", "english": "Worm in the stomach.", "part_of_speech": "n", "plural_form": "kényóŋó"}
 {"chapter": "14", "topic": "Dictionary: S", "kenyang": "sényóŋó-mmú", "english": "Tapeworm.", "part_of_speech": "n", "plural_form": "kényóŋó-mmú"}
 {"chapter": "14", "topic": "Dictionary: S", "kenyang": "sényóré", "english": "Earthworm.", "part_of_speech": "n", "plural_form": "kényóré"}

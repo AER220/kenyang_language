@@ -42,9 +42,9 @@
 {"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "ours", "kenyang_word": "áyɛsɛ"}
 {"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "you (singular)", "kenyang_word": "wɔ"}
 {"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "your (singular)", "kenyang_word": "ɔ"}
-{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "yours (singular)", "kenyang_word": "ɛyέ, áyɛ"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "yours (singular)", "kenyang_word": "ɛyɛ́, áyɛ"}
 {"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "you (plural)", "kenyang_word": "bɛ, bɛka"}
-{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "your (plural)", "kenyang_word": "έyɛka"}
+{"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "your (plural)", "kenyang_word": "ɛ́yɛka"}
 {"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "yours (plural)", "kenyang_word": "áyɛka"}
 {"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "He/she/it", "kenyang_word": "a / yɔ"}
 {"document_id": "EyaLingo_Dictionary_Ch1", "type": "pronoun_vocabulary", "english_translation": "His/Hers/its", "kenyang_word": "ayí"}

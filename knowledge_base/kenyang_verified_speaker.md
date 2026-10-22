@@ -792,10 +792,10 @@ Nothing else is needed. Do NOT add anghati to a normal "tell that" sentence.
 anghati is ONLY for relaying a message onward — when you ask person A to pass a message to
 person B, a chain of two tellings. It is not used for a single, direct telling.
 
-    ghati yi anghati bho bɛ m'chi bέ-ntɨ
+    ghati yi anghati bho bɛ m'chi bɛ́-ntɨ
     tell him to tell them that I am angry
     (ghati yi = tell HIM directly · anghati bho = so that he passes it to THEM · bɛ = that ·
-     m'chi bέ-ntɨ = I am angry)
+     m'chi bɛ́-ntɨ = I am angry)
 
 The test: is there just one telling, or a chain? One telling → ghati only. A chain where
 someone relays it onward → ghati for the first person, anghati for passing it on.
@@ -821,10 +821,10 @@ shape gives "should / let (him/her/it) …".
 
 ## Angry, and "that"
 
-    bέ-ntɨ              angry
-    m'chi bέ-ntɨ        I am angry
+    bɛ́-ntɨ              angry
+    m'chi bɛ́-ntɨ        I am angry
     bɛ                  that
-    bɛ m'chi bέ-ntɨ     that I am angry
+    bɛ m'chi bɛ́-ntɨ     that I am angry
 
 ## Bad / evil, and "their"
 
@@ -1566,4 +1566,28 @@ Bayangi name, and a child should be able to find their own in the list.
     Nso         Nyenty      Obase       Obasi       Ofiong
     Ojong       Orock       Tabe        Tabi        Takang
     Takor       Taku        Tambong     Tanyi       Tassong
+
+
+---
+
+## nsinsi on a possessed word
+
+Ma nsinsi is grandmother. To say whose grandmother, the possessive goes inside
+the first word and nsinsi follows the whole thing.
+
+    mmá                 mother
+    Ma'ya               my mother
+    Ma'yeh              your mother
+
+    Ma nsinsi           grandmother
+    Ma'ya nsinsi        my grandmother
+    Ma'yeh nsinsi       your grandmother
+
+So nsinsi attaches to the possessed form, not to the bare one. It is never
+Ma nsinsi ya or anything of that shape.
+
+    N-ném Ma'ya nsinsi chi Helen        my grandmother's name is Helen
+
+Note the whole sentence together: the thing owned comes first, so N-ném leads,
+then whose it is, then chi.
 
