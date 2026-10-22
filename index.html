@@ -1178,7 +1178,7 @@ const XW = {"w":13,"h":9,"words":[
  {"g":"MMA","w":"mmá","clue":"mother","r":4,"c":3,"cr":4,"cc":2,"down":false},
  {"g":"MMOK","w":"mmok","clue":"sun","r":4,"c":3,"cr":3,"cc":3,"down":true},
  {"g":"SIRI","w":"siri","clue":"well, fine","r":5,"c":7,"cr":5,"cc":6,"down":false},
- {"g":"ƐKWA","w":"ékwá","clue":"plantain","r":7,"c":2,"cr":7,"cc":1,"down":false},
+ {"g":"EKWA","w":"ékwá","clue":"plantain","r":7,"c":2,"cr":7,"cc":1,"down":false},
  {"g":"NEFI","w":"nefi","clue":"outside","r":2,"c":10,"cr":1,"cc":10,"down":true},
  {"g":"AMEM","w":"amem","clue":"inside","r":3,"c":8,"cr":3,"cc":7,"down":false},
  {"g":"REM","w":"Rem","clue":"speak","r":5,"c":1,"cr":5,"cc":0,"down":false},
@@ -1344,13 +1344,13 @@ chips(); paint();
    ═══════════════════════════════════════════════════════════════════════════ */
 const PICKS = [
   {id:"xw",   ic:"🧩", t:"Kenyang crossword", tag:"fam",
-   d:"Ten words, clues in English, arrows showing the way. Argue about it."},
+   d:"Fourteen words, clues in English, arrows showing the way. Argue about it."},
   {id:"duel", ic:"⚔️", t:"Family duel", tag:"fam",
    d:"Two players, one screen. Take turns. Children usually win."},
   {id:"build",ic:"🔤", t:"Build the sentence", tag:"solo",
    d:"You get the English. Put the Kenyang words in the right order."},
   {id:"more", ic:"🎲", t:"More games", tag:"solo", href:"games.html",
-   d:"Four levels that each ask you to do something new. Tells you the rule when you get one wrong."}
+   d:"Seven games that each ask you to do something new. Tells you the rule when you get one wrong."}
 ];
 let A = {id:"xw"};
 const stage = $("stage");
@@ -1475,7 +1475,7 @@ function xNow(){
   const el=$("xnow"); if(!el) return;
   const solved = xSolvedWords();
   if(solved.length === XW.words.length){
-    el.innerHTML = `All ten. Now read them out loud to whoever is next to you.`;
+    el.innerHTML = `All fourteen. Now read them out loud to whoever is next to you.`;
     return;
   }
   if(!X.sel){ el.textContent = "Tap a square to start."; return; }
@@ -1620,7 +1620,16 @@ stage.addEventListener("click", e=>{
   if(b.dataset.k){
     if(!X.sel) return;
     if(b.dataset.k==="DEL"){ delete X.filled[X.sel]; }
-    else { X.filled[X.sel]=b.dataset.k; xAdvance(); }
+    else {
+      /* CH, GH and NY are one letter of the alphabet but two squares in the
+         grid, so each part goes in its own square. Stop at the end of a word
+         rather than writing the second part over the first. */
+      for (const ch of b.dataset.k){
+        const at = X.sel;
+        X.filled[at] = ch; xAdvance();
+        if (X.sel === at) break;
+      }
+    }
     X.checked=false; xRender(); return;
   }
   if(b.dataset.xcheck!==undefined){ X.checked=true; xRender(); return; }

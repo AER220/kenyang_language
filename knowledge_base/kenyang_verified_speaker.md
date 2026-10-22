@@ -1098,7 +1098,7 @@ because a crossword needs one letter per square).
     4 letters   inside          AMEM
     3 letters   mother          MMA
     4 letters   outside         NEFI
-    4 letters   plantain        ƐKWA
+    4 letters   plantain        EKWA
     4 letters   please          NNEK
     3 letters   son or daughter MOH
     3 letters   speak           REM

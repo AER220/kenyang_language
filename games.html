@@ -102,6 +102,8 @@ h1{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.08;
 .o:hover:not(:disabled){border-color:var(--gold);transform:translateY(-2px)}
 .o:disabled{cursor:default}
 .o.kny{font-family:var(--serif);font-size:1.3rem;font-weight:700}
+.o .gl{display:block;font-family:var(--sans);font-size:12.5px;font-weight:400;
+  color:var(--mute);margin-top:3px}
 .o.yes{border-color:var(--who);background:rgba(66,227,188,.14);color:var(--who)}
 .o.no{border-color:var(--not);background:rgba(255,106,85,.13);color:var(--not)}
 [data-theme="light"] .o.yes{background:rgba(7,122,88,.1)}
@@ -373,10 +375,13 @@ function judge(ok, head, body, rule){
   $("next").textContent = (step + 1 >= G.n) ? "See how you did" : "Next";
 }
 
-/* choose one of the options; shared by five of the games */
-function choose(stem, opts, right, body, rule, kny){
+/* choose one of the options; shared by five of the games. gloss, when given,
+   puts each option's English underneath it as help, not as the answer */
+function choose(stem, opts, right, body, rule, kny, gloss){
   $("round").innerHTML = stem + `<div class="opts">` + mix(opts).map(o =>
-      `<button class="o ${kny ? "kny" : ""}" data-o="${esc(o)}">${esc(o)}</button>`).join("")
+      `<button class="o ${kny ? "kny" : ""}" data-o="${esc(o)}">${esc(o)}`
+      + (gloss && gloss[o] ? `<span class="gl">${esc(gloss[o])}</span>` : "")
+      + `</button>`).join("")
     + `</div>`;
   $("round").querySelectorAll(".o").forEach(b => b.onclick = () => {
     const ok = b.dataset.o === right;
@@ -467,7 +472,8 @@ function rOdd(){
             Which one does not?</p></div>`,
     [...three.map(w => w[0]), odd[0]], odd[0],
     `<b>${esc(odd[0])}</b> is ${esc(odd[1])}.`,
-    `The other three are all ${from}.`, true);
+    `The other three are all ${from}.`, true,
+    Object.fromEntries([...three, odd]));
 }
 
 /* ── 5. which side ─────────────────────────────────────────────────── */

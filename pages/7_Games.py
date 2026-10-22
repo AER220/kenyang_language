@@ -409,6 +409,10 @@ GAMES = [
     ("memory", "Find the pairs",
      "Match each Kenyang word to its meaning."),
 ]
+# Listening needs recordings. Without audio/manifest.json there is nothing to
+# play, so the game is not offered at all.
+if not os.path.exists(os.path.join(AUDIO_DIR, "manifest.json")):
+    GAMES = [g for g in GAMES if g[0] != "listen"]
 LEVELS = ["Easy", "Medium", "Hard", "Everything"]
 
 st.markdown('<div class="hero"><p class="name">Nɛpɛm Games</p><div class="rule"></div>'
@@ -428,7 +432,7 @@ with st.sidebar:
     clips = len(have_audio(words))
     st.caption(f"{clips} with a recording")
     if clips == 0:
-        st.caption("Add .mp3 clips to ./audio to switch on Listen and choose.")
+        st.caption("Add .mp3 clips and audio/manifest.json to switch on Listen and choose.")
 
 words, status = load_words(include if "include" in dir() else False)
 
