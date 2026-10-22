@@ -60,7 +60,7 @@ KB_ROOT = "knowledge_base"
 # every passage. Set this False only to fall back to the keyword search below.
 USE_EMBEDDINGS = True
 MAX_CHUNKS = 8_000           # hard ceiling. Past this I want to be told, not to hang.
-ALWAYS_ON_CHARS = 40_000     # ceiling for the verified tier, which travels every turn
+ALWAYS_ON_CHARS = 125_000    # ceiling for the verified tier, which travels every turn
 
 # --- how much material goes in each message ---------------------------------
 # "full" sends the ENTIRE corpus every turn. That is what I actually want — no retrieval,
@@ -462,6 +462,7 @@ def build_corpus(signature):
     counters = {"verified": 0, "core": 0, "reference": 0}
     chunks, manifest, always_parts, always_used = [], [], [], 0
     spine_parts, spine_used = [], 0
+    verified = []
 
     for f in files:
         counters[f["tier"]] += 1
@@ -471,12 +472,8 @@ def build_corpus(signature):
         for piece in pieces:
             chunks.append({"tier": f["tier"], "label": label, "text": piece})
 
-        # The verified file rides along in full. It's small, and it's the one thing I
-        # never want search to accidentally miss.
-        if f["tier"] == "verified" and always_used < ALWAYS_ON_CHARS:
-            seg = f["text"][:ALWAYS_ON_CHARS - always_used]
-            always_parts.append(f"\n### {label}\n{seg}")
-            always_used += len(seg)
+        if f["tier"] == "verified":
+            verified.append((f, label))
 
         # Grammar rides along too — see SPINE_FILES for why.
         if in_spine(f["name"]) and spine_used < SPINE_CHARS:
@@ -487,6 +484,18 @@ def build_corpus(signature):
         manifest.append({"file": f["name"], "label": label, "tier": f["tier"],
                          "chars": len(f["text"]), "chunks": len(pieces),
                          "spine": in_spine(f["name"])})
+
+    # The verified files ride along in full; they're the one thing I never want search to
+    # accidentally miss. The grammar goes first, so if the ceiling ever bites it cuts the
+    # recorded texts and never the rules. Only this block is reordered: the chunk order
+    # above must stay as it is, because index.npz is matched to it row by row.
+    rules_last = lambda n: not any(w in n.lower() for w in ("speaker", "rules", "grammar"))
+    for f, label in sorted(verified, key=lambda v: rules_last(v[0]["name"])):
+        if always_used >= ALWAYS_ON_CHARS:
+            break
+        seg = f["text"][:ALWAYS_ON_CHARS - always_used]
+        always_parts.append(f"\n### {label}\n{seg}")
+        always_used += len(seg)
 
     always_on = ""
     if always_parts:
