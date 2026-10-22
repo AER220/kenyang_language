@@ -35,8 +35,7 @@ does, every possessive in this file can be built both ways.]
 From `knowledge_base/kenyang_verified_speaker.md`, line 1370
 Part: Big and senior: two words that take meaning from the noun → nsinsi: the senior one, the older one
 
-[TO CONFIRM: does nsinsi work with étá to give grandfather? And is there a matching
-word for the junior one?]
+[TO CONFIRM: is there a matching word for the junior one?]
 
 ---
 

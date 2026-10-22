@@ -96,10 +96,13 @@ Ask the running app these. They are chosen because each has failed before.
 | how do you say they were not going to school | bá pú rong nyaka ekeré-ékáti |
 | how do you say two small houses | Mandu ɛkɛt bɛ́pay |
 | my grandmother's name is Helen | N-ném first, owner second |
-| what is the word for grandfather | **must refuse** |
+| what is the word for grandfather | étá nsinsi |
+| what is the word for stepmother | **must refuse** |
 
 The last one matters most. It is in none of the books, so a confident answer
-means something has started inventing.
+means something has started inventing. If it is ever confirmed and added, pick
+a new refusal word and check with grep that it appears nowhere in
+knowledge_base first.
 
 Diagnostics that need no API key:
 
