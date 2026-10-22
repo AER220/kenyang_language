@@ -50,6 +50,9 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:10px;
 .modesw{width:36px;height:36px;border-radius:99px;border:1px solid var(--edge);
   background:none;color:var(--mute);cursor:pointer;font-size:15px;font-family:inherit}
 .modesw:hover{color:var(--gold);border-color:var(--edge-hi)}
+/* on paper the bare outline all but vanished, as on the main page */
+[data-theme="light"] .modesw:not(:hover){color:var(--text);background:var(--lift2);
+  border-color:var(--edge-hi)}
 
 h1{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.08;
   margin:0 0 8px;letter-spacing:-.02em}

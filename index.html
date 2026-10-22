@@ -92,6 +92,12 @@
 [data-theme="light"] .opt[aria-pressed="true"]{background:#E8A61B;
   border-color:#E8A61B;color:#1A1206}
 [data-theme="light"] .pbar i{background:linear-gradient(90deg,#077A58,#E8A61B)}
+/* the chosen chips in the sentence builder. Every role colour is darkened for
+   paper, so dark text on them fell to between 1.2:1 and 3.8:1; the page colour
+   reads on all five. No gold ring: each chip is its own colour edge to edge,
+   and the verb is still the one with no colour of its own. */
+[data-theme="light"] :is(.c-who,.c-verb,.c-when,.c-not,.c-place) .opt[aria-pressed="true"]{
+  color:var(--base);border-color:transparent}
 [data-theme="light"] .hproof i{background:#E8A61B}
 
 /* the drifting colour behind everything is built for a dark page. On paper it
@@ -108,6 +114,11 @@
 .modesw:hover{color:var(--place);border-color:var(--edge-hi);
   background:rgba(255,201,77,.08)}
 .modesw:focus-visible{outline:2px solid var(--place);outline-offset:2px}
+/* on paper the bare outline all but vanished. A faint filled disc and the full
+   text colour make it findable without turning it into a button you must press.
+   Same size in both themes, so the nav does not shift when it is pressed. */
+[data-theme="light"] .modesw:not(:hover){color:var(--text);background:var(--lift2);
+  border-color:var(--edge-hi)}
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
