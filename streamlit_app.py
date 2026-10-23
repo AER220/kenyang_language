@@ -20,6 +20,7 @@ import glob
 import json
 import math
 import html
+import unicodedata
 import numpy as np
 import streamlit as st
 import streamlit.components.v1 as components
@@ -1127,13 +1128,17 @@ RULES_REMINDER = RULES_REMINDER + tools.TOOL_INSTRUCTIONS
 # --- what has been taught so far ---------------------------------------------
 # Kenyang words carry marks English words don't: ɛ ɔ ŋ ʉ ɨ, tone accents, or the
 # apostrophe in forms like O'chi. That's enough to spot them without another API call.
-KENYANG_WORD = re.compile(r"[\w'’]*[ɛɔŋʉɨáàâāéèêēíìîīóòôōúùûūǎǐǒǔ][\w'’]*", re.UNICODE)
+# Tone marks are combining characters, which \w does not match: without \u0300-\u036f
+# in the class, Bɛ́pay is read as Bɛ and an invented word with a tone mark slips through.
+KENYANG_WORD = re.compile(r"[\w'’\u0300-\u036f]*[ɛɔŋƐƆŊʉɨáàâāéèêēíìîīóòôōúùûūǎǐǒǔ\u0300-\u036f]"
+                          r"[\w'’\u0300-\u036f]*", re.UNICODE)
 APOSTROPHE_WORD = re.compile(r"\b[A-Za-z]{1,6}['’][A-Za-z]{2,}\b")
 ENGLISH_TAILS = {"s", "t", "re", "ve", "ll", "d", "m"}   # don't, it's, you're, we'll…
 
 
 def kenyang_tokens(text):
     """Pull the Kenyang-looking words out of a piece of text, in order, deduped."""
+    text = unicodedata.normalize("NFC", text)
     found = KENYANG_WORD.findall(text)
     for w in APOSTROPHE_WORD.findall(text):
         if re.split(r"['’]", w)[-1].lower() not in ENGLISH_TAILS:
@@ -1147,7 +1152,14 @@ def kenyang_tokens(text):
     return out
 
 
-def unsupported_words(reply, found):
+def material(found, always_on=""):
+    """The text behind an answer, folded for matching: the passages found plus the
+    verified block that travels with every answer, NFC, single-spaced, lowercase."""
+    text = " ".join([always_on] + [c["text"] for c in found or []])
+    return re.sub(r"\s+", " ", unicodedata.normalize("NFC", text)).lower()
+
+
+def unsupported_words(reply, found, always_on=""):
     """
     Which Kenyang words in this reply appear nowhere in the material behind it.
 
@@ -1155,10 +1167,12 @@ def unsupported_words(reply, found):
     more than one spelling convention, so a real word may be written differently here —
     but a word that appears in NO passage was not read out of my files. It was produced.
     Given that people are using this to recover their mother tongue, they should be told.
+
+    The verified block travels with every answer, so it counts as material behind it too.
     """
-    if not found:
+    if not found and not always_on:
         return []
-    corpus = " ".join(c["text"] for c in found).lower()
+    corpus = material(found, always_on)
     return [w for w in kenyang_tokens(reply) if w.lower() not in corpus]
 
 
@@ -1199,19 +1213,19 @@ def correction_note(message):
             "ask them for the correct order.")
 
 
-def lesson_note(messages, found=None):
+def lesson_note(messages, found=None, always_on=""):
     """
     A briefing so he builds on the lesson instead of restarting it.
 
     This had a nasty bug. taught_so_far() scrapes Kenyang-looking words out of Nɛpɛm's OWN
     previous replies — so anything he invented got handed back to him next turn as
     established lesson content, and the mistake compounded inside a single session. Now a
-    word only counts as taught if it actually appears in the passages retrieved. Inventions
-    don't survive the next turn.
+    word only counts as taught if it actually appears in the passages retrieved or the
+    verified block. Inventions don't survive the next turn.
     """
     words = taught_so_far(messages)
-    if found:
-        corpus = " ".join(c["text"] for c in found).lower()
+    if found or always_on:
+        corpus = material(found, always_on)
         words = [w for w in words if w.lower() in corpus]
     asked = sum(1 for m in messages if m["role"] == "user")
     lines = [f"===== THIS LESSON SO FAR — {asked} question(s) from the learner ====="]
@@ -1744,7 +1758,7 @@ if st.session_state.pending:
         # second carries this turn's passages, the lesson so far, and the rules — sitting
         # as close to the learner's question as I can put them.
         turn_context = "\n\n".join(x for x in (
-            knowledge, lesson_note(history, found),
+            knowledge, lesson_note(history, found, always_on),
             correction_note(last_user), RULES_REMINDER) if x)
 
         api_messages = ([{"role": "system", "content": STATIC_CONTEXT},
@@ -1818,7 +1832,7 @@ if st.session_state.pending:
                 slot.markdown(bubble("assistant", reply), unsafe_allow_html=True)
                 st.session_state.messages.append({"role": "assistant", "content": reply})
                 # Check the reply against the material it was built from, and say so.
-                loose = unsupported_words(reply, found)
+                loose = unsupported_words(reply, found, always_on)
                 if loose:
                     st.markdown(
                         '<div class="unchecked">Not found in the material behind this '
