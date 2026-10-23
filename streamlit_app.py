@@ -22,6 +22,7 @@ import math
 import html
 import numpy as np
 import streamlit as st
+import streamlit.components.v1 as components
 from openai import OpenAI
 
 # ─── FUNCTION CALLING ────────────────────────────────────────────────────────
@@ -153,6 +154,7 @@ st.set_page_config(page_title="Nɛpɛm — Learn Kenyang", page_icon="🌿",
                    layout="centered", initial_sidebar_state="collapsed")
 
 WELCOME = "Mma ne eta, welcome! I am Nɛpɛm your life-line to mastering Kenyang."
+START_HINT = "Tap one of the options below to begin, or type your own question."
 
 
 def api_key():
@@ -1400,6 +1402,14 @@ textarea::placeholder,
   .hero .name{font-size:1.8rem;}
   .bubble{max-width:85%;font-size:1rem;}
 }
+
+/* Tap to hear, as on nepem.org: a gold dotted underline on a recorded word. */
+::highlight(nepem-say){text-decoration:underline dotted #96680A;
+  text-decoration-thickness:2px;text-underline-offset:4px}
+.say{text-decoration:underline dotted #96680A;text-decoration-thickness:2px;
+  text-underline-offset:4px;cursor:pointer}
+/* the empty frame that loads it takes no room */
+[data-testid="stElementContainer"]:has(iframe[srcdoc*="nepem-say"]){display:none !important;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -1453,6 +1463,23 @@ THINKING = (f'<div class="row bot"><div class="ava ava-bot">{AVA_LEAF}</div>'
 # =============================================================================
 # 6. APP
 # =============================================================================
+
+# --- tap to hear --------------------------------------------------------------
+# The player is say.js on nepem.org, the same file the main page runs, with the audio
+# beside it. Streamlit won't run a script in st.markdown, so this empty frame (same
+# origin as the page) adds say.js to the page itself, once. It marks words in my
+# replies only. If nepem.org or the manifest can't be reached, nothing switches on.
+components.html("""<script>
+const doc = window.parent.document;
+if (!doc.getElementById("nepem-say")) {
+  const s = doc.createElement("script");
+  s.id = "nepem-say";
+  s.src = "https://nepem.org/say.js";
+  s.dataset.base = "https://nepem.org/audio/";
+  s.dataset.scope = ".bubble.bot";
+  doc.head.appendChild(s);
+}
+</script>""", height=0)
 
 # --- header FIRST ------------------------------------------------------------
 # This used to sit below the knowledge loading, which meant that on a cold start the
@@ -1637,7 +1664,9 @@ st.markdown('<p class="note">This lesson lives in your browser only. Refreshing 
             'starts a fresh one, so keep the tab open while you learn.</p>',
             unsafe_allow_html=True)
 
-st.markdown(bubble("assistant", WELCOME), unsafe_allow_html=True)
+# The how-to line only while the starters are on screen; after that it points at nothing.
+opening = WELCOME if st.session_state.messages else WELCOME + "\n" + START_HINT
+st.markdown(bubble("assistant", opening), unsafe_allow_html=True)
 
 # Anything above the marker is on screen but past what Nɛpɛm can see. I draw the line
 # rather than let him quietly forget and confuse someone.
