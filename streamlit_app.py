@@ -1406,10 +1406,16 @@ textarea::placeholder,
   color:#9AAAA1 !important;
   -webkit-text-fill-color:#9AAAA1 !important;
 }
-/* the send arrow */
+/* the send arrow. Empty, it is a green arrow on a pale button. Once something is typed,
+   Streamlit fills the button with the theme green, so the arrow must turn white there,
+   or it is green on green and the button reads as a solid block. */
 [data-testid="stChatInput"] button{color:var(--leaf) !important;}
-[data-testid="stChatInput"] button:hover{
+[data-testid="stChatInput"] button:disabled:hover{
   background:rgba(27,107,76,.10) !important;border-radius:50% !important;}
+[data-testid="stChatInput"] button:not(:disabled){
+  background:var(--leaf) !important;color:#FFFFFF !important;border-radius:50% !important;}
+[data-testid="stChatInput"] button:not(:disabled) svg{fill:#FFFFFF !important;color:#FFFFFF !important;}
+[data-testid="stChatInput"] button:not(:disabled):hover{background:var(--forest) !important;}
 
 @media (max-width:640px){
   .block-container{padding-left:.75rem;padding-right:.75rem;}
