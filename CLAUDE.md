@@ -135,6 +135,13 @@ fixing `run_tool_calls` to answer every call it is given.
 **Render runs on 512 MB and sits close to the limit.** Anything that grows the
 corpus or holds more per session needs to be weighed against that.
 
+**The chat's audio loader uses `st.components.v1.html`, which is deprecated.**
+It works on the pinned Streamlit 1.66.0, and Streamlit says it will be removed.
+Before Streamlit is ever upgraded, move the loader to `st.iframe`, and check that
+the frame can still reach the page around it, which is how it adds say.js. If
+`components.v1` is gone, the import at the top of `streamlit_app.py` fails and the
+whole chat stops, not just the audio.
+
 ---
 
 ## Watch out for
