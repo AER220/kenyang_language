@@ -125,3 +125,38 @@ has byó nɛ ánwi. Are both said, or is one a slip?]
 
 [TO CONFIRM: the same speech has seven as tándrámɔt. The speaker file has Tándat nɛ
 amɔt. This is the same question as 6 above, now with a verified file on each side.]
+
+---
+
+## 10. Where Nɛpɛm's answers left the verified forms
+
+Seen on 2026-10-23, running the test questions in CLAUDE.md. The checker passed
+every word here, because each one is in some file. In each case the verified form
+was also in front of him: the verified files travel with every question. The
+passages search brought back with it were mostly book forms, and he went with those.
+
+Two small houses. He said Mandu beket bépay. The speaker file has Mandu ɛkɛt
+bɛ́pay for two small houses (line 1123), and beket bépay for two houses (lines 30,
+590, 1083). He mixed the two.
+
+[TO CONFIRM: after Mandu, does the noun stay singular, as in Mandu ɛkɛt bɛ́pay?
+If that is the rule, it should be written next to beket bépay so the two are not
+mixed again.]
+
+They were not going to school. He said Bá pú rong ekeré-ékáti and left out nyaka.
+The speaker file has bá pú rong nyaka for they were not going (line 677). This is
+a mistake on his side, not a question.
+
+Six and seven. He counted bɛ́tándat for six and tándrámɔt for seven. The speaker
+file's table has Tándat and Tándat nɛ amɔt (lines 1485, 1486).
+    bɛ́tándat is only in kenyang_lexicon_merged_ref.jsonl and
+    kenyang_wordbank_ref.jsonl, both reference. bɛ́tandat is in
+    Numbers_in_Kenyang_core.jsonl.
+    tándrámɔt is in two course files and also in the recorded speeches,
+    kenyang_texts_verified.md. That is question 9 above.
+
+He also wrote one as ɛ́mɔt, as the books do, where the speaker table has Ɛmɔ́t.
+
+[TO CONFIRM: question 6 above says the speaker file has bɛ́tandat and tándrámɔt.
+It no longer does: the table now reads Tándat and Tándat nɛ amɔt. Was that your
+change, and does it answer question 6?]
