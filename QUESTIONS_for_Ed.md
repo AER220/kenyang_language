@@ -216,3 +216,24 @@ the note go beside it as written, or in your own words?]
 
 [TO CONFIRM: is "high", "low", "falling" the way you want tone written for a
 learner, or would you describe it another way?]
+
+---
+
+## 13. The alphabet step
+
+From `knowledge_base/kenyang_verified_speaker.md`, line 1430
+Part: The Kenyang alphabet
+
+The class audit asked for an alphabet step on the Learn page. It now teaches the
+five letters English does not have and the pairs, each with its capital from your
+table. It says nothing about how any letter sounds, and gives no example words.
+
+The file says: "Four are two letters standing for one sound: bh, ch, gb, gh, kp,
+ny." That lists six. The page does not give a number.
+
+[TO CONFIRM: is it six, and should the line read "Six are two letters"?]
+
+[TO CONFIRM: would you give one example word for each of these letters, and a
+short note on how each sounds? The page could then show them, and any example
+word you have recorded could be tapped. Choosing examples myself would mean
+deciding, for instance, whether the ny in Nnyɛ́n is the letter ny or n and y.]
