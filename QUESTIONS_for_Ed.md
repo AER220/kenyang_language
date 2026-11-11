@@ -188,3 +188,31 @@ own recording, or the same word written short?]
 
 [TO CONFIRM: 021_seven.mp3 is listed as tándrámɔt. Does Tándat nɛ amɔt need its own
 recording?]
+
+---
+
+## 12. Five pronunciation notes from the 1998 study
+
+From `knowledge_base/kenyang_tone_ref.md`, "Words, with their pronunciation".
+A published study converted by hand, not checked by a speaker.
+
+The class audit asked for written pronunciation, for people who cannot hear the
+recordings. audio_words.json now takes a "sounds" field beside each recording,
+and the page shows it when the word is tapped. Only notes you write go in. These
+five are the only per-word notes in the study's file, copied as it gives them:
+
+    syɛb        sand            rising then high
+    fa          give way        falling
+    achwi       vehicle, car    high, with a fall-rise on the end   (pl. bachwi)
+    éyú         yesterday       high throughout
+    ɛkɔŋ        love            both parts low
+
+None of the five has a recording yet, so none can show on the page until one is
+made. ɛkɔŋ is the only one also in a verified file (kenyang_verified_speaker.md,
+line 1257).
+
+[TO CONFIRM: is each note right as you say the word? For any you record, should
+the note go beside it as written, or in your own words?]
+
+[TO CONFIRM: is "high", "low", "falling" the way you want tone written for a
+learner, or would you describe it another way?]

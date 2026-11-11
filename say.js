@@ -142,7 +142,7 @@
               dy = Math.max(r.top - y, 0, y - r.bottom),
               d = dx * dx + dy * dy;
         if (d && ctl && !ctl.contains(h.range.startContainer)) continue;
-        if (d < bestD) { bestD = d; best = h.key; }
+        if (d < bestD) { bestD = d; best = h; }
       }
     }
     return best;
@@ -163,9 +163,14 @@
     if (playing && e) failed(playing, `media error ${e.code}${e.message ? ", " + e.message : ""}`);
   });
 
+  /* an entry is a filename, or {file, sounds} when the speaker has written
+     how the word is said */
+  const fileOf = key => typeof manifest[key] === "string" ? manifest[key] : manifest[key].file;
+  const soundsOf = key => typeof manifest[key] === "string" ? "" : manifest[key].sounds || "";
+
   const play = key => {
     playing = key;
-    player.src = BASE + encodeURIComponent(manifest[key]);
+    player.src = BASE + encodeURIComponent(fileOf(key));
     player.currentTime = 0;
     player.play().catch(e => { if (e.name !== "AbortError") failed(key, `${e.name}: ${e.message}`); });
   };
@@ -174,9 +179,19 @@
   document.addEventListener("click", e => {
     if (!manifest || !on || !hits.length) return;
     if (e.target.closest && e.target.closest(SKIP + ",#sound,#sayhint")) return;
-    const key = wordAt(e.clientX, e.clientY, e.target);
-    if (key) play(key);
+    const h = wordAt(e.clientX, e.clientY, e.target);
+    if (h) { play(h.key); note(h); }
   }, true);
+
+  /* after a tap, the line under the builder carries the speaker's note on how
+     that word is said, if he has written one. A word without one puts the line
+     back as it was, so an earlier word's note is never left beside it. */
+  const note = h => {
+    const s = soundsOf(h.key);
+    if (!hint) return;
+    if (s) hint.textContent = `${h.range.toString()}: ${s}`;
+    else show();
+  };
 
   const show = () => {
     if (btn) {
