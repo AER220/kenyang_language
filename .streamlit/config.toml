@@ -11,3 +11,8 @@ textColor = "#243029"
 # keeps the conversation only 2 minutes after that, then starts a fresh one on
 # return, silently. Half an hour, which is what the note under the hero says.
 disconnectedSessionTTL = 1800
+
+[client]
+# No automatic page list in the sidebar. The pages still load by URL: /Teach,
+# /Review (linked from nepem.org) and /Games.
+showSidebarNavigation = false
