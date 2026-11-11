@@ -1679,8 +1679,10 @@ if "pending" not in st.session_state:
     st.session_state.pending = False
 
 # Say this once, up front. A learner who loses twenty minutes without warning doesn't return.
-st.markdown('<p class="note">This lesson lives in your browser only. Refreshing the page '
-            'starts a fresh one, so keep the tab open while you learn.</p>',
+st.markdown('<p class="note">This conversation is kept on our side while you are away, for '
+            'about half an hour. Refreshing the page starts a fresh one. Nɛpɛm does not keep '
+            'a record of it after that. To answer, your messages are sent to OpenAI, which may '
+            'keep them for up to 30 days.</p>',
             unsafe_allow_html=True)
 
 # The how-to line only while the starters are on screen; after that it points at nothing.

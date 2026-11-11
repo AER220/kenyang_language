@@ -4,3 +4,10 @@ primaryColor = "#1B6B4C"
 backgroundColor = "#FAF6EC"
 secondaryBackgroundColor = "#FFFFFF"
 textColor = "#243029"
+
+[server]
+# A conversation lives in the server's memory, tied to the browser's connection.
+# Locking a phone or closing a laptop drops that connection; Streamlit's default
+# keeps the conversation only 2 minutes after that, then starts a fresh one on
+# return, silently. Half an hour, which is what the note under the hero says.
+disconnectedSessionTTL = 1800
