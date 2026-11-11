@@ -28,6 +28,11 @@
   player.preload = "none";
   const btn = document.getElementById("sound");
   const canHighlight = !!(window.CSS && CSS.highlights && window.Highlight);
+  /* without the highlight API the underlines are drawn in a layer of their own,
+     laid over the page and taking no taps, so the page's text is still never
+     wrapped. It hangs off <html>, outside the body the observer watches, above
+     the page's text (z-index 1) and below the floating buttons (55 and up). */
+  let marks = null, drawQueued = false;
 
   try { on = localStorage.getItem("nepem.sound") !== "off"; } catch (e) {}
 
@@ -58,10 +63,37 @@
     return out;
   };
 
+  const draw = () => {
+    drawQueued = false;
+    if (canHighlight) return;
+    if (!marks) {
+      marks = document.createElement("div");
+      marks.setAttribute("aria-hidden", "true");
+      marks.style.cssText = "position:absolute;left:0;top:0;width:0;height:0;"
+        + "pointer-events:none;z-index:2";
+      document.documentElement.appendChild(marks);
+    }
+    marks.textContent = "";
+    for (const h of hits) {
+      if (!h.range.startContainer.isConnected) continue;
+      for (const r of h.range.getClientRects()) {
+        if (!r.width) continue;
+        const u = document.createElement("div");
+        u.style.cssText = `position:absolute;left:${r.left + scrollX}px;`
+          + `top:${r.bottom + scrollY + 1}px;width:${r.width}px;`
+          + "border-bottom:2px dotted var(--place, #96680A)";
+        marks.appendChild(u);
+      }
+    }
+  };
+  const redraw = () => {
+    if (!canHighlight && !drawQueued) { drawQueued = true; requestAnimationFrame(draw); }
+  };
+
   const clear = () => {
     hits = [];
     if (canHighlight) CSS.highlights.delete("nepem-say");
-    document.querySelectorAll(".say").forEach(el => el.classList.remove("say"));
+    else if (marks) marks.textContent = "";
   };
 
   const scan = () => {
@@ -78,13 +110,11 @@
         const r = document.createRange();
         r.setStart(n, a); r.setEnd(n, b);
         hits.push({range: r, key});
-        /* no highlight API: mark the element if the word is all of its text */
-        if (!canHighlight && lookup(n.parentElement.textContent) === key)
-          n.parentElement.classList.add("say");
       }
     }
     if (canHighlight && hits.length)
       CSS.highlights.set("nepem-say", new Highlight(...hits.map(h => h.range)));
+    else draw();
   };
   const later = () => { if (!queued) { queued = true; requestAnimationFrame(scan); } };
 
@@ -136,6 +166,16 @@
       scan();
       new MutationObserver(later).observe(document.body,
         {childList: true, subtree: true, characterData: true});
+      /* the drawn underlines follow the words when anything moves them
+         without changing the text: scrolling, resizing, fonts, animations */
+      if (!canHighlight) {
+        addEventListener("scroll", redraw, {capture: true, passive: true});
+        addEventListener("resize", redraw);
+        document.addEventListener("animationend", redraw, true);
+        document.addEventListener("transitionend", redraw, true);
+        if (window.ResizeObserver) new ResizeObserver(redraw).observe(document.body);
+        if (document.fonts) document.fonts.ready.then(redraw);
+      }
     })
     .catch(() => {});
 })();

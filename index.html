@@ -747,12 +747,10 @@ footer p{margin:0}
 /* ── tap to hear ──────────────────────────────────────────────────
    Recorded words get a gold dotted underline. Where the browser has the
    CSS highlight API the underline is drawn over a range of text, so nothing
-   in the page is wrapped and a redraw cannot strip it. Elsewhere a whole
-   element whose text is one recorded word is marked instead. */
+   in the page is wrapped and a redraw cannot strip it. Elsewhere say.js
+   draws the same underline in a layer of its own over the page. */
 ::highlight(nepem-say){text-decoration:underline dotted var(--place);
   text-decoration-thickness:2px;text-underline-offset:4px}
-.say{text-decoration:underline dotted var(--place);text-decoration-thickness:2px;
-  text-underline-offset:4px;cursor:pointer}
 .nav-r .q[aria-pressed="false"]{opacity:.6}
 </style>
 <script>
