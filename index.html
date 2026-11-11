@@ -186,25 +186,26 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
   background:rgba(6,9,16,.9);border-top:1px solid var(--edge);
   backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
 .tabs button{flex:1;min-width:0;background:none;border:none;color:var(--mute);
-  font-family:inherit;font-size:10.5px;letter-spacing:.02em;cursor:pointer;
-  padding:6px 2px 4px;border-radius:12px;display:flex;flex-direction:column;
+  font-family:inherit;font-size:12px;letter-spacing:.02em;cursor:pointer;
+  padding:8px 2px 6px;border-radius:12px;display:flex;flex-direction:column;
   align-items:center;gap:4px;transition:color .18s}
-.tabs button .ti{font-size:19px;line-height:1}
+.tabs button .ti{font-size:21px;line-height:1}
 .tabs button[aria-current="true"]{color:var(--place)}
 .tabs button:focus-visible{outline:2px solid var(--place);outline-offset:-2px}
 
 /* On a wide screen the switcher is a row of pills under the header rather
    than a bar stuck to the bottom, which is a phone idea. */
 @media (min-width:881px){
-  .tabs{position:static;display:flex;justify-content:flex-start;gap:7px;
+  .tabs{position:static;display:flex;justify-content:flex-start;gap:10px;
     background:none;border:none;backdrop-filter:none;-webkit-backdrop-filter:none;
     padding:2px 0 0;margin:0 0 10px}
-  .tabs button{flex:0 0 auto;flex-direction:row;gap:9px;font-size:14.5px;
-    letter-spacing:0;padding:9px 17px;border:1px solid var(--edge);border-radius:99px}
+  .tabs button{flex:0 0 auto;flex-direction:row;gap:10px;font-size:17px;
+    letter-spacing:0;padding:12px 24px;min-height:48px;border:1px solid var(--edge);
+    border-radius:99px}
   .tabs button:hover{border-color:var(--edge-hi);color:var(--text)}
   .tabs button[aria-current="true"]{border-color:var(--place);
     background:rgba(255,201,77,.1)}
-  .tabs button .ti{font-size:15px}
+  .tabs button .ti{font-size:18px}
 }
 
 @media (max-width:880px){
