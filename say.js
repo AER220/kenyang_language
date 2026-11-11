@@ -152,10 +152,22 @@
   document.addEventListener("pointerdown", e => { touch = e.pointerType !== "mouse"; }, true);
   document.addEventListener("touchstart", () => { touch = true; }, {capture: true, passive: true});
 
+  /* a recording that will not play says so in the console, so a problem on
+     somebody's phone can be found rather than looking like nothing happened.
+     AbortError is only a second tap cutting off the first, so it is not one. */
+  const failed = (key, why) =>
+    console.warn(`Nɛpɛm: the recording of "${key}" (${player.src}) did not play: ${why}`);
+  let playing = null;
+  player.addEventListener("error", () => {
+    const e = player.error;
+    if (playing && e) failed(playing, `media error ${e.code}${e.message ? ", " + e.message : ""}`);
+  });
+
   const play = key => {
+    playing = key;
     player.src = BASE + encodeURIComponent(manifest[key]);
     player.currentTime = 0;
-    player.play().catch(() => {});
+    player.play().catch(e => { if (e.name !== "AbortError") failed(key, `${e.name}: ${e.message}`); });
   };
 
   /* capture, so the word is found before a click redraws the builder */
@@ -213,5 +225,5 @@
         if (document.fonts) document.fonts.ready.then(redraw);
       }
     })
-    .catch(() => {});
+    .catch(e => console.warn(`Nɛpɛm: could not load ${BASE}manifest.json, so no words are marked: ${e}`));
 })();
