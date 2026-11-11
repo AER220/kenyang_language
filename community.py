@@ -80,6 +80,32 @@ def _write_local(rec):
         return False, f"{type(e).__name__}: {e}"
 
 
+def _with_env(secrets):
+    """
+    The storage settings, with Supabase's taken from the environment first.
+
+    Render has no secrets.toml, so there the Supabase settings are environment
+    variables:
+
+        SUPABASE_URL          https://xxxx.supabase.co
+        SUPABASE_KEY          the anon public key, to insert (the Teach page)
+        SUPABASE_SERVICE_KEY  the service role key, to read and mark (Review)
+
+    Any of them set overrides the same setting in [supabase] in secrets.toml.
+    The service key bypasses every policy on the table; on Render it belongs in
+    the environment and nowhere a visitor can reach.
+    """
+    cfg = dict(secrets or {})
+    sup = dict(cfg.get("supabase") or {})
+    for env, name in (("SUPABASE_URL", "url"), ("SUPABASE_KEY", "key"),
+                      ("SUPABASE_SERVICE_KEY", "service_key")):
+        if os.environ.get(env):
+            sup[name] = os.environ[env]
+    if sup.get("url"):
+        cfg["supabase"] = sup
+    return cfg
+
+
 def _write_supabase(rec, cfg):
     """
     Insert one row into a Supabase table over its REST endpoint.
@@ -100,6 +126,8 @@ def _write_supabase(rec, cfg):
     """
     import requests
 
+    if not cfg.get("key"):
+        return False, "database not written: no anon key (SUPABASE_KEY) is set"
     url = cfg["url"].rstrip("/")
     table = cfg.get("table", "submissions")
     r = requests.post(
@@ -206,7 +234,7 @@ def save(rec, secrets=None):
     if not ok:
         notes.append(f"local copy failed ({err})")
 
-    cfg = secrets or {}
+    cfg = _with_env(secrets)
 
     if "supabase" in cfg:
         try:
@@ -307,7 +335,7 @@ def _status_supabase(rec_id, status, cfg):
 
 def load(secrets=None):
     """Read everything back: database first, then sheet, then the local file."""
-    cfg = secrets or {}
+    cfg = _with_env(secrets)
 
     if "supabase" in cfg:
         try:
@@ -345,7 +373,7 @@ def load(secrets=None):
 
 def set_status(rec_id, status, secrets=None):
     """Mark one submission approved or rejected."""
-    cfg = secrets or {}
+    cfg = _with_env(secrets)
 
     if "supabase" in cfg:
         try:
