@@ -140,6 +140,9 @@ body{margin:0;background:var(--base);color:var(--text);font-family:var(--sans);
   background:radial-gradient(640px circle at var(--mx) var(--my),rgba(255,201,77,.10),transparent 60%)}
 
 .wrap{max-width:1160px;margin:0 auto;padding:0 clamp(16px,3vw,32px);position:relative;z-index:1}
+/* room at the end for Nɛpɛm's button (62px, in its corner), so the last line
+   of the page can always be scrolled out from under it */
+.wrap{padding-bottom:calc(62px + clamp(14px,2.4vw,26px) + 16px + env(safe-area-inset-bottom,0px))}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--place);outline-offset:3px;border-radius:6px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
@@ -206,9 +209,15 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
 
 @media (max-width:880px){
   .tabs{display:flex}
-  .wrap{padding-bottom:84px}
+  /* the bar, the button lifted above it, and a gap, plus the phone's own
+     strip at the bottom, which the bar grows by */
+  .wrap{padding-bottom:calc(84px + 62px + 16px + env(safe-area-inset-bottom,0px))}
   /* lift Nɛpɛm clear of the bar */
   .dock{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+  /* The label reaches across most of a phone's width, so it shows only at the
+     top of the page and steps aside once the reader scrolls into the text. */
+  .dock .saylabel{transition:opacity .25s,visibility .25s}
+  .dock.scrolled .saylabel{opacity:0;visibility:hidden;pointer-events:none}
   footer{padding-bottom:20px}
 }
 
@@ -2309,11 +2318,19 @@ function shutPane(){
 const dock = document.querySelector(".dock");
 const PAD = 12;
 
+/* the lowest the button's bottom edge may go: above the bar along the bottom
+   when there is one, otherwise above the bottom of the screen */
+function dockFloor(){
+  const bar = $("tabs");
+  const top = bar && getComputedStyle(bar).position === "fixed"
+    ? bar.getBoundingClientRect().top : innerHeight;
+  return top - PAD - 6;
+}
+
 function placeDock(x, y){
   const w = dock.offsetWidth, h = dock.offsetHeight;
-  const topPad = PAD, botPad = PAD + 6;
   x = Math.max(PAD, Math.min(innerWidth - w - PAD, x));
-  y = Math.max(topPad, Math.min(innerHeight - h - botPad, y));
+  y = Math.max(PAD, Math.min(dockFloor() - h, y));
   dock.style.left = x + "px";
   dock.style.top = y + "px";
   dock.style.right = "auto";
@@ -2383,6 +2400,13 @@ addEventListener("resize", () => {
   if (dock.style.left) restoreDock();
 });
 restoreDock();
+
+/* the label steps aside on a phone once the page is scrolled; see the CSS */
+{
+  const quiet = () => dock.classList.toggle("scrolled", scrollY > 40);
+  addEventListener("scroll", quiet, {passive:true});
+  quiet();
+}
 
 /* ── flick the sheet away on a phone ────────────────────────────────
    Dragging the header down closes it, the way a sheet should. Short drags
@@ -2597,16 +2621,9 @@ document.addEventListener("click", e => {
 addEventListener("hashchange", () => showView(location.hash.slice(1), false));
 showView(location.hash.slice(1) || "learn", false);
 
-/* The place the button was dragged to was saved before there was a bar along
-   the bottom, so an old position can now sit on top of it. */
-{
-  const dock = document.querySelector(".dock");
-  if (innerWidth <= 880 && dock.style.top){
-    const r = dock.getBoundingClientRect();
-    const highest = innerHeight - r.height - 92;
-    if (r.top > highest) placeDock(r.left, highest);
-  }
-}
+/* the bar along the bottom has its buttons now, so it has its real height:
+   place a dragged button again, so it cannot sit on top of the bar */
+if (dock.style.left) restoreDock();
 
 /* ── light and dark ───────────────────────────────────────────────── */
 {
