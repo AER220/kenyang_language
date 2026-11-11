@@ -1426,6 +1426,7 @@ textarea::placeholder,
 /* Tap to hear, as on nepem.org: a gold dotted underline on a recorded word. */
 ::highlight(nepem-say){text-decoration:underline dotted #96680A;
   text-decoration-thickness:2px;text-underline-offset:4px}
+@media (pointer:coarse){ ::highlight(nepem-say){text-decoration-thickness:3px} }
 /* the empty frame that loads it takes no room */
 [data-testid="stElementContainer"]:has(iframe[srcdoc*="nepem-say"]){display:none !important;}
 </style>

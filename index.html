@@ -751,7 +751,14 @@ footer p{margin:0}
    draws the same underline in a layer of its own over the page. */
 ::highlight(nepem-say){text-decoration:underline dotted var(--place);
   text-decoration-thickness:2px;text-underline-offset:4px}
-.nav-r .q[aria-pressed="false"]{opacity:.6}
+/* a finger needs a mark it can see at arm's length */
+@media (pointer:coarse){ ::highlight(nepem-say){text-decoration-thickness:3px} }
+/* Sound off hides every underline and is remembered, so it has to look off,
+   not merely dimmer, or a mis-tap reads as the feature having gone. */
+.nav-r .q[aria-pressed="false"]{color:var(--not);box-shadow:inset 0 0 0 1px var(--not)}
+.sayhint{font-size:14.5px;color:var(--mute);margin:-12px 0 22px}
+.sayhint button{font:inherit;color:var(--place);background:none;border:none;
+  padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 </style>
 <script>
 /* Runs before the page paints, so nobody sees the wrong colours flash first.
@@ -805,6 +812,7 @@ footer p{margin:0}
 
     <p class="built" id="built" aria-live="polite"></p>
     <p class="gloss" id="gloss"></p>
+    <p class="sayhint" id="sayhint" data-nosay hidden></p>
 
     <div class="controls">
       <div class="ctl glass c-who"><p class="ctl-label"><span class="swatch"></span>WHO</p>

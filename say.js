@@ -27,6 +27,10 @@
   const player = new Audio();
   player.preload = "none";
   const btn = document.getElementById("sound");
+  /* the line under the builder that says what the underlines are, or that
+     sound is off and that this is why there are none */
+  const hint = document.getElementById("sayhint");
+  const coarse = window.matchMedia && matchMedia("(pointer: coarse)").matches;
   const canHighlight = !!(window.CSS && CSS.highlights && window.Highlight);
   /* without the highlight API the underlines are drawn in a layer of their own,
      laid over the page and taking no taps, so the page's text is still never
@@ -81,7 +85,7 @@
         const u = document.createElement("div");
         u.style.cssText = `position:absolute;left:${r.left + scrollX}px;`
           + `top:${r.bottom + scrollY + 1}px;width:${r.width}px;`
-          + "border-bottom:2px dotted var(--place, #96680A)";
+          + `border-bottom:${coarse ? 3 : 2}px dotted var(--place, #96680A)`;
         marks.appendChild(u);
       }
     }
@@ -157,22 +161,35 @@
   /* capture, so the word is found before a click redraws the builder */
   document.addEventListener("click", e => {
     if (!manifest || !on || !hits.length) return;
-    if (e.target.closest && e.target.closest(SKIP + ",#sound")) return;
+    if (e.target.closest && e.target.closest(SKIP + ",#sound,#sayhint")) return;
     const key = wordAt(e.clientX, e.clientY, e.target);
     if (key) play(key);
   }, true);
 
   const show = () => {
-    if (!btn) return;
-    btn.textContent = on ? "Sound on" : "Sound off";
-    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    if (btn) {
+      btn.textContent = on ? "Sound on" : "Sound off";
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+    }
+    if (hint) {
+      hint.hidden = false;
+      if (on) hint.textContent = "Tap any underlined word to hear it.";
+      else {
+        hint.textContent = "Sound is off, so no words are underlined. ";
+        const b = document.createElement("button");
+        b.type = "button"; b.textContent = "Turn sound on";
+        b.addEventListener("click", () => setOn(true));
+        hint.appendChild(b);
+      }
+    }
   };
-  if (btn) btn.addEventListener("click", () => {
-    on = !on;
+  const setOn = v => {
+    on = v;
     try { localStorage.setItem("nepem.sound", on ? "on" : "off"); } catch (e) {}
     if (!on) player.pause();
     show(); scan();
-  });
+  };
+  if (btn) btn.addEventListener("click", () => setOn(!on));
 
   fetch(BASE + "manifest.json", {cache: "no-cache"})
     .then(r => r.ok ? r.json() : null)
