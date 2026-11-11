@@ -6,9 +6,12 @@ This page is for me, not for learners. It is behind a password because the
 submissions contain people's names and villages, and because approving a
 correction changes what Nɛpɛm teaches everybody.
 
-Put this in secrets:
+Set the password as the environment variable REVIEW_PASSWORD (Render), or in
+.streamlit/secrets.toml (my Codespace):
 
     review_password = "something only I know"
+
+With neither set, the page says review is not configured and lets nobody in.
 
 Nothing here writes to the verified file automatically. I read, I decide, I
 paste. A community loop that edits the knowledge base on its own would undo the
@@ -17,6 +20,7 @@ one promise this project makes.
 
 import streamlit as st
 import community
+from settings import all_secrets, secret
 
 st.set_page_config(page_title="Review · Nɛpɛm", page_icon="🔍", layout="wide")
 
@@ -30,9 +34,10 @@ st.markdown("""
 
 # ── the gate ─────────────────────────────────────────────────────────────────
 def unlocked():
-    want = st.secrets.get("review_password")
+    want = secret("review_password", env="REVIEW_PASSWORD")
     if not want:
-        st.error("Set review_password in secrets before using this page.")
+        st.error("Review is not configured on this server. Set REVIEW_PASSWORD "
+                 "before using this page.")
         st.caption("Without it anybody could read contributors' names and "
                    "change what Nɛpɛm teaches.")
         return False
@@ -57,7 +62,7 @@ if not unlocked():
 
 st.title("What speakers have sent")
 
-rows, where = community.load(dict(st.secrets))
+rows, where = community.load(all_secrets())
 if not rows:
     st.info("Nothing yet. When somebody corrects Nɛpɛm or teaches it a word, "
             "it lands here.")
@@ -128,11 +133,11 @@ def show(r, allow_decide=True, tab=""):
             yes, nope = st.columns(2)
             if yes.button("Approve", key=f"y{tab}{r['id']}", type="primary",
                           use_container_width=True):
-                community.set_status(r["id"], "approved", dict(st.secrets))
+                community.set_status(r["id"], "approved", all_secrets())
                 st.rerun()
             if nope.button("Set aside", key=f"n{tab}{r['id']}",
                            use_container_width=True):
-                community.set_status(r["id"], "rejected", dict(st.secrets))
+                community.set_status(r["id"], "rejected", all_secrets())
                 st.rerun()
 
 

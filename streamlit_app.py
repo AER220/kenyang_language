@@ -40,6 +40,7 @@ from openai import OpenAI
 # retrieval code has no content words to search on — but the model knows what the
 # sentence is about and can say so. Retrieval stops being a guess.
 import tools
+from settings import secret
 
 # =============================================================================
 # 1. CONFIG
@@ -159,12 +160,8 @@ START_HINT = "Tap one of the options below to begin, or type your own question."
 
 
 def api_key():
-    """Secrets first (Streamlit Cloud), environment second (my Codespace)."""
-    try:
-        key = st.secrets.get("OPENAI_API_KEY", "")
-    except Exception:
-        key = ""
-    return key or os.environ.get("OPENAI_API_KEY", "")
+    """Environment first (Render), secrets.toml second (my Codespace)."""
+    return secret("OPENAI_API_KEY")
 
 
 def rerun():

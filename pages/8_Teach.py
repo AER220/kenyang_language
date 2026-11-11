@@ -19,6 +19,7 @@ import html
 import streamlit as st
 
 import community
+from settings import all_secrets
 
 st.set_page_config(page_title="Teach Nɛpɛm", page_icon="🌿", layout="centered")
 
@@ -109,7 +110,7 @@ if sent:
             question=english, answer=answer, correction=kenyang, note=note,
             speaker=speaker, village=village,
             source="words of the week" if prefill_en else "teach page")
-        durable, notes = community.save(rec, dict(st.secrets))
+        durable, notes = community.save(rec, all_secrets())
 
         if durable:
             st.success(f"Thank you. **{kenyang.strip()}** is written down now. "
