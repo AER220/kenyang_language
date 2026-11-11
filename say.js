@@ -118,16 +118,35 @@
   };
   const later = () => { if (!queued) { queued = true; requestAnimationFrame(scan); } };
 
-  /* which recorded word is under the point, if any */
-  const wordAt = (x, y) => {
+  /* which recorded word is under the point, if any. A finger lands less
+     exactly than a mouse, often on the underline below the word, so a touch
+     is given more room, and the nearest word wins when two are in reach. The
+     extra room never reaches into a button or link the word is not part of,
+     so a tap meant for a builder chip does not speak the sentence above it. */
+  const CONTROL = "button,a,label,summary,[role=button],[onclick]";
+  let touch = false;
+  const wordAt = (x, y, target) => {
+    const ctl = target && target.closest ? target.closest(CONTROL) : null;
+    const side = touch ? 8 : 2, above = touch ? 6 : 2, below = touch ? 12 : 2;
+    let best = null, bestD = Infinity;
     for (const h of hits) {
       if (!h.range.startContainer.isConnected) continue;
-      for (const r of h.range.getClientRects())
-        if (x >= r.left - 2 && x <= r.right + 2 && y >= r.top - 2 && y <= r.bottom + 2)
-          return h.key;
+      for (const r of h.range.getClientRects()) {
+        if (x < r.left - side || x > r.right + side
+            || y < r.top - above || y > r.bottom + below) continue;
+        const dx = Math.max(r.left - x, 0, x - r.right),
+              dy = Math.max(r.top - y, 0, y - r.bottom),
+              d = dx * dx + dy * dy;
+        if (d && ctl && !ctl.contains(h.range.startContainer)) continue;
+        if (d < bestD) { bestD = d; best = h.key; }
+      }
     }
-    return null;
+    return best;
   };
+  /* what pressed last, a finger or a mouse. Older iPhones send no pointer
+     events, so a touchstart counts too. */
+  document.addEventListener("pointerdown", e => { touch = e.pointerType !== "mouse"; }, true);
+  document.addEventListener("touchstart", () => { touch = true; }, {capture: true, passive: true});
 
   const play = key => {
     player.src = BASE + encodeURIComponent(manifest[key]);
@@ -139,7 +158,7 @@
   document.addEventListener("click", e => {
     if (!manifest || !on || !hits.length) return;
     if (e.target.closest && e.target.closest(SKIP + ",#sound")) return;
-    const key = wordAt(e.clientX, e.clientY);
+    const key = wordAt(e.clientX, e.clientY, e.target);
     if (key) play(key);
   }, true);
 
