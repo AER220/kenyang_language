@@ -160,3 +160,31 @@ He also wrote one as ɛ́mɔt, as the books do, where the speaker table has Ɛm�
 [TO CONFIRM: question 6 above says the speaker file has bɛ́tandat and tándrámɔt.
 It no longer does: the table now reads Tándat and Tándat nɛ amɔt. Was that your
 change, and does it answer question 6?]
+
+---
+
+## 11. Which spelling each number recording says
+
+Found on 2026-11-11, from the class audit. A student found that some numbers in
+Nɛpɛm's answers could be tapped to hear them and others could not. The tap only
+works when the word in the answer is spelled exactly as in audio_words.json, tone
+marks included. The recordings were listed under the spellings in
+Numbers_in_Kenyang_core.jsonl, and the speaker file's table spells three numbers
+differently. When Nɛpɛm copies the speaker table, those three cannot be tapped.
+
+                 speaker file         recording listed as
+    one          Ɛmɔ́t                 ɛ́mɔt            015_one.mp3
+    six          Tándat               bɛ́tandat        020_six.mp3
+    seven        Tándat nɛ amɔt       tándrámɔt       021_seven.mp3
+
+The spellings themselves are questions 6, 9 and 10 above. This is only about
+what the recordings say.
+
+[TO CONFIRM: is 015_one.mp3 also a correct way to say Ɛmɔ́t, with the tone where
+the speaker file puts it? If so, Ɛmɔ́t can point at the same recording.]
+
+[TO CONFIRM: 020_six.mp3 is listed as bɛ́tandat. Is Tándat a different word that needs its
+own recording, or the same word written short?]
+
+[TO CONFIRM: 021_seven.mp3 is listed as tándrámɔt. Does Tándat nɛ amɔt need its own
+recording?]

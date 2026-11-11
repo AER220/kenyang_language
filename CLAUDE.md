@@ -104,15 +104,6 @@ means something has started inventing. If it is ever confirmed and added, pick
 a new refusal word and check with grep that it appears nowhere in
 knowledge_base first.
 
-Diagnostics that need no API key:
-
-```bash
-python check.py rules          # which grammar rules are reaching him
-python check.py word <word>    # where a word came from, or that it is invented
-python check.py numbers        # which files disagree about counting
-python audit_corpus.py         # size, duplication, contradictions
-```
-
 ---
 
 ## Things not to change without asking
