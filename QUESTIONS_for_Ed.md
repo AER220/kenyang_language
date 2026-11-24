@@ -351,3 +351,31 @@ Already recorded, for comparison: étá (father), mmá (mother), Ma nsinsi
 (grandmother), nsinsi (senior, older), N-ném wah (my name).
 
 [TO DO: record the five above. The family tree is built after they are in.]
+
+---
+
+## 20. URGENT: "Mma ne eta", the first Kenyang a chat visitor sees
+
+From `streamlit_app.py`, the `WELCOME` line, shown at the top of every chat:
+
+    Mma ne eta, welcome!
+
+The phrase is in no verified file, no other knowledge file and no recording. It
+has been in the code since an early commit. What is confirmed nearby:
+
+    mmá     mother        (verified, recorded)
+    étá     father        (verified, recorded)
+    nɛ      with, and     (verified, line 557)
+
+So it may be "mothers and fathers", a respectful greeting, but that reading is a
+guess built from pieces, which is exactly what Nɛpɛm is told never to do.
+
+Even if the phrase is real, its spelling has lost its marks. The corpus writes
+mmá, étá and nɛ; "Mma ne eta" has no acute on either a, no ɛ, and a plain e
+where nɛ has an open e. It looks like a PDF conversion that dropped the
+diacritics, the same damage as the Greek epsilons found earlier. It came in
+with the commit that converted the PDFs to JSONL.
+
+[TO CONFIRM: is "Mma ne eta" right as a greeting to a visitor? If so, how is it
+spelled, with tone marks (mmá nɛ étá?), and may it be recorded? If not, which
+confirmed greeting should replace it (Mba'aaah is confirmed and recorded)?]
