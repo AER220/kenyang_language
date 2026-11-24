@@ -28,7 +28,7 @@ document.documentElement.dataset.theme=t;}catch(e){document.documentElement.data
   --base:#0D1B15; --lift:rgba(255,255,255,.04); --lift2:rgba(255,255,255,.075);
   --edge:rgba(255,255,255,.09); --edge-hi:rgba(255,255,255,.22);
   --text:#F4F7F5; --mute:#9DB0A6;
-  --who:#42E3BC; --not:#FF6A55; --accent:#F4F7F5; --on-accent:#0D1B15;
+  --who:#42E3BC; --not:#FF6A55; --accent:#F4F7F5; --accent-rgb:244,247,245; --on-accent:#0D1B15;
   --serif:"Gentium Book Plus",Georgia,serif; --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Gentium Book Plus",sans-serif;
   color-scheme:dark;
   box-sizing:border-box;
@@ -39,7 +39,7 @@ document.documentElement.dataset.theme=t;}catch(e){document.documentElement.data
   --base:#FAF9F6; --lift:rgba(16,34,28,.035); --lift2:rgba(16,34,28,.062);
   --edge:rgba(16,34,28,.13); --edge-hi:rgba(16,34,28,.28);
   --text:#15201B; --mute:#56665E;
-  --who:#077A58; --not:#B2351C; --accent:#135C3C; --on-accent:#FAF9F6;
+  --who:#077A58; --not:#B2351C; --accent:#135C3C; --accent-rgb:19,92,60; --on-accent:#FAF9F6;
   color-scheme:light;
 }
 *,*::before,*::after{box-sizing:inherit}
@@ -77,17 +77,15 @@ h1{font-size:clamp(28px,6.6vw,44px);line-height:1.08;
   padding:15px 16px;cursor:pointer;font:inherit;color:inherit;
   transition:transform .2s,border-color .25s,background .25s}
 .g:hover{transform:translateY(-3px);border-color:var(--edge-hi);background:var(--lift2)}
-.g .ic{flex:0 0 44px;height:44px;border-radius:13px;display:flex;align-items:center;
-  justify-content:center;font-size:21px;background:var(--lift2);
-  border:1px solid var(--edge);font-family:var(--serif)}
+/* no icon tiles: like the tab bar's icons they were decoration pretending to
+   be a system. The title says what each game is. */
 .g .t{flex:1;min-width:0}
 .g .t b{display:block;font-size:18.5px;font-weight:700;
   line-height:1.2}
 .g .t span{display:block;font-size:13px;color:var(--mute);margin-top:3px;line-height:1.45}
 .g .sc{flex:none;text-align:right;font-size:12px;color:var(--mute)}
 .g .sc b{display:block;font-size:19px;color:var(--accent)}
-.g.hard .ic{border-color:rgba(255,106,85,.32)}
-.g.done{border-color:rgba(66,227,188,.34)}
+.g.done{border-color:rgba(var(--accent-rgb),.45)}
 
 #play{display:none}
 .bar{display:flex;align-items:center;gap:12px;margin:0 0 18px}
@@ -334,7 +332,6 @@ function drawMenu(){
     const b = P.best[g.id];
     return `<button class="g ${g.hard ? "hard" : ""} ${b === g.n ? "done" : ""}"
         data-g="${g.id}">
-      <span class="ic" aria-hidden="true">${g.ic}</span>
       <span class="t"><b>${g.t}</b><span>${g.d}</span></span>
       <span class="sc">${b !== undefined ? `<b>${b}</b>of ${g.n}` : ""}</span>
     </button>`;
