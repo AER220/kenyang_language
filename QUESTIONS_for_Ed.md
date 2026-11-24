@@ -10,6 +10,38 @@ before it was moved, and the section is the rule it belongs to.
 
 ---
 
+## WAITING TO PUSH (24 November 2026)
+
+Committed, not pushed. The house test failed, so by your rule it waits for you.
+
+What is waiting, in one commit:
+- every file in knowledge_base now carries its tier in its name; dictionary.txt is
+  dictionary_ref.txt
+- the chat's word check now looks at every word that is not English, not only words
+  with ɛ ɔ ŋ or a tone mark, and no longer reads Bheket_e as one word
+- english_words.txt, the English list it uses (about 11 MB of memory on Render)
+- the publish workflow split into build and deploy, with one retry
+- the index, rebuilt once for all of it
+
+Why it waits:
+- Flag: 1 of 20 replies. That passes. The one was "What is the plural of house?",
+  flagged for bɛkɛt as from written sources, which is right.
+- House test: beket 1 time in 5. The other four said bɛkɛt.
+
+Your beket line is not missing. It reaches the model on this question, at the top
+tier, beside the book's "plural: bɛkɛt". The instructions already say a speaker's form
+wins. gpt-4o-mini picks the book's form anyway. Renaming files cannot fix that; it
+needs either the code to hold back a book's form when your file gives a different one
+for the same word, or a stronger model. Your choice.
+
+Also seen: in one house reply the flag marked the English word "pluralization" as not
+found. The English list is the common-words size and that word is not in it. A bigger
+list would fix it, at a little more memory.
+
+Nothing goes live until you say push. Delete this section when it is resolved.
+
+---
+
 ## 1. The person words, standing alone
 
 From `knowledge_base/kenyang_verified_speaker.md`, line 1319
@@ -96,7 +128,7 @@ do not agree with each other.
 [TO CONFIRM: what is 21? The files give three forms:
     ɛsa nsɛm meso ɛ́mɔt     Numbers_in_Kenyang_core.jsonl
     Ɛsa nsɛm ɛ́mɔt          Dictionary_Ch1_ref.txt (EyaLingo)
-    ɛsa nsɛm émot          Context_Rich_Kenyang_Ch1.txt]
+    ɛsa nsɛm émot          Context_Rich_Kenyang_Ch1_core.txt]
 
 [TO CONFIRM: does meso belong in the twenties? Only Numbers_in_Kenyang_core.jsonl
 has it, for every number 21 to 29.]

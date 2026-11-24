@@ -69,6 +69,8 @@ QUESTIONS_for_Ed.md      open questions. MUST NOT go in knowledge_base.
 index.npz                the search vectors, built from knowledge_base
 audio/                   recordings, one file per word, plus manifest.json
 audio_words.json         the canonical word-to-filename list
+english_words.txt        English words (SCOWL), so the chat's word check can tell
+                         English from Kenyang. Not Kenyang: never in knowledge_base.
 ```
 
 **`QUESTIONS_for_Ed.md` must never be moved into `knowledge_base/`.** It holds

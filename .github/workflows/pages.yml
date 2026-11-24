@@ -24,13 +24,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  publish:
+  # Two jobs, as GitHub's own Pages template has it. With upload and deploy in one job,
+  # the deploy step three times on 24 November 2026 could not find the upload made a
+  # moment before ("No artifacts named github-pages"), and the site stayed as it was.
+  # A job boundary means the upload is finished and registered before deploy asks for it.
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Copy only the site's own files
         run: |
@@ -53,9 +54,26 @@ jobs:
 
       - uses: actions/configure-pages@v5
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url || steps.retry.outputs.page_url }}
+    steps:
       - id: deploy
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      # If GitHub still has not registered the upload, wait and ask once more. A
+      # second failure fails the run, so a site that did not update is never green.
+      - if: steps.deploy.outcome == 'failure'
+        run: sleep 30
+
+      - id: retry
+        if: steps.deploy.outcome == 'failure'
         uses: actions/deploy-pages@v4

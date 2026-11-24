@@ -111,15 +111,12 @@ PDF_PAGE_LIMIT = 400
 VERIFIED_FILES = {
     "kenyang_verified_speaker.md",         # the one file a speaker has actually checked
 }
-CORE_FILES = set()                         # unsuffixed .txt/.md default to core anyway
-REFERENCE_FILES = {
-    "kenyang_tone_orthography_1998.txt",
-    "kenyang_hortatory_discourses.txt",
-    "kenyang_discourse.md",
-    "kenyang_noun_rameres.txt",
-    "man_to_his_family_ml_plain_text (1).txt",
-    "gemini-code-1789075633901.md",
-}
+# Every file in knowledge_base now carries its tier in its name (24 November 2026). These
+# lists stay for a file that ever arrives without one, but a new file should be named for
+# its tier instead: a name is visible in the folder, a list here is not. An unmarked file
+# still falls through to core, which is how a book's word list was once read as a chapter.
+CORE_FILES = set()
+REFERENCE_FILES = set()
 EXCLUDE_FILES = {
     # The FULL.md is the proofreading dump of the lexicon — every entry in it is already
     # in kenyang_lexicon_core.jsonl, but messier. Loading both doubles the dictionary and
@@ -137,8 +134,8 @@ EXCLUDE_FILES = {
 # The teaching chapters belong here more than the scholarly files do: a chapter SHOWS the
 # noun phrase built slot by slot, which is the pattern the model copies. Any file whose
 # name contains one of these words is pinned to the spine, so I never have to rename a
-# file to make it work — ch4_Relationship_chategories.txt matches on "relationship",
-# CH_5_prepositions_adjectives_etc.txt on "preposition", and so on.
+# file to make it work — ch4_Relationship_chategories_core.txt matches on "relationship",
+# CH_5_prepositions_adjectives_etc_core.txt on "preposition", and so on.
 #
 # Only the COMPOSITIONAL machinery goes here. The spine rides in every single message, so
 # every character in it is paid for on every turn. Word lists (ch10 opposites, ch12 cheat
@@ -875,7 +872,7 @@ def full_block(signature):
     out = ["===== THE COMPLETE KENYANG MATERIAL — everything I have, nothing held back. "
            "If a word or rule is not in here, it is not something you know. ====="]
     for tier, note in (("verified", "native-speaker verified — outranks everything"),
-                       ("core", "course chapters and dictionary — trusted"),
+                       ("core", "course chapters — trusted"),
                        ("reference", "scholarly — working orthography, tone often "
                                      "inconsistent, never quote its tone as certain")):
         group = [c for c in chunks if c["tier"] == tier]
@@ -894,7 +891,7 @@ def passages_block(found):
            "The trust order still applies. If what you need is not here, say so plainly "
            "rather than inventing it."]
     for tier, note in (("verified", "native-speaker verified — outranks everything"),
-                       ("core", "course chapters and dictionary — trusted"),
+                       ("core", "course chapters — trusted"),
                        ("reference", "scholarly — working orthography, tone often "
                                      "inconsistent, never quote its tone as certain")):
         group = [c for c in found if c["tier"] == tier]
@@ -1320,7 +1317,27 @@ def material(found, always_on=""):
     return re.sub(r"\s+", " ", unicodedata.normalize("NFC", text)).lower()
 
 
-_WORD = re.compile(r"[\w'’\u0300-\u036f]+(?:-[\w'’\u0300-\u036f]+)*", re.UNICODE)
+# A word is letters, tone marks and apostrophes, joined by hyphens. Not underscores:
+# \w counts _ as a letter, so a course line written Bheket_e ebhen held the word
+# "bheket_e" and never "bheket". [^\W_] is \w without the underscore.
+_CH = r"[^\W_]|['’\u0300-\u036f]"
+_WORD = re.compile(rf"(?:{_CH})+(?:-(?:{_CH})+)*", re.UNICODE)
+
+
+def _load_english(path="english_words.txt"):
+    """English words and common names, one per line (see the file's header). Empty if the
+    file is missing, and then the check falls back to words with Kenyang letters only."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            return frozenset(l.strip() for l in f if l.strip() and not l.startswith("#"))
+    except OSError:
+        return frozenset()
+
+
+ENGLISH = _load_english()
+# Names a reply uses that are not Kenyang to check, and not in the English list.
+NOT_TO_CHECK = {"nɛpɛm", "nɛpɛ́m", "nepem", "kenyang", "kɛ́nyāŋ", "bayangi", "manyu",
+                "mamfe", "cameroon", "cameroonian", "cabtal"}
 
 
 def _fold_word(w):
@@ -1329,13 +1346,57 @@ def _fold_word(w):
 
 def _word_set(text):
     """Every word in a text, folded, compared whole. A hyphenated word counts as itself
-    and as its parts, because kenyang_tokens() reads N-ném as ném."""
+    and as its parts, so N-ném in the material confirms ném on its own."""
     out = set()
     for w in _WORD.findall(unicodedata.normalize("NFC", text).lower().replace("’", "'")):
         w = w.strip("'")
         if w:
             out.add(w)
             out.update(p for p in w.split("-") if p)
+    return out
+
+
+def _looks_kenyang(w):
+    """ɛ ɔ ŋ ʉ ɨ or a tone mark: no English word carries one."""
+    return (any(c in "ɛɔŋʉɨ" for c in w.lower())
+            or any(unicodedata.category(c) == "Mn" for c in unicodedata.normalize("NFD", w)))
+
+
+def _is_english(f):
+    """f is folded. English as itself, as a possessive, or as hyphenated English parts."""
+    if f in ENGLISH:
+        return True
+    if f.endswith("'s") and f[:-2] in ENGLISH:
+        return True
+    parts = [p for p in f.split("-") if p]
+    return len(parts) > 1 and all(p in ENGLISH for p in parts)
+
+
+def words_to_check(reply, asked=""):
+    """
+    Every word in a reply that could be Kenyang, in order, once each.
+
+    A word with a Kenyang letter or a tone mark is always checked. Any other word is
+    checked unless it is English, a single letter, a number, one of NOT_TO_CHECK, or a
+    capitalised word the learner wrote (their grandmother's name, say). The old check took
+    only words with Kenyang letters, so a plain-letter word like bheket went unseen.
+    A hyphenated word not confirmed whole is checked part by part, as before.
+    """
+    named = {_fold_word(w) for w in _WORD.findall(unicodedata.normalize("NFC", asked))
+             if w[:1].isupper()}
+    out, seen = [], set()
+    for w in _WORD.findall(unicodedata.normalize("NFC", reply)):
+        w = w.strip("'’")
+        if len(w) > 2 and w[-2] in "'’" and w[-1] in "sS":
+            w = w[:-2]                     # Ojong's mother: the 's is English
+        f = _fold_word(w)
+        if not f or f in seen or f in NOT_TO_CHECK or any(c.isdigit() for c in f):
+            continue
+        seen.add(f)
+        if _looks_kenyang(w):
+            out.append(w)
+        elif ENGLISH and len(f) > 1 and not _is_english(f) and f not in named:
+            out.append(w)
     return out
 
 
@@ -1360,7 +1421,7 @@ def confirmed_words(signature):
     return words
 
 
-def check_words(reply, found, always_on=""):
+def check_words(reply, found, always_on="", asked=""):
     """
     The fabrication detector, by tier. For each Kenyang word in the reply:
 
@@ -1376,12 +1437,17 @@ def check_words(reply, found, always_on=""):
     """
     sure = confirmed_words(kb_signature()) | _word_set(" ".join(speakers_recorded()))
     behind = _word_set(material(found, always_on))
-    nowhere, written = [], []
-    for w in kenyang_tokens(reply):
+    nowhere, written, seen_parts = [], [], set()
+    for w in words_to_check(reply, asked):
         f = _fold_word(w)
         if f in sure:
             continue
-        (written if f in behind else nowhere).append(w)
+        for part in ([w] if "-" not in w else [p for p in w.split("-") if p]):
+            g = _fold_word(part)
+            if g in sure or g in seen_parts:
+                continue
+            seen_parts.add(g)
+            (written if g in behind else nowhere).append(part)
     return nowhere, written
 
 
@@ -2109,7 +2175,7 @@ if st.session_state.pending:
                 # Check every Kenyang word against what a speaker has confirmed, and say
                 # where any unconfirmed one came from. Code, not an instruction: the model
                 # is also told to say when a form is unconfirmed, and once did not.
-                flag = flag_html(*check_words(reply, found, always_on))
+                flag = flag_html(*check_words(reply, found, always_on, last_user))
                 if flag:
                     st.markdown(flag, unsafe_allow_html=True)
             else:

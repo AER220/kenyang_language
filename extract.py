@@ -4,7 +4,7 @@ wanted = {"vt", "vi", "v", "inf", "adv", "conj", "prep", "adj", "pron",
           "subj. pron.", "subj. pron", "det", "neg"}
 seen, out = set(), []
 
-for line in open("knowledge_base/dictionary.txt", encoding="utf-8"):
+for line in open("knowledge_base/dictionary_ref.txt", encoding="utf-8"):
     line = line.strip()
     if not line:
         continue

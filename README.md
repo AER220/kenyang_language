@@ -27,7 +27,7 @@ along with the grammar rules. The model teaches only from what it is given.
 - **Knowledge base** (`knowledge_base/`) — dictionaries, a grammar guide, phonology,
   numbers, and teaching chapters, as `.txt`, `.md` and `.jsonl` files.
 - **Trust tiers** — material is ranked *verified* (checked by a native speaker) >
-  *core* (course chapters, dictionary) > *reference* (scholarly). Higher tiers win when
+  *core* (course chapters) > *reference* (scholarly). Higher tiers win when
   sources disagree. A file's tier comes from a `_verified` / `_core` / `_ref` marker in
   its name, or from the lists near the top of `streamlit_app.py`.
 - **Grammar spine** — the chapters that teach sentence structure (possessives, adjectives,
