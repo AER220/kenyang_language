@@ -89,7 +89,6 @@
 [data-theme="light"] .nav-r .q:hover,
 [data-theme="light"] .stButton>button:hover{background:rgba(16,34,28,.06)}
 [data-theme="light"] .bubble.bot,
-[data-theme="light"] .wcard,
 [data-theme="light"] .hcard{background:#FFFDF8}
 [data-theme="light"] .greet,
 [data-theme="light"] .saylabel,
@@ -279,10 +278,8 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
 .hsub{font-size:clamp(16px,1.9vw,19px);color:var(--mute);max-width:38em;
   margin:0 0 18px;line-height:1.62}
 .hsub b{color:var(--text);font-weight:500}
-.hproof{display:inline-flex;align-items:center;gap:9px;font-size:13px;
-  color:var(--mute);margin:0 0 30px;padding:7px 15px;border-radius:99px;
-  border:1px solid var(--edge);background:var(--lift)}
-.hproof i{width:7px;height:7px;border-radius:99px;background:var(--accent);flex:none}
+/* the award, as a plain line: the Kenyang is the loudest thing on the page */
+.hproof{font-size:13.5px;color:var(--mute);margin:-6px 0 30px}
 .toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,16px);
   z-index:80;padding:12px 20px;border-radius:99px;font-size:14.5px;
   background:var(--lift2);border:1px solid var(--edge-hi);color:var(--text);
@@ -334,6 +331,9 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
 /* ── sections ─────────────────────────────────────────────────── */
 .rule{border:none;border-top:1px solid var(--edge);margin:42px 0 0}
 .sec{padding:40px 0}
+/* buildViews() drops the old <hr> dividers, so sections that share a view are
+   separated by one rule and space, the same everywhere */
+.view > .sec + .sec{border-top:1px solid var(--line)}
 h2.big{font-family:var(--serif);font-size:clamp(25px,3.3vw,39px);line-height:1.22;
   font-weight:700;margin:0 0 12px;max-width:27em}
 h2.big b,h2.big em{color:var(--head);font-style:normal}
@@ -358,7 +358,7 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .tag.fam{color:var(--p2);border-color:rgba(255,158,207,.35)}
 .tag.solo{color:var(--who);border-color:rgba(66,227,188,.32)}
 
-.stage{margin-top:16px;padding:clamp(16px,3vw,28px);min-height:340px}
+.stage{margin-top:22px;padding:clamp(18px,3vw,28px) 0 0;border-top:1px solid var(--line);min-height:340px}
 .shead{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;
   flex-wrap:wrap;margin:0 0 18px}
 .shead h3{font-family:var(--serif);font-size:24px;margin:0 0 4px}
@@ -449,21 +449,20 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
   transition:transform .22s,border-color .28s,background .28s}
 .step:hover{transform:translateY(-3px);border-color:var(--edge-hi);background:var(--lift2)}
 .step[aria-selected="true"]{border-color:var(--accent);background:var(--lift2)}
-.step.done{border-color:rgba(66,227,188,.4)}
-.step .sn{font-size:10.5px;letter-spacing:.13em;color:var(--mute);margin:0 0 6px}
+.step.done{border-color:rgba(var(--accent-rgb),.45)}
+.step .sn{font-size:12.5px;color:var(--mute);margin:0 0 4px}
 .step h4{font-family:var(--serif);font-size:17px;font-weight:700;margin:0;line-height:1.25}
 .tick{position:absolute;top:11px;right:11px;width:18px;height:18px;border-radius:99px;
   background:var(--accent);display:none;align-items:center;justify-content:center;
   color:var(--on-accent);font-size:11px;font-weight:700}
 .step.done .tick{display:flex}
 .wordlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
-.wcard{padding:15px 16px;border-radius:14px;background:var(--lift2);border:1px solid var(--edge)}
+.wcard{padding:12px 0 10px;border-top:1px solid var(--line)}
 .wcard .kk{font-family:var(--serif);font-size:24px;color:var(--text);line-height:1.2;margin:0 0 3px}
 .wcard .ee{font-size:14px;margin:0 0 5px}
 .wcard .nn{font-size:12.5px;color:var(--mute);margin:0;line-height:1.45}
-.mission{display:flex;align-items:flex-start;gap:12px;max-width:40em;margin:20px auto 0;
-  padding:15px 18px;border-radius:15px;background:rgba(255,158,207,.08);
-  border:1px solid rgba(255,158,207,.26);text-align:left}
+.mission{display:flex;align-items:flex-start;gap:12px;max-width:40em;margin:22px auto 0;
+  padding:4px 0 4px 16px;border-left:3px solid var(--p2);text-align:left}
 .mission .mi{font-size:21px;line-height:1;flex:none;margin-top:1px}
 .mission .mt{font-size:15.5px;line-height:1.55}
 .mission .mt b{color:var(--p2)}
@@ -635,7 +634,7 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .num .d{display:block;font-family:var(--serif);font-size:28px;line-height:1;margin-bottom:4px}
 .num .kx{display:block;font-family:var(--serif);font-size:17px;color:var(--text);line-height:1.2}
 .num.on{border-color:var(--accent);background:rgba(var(--accent-rgb),.13)}
-.plural{margin-top:14px;padding:22px;text-align:center}
+.plural{margin-top:22px;padding:24px 0 4px;text-align:center;border-top:1px solid var(--line)}
 .plural .row{font-family:var(--serif);font-size:clamp(24px,3.8vw,42px);line-height:1.3;margin:0 0 8px}
 .plural .row .n1,.plural .row .n2{color:var(--text)}
 .plural .en{color:var(--mute);font-size:15px;margin:0}
@@ -872,8 +871,8 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
       people of Southwest Cameroon. Much of what Nɛpɛm knows comes from old books and
       articles, and a native speaker is checking it word by word, and <b>when Nɛpɛm
       does not know something, he says so.</b></p>
-    <p class="hproof"><i aria-hidden="true"></i>2nd place, Syracuse University
-      Libraries LaunchPad Ideas Fest 2026</p>
+    <p class="hproof">2nd place, Syracuse University Libraries LaunchPad Ideas
+      Fest 2026</p>
 
     <p class="hlead"><b>A Kenyang sentence is built from parts, in a fixed order.</b>
       Change who, when, whether it happened, or where, and watch it rebuild. If you
@@ -927,7 +926,7 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
     <p class="lead">Each one ends with something to go and say to a person. That last
       part is the point, whether you are nine or thirty nine.</p>
     <div class="path" id="pathGrid" role="tablist" aria-label="Steps"></div>
-    <div class="stage glass" id="lesson" role="tabpanel" aria-live="polite"></div>
+    <div class="stage" id="lesson" role="tabpanel" aria-live="polite"></div>
   </section>
 
   <hr class="rule">
@@ -1206,7 +1205,7 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
       the thing itself changes shape. This is the part that surprises people who
       thought they already knew the language.</p>
     <div class="numgrid" id="numgrid" role="group" aria-label="Numbers one to ten"></div>
-    <div class="plural glass">
+    <div class="plural">
       <p class="row" id="plRow"></p>
       <p class="en" id="plEn"></p>
       <div class="pchoose" id="plThings" role="group" aria-label="Pick a thing"></div>
@@ -2035,7 +2034,7 @@ function paintPath(){
   $("pathGrid").innerHTML = STEPS.map((s,i)=>
     `<button class="step ${S.done[s.id]>=2?"done":""}" data-step="${i}" role="tab"
       aria-selected="${L.step===i}"><span class="tick" aria-hidden="true">✓</span>
-      <p class="sn">${s.n.toUpperCase()}</p><h4>${s.title}</h4></button>`).join("");
+      <p class="sn">${s.n}</p><h4>${s.title}</h4></button>`).join("");
   document.querySelectorAll(".step").forEach(c=>
     c.addEventListener("click",()=>{L.step=+c.dataset.step; L.phase="learn"; renderL();}));
 }
