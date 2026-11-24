@@ -279,3 +279,31 @@ Nothing has been moved. The section is yours to sort.
 [TO CONFIRM: should this section move out of the verified file, into a `_ref`
 file or here, until each word is confirmed? And for each word you do confirm,
 which spelling should Nɛpɛm teach first, yours or the book's?]
+
+---
+
+## 16. How the five letters sound, in the alphabet game
+
+From `games.html`, the LETTERS list (the "which word has this letter" game)
+
+The game describes each letter's sound in English terms. None of these is in a
+verified file; they were written for the game and no speaker has checked them.
+Nɛpɛm himself is told never to describe a sound by an English likeness, so these
+are the only place on the site that does.
+
+    ɛ   the open e, as in bed
+    ɔ   the open o, as in thought      (being replaced: see below)
+    ŋ   the sound at the end of sing
+    ɨ   said further back than i
+    ʉ   said with rounded lips
+
+"as in thought" is being replaced: many American speakers say the vowel of
+"thought" the same as the one in "lot", so it points a large part of the
+audience at the wrong sound. The replacement is waiting for your confirmation.
+
+[TO CONFIRM: say each of the other four aloud against its description. Is each
+one right for Kenyang as you say it?]
+
+[TO CONFIRM: record the five letters, ɛ ɔ ŋ ɨ ʉ, each said on its own or in one
+example word you choose, so the game can play the sound instead of describing
+it. Which example word for each, if any, is yours to pick.]
