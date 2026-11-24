@@ -379,3 +379,21 @@ with the commit that converted the PDFs to JSONL.
 [TO CONFIRM: is "Mma ne eta" right as a greeting to a visitor? If so, how is it
 spelled, with tone marks (mmá nɛ étá?), and may it be recorded? If not, which
 confirmed greeting should replace it (Mba'aaah is confirmed and recorded)?]
+
+---
+
+## 21. Marks that appear where they do not belong, and vanish where they do
+
+Two cases found on 24 November 2026, going in opposite directions:
+
+- **A mark added.** The book files write ɛsyɛ́ (market) with an acute. Ed's speech,
+  and all five verified sentences, say ɛsyɛ with none. The acute form is not
+  confirmed; it went out with the book list.
+- **Marks lost.** "Mma ne eta" in the chat's welcome has none, where the corpus
+  writes mmá, étá and nɛ (section 20). It looks like a PDF conversion dropped them,
+  the same damage as the Greek epsilons found earlier.
+
+[ONE DAY: sweep the book files (_ref and _core) for both kinds: tone marks the
+speaker does not use, and words whose marks look stripped. Not urgent while those
+files stay at reference tier, but worth doing before any of their words is
+promoted to verified.]
