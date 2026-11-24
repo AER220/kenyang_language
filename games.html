@@ -20,12 +20,15 @@ document.documentElement.dataset.theme=t;}catch(e){document.documentElement.data
 </script>
 <style>
 /* The same palette as the rest of the site, so this does not read as a page
-   from somewhere else. Both themes, switched the same way. */
+   from somewhere else. Both themes, switched the same way. Bright colour is
+   reserved for meaning, as on index.html: here that is right (--who) and
+   wrong (--not). There is no sound on this page, so no --sound either.
+   Everything else is --accent: ink, and the logo's green on paper. */
 :root{
-  --base:#060910; --lift:rgba(255,255,255,.04); --lift2:rgba(255,255,255,.075);
+  --base:#0D1B15; --lift:rgba(255,255,255,.04); --lift2:rgba(255,255,255,.075);
   --edge:rgba(255,255,255,.09); --edge-hi:rgba(255,255,255,.22);
-  --text:#EEF2F7; --mute:#8494A4;
-  --who:#42E3BC; --not:#FF6A55; --gold:#FFC94D; --onGold:#06090F;
+  --text:#F4F7F5; --mute:#9DB0A6;
+  --who:#42E3BC; --not:#FF6A55; --accent:#F4F7F5; --on-accent:#0D1B15;
   --serif:"Gentium Book Plus",Georgia,serif; --sans:"Archivo",system-ui,sans-serif;
   color-scheme:dark;
   box-sizing:border-box;
@@ -33,10 +36,10 @@ document.documentElement.dataset.theme=t;}catch(e){document.documentElement.data
   padding-bottom:env(safe-area-inset-bottom,0px);
 }
 :root[data-theme="light"]{
-  --base:#FAF7F0; --lift:rgba(16,34,28,.035); --lift2:rgba(16,34,28,.062);
+  --base:#FAF9F6; --lift:rgba(16,34,28,.035); --lift2:rgba(16,34,28,.062);
   --edge:rgba(16,34,28,.13); --edge-hi:rgba(16,34,28,.28);
   --text:#15201B; --mute:#56665E;
-  --who:#077A58; --not:#B2351C; --gold:#E8A61B; --onGold:#1A1206;
+  --who:#077A58; --not:#B2351C; --accent:#135C3C; --on-accent:#FAF9F6;
   color-scheme:light;
 }
 *,*::before,*::after{box-sizing:inherit}
@@ -44,7 +47,7 @@ body{margin:0;background:var(--base);color:var(--text);font-family:var(--sans);
   font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 .wrap{max-width:620px;margin:0 auto;padding:14px 16px 46px}
 a{color:inherit}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:8px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
 
 nav{display:flex;align-items:center;justify-content:space-between;gap:10px;
   padding:10px 0 20px}
@@ -53,7 +56,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:10px;
 .home:hover{color:var(--text);background:var(--lift2)}
 .modesw{width:36px;height:36px;border-radius:99px;border:1px solid var(--edge);
   background:none;color:var(--mute);cursor:pointer;font-size:15px;font-family:inherit}
-.modesw:hover{color:var(--gold);border-color:var(--edge-hi)}
+.modesw:hover{color:var(--accent);border-color:var(--edge-hi)}
 /* on paper the bare outline all but vanished, as on the main page */
 [data-theme="light"] .modesw:not(:hover){color:var(--text);background:var(--lift2);
   border-color:var(--edge-hi)}
@@ -66,7 +69,7 @@ h1{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.08;
 .streak{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;
   color:var(--mute);margin:10px 0 22px;padding:7px 15px;border-radius:99px;
   border:1px solid var(--edge);background:var(--lift)}
-.streak b{color:var(--gold);font-family:var(--serif);font-size:1.15em}
+.streak b{color:var(--accent);font-family:var(--serif);font-size:1.15em}
 
 .grid{display:grid;gap:11px}
 .g{display:flex;align-items:center;gap:14px;width:100%;text-align:left;
@@ -82,23 +85,23 @@ h1{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.08;
   line-height:1.2}
 .g .t span{display:block;font-size:13px;color:var(--mute);margin-top:3px;line-height:1.45}
 .g .sc{flex:none;text-align:right;font-size:12px;color:var(--mute)}
-.g .sc b{display:block;font-family:var(--serif);font-size:19px;color:var(--gold)}
+.g .sc b{display:block;font-family:var(--serif);font-size:19px;color:var(--accent)}
 .g.hard .ic{border-color:rgba(255,106,85,.32)}
 .g.done{border-color:rgba(66,227,188,.34)}
 
 #play{display:none}
 .bar{display:flex;align-items:center;gap:12px;margin:0 0 18px}
-.back{background:none;border:0;font:inherit;color:var(--gold);cursor:pointer;
+.back{background:none;border:0;font:inherit;color:var(--accent);cursor:pointer;
   padding:6px 2px;font-weight:500}
 .track{flex:1;height:6px;background:var(--lift2);border-radius:99px;overflow:hidden}
-.fill{height:100%;width:0;background:linear-gradient(90deg,var(--who),var(--gold));
+.fill{height:100%;width:0;background:var(--accent);
   border-radius:99px;transition:width .35s}
-.pts{font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums}
+.pts{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
 
 .ask{text-align:center;margin:20px 0 18px}
 .ask .lead{font-size:13.5px;color:var(--mute);margin:0 0 10px;letter-spacing:.03em}
 .ask .big{font-family:var(--serif);font-size:clamp(34px,8.5vw,54px);line-height:1.1;
-  color:var(--gold);font-weight:700;word-break:break-word}
+  color:var(--text);font-weight:700;word-break:break-word}
 .ask .big.en{font-family:var(--sans);font-size:clamp(20px,4.6vw,27px);
   font-weight:600;color:var(--text)}
 
@@ -106,7 +109,7 @@ h1{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.08;
 .o{width:100%;background:var(--lift);border:1.5px solid var(--edge);border-radius:14px;
   padding:16px 14px;font:inherit;font-size:1.03rem;cursor:pointer;color:inherit;
   text-align:center;min-height:60px;transition:border-color .15s,transform .15s}
-.o:hover:not(:disabled){border-color:var(--gold);transform:translateY(-2px)}
+.o:hover:not(:disabled){border-color:var(--accent);transform:translateY(-2px)}
 .o:disabled{cursor:default}
 .o.kny{font-family:var(--serif);font-size:1.3rem;font-weight:700}
 .o .gl{display:block;font-family:var(--sans);font-size:12.5px;font-weight:400;
@@ -123,8 +126,8 @@ h1{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.08;
   font-size:13px;line-height:1.2;text-align:center;word-break:break-word;
   transition:border-color .18s,background .18s,color .18s}
 .c:hover:not(:disabled){border-color:var(--edge-hi)}
-.c.up{color:var(--text);background:var(--lift2);border-color:var(--gold)}
-.c.up.kny{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--gold)}
+.c.up{color:var(--text);background:var(--lift2);border-color:var(--accent)}
+.c.up.kny{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--text)}
 .c.gone{opacity:.28;border-color:var(--who);color:var(--who);cursor:default}
 @media (max-width:420px){ .cards{gap:6px} .c{font-size:11.5px} .c.up.kny{font-size:14px} }
 
@@ -137,7 +140,7 @@ h1{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.08;
   background:var(--lift2);color:var(--text);font-weight:700}
 .chip:disabled{opacity:.25;cursor:default}
 .pool{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-.go{width:100%;margin-top:14px;background:var(--gold);color:var(--onGold);border:0;
+.go{width:100%;margin-top:14px;background:var(--accent);color:var(--on-accent);border:0;
   border-radius:14px;padding:15px;font:inherit;font-size:1.02rem;font-weight:600;
   cursor:pointer}
 .go:disabled{opacity:.35;cursor:default}
@@ -152,12 +155,12 @@ h1{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.08;
 .why b{font-family:var(--serif);font-size:1.1em}
 .why .rule{display:block;margin-top:9px;padding-top:9px;
   border-top:1px solid var(--edge);color:var(--mute);font-size:13.8px}
-.next{width:100%;margin-top:12px;background:var(--gold);color:var(--onGold);border:0;
+.next{width:100%;margin-top:12px;background:var(--accent);color:var(--on-accent);border:0;
   border-radius:14px;padding:15px;font:inherit;font-size:1.02rem;font-weight:600;
   cursor:pointer;display:none}
 
 #end{display:none;text-align:center;padding:26px 0}
-#end .n{font-family:var(--serif);font-size:58px;color:var(--gold);margin:0;line-height:1}
+#end .n{font-family:var(--serif);font-size:58px;color:var(--accent);margin:0;line-height:1}
 #end .w{font-family:var(--serif);font-size:26px;margin:14px 0 4px}
 #end p.sm{color:var(--mute);margin:0 0 22px}
 #end button{width:100%;margin-bottom:10px}

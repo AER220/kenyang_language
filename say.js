@@ -98,7 +98,7 @@
         const u = document.createElement("div");
         u.style.cssText = `position:absolute;left:${r.left + scrollX}px;`
           + `top:${r.bottom + scrollY + 1}px;width:${r.width}px;`
-          + `border-bottom:${coarse ? 3 : 2}px dotted var(--place, #96680A)`;
+          + `border-bottom:${coarse ? 3 : 2}px dotted var(--sound, #9A5D1D)`;
         marks.appendChild(u);
       }
     }
@@ -284,8 +284,8 @@
       tip.style.cssText = "position:fixed;z-index:50;pointer-events:none;"
         + "max-width:min(260px,calc(100vw - 32px));padding:7px 11px;border-radius:10px;"
         + "font:500 14px/1.35 var(--sans,system-ui,sans-serif);"
-        + "color:var(--place,#96680A);background:var(--base,var(--paper,#FFFFFF));"
-        + "border:1.5px solid var(--place,#96680A);box-shadow:0 4px 16px rgba(0,0,0,.18)";
+        + "color:var(--sound,#9A5D1D);background:var(--base,var(--paper,#FFFFFF));"
+        + "border:1.5px solid var(--sound,#9A5D1D);box-shadow:0 4px 16px rgba(0,0,0,.18)";
       const point = document.createElement("div");
       point.style.cssText = "position:absolute;width:9px;height:9px;transform:rotate(45deg);"
         + "background:inherit;border:inherit;border-width:0 1.5px 1.5px 0";

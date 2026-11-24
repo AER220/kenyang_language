@@ -109,6 +109,21 @@ knowledge_base first.
 
 ---
 
+## Colour means something
+
+**Bright colour is reserved for meaning.** The grammar colours (`--who`, `--not`,
+`--root`, `--when`, `--where`) and `--sound` own it; everything structural is
+`--accent`, `--head`, `--line` or `--mute`, which are ink and the logo's green.
+`--sound` is the only warm colour on the site and means one thing: this word has
+a recording, tap it. Do not give any other element a warm colour, and do not make
+the dotted underline thinner than it is.
+
+**One deliberate exception: right and wrong.** Quiz answers use `--who`'s green for
+right and `--not`'s red for wrong. That borrows grammar colours, which the rule
+forbids, and it is kept on purpose: green for right and red for wrong is understood
+everywhere without being taught, and a learner checking an answer should not have to
+learn a new code. Do not "fix" it.
+
 ## Things not to change without asking
 
 **`requirements.txt` is pinned deliberately.** Streamlit is pinned to an exact
