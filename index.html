@@ -222,8 +222,6 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
   /* the bar, the button lifted above it, and a gap, plus the phone's own
      strip at the bottom, which the bar grows by */
   .wrap{padding-bottom:calc(84px + 62px + 16px + env(safe-area-inset-bottom,0px))}
-  /* lift Nɛpɛm clear of the bar */
-  .dock{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
   /* The label reaches across most of a phone's width, so it shows only at the
      top of the page and steps aside once the reader scrolls into the text. */
   .dock .saylabel{transition:opacity .25s,visibility .25s}
@@ -655,6 +653,12 @@ h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
   bottom:calc(clamp(14px,2.4vw,26px) + env(safe-area-inset-bottom,0px));
   z-index:60;display:flex;align-items:flex-end;gap:12px;flex-direction:row-reverse;
   touch-action:none}
+/* On a phone, lift Nɛpɛm clear of the bar along the bottom. This has to come
+   after the rule above: it used to sit earlier in the file, the rule above won,
+   and the button sat on top of the About tab. */
+@media (max-width:880px){
+  .dock{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+}
 /* dragged to the left half, so the greeting opens the other way */
 .dock.left{flex-direction:row}
 .dock.moving{transition:none}
