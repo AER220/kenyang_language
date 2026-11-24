@@ -1,0 +1,57 @@
+# Publish nepem.org with only the site's own files.
+#
+# Pages used to publish the whole branch, so the knowledge base, QUESTIONS_for_Ed.md,
+# CLAUDE.md, the Python files and index.npz could all be downloaded from nepem.org.
+# This copies an explicit list into _site and publishes that alone. Nothing in the
+# repo moves: Render still reads knowledge_base/ and index.npz where they are.
+#
+# Needs Settings -> Pages -> Source: "GitHub Actions". A file the site needs that is
+# not listed here is not served. Add it below.
+name: Publish nepem.org
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Copy only the site's own files
+        run: |
+          set -euo pipefail
+          mkdir _site
+          # Required: a missing one stops the publish, so the site is never
+          # replaced by a version without it.
+          cp index.html games.html say.js audio_words.json CNAME ed-portrait.jpg _site/
+          cp -r audio _site/audio
+          test -f _site/audio/manifest.json
+          # Optional: published once the file exists.
+          for f in share.png; do
+            if [ -f "$f" ]; then cp "$f" _site/; else echo "not yet in the repo: $f"; fi
+          done
+          echo "Publishing:"; find _site -maxdepth 1 | sort; echo "audio files: $(ls _site/audio | wc -l)"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4

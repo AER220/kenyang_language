@@ -118,6 +118,13 @@ failed to connect.
 
 **`CNAME` contains `nepem.org`.** Deleting it breaks the custom domain.
 
+**nepem.org publishes only a list of files.** `.github/workflows/pages.yml` copies
+index.html, games.html, say.js, audio_words.json, CNAME, ed-portrait.jpg and audio/
+(plus share.png once it exists) and publishes those alone, so the knowledge base,
+QUESTIONS_for_Ed.md, this file and the Python files are not downloadable. A new file
+the site needs (a page, an image, a script) must be added to that list, or it will
+not be served. Nothing else moves: Render reads the repo as it is.
+
 **Tools are offered but `tool_choice` is `"none"`.** The tool round was making
 two full API calls per question and crashing when the model asked for several
 lookups at once. Retrieval was fixed instead. Do not turn it back on without
