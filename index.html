@@ -164,8 +164,10 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
 .mk-heart{fill:var(--head)} .mk-leaf{fill:#DC9246}
 .wordmark{display:block;height:27px;width:auto;align-self:flex-start;color:var(--head)}
 @media (max-width:880px){ .mark{height:32px} .wordmark{height:23px} }
-.brand small{display:block;font-family:var(--sans);font-size:12.5px;font-weight:400;
-  color:var(--mute)}
+/* the tagline is hidden at every width now: the opening word means home and
+   the line under it says home, and a third "home" in one screen weakens them.
+   The headline below still names the language. */
+.brand small{display:none}
 .nav-r{display:flex;align-items:center;gap:3px;flex-wrap:wrap}
 .nav-r .q{text-decoration:none;color:var(--mute);font-size:14.5px;padding:8px 12px;
   border-radius:99px;transition:color .2s,background .2s;cursor:pointer;
@@ -188,9 +190,11 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
    because it is the point; with its meaning straight underneath, because a
    word with no meaning is a riddle. Its dotted underline is the same one every
    recorded word gets, a little thicker at this size. */
-.first{padding:clamp(18px,5vw,56px) 0 clamp(26px,5vw,52px);margin:0 0 clamp(22px,4vw,40px);
+/* the extra 40px above is where say.js's first-visit label sits, so it does
+   not cover the logo or the tabs */
+.first{padding:calc(clamp(18px,5vw,56px) + 40px) 0 clamp(26px,5vw,52px);margin:0 0 clamp(22px,4vw,40px);
   border-bottom:1px solid var(--line)}
-.fword{font-family:var(--serif);font-size:clamp(64px,15vw,168px);line-height:.95;
+.fword{font-family:var(--serif);font-size:clamp(120px,15vw,168px);line-height:.95;
   font-weight:400;letter-spacing:-.02em;margin:0;color:var(--text);
   text-underline-offset:.12em}
 .fmean{font-size:clamp(18px,2.4vw,24px);color:var(--mute);margin:.5em 0 0}
@@ -874,8 +878,8 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
          it in the manifest), so the first thing a visitor learns is how the
          whole site works. lang="ken" is the ISO 639-3 code for Kenyang. -->
     <div class="first">
-      <p class="fword" lang="ken">Mba'aaah</p>
-      <p class="fmean">hello</p>
+      <p class="fword" lang="ken">ɛkɛt</p>
+      <p class="fmean">home</p>
       <p class="fline">That is me saying it, the way I learned it at home. Every voice
         here is a real speaker, never a machine.</p>
       <p class="sayhint" id="sayhint" data-nosay aria-live="polite" hidden></p>
