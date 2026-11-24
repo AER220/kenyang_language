@@ -20,6 +20,10 @@ The shape (the SQL is in Supabase; see the Job 2 notes):
         manifest.json        folded spelling -> "<id>.wav", for say.js
         recorded_words.json  [{kenyang, english, voices}], text only, for the
                              Teach form's list. No file names, nothing pending.
+        contributors.json    [{speaker, village, taught}], one per named person
+                             with approved recordings, for the wall. The wall
+                             adds these to the text contributors from the
+                             `contributors` view, matching on tidy_name().
 
 Nothing reaches a learner until approve() runs, and approve() runs only from
 the Approve button, which the review page shows only after Ed has pressed
@@ -265,9 +269,50 @@ def public_files(word_rows, approved_rows):
     return manifest, listed
 
 
+def tidy_name(text):
+    """
+    How the wall decides two typed names are the same: capitals, spacing at the ends
+    and in between, the Unicode form of a letter, and curly or straight apostrophes
+    do not matter. Nothing looser. "Ed" and "Agbor Edouard" stay two people: one
+    person shown twice is a mistake Ed can see and fix, two people merged into one
+    is not. index.html's tidyName() must do exactly the same.
+    """
+    import re
+    import unicodedata
+    t = unicodedata.normalize("NFC", text or "").lower()
+    for a in "’‘ʼʻ`´":
+        t = t.replace(a, "'")
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def credits(approved_rows):
+    """
+    One entry per named person, counting approved recordings: one recording is one
+    thing taught, as one approved text submission is. Name and village must both
+    match after tidying; a blank village matches only a blank village. Recordings
+    with no name are not credited. The name shown is the spelling used most.
+    """
+    groups = {}
+    for r in approved_rows:
+        if r.get("status") != "approved" or not (r.get("speaker") or "").strip():
+            continue
+        key = (tidy_name(r["speaker"]), tidy_name(r.get("village") or ""))
+        g = groups.setdefault(key, {"n": 0, "names": {}, "villages": {}})
+        g["n"] += 1
+        sp, vi = r["speaker"].strip(), (r.get("village") or "").strip()
+        g["names"][sp] = g["names"].get(sp, 0) + 1
+        g["villages"][vi] = g["villages"].get(vi, 0) + 1
+    most = lambda d: max(d.items(), key=lambda kv: kv[1])[0]
+    out = [{"speaker": most(g["names"]), "village": most(g["villages"]), "taught": g["n"]}
+           for g in groups.values()]
+    return sorted(out, key=lambda c: (-c["taught"], c["speaker"]))
+
+
 def rebuild_public(st):
-    manifest, listed = public_files(words(st), approved(st))
-    for name, body in (("manifest.json", manifest), ("recorded_words.json", listed)):
+    done = approved(st)
+    manifest, listed = public_files(words(st), done)
+    for name, body in (("manifest.json", manifest), ("recorded_words.json", listed),
+                       ("contributors.json", credits(done))):
         st.put_file(PUBLIC, name, json.dumps(body, ensure_ascii=False, indent=1).encode(),
                     "application/json", "public, max-age=60")
     return manifest, listed

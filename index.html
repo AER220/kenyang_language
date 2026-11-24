@@ -769,6 +769,7 @@ h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
 footer{border-top:1px solid var(--edge);padding:26px 0 50px;display:flex;
   justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--mute)}
 footer p{margin:0}
+footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px;line-height:1.5}
 .flinks{display:flex;gap:4px;flex-wrap:wrap}
 .flinks a{text-decoration:none;padding:6px 12px;border-radius:99px;transition:all .2s}
 .flinks a:hover{color:var(--place);background:rgba(255,201,77,.07)}
@@ -1214,6 +1215,40 @@ footer p{margin:0}
 
   <hr class="rule">
 
+  <!-- ══ MISSION AND DATA GOVERNANCE ═══════════════════════════════════
+       For grant reviewers. Every sentence was checked against what the code
+       does; if the code changes, check them again. Not "open-source AI" (it
+       runs on a commercial API) and not "community-governed" (one speaker
+       approves everything today): speaker-verified is the honest word.    -->
+  <section class="sec" id="governance">
+    <div class="two">
+      <h2 class="big" style="margin:0">Mission and data governance</h2>
+      <div>
+        <p>Many AI language tools leave African languages out, and some are built
+          from community data that nobody asked for. Nɛpɛm is built the other way
+          round.</p>
+        <p>Nɛpɛm starts from published work, above all the lexicon and orthography
+          CABTAL produced, and grows from what speakers give him. Every word and
+          every recording a speaker sends is given voluntarily and checked by a
+          native speaker before Nɛpɛm teaches it or anyone else can hear it.</p>
+        <p>Every recording is covered by consent the speaker gives before
+          recording: having it played on this site is one choice, and letting it
+          help build speech tools for Kenyang is a separate one they can decline.
+          Anyone can ask for their recording to be removed.</p>
+        <p>Nɛpɛm answers using OpenAI's models, and the verified Kenyang material is
+          sent with each question, so answers are built from that material rather
+          than from what a model guesses. Book words a speaker has not yet checked
+          are sent too, and Nɛpɛm is told to say so when he uses one. Any word in
+          an answer that appears nowhere in the material is flagged under the
+          answer. Recordings are never sent.</p>
+        <p>What a speaker confirms goes with every question and outranks everything
+          else Nɛpɛm has read, and when he does not know, he says so.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
   <section class="sec" id="invent">
     <div class="two">
       <h2 class="big" style="margin:0">It will not invent your language</h2>
@@ -1231,7 +1266,12 @@ footer p{margin:0}
   </section>
 
   <footer>
-    <p>Built by Agbor Edouard Ransome, of Bachou Ntai, Manyu Division.</p>
+    <div>
+      <p>Built by Agbor Edouard Ransome, of Bachou Ntai, Manyu Division.</p>
+      <p class="fquiet">Nɛpɛm. Kenyang voice and language data, built with the
+        community it belongs to. Every recording and every word sent in is
+        checked by a speaker.</p>
+    </div>
     <div class="flinks">
       <a href="#table">Play together</a>
       <a href="#about">About</a>
@@ -2596,6 +2636,17 @@ $("rfSend").addEventListener("click", async () => {
 });
 
 /* ── who has taught him ─────────────────────────────────────────── */
+/* Two sources: the `contributors` view counts approved text submissions, and
+   contributors.json, written by the review page, counts approved recordings.
+   One recording is one thing taught, as one text word is. A person who has
+   given both appears once, counts added, when name AND village match after
+   tidyName(); nothing looser, and a blank village matches only a blank one.
+   One person shown twice is a mistake Ed can see and fix; two people merged
+   into one is not. tidyName() must match recordings.tidy_name() exactly.
+   If one source fails, the other is still shown.                          */
+const tidyName = t => String(t || "").normalize("NFC").toLowerCase()
+  .replace(/[’‘ʼʻ`´]/g, "'").replace(/\s+/g, " ").trim();
+
 async function loadWall(){
   const list = $("wallList"), note = $("wallNote");
   if (!SUPA.url || !SUPA.key){
@@ -2604,30 +2655,53 @@ async function loadWall(){
       + "is connected.";
     return;
   }
-  try {
-    const r = await fetch(
-      SUPA.url.replace(/\/$/, "") + "/rest/v1/contributors?select=*",
-      { headers: { "apikey": SUPA.key, "Authorization": "Bearer " + SUPA.key } });
-    if (!r.ok) throw 0;
-    const rows = await r.json();
-    if (!rows.length){
-      list.innerHTML = "";
-      note.textContent = "Nobody yet. The first name here could be yours.";
-      return;
-    }
-    list.innerHTML = rows.map(p => `<span class="gave">
-        ${esc(p.speaker)}
-        ${p.village ? `<span class="v">${esc(p.village)}</span>` : ""}
-        <span class="n">${p.taught}</span></span>`).join("");
-    const total = rows.reduce((a, p) => a + Number(p.taught || 0), 0);
-    note.textContent = `${rows.length} ${rows.length === 1 ? "person" : "people"} `
-      + `have taught Nɛpɛm ${total} ${total === 1 ? "thing" : "things"} between them. `
-      + "Only names given with a submission appear here, and only once a speaker "
-      + "has confirmed the word.";
-  } catch (e){
+  const base = SUPA.url.replace(/\/$/, "");
+  const read = async (url, opts) => {
+    try { const r = await fetch(url, opts); return r.ok ? await r.json() : null; }
+    catch (e){ return null; }
+  };
+  const [text, voice] = await Promise.all([
+    read(base + "/rest/v1/contributors?select=*",
+         { headers: { "apikey": SUPA.key, "Authorization": "Bearer " + SUPA.key } }),
+    read(base + "/storage/v1/object/public/recordings/contributors.json", {cache:"no-cache"})
+  ]);
+  if (!Array.isArray(text) && !Array.isArray(voice)){
     list.innerHTML = "";
     note.textContent = "The contributors list could not be read just now.";
+    return;
   }
+  const people = new Map();
+  for (const p of [...(Array.isArray(text) ? text : []), ...(Array.isArray(voice) ? voice : [])]){
+    if (!p || !String(p.speaker || "").trim()) continue;
+    const n = Math.max(0, Math.floor(Number(p.taught)) || 0);
+    if (!n) continue;
+    const key = tidyName(p.speaker) + "\u0000" + tidyName(p.village);
+    const was = people.get(key);
+    if (!was) people.set(key, {speaker: String(p.speaker).trim(),
+                               village: String(p.village || "").trim(), taught: n, best: n});
+    else {
+      was.taught += n;
+      /* the spelling shown is the one from the side with more */
+      if (n > was.best){ was.speaker = String(p.speaker).trim();
+                         was.village = String(p.village || "").trim(); was.best = n; }
+    }
+  }
+  const rows = [...people.values()].sort((a, b) =>
+    b.taught - a.taught || a.speaker.localeCompare(b.speaker));
+  if (!rows.length){
+    list.innerHTML = "";
+    note.textContent = "Nobody yet. The first name here could be yours.";
+    return;
+  }
+  list.innerHTML = rows.map(p => `<span class="gave">
+      ${esc(p.speaker)}
+      ${p.village ? `<span class="v">${esc(p.village)}</span>` : ""}
+      <span class="n">${p.taught}</span></span>`).join("");
+  const total = rows.reduce((a, p) => a + p.taught, 0);
+  note.textContent = `${rows.length} ${rows.length === 1 ? "person" : "people"} `
+    + `have taught Nɛpɛm ${total} ${total === 1 ? "thing" : "things"} between them. `
+    + "Only names given with a submission appear here, and only once a speaker "
+    + "has confirmed the word.";
 }
 
 /* one handler for the week cards */
@@ -3006,7 +3080,7 @@ const PLAN = [
   ["learn",    "Learn",    "✦", [".hero", "#numbers", "#alone"]],
   ["play",     "Play",     "🧩", ["#table"]],
   ["feedback", "Feedback", "🌿", ["#help", "#wall"]],
-  ["about",    "About",    "◇",  ["#honest", "#about", "#invent"]]
+  ["about",    "About",    "◇",  ["#honest", "#about", "#governance", "#invent"]]
 ];
 
 (function buildViews(){
@@ -3064,7 +3138,7 @@ const PLAN = [
    rather than silently dropping back to the first one */
 const WAS = {table:"play", alone:"learn", steps:"learn", family:"feedback",
              teach:"feedback", help:"feedback", wall:"feedback",
-             honest:"about", numbers:"learn", invent:"about"};
+             honest:"about", numbers:"learn", invent:"about", governance:"about"};
 
 function showView(id, push){
   if (WAS[id]) id = WAS[id];
