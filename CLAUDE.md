@@ -124,6 +124,14 @@ forbids, and it is kept on purpose: green for right and red for wrong is underst
 everywhere without being taught, and a learner checking an answer should not have to
 learn a new code. Do not "fix" it.
 
+**A second deliberate exception: the logo's leaf.** The heart-and-leaf in the header
+keeps the logo's orange leaf (`#DC9246`), the same orange as `--sound`. A logo is a
+fixed object, not page chrome, and a rule about page colour does not repaint the brand
+mark; nobody taps a header logo expecting sound. The heart and the wordmark take the
+structure colour (the logo green on paper, `#6FB58E` on dark, where `#135C3C` is only
+2.2:1). Do not make the leaf green, and do not use the logo as a reason to give any
+other element a warm colour.
+
 ## Things not to change without asking
 
 **`requirements.txt` is pinned deliberately.** Streamlit is pinned to an exact
