@@ -953,9 +953,14 @@ footer p{margin:0}
         <div class="fld ken"><label for="tfKen">The Kenyang</label>
           <input id="tfKen" placeholder="type it as you say it" autocomplete="off" maxlength="200"></div>
       </div>
-      <!-- data-nosay: these show recorded words as text only, never to play -->
-      <p class="has" id="tfHas" data-nosay hidden></p>
-      <details class="known" id="tfKnown" data-nosay>
+      <!-- The list's Kenyang can be tapped, so a speaker can hear a word before
+           adding a voice. say.js plays only what its manifests name, which is
+           only approved recordings, so nothing pending is ever reachable from
+           here. The English beside each word is data-nosay, so a gloss that
+           happens to match a recorded word is never played by mistake. The
+           line under the typed word is tappable for the same reason. -->
+      <p class="has" id="tfHas" hidden></p>
+      <details class="known" id="tfKnown">
         <summary id="tfKnownSum">See the words that already have a recording</summary>
         <p class="fnote">These words already have a recording. You can still
           record any of them. A word on this list is not closed: more than one
@@ -2472,8 +2477,10 @@ async function paintMine(){
    Text only. Ed's come from his own list, which is checked against his
    manifest so a word is listed only if its recording is really there; the
    speakers' come from a text-only file the review page writes, holding only
-   approved words. Neither is shown with a player or an address. Every
-   word stays open: another voice is wanted, not a duplicate to avoid.     */
+   approved words. Neither carries an address: a word in the list plays
+   through say.js like any word on the page, which means the approved
+   recording and never a pending one. Every word stays open: another voice
+   is wanted, not a duplicate to avoid.                                    */
 const KNOWN = new Map();
 const foldWord = w => w.normalize("NFC").toLowerCase().replace(/[’‘ʼʻ`´]/g, "'")
   .replace(/\s+/g, " ").trim().replace(/[?.!,;:]+$/, "").trim();
@@ -2515,8 +2522,8 @@ async function loadKnown(){
   }
   $("tfKnownSum").textContent = `See the words that already have a recording (${KNOWN.size})`;
   list.innerHTML = [...KNOWN.values()].map(w =>
-    `<li><b>${esc(w.kenyang)}</b>${w.english ? " · " + esc(w.english) : ""}`
-    + ` · ${w.voices} ${w.voices === 1 ? "voice" : "voices"}</li>`).join("");
+    `<li><b>${esc(w.kenyang)}</b><span data-nosay>${w.english ? " · " + esc(w.english) : ""}`
+    + ` · ${w.voices} ${w.voices === 1 ? "voice" : "voices"}</span></li>`).join("");
   paintHas();
 }
 
