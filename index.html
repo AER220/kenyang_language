@@ -2700,8 +2700,10 @@ async function loadWall(){
       ${p.village ? `<span class="v">${esc(p.village)}</span>` : ""}
       <span class="n">${p.taught}</span></span>`).join("");
   const total = rows.reduce((a, p) => a + p.taught, 0);
-  note.textContent = `${rows.length} ${rows.length === 1 ? "person" : "people"} `
-    + `have taught Nɛpɛm ${total} ${total === 1 ? "thing" : "things"} between them. `
+  const things = `${total} ${total === 1 ? "thing" : "things"}`;
+  note.textContent = (rows.length === 1
+      ? `1 person has taught Nɛpɛm ${things}. `
+      : `${rows.length} people have taught Nɛpɛm ${things} between them. `)
     + "Only names given with a submission appear here, and only once a speaker "
     + "has confirmed the word.";
 }
