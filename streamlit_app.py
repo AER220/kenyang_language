@@ -1475,12 +1475,19 @@ html{color-scheme: light;}
 @media (prefers-reduced-motion:reduce){.dots span,.caret{animation:none;}}
 
 .note{color:#7A8A80;font-size:.84rem;margin:-8px 2px 14px;line-height:1.45;}
-/* Shown under a reply when a Kenyang word in it appears in none of the material the
-   answer was built from. Amber, not red: it's a flag to check, not a verdict. */
-.unchecked{margin:-6px 0 14px 39px;padding:9px 13px;border-radius:10px;
-  background:#FDF6E3;border:1px solid #E8D9A8;color:#7A6320;font-size:.86rem;
-  line-height:1.5;max-width:78%;}
-.unchecked b{color:#5E4B12;}
+/* The fabrication flag: a word in the answer that is in none of the material it
+   was built from. It is one of the two accuracy claims made visible, so it must
+   never be quiet. It was amber, which now means sound, so it carries its weight
+   by shape instead: a full ink border, a heavy rule down the side, and a drawn
+   "!", on white like Nɛpɛm's own bubbles. Solid lines only: dotted and dashed
+   mean "tap to hear" on this site, and the flag must not borrow that. */
+.unchecked{margin:-6px 0 14px 39px;padding:10px 13px 10px 14px;
+  border-radius:4px 10px 10px 4px;background:#FFFFFF;border:2px solid var(--ink);
+  border-left-width:5px;color:var(--ink);font-size:.9rem;line-height:1.5;max-width:78%;
+  display:flex;gap:10px;align-items:flex-start;}
+.unchecked b{font-weight:700;color:var(--ink);}
+.unchecked .mk{flex:none;width:20px;height:20px;border-radius:50%;background:var(--ink);
+  color:#FFFFFF;font:700 13px/20px system-ui,sans-serif;text-align:center;margin-top:1px;}
 .memmark{display:flex;align-items:center;gap:10px;margin:20px 2px 16px;
   color:#8A9891;font-size:.8rem;}
 .memmark:before,.memmark:after{content:"";flex:1;height:1px;background:var(--edge);}
@@ -2016,11 +2023,12 @@ if st.session_state.pending:
                 loose = unsupported_words(reply, found, always_on)
                 if loose:
                     st.markdown(
-                        '<div class="unchecked">Not found in the material behind this '
+                        '<div class="unchecked"><span class="mk" aria-hidden="true">!</span>'
+                        '<span>Not found in the material behind this '
                         'answer: <b>' + ", ".join(html.escape(w) for w in loose[:12]) +
                         '</b>. These may be spelled differently in my sources — or they '
                         'may not be real Kenyang. Check with a speaker before learning '
-                        'them.</div>', unsafe_allow_html=True)
+                        'them.</span></div>', unsafe_allow_html=True)
             else:
                 slot.markdown(bubble("assistant", "Nothing came back that time. Ask me again."),
                               unsafe_allow_html=True)
