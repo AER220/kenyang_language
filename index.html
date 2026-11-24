@@ -24,7 +24,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Archivo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 <style>
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -59,7 +59,7 @@
   --head:#F4F7F5; --line:#3E7D60;
   --accent:#F4F7F5; --accent-rgb:244,247,245; --on-accent:#0D1B15;
   --serif:"Gentium Book Plus",Georgia,serif;
-  --sans:"Archivo",system-ui,sans-serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Gentium Book Plus",sans-serif;
   --mx:50%; --my:18%; --r:20px;
 }
 /* ── the pale version ─────────────────────────────────────────────
@@ -274,7 +274,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
    Somebody arriving has about two seconds to work out what this is. The old
    page spent them on a sentence rebuilding itself, which is lovely once you
    know what you are looking at and meaningless before. */
-.htitle{font-family:var(--serif);font-size:clamp(31px,5.6vw,58px);line-height:1.06;
+.htitle{font-size:clamp(31px,5.6vw,58px);line-height:1.06;
   font-weight:700;letter-spacing:-.025em;margin:10px 0 16px;max-width:15em}
 .hsub{font-size:clamp(16px,1.9vw,19px);color:var(--mute);max-width:38em;
   margin:0 0 18px;line-height:1.62}
@@ -301,7 +301,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
 .m-when{color:var(--when)} .m-place{color:var(--where)}
 .m::after{content:"";position:absolute;left:0;right:0;bottom:-.08em;height:2px;
   background:currentColor;opacity:.26;border-radius:2px}
-.gloss{font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.2vw,26px);
+.gloss{font-style:italic;font-size:clamp(18px,2.2vw,26px);
   color:var(--mute);margin:0 0 24px;min-height:1.4em}
 .g-who{color:var(--who);font-style:normal} .g-not{color:var(--not);font-style:normal}
 /* the five slots, one row each, divided by a rule rather than boxed: the
@@ -314,7 +314,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
 @media (max-width:520px){ .ctl{grid-template-columns:1fr;gap:8px} }
 .swatch{width:8px;height:8px;border-radius:99px;flex:none}
 .opts{display:flex;flex-wrap:wrap;gap:6px}
-.opt{font-family:var(--serif);font-size:17px;background:none;color:var(--mute);
+.opt{font-family:var(--sans);font-size:17px;background:none;color:var(--mute);
   border:1px solid var(--edge);border-radius:99px;padding:6px 13px;cursor:pointer;transition:all .2s}
 .opt:hover{color:var(--text);border-color:var(--edge-hi);transform:translateY(-1px)}
 .opt[aria-pressed="true"]{color:var(--on-accent);font-weight:700;border-color:transparent}
@@ -335,7 +335,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
 /* buildViews() drops the old <hr> dividers, so sections that share a view are
    separated by one rule and space, the same everywhere */
 .view > .sec + .sec{border-top:1px solid var(--line)}
-h2.big{font-family:var(--serif);font-size:clamp(25px,3.3vw,39px);line-height:1.22;
+h2.big{font-size:clamp(25px,3.3vw,39px);line-height:1.22;
   font-weight:700;margin:0 0 12px;max-width:27em}
 h2.big b,h2.big em{color:var(--head);font-style:normal}
 .lead{color:var(--mute);margin:0 0 24px;max-width:44em}
@@ -347,7 +347,7 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
   overflow:hidden;transition:transform .24s,border-color .3s,background .3s}
 .pickc:hover{transform:translateY(-4px);border-color:var(--edge-hi);background:var(--lift2)}
 .pickc[aria-selected="true"]{border-color:var(--accent);background:var(--lift2)}
-.pickc h3{font-family:var(--serif);font-size:20px;font-weight:700;margin:0 0 5px}
+.pickc h3{font-size:20px;font-weight:700;margin:0 0 5px}
 .pickc p{font-size:13.5px;color:var(--mute);margin:0;line-height:1.5}
 /* who it is for, as a plain line: pink means family, as everywhere; on your
    own is quiet, not WHO's mint */
@@ -357,7 +357,7 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .stage{margin-top:22px;padding:clamp(18px,3vw,28px) 0 0;border-top:1px solid var(--line);min-height:340px}
 .shead{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;
   flex-wrap:wrap;margin:0 0 18px}
-.shead h3{font-family:var(--serif);font-size:24px;margin:0 0 4px}
+.shead h3{font-size:24px;margin:0 0 4px}
 .shead p{margin:0;color:var(--mute);font-size:14.5px;max-width:44em}
 
 /* ── arrowword ────────────────────────────────────────────────── */
@@ -393,10 +393,10 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
   text-align:center;transition:border-color .25s,background .25s}
 .pl.turn{border-color:var(--accent);background:rgba(var(--accent-rgb),.1)}
 .pl .nm{font-size:13px;color:var(--mute);margin:0 0 4px;letter-spacing:.05em}
-.pl .sc{font-family:var(--serif);font-size:32px;margin:0;line-height:1}
+.pl .sc{font-size:32px;margin:0;line-height:1}
 .pl.pA .sc{color:var(--p1)} .pl.pB .sc{color:var(--p2)}
 .whoseturn{text-align:center;font-size:15px;margin:0 0 18px}
-.whoseturn b{font-family:var(--serif);font-size:1.2em}
+.whoseturn b{font-size:1.2em}
 
 /* ── shared quiz bits ─────────────────────────────────────────── */
 .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;
@@ -405,11 +405,11 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
   overflow:hidden}
 .pbar i{display:block;height:100%;border-radius:99px;width:0%;
   background:var(--accent);transition:width .45s ease}
-.ask{font-family:var(--serif);font-size:clamp(24px,3.6vw,42px);line-height:1.2;
+.ask{font-size:clamp(24px,3.6vw,42px);line-height:1.2;
   margin:0 0 6px;text-align:center}
 .askhint{text-align:center;color:var(--mute);font-size:14px;margin:0 0 22px}
 .choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-.choice{font-family:var(--serif);font-size:19px;padding:17px 14px;border-radius:14px;
+.choice{font-family:var(--sans);font-size:19px;padding:17px 14px;border-radius:14px;
   border:1px solid var(--edge);background:var(--lift2);color:var(--text);cursor:pointer;
   min-height:64px;transition:border-color .18s,transform .18s}
 .choice:hover:not(:disabled){border-color:var(--accent);transform:translateY(-3px)}
@@ -433,7 +433,7 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .btn.fam{background:var(--p2);border-color:var(--p2);color:#1A0812;font-weight:600}
 .btn.fam:hover{background:#FFB8DC}
 .final{text-align:center;padding:22px 0 2px}
-.final .n{font-family:var(--serif);font-size:54px;margin:0;color:var(--head);line-height:1;
+.final .n{font-size:54px;margin:0;color:var(--head);line-height:1;
   animation:rise .55s cubic-bezier(.2,.9,.25,1) both}
 @keyframes rise{from{opacity:0;transform:translateY(16px) scale(.9)}to{opacity:1;transform:none}}
 .final p{color:var(--mute);margin:10px 0 0}
@@ -447,7 +447,7 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .step[aria-selected="true"]{border-color:var(--accent);background:var(--lift2)}
 .step.done{border-color:rgba(var(--accent-rgb),.45)}
 .step .sn{font-size:12.5px;color:var(--mute);margin:0 0 4px}
-.step h4{font-family:var(--serif);font-size:17px;font-weight:700;margin:0;line-height:1.25}
+.step h4{font-size:17px;font-weight:700;margin:0;line-height:1.25}
 .tick{position:absolute;top:11px;right:11px;width:18px;height:18px;border-radius:99px;
   background:var(--accent);display:none;align-items:center;justify-content:center;
   color:var(--on-accent);font-size:11px;font-weight:700}
@@ -482,14 +482,14 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
    something to chase their parents about. The six rotate on their own, the
    same six for everybody, so a family can talk about the same words.      */
 .weekhead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 18px}
-.weekno{font-family:var(--serif);font-size:13px;letter-spacing:.1em;color:var(--p2);
+.weekno{font-size:13px;letter-spacing:.1em;color:var(--p2);
   padding:6px 14px;border-radius:99px;border:1px solid rgba(255,158,207,.3);
   background:rgba(255,158,207,.07)}
 .weekbar{flex:1;min-width:140px;height:7px;border-radius:99px;
   background:rgba(255,255,255,.08);overflow:hidden}
 .weekbar i{display:block;height:100%;border-radius:99px;width:0%;
   background:var(--p2);transition:width .5s ease}
-.weekcount{font-family:var(--serif);font-size:15px;color:var(--p2)}
+.weekcount{font-size:15px;color:var(--p2)}
 
 .wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px}
 .wcardx{position:relative;padding:18px 17px 16px;border-radius:17px;
@@ -519,7 +519,7 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
    the form's own colour (pink for teaching, red for a correction) */
 .tform{margin-top:18px;padding:22px 0 0;border-top:1px solid var(--line)}
 .tform .eyebrow{font-size:14px;font-weight:600;color:var(--p2);margin:0 0 6px}
-.tform h4{font-family:var(--serif);font-size:20px;margin:0 0 4px}
+.tform h4{font-size:20px;margin:0 0 4px}
 .tform .sub{font-size:13.5px;color:var(--mute);margin:0 0 16px;line-height:1.55}
 .frow{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px;
   margin:0 0 11px}
@@ -585,7 +585,7 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .helpc:hover{transform:translateY(-4px)}
 .helpc[aria-expanded="true"]{transform:none}
 .helpc .ic{font-size:25px;line-height:1;margin-bottom:9px}
-.helpc h3{font-family:var(--serif);font-size:20px;font-weight:700;margin:0 0 5px}
+.helpc h3{font-size:20px;font-weight:700;margin:0 0 5px}
 .helpc.teach h3{color:var(--p2)} .helpc.wrong h3{color:var(--not)}
 .helpc p{font-size:13.5px;color:var(--mute);margin:0;line-height:1.52}
 .helpc .arrow{position:absolute;right:18px;top:20px;font-size:15px;color:var(--mute);
@@ -596,7 +596,7 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .door{margin:30px 0 0;padding:20px 0 0;border-top:1px solid var(--line);
   display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .door .dt{flex:1;min-width:200px}
-.door h4{font-family:var(--serif);font-size:17px;margin:0 0 3px}
+.door h4{font-size:17px;margin:0 0 3px}
 .door p{font-size:13.5px;color:var(--mute);margin:0;line-height:1.5}
 .door .lock{font-size:19px;opacity:.6;flex:none}
 .doormsg{margin:14px 0 0;padding:13px 16px;border-radius:12px;font-size:14px;
@@ -620,7 +620,7 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
    not cards, since none of it is tapped. The headings are ink: "Kept" and
    "Not kept" are not grammar, so they do not borrow WHO's green or NOT's red. */
 .hcard{padding:16px 0 0;border-top:1px solid var(--line)}
-.hcard h4{font-family:var(--serif);font-size:17px;margin:0 0 7px}
+.hcard h4{font-size:17px;margin:0 0 7px}
 .hcard ul{margin:0;padding-left:19px}
 .hcard li{font-size:14.5px;color:var(--mute);margin:0 0 7px;line-height:1.55}
 
@@ -630,7 +630,7 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
   border:1px solid var(--edge);border-radius:14px;background:var(--lift);color:var(--text);
   font-family:inherit;transition:transform .2s,border-color .25s,background .25s}
 .num:hover{transform:translateY(-4px);border-color:var(--accent);background:var(--lift2)}
-.num .d{display:block;font-family:var(--serif);font-size:28px;line-height:1;margin-bottom:4px}
+.num .d{display:block;font-size:28px;line-height:1;margin-bottom:4px}
 .num .kx{display:block;font-family:var(--serif);font-size:17px;color:var(--text);line-height:1.2}
 .num.on{border-color:var(--accent);background:rgba(var(--accent-rgb),.13)}
 .plural{margin-top:22px;padding:24px 0 4px;text-align:center;border-top:1px solid var(--line)}
@@ -769,7 +769,7 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .phead .who{display:flex;align-items:center;gap:10px;min-width:0}
 .phead .av{width:32px;height:32px;border-radius:50%;flex:none;display:flex;
   align-items:center;justify-content:center;font-family:var(--serif);font-weight:700}
-.phead h3{font-family:var(--serif);font-size:17px;margin:0;line-height:1.2}
+.phead h3{font-size:17px;margin:0;line-height:1.2}
 .phead .st{font-size:11.5px;color:var(--who);margin:0;display:flex;align-items:center;gap:5px}
 .phead .st i{width:6px;height:6px;border-radius:99px;background:var(--who);display:inline-block}
 .pbtns{display:flex;gap:4px;flex:none}
@@ -819,6 +819,13 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
 .sayhint{font-size:14.5px;color:var(--sound);margin:-12px 0 22px}
 .sayhint button{font:inherit;color:var(--sound);background:none;border:none;
   padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+/* ── which font, by which language ─────────────────────────────────
+   Gentium is for Kenyang and nothing else; English is the phone's own font,
+   which costs nothing to download. Places that only ever hold Kenyang name the
+   serif themselves; where the same element can hold either (a question, an
+   answer, a builder option), the Kenyang carries lang="ken" (ISO 639-3) and
+   this rule gives it the serif. */
+:lang(ken){font-family:var(--serif)}
 </style>
 <script>
 /* Runs before the page paints, so nobody sees the wrong colours flash first.
@@ -876,7 +883,7 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
       Change who, when, whether it happened, or where, and watch it rebuild. If you
       grew up hearing this language but never learned to say it, start here.</p>
 
-    <p class="built" id="built" aria-live="polite"></p>
+    <p class="built" id="built" lang="ken" aria-live="polite"></p>
     <p class="gloss" id="gloss"></p>
 
     <div class="controls">
@@ -1554,6 +1561,7 @@ let E = {who:0, verb:0, when:0, not:0, place:0};
 function chip(parent,label,group,i,on){
   const b=document.createElement("button");
   b.className="opt"; b.type="button"; b.textContent=label;
+  if (group==="who"||group==="verb") b.lang="ken";   /* the other three slots are English labels */
   b.setAttribute("aria-pressed", on?"true":"false");
   b.addEventListener("click",()=>{E[group]=i; paint(group);});
   parent.appendChild(b);
@@ -1789,7 +1797,7 @@ function duelRender(){
           <p class="sc">${D.score[1]}</p></div></div>`
     + `<p class="whoseturn">Question ${D.n+1} of ${D.rounds}.
         <b style="color:${t===0?"var(--p1)":"var(--p2)"}">${esc(D.names[t])}</b>, your turn.</p>`
-    + `<p class="ask" style="color:var(--text)">${esc(answer[0])}</p>`
+    + `<p class="ask" lang="ken" style="color:var(--text)">${esc(answer[0])}</p>`
     + `<p class="askhint">What does this mean?</p>`
     + `<div class="choices">` + shuffle([answer,...others]).map(o=>
         `<button class="choice" data-den="${esc(o[1])}">${esc(o[1])}</button>`).join("")
@@ -1840,7 +1848,7 @@ function buildNew(){
         border:1px dashed var(--edge-hi);border-radius:14px;margin:0 0 18px"></div>`
     + `<div style="display:flex;flex-wrap:wrap;gap:9px;justify-content:center">`
     + shuffle([...parts,...extras]).map((w,i)=>
-        `<button class="choice" style="font-size:20px;min-height:0;padding:12px 18px;
+        `<button class="choice" lang="ken" style="font-size:20px;min-height:0;padding:12px 18px;
           color:var(--${role[w]==="root"?"root":role[w]})"
           data-tile="${i}" data-w="${esc(w)}">${esc(w)}</button>`).join("")
     + `</div><div class="act"><button class="btn" data-bundo>Undo</button>
@@ -1876,10 +1884,10 @@ function greetNew(){
     + `<div class="bar"><span>Question ${G.n+1} of ${G_ROUNDS}</span>
        <span class="pbar"><i style="width:${(G.n/G_ROUNDS)*100}%"></i></span>
        <span style="color:var(--head)">${G.score} right</span></div>`
-    + `<p class="ask" style="color:var(--text)">${esc(q.ken)}</p>`
+    + `<p class="ask" lang="ken" style="color:var(--text)">${esc(q.ken)}</p>`
     + `<p class="askhint">${esc(q.en)}</p><div class="choices">`
     + shuffle([right,...otherBack,...filler]).map(o=>
-        `<button class="choice" data-gback="${esc(o[0])}">${esc(o[0])}
+        `<button class="choice" lang="ken" data-gback="${esc(o[0])}">${esc(o[0])}
           <span class="ce">${esc(o[1])}</span></button>`).join("")
     + `</div>`;
 }
@@ -2054,7 +2062,7 @@ function renderL(){
       + `<div class="bar"><span>Question ${L.n+1} of ${ROUNDS}</span>
          <span class="pbar"><i style="width:${(L.n/ROUNDS)*100}%"></i></span>
          <span style="color:var(--head)">${L.score} right</span></div>`
-      + `<p class="ask" style="color:var(--text)">${esc(answer[0])}</p>`
+      + `<p class="ask" lang="ken" style="color:var(--text)">${esc(answer[0])}</p>`
       + `<p class="askhint">${s.ask||"What does this mean?"}</p><div class="choices">`
       + shuffle([answer,...others]).map(o=>
           `<button class="choice" data-len="${esc(o[1])}">${esc(o[1])}</button>`).join("")

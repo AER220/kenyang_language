@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="brand/web-and-social/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400;700&display=swap" rel="stylesheet">
 <script>
 /* before anything paints, so the wrong colours never flash */
 (function(){try{var t=localStorage.getItem("nepem.theme");
@@ -29,7 +29,7 @@ document.documentElement.dataset.theme=t;}catch(e){document.documentElement.data
   --edge:rgba(255,255,255,.09); --edge-hi:rgba(255,255,255,.22);
   --text:#F4F7F5; --mute:#9DB0A6;
   --who:#42E3BC; --not:#FF6A55; --accent:#F4F7F5; --on-accent:#0D1B15;
-  --serif:"Gentium Book Plus",Georgia,serif; --sans:"Archivo",system-ui,sans-serif;
+  --serif:"Gentium Book Plus",Georgia,serif; --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Gentium Book Plus",sans-serif;
   color-scheme:dark;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
@@ -61,7 +61,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:10px;
 [data-theme="light"] .modesw:not(:hover){color:var(--text);background:var(--lift2);
   border-color:var(--edge-hi)}
 
-h1{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.08;
+h1{font-size:clamp(28px,6.6vw,44px);line-height:1.08;
   margin:0 0 8px;letter-spacing:-.02em}
 .sub{color:var(--mute);margin:0 0 6px;font-size:15.5px}
 
@@ -69,7 +69,7 @@ h1{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.08;
 .streak{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;
   color:var(--mute);margin:10px 0 22px;padding:7px 15px;border-radius:99px;
   border:1px solid var(--edge);background:var(--lift)}
-.streak b{color:var(--accent);font-family:var(--serif);font-size:1.15em}
+.streak b{color:var(--accent);font-size:1.15em}
 
 .grid{display:grid;gap:11px}
 .g{display:flex;align-items:center;gap:14px;width:100%;text-align:left;
@@ -81,11 +81,11 @@ h1{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.08;
   justify-content:center;font-size:21px;background:var(--lift2);
   border:1px solid var(--edge);font-family:var(--serif)}
 .g .t{flex:1;min-width:0}
-.g .t b{display:block;font-family:var(--serif);font-size:18.5px;font-weight:700;
+.g .t b{display:block;font-size:18.5px;font-weight:700;
   line-height:1.2}
 .g .t span{display:block;font-size:13px;color:var(--mute);margin-top:3px;line-height:1.45}
 .g .sc{flex:none;text-align:right;font-size:12px;color:var(--mute)}
-.g .sc b{display:block;font-family:var(--serif);font-size:19px;color:var(--accent)}
+.g .sc b{display:block;font-size:19px;color:var(--accent)}
 .g.hard .ic{border-color:rgba(255,106,85,.32)}
 .g.done{border-color:rgba(66,227,188,.34)}
 
@@ -160,7 +160,7 @@ h1{font-family:var(--serif);font-size:clamp(28px,6.6vw,44px);line-height:1.08;
   cursor:pointer;display:none}
 
 #end{display:none;text-align:center;padding:26px 0}
-#end .n{font-family:var(--serif);font-size:58px;color:var(--accent);margin:0;line-height:1}
+#end .n{font-size:58px;color:var(--accent);margin:0;line-height:1}
 #end .w{font-family:var(--serif);font-size:26px;margin:14px 0 4px}
 #end p.sm{color:var(--mute);margin:0 0 22px}
 #end button{width:100%;margin-bottom:10px}
