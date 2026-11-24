@@ -55,6 +55,9 @@ reorder or trim the rules.
 
 The logo files are in `brand/` (full-logo, icon-mark, web-and-social, and the
 brand README). Most of it is source; only the files the workflow lists are served.
+The pictures for the visual Kenyang section are in `scenes/`. The PNGs there are
+Ed's originals and are sources, never published: a page gets an optimised web
+copy, added to the copy list only when a page actually asks for it.
 
 ```
 knowledge_base/          everything Nɛpɛm reads. Nothing else belongs here.
@@ -147,8 +150,7 @@ failed to connect.
 **nepem.org publishes only a list of files.** `.github/workflows/pages.yml` copies
 index.html, games.html, say.js, audio_words.json, CNAME, ed-portrait.jpg, audio/,
 and five files from brand/web-and-social/ (the favicons, the apple-touch-icon and
-the social card, plus favicon.ico again at the root), and the pictures in scenes/
-named in it, and publishes those alone, so the knowledge base,
+the social card, plus favicon.ico again at the root) and publishes those alone, so the knowledge base,
 QUESTIONS_for_Ed.md, this file and the Python files are not downloadable. A new file
 the site needs (a page, an image, a script) must be added to that list, or it will
 not be served. Nothing else moves: Render reads the repo as it is.

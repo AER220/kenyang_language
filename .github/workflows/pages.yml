@@ -49,10 +49,6 @@ jobs:
           done
           # Browsers also ask for /favicon.ico on their own, whatever the page says.
           cp brand/web-and-social/favicon.ico _site/favicon.ico
-          # Pictures for the visual Kenyang section. Each one is listed by name:
-          # a picture that is not here is not served.
-          mkdir -p _site/scenes
-          cp scenes/body-front-back.png scenes/head-mouth.png _site/scenes/
           echo "Publishing:"; find _site -maxdepth 1 | sort; echo "audio files: $(ls _site/audio | wc -l)"
 
       - uses: actions/configure-pages@v5
