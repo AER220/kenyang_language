@@ -518,6 +518,36 @@ h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
 .fmsg.ok{background:rgba(66,227,188,.1);border:1px solid rgba(66,227,188,.3)}
 .fmsg.bad{background:rgba(255,106,85,.1);border:1px solid rgba(255,106,85,.3)}
 .fmsg b{font-family:var(--serif);font-size:1.1em}
+.fld select{width:100%;font-family:var(--sans);font-size:15px;padding:11px 13px;
+  border-radius:11px;color:var(--text);background:rgba(255,255,255,.05);
+  border:1px solid var(--edge);outline:none}
+.fld select:focus{border-color:var(--p2)}
+
+/* ── recording, inside the teach form ────────────────────────────
+   The consent sits directly above the Record button, which stays disabled
+   until the first box is ticked, so nobody records before reading it.     */
+.rech{font-size:12.5px;letter-spacing:.06em;color:var(--p2);font-weight:600;margin:4px 0 8px}
+.rec{margin:4px 0 18px;padding:15px 16px;border-radius:13px;
+  background:var(--lift);border:1px solid var(--edge)}
+.consent{font-size:13.5px;line-height:1.55;margin:0 0 10px}
+.consent.minor{font-weight:600;margin:0 0 12px}
+.chk{display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.45;
+  margin:0 0 10px;cursor:pointer}
+.chk input{accent-color:var(--p2);width:18px;height:18px;margin:1px 0 0;flex:none}
+.chk .opt{color:var(--mute)}
+.recrow{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:14px 0 0}
+.recrow .btn[disabled]{opacity:.45;cursor:not-allowed}
+.rectime{font-size:14px;color:var(--mute);font-variant-numeric:tabular-nums}
+.mine{font-size:13.5px;margin:-6px 0 14px;padding:9px 12px;border-radius:11px;
+  background:var(--lift);border:1px solid var(--edge)}
+.has{font-size:13.5px;color:var(--p2);margin:-3px 0 10px}
+.known{margin:0 0 16px;font-size:13.5px}
+.known summary{cursor:pointer;color:var(--mute)}
+.known .fnote{margin:8px 0 8px}
+.knownl{list-style:none;padding:0;margin:0;max-height:260px;overflow:auto;
+  columns:2 200px;column-gap:18px}
+.knownl li{padding:3px 0;break-inside:avoid;color:var(--mute)}
+.knownl b{font-family:var(--serif);font-weight:600;color:var(--text);font-size:1.05em}
 
 /* ── the two ways to help ────────────────────────────────────────
    The teach form used to be reachable only by tapping a word of the week,
@@ -906,15 +936,91 @@ footer p{margin:0}
     <p class="lead">Two things are worth sending. A word he does not have, and
       an answer he got wrong. The second is rarer and more valuable.</p>
 
-    <div class="helps">
-      <button class="helpc teach" id="btnTeach" aria-expanded="false"
-              aria-controls="tform">
-        <span class="arrow" aria-hidden="true">›</span>
-        <div class="ic" aria-hidden="true">🌿</div>
-        <h3>Teach Nɛpɛm a word</h3>
-        <p>Any Kenyang word or phrase he does not know yet. A word with a sentence
-          around it is worth far more than the word alone.</p>
-      </button>
+    <!-- teach ------------------------------------------------------------
+         Open from the start, so a speaker who comes to record meets the
+         recorder, not a choice of forms. Recording is a step inside it and
+         is optional: without a recording the word goes as text, as before. -->
+    <div class="tform" id="tform">
+      <p class="eyebrow" id="tfEyebrow">TEACH NƐPƐM A WORD</p>
+      <h4 id="tfTitle">What is the Kenyang for this?</h4>
+      <p class="sub">Write it the way it is said. Spelling gets tidied later;
+        getting it written down at all is the hard part.</p>
+      <p class="mine" id="tfMine" hidden></p>
+
+      <div class="frow">
+        <div class="fld"><label for="tfEn">The English</label>
+          <input id="tfEn" placeholder="tomorrow" autocomplete="off" maxlength="300"></div>
+        <div class="fld ken"><label for="tfKen">The Kenyang</label>
+          <input id="tfKen" placeholder="type it as you say it" autocomplete="off" maxlength="200"></div>
+      </div>
+      <!-- data-nosay: these show recorded words as text only, never to play -->
+      <p class="has" id="tfHas" data-nosay hidden></p>
+      <details class="known" id="tfKnown" data-nosay>
+        <summary id="tfKnownSum">See the words that already have a recording</summary>
+        <p class="fnote">These words already have a recording. You can still
+          record any of them. A word on this list is not closed: more than one
+          voice for a word is what we want.</p>
+        <ul class="knownl" id="tfKnownList"></ul>
+      </details>
+
+      <div class="rec" id="rec">
+        <p class="rech">Record it</p>
+        <p class="fnote">Record somewhere quiet. A recording that is hard to hear
+          will not be approved.</p>
+        <p class="consent"><b>Before you record.</b> If a speaker approves your
+          recording, anyone using this site can play it, on this page and in the
+          chat with Nɛpɛm. If you give your name, it may be shown publicly on the
+          site. You can ask for a recording to be removed at any time by writing to
+          <a href="mailto:agboredouard51@gmail.com"
+             style="color:var(--place)">agboredouard51@gmail.com</a>.</p>
+        <p class="consent minor">If you are under 18, ask a parent or guardian first.</p>
+        <label class="chk"><input type="checkbox" id="recOk">
+          I understand, and I want my voice used this way.</label>
+        <label class="chk"><input type="checkbox" id="recTools">
+          You may also use my recording to build speech tools for Kenyang.
+          <span class="opt">(optional)</span></label>
+        <div class="recrow">
+          <button class="btn fam" id="recGo" type="button" disabled>Record</button>
+          <button class="btn" id="recPlay" type="button" hidden>Listen back</button>
+          <button class="btn" id="recAgain" type="button" hidden>Record again</button>
+          <span class="rectime" id="recTime" aria-live="polite"></span>
+        </div>
+        <div id="recMsg"></div>
+      </div>
+
+      <p class="fnote">A word with a sentence around it is worth far more than the
+        word alone.</p>
+      <div class="fld"><label for="tfNote">Use it in a sentence, if you can</label>
+        <textarea id="tfNote" maxlength="2000" placeholder="mbuere mme rong ekere-wah, meaning tomorrow I am going to my house"></textarea></div>
+      <p class="fnote">A sentence is worth far more than the word on its own. It
+        shows where the word sits and what changes around it.</p>
+
+      <p class="rech">About you, all optional</p>
+      <div class="frow">
+        <div class="fld"><label for="tfWho">Your name, so you can be credited</label>
+          <input id="tfWho" placeholder="leave it blank to stay unnamed" autocomplete="name" maxlength="120"></div>
+        <div class="fld"><label for="tfVil">Your village</label>
+          <input id="tfVil" placeholder="Bachou Ntai, Mamfe, anywhere" autocomplete="off" maxlength="120"></div>
+        <div class="fld"><label for="tfVoice">The voice in the recording</label>
+          <select id="tfVoice">
+            <option value="unsaid">Rather not say</option>
+            <option value="man">A man's voice</option>
+            <option value="woman">A woman's voice</option>
+          </select></div>
+      </div>
+      <p class="fnote">Your village and whether this is a man's or a woman's voice
+        are optional. They help us tell a different way of saying a word from a
+        mistake, and one day let a learner hear a word in more than one voice.
+        Your village is shown with your name. The voice is not shown anywhere.</p>
+
+      <div class="fsend">
+        <button class="btn fam" id="tfSend">Send it</button>
+        <button class="btn" id="tfCancel">Not now</button>
+      </div>
+      <div id="tfMsg"></div>
+    </div>
+
+    <div class="helps" style="margin-top:22px">
       <button class="helpc wrong" id="btnWrong" aria-expanded="false"
               aria-controls="rform">
         <span class="arrow" aria-hidden="true">›</span>
@@ -923,39 +1029,6 @@ footer p{margin:0}
         <p>He invents things when he does not know, and he has been corrected
           before. Say what he should have said, and why.</p>
       </button>
-    </div>
-
-    <!-- teach ------------------------------------------------------------ -->
-    <div class="tform" id="tform" style="display:none">
-      <p class="eyebrow" id="tfEyebrow">TEACH NƐPƐM A WORD</p>
-      <h4 id="tfTitle">What is the Kenyang for this?</h4>
-      <p class="sub">Write it the way it is said. Spelling gets tidied later;
-        getting it written down at all is the hard part.</p>
-
-      <div class="frow">
-        <div class="fld"><label for="tfEn">The English</label>
-          <input id="tfEn" placeholder="tomorrow" autocomplete="off"></div>
-        <div class="fld ken"><label for="tfKen">The Kenyang</label>
-          <input id="tfKen" placeholder="type it as you say it" autocomplete="off"></div>
-      </div>
-
-      <div class="fld"><label for="tfNote">Use it in a sentence, if you can</label>
-        <textarea id="tfNote" placeholder="mbuere mme rong ekere-wah, meaning tomorrow I am going to my house"></textarea></div>
-      <p class="fnote">A sentence is worth far more than the word on its own. It
-        shows where the word sits and what changes around it.</p>
-
-      <div class="frow">
-        <div class="fld"><label for="tfWho">Your name, so you can be credited</label>
-          <input id="tfWho" placeholder="leave it blank to stay unnamed" autocomplete="name"></div>
-        <div class="fld"><label for="tfVil">Your village</label>
-          <input id="tfVil" placeholder="Bachou Ntai, Mamfe, anywhere" autocomplete="off"></div>
-      </div>
-
-      <div class="fsend">
-        <button class="btn fam" id="tfSend">Send it</button>
-        <button class="btn" id="tfCancel">Not now</button>
-      </div>
-      <div id="tfMsg"></div>
     </div>
 
     <!-- report ----------------------------------------------------------- -->
@@ -1035,6 +1108,13 @@ footer p{margin:0}
           <li>Words and corrections sent through the forms above</li>
           <li>The name and village given with them, if any were given</li>
           <li>The date it was sent</li>
+          <li>A recording of your voice, if you record a word, and the word it
+            is of</li>
+          <li>A random code your browser makes and sends with each recording, so
+            recordings by the same voice can be grouped. It does not say who you
+            are</li>
+          <li>Whether you said it is a man's or a woman's voice, if you said, and
+            which consent boxes you ticked</li>
         </ul>
       </div>
       <div class="hcard no">
@@ -1047,6 +1127,8 @@ footer p{margin:0}
           <li>Anything at all from the games. They run in the browser and send
             nothing. The site itself counts visits with Cloudflare Web Analytics,
             and loads its fonts from Google Fonts, which sees your IP address</li>
+          <li>Anything the microphone hears outside a recording you choose to
+            send. A recording you do not send never leaves your device</li>
         </ul>
       </div>
       <div class="hcard">
@@ -1057,9 +1139,16 @@ footer p{margin:0}
             means they are sent to OpenAI with each question</li>
           <li>A name and village given with a submission are shown publicly, on
             this page, in the list of people who have taught Nɛpɛm</li>
-          <li>Submissions are held by Supabase, the database service this site
-            uses</li>
-          <li>To have a submission removed, write to
+          <li>A speaker listens to every recording before anyone else can play
+            it. Once approved, anyone using this site or the chat can play it</li>
+          <li>A name given with a recording may be shown publicly on the site.
+            The voice you chose is not shown anywhere</li>
+          <li>If you ticked the second box, your recording may also be used to
+            build speech tools for Kenyang</li>
+          <li>Recordings are not sent to OpenAI</li>
+          <li>Submissions, including recordings, are held by Supabase, the
+            database service this site uses</li>
+          <li>To have a submission or a recording removed, write to
             <a href="mailto:agboredouard51@gmail.com"
                style="color:var(--place)">agboredouard51@gmail.com</a></li>
         </ul>
@@ -1069,7 +1158,8 @@ footer p{margin:0}
       learning that happens on its own. A speaker confirms a word, writes it into
       the material by hand, and only then can Nɛpɛm say it. That is slower than
       an AI that teaches itself, and it is the reason this one can be trusted with
-      a child.</p>
+      a child. A recording is the same: nobody can play it until a speaker has
+      listened to it and approved it.</p>
   </section>
 
   <hr class="rule">
@@ -1950,6 +2040,11 @@ renderL();
    table. So a person who digs it out of this file cannot pull the table back
    and read contributors' names. Reading happens on the review page, with a
    different key that never leaves the server.
+
+   Recordings follow the same rule. The key can add a file to the private
+   pending bucket and a pending row to `recordings`, and nothing more. Its one
+   read is the recording_status function, which, given ids, returns only
+   their status; this page asks it only about ids this browser sent.
    ═══════════════════════════════════════════════════════════════════════════ */
 
 /*  ▸▸ PUT YOUR SUPABASE VALUES HERE ◂◂
@@ -2035,33 +2130,32 @@ function openTeach(english){
     : "What is the Kenyang for this?";
   showForm("teach");
 }
-/* Only one form open at a time, so the page never has two competing sets of
-   fields on screen. Opening one closes the other. */
+/* The teach form is always open, so a speaker who comes to record meets it
+   first. Only the correction form opens and closes. "teach" scrolls to the
+   teach form; "wrong" opens the correction form; null closes it. */
 function showForm(which){
-  const t = $("tform"), r = $("rform");
-  const openT = which === "teach", openR = which === "wrong";
-  t.style.display = openT ? "" : "none";
+  const r = $("rform"), openR = which === "wrong";
   r.style.display = openR ? "" : "none";
-  $("btnTeach").setAttribute("aria-expanded", openT ? "true" : "false");
   $("btnWrong").setAttribute("aria-expanded", openR ? "true" : "false");
-  const shown = openT ? t : openR ? r : null;
+  const shown = openR ? r : which === "teach" ? $("tform") : null;
   if (shown){
     shown.scrollIntoView({block:"center", behavior:"smooth"});
-    setTimeout(() => (openT ? $("tfKen") : $("rfQ")).focus(), 350);
+    setTimeout(() => (openR ? $("rfQ") : $("tfKen")).focus(), 350);
   }
 }
-$("btnTeach").addEventListener("click", () => {
-  const already = $("btnTeach").getAttribute("aria-expanded") === "true";
-  if (already){ showForm(null); return; }
-  $("tfTitle").textContent = "What is the Kenyang for this?";
-  $("tfEn").value = ""; $("tfKen").value = ""; $("tfMsg").innerHTML = "";
-  showForm("teach");
-});
 $("btnWrong").addEventListener("click", () => {
   const already = $("btnWrong").getAttribute("aria-expanded") === "true";
   showForm(already ? null : "wrong");
 });
-$("tfCancel").addEventListener("click", () => showForm(null));
+/* the teach form has nowhere to close to, so "Not now" puts it back empty,
+   throwing away any recording not yet sent */
+$("tfCancel").addEventListener("click", () => {
+  ["tfEn","tfKen","tfNote"].forEach(id => $(id).value = "");
+  $("tfTitle").textContent = "What is the Kenyang for this?";
+  $("tfMsg").innerHTML = "";
+  recDiscard();
+  paintHas();
+});
 $("rfCancel").addEventListener("click", () => showForm(null));
 
 /* ── the contributors' door ───────────────────────────────────────
@@ -2090,11 +2184,32 @@ $("tfSend").addEventListener("click", async () => {
       Nothing was sent.</div>`;
     return;
   }
+  if (REC.ctx) recStop();
   $("tfSend").disabled = true;
   $("tfSend").textContent = "Sending…";
 
   /* keep it on this device too, so the card shows it straight away */
   if (en){ S.fam[en] = ken; save(); if ($("wgrid")) paintWeek(); }
+
+  /* with a recording, the word goes with it to the recordings table, and
+     nowhere else; without one, it goes as text exactly as it always has */
+  if (REC.take){
+    const sent = await sendRecording(en, ken);
+    $("tfSend").disabled = false;
+    $("tfSend").textContent = "Send it";
+    if (sent.ok){
+      msg.innerHTML = `<div class="fmsg ok">Thank you. <b>${esc(ken)}</b> and your
+        recording have been sent. A speaker listens to every recording before
+        anyone else can play it.</div>`;
+      $("tfNote").value = "";
+      recDiscard();
+    } else {
+      msg.innerHTML = `<div class="fmsg bad">Nothing was sent, because
+        ${esc(sent.why)}. Your recording is still here, so you can press
+        Send it again.</div>`;
+    }
+    return;
+  }
 
   const res = await sendToSupabase({
     id: newId(), kind: "new_word", question: en, answer: "",
@@ -2119,6 +2234,301 @@ $("tfSend").addEventListener("click", async () => {
       so it is not lost.</div>`;
   }
 });
+
+/* ── recording a word ─────────────────────────────────────────────
+   The raw signal is captured with an AudioWorklet and written out here as
+   16-bit mono WAV. No compressed stage, so nothing is lost before it is
+   stored, and WAV plays in every browser. The browser's noise suppression,
+   echo cancellation and automatic volume are asked off, because they change
+   the voice; what the browser actually applied is sent with the recording.
+   Nothing leaves the device until Send it.
+
+   The file goes to a private bucket that this key can add to and never read,
+   under a random id that is also its name for ever. The row goes to
+   `recordings`, where the database lets this key write only a pending,
+   unlinked, non-primary row. Ed hears it on the review page; until he
+   approves it, it has no public address at all.                          */
+const CONSENT_VERSION = "2026-11-24";
+const REC_MAX_MS = 10000;
+const REC = {take:null, ms:0, rate:0, capture:null, ctx:null, stream:null,
+             node:null, chunks:[], t0:0, timer:0, url:null, player:null, session:null};
+const TAP_WORKLET = `class Tap extends AudioWorkletProcessor{
+  process(i){const c=i[0]&&i[0][0];if(c)this.port.postMessage(c.slice(0));return true}}
+  registerProcessor("nepem-tap",Tap);`;
+
+function hexId(bytes){
+  return [...crypto.getRandomValues(new Uint8Array(bytes))]
+    .map(b => b.toString(16).padStart(2, "0")).join("");
+}
+/* one random code per browser, sent with every recording, so recordings by
+   the same voice can be grouped. It says nothing about who anyone is. */
+function voiceCode(){
+  try{
+    let c = localStorage.getItem("nepem.voicecode");
+    if (!/^[0-9a-f]{32}$/.test(c || "")){ c = hexId(16); localStorage.setItem("nepem.voicecode", c); }
+    return c;
+  }catch(e){ return REC.session || (REC.session = hexId(16)); }
+}
+
+function recSay(html){ $("recMsg").innerHTML = html ? `<div class="fmsg bad">${html}</div>` : ""; }
+
+function recPaint(){
+  const going = !!REC.ctx, have = !!REC.take;
+  $("recGo").textContent = going ? "Stop recording" : "Record";
+  $("recGo").hidden = have && !going;
+  $("recGo").disabled = !going && !$("recOk").checked;
+  $("recPlay").hidden = going || !have;
+  $("recAgain").hidden = going || !have;
+  $("recAgain").disabled = !$("recOk").checked;
+}
+
+const NO_REC = "This browser cannot record here, so nothing was recorded. You can still send the word as text.";
+
+async function recStart(){
+  if (REC.ctx || !$("recOk").checked) return;
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia
+      || !window.AudioWorkletNode){ recSay(NO_REC); return; }
+  recSay("");
+  let stream, ctx;
+  try{
+    stream = await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,
+      echoCancellation:false, noiseSuppression:false, autoGainControl:false}});
+  }catch(e){
+    recSay(e && e.name === "NotAllowedError"
+      ? "The microphone was not allowed, so nothing was recorded. You can still send the word as text."
+      : "No microphone could be opened, so nothing was recorded. You can still send the word as text.");
+    return;
+  }
+  try{
+    try{ ctx = new AudioContext({sampleRate:48000}); }catch(e){ ctx = new AudioContext(); }
+    const url = URL.createObjectURL(new Blob([TAP_WORKLET], {type:"application/javascript"}));
+    try{ await ctx.audioWorklet.addModule(url); } finally { URL.revokeObjectURL(url); }
+    const src = ctx.createMediaStreamSource(stream);
+    const node = new AudioWorkletNode(ctx, "nepem-tap");
+    /* a node is only run while it leads somewhere, so it goes out through
+       silence: nothing is played back while recording */
+    const hush = ctx.createGain(); hush.gain.value = 0;
+    src.connect(node); node.connect(hush); hush.connect(ctx.destination);
+    REC.chunks = [];
+    node.port.onmessage = e => REC.chunks.push(e.data);
+    if (ctx.state === "suspended") await ctx.resume();
+    const t = stream.getAudioTracks()[0];
+    const s = t && t.getSettings ? t.getSettings() : {};
+    REC.capture = {echoCancellation:s.echoCancellation, noiseSuppression:s.noiseSuppression,
+      autoGainControl:s.autoGainControl, channelCount:s.channelCount,
+      sampleSize:s.sampleSize, deviceSampleRate:s.sampleRate, contextSampleRate:ctx.sampleRate,
+      format:"wav pcm16 mono"};
+    Object.assign(REC, {ctx, stream, node, rate:ctx.sampleRate, t0:performance.now()});
+  }catch(e){
+    stream.getTracks().forEach(x => x.stop());
+    if (ctx) ctx.close();
+    recSay(NO_REC);
+    return;
+  }
+  $("recTime").textContent = "0.0 s";
+  REC.timer = setInterval(() => {
+    const ms = performance.now() - REC.t0;
+    $("recTime").textContent = (ms / 1000).toFixed(1) + " s";
+    if (ms >= REC_MAX_MS) recStop();
+  }, 100);
+  recPaint();
+}
+
+function recStop(){
+  if (!REC.ctx) return;
+  clearInterval(REC.timer);
+  REC.node.port.onmessage = null;
+  REC.stream.getTracks().forEach(x => x.stop());
+  REC.ctx.close();
+  const n = REC.chunks.reduce((a, c) => a + c.length, 0);
+  const pcm = new Float32Array(n);
+  let o = 0, peak = 0;
+  for (const c of REC.chunks){ pcm.set(c, o); o += c.length; }
+  for (let i = 0; i < n; i++){ const v = Math.abs(pcm[i]); if (v > peak) peak = v; }
+  Object.assign(REC, {ctx:null, stream:null, node:null, chunks:[]});
+  const ms = Math.round(n / REC.rate * 1000);
+  if (ms < 300){
+    REC.take = null;
+    $("recTime").textContent = "";
+    recSay("That was too short to hear anything. Press Record, say the word, then press Stop recording.");
+    recPaint();
+    return;
+  }
+  REC.take = toWav(pcm, REC.rate);
+  REC.ms = ms;
+  if (REC.url) URL.revokeObjectURL(REC.url);
+  REC.url = URL.createObjectURL(REC.take);
+  $("recTime").textContent = (ms / 1000).toFixed(1) + " s";
+  recSay(peak < 0.03 ? "This came out very quiet. Listen back, and if it is hard to hear, record it again closer to the microphone." : "");
+  recPaint();
+}
+
+function recDiscard(){
+  if (REC.ctx) recStop();
+  if (REC.player) REC.player.pause();
+  if (REC.url) URL.revokeObjectURL(REC.url);
+  Object.assign(REC, {take:null, ms:0, url:null});
+  $("recTime").textContent = "";
+  recSay("");
+  recPaint();
+}
+
+function toWav(pcm, rate){
+  const buf = new ArrayBuffer(44 + pcm.length * 2), d = new DataView(buf);
+  const tag = (at, s) => { for (let i = 0; i < 4; i++) d.setUint8(at + i, s.charCodeAt(i)); };
+  tag(0, "RIFF"); d.setUint32(4, 36 + pcm.length * 2, true); tag(8, "WAVE");
+  tag(12, "fmt "); d.setUint32(16, 16, true); d.setUint16(20, 1, true);   /* PCM */
+  d.setUint16(22, 1, true); d.setUint32(24, rate, true);                   /* mono */
+  d.setUint32(28, rate * 2, true); d.setUint16(32, 2, true); d.setUint16(34, 16, true);
+  tag(36, "data"); d.setUint32(40, pcm.length * 2, true);
+  for (let i = 0; i < pcm.length; i++){
+    const v = Math.max(-1, Math.min(1, pcm[i]));
+    d.setInt16(44 + i * 2, v < 0 ? v * 0x8000 : v * 0x7FFF, true);
+  }
+  return new Blob([buf], {type:"audio/wav"});
+}
+
+$("recOk").addEventListener("change", recPaint);
+$("recGo").addEventListener("click", () => REC.ctx ? recStop() : recStart());
+$("recAgain").addEventListener("click", () => { recDiscard(); recStart(); });
+$("recPlay").addEventListener("click", () => {
+  if (!REC.url) return;
+  if (!REC.player) REC.player = new Audio();
+  REC.player.src = REC.url;
+  REC.player.play().catch(() => {});
+});
+
+async function sendRecording(en, ken){
+  if (!SUPA.url || !SUPA.key) return {ok:false, why:"nothing is connected yet"};
+  if (!$("recOk").checked) return {ok:false, why:"the first box above the Record button is not ticked"};
+  const id = hexId(12), base = SUPA.url.replace(/\/$/, "");
+  const auth = {"apikey": SUPA.key, "Authorization": "Bearer " + SUPA.key};
+  try {
+    const up = await fetch(`${base}/storage/v1/object/recordings-pending/${id}.wav`,
+      {method:"POST", headers:{...auth, "Content-Type":"audio/wav"}, body:REC.take});
+    if (!up.ok) return {ok:false, why:"the recording could not be stored (" + up.status + ")"};
+    const r = await fetch(`${base}/rest/v1/recordings`, {
+      method:"POST",
+      headers:{...auth, "Content-Type":"application/json", "Prefer":"return=minimal"},
+      body: JSON.stringify({
+        id, typed_kenyang: ken.slice(0, 200), typed_english: en.slice(0, 300),
+        note: $("tfNote").value.trim().slice(0, 2000),
+        speaker: $("tfWho").value.trim().slice(0, 120),
+        village: $("tfVil").value.trim().slice(0, 120),
+        voice: $("tfVoice").value, speaker_code: voiceCode(),
+        consent_public: true, consent_speech_tools: $("recTools").checked,
+        consent_version: CONSENT_VERSION,
+        sample_rate: REC.rate, duration_ms: Math.min(REC.ms, 15000),
+        capture: REC.capture || {}
+      })
+    });
+    if (!r.ok) return {ok:false, why:"the database said " + r.status};
+  } catch (e){
+    return {ok:false, why:"the database could not be reached"};
+  }
+  rememberMine(id);
+  return {ok:true};
+}
+
+/* ── what happened to my recordings ──────────────────────────────────
+   The ids this browser sent are kept here, and only here. The database
+   answers one narrow question about them: their status. Nothing else is
+   readable with this key, and a stranger cannot guess anybody's ids.     */
+function mineIds(){
+  try{
+    const a = JSON.parse(localStorage.getItem("nepem.mine") || "[]");
+    return Array.isArray(a) ? a.filter(x => /^[0-9a-f]{24}$/.test(x)) : [];
+  }catch(e){ return []; }
+}
+function rememberMine(id){
+  try{ localStorage.setItem("nepem.mine", JSON.stringify(mineIds().concat(id).slice(-50))); }
+  catch(e){}
+  paintMine();
+}
+async function paintMine(){
+  const el = $("tfMine"), ids = mineIds();
+  if (!ids.length || !SUPA.url || !SUPA.key){ el.hidden = true; return; }
+  try{
+    const r = await fetch(SUPA.url.replace(/\/$/, "") + "/rest/v1/rpc/recording_status", {
+      method:"POST",
+      headers:{"apikey":SUPA.key, "Authorization":"Bearer " + SUPA.key,
+               "Content-Type":"application/json"},
+      body: JSON.stringify({ids})
+    });
+    if (!r.ok) throw 0;
+    const rows = await r.json();
+    const n = s => rows.filter(x => x.status === s).length;
+    const parts = [[n("approved"), "approved"], [n("pending"), "waiting"],
+                   [n("rejected"), "set aside"]].filter(p => p[0]).map(p => p.join(" "));
+    if (!parts.length){ el.hidden = true; return; }
+    el.textContent = `Your recordings: ${parts.join(", ")}. This only works on this `
+      + "device and in this browser.";
+    el.hidden = false;
+  }catch(e){ el.hidden = true; }
+}
+
+/* ── words that already have a recording ─────────────────────────────
+   Text only. Ed's come from his own list, which is checked against his
+   manifest so a word is listed only if its recording is really there; the
+   speakers' come from a text-only file the review page writes, holding only
+   approved words. Neither is shown with a player or an address. Every
+   word stays open: another voice is wanted, not a duplicate to avoid.     */
+const KNOWN = new Map();
+const foldWord = w => w.normalize("NFC").toLowerCase().replace(/[’‘ʼʻ`´]/g, "'")
+  .replace(/\s+/g, " ").trim().replace(/[?.!,;:]+$/, "").trim();
+
+async function loadKnown(){
+  const add = (ken, en, voices) => {
+    const k = foldWord(ken);
+    if (!k) return;
+    const was = KNOWN.get(k);
+    if (was) was.voices += voices;
+    else KNOWN.set(k, {kenyang: ken, english: en, voices});
+  };
+  let any = false;
+  try{
+    const [w, m] = await Promise.all([fetch("audio_words.json", {cache:"no-cache"}),
+                                      fetch("audio/manifest.json", {cache:"no-cache"})]);
+    if (w.ok && m.ok){
+      const have = await m.json();
+      for (const e of await w.json())
+        if (e && e.kenyang && have[foldWord(e.kenyang)]) add(e.kenyang, e.english || "", 1);
+      any = true;
+    }
+  }catch(e){}
+  try{
+    const r = await fetch(SUPA.url.replace(/\/$/, "")
+      + "/storage/v1/object/public/recordings/recorded_words.json", {cache:"no-cache"});
+    if (r.ok){
+      const a = await r.json();
+      if (Array.isArray(a)) for (const e of a)
+        if (e && typeof e.kenyang === "string")
+          add(e.kenyang, String(e.english || ""), Math.max(1, Math.floor(Number(e.voices)) || 1));
+    }
+    any = true;               /* no file yet is not a failure: nobody has been approved */
+  }catch(e){}
+  const list = $("tfKnownList");
+  if (!any || !KNOWN.size){
+    list.innerHTML = `<li>The list could not be loaded just now.</li>`;
+    return;
+  }
+  $("tfKnownSum").textContent = `See the words that already have a recording (${KNOWN.size})`;
+  list.innerHTML = [...KNOWN.values()].map(w =>
+    `<li><b>${esc(w.kenyang)}</b>${w.english ? " · " + esc(w.english) : ""}`
+    + ` · ${w.voices} ${w.voices === 1 ? "voice" : "voices"}</li>`).join("");
+  paintHas();
+}
+
+function paintHas(){
+  const el = $("tfHas"), w = KNOWN.get(foldWord($("tfKen").value || ""));
+  el.hidden = !w;
+  if (w) el.textContent = `${w.kenyang} already has a recording. Another voice for it is welcome.`;
+}
+$("tfKen").addEventListener("input", paintHas);
+
+recPaint();
+paintMine();
+loadKnown();
 
 /* ── the report form ────────────────────────────────────────────── */
 $("rfSend").addEventListener("click", async () => {
