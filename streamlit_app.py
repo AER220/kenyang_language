@@ -1151,15 +1151,106 @@ RECORDINGS — words a speaker has recorded. This list is for knowing what can b
 not a source of Kenyang: teach a word only from your material, never because it is listed here.
 {", ".join(words)}
 
-- When you teach or mention a word on this list, say once in the reply that they can tap it to
-  hear it said. Once per reply, not once per word.
-- A tap finds a word only when its letters and tone marks match this list. Capitals don't
-  matter. Keep the spelling your material gives; if that differs from the list, the word
-  can't be tapped, so don't say it can.
-- When a learner asks how a word is said or pronounced: if it is on this list, tell them to tap
-  it to hear a speaker say it. If it is not, say plainly that it isn't recorded yet. Do not
-  try to describe the sound instead.
+- NEVER tell a learner they can tap a word, or that a word has a recording. The page adds
+  that line itself, under your reply, and only for words that really are recorded. Leave it
+  to the page.
+- Keep the spelling your material gives. Do not change a word to match this list.
+- When a learner asks how a word is said or pronounced: if the word you are teaching is NOT
+  on this list, letters and tone marks exactly, say plainly that it isn't recorded yet. If it
+  is on the list, just teach it; the page will show them how to hear it. Either way, do not
+  try to describe the sound.
 """
+
+def recorded_keys():
+    """Every folded word or phrase that has a recording, Ed's and the speakers': the
+    same two lists say.js underlines from."""
+    try:
+        with open(os.path.join("audio", "manifest.json"), encoding="utf-8") as f:
+            keys = {k for k in json.load(f) if k.strip()}
+    except (OSError, ValueError):
+        keys = set()
+    return keys | set(speakers_recorded())
+
+
+_APOS = "'’‘ʼʻ"
+
+
+def _word_spans(text):
+    """Where the words are, the way say.js finds them: letters, tone marks (category M,
+    which \\w misses), apostrophes, and hyphens inside a word as in ekeré-ékáti."""
+    isw = lambda c: unicodedata.category(c)[0] in "LM" or c in _APOS
+    spans, i, n = [], 0, len(text)
+    while i < n:
+        if not isw(text[i]):
+            i += 1
+            continue
+        j = i
+        while j < n and (isw(text[j]) or (text[j] == "-" and j + 1 < n and isw(text[j + 1])
+                                           and j > i)):
+            j += 1
+        spans.append((i, j))
+        i = j
+    return spans
+
+
+def recorded_in(text, keys):
+    """The recorded words in a reply, as they are written there, longest match first,
+    each once. A phrase only spans plain spaces, as in say.js, so this names exactly
+    what the page will underline."""
+    from build_audio_manifest import fold
+    if not keys:
+        return []
+    longest = max(len(k.split(" ")) for k in keys)
+    toks, out, seen, i = _word_spans(text), [], set(), 0
+    while i < len(toks):
+        for n in range(min(longest, len(toks) - i), 0, -1):
+            j = i + n - 1
+            if any(text[toks[x][1]:toks[x + 1][0]].strip() for x in range(i, j)):
+                continue
+            raw = text[toks[i][0]:toks[j][1]]
+            key = fold(raw)
+            if key not in keys:
+                key = key.strip("'")
+            if key in keys:
+                if key not in seen:
+                    seen.add(key)
+                    out.append(raw if fold(raw) == key else raw.strip("'"))
+                i = j
+                break
+        i += 1
+    return out
+
+
+_TAP_CLAIM = re.compile(r"\btap(?:s|ped|ping)?\b", re.IGNORECASE)
+
+
+def drop_tap_claims(reply):
+    """Take out any sentence of the model's that talks about tapping. Whether a word can
+    be tapped is the page's to say, in hear_line(); the model is told not to, and once
+    said it of a word that had no recording. Removing the sentence makes the claim
+    impossible rather than merely discouraged. Line breaks are kept."""
+    if not _TAP_CLAIM.search(reply):
+        return reply
+    lines = []
+    for line in reply.split("\n"):
+        parts = re.split(r"(?<=[.!?])\s+", line)
+        kept = [p for p in parts if not _TAP_CLAIM.search(p)]
+        if kept or not line.strip():
+            lines.append(" ".join(kept))
+    return "\n".join(lines).strip()
+
+
+def hear_line(words):
+    """The one line under a reply that says what can be heard. Written by code, never by
+    the model, so it is never wrong about which words are recorded."""
+    if not words:
+        return ""
+    if len(words) == 1:
+        return f"Tap {words[0]} to hear it said."
+    if len(words) <= 3:
+        return f"Tap {', '.join(words[:-1])} or {words[-1]} to hear them said."
+    return "Tap any underlined word to hear it said."
+
 
 # This sits at the very END of everything, right against the learner's question. The rules
 # at the top are thousands of tokens away by then, and models attend hardest to what comes
@@ -1364,6 +1455,8 @@ html{color-scheme: light;}
 .bubble.bot{background:#FFFFFF;color:var(--ink);border:1px solid var(--edge);
   border-radius:16px 16px 16px 4px;}
 .bubble.me{background:var(--forest);color:#F1FBF6;border-radius:16px 16px 4px 16px;}
+/* the line the code adds when a reply has recorded words in it */
+.bubble .hear{display:block;margin-top:8px;font-size:.92em;color:var(--leaf);}
 .bubble .li{display:block;padding-left:15px;text-indent:-15px;margin:3px 0;}
 .bubble .li:before{content:"•";color:var(--leaf);padding-right:8px;}
 .bubble.me .li:before{color:#8FD4B4;}
@@ -1533,9 +1626,13 @@ def to_html(text):
     return "".join(pieces).removesuffix("<br>")
 
 
-def bubble(role, text, streaming=False):
-    """One chat row, built as a single HTML line so Streamlit can't read it as a code block."""
+def bubble(role, text, streaming=False, hear=""):
+    """One chat row, built as a single HTML line so Streamlit can't read it as a code block.
+    `hear` is the line saying which words can be heard, written by hear_line(), not by
+    the model; it sits inside the bubble, so its words are tappable too."""
     body = to_html(text) + ('<span class="caret"></span>' if streaming else "")
+    if hear:
+        body += f'<span class="hear">{html.escape(hear)}</span>'
     if role == "user":
         return (f'<div class="row me"><div class="bubble me">{body}</div>'
                 f'<div class="ava ava-me">{AVA_YOU}</div></div>')
@@ -1764,7 +1861,8 @@ for i, m in enumerate(st.session_state.messages):
     if i == horizon and horizon > 0:
         st.markdown('<div class="memmark">Nɛpɛm remembers from here on</div>',
                     unsafe_allow_html=True)
-    st.markdown(bubble(m["role"], m["content"]), unsafe_allow_html=True)
+    st.markdown(bubble(m["role"], m["content"], hear=m.get("hear", "")),
+                unsafe_allow_html=True)
 
 # --- starters ----------------------------------------------------------------
 starter = None
@@ -1837,7 +1935,8 @@ if st.session_state.pending:
             correction_note(last_user), RULES_REMINDER) if x)
 
         api_messages = ([{"role": "system", "content": STATIC_CONTEXT},
-                         {"role": "system", "content": turn_context}] + history)
+                         {"role": "system", "content": turn_context}]
+                        + [{"role": m["role"], "content": m["content"]} for m in history])
 
         # GPT-5 and GPT-6 models reject `temperature` outright — the parameter being
         # present is the error, whatever value it holds. So I send it only where it's taken.
@@ -1903,9 +2002,16 @@ if st.session_state.pending:
                                       unsafe_allow_html=True)
                         painted = len(reply)
 
+            reply = drop_tap_claims(reply)
             if reply.strip():
-                slot.markdown(bubble("assistant", reply), unsafe_allow_html=True)
-                st.session_state.messages.append({"role": "assistant", "content": reply})
+                # Which words can be heard is a fact the code can check, so the code says
+                # it. The model is told never to; it once claimed a recording that did not
+                # exist. The line is kept beside the reply, not in it, so it is never sent
+                # back to the model as something to imitate.
+                hear = hear_line(recorded_in(reply, recorded_keys()))
+                slot.markdown(bubble("assistant", reply, hear=hear), unsafe_allow_html=True)
+                st.session_state.messages.append({"role": "assistant", "content": reply,
+                                                  "hear": hear})
                 # Check the reply against the material it was built from, and say so.
                 loose = unsupported_words(reply, found, always_on)
                 if loose:
