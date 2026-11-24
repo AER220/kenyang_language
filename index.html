@@ -344,19 +344,14 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .pickc{position:relative;text-align:left;border:1px solid var(--edge);border-radius:var(--r);
   padding:19px 18px;background:var(--lift);cursor:pointer;color:inherit;font-family:inherit;
   overflow:hidden;transition:transform .24s,border-color .3s,background .3s}
-.pickc::after{content:"";position:absolute;inset:0;opacity:0;transition:opacity .35s;
-  background:radial-gradient(240px circle at var(--px,50%) var(--py,50%),
-             rgba(var(--accent-rgb),.12),transparent 62%)}
 .pickc:hover{transform:translateY(-4px);border-color:var(--edge-hi);background:var(--lift2)}
-.pickc:hover::after{opacity:1}
 .pickc[aria-selected="true"]{border-color:var(--accent);background:var(--lift2)}
-.pickc .ic{font-size:26px;line-height:1;margin-bottom:9px}
 .pickc h3{font-family:var(--serif);font-size:20px;font-weight:700;margin:0 0 5px}
 .pickc p{font-size:13.5px;color:var(--mute);margin:0;line-height:1.5}
-.pickc .tag{display:inline-block;margin-top:10px;font-size:11.5px;letter-spacing:.08em;
-  padding:3px 10px;border-radius:99px;border:1px solid var(--edge)}
-.tag.fam{color:var(--p2);border-color:rgba(255,158,207,.35)}
-.tag.solo{color:var(--who);border-color:rgba(66,227,188,.32)}
+/* who it is for, as a plain line: pink means family, as everywhere; on your
+   own is quiet, not WHO's mint */
+.pickc .tag{display:block;margin-top:10px;font-size:13px;color:var(--mute)}
+.tag.fam{color:var(--p2)}
 
 .stage{margin-top:22px;padding:clamp(18px,3vw,28px) 0 0;border-top:1px solid var(--line);min-height:340px}
 .shead{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;
@@ -798,7 +793,6 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
   html{scroll-behavior:auto}
   *{transition-duration:.01ms !important;animation-duration:.01ms !important}
 }
-@media (hover:none){ .pickc::after{display:none} }
 @media (max-width:880px){
   .two{grid-template-columns:1fr;gap:18px}
   .sec{padding:30px 0} nav{padding:12px 0} .brand small{display:none}
@@ -915,7 +909,7 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
       people.</p>
 
     <div class="picks" id="picks" role="tablist" aria-label="Choose an activity"></div>
-    <div class="stage glass" id="stage" role="tabpanel" aria-live="polite"></div>
+    <div class="stage" id="stage" role="tabpanel" aria-live="polite"></div>
   </section>
 
   <hr class="rule">
@@ -1617,10 +1611,11 @@ const stage = $("stage");
 
 function paintPicks(){
   $("picks").innerHTML = PICKS.map(p=>{
-    const body = `<div class="ic" aria-hidden="true">${p.ic}</div>
-      <h3>${p.t}</h3><p>${p.d}</p>
-      <span class="tag ${p.tag}">${p.href?"OPENS A PAGE":
-        p.tag==="fam"?"BETTER WITH TWO":"ON YOUR OWN"}</span>`;
+    /* no emoji: they are drawn differently on every phone and clash with the
+       page; the title says what each one is */
+    const body = `<h3>${p.t}</h3><p>${p.d}</p>
+      <span class="tag ${p.tag}">${p.href?"Opens a page":
+        p.tag==="fam"?"Better with two":"On your own"}</span>`;
     /* a card that goes somewhere is a link, so it can be opened in a new tab
        and read out as a link rather than a button */
     return p.href
@@ -1631,11 +1626,6 @@ function paintPicks(){
   document.querySelectorAll(".pickc").forEach(c=>{
     if (!c.dataset.pick) return;          /* the games card is a plain link */
     c.addEventListener("click",()=>{A.id=c.dataset.pick; runActivity();});
-    c.addEventListener("pointermove",e=>{
-      const r=c.getBoundingClientRect();
-      c.style.setProperty("--px",(e.clientX-r.left)+"px");
-      c.style.setProperty("--py",(e.clientY-r.top)+"px");
-    },{passive:true});
   });
 }
 
