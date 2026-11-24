@@ -514,9 +514,10 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 /* ── teaching Nɛpɛm, from the website ───────────────────────────
    The old version put a browser prompt() box on screen, which is ugly, has no
    room for a name, and cannot explain itself. This is a real form.            */
-.tform{margin-top:14px;padding:20px;border-radius:17px;
-  background:rgba(255,158,207,.055);border:1px solid rgba(255,158,207,.28)}
-.tform .eyebrow{font-size:11.5px;letter-spacing:.11em;color:var(--p2);margin:0 0 8px}
+/* a form is not a thing you tap, so no box: a rule above it, and its label in
+   the form's own colour (pink for teaching, red for a correction) */
+.tform{margin-top:18px;padding:22px 0 0;border-top:1px solid var(--line)}
+.tform .eyebrow{font-size:14px;font-weight:600;color:var(--p2);margin:0 0 6px}
 .tform h4{font-family:var(--serif);font-size:20px;margin:0 0 4px}
 .tform .sub{font-size:13.5px;color:var(--mute);margin:0 0 16px;line-height:1.55}
 .frow{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px;
@@ -551,7 +552,7 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .chk{display:flex;gap:9px;align-items:flex-start;font-size:14px;line-height:1.45;
   margin:0 0 10px;cursor:pointer}
 .chk input{accent-color:var(--p2);width:18px;height:18px;margin:1px 0 0;flex:none}
-.chk .opt{color:var(--mute)}
+.chk .optnote{color:var(--mute)}
 .recrow{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:14px 0 0}
 .recrow .btn[disabled]{opacity:.45;cursor:not-allowed}
 .rectime{font-size:14px;color:var(--mute);font-variant-numeric:tabular-nums}
@@ -591,8 +592,8 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .helpc[aria-expanded="true"] .arrow{transform:rotate(90deg)}
 
 /* ── the contributors' door ──────────────────────────────────────── */
-.door{margin:26px 0 0;padding:17px 20px;border-radius:15px;background:var(--lift);
-  border:1px solid var(--edge);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.door{margin:30px 0 0;padding:20px 0 0;border-top:1px solid var(--line);
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .door .dt{flex:1;min-width:200px}
 .door h4{font-family:var(--serif);font-size:17px;margin:0 0 3px}
 .door p{font-size:13.5px;color:var(--mute);margin:0;line-height:1.5}
@@ -603,12 +604,13 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .doormsg.show{display:block}
 
 /* ── who has taught Nɛpɛm ──────────────────────────────────────── */
-.wall{display:flex;flex-wrap:wrap;gap:9px;margin:6px 0 0}
-.gave{display:inline-flex;align-items:baseline;gap:8px;padding:9px 15px;
-  border-radius:99px;background:rgba(255,158,207,.07);
-  border:1px solid rgba(255,158,207,.26);font-size:14.5px}
-.gave .v{font-size:12px;color:var(--mute)}
-.gave .n{font-family:var(--serif);font-size:12px;color:var(--p2)}
+/* the people, one row each, divided by rules: a name is not a tag */
+.wall{display:block;margin:6px 0 0;max-width:34em}
+.gave{display:flex;align-items:baseline;gap:10px;padding:10px 0;
+  border-bottom:1px solid var(--line);font-size:15.5px}
+.gave:first-child{border-top:1px solid var(--line)}
+.gave .v{font-size:13.5px;color:var(--mute)}
+.gave .n{margin-left:auto;font-size:14px;color:var(--p2);font-variant-numeric:tabular-nums}
 .wallnote{font-size:13.5px;color:var(--mute);margin:16px 0 0;line-height:1.6}
 
 /* ── what is kept, and what is not ─────────────────────────────── */
@@ -962,7 +964,7 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
          recorder, not a choice of forms. Recording is a step inside it and
          is optional: without a recording the word goes as text, as before. -->
     <div class="tform" id="tform">
-      <p class="eyebrow" id="tfEyebrow">TEACH NƐPƐM A WORD</p>
+      <p class="eyebrow" id="tfEyebrow">Teach Nɛpɛm a word</p>
       <h4 id="tfTitle">What is the Kenyang for this?</h4>
       <p class="sub">Write it the way it is said. Spelling gets tidied later;
         getting it written down at all is the hard part.</p>
@@ -1005,7 +1007,7 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
           I understand, and I want my voice used this way.</label>
         <label class="chk"><input type="checkbox" id="recTools">
           You may also use my recording to build speech tools for Kenyang.
-          <span class="opt">(optional)</span></label>
+          <span class="optnote">(optional)</span></label>
         <div class="recrow">
           <button class="btn fam" id="recGo" type="button" disabled>Record</button>
           <button class="btn" id="recPlay" type="button" hidden>Listen back</button>
@@ -1051,7 +1053,6 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
       <button class="helpc wrong" id="btnWrong" aria-expanded="false"
               aria-controls="rform">
         <span class="arrow" aria-hidden="true">›</span>
-        <div class="ic" aria-hidden="true">✎</div>
         <h3>Nɛpɛm got something wrong</h3>
         <p>He invents things when he does not know, and he has been corrected
           before. Say what he should have said, and why.</p>
@@ -1059,9 +1060,8 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
     </div>
 
     <!-- report ----------------------------------------------------------- -->
-    <div class="tform" id="rform" style="display:none;
-         border-color:rgba(255,106,85,.3);background:rgba(255,106,85,.05)">
-      <p class="eyebrow" style="color:var(--not)">TELL NƐPƐM HE IS WRONG</p>
+    <div class="tform" id="rform" style="display:none">
+      <p class="eyebrow" style="color:var(--not)">Tell Nɛpɛm he is wrong</p>
       <h4>What did he get wrong?</h4>
       <p class="sub">Nothing sent here changes what Nɛpɛm teaches until a speaker
         has read it. That gate is deliberate.</p>
@@ -1105,7 +1105,6 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
     <p class="wallnote" id="wallNote"></p>
 
     <div class="door">
-      <span class="lock" aria-hidden="true">🔒</span>
       <div class="dt">
         <h4>Reviewing what has come in</h4>
         <p>Submissions are read by a verified contributor before Nɛpɛm learns
