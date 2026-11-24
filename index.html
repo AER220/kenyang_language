@@ -626,6 +626,11 @@ h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
 .two{display:grid;grid-template-columns:1fr 1.25fr;gap:42px;align-items:start}
 .two p{color:var(--mute);margin:0 0 14px;line-height:1.7}
 .two p:last-child{margin:0}
+/* the photo under "Who made this, and why". Its width and height are given in
+   the tag, so the page does not jump when it loads. */
+.portrait{display:block;width:100%;max-width:240px;height:auto;margin-top:22px;
+  border-radius:var(--r);border:1px solid var(--edge)}
+@media (max-width:880px){ .portrait{max-width:180px;margin-top:16px} }
 .two b{color:var(--text);font-weight:500}
 .li{display:inline-flex;align-items:center;gap:9px;text-decoration:none;margin-top:8px;
   font-size:15px;font-weight:500;padding:11px 21px;border-radius:99px;
@@ -1193,7 +1198,11 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
 
   <section class="sec" id="about">
     <div class="two">
-      <h2 class="big" style="margin:0">Who made this, and why</h2>
+      <div>
+        <h2 class="big" style="margin:0">Who made this, and why</h2>
+        <img class="portrait" src="ed-portrait.jpg" alt="Agbor Edouard Ransome"
+             width="388" height="518" loading="lazy" decoding="async">
+      </div>
       <div>
         <p>I am <b>Agbor Edouard Ransome</b>, from the Manyu Division of Cameroon.
           Kenyang is my mother tongue.</p>
