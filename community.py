@@ -426,8 +426,11 @@ def set_status(rec_id, status, secrets=None):
 def to_markdown(rows):
     """
     Take the approved submissions and write them in the shape the verified file
-    uses, ready to paste. Credits are kept, because people who give their
-    language deserve their name on it.
+    uses, ready to paste.
+
+    No names. Credit belongs on the wall on the site. This block goes into the
+    knowledge base, which is sent to OpenAI with every question, and a
+    contributor agreed to their name being shown on the site, not to that.
     """
     ok = [r for r in rows if str(r.get("status", "")).lower() == "approved"]
     if not ok:
@@ -463,10 +466,5 @@ def to_markdown(rows):
             if r.get("note"):
                 out.append(f"Why: {r['note'].strip()}")
             out.append("")
-
-    names = sorted({(r.get("speaker") or "").strip() for r in ok
-                    if (r.get("speaker") or "").strip()})
-    if names:
-        out += ["With thanks to " + ", ".join(names) + ".", ""]
 
     return "\n".join(out), len(ok)
