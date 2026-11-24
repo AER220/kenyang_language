@@ -1320,21 +1320,89 @@ def material(found, always_on=""):
     return re.sub(r"\s+", " ", unicodedata.normalize("NFC", text)).lower()
 
 
-def unsupported_words(reply, found, always_on=""):
-    """
-    Which Kenyang words in this reply appear nowhere in the material behind it.
+_WORD = re.compile(r"[\w'’\u0300-\u036f]+(?:-[\w'’\u0300-\u036f]+)*", re.UNICODE)
 
-    This is the fabrication detector. It can't prove a word is wrong — the material uses
-    more than one spelling convention, so a real word may be written differently here —
-    but a word that appears in NO passage was not read out of my files. It was produced.
-    Given that people are using this to recover their mother tongue, they should be told.
 
-    The verified block travels with every answer, so it counts as material behind it too.
+def _fold_word(w):
+    return unicodedata.normalize("NFC", w).lower().replace("’", "'").strip("'")
+
+
+def _word_set(text):
+    """Every word in a text, folded, compared whole. A hyphenated word counts as itself
+    and as its parts, because kenyang_tokens() reads N-ném as ném."""
+    out = set()
+    for w in _WORD.findall(unicodedata.normalize("NFC", text).lower().replace("’", "'")):
+        w = w.strip("'")
+        if w:
+            out.add(w)
+            out.update(p for p in w.split("-") if p)
+    return out
+
+
+@st.cache_data(show_spinner=False)
+def confirmed_words(signature):
     """
-    if not found and not always_on:
-        return []
-    corpus = material(found, always_on)
-    return [w for w in kenyang_tokens(reply) if w.lower() not in corpus]
+    Every word a speaker has confirmed: the verified files read in full (not the capped
+    block sent to the model, or a verified word cut for length would look unchecked), and
+    Ed's own recordings, since he recorded them. `signature` is only the cache key.
+    """
+    words = set()
+    for path in glob.glob(os.path.join(KB_ROOT, "**", "*"), recursive=True):
+        if os.path.isfile(path) and tier_of(os.path.basename(path)) == "verified":
+            with open(path, encoding="utf-8", errors="ignore") as f:
+                words |= _word_set(f.read())
+    try:
+        with open("audio_words.json", encoding="utf-8") as f:
+            for e in json.load(f):
+                words |= _word_set(e.get("kenyang", ""))
+    except (OSError, ValueError):
+        pass
+    return words
+
+
+def check_words(reply, found, always_on=""):
+    """
+    The fabrication detector, by tier. For each Kenyang word in the reply:
+
+      confirmed      in a verified file, one of Ed's recordings, or a speaker's
+                     recording Ed approved: nothing to say
+      written        not confirmed, but in the passages behind the answer: it came from
+                     a book or a course chapter, and no speaker has checked it
+      nowhere        in none of it: it was produced, not read
+
+    It cannot prove a word wrong (the sources use more than one spelling) and it cannot
+    see a wrong phrase built from real words. What it can see, the learner is told.
+    Returns (nowhere, written).
+    """
+    sure = confirmed_words(kb_signature()) | _word_set(" ".join(speakers_recorded()))
+    behind = _word_set(material(found, always_on))
+    nowhere, written = [], []
+    for w in kenyang_tokens(reply):
+        f = _fold_word(w)
+        if f in sure:
+            continue
+        (written if f in behind else nowhere).append(w)
+    return nowhere, written
+
+
+def flag_html(nowhere, written):
+    """The ruled flag under a reply: one box, a line for each kind present."""
+    lines = []
+    if nowhere:
+        lines.append('Not found in the material behind this answer: <b>'
+                     + ", ".join(html.escape(w) for w in nowhere[:12]) +
+                     '</b>. These may be spelled differently in my sources — or they may '
+                     'not be real Kenyang. Check with a speaker before learning them.')
+    if written:
+        one = len(written) == 1
+        lines.append('From written sources, not yet checked by a speaker: <b>'
+                     + ", ".join(html.escape(w) for w in written[:12]) +
+                     '</b>. Check with a speaker before learning '
+                     + ('it.' if one else 'them.'))
+    if not lines:
+        return ""
+    return ('<div class="unchecked"><span class="mk" aria-hidden="true">!</span><span>'
+            + "".join(f'<span class="ln">{x}</span>' for x in lines) + '</span></div>')
 
 
 def taught_so_far(messages, cap=40):
@@ -1502,6 +1570,8 @@ html{color-scheme: light;}
   border-left-width:5px;color:var(--ink);font-size:.9rem;line-height:1.5;max-width:78%;
   display:flex;gap:10px;align-items:flex-start;}
 .unchecked b{font-weight:700;color:var(--ink);}
+.unchecked .ln{display:block;}
+.unchecked .ln + .ln{margin-top:7px;}
 .unchecked .mk{flex:none;width:20px;height:20px;border-radius:50%;background:var(--ink);
   color:#FFFFFF;font:700 13px/20px system-ui,sans-serif;text-align:center;margin-top:1px;}
 .memmark{display:flex;align-items:center;gap:10px;margin:20px 2px 16px;
@@ -2036,16 +2106,12 @@ if st.session_state.pending:
                 slot.markdown(bubble("assistant", reply, hear=hear), unsafe_allow_html=True)
                 st.session_state.messages.append({"role": "assistant", "content": reply,
                                                   "hear": hear})
-                # Check the reply against the material it was built from, and say so.
-                loose = unsupported_words(reply, found, always_on)
-                if loose:
-                    st.markdown(
-                        '<div class="unchecked"><span class="mk" aria-hidden="true">!</span>'
-                        '<span>Not found in the material behind this '
-                        'answer: <b>' + ", ".join(html.escape(w) for w in loose[:12]) +
-                        '</b>. These may be spelled differently in my sources — or they '
-                        'may not be real Kenyang. Check with a speaker before learning '
-                        'them.</span></div>', unsafe_allow_html=True)
+                # Check every Kenyang word against what a speaker has confirmed, and say
+                # where any unconfirmed one came from. Code, not an instruction: the model
+                # is also told to say when a form is unconfirmed, and once did not.
+                flag = flag_html(*check_words(reply, found, always_on))
+                if flag:
+                    st.markdown(flag, unsafe_allow_html=True)
             else:
                 slot.markdown(bubble("assistant", "Nothing came back that time. Ask me again."),
                               unsafe_allow_html=True)
