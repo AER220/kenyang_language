@@ -541,6 +541,7 @@ h2.big b{color:var(--place)} h2.big em{color:var(--p2);font-style:normal}
 .mine{font-size:13.5px;margin:-6px 0 14px;padding:9px 12px;border-radius:11px;
   background:var(--lift);border:1px solid var(--edge)}
 .has{font-size:13.5px;color:var(--p2);margin:-3px 0 10px}
+.done .fmsg{margin:0 0 14px}
 .known{margin:0 0 16px;font-size:13.5px}
 .known summary{cursor:pointer;color:var(--mute)}
 .known .fnote{margin:8px 0 8px}
@@ -946,6 +947,7 @@ footer p{margin:0}
       <p class="sub">Write it the way it is said. Spelling gets tidied later;
         getting it written down at all is the hard part.</p>
       <p class="mine" id="tfMine" hidden></p>
+      <div id="tfDone" class="done"></div>
 
       <div class="frow">
         <div class="fld"><label for="tfEn">The English</label>
@@ -2159,10 +2161,35 @@ $("tfCancel").addEventListener("click", () => {
   ["tfEn","tfKen","tfNote"].forEach(id => $(id).value = "");
   $("tfTitle").textContent = "What is the Kenyang for this?";
   $("tfMsg").innerHTML = "";
+  $("tfDone").innerHTML = "";
   recDiscard();
   paintHas();
 });
 $("rfCancel").addEventListener("click", () => showForm(null));
+
+/* After a word is sent, ready the form for the next one. Most speakers are on
+   a phone and send several in a row, so the word, the English, the sentence
+   and the recording go, and the name, village, voice and both consent boxes
+   stay until the page is closed or reloaded: consent given minutes ago in the
+   same visit does not change between the first word and the tenth. The thank
+   you is shown where the next entry starts, and the page jumps there at once
+   rather than scrolling slowly. The keyboard is not opened: phones refuse to
+   open it from code once the send has finished, so the next tap does it. */
+function nextWord(thanks){
+  ["tfEn","tfKen","tfNote"].forEach(id => $(id).value = "");
+  $("tfTitle").textContent = "What is the Kenyang for this?";
+  $("tfMsg").innerHTML = "";
+  recDiscard();
+  paintHas();
+  $("tfDone").innerHTML = thanks;
+  /* one frame later, once the cleared fields have settled, or the browser's
+     own scroll adjustment can carry the page past the thank-you */
+  requestAnimationFrame(() => {
+    const at = $("tfMine").hidden ? $("tfDone") : $("tfMine");    /* status first, if shown */
+    const top = at.getBoundingClientRect().top + scrollY - 14;
+    scrollTo({top, behavior:"instant"});
+  });
+}
 
 /* ── the contributors' door ───────────────────────────────────────
    The review page lives in the tutor and has its own password gate. This only
@@ -2191,6 +2218,7 @@ $("tfSend").addEventListener("click", async () => {
     return;
   }
   if (REC.ctx) recStop();
+  $("tfDone").innerHTML = "";
   $("tfSend").disabled = true;
   $("tfSend").textContent = "Sending…";
 
@@ -2204,11 +2232,9 @@ $("tfSend").addEventListener("click", async () => {
     $("tfSend").disabled = false;
     $("tfSend").textContent = "Send it";
     if (sent.ok){
-      msg.innerHTML = `<div class="fmsg ok">Thank you. <b>${esc(ken)}</b> and your
+      nextWord(`<div class="fmsg ok">Thank you. <b>${esc(ken)}</b> and your
         recording have been sent. A speaker listens to every recording before
-        anyone else can play it.</div>`;
-      $("tfNote").value = "";
-      recDiscard();
+        anyone else can play it.</div>`);
     } else {
       msg.innerHTML = `<div class="fmsg bad">Nothing was sent, because
         ${esc(sent.why)}. Your recording is still here, so you can press
@@ -2227,10 +2253,9 @@ $("tfSend").addEventListener("click", async () => {
   $("tfSend").disabled = false;
   $("tfSend").textContent = "Send it";
   if (res.ok){
-    msg.innerHTML = `<div class="fmsg ok">Thank you. <b>${esc(ken)}</b> has been
+    nextWord(`<div class="fmsg ok">Thank you. <b>${esc(ken)}</b> has been
       written down. A speaker reads every one of these before Nɛpɛm teaches it
-      to anybody.</div>`;
-    $("tfNote").value = "";
+      to anybody.</div>`);
     loadWall();
   } else {
     msg.innerHTML = `<div class="fmsg bad">It was kept on this device, but
