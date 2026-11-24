@@ -285,21 +285,38 @@ def tidy_name(text):
     return re.sub(r"\s+", " ", t).strip()
 
 
-def credits(approved_rows):
+def hidden_villages():
+    """
+    Names whose village must never be published, from WALL_HIDE_VILLAGE on Render,
+    separated by semicolons: "Agbor; Agbor Edouard Ransome". Matched with
+    tidy_name(). Kept in the server's settings, not in code, so nothing public says
+    whose village is withheld. The rows keep the village; only the file omits it.
+    """
+    import os
+    return {tidy_name(n) for n in os.environ.get("WALL_HIDE_VILLAGE", "").split(";")
+            if tidy_name(n)}
+
+
+def credits(approved_rows, hide=None):
     """
     One entry per named person, counting approved recordings: one recording is one
     thing taught, as one approved text submission is. Name and village must both
     match after tidying; a blank village matches only a blank village. Recordings
     with no name are not credited. The name shown is the spelling used most.
+    For a name in hidden_villages() the village is left out before grouping, so
+    that person's entries merge as one with a blank village.
     """
+    hide = hidden_villages() if hide is None else hide
     groups = {}
     for r in approved_rows:
         if r.get("status") != "approved" or not (r.get("speaker") or "").strip():
             continue
-        key = (tidy_name(r["speaker"]), tidy_name(r.get("village") or ""))
+        sp, vi = r["speaker"].strip(), (r.get("village") or "").strip()
+        if tidy_name(sp) in hide:
+            vi = ""
+        key = (tidy_name(sp), tidy_name(vi))
         g = groups.setdefault(key, {"n": 0, "names": {}, "villages": {}})
         g["n"] += 1
-        sp, vi = r["speaker"].strip(), (r.get("village") or "").strip()
         g["names"][sp] = g["names"].get(sp, 0) + 1
         g["villages"][vi] = g["villages"].get(vi, 0) + 1
     most = lambda d: max(d.items(), key=lambda kv: kv[1])[0]
