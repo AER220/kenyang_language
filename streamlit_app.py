@@ -1094,18 +1094,56 @@ STAYING IN YOUR LANE:
 """
 
 
+SPEAKERS_MANIFEST = ("https://xkrjlihldrrwyeglszyg.supabase.co"
+                     "/storage/v1/object/public/recordings/manifest.json")
+
+
+@st.cache_resource
+def _speakers_last_good():
+    """The last list of speakers' recorded words that loaded, shared by every session,
+    so a Supabase hiccup does not drop words Nɛpɛm knew a minute ago."""
+    return {"words": []}
+
+
+@st.cache_data(ttl=300, show_spinner=False)
+def _speakers_fetch():
+    import requests
+    from build_audio_manifest import fold
+    r = requests.get(SPEAKERS_MANIFEST, timeout=4)
+    if r.status_code != 200:
+        raise RuntimeError(r.status_code)          # raising means it isn't cached
+    good = re.compile(r"^[0-9a-f]{24}\.wav$")
+    return [k for k, v in r.json().items()
+            if isinstance(v, str) and good.match(v) and k and k == fold(k)]
+
+
+def speakers_recorded():
+    """Words other speakers recorded and Ed approved: the same public list say.js merges.
+    Checked at most every five minutes. If Supabase can't be reached, the last list
+    that loaded is used, and before any has loaded, none. Ed's own never depend on it."""
+    keep = _speakers_last_good()
+    try:
+        keep["words"] = _speakers_fetch()
+    except Exception:
+        pass
+    return keep["words"]
+
+
 def recordings_block(path=os.path.join("audio", "manifest.json")):
     """The words a speaker has recorded, so Nɛpɛm can tell a learner which ones to tap.
 
     The chat's player (say.js on nepem.org) reads this same manifest, which Render deploys
     from the same repo, so a word listed here is a word that is underlined in the reply.
-    The keys are written exactly as say.js matches them. Without a manifest there is
-    no list, and the rule against describing sounds still stands on its own above."""
+    The keys are written exactly as say.js matches them. Words other speakers recorded
+    come after, from the list say.js also reads. Without either there is no list, and
+    the rule against describing sounds still stands on its own above."""
     try:
         with open(path, encoding="utf-8") as f:
             words = [k for k in json.load(f) if k.strip()]
     except (OSError, ValueError):
-        return ""
+        words = []
+    mine = set(words)
+    words += [k for k in speakers_recorded() if k not in mine]
     if not words:
         return ""
     return f"""
