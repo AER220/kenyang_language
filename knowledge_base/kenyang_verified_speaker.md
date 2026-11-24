@@ -1,6 +1,6 @@
 # Kenyang confirmed by a native speaker
 
-Agbor Edouard Ransome, Bachou Ntai village, Manyu Division.
+Agbor Edouard Ransome, Manyu Division.
 
 Everything in this file has been checked by a native speaker and outranks every other
 source. Where a dictionary, a grammar guide or any other file disagrees with what is

@@ -5,7 +5,7 @@ Meme Divisions of Southwest Cameroon. It teaches greetings, counting, vocabulary
 sentence-building from a curated body of Kenyang material, and is careful never to invent
 words — everything it teaches is drawn from its own knowledge base.
 
-Built by **Agbor Edouard Ransome**, of Bachou Ntai village.
+Built by **Agbor Edouard Ransome**, from the Manyu Division of Cameroon.
 
 ---
 

@@ -1,7 +1,7 @@
 # Kenyang texts, confirmed by a native speaker
 
 Whole pieces of real Kenyang speech, each line with its meaning. Confirmed by me,
-Agbor Edouard Ransome, a native Kenyang speaker from Bachou Ntai.
+Agbor Edouard Ransome, a native Kenyang speaker from the Manyu Division.
 
 Connected speech teaches what single phrases cannot. A word list gives pieces; a
 text shows how one idea joins to the next, how a command softens into a wish, and

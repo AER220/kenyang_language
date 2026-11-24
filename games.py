@@ -1,7 +1,7 @@
 """
 Nɛpɛm Games — Kenyang word games for children.
 
-Built by Agbor Edouard Ransome, Bachou Ntai village.
+Built by Agbor Edouard Ransome, from the Manyu Division of Cameroon.
 
 Design notes, so future-me remembers why this is shaped the way it is:
 

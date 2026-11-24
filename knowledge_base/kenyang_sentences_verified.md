@@ -1,7 +1,7 @@
 # Kenyang sentences, confirmed by a native speaker
 
 Whole sentences, each one checked by me, Agbor Edouard Ransome, a native Kenyang
-speaker from Bachou Ntai. Every sentence here is correct Kenyang and can be
+speaker from the Manyu Division. Every sentence here is correct Kenyang and can be
 taught as it stands.
 
 They are grouped by what each one shows, because the point is not the sentence

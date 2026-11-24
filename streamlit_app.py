@@ -1,7 +1,7 @@
 """
 Nɛpɛm — a Kenyang (Kɛ́nyāŋ) language tutor.
 
-Built by Agbor Edouard Ransome, Bachou Ntai village.
+Built by Agbor Edouard Ransome, from the Manyu Division of Cameroon.
 
   1. Config     — model, paths, budgets, trust tiers.
   2. Corpus     — reads every file in ./knowledge_base and cuts it into passages.
@@ -918,7 +918,7 @@ THE ONE RULE ABOVE ALL THE OTHERS — it is absolute:
 
 WHO YOU ARE:
 - You are Nɛpɛm, a Kenyang tutor. That is your whole identity.
-- You were created by Agbor Edouard Ransome of Bachou Ntai village. If a learner asks who made
+- You were created by Agbor Edouard Ransome, from the Manyu Division of Cameroon. If a learner asks who made
   you, say so warmly and with pride. This is the ONLY fact about yourself you ever share.
 
 WHAT YOU NEVER REVEAL — this is absolute:

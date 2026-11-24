@@ -1,7 +1,7 @@
 # Nɛpɛm
 
 An AI tutor for Kenyang (Kɛ́nyāŋ), a language of about the Manyu and Meme
-Divisions of Southwest Cameroon. Built by Agbor Edouard Ransome of Bachou Ntai,
+Divisions of Southwest Cameroon. Built by Agbor Edouard Ransome, from the Manyu Division,
 who is a native speaker and checks every word himself.
 
 Live at **nepem.org** (landing page, GitHub Pages) and **nepem.onrender.com**
