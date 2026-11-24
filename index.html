@@ -3028,9 +3028,15 @@ addEventListener("keydown", e => { if (e.key === "Escape") shutPane(); });
 
 /* He waits a moment before speaking, so the page has settled first. Once he
    has been greeted in this browser he stays quiet, because a greeting that
-   fires on every single visit stops feeling like a greeting. */
+   fires on every single visit stops feeling like a greeting.
+   Not on a phone: there the card can only sit on top of the page's opening
+   paragraph, so he does not pop up by himself. The button's label still says
+   what he is for. */
+const greetFits = !matchMedia("(max-width:880px)").matches;
 try {
-  if (!sessionStorage.getItem("nepem.greeted")) {
+  if (!greetFits) {
+    $("greet").style.display = "none";
+  } else if (!sessionStorage.getItem("nepem.greeted")) {
     $("greet").style.display = "none";
     setTimeout(() => {
       const g = $("greet");
@@ -3041,7 +3047,11 @@ try {
     $("greet").style.display = "none";
     $("drum").classList.add("quiet");
   }
-} catch(e){ /* private browsing refuses storage; he just greets every time */ }
+} catch(e){
+  /* private browsing refuses storage; he just greets every time, but still
+     not on a phone */
+  if (!greetFits) $("greet").style.display = "none";
+}
 
 const calm=matchMedia("(prefers-reduced-motion: reduce)").matches;
 const fine=matchMedia("(hover: hover)").matches;
