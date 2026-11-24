@@ -255,3 +255,27 @@ for one spelling, and say.js can only play one. Decided 24 November 2026.
 
 If a pair like this is ever found where the two words sound different despite
 the same spelling, that is the point to revisit it.
+
+---
+
+## 15. Unconfirmed book words inside a verified file
+
+From `knowledge_base/kenyang_verified_speaker.md`, line 1206
+Part: New words the lexicon can give Nɛpɛm (with its Family and people, Time,
+Colours, Around you, Feeling and doing, and Small words lists)
+
+The file's name makes everything in it verified, so all of it travels with every
+question at the highest trust. But this section says of itself: "Confirm each one
+as a speaker before it goes into the verified file." It is the book's words,
+waiting on a speaker, sitting where a speaker's words go. It is the same problem
+as the [TO CONFIRM] notes that were moved out into this file earlier.
+
+It has already taught a learner: asked for "tomorrow", Nɛpɛm gave the book's
+mbwɔ́rɛ́ rather than your Mbuere, because this is the only place in the verified
+material where "tomorrow" appears as a word with a meaning.
+
+Nothing has been moved. The section is yours to sort.
+
+[TO CONFIRM: should this section move out of the verified file, into a `_ref`
+file or here, until each word is confirmed? And for each word you do confirm,
+which spelling should Nɛpɛm teach first, yours or the book's?]
