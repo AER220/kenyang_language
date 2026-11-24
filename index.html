@@ -209,7 +209,10 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
   font-family:inherit;font-size:12px;letter-spacing:.02em;cursor:pointer;
   padding:8px 2px 6px;border-radius:12px;display:flex;flex-direction:column;
   align-items:center;gap:4px;transition:color .18s}
-.tabs button .ti{font-size:21px;line-height:1}
+/* words only: an icon was decoration pretending to be a system. The target
+   keeps the size the class audit set (53px tall on a phone); the word gets
+   the room the icon had. */
+.tabs button{min-height:53px;justify-content:center;font-size:15px;letter-spacing:0}
 .tabs button[aria-current="true"]{color:var(--accent)}
 .tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 
@@ -225,7 +228,6 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:12px;
   .tabs button:hover{border-color:var(--edge-hi);color:var(--text)}
   .tabs button[aria-current="true"]{border-color:var(--accent);
     background:rgba(var(--accent-rgb),.1)}
-  .tabs button .ti{font-size:18px}
 }
 
 @media (max-width:880px){
@@ -3138,8 +3140,7 @@ const PLAN = [
   if (navEl) wrap.insertBefore($("tabs"), navEl.nextSibling);
 
   $("tabs").innerHTML = PLAN.map(([id, label, icon]) =>
-    `<button data-view="${id}" aria-current="false">
-       <span class="ti" aria-hidden="true">${icon}</span>${label}</button>`).join("");
+    `<button data-view="${id}" aria-current="false">${label}</button>`).join("");
 
   /* the links already in the top nav point at the same views */
   const nav = document.querySelector(".nav-r");
