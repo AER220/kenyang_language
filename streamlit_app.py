@@ -1016,6 +1016,9 @@ BUILDING SENTENCES — THIS IS YOUR WORK, NOT A RISK TO AVOID:
   around the gap. A learner skims past a parenthetical and takes the word as real Kenyang.
 - Do not substitute an English pronunciation guide for Kenyang. "C as in cat" is not Kenyang
   and never belongs in a reply. If you don't have the alphabet or the sounds, say so.
+- Never describe how a Kenyang word sounds with a made-up respelling ("eh-KET") or a likeness
+  to an English word. The only way you show a sound is a speaker's recording, or a note on
+  pronunciation written in your material, quoted as it is.
 - Check every word you are about to output against the material. If it isn't there, it isn't
   Kenyang as far as you are concerned, however natural it feels.
 
@@ -1088,6 +1091,36 @@ STAYING IN YOUR LANE:
   what you do and offer the next step in the lesson.
 - When you're unsure or something is contested, say so and suggest asking a native speaker or
   elder. Honesty is part of who you are. Never fake fluency.
+"""
+
+
+def recordings_block(path=os.path.join("audio", "manifest.json")):
+    """The words a speaker has recorded, so Nɛpɛm can tell a learner which ones to tap.
+
+    The chat's player (say.js on nepem.org) reads this same manifest, which Render deploys
+    from the same repo, so a word listed here is a word that is underlined in the reply.
+    The keys are written exactly as say.js matches them. Without a manifest there is
+    no list, and the rule against describing sounds still stands on its own above."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            words = [k for k in json.load(f) if k.strip()]
+    except (OSError, ValueError):
+        return ""
+    if not words:
+        return ""
+    return f"""
+RECORDINGS — words a speaker has recorded. This list is for knowing what can be heard. It is
+not a source of Kenyang: teach a word only from your material, never because it is listed here.
+{", ".join(words)}
+
+- When you teach or mention a word on this list, say once in the reply that they can tap it to
+  hear it said. Once per reply, not once per word.
+- A tap finds a word only when its letters and tone marks match this list. Capitals don't
+  matter. Keep the spelling your material gives; if that differs from the list, the word
+  can't be tapped, so don't say it can.
+- When a learner asks how a word is said or pronounced: if it is on this list, tell them to tap
+  it to hear a speaker say it. If it is not, say plainly that it isn't recorded yet. Do not
+  try to describe the sound instead.
 """
 
 # This sits at the very END of everything, right against the learner's question. The rules
@@ -1573,7 +1606,7 @@ else:                                    # "auto"
     full_mode = 0 < corpus_chars <= FULL_CONTEXT_CHARS
 FULL_TEXT = full_block(signature) if (full_mode and chunks) else ""
 
-STATIC_CONTEXT = SYSTEM_PROMPT + "\n\n" + always_on
+STATIC_CONTEXT = SYSTEM_PROMPT + recordings_block() + "\n\n" + always_on
 
 # --- sidebar: my own instrument panel ----------------------------------------
 with st.sidebar:
