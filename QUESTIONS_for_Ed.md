@@ -308,3 +308,46 @@ included. Is each one right for Kenyang as you say it?]
 [TO CONFIRM: record the five letters, ɛ ɔ ŋ ɨ ʉ, each said on its own or in one
 example word you choose, so the game can play the sound instead of describing
 it. Which example word for each, if any, is yours to pick.]
+
+---
+
+## 17. bhisi and besí: one word for "face", or two?
+
+From `knowledge_base/kenyang_verified_speaker.md`, the word lists
+
+    besí        face           (The body; recorded: 086_face.mp3)
+    Erehti bhisi   beautiful face   (Size, quality and shape, before the noun)
+
+[TO CONFIRM: is bhisi in *Erehti bhisi* the same word as besí, spelled two ways,
+or a different word? If it is the same, which spelling should Nɛpɛm teach first,
+and should the other be kept as a variant?]
+
+---
+
+## 18. mbi and ambi: one word for "road", or two?
+
+From `knowledge_base/kenyang_verified_speaker.md`
+
+    ambi        road           (Where things are; recorded)
+    mbi         road           (More verbs)
+
+[TO CONFIRM: are mbi and ambi the same word? If so, which spelling is canonical,
+and is the a- a prefix (as in the position words) or part of the word?]
+
+---
+
+## 19. Five recordings the family tree needs
+
+The family tree is planned to use the "my" forms. These are in the verified file
+but have no recording yet, so on the tree they could be shown but not heard:
+
+    Eta'ya            my father
+    Ma'ya             my mother
+    Ma'ya nsinsi      my grandmother
+    Eta'ya nsinsi     my grandfather
+    wah               my
+
+Already recorded, for comparison: étá (father), mmá (mother), Ma nsinsi
+(grandmother), nsinsi (senior, older), N-ném wah (my name).
+
+[TO DO: record the five above. The family tree is built after they are in.]

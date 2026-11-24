@@ -147,7 +147,8 @@ failed to connect.
 **nepem.org publishes only a list of files.** `.github/workflows/pages.yml` copies
 index.html, games.html, say.js, audio_words.json, CNAME, ed-portrait.jpg, audio/,
 and five files from brand/web-and-social/ (the favicons, the apple-touch-icon and
-the social card, plus favicon.ico again at the root) and publishes those alone, so the knowledge base,
+the social card, plus favicon.ico again at the root), and the pictures in scenes/
+named in it, and publishes those alone, so the knowledge base,
 QUESTIONS_for_Ed.md, this file and the Python files are not downloadable. A new file
 the site needs (a page, an image, a script) must be added to that list, or it will
 not be served. Nothing else moves: Render reads the repo as it is.
