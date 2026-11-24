@@ -292,17 +292,18 @@ Nɛpɛm himself is told never to describe a sound by an English likeness, so the
 are the only place on the site that does.
 
     ɛ   the open e, as in bed
-    ɔ   the open o, as in thought      (being replaced: see below)
+    ɔ   the open o, said with the mouth more open than for o
     ŋ   the sound at the end of sing
     ɨ   said further back than i
     ʉ   said with rounded lips
 
-"as in thought" is being replaced: many American speakers say the vowel of
-"thought" the same as the one in "lot", so it points a large part of the
-audience at the wrong sound. The replacement is waiting for your confirmation.
+ɔ used to read "the open o, as in thought". Many American speakers say the
+vowel of "thought" the same as the one in "lot", so it pointed a large part of
+the audience at the wrong sound. On 24 November 2026 you chose the replacement
+above, which describes what the mouth does rather than naming an English word.
 
-[TO CONFIRM: say each of the other four aloud against its description. Is each
-one right for Kenyang as you say it?]
+[TO CONFIRM: say each of the five aloud against its description, the new ɔ
+included. Is each one right for Kenyang as you say it?]
 
 [TO CONFIRM: record the five letters, ɛ ɔ ŋ ɨ ʉ, each said on its own or in one
 example word you choose, so the game can play the sound instead of describing
