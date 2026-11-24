@@ -243,6 +243,9 @@
      the drawn underlines, so no word is wrapped and a redraw cannot strip
      it, and it takes no taps, so the word under it still speaks. */
   const HEARD = "nepem.heard";
+  /* while the label is up, <html> carries say-pointing, so a page can hide
+     anything that would say the same thing twice (index.html's hint line) */
+  const pointing = v => document.documentElement.classList.toggle("say-pointing", v);
   let heard = false, tip = null, tipKey = null, tipQueued = false;
   try { heard = localStorage.getItem(HEARD) === "yes"; } catch (e) {}
 
@@ -269,13 +272,13 @@
 
   const placeTip = () => {
     tipQueued = false;
-    if (heard || !on || !manifest) { if (tip) tip.hidden = true; return; }
+    if (heard || !on || !manifest) { if (tip) tip.hidden = true; pointing(false); return; }
     /* stay on the same word while it is still in view, so the label does not
        jump about on every redraw */
     let pick = null, rect = null;
     for (const h of hits) if (h.key === tipKey && (rect = visible(h))) { pick = h; break; }
     if (!pick) for (const h of hits) if ((rect = visible(h))) { pick = h; break; }
-    if (!pick) { if (tip) tip.hidden = true; return; }
+    if (!pick) { if (tip) tip.hidden = true; pointing(false); return; }
     tipKey = pick.key;
     if (!tip) {
       tip = document.createElement("div");
@@ -292,7 +295,7 @@
       tip.appendChild(point);
       document.documentElement.appendChild(tip);
     }
-    tip.hidden = false;
+    tip.hidden = false; pointing(true);
     const w = tip.offsetWidth, ht = tip.offsetHeight, gap = 10;
     const above = rect.top - ht - gap >= 8;           /* below only when there is no room */
     const left = Math.max(16, Math.min(rect.left + rect.width / 2 - w / 2, innerWidth - w - 16));
@@ -314,6 +317,7 @@
       heard = true;
       try { localStorage.setItem(HEARD, "yes"); } catch (e) {}
       if (tip) { tip.remove(); tip = null; }
+      pointing(false);
       removeEventListener("scroll", laterTip, {capture: true});
       removeEventListener("resize", laterTip);
     }, {once: true});
