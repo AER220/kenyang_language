@@ -88,8 +88,7 @@
 [data-theme="light"] .cell.clue{background:rgba(16,34,28,.05)}
 [data-theme="light"] .nav-r .q:hover,
 [data-theme="light"] .stButton>button:hover{background:rgba(16,34,28,.06)}
-[data-theme="light"] .bubble.bot,
-[data-theme="light"] .hcard{background:#FFFDF8}
+[data-theme="light"] .bubble.bot{background:#FFFDF8}
 [data-theme="light"] .greet,
 [data-theme="light"] .saylabel,
 [data-theme="light"] .toast{background:rgba(255,253,248,.94);
@@ -616,13 +615,14 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .wallnote{font-size:13.5px;color:var(--mute);margin:16px 0 0;line-height:1.6}
 
 /* ── what is kept, and what is not ─────────────────────────────── */
-.honest{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:12px}
-.hcard{padding:17px 18px;border-radius:16px;background:var(--lift);
-  border:1px solid var(--edge)}
+.honest{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:12px 28px}
+/* what is kept and what is not: three columns of plain text under a rule,
+   not cards, since none of it is tapped. The headings are ink: "Kept" and
+   "Not kept" are not grammar, so they do not borrow WHO's green or NOT's red. */
+.hcard{padding:16px 0 0;border-top:1px solid var(--line)}
 .hcard h4{font-family:var(--serif);font-size:17px;margin:0 0 7px}
-.hcard.yes h4{color:var(--who)} .hcard.no h4{color:var(--not)}
 .hcard ul{margin:0;padding-left:19px}
-.hcard li{font-size:13.5px;color:var(--mute);margin:0 0 5px;line-height:1.5}
+.hcard li{font-size:14.5px;color:var(--mute);margin:0 0 7px;line-height:1.55}
 
 /* ── numbers ──────────────────────────────────────────────────── */
 .numgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(108px,1fr));gap:9px}
