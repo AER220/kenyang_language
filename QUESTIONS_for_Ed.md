@@ -237,3 +237,21 @@ ny." That lists six. The page does not give a number.
 short note on how each sounds? The page could then show them, and any example
 word you have recorded could be tapped. Choosing examples myself would mean
 deciding, for instance, whether the ny in Nnyɛ́n is the letter ny or n and y.]
+
+---
+
+## 14. Two words with one spelling share one row
+
+Part: speakers' recordings (Supabase `words` table)
+
+Not a question: a decision, written here so it is not found later and taken for a
+bug. The `words` table allows one row per folded spelling (`words_folded_key`).
+Folding keeps tone marks, so this only bites when two words are spelled the same,
+tones and all. They share one row and one primary recording, and the English
+holds both meanings, separated by a semicolon: "house; home".
+
+The other way, a row for each meaning, would give the public manifest two files
+for one spelling, and say.js can only play one. Decided 24 November 2026.
+
+If a pair like this is ever found where the two words sound different despite
+the same spelling, that is the point to revisit it.
