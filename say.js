@@ -103,6 +103,7 @@
   const scan = () => {
     queued = false;
     clear();
+    laterTip();
     if (!manifest || !on) return;
     const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
       acceptNode: n => !n.nodeValue.trim() || n.parentElement.closest(SKIP)
@@ -217,6 +218,91 @@
     show(); scan();
   };
   if (btn) btn.addEventListener("click", () => setOn(!on));
+
+  /* THE FIRST-VISIT POINTER. On a phone there is no hover and no cursor, so
+     an underline alone reads as emphasis. Until a recording has played once
+     on this device, a small label sits beside the first recorded word in
+     view and says what the underline means. Playing any word retires it for
+     good; being shown does not, so someone who scrolls past without trying
+     sees it again next visit. It lives in a layer of its own on <html>, like
+     the drawn underlines, so no word is wrapped and a redraw cannot strip
+     it, and it takes no taps, so the word under it still speaks. */
+  const HEARD = "nepem.heard";
+  let heard = false, tip = null, tipKey = null, tipQueued = false;
+  try { heard = localStorage.getItem(HEARD) === "yes"; } catch (e) {}
+
+  /* a word is in view only if it is what the page shows at that point, so a
+     word scrolled under the chat's input bar or clipped by a panel is passed
+     over rather than pointed at */
+  const visible = h => {
+    if (!h.range.startContainer.isConnected) return null;
+    const r = h.range.getClientRects()[0];
+    if (!r || !r.width || r.top < 0 || r.bottom > innerHeight
+        || r.left < 0 || r.right > innerWidth) return null;
+    const at = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+    const own = h.range.startContainer.parentElement;
+    if (!at || !(at === own || at.contains(own) || own.contains(at))) return null;
+    /* not a word in a floating card, such as the greeting beside the chat
+       button: it never scrolls away, so the label would follow it down the
+       whole page. A fixed frame the size of the page, which is how some
+       pages scroll their content, is not a card and does not count. */
+    for (let e = own; e && e !== document.body; e = e.parentElement)
+      if (getComputedStyle(e).position === "fixed"
+          && e.offsetWidth * e.offsetHeight < innerWidth * innerHeight / 2) return null;
+    return r;
+  };
+
+  const placeTip = () => {
+    tipQueued = false;
+    if (heard || !on || !manifest) { if (tip) tip.hidden = true; return; }
+    /* stay on the same word while it is still in view, so the label does not
+       jump about on every redraw */
+    let pick = null, rect = null;
+    for (const h of hits) if (h.key === tipKey && (rect = visible(h))) { pick = h; break; }
+    if (!pick) for (const h of hits) if ((rect = visible(h))) { pick = h; break; }
+    if (!pick) { if (tip) tip.hidden = true; return; }
+    tipKey = pick.key;
+    if (!tip) {
+      tip = document.createElement("div");
+      tip.setAttribute("aria-hidden", "true");
+      tip.textContent = "Tap any underlined word to hear it.";
+      tip.style.cssText = "position:fixed;z-index:50;pointer-events:none;"
+        + "max-width:min(260px,calc(100vw - 32px));padding:7px 11px;border-radius:10px;"
+        + "font:500 14px/1.35 var(--sans,system-ui,sans-serif);"
+        + "color:var(--place,#96680A);background:var(--base,var(--paper,#FFFFFF));"
+        + "border:1.5px solid var(--place,#96680A);box-shadow:0 4px 16px rgba(0,0,0,.18)";
+      const point = document.createElement("div");
+      point.style.cssText = "position:absolute;width:9px;height:9px;transform:rotate(45deg);"
+        + "background:inherit;border:inherit;border-width:0 1.5px 1.5px 0";
+      tip.appendChild(point);
+      document.documentElement.appendChild(tip);
+    }
+    tip.hidden = false;
+    const w = tip.offsetWidth, ht = tip.offsetHeight, gap = 10;
+    const above = rect.top - ht - gap >= 8;           /* below only when there is no room */
+    const left = Math.max(16, Math.min(rect.left + rect.width / 2 - w / 2, innerWidth - w - 16));
+    tip.style.left = left + "px";
+    tip.style.top = (above ? rect.top - ht - gap : rect.bottom + gap) + "px";
+    const point = tip.firstElementChild;
+    point.style.left = Math.max(10, Math.min(rect.left + rect.width / 2 - left - 5, w - 20)) + "px";
+    point.style.top = above ? "" : "-5.5px";
+    point.style.bottom = above ? "-5.5px" : "";
+    point.style.transform = above ? "rotate(45deg)" : "rotate(225deg)";
+  };
+  const laterTip = () => {
+    if (!heard && !tipQueued) { tipQueued = true; requestAnimationFrame(placeTip); }
+  };
+  if (!heard) {
+    addEventListener("scroll", laterTip, {capture: true, passive: true});
+    addEventListener("resize", laterTip);
+    player.addEventListener("playing", () => {
+      heard = true;
+      try { localStorage.setItem(HEARD, "yes"); } catch (e) {}
+      if (tip) { tip.remove(); tip = null; }
+      removeEventListener("scroll", laterTip, {capture: true});
+      removeEventListener("resize", laterTip);
+    }, {once: true});
+  }
 
   fetch(BASE + "manifest.json", {cache: "no-cache"})
     .then(r => r.ok ? r.json() : null)
