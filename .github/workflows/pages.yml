@@ -41,10 +41,14 @@ jobs:
           cp index.html games.html say.js audio_words.json CNAME ed-portrait.jpg _site/
           cp -r audio _site/audio
           test -f _site/audio/manifest.json
-          # Optional: published once the file exists.
-          for f in share.png; do
-            if [ -f "$f" ]; then cp "$f" _site/; else echo "not yet in the repo: $f"; fi
+          # The browser icons and the social preview card, at the paths the
+          # pages name. Only these: the rest of brand/ is source files.
+          mkdir -p _site/brand/web-and-social
+          for f in favicon.ico favicon-16x16.png favicon-32x32.png apple-touch-icon.png nepem-og-social-card.png; do
+            cp "brand/web-and-social/$f" _site/brand/web-and-social/
           done
+          # Browsers also ask for /favicon.ico on their own, whatever the page says.
+          cp brand/web-and-social/favicon.ico _site/favicon.ico
           echo "Publishing:"; find _site -maxdepth 1 | sort; echo "audio files: $(ls _site/audio | wc -l)"
 
       - uses: actions/configure-pages@v5

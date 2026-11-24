@@ -53,6 +53,9 @@ reorder or trim the rules.
 
 ## Where things live
 
+The logo files are in `brand/` (full-logo, icon-mark, web-and-social, and the
+brand README). Most of it is source; only the files the workflow lists are served.
+
 ```
 knowledge_base/          everything Nɛpɛm reads. Nothing else belongs here.
   kenyang_verified_speaker.md    the grammar rules, speaker-confirmed
@@ -119,8 +122,9 @@ failed to connect.
 **`CNAME` contains `nepem.org`.** Deleting it breaks the custom domain.
 
 **nepem.org publishes only a list of files.** `.github/workflows/pages.yml` copies
-index.html, games.html, say.js, audio_words.json, CNAME, ed-portrait.jpg and audio/
-(plus share.png once it exists) and publishes those alone, so the knowledge base,
+index.html, games.html, say.js, audio_words.json, CNAME, ed-portrait.jpg, audio/,
+and five files from brand/web-and-social/ (the favicons, the apple-touch-icon and
+the social card, plus favicon.ico again at the root) and publishes those alone, so the knowledge base,
 QUESTIONS_for_Ed.md, this file and the Python files are not downloadable. A new file
 the site needs (a page, an image, a script) must be added to that list, or it will
 not be served. Nothing else moves: Render reads the repo as it is.
