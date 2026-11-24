@@ -9,6 +9,14 @@
    with two settings on the script tag: data-base, where the audio lives, and
    data-scope, the only elements whose words may be marked (Nɛpɛm's replies).
    With neither set it behaves as it always did on the main page.
+
+   A second, optional list holds recordings other speakers sent and Ed approved.
+   It lives in Supabase's public bucket (data-live overrides where; an empty
+   data-live turns it off), is fetched separately, and only ever adds words:
+   where both lists have a word, Ed's recording is the one that plays. Ed's
+   list never waits for it, and if it cannot be reached nothing else changes.
+   Its entries must be bare <24 hex>.wav names, so a bad file in the bucket
+   cannot point a tap anywhere else.
    ═══════════════════════════════════════════════════════════════════════════ */
 (() => {
   const APOS = /[’‘ʼʻ`´]/g;
@@ -22,8 +30,13 @@
   const me = document.currentScript;
   const BASE = (me && me.dataset.base) || "audio/";
   const SCOPE = (me && me.dataset.scope) || null;
+  const LIVE = me && me.dataset.live !== undefined ? me.dataset.live
+    : "https://xkrjlihldrrwyeglszyg.supabase.co/storage/v1/object/public/recordings/";
+  const LIVE_FILE = /^[0-9a-f]{24}\.wav$/;
 
-  let manifest = null, longest = 1, on = true, hits = [], queued = false;
+  /* manifest is the two lists merged; mine and theirs are each as fetched */
+  let manifest = null, mine = null, theirs = null;
+  let longest = 1, on = true, hits = [], queued = false;
   const player = new Audio();
   player.preload = "none";
   const btn = document.getElementById("sound");
@@ -165,13 +178,15 @@
   });
 
   /* an entry is a filename, or {file, sounds} when the speaker has written
-     how the word is said */
+     how the word is said. A contributor's entry also carries {base}, where
+     the approved recordings live. */
   const fileOf = key => typeof manifest[key] === "string" ? manifest[key] : manifest[key].file;
   const soundsOf = key => typeof manifest[key] === "string" ? "" : manifest[key].sounds || "";
+  const baseOf = key => typeof manifest[key] === "string" ? BASE : manifest[key].base || BASE;
 
   const play = key => {
     playing = key;
-    player.src = BASE + encodeURIComponent(fileOf(key));
+    player.src = baseOf(key) + encodeURIComponent(fileOf(key));
     player.currentTime = 0;
     player.play().catch(e => { if (e.name !== "AbortError") failed(key, `${e.name}: ${e.message}`); });
   };
@@ -304,27 +319,58 @@
     }, {once: true});
   }
 
+  /* Put the two lists together and look again. Ed's entries are laid over the
+     contributors', so his recording wins wherever both have a word. */
+  let started = false;
+  const merge = () => {
+    const m = Object.assign({}, theirs || {}, mine || {});
+    if (!Object.keys(m).length) return;
+    manifest = m;
+    longest = Math.max(...Object.keys(m).map(k => k.split(" ").length));
+    if (!started) start();
+    else scan();
+  };
+
+  const start = () => {
+    started = true;
+    if (btn) btn.hidden = false;
+    show();
+    scan();
+    new MutationObserver(later).observe(document.body,
+      {childList: true, subtree: true, characterData: true});
+    /* the drawn underlines follow the words when anything moves them
+       without changing the text: scrolling, resizing, fonts, animations */
+    if (!canHighlight) {
+      addEventListener("scroll", redraw, {capture: true, passive: true});
+      addEventListener("resize", redraw);
+      document.addEventListener("animationend", redraw, true);
+      document.addEventListener("transitionend", redraw, true);
+      if (window.ResizeObserver) new ResizeObserver(redraw).observe(document.body);
+      if (document.fonts) document.fonts.ready.then(redraw);
+    }
+  };
+
   fetch(BASE + "manifest.json", {cache: "no-cache"})
     .then(r => r.ok ? r.json() : null)
     .then(m => {
       if (!m || typeof m !== "object" || !Object.keys(m).length) return;
-      manifest = m;
-      longest = Math.max(...Object.keys(m).map(k => k.split(" ").length));
-      if (btn) btn.hidden = false;
-      show();
-      scan();
-      new MutationObserver(later).observe(document.body,
-        {childList: true, subtree: true, characterData: true});
-      /* the drawn underlines follow the words when anything moves them
-         without changing the text: scrolling, resizing, fonts, animations */
-      if (!canHighlight) {
-        addEventListener("scroll", redraw, {capture: true, passive: true});
-        addEventListener("resize", redraw);
-        document.addEventListener("animationend", redraw, true);
-        document.addEventListener("transitionend", redraw, true);
-        if (window.ResizeObserver) new ResizeObserver(redraw).observe(document.body);
-        if (document.fonts) document.fonts.ready.then(redraw);
-      }
+      mine = m;
+      merge();
     })
     .catch(e => console.warn(`Nɛpɛm: could not load ${BASE}manifest.json, so no words are marked: ${e}`));
+
+  /* the contributors' list: separate, and allowed to fail on its own */
+  if (LIVE) fetch(LIVE + "manifest.json", {cache: "no-cache"})
+    .then(r => r.ok ? r.json() : null)
+    .then(m => {
+      if (!m || typeof m !== "object") return;
+      const t = {};
+      for (const [k, f] of Object.entries(m))
+        if (typeof f === "string" && LIVE_FILE.test(f) && k === fold(k) && k)
+          t[k] = {file: f, base: LIVE};
+      if (!Object.keys(t).length) return;
+      theirs = t;
+      merge();
+    })
+    .catch(e => console.warn(`Nɛpɛm: could not load the speakers' recordings (${LIVE}manifest.json); Ed's still work: ${e}`));
 })();
