@@ -3039,14 +3039,21 @@ try {
     /* not straight away: the opening word and the builder come first, and
        the card would sit beside them. He speaks once the reader has scrolled
        about a screen down, past both. */
+    /* and only on Learn: on Play it opened over the crossword's keys, and
+       his suggestions are about learning, not the game in front of you */
+    const onLearn = () => (document.querySelector(".view.on") || {}).id === "v-learn";
     const speak = () => {
-      if (scrollY < innerHeight * 0.9) return;
+      if (scrollY < innerHeight * 0.9 || !onLearn()) return;
       removeEventListener("scroll", speak);
       const g = $("greet");
       if (g && !$("pane").classList.contains("open")) g.style.display = "";
       sessionStorage.setItem("nepem.greeted", "1");
     };
     addEventListener("scroll", speak, {passive: true});
+    /* leaving Learn while he is up puts him away */
+    addEventListener("hashchange", () => requestAnimationFrame(() => {
+      if (!onLearn()) $("greet").style.display = "none";   /* after the view has switched */
+    }));
   } else {
     $("greet").style.display = "none";
     $("drum").classList.add("quiet");
@@ -3056,6 +3063,17 @@ try {
      not on a phone */
   if (!greetFits) $("greet").style.display = "none";
 }
+
+/* The greeting goes the first time the reader taps anywhere outside it. It
+   had covered something three times in one day; a card you have to find the
+   × on is in the way. A tap on the card itself, or on his button, is not
+   outside it. */
+document.addEventListener("pointerdown", e => {
+  const g = $("greet");
+  if (!g || g.style.display === "none") return;
+  if (g.contains(e.target) || $("drum").contains(e.target)) return;
+  hideGreet();
+}, true);
 
 /* the crossword squares are sized from the screen, so redraw when it changes */
 {
