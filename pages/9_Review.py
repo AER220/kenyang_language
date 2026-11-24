@@ -18,8 +18,12 @@ paste. A community loop that edits the knowledge base on its own would undo the
 one promise this project makes.
 """
 
+import json
+
 import streamlit as st
 import community
+import recordings
+from build_audio_manifest import fold
 from settings import all_secrets, secret
 
 st.set_page_config(page_title="Review · Nɛpɛm", page_icon="🔍", layout="wide")
@@ -63,11 +67,6 @@ if not unlocked():
 st.title("What speakers have sent")
 
 rows, where = community.load(all_secrets())
-if not rows:
-    st.info("Nothing yet. When somebody corrects Nɛpɛm or teaches it a word, "
-            "it lands here.")
-    st.caption(f"Reading from the {where}.")
-    st.stop()
 
 
 # ── what is in there ─────────────────────────────────────────────────────────
@@ -94,7 +93,8 @@ else:
 st.divider()
 
 # ── the queue ────────────────────────────────────────────────────────────────
-tab_new, tab_all, tab_out = st.tabs(["Waiting for me", "Everything", "Export"])
+tab_rec, tab_new, tab_all, tab_out = st.tabs(
+    ["Recordings", "Waiting for me", "Everything", "Export"])
 
 KIND_LABEL = {"correction": "Nɛpɛm was wrong",
               "new_word": "a word it did not have",
@@ -141,8 +141,207 @@ def show(r, allow_decide=True, tab=""):
                 st.rerun()
 
 
+# ── recordings ───────────────────────────────────────────────────────────────
+# Nothing a contributor recorded can be played by anybody but me until I press
+# Approve, and Approve only appears once I have pressed Listen. I cannot be
+# made to hear it to the end, but I cannot approve what I have not opened.
+
+VOICE = {"man": "a man's voice", "woman": "a woman's voice", "unsaid": "voice not said"}
+
+
+def rec_store():
+    cfg = community._with_env(all_secrets()).get("supabase") or {}
+    return recordings.store_from(cfg)
+
+
+def my_own_words():
+    """The folded words in my own manifest. Mine play wherever both have one."""
+    try:
+        with open("audio/manifest.json", encoding="utf-8") as f:
+            return set(json.load(f))
+    except (OSError, ValueError):
+        return set()
+
+
+def how_captured(r):
+    c = r.get("capture") or {}
+    off = lambda k: {False: "off", True: "ON"}.get(c.get(k), "not reported")
+    rate = f"{(r.get('sample_rate') or 0) / 1000:g} kHz" if r.get("sample_rate") else "rate unknown"
+    secs = f"{(r.get('duration_ms') or 0) / 1000:.1f} s"
+    return (f"{secs} · {rate} · echo cancellation {off('echoCancellation')} · "
+            f"noise suppression {off('noiseSuppression')} · "
+            f"automatic volume {off('autoGainControl')}")
+
+
+def show_recording(store, r, mine):
+    rid = r["id"]
+    heard = st.session_state.setdefault("heard", {})
+    with st.container(border=True):
+        top = st.columns([3, 1])
+        top[0].markdown(f"**{r['typed_kenyang']}**"
+                        + (f" · {r['typed_english']}" if r.get("typed_english") else ""))
+        top[1].caption(str(r.get("created_at", ""))[:16].replace("T", " "))
+
+        who = " · ".join(x for x in [r.get("speaker"), r.get("village"),
+                                     VOICE.get(r.get("voice"), "")] if x)
+        st.caption(f"From {who}")
+        st.caption("Speech tools: " + ("yes, they ticked the second box"
+                   if r.get("consent_speech_tools") else "no") + " · " + how_captured(r))
+        try:
+            sent, ok = recordings.voice_counts(store, r["speaker_code"])
+            if sent > 1:
+                st.caption(f"This voice has sent {sent} recordings, {ok} approved.")
+        except recordings.Trouble:
+            pass
+        if r.get("note"):
+            st.markdown(f"**Their sentence:** {r['note']}")
+
+        if rid not in heard:
+            if st.button("Listen", key=f"listen{rid}", type="primary"):
+                try:
+                    heard[rid] = recordings.pending_audio(store, rid)
+                except recordings.Trouble as e:
+                    st.error(f"The recording could not be fetched: {e}")
+                    return
+                st.rerun()
+            return
+
+        st.audio(heard[rid], format="audio/wav")
+        spelling = st.text_input("The Kenyang, spelled as it should be",
+                                 value=r["typed_kenyang"], key=f"ken{rid}")
+        try:
+            word = recordings.word_for(store, spelling) if spelling.strip() else None
+        except recordings.Trouble as e:
+            st.error(f"Could not check the words table: {e}")
+            return
+        english = st.text_input(
+            "The English", key=f"en{rid}",
+            value=word["english"] if word else r.get("typed_english", ""))
+        if word:
+            st.info(f"**{word['kenyang']}** is already a word ({word['english'] or 'no English'}). "
+                    "Approving adds this voice to it.")
+            if english.strip() and english.strip() != word["english"]:
+                st.warning(f"Approving will change its English from "
+                           f"“{word['english']}” to “{english.strip()}”.")
+        if fold(spelling) in mine:
+            st.caption("You have recorded this word yourself. Yours stays the one "
+                       "that plays; this one is kept beside it.")
+
+        yes, nope = st.columns(2)
+        if yes.button("Approve", key=f"ok{rid}", type="primary", use_container_width=True,
+                      disabled=not spelling.strip()):
+            try:
+                recordings.approve(store, r, spelling, english)
+            except recordings.Trouble as e:
+                st.error(f"Not approved: {e}")
+                return
+            heard.pop(rid, None)
+            st.rerun()
+        if nope.button("Set aside", key=f"no{rid}", use_container_width=True):
+            try:
+                recordings.reject(store, r)
+            except recordings.Trouble as e:
+                st.error(f"Not set aside: {e}")
+                return
+            heard.pop(rid, None)
+            st.rerun()
+
+
+def show_approved(store, r):
+    rid = r["id"]
+    left, right = st.columns([4, 1])
+    left.markdown(f"**{r['typed_kenyang']}** "
+                  + ("· primary " if r.get("is_primary") else "")
+                  + f"· {r.get('speaker') or 'unnamed'} · "
+                  + str(r.get("decided_at", ""))[:10])
+    if not st.session_state.get(f"sure{rid}"):
+        if right.button("Remove", key=f"rm{rid}"):
+            st.session_state[f"sure{rid}"] = True
+            st.rerun()
+    else:
+        st.warning("This deletes the recording for good and takes it off the site.")
+        a, b = st.columns(2)
+        if a.button("Remove it for good", key=f"rm2{rid}", type="primary"):
+            try:
+                recordings.remove(store, r)
+            except recordings.Trouble as e:
+                st.error(f"Not removed: {e}")
+            st.session_state.pop(f"sure{rid}", None)
+            st.rerun()
+        if b.button("Keep it", key=f"keep{rid}"):
+            st.session_state.pop(f"sure{rid}", None)
+            st.rerun()
+
+
+with tab_rec:
+    try:
+        store = rec_store()
+        queue = recordings.pending(store)
+    except recordings.Trouble as e:
+        store = None
+        st.error(f"The recordings could not be read: {e}")
+    if store is not None:
+        if not queue:
+            st.success("No recordings waiting.")
+        else:
+            st.caption(f"{len(queue)} waiting. Press Listen to hear one; "
+                       "Approve appears once you have.")
+        mine = my_own_words()
+        for r in queue:
+            show_recording(store, r, mine)
+
+        with st.expander("Approved recordings, and removing one"):
+            st.caption("For when somebody asks for their recording to be removed.")
+            try:
+                done = recordings.approved(store)
+            except recordings.Trouble as e:
+                done = []
+                st.error(f"Could not read them: {e}")
+            if not done:
+                st.caption("None approved yet.")
+            for r in reversed(done):
+                show_approved(store, r)
+
+        with st.expander("Correct a word's spelling or English"):
+            st.caption("The recordings stay as they are; only the word changes, and "
+                       "the public files are rebuilt. A word already pasted into the "
+                       "knowledge base comes back in Export, marked as corrected.")
+            try:
+                all_words = recordings.words(store)
+            except recordings.Trouble as e:
+                all_words = []
+                st.error(f"Could not read the words: {e}")
+            if all_words:
+                pick = st.selectbox("Word", all_words, key="fixword",
+                                    format_func=lambda w: f"{w['kenyang']} · {w['english']}")
+                new_ken = st.text_input("Kenyang", value=pick["kenyang"], key=f"fk{pick['id']}")
+                new_en = st.text_input("English", value=pick["english"], key=f"fe{pick['id']}")
+                if st.button("Save", key="fixsave",
+                             disabled=(new_ken, new_en) == (pick["kenyang"], pick["english"])):
+                    try:
+                        recordings.edit_word(store, pick, new_ken, new_en)
+                        st.success("Saved, and the public files rebuilt.")
+                    except recordings.Trouble as e:
+                        st.error(f"Not saved: {e}")
+
+        st.divider()
+        st.caption("The public list and manifest are rebuilt after every decision. "
+                   "If one ever failed part way, this rebuilds them from the tables.")
+        if st.button("Rebuild the public files"):
+            try:
+                m, listed = recordings.rebuild_public(store)
+                st.success(f"Rebuilt: {len(m)} words in the manifest, "
+                           f"{len(listed)} in the list.")
+            except recordings.Trouble as e:
+                st.error(f"Not rebuilt: {e}")
+
+
 with tab_new:
-    if not new:
+    if not rows:
+        st.info("Nothing yet. When somebody corrects Nɛpɛm or teaches it a word, "
+                "it lands here.")
+        st.caption(f"Reading from the {where}.")
+    elif not new:
         st.success("Nothing waiting.")
     for r in reversed(new):
         show(r, tab="new")
@@ -155,6 +354,32 @@ with tab_all:
             show(r, allow_decide=status_of(r) == "new", tab="all")
 
 with tab_out:
+    # The recorded words first: every approved word not yet in the knowledge
+    # base, or whose spelling has changed since it was pasted. This only makes
+    # text. Nothing writes to the knowledge base but me.
+    st.subheader("Recorded words to paste into the verified file")
+    try:
+        _st = rec_store()
+        md_rec, todo = recordings.paste_block(recordings.words(_st), recordings.approved(_st))
+    except recordings.Trouble as e:
+        md_rec, todo = "", None
+        st.error(f"The recorded words could not be read: {e}")
+    if todo == []:
+        st.info("Every recorded word is already in the knowledge base, as far as "
+                "this page has been told.")
+    elif todo:
+        st.caption(f"{len(todo)} word(s). Paste this at the end of "
+                   "knowledge_base/kenyang_verified_speaker.md, run build_index.py "
+                   "and push. Then press the button below, so they are not offered again.")
+        st.code(md_rec, language="markdown")
+        if st.button("I have pasted these"):
+            try:
+                recordings.mark_pasted(_st, todo)
+                st.rerun()
+            except recordings.Trouble as e:
+                st.error(f"Not marked: {e}")
+    st.divider()
+
     st.subheader("Paste this into the verified file")
     md, n = community.to_markdown(rows)
     if not n:
