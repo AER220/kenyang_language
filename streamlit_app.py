@@ -1,5 +1,5 @@
 """
-Nɛpɛm — a Kenyang (Kɛ́nyāŋ) language tutor.
+Nɛpɛ́m — a Kenyang (Kɛ́nyāŋ) language tutor.
 
 Built by Agbor Edouard Ransome, from the Manyu Division of Cameroon.
 
@@ -7,7 +7,7 @@ Built by Agbor Edouard Ransome, from the Manyu Division of Cameroon.
   2. Corpus     — reads every file in ./knowledge_base and cuts it into passages.
                   Nothing is thrown away any more: the whole corpus is searchable.
   3. Retrieval  — picks the passages that matter for the question actually asked.
-  4. Prompt     — who Nɛpɛm is, what he must never say, and how he teaches.
+  4. Prompt     — who Nɛpɛ́m is, what he must never say, and how he teaches.
   5. Look       — my chat bubbles, avatars, typing indicator (mobile first).
   6. App        — history, lesson tracking, streaming reply.
 
@@ -68,7 +68,7 @@ ALWAYS_ON_CHARS = 125_000    # ceiling for the verified tier, which travels ever
 
 # --- how much material goes in each message ---------------------------------
 # "full" sends the ENTIRE corpus every turn. That is what I actually want — no retrieval,
-# no chance of Nɛpɛm seeing only part of my files — but it is bounded by arithmetic, not
+# no chance of Nɛpɛ́m seeing only part of my files — but it is bounded by arithmetic, not
 # by code: my corpus is ~550k characters, about 137k tokens, and gpt-4o-mini's whole
 # window is 128k. It cannot be done on that model at any price.
 #
@@ -98,7 +98,7 @@ CHUNK_CHARS = 1_200          # passage size — roughly a page of a chapter
 CHUNK_OVERLAP = 160          # bleed between passages so a sentence isn't cut in half
 TIER_BOOST = {"verified": 0.10, "core": 0.05, "reference": 0.0}   # ties break toward trust
 
-MAX_HISTORY_TURNS = 30       # messages Nɛpɛm can still see; older ones are marked on screen
+MAX_HISTORY_TURNS = 30       # messages Nɛpɛ́m can still see; older ones are marked on screen
 STREAM_FLUSH_CHARS = 24
 EMBED_BATCH = 96             # passages per embedding request when building the index
 
@@ -122,7 +122,7 @@ EXCLUDE_FILES = {
     # The FULL.md is the proofreading dump of the lexicon — every entry in it is already
     # in kenyang_lexicon_core.jsonl, but messier. Loading both doubles the dictionary and
     # feeds the model two spellings of the same word. The .md stays in the folder so I can
-    # read it; it just doesn't go to Nɛpɛm.
+    # read it; it just doesn't go to Nɛpɛ́m.
     "kenyang_lexicon_full.md",
 }
 
@@ -150,12 +150,12 @@ SPINE_CHARS = 30_000        # total ceiling for the spine, shared across those f
                              # Raised from 70k: the teaching chapters ARE the point of the
                              # spine now, and they must not be silently truncated away.
 
-st.set_page_config(page_title="Nɛpɛm — Learn Kenyang", page_icon="brand/web-and-social/favicon-32x32.png",
+st.set_page_config(page_title="Nɛpɛ́m — Learn Kenyang", page_icon="brand/web-and-social/favicon-32x32.png",
                    layout="centered", initial_sidebar_state="collapsed")
 
 # "Mma ne eta" is unconfirmed: QUESTIONS_for_Ed.md section 20. It stays until Ed
 # confirms or replaces it. The rest is plain, and says what he does.
-WELCOME = "Mma ne eta, welcome! I am Nɛpɛm. I teach Kenyang, and I say so when I do not know something."
+WELCOME = "Mma ne eta, welcome! I am Nɛpɛ́m. I teach Kenyang, and I say so when I do not know something."
 START_HINT = "Tap one of the options below to begin, or type your own question."
 
 
@@ -232,7 +232,7 @@ def repair_encoding(text):
     My orthography guide came out of pypdf as "JDMX@MF NQSGNFQ@OGX" — that is
     "KENYANG ORTHOGRAPHY" with every character moved up by one. The PDF uses a custom
     font encoding and pypdf hands back the raw codes. The file looked like it had loaded
-    fine: 20,000 characters of confident nonsense. Every grammar rule Nɛpɛm needed —
+    fine: 20,000 characters of confident nonsense. Every grammar rule Nɛpɛ́m needed —
     noun phrase order, the associative marker, its tone — sat in there unreadable, which
     is exactly why he kept guessing at word order.
 
@@ -262,7 +262,7 @@ def repair_encoding(text):
     return "\n".join(out), changed > 0
 
 
-# Keys I strip out of every JSONL record before Nɛpɛm ever sees it. My converted files
+# Keys I strip out of every JSONL record before Nɛpɛ́m ever sees it. My converted files
 # carry a "document_id" on every line — "Kenyang_Lexicon", "Kenyang_Orthography_Guide" —
 # and that is a source name, repeated two thousand times, in direct contradiction of the
 # rule that he never names where his Kenyang came from. I built opaque labels into the
@@ -275,7 +275,7 @@ def parse_json_records(raw):
     Turn JSON or JSONL text into readable lines, dropping the source-naming keys.
 
     Split out of read_file because several of my files are JSONL saved with a .txt
-    extension, and routing on the extension alone meant those were fed to Nɛpɛm as raw
+    extension, and routing on the extension alone meant those were fed to Nɛpɛ́m as raw
     JSON — braces, quotes, and a document_id naming the source on every single line.
     """
     try:
@@ -441,7 +441,7 @@ def build_corpus(signature):
     `chunks` is everything, searchable. Nothing is dropped for budget reasons any more.
 
     Note the labels: passages are tagged "verified source 1", "core source 4" and so on,
-    never by filename. Nɛpɛm cannot leak a filename he was never shown.
+    never by filename. Nɛpɛ́m cannot leak a filename he was never shown.
     """
     _ = signature
 
@@ -621,22 +621,33 @@ def build_index(signature):
     outliving the folder it describes: edit the knowledge, the signature changes, and a
     mismatched file is ignored so the vectors rebuild.
 
-    Returns None if there's no committed file AND no key; search then falls back to keywords.
+    Returns (vectors, how). vectors is None if there's no committed file AND no key;
+    search then falls back to keywords. `how` says what happened, for the sidebar and the
+    log: an index that re-embeds when index.npz is committed and current is a bug (the
+    fingerprint failed), and it costs money on every cold start.
     """
+    why = "there is no index.npz"
     if os.path.exists(INDEX_FILE):
         try:
             blob = np.load(INDEX_FILE, allow_pickle=False)
             if str(blob["signature"]) == signature:
-                return blob["vectors"].astype(np.float32)
-        except Exception:
-            pass                          # unreadable or stale — fall through and rebuild
+                vec = blob["vectors"].astype(np.float32)
+                print(f"[nepem] index: loaded from {INDEX_FILE}, {len(vec):,} vectors",
+                      flush=True)
+                return vec, "loaded"
+            why = "index.npz does not match the knowledge folder"
+        except Exception as e:
+            why = f"index.npz could not be read ({type(e).__name__})"
 
     key = api_key()
     if not key:
-        return None
+        print(f"[nepem] index: none ({why}, and no API key)", flush=True)
+        return None, f"none: {why}, and no API key"
     _always, chunks, _man, _over, _tr = build_corpus(signature)
     if not chunks:
-        return None
+        return None, "none: no passages"
+    print(f"[nepem] WARNING index: re-embedding {len(chunks):,} passages because {why}",
+          flush=True)
     try:
         client = OpenAI(api_key=key)
         rows = []
@@ -647,9 +658,10 @@ def build_index(signature):
         mat = np.asarray(rows, dtype=np.float32)
         # Normalise once, here. Then similarity is just a dot product at question time.
         mat /= np.clip(np.linalg.norm(mat, axis=1, keepdims=True), 1e-9, None)
-        return mat
-    except Exception:
-        return None
+        return mat, f"re-embedded: {why}"
+    except Exception as e:
+        print(f"[nepem] index: embedding failed ({type(e).__name__})", flush=True)
+        return None, f"none: embedding failed ({type(e).__name__})"
 
 
 def embed_query(text):
@@ -1013,6 +1025,463 @@ def held_back(signature):
     return {"lines": out, "forms": forms, "phrases": keep}
 
 
+# =============================================================================
+# NUMBERS: WHICH FORM TO TEACH, BY THE VARIANTS ORDER
+# =============================================================================
+# Ed's order (CLAUDE.md, "When sources differ"): his recording, then his verified text,
+# then a course or book form with the flag, and if no source has it, Nɛpɛ́m says so.
+# For numbers the code applies it. Every form from every source is kept as a variant;
+# the one to teach is chosen here, so a new recording moves its number up on its own.
+
+_UNITS = ("one two three four five six seven eight nine ten eleven twelve thirteen "
+          "fourteen fifteen sixteen seventeen eighteen nineteen").split()
+_TENS = {"twenty": 20, "thirty": 30, "forty": 40, "fourty": 40, "fifty": 50, "sixty": 60,
+         "seventy": 70, "eighty": 80, "ninety": 90}
+NUMBER_TOP = 1_000_000          # every number any source has, up to a million
+_SCALES = {"hundred": 100, "thousand": 1000, "million": 1_000_000}
+
+
+def _words_to_num(g):
+    """English number words to an int: "seven", "thirty-seven", "two hundred",
+    "one thousand". None for anything else."""
+    g = re.sub(r"\s+", " ", re.sub(r"\s+and\s+", " ", g.lower().replace("-", " "))).strip()
+    if not g:
+        return None
+    total, cur = 0, 0
+    for w in g.split():
+        if w in ("a", "an") and cur == 0:
+            cur = 1
+        elif w in _UNITS:
+            cur += _UNITS.index(w) + 1
+        elif w in _TENS:
+            cur += _TENS[w]
+        elif w == "hundred":
+            cur = (cur or 1) * 100
+        elif w in ("thousand", "million"):
+            total += (cur or 1) * _SCALES[w]
+            cur = 0
+        else:
+            return None
+    return (total + cur) or None
+
+
+def _num_words(n):
+    """An int as English words, for what the code says: 37 -> "thirty-seven"."""
+    if n >= 1_000_000:
+        m, r = divmod(n, 1_000_000)
+        return _num_words(m) + " million" + (" " + _num_words(r) if r else "")
+    if n >= 1000:
+        t, r = divmod(n, 1000)
+        return _num_words(t) + " thousand" + (" " + _num_words(r) if r else "")
+    if n >= 100:
+        h, r = divmod(n, 100)
+        return _num_words(h) + " hundred" + (" and " + _num_words(r) if r else "")
+    if n < 20:
+        return _UNITS[n - 1]
+    t, u = divmod(n, 10)
+    name = next(k for k, v in _TENS.items() if v == t * 10)
+    return name + ("-" + _UNITS[u - 1] if u else "")
+
+
+def _gloss_num(g):
+    """A gloss that is a number and nothing else: "7", "seven", "21 / twenty-one",
+    "two twenties, so forty". Anything more ("two houses") is not a number entry."""
+    if not isinstance(g, str):
+        return None
+    g = g.strip().lower().rstrip(".").strip()
+    m = re.match(r"^(\d[\d,.]*)\s*/\s*.+$", g)
+    if m:
+        return int(re.sub(r"[,.]", "", m.group(1)))
+    m = re.search(r",\s*so\s+(.+)$", g)
+    if m:
+        return _words_to_num(m.group(1))
+    g = re.sub(r"\s*\(.*?\)\s*", "", g).strip()
+    if re.fullmatch(r"\d{1,3}(?:,\d{3})*|\d+", g):
+        return int(g.replace(",", ""))
+    return _words_to_num(g)
+
+
+def _number_rows(paths):
+    """(number, form, tier) for every number entry in the knowledge files."""
+    out = []
+    for path in paths:
+        tier = tier_of(os.path.basename(path))
+        if tier is None or path.lower().endswith(".pdf"):
+            continue
+        with open(path, encoding="utf-8", errors="replace") as f:
+            lines = f.read().split("\n")
+        for line in lines:
+            s = line.strip()
+            if s.startswith("{"):
+                try:
+                    d = json.loads(s)
+                except Exception:
+                    continue
+                if not isinstance(d, dict):
+                    continue
+                head = next((d[k] for k in _HEAD_KEYS if isinstance(d.get(k), str)), "")
+                n = d.get("value", d.get("number_value"))
+                if isinstance(n, str) and n.strip().isdigit():
+                    n = int(n)
+                if not isinstance(n, int):
+                    n = _gloss_num(next((d[k] for k in _GLOSS_KEYS
+                                         if isinstance(d.get(k), str)), ""))
+                if head.strip() and isinstance(n, int) and 1 <= n <= NUMBER_TOP:
+                    out.append((n, head.strip(), tier))
+                continue
+            if not line.startswith((" ", "\t")) or _BOOK_SPELLING.match(line):
+                continue
+            cols = [c.strip() for c in re.split(r"\s{2,}|\t+", s) if c.strip()]
+            if cols and re.fullmatch(r"\d{1,7}", cols[0].replace(",", "")):
+                # a table of digit, form, digit, form ...
+                for j in range(0, len(cols) - 1, 2):
+                    a, b = cols[j].replace(",", ""), cols[j + 1]
+                    if re.fullmatch(r"\d{1,7}", a) and not b.replace(",", "").isdigit() \
+                            and 1 <= int(a) <= NUMBER_TOP:
+                        out.append((int(a), b, tier))
+                continue
+            if len(cols) % 2 and cols:
+                # an odd last column may be "form gloss" with one space between
+                m = re.match(r"^(.*\S)\s+(\S+)$", cols[-1])
+                if m and _gloss_num(m.group(2)):
+                    cols = cols[:-1] + [m.group(1), m.group(2)]
+            for j in range(0, len(cols) - 1, 2):
+                n = _gloss_num(cols[j + 1])
+                # From a prose line, a form must hold a Kenyang letter or tone mark, or
+                # "because it is good to be one" would be read as a form of 1.
+                if n and 1 <= n <= NUMBER_TOP and not _gloss_num(cols[j]) \
+                        and not cols[j][:1].isdigit() and _looks_kenyang(cols[j]):
+                    out.append((n, cols[j], tier))
+    return out
+
+
+@st.cache_data(show_spinner=False, persist="disk")
+def number_forms(signature):
+    """
+    {n: {"teach": [form, ...], "why": "recording" | "verified" | "core" | "reference",
+         "forms": [(form, [tiers])]}} for every number some source has, 1 to NUMBER_TOP.
+
+    "teach" holds one form, except where Ed's own verified texts give two and no
+    recording decides: then both, and the code does not choose (see CLAUDE.md).
+    """
+    _ = signature
+    paths = sorted(p for p in glob.glob(os.path.join(KB_ROOT, "**", "*"), recursive=True)
+                   if os.path.isfile(p) and p.lower().endswith(READABLE))
+    rows = _number_rows(paths)
+    try:
+        with open("audio_words.json", encoding="utf-8") as f:
+            for e in json.load(f):
+                n = _gloss_num(e.get("english", ""))
+                if n and 1 <= n <= NUMBER_TOP and e.get("kenyang", "").strip():
+                    rows.append((n, e["kenyang"].strip(), "recording"))
+    except (OSError, ValueError):
+        pass
+    rank = {"recording": 0, "verified": 1, "core": 2, "reference": 3}
+    by = {}
+    for n, form, tier in rows:
+        key = re.sub(r"\s+", " ", _nfc(form))
+        e = by.setdefault(n, {}).setdefault(key, {"shown": {}, "tiers": [], "count": 0})
+        e["tiers"].append(tier)
+        e["count"] += 1
+        e["shown"].setdefault(tier, re.sub(r"\s+", " ", unicodedata.normalize("NFC", form)))
+    out = {}
+    for n, forms in by.items():
+        best = min(rank[t] for f in forms.values() for t in f["tiers"])
+        top = [k for k, f in forms.items() if best in (rank[t] for t in f["tiers"])]
+        if best >= 2:
+            # Course before book is the rank. Then the form more sources agree on; a tie
+            # left after that is shown as both, never broken by picking one.
+            most = max(forms[k]["count"] for k in top)
+            top = [k for k in top if forms[k]["count"] == most]
+        why = next(t for t, r in rank.items() if r == best)
+        shown = lambda k: next(forms[k]["shown"][t] for t in sorted(forms[k]["shown"],
+                                                                     key=rank.get))
+        out[n] = {"teach": [shown(k) for k in top], "why": why,
+                  "forms": [(shown(k), sorted(set(forms[k]["tiers"]), key=rank.get))
+                            for k in sorted(forms, key=lambda k: (min(rank[t] for t in
+                                            forms[k]["tiers"]), -forms[k]["count"]))]}
+    return out
+
+
+def numbers_block(nf):
+    """The numbers as Nɛpɛ́m must teach them, sent with every question."""
+    if not nf:
+        return ""
+    name = {"recording": "recording", "verified": "verified", "core": "course",
+            "reference": "book"}
+    lines = ["===== NUMBERS — the form to teach for each, chosen by code from the sources "
+             "(a speaker's recording first, then verified text, then course or book). =====",
+             "Each line is: the number, a colon, the form to teach. The forms in square "
+             "brackets are real variants from other sources: never tell a learner one does "
+             "not exist. If a learner uses one, accept it, and give the taught form beside it. "
+             "Say a number as a sentence (\"Two hundred is Bɛsa byó.\"), never by copying "
+             "this list's layout.",
+             "\"(written sources)\" means no speaker has recorded or verified that number: "
+             "teach it, and say plainly that it comes from written sources.",
+             "A number NOT in this list is not in your material. Say you do not have it. "
+             "Never build one from parts, not even by the counting rule."]
+    for n in sorted(nf):
+        e = nf[n]
+        teach = " or ".join(e["teach"])
+        two = len(e["teach"]) > 1
+        if e["why"] in ("core", "reference"):
+            where = "the course" if e["why"] == "core" else "the books"
+            teach += (f" (written sources; {where} give these equally)" if two
+                      else " (written sources)")
+        elif two:
+            teach += " (two verified forms; neither is recorded yet)"
+        others = [f"{f} ({', '.join(name[t] for t in ts)})" for f, ts in e["forms"]
+                  if f not in e["teach"]]
+        lines.append(f"  {n}: {teach}" + (f"  [also: {'; '.join(others)}]"
+                                           if others else ""))
+    gaps = [n for n in range(1, 101) if n not in nf]
+    if gaps:
+        spans, start = [], gaps[0]
+        for a, b in zip(gaps, gaps[1:] + [None]):
+            if b != a + 1:
+                spans.append(str(start) if start == a else f"{start}–{a}")
+                start = b
+        lines.append("Not in your material (say you do not have these): " + ", ".join(spans))
+    lines.append("Above one hundred, only the numbers listed are in your material.")
+    return "\n".join(lines)
+
+
+# --- rule 4: a number no source has is never built ---------------------------
+# The model, told not to, built 37 and 55 and called them correct; asked for "37
+# goats" it gave 23's form and called it 37. So the code reads every reply: each run of
+# number words is matched against the forms the sources have, and a line that gives a
+# missing number, or a real form under the wrong number, is replaced by one plain line
+# the code writes. Book-only numbers are given, with the flag, never refused.
+
+_NUM_JOIN = {"nɛ", "ne", "nsɛm", "nsem", "meso"}
+_NUM_WORD_RX = re.compile(r"\b(?:(?:a|an|one|two|three|four|five|six|seven|eight|nine|ten|"
+                          r"eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|"
+                          r"eighteen|nineteen|twenty|thirty|forty|fourty|fifty|sixty|"
+                          r"seventy|eighty|ninety|hundred|thousand|million)"
+                          r"(?:[\s-]+(?:and[\s-]+)?)?)+\b", re.IGNORECASE)
+_DIGITS_RX = re.compile(r"(?<![\w.])\d{1,3}(?:,\d{3})+(?![\d])|(?<![\w.,])\d{1,7}(?![\d]|,\d{3})")
+_RANGE_RX = re.compile(r"(?:from\s+)?(\S+(?:[\s-]\S+)?)\s*(?:to|-|–|through|till|until)\s*"
+                       r"(\S+(?:[\s-]\S+)?)", re.IGNORECASE)
+_COUNTING = re.compile(r"\b(?:count|counting|numbers?|numerals?|digits?)\b", re.IGNORECASE)
+
+
+# Sentences that vouch for the numbers given, or say they were assembled: removed when the
+# code has had to take a number out, because they would then vouch for nothing or for it.
+_CLAIM_RX = re.compile(r"[^.!?\n]*\b(?:correct forms?|these are (?:all )?(?:the )?(?:right|correct)"
+                       r"|assembled|put(?:ting)? (?:it|this|them|that) (?:all )?together"
+                       r"|built (?:it|this|them) from|is formed (?:as follows|from|by))"
+                       r"\b[^.!?\n]*[.!?:]?", re.IGNORECASE)
+
+
+# The model's own blanket refusal, removed once the code has said exactly what it has
+# and what it does not, so the reply does not refuse twice or refuse what it then gives.
+_BLANKET_RX = re.compile(r"[^.!?\n]*\b(?:don't|do not)\s+have\s+(?:those|these|them|that|any|it)\b"
+                         r"[^.!?\n]*[.!?;]?|[^.!?\n]*\b(?:try asking|ask (?:me )?again|asking (?:me )?"
+                         r"again|in different words)\b[^.!?\n]*[.!?]?", re.IGNORECASE)
+
+
+def _num_fold(w):
+    return unicodedata.normalize("NFC", w).lower().strip(".,;:!?\"'()*_“”‘’[]")
+
+
+def number_index(nf):
+    """{folded form: {numbers}} for every form any source has, and the set of number
+    words (everything in a form except the joiners)."""
+    forms, words = {}, set()
+    for n, e in nf.items():
+        for f, _ts in e["forms"]:
+            key = " ".join(_num_fold(t) for t in f.split() if _num_fold(t))
+            forms.setdefault(key, set()).add(n)
+            words |= {t for t in key.split() if t not in _NUM_JOIN}
+    return forms, words
+
+
+def numbers_in(text):
+    """The numbers a piece of English names, as digits or words."""
+    found = [int(m.group(0).replace(",", "")) for m in _DIGITS_RX.finditer(text)]
+    for m in _NUM_WORD_RX.finditer(text):
+        n = _words_to_num(m.group(0).strip(" -"))
+        if n and not re.fullmatch(r"(?i)\s*an?\s*", m.group(0)):
+            found.append(n)
+    return found
+
+
+def asked_numbers(question):
+    """(numbers the learner asked about, a counting range or None)."""
+    nums = numbers_in(question)
+    rng = None
+    if _COUNTING.search(question):
+        for m in _RANGE_RX.finditer(question):
+            a, b = (numbers_in(m.group(1)) or [None])[0], (numbers_in(m.group(2)) or [None])[0]
+            if b and (a is None or a < b) and b <= 1000:
+                rng = (a or 1, b)
+        if rng is None and nums and re.search(r"(?i)\bto\s+\S+", question):
+            rng = (1, max(nums))
+    return nums, rng
+
+
+def _number_runs(line, num_words):
+    """[(start, end, folded run)] for each run of number words in a line: it starts and
+    ends on a number word, with only joiners (nɛ, nsɛm, meso) or number words between."""
+    toks = [(m.start(), m.end(), _num_fold(m.group(0)))
+            for m in re.finditer(r"[^\s/=:,;()–—]+", line)]
+    runs, i = [], 0
+    while i < len(toks):
+        if toks[i][2] in num_words:
+            j = i
+            while j + 1 < len(toks) and (toks[j + 1][2] in num_words or toks[j + 1][2] in _NUM_JOIN):
+                j += 1
+            while toks[j][2] in _NUM_JOIN:
+                j -= 1
+            runs.append((toks[i][0], toks[j][1], " ".join(t[2] for t in toks[i:j + 1])))
+            i = j + 1
+        else:
+            i += 1
+    return runs
+
+
+def _spans(nums):
+    nums = sorted(set(nums))
+    out, start = [], None
+    for a, b in zip(nums, nums[1:] + [None]):
+        start = a if start is None else start
+        if b != a + 1:
+            out.append((start, a))
+            start = None
+    return out
+
+
+def _cap(s):
+    return s[:1].upper() + s[1:]
+
+
+def missing_line(missing, nf):
+    """One plain sentence, written by the code, for the numbers it does not have."""
+    have = sorted(nf)
+    parts = []
+    singles = [a for a, b in _spans(missing) if a == b]
+    for a, b in _spans(missing):
+        if a == b:
+            continue
+        lo = max((n for n in have if n < a), default=None)
+        hi = min((n for n in have if n > b), default=None)
+        head = (f"I have up to {_num_words(lo)}" + (f", then {_num_words(hi)}" if hi else "")
+                + ". ") if lo else ""
+        parts.append(f"{head}{_cap(_num_words(a))} to {_num_words(b)} have not been given to "
+                     f"me by a speaker.")
+    if singles:
+        names = " or ".join(_num_words(n) for n in singles)
+        them = "it" if len(singles) == 1 else "them"
+        parts.append(f"I don't have {names} in Kenyang yet. No speaker has given {them} to me, "
+                     f"and I won't build {them} from parts.")
+        if len(singles) == 1:
+            m = singles[0]
+            near = [n for n in (max((n for n in have if n < m), default=None),
+                                min((n for n in have if n > m), default=None)) if n]
+            if near:
+                parts.append("I can give you " + " and ".join(
+                    f"{_num_words(n)} ({nf[n]['teach'][0]})" for n in near) + ".")
+    return " ".join(parts)
+
+
+def enforce_numbers(reply, question, nf):
+    """
+    Rule 4, in code. Returns (reply, built): built is each run of number words that is no
+    form any source has, for the flag to report as not found.
+
+    A line goes, replaced once by missing_line(), when it gives a number no source has, or
+    puts a real form under a number it is not (23's form called 37). A built run on a line
+    for a number the sources do have stays, and is flagged. A number the learner asked for
+    that the sources have, and that the reply leaves out, is added with its taught form.
+    """
+    if not nf:
+        return reply, []
+    forms, num_words = number_index(nf)
+    asked, rng = asked_numbers(question)
+    numeric_q = bool(asked) or bool(_COUNTING.search(question))
+    missing_asked = {n for n in asked if n not in nf}
+    if rng:
+        missing_asked |= {n for n in range(rng[0], rng[1] + 1) if n not in nf}
+    lines, out, built, dropped, gave = reply.split("\n"), [], [], set(), set()
+    for line in lines:
+        runs = _number_runs(line, num_words)
+        if not runs:
+            out.append(line)
+            continue
+        text = line
+        if numeric_q:
+            text = re.sub(r"^\s*(?:[-*•]\s*)?\**(\d{1,7})\**\s*[.)]\s", r"\1 = ", line)
+        stated = set(numbers_in(text if numeric_q else re.sub(r"^\s*\d+[.)]\s", "", line)))
+        bad = False
+        for _a, _b, run in runs:
+            known = forms.get(run)
+            if known:
+                gave |= known
+            if known and stated - set(nf) and not (known & (stated - set(nf))):
+                # the line names a number no source has, and the form is another number's:
+                # 'For "37" you would say ... (twenty-seven)' is 27's form called 37
+                bad = True
+                continue
+            if known and (not stated or known & stated):
+                # a real form, for a number the line names, or naming none
+                if not stated and missing_asked and not (known & set(asked)) and " " in run:
+                    bad = True          # "37 goats" answered with 23's form, unnamed
+                continue
+            if known and stated:
+                if stated - set(nf):
+                    bad = True          # a real form under a number no source has
+                else:
+                    built.append(run)   # a real form under the wrong number we do have
+                continue
+            # not a form any source has
+            if (stated and stated - set(nf)) or (not stated and missing_asked):
+                bad = True
+            elif " " in run:
+                built.append(run)
+        if bad:
+            dropped |= (stated - set(nf)) or missing_asked
+            if not any(l is None for l in out):
+                out.append(None)        # where the code's one line goes
+        else:
+            out.append(line)
+    missing = dropped | missing_asked
+    note = missing_line(sorted(missing), nf) if missing else ""
+    if None in out:
+        # With a line gone, a sentence vouching for it would now be false.
+        out = [l if l is None else _CLAIM_RX.sub("", l) for l in out]
+        # ... and so would the lead-in to it ("you would say:") and its gloss after it
+        # ("This means ..."), which introduce or translate what is no longer there.
+        k = out.index(None)
+        before = [i for i in range(k) if out[i] is not None and out[i].strip()]
+        if before and out[before[-1]].rstrip().endswith(":"):
+            out[before[-1]] = ""
+        after = [i for i in range(k + 1, len(out)) if out[i] is not None and out[i].strip()]
+        if after and re.match(r"(?i)\s*(?:this|that|which|it) means\b", out[after[0]]):
+            out[after[0]] = ""
+    placed = None in out
+    if placed:
+        # the one placeholder becomes the code's line (or goes, if there is nothing to say)
+        out = [note if l is None else l for l in out]
+    if note:
+        out = [l if l == note else _BLANKET_RX.sub("", l) for l in out]
+    if not placed and note and not any(re.search(r"(?i)\b(?:don't|do not|not)\b.*\bhave\b", l) and
+                          any(_num_words(m) in l.lower() or str(m) in l for m in missing)
+                          for l in lines):
+        out.append(note)
+    # a number asked for, which the sources have, that the reply leaves out
+    add = [n for n in asked if n in nf and n not in gave][:6]
+    if add:
+        # the model's blanket "I don't have those" would now contradict the lines added
+        out = [l if l is None else _BLANKET_RX.sub("", l) for l in out]
+    for n in add:
+        e = nf[n]
+        tag = (" (from written sources; a speaker has not checked it)"
+               if e["why"] in ("core", "reference") else "")
+        out.append(f"{_cap(_num_words(n))}: {' or '.join(e['teach'])}{tag}.")
+    text = "\n".join(l for l in out if l is not None)
+    return re.sub(r"\n{3,}", "\n\n", text).strip(), built
+
+
 def hold_back(found, held):
     """The passages with every held-back book line taken out. Copies, so the cached
     chunks (and their row-for-row match with index.npz) are never changed."""
@@ -1159,7 +1628,7 @@ def passages_block(found):
 # 4. PROMPT
 # =============================================================================
 
-SYSTEM_PROMPT = f"""You are Nɛpɛm, a warm, patient tutor for the Kenyang language (Kɛ́nyāŋ)
+SYSTEM_PROMPT = f"""You are Nɛpɛ́m, a warm, patient tutor for the Kenyang language (Kɛ́nyāŋ)
 of Southwest Cameroon. Your learners are Bayangi people reconnecting with their mother tongue
 and beginners who have never studied it. Teach in a friendly, conversational way and leave
 every learner encouraged.
@@ -1170,7 +1639,7 @@ THE ONE RULE ABOVE ALL THE OTHERS — it is absolute:
 - Your warmth lives in the English around the Kenyang. It never comes from making up Kenyang.
 
 WHO YOU ARE:
-- You are Nɛpɛm, a Kenyang tutor. That is your whole identity.
+- You are Nɛpɛ́m, a Kenyang tutor. That is your whole identity.
 - You were created by Agbor Edouard Ransome, from the Manyu Division of Cameroon. If a learner asks who made
   you, say so warmly and with pride. This is the ONLY fact about yourself you ever share.
 
@@ -1354,7 +1823,7 @@ SPEAKERS_MANIFEST = ("https://xkrjlihldrrwyeglszyg.supabase.co"
 @st.cache_resource
 def _speakers_last_good():
     """The last list of speakers' recorded words that loaded, shared by every session,
-    so a Supabase hiccup does not drop words Nɛpɛm knew a minute ago."""
+    so a Supabase hiccup does not drop words Nɛpɛ́m knew a minute ago."""
     return {"words": []}
 
 
@@ -1383,7 +1852,7 @@ def speakers_recorded():
 
 
 def recordings_block(path=os.path.join("audio", "manifest.json")):
-    """The words a speaker has recorded, so Nɛpɛm can tell a learner which ones to tap.
+    """The words a speaker has recorded, so Nɛpɛ́m can tell a learner which ones to tap.
 
     The chat's player (say.js on nepem.org) reads this same manifest, which Render deploys
     from the same repo, so a word listed here is a word that is underlined in the reply.
@@ -1744,7 +2213,7 @@ def flag_html(nowhere, written):
 
 
 def taught_so_far(messages, cap=40):
-    """Kenyang words Nɛpɛm has already put in front of this learner, in order."""
+    """Kenyang words Nɛpɛ́m has already put in front of this learner, in order."""
     seen, lowered = [], set()
     for m in messages:
         if m["role"] != "assistant":
@@ -1765,7 +2234,7 @@ def correction_note(message):
     """
     Spot a learner correcting me, and make it impossible to skate past.
 
-    Twice a learner told Nɛpɛm the word order was wrong and he answered "thank you for your
+    Twice a learner told Nɛpɛ́m the word order was wrong and he answered "thank you for your
     patience" and repeated the same phrase unchanged. A correction has to stop the lesson,
     not get absorbed into the next pleasantry.
     """
@@ -1784,7 +2253,7 @@ def lesson_note(messages, found=None, always_on=""):
     """
     A briefing so he builds on the lesson instead of restarting it.
 
-    This had a nasty bug. taught_so_far() scrapes Kenyang-looking words out of Nɛpɛm's OWN
+    This had a nasty bug. taught_so_far() scrapes Kenyang-looking words out of Nɛpɛ́m's OWN
     previous replies — so anything he invented got handed back to him next turn as
     established lesson content, and the mistake compounded inside a single session. Now a
     word only counts as taught if it actually appears in the passages retrieved or the
@@ -1901,7 +2370,7 @@ html{color-scheme: light;}
    was built from. It is one of the two accuracy claims made visible, so it must
    never be quiet. It was amber, which now means sound, so it carries its weight
    by shape instead: a full ink border, a heavy rule down the side, and a drawn
-   "!", on white like Nɛpɛm's own bubbles. Solid lines only: dotted and dashed
+   "!", on white like Nɛpɛ́m's own bubbles. Solid lines only: dotted and dashed
    mean "tap to hear" on this site, and the flag must not borrow that. */
 .unchecked{margin:-6px 0 14px 39px;padding:10px 13px 10px 14px;
   border-radius:4px 10px 10px 4px;background:#FFFFFF;border:2px solid var(--ink);
@@ -2025,7 +2494,7 @@ textarea::placeholder,
 """, unsafe_allow_html=True)
 
 # Inline SVG rather than emoji: crisp on every phone, no dependency on the device's
-# emoji font. A leaf for Nɛpɛm, a figure for the learner.
+# emoji font. A leaf for Nɛpɛ́m, a figure for the learner.
 AVA_LEAF = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" '
             'stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 20.5c0-8.5 5-13.5 15-14.5'
             ' 0 9.5-5 14.5-15 14.5z"/><path d="M4.5 20.5c2.8-4 6-6.4 9.5-7.6"/></svg>')
@@ -2072,7 +2541,7 @@ def bubble(role, text, streaming=False, hear=""):
 
 
 THINKING = (f'<div class="row bot"><div class="ava ava-bot">{AVA_LEAF}</div>'
-            f'<div class="bubble bot"><span class="thinking">Nɛpɛm is thinking'
+            f'<div class="bubble bot"><span class="thinking">Nɛpɛ́m is thinking'
             f'<span class="dots"><span></span><span></span><span></span></span></span></div></div>')
 
 # =============================================================================
@@ -2099,7 +2568,7 @@ if (!doc.getElementById("nepem-say")) {
 # --- header FIRST ------------------------------------------------------------
 # This used to sit below the knowledge loading, which meant that on a cold start the
 # page was blank cream until every PDF had been parsed. Draw the app, then work.
-st.markdown('<div class="hero"><div class="lock"><svg class="mark" viewBox="22 24 274 289" aria-hidden="true"><path class="mk-heart" fill-rule="evenodd" d="M 158.71,311.45 L 158.29,311.27 L 157.06,310.45 L 155.02,308.98 L 152.17,306.86 L 148.50,304.11 L 143.50,300.28 L 137.17,295.38 L 129.50,289.41 L 120.50,282.37 L 112.36,275.89 L 105.08,269.98 L 98.66,264.63 L 93.11,259.85 L 87.93,255.28 L 83.14,250.92 L 78.73,246.78 L 74.71,242.86 L 70.94,239.09 L 67.42,235.48 L 64.17,232.04 L 61.17,228.75 L 58.23,225.40 L 55.37,221.98 L 52.57,218.51 L 49.84,214.97 L 47.23,211.40 L 44.73,207.80 L 42.34,204.17 L 40.07,200.51 L 37.94,196.83 L 35.93,193.12 L 34.06,189.39 L 32.32,185.63 L 30.76,181.92 L 29.39,178.25 L 28.19,174.62 L 27.18,171.04 L 26.36,167.96 L 25.72,165.38 L 25.27,163.29 L 25.02,161.71 L 24.78,159.90 L 24.57,157.85 L 24.39,155.58 L 24.22,153.08 L 24.15,150.48 L 24.16,147.77 L 24.26,144.96 L 24.45,142.04 L 24.70,139.27 L 25.04,136.65 L 25.44,134.17 L 25.92,131.83 L 26.40,129.69 L 26.90,127.73 L 27.40,125.96 L 27.92,124.38 L 28.49,122.75 L 29.14,121.08 L 29.84,119.38 L 30.61,117.62 L 31.45,115.88 L 32.33,114.12 L 33.28,112.38 L 34.29,110.62 L 35.60,108.62 L 37.22,106.38 L 39.15,103.88 L 41.38,101.12 L 43.49,98.67 L 45.47,96.52 L 47.33,94.67 L 49.06,93.11 L 50.62,91.77 L 51.98,90.64 L 53.17,89.72 L 54.17,89.02 L 55.35,88.23 L 56.73,87.36 L 58.29,86.42 L 60.04,85.39 L 61.77,84.43 L 63.48,83.54 L 65.17,82.72 L 66.83,81.97 L 68.48,81.27 L 70.10,80.64 L 71.71,80.07 L 73.29,79.55 L 75.00,79.05 L 76.83,78.57 L 78.79,78.10 L 80.88,77.65 L 83.19,77.27 L 85.73,76.96 L 88.50,76.71 L 91.50,76.54 L 94.25,76.44 L 96.75,76.42 L 99.00,76.47 L 101.00,76.60 L 102.88,76.76 L 104.62,76.96 L 106.25,77.19 L 107.75,77.45 L 109.31,77.77 L 110.94,78.15 L 112.62,78.58 L 114.38,79.07 L 116.15,79.62 L 117.94,80.25 L 119.75,80.95 L 121.58,81.72 L 123.77,82.79 L 126.31,84.17 L 129.21,85.84 L 132.46,87.82 L 135.52,89.88 L 138.40,92.01 L 141.08,94.22 L 143.58,96.51 L 145.96,98.88 L 148.22,101.32 L 150.35,103.84 L 152.37,106.44 L 154.48,109.46 L 156.69,112.91 L 158.99,116.79 L 161.40,121.10 L 163.80,123.66 L 166.21,124.46 L 168.62,123.51 L 171.04,120.81 L 173.29,118.36 L 175.38,116.15 L 177.29,114.19 L 179.04,112.47 L 181.25,110.49 L 183.92,108.25 L 187.04,105.75 L 190.62,102.99 L 193.94,100.54 L 196.98,98.40 L 199.75,96.58 L 202.25,95.08 L 204.77,93.64 L 207.31,92.26 L 209.88,90.95 L 212.46,89.70 L 215.06,88.51 L 217.69,87.39 L 220.33,86.34 L 223.00,85.35 L 225.36,84.54 L 227.40,83.89 L 229.13,83.42 L 230.55,83.12 L 231.62,82.93 L 232.32,82.87 L 232.66,82.92 L 232.65,83.08 L 231.67,83.88 L 229.72,85.29 L 226.82,87.33 L 222.94,90.00 L 219.45,92.50 L 216.33,94.83 L 213.60,97.00 L 211.24,99.00 L 208.80,101.19 L 206.26,103.56 L 203.64,106.12 L 200.92,108.88 L 198.45,111.44 L 196.24,113.82 L 194.28,116.01 L 192.57,118.02 L 190.78,120.23 L 188.91,122.65 L 186.97,125.27 L 184.96,128.10 L 183.01,130.96 L 181.12,133.88 L 179.31,136.83 L 177.56,139.83 L 175.87,142.92 L 174.24,146.08 L 172.67,149.33 L 171.15,152.67 L 169.76,155.90 L 168.50,159.02 L 167.36,162.04 L 166.35,164.96 L 165.47,167.65 L 164.72,170.10 L 164.10,172.33 L 163.60,174.33 L 163.09,176.65 L 162.57,179.27 L 162.05,182.21 L 161.52,185.46 L 161.07,188.71 L 160.72,191.96 L 160.45,195.21 L 160.27,198.46 L 160.20,201.83 L 160.23,205.33 L 160.35,208.96 L 160.58,212.71 L 160.88,216.29 L 161.24,219.71 L 161.66,222.96 L 162.14,226.04 L 162.75,229.29 L 163.50,232.71 L 164.37,236.29 L 165.37,240.04 L 166.49,243.85 L 167.75,247.73 L 169.12,251.67 L 170.63,255.67 L 172.02,259.20 L 173.28,262.28 L 174.43,264.90 L 175.46,267.05 L 176.49,268.50 L 177.54,269.25 L 178.59,269.30 L 179.65,268.65 L 181.39,267.41 L 183.81,265.59 L 186.90,263.19 L 190.67,260.20 L 195.23,256.46 L 200.58,251.96 L 206.71,246.70 L 213.64,240.69 L 219.85,235.14 L 225.35,230.04 L 230.14,225.41 L 234.21,221.25 L 237.97,217.29 L 241.39,213.54 L 244.49,210.00 L 247.27,206.66 L 250.03,203.10 L 252.79,199.31 L 255.54,195.29 L 258.28,191.04 L 260.59,187.33 L 262.47,184.17 L 263.91,181.54 L 264.93,179.46 L 265.87,177.40 L 266.75,175.35 L 267.57,173.33 L 268.31,171.33 L 268.99,169.33 L 269.61,167.33 L 270.16,165.33 L 270.65,163.33 L 271.08,161.36 L 271.44,159.42 L 271.74,157.51 L 271.98,155.63 L 272.12,153.24 L 272.17,150.32 L 272.12,146.88 L 271.99,142.93 L 272.36,139.42 L 273.26,136.36 L 274.66,133.75 L 276.59,131.58 L 278.50,129.24 L 280.41,126.73 L 282.30,124.04 L 284.18,121.18 L 285.64,119.06 L 286.68,117.68 L 287.29,117.05 L 287.49,117.16 L 287.74,117.48 L 288.05,117.99 L 288.42,118.71 L 288.84,119.62 L 289.35,120.98 L 289.94,122.77 L 290.62,125.00 L 291.39,127.67 L 292.08,130.52 L 292.68,133.56 L 293.19,136.79 L 293.62,140.21 L 293.91,143.65 L 294.05,147.10 L 294.04,150.58 L 293.89,154.08 L 293.71,157.10 L 293.50,159.65 L 293.26,161.71 L 292.99,163.29 L 292.59,165.19 L 292.07,167.40 L 291.43,169.92 L 290.65,172.75 L 289.83,175.50 L 288.95,178.17 L 288.01,180.75 L 287.02,183.25 L 285.90,185.85 L 284.66,188.56 L 283.29,191.38 L 281.79,194.29 L 280.29,197.08 L 278.77,199.75 L 277.25,202.29 L 275.71,204.71 L 273.56,207.79 L 270.80,211.54 L 267.42,215.96 L 263.42,221.04 L 259.56,225.74 L 255.84,230.07 L 252.26,234.01 L 248.82,237.57 L 245.60,240.84 L 242.59,243.84 L 239.79,246.57 L 237.20,249.01 L 233.64,252.22 L 229.10,256.21 L 223.58,260.96 L 217.08,266.50 L 209.21,272.95 L 199.96,280.34 L 189.33,288.64 L 177.33,297.87 L 168.23,304.75 L 162.02,309.28 Z M 147.41,269.38 L 145.96,264.29 L 144.69,259.65 L 143.59,255.44 L 142.67,251.67 L 141.92,248.33 L 141.23,245.00 L 140.60,241.67 L 140.03,238.33 L 139.52,235.00 L 139.07,231.65 L 138.69,228.27 L 138.37,224.88 L 138.12,221.46 L 137.98,217.54 L 137.98,213.12 L 138.09,208.21 L 138.32,202.79 L 138.64,197.88 L 139.02,193.46 L 139.48,189.54 L 140.02,186.12 L 140.67,182.65 L 141.43,179.10 L 142.31,175.50 L 143.30,171.83 L 144.41,168.15 L 145.63,164.44 L 146.98,160.71 L 148.43,156.96 L 149.32,153.52 L 149.64,150.40 L 149.39,147.59 L 148.57,145.10 L 147.58,142.45 L 146.41,139.64 L 145.08,136.67 L 143.58,133.55 L 142.02,130.54 L 140.40,127.66 L 138.71,124.89 L 136.96,122.25 L 135.15,119.75 L 133.27,117.39 L 131.33,115.17 L 129.33,113.10 L 127.29,111.18 L 125.21,109.39 L 123.08,107.75 L 120.92,106.25 L 118.71,104.87 L 116.46,103.62 L 114.17,102.49 L 111.83,101.48 L 109.31,100.60 L 106.60,99.85 L 103.71,99.23 L 100.62,98.74 L 97.61,98.43 L 94.65,98.31 L 91.77,98.38 L 88.94,98.63 L 86.26,98.99 L 83.72,99.48 L 81.32,100.09 L 79.06,100.81 L 76.80,101.67 L 74.54,102.66 L 72.29,103.79 L 70.04,105.05 L 67.92,106.38 L 65.94,107.77 L 64.09,109.22 L 62.37,110.73 L 60.64,112.45 L 58.90,114.37 L 57.16,116.50 L 55.40,118.83 L 53.83,121.12 L 52.44,123.38 L 51.25,125.58 L 50.24,127.75 L 49.35,129.83 L 48.60,131.83 L 47.97,133.75 L 47.47,135.58 L 47.04,137.77 L 46.67,140.31 L 46.37,143.21 L 46.13,146.46 L 46.07,149.73 L 46.21,153.02 L 46.54,156.33 L 47.05,159.67 L 47.69,162.90 L 48.45,166.02 L 49.33,169.04 L 50.33,171.96 L 51.47,174.90 L 52.72,177.85 L 54.11,180.83 L 55.62,183.83 L 57.25,186.83 L 59.00,189.83 L 60.85,192.83 L 62.82,195.83 L 64.87,198.79 L 67.00,201.71 L 69.19,204.58 L 71.47,207.42 L 73.99,210.42 L 76.75,213.58 L 79.76,216.92 L 83.02,220.42 L 86.47,223.98 L 90.10,227.60 L 93.92,231.29 L 97.93,235.04 L 101.81,238.60 L 105.56,241.98 L 109.18,245.17 L 112.68,248.17 L 117.12,251.86 L 122.50,256.23 L 128.82,261.30 L 136.09,267.06 L 141.67,271.47 L 145.56,274.53 L 147.75,276.24 L 148.25,276.60 L 148.66,276.86 L 148.98,277.02 L 149.21,277.09 L 149.36,277.05 L 149.10,275.76 L 148.45,273.20 Z"/><path class="mk-leaf" fill-rule="evenodd" d="M 200.79,151.67 L 197.54,151.67 L 194.90,151.65 L 192.85,151.60 L 191.42,151.53 L 190.58,151.44 L 189.84,151.31 L 189.18,151.14 L 188.60,150.94 L 188.11,150.70 L 189.14,150.08 L 191.68,149.10 L 195.74,147.75 L 201.31,146.04 L 206.28,144.37 L 210.65,142.77 L 214.42,141.22 L 217.58,139.73 L 220.71,138.11 L 223.79,136.36 L 226.83,134.48 L 229.83,132.47 L 232.77,130.33 L 235.63,128.06 L 238.44,125.66 L 241.17,123.13 L 243.73,120.56 L 246.10,117.95 L 248.30,115.30 L 250.31,112.62 L 252.33,109.63 L 254.34,106.33 L 256.36,102.74 L 258.37,98.84 L 260.14,95.17 L 261.64,91.72 L 262.89,88.50 L 263.88,85.50 L 264.75,82.67 L 265.49,80.00 L 266.11,77.50 L 266.60,75.16 L 267.08,72.43 L 267.55,69.30 L 268.00,65.78 L 268.45,61.87 L 268.72,58.88 L 268.80,56.81 L 268.70,55.65 L 268.42,55.42 L 267.21,55.46 L 265.07,55.76 L 262.00,56.33 L 258.00,57.17 L 253.19,58.02 L 247.56,58.87 L 241.12,59.72 L 233.88,60.58 L 227.88,61.36 L 223.12,62.05 L 219.62,62.66 L 217.38,63.18 L 215.00,63.82 L 212.50,64.59 L 209.88,65.47 L 207.12,66.48 L 204.50,67.55 L 202.00,68.67 L 199.62,69.85 L 197.38,71.08 L 195.09,72.45 L 192.77,73.95 L 190.41,75.58 L 188.01,77.35 L 185.69,79.22 L 183.44,81.20 L 181.26,83.29 L 179.16,85.48 L 177.04,87.90 L 174.90,90.55 L 172.75,93.43 L 170.58,96.53 L 168.88,98.88 L 167.62,100.48 L 166.83,101.31 L 166.50,101.39 L 166.29,101.10 L 166.21,100.45 L 166.26,99.44 L 166.44,98.06 L 166.76,96.43 L 167.23,94.53 L 167.84,92.38 L 168.61,89.96 L 169.69,87.21 L 171.07,84.12 L 172.77,80.71 L 174.79,76.96 L 176.67,73.67 L 178.43,70.83 L 180.07,68.46 L 181.58,66.54 L 183.26,64.61 L 185.12,62.65 L 187.15,60.68 L 189.36,58.69 L 191.57,56.83 L 193.80,55.10 L 196.04,53.51 L 198.29,52.04 L 200.52,50.68 L 202.73,49.44 L 204.92,48.31 L 207.08,47.29 L 209.52,46.27 L 212.23,45.25 L 215.21,44.24 L 218.46,43.22 L 223.31,42.05 L 229.77,40.73 L 237.83,39.26 L 247.50,37.64 L 255.54,36.17 L 261.96,34.86 L 266.75,33.70 L 269.92,32.70 L 273.21,31.53 L 276.62,30.20 L 280.17,28.70 L 283.83,27.04 L 286.66,26.18 L 288.64,26.12 L 289.79,26.85 L 290.09,28.38 L 290.34,30.42 L 290.55,32.97 L 290.71,36.04 L 290.83,39.62 L 290.89,43.08 L 290.89,46.42 L 290.83,49.62 L 290.72,52.71 L 290.51,56.00 L 290.20,59.50 L 289.80,63.21 L 289.31,67.12 L 288.74,70.90 L 288.11,74.52 L 287.40,78.00 L 286.63,81.33 L 285.80,84.54 L 284.93,87.62 L 284.00,90.58 L 283.02,93.42 L 282.04,96.10 L 281.04,98.65 L 280.03,101.04 L 279.00,103.29 L 277.93,105.50 L 276.81,107.67 L 275.64,109.79 L 274.42,111.88 L 273.13,113.92 L 271.78,115.92 L 270.37,117.88 L 268.89,119.80 L 267.30,121.74 L 265.59,123.69 L 263.78,125.67 L 261.85,127.67 L 260.04,129.48 L 258.33,131.10 L 256.73,132.54 L 255.24,133.78 L 253.63,135.03 L 251.90,136.28 L 250.05,137.53 L 248.08,138.79 L 246.22,139.91 L 244.47,140.91 L 242.83,141.77 L 241.30,142.51 L 239.46,143.31 L 237.32,144.18 L 234.88,145.13 L 232.12,146.14 L 229.25,147.08 L 226.25,147.95 L 223.12,148.75 L 219.88,149.48 L 216.85,150.09 L 214.06,150.59 L 211.50,150.98 L 209.17,151.26 L 206.60,151.46 L 203.81,151.60 Z"/></svg><svg class="wordmark" viewBox="355 101 609 134" role="img" aria-label="Nɛpɛm"><path fill="currentColor" fill-rule="evenodd" d="M 537.83,230.70 L 535.50,230.72 L 533.17,230.67 L 530.83,230.55 L 528.50,230.36 L 526.17,230.11 L 523.71,229.74 L 521.12,229.24 L 518.42,228.63 L 515.58,227.89 L 512.92,227.08 L 510.42,226.21 L 508.08,225.27 L 505.92,224.27 L 503.88,223.21 L 501.96,222.09 L 500.17,220.91 L 498.50,219.68 L 496.94,218.38 L 495.48,217.02 L 494.12,215.60 L 492.88,214.12 L 491.75,212.65 L 490.75,211.19 L 489.88,209.74 L 489.12,208.30 L 488.44,206.67 L 487.82,204.85 L 487.27,202.84 L 486.79,200.64 L 486.42,198.67 L 486.17,196.95 L 486.03,195.46 L 486.02,194.21 L 486.07,192.90 L 486.18,191.52 L 486.37,190.09 L 486.62,188.59 L 487.00,187.01 L 487.52,185.34 L 488.16,183.59 L 488.94,181.76 L 489.70,180.13 L 490.45,178.71 L 491.19,177.50 L 491.91,176.50 L 492.65,175.56 L 493.40,174.69 L 494.18,173.88 L 494.97,173.12 L 495.84,172.38 L 496.79,171.62 L 497.81,170.88 L 498.92,170.12 L 500.10,169.40 L 501.35,168.69 L 502.67,168.00 L 504.06,167.33 L 504.73,166.60 L 504.69,165.81 L 503.93,164.96 L 502.45,164.04 L 501.12,163.17 L 499.96,162.33 L 498.95,161.54 L 498.09,160.79 L 497.21,159.92 L 496.31,158.93 L 495.38,157.81 L 494.43,156.57 L 493.59,155.39 L 492.86,154.26 L 492.25,153.18 L 491.75,152.15 L 491.30,151.14 L 490.91,150.13 L 490.58,149.14 L 490.29,148.15 L 490.05,146.95 L 489.85,145.54 L 489.70,143.92 L 489.58,142.08 L 489.54,140.33 L 489.56,138.67 L 489.65,137.08 L 489.81,135.58 L 490.05,134.08 L 490.38,132.58 L 490.79,131.08 L 491.28,129.58 L 491.77,128.22 L 492.27,127.01 L 492.76,125.93 L 493.26,124.99 L 493.82,124.04 L 494.44,123.08 L 495.12,122.11 L 495.87,121.14 L 496.68,120.17 L 497.56,119.21 L 498.50,118.25 L 499.50,117.31 L 500.52,116.43 L 501.56,115.59 L 502.62,114.81 L 503.70,114.09 L 505.07,113.28 L 506.74,112.40 L 508.70,111.44 L 510.95,110.40 L 513.45,109.43 L 516.21,108.55 L 519.21,107.74 L 522.46,107.00 L 525.52,106.43 L 528.40,106.02 L 531.08,105.76 L 533.58,105.66 L 536.08,105.62 L 538.58,105.62 L 541.08,105.66 L 543.58,105.75 L 545.83,105.89 L 547.83,106.06 L 549.58,106.28 L 551.08,106.53 L 552.65,106.84 L 554.27,107.21 L 555.96,107.64 L 557.71,108.12 L 559.48,108.68 L 561.27,109.31 L 563.08,110.01 L 564.92,110.77 L 566.60,111.54 L 568.15,112.29 L 569.54,113.05 L 570.79,113.79 L 572.12,114.67 L 573.54,115.66 L 575.04,116.78 L 576.62,118.02 L 577.98,119.11 L 579.09,120.04 L 579.98,120.81 L 580.63,121.42 L 581.14,121.94 L 581.51,122.37 L 581.74,122.71 L 581.83,122.96 L 581.26,123.96 L 580.02,125.73 L 578.11,128.24 L 575.53,131.52 L 573.41,134.20 L 571.75,136.28 L 570.54,137.77 L 569.79,138.66 L 569.17,139.37 L 568.67,139.88 L 568.29,140.21 L 568.04,140.35 L 567.41,140.10 L 566.41,139.48 L 565.03,138.47 L 563.27,137.08 L 561.52,135.79 L 559.77,134.60 L 558.02,133.50 L 556.28,132.51 L 554.62,131.63 L 553.04,130.88 L 551.54,130.25 L 550.12,129.74 L 548.58,129.29 L 546.92,128.89 L 545.12,128.55 L 543.21,128.26 L 541.27,128.06 L 539.31,127.95 L 537.33,127.93 L 535.33,128.00 L 533.40,128.17 L 531.52,128.44 L 529.71,128.82 L 527.96,129.30 L 526.32,129.89 L 524.80,130.58 L 523.39,131.39 L 522.09,132.30 L 520.93,133.27 L 519.91,134.31 L 519.04,135.42 L 518.31,136.58 L 517.72,137.71 L 517.28,138.79 L 516.99,139.83 L 516.85,140.83 L 516.77,141.83 L 516.76,142.83 L 516.80,143.83 L 516.90,144.83 L 517.11,145.83 L 517.41,146.83 L 517.82,147.83 L 518.32,148.83 L 518.90,149.77 L 519.56,150.65 L 520.30,151.47 L 521.11,152.24 L 521.99,152.94 L 522.94,153.60 L 523.96,154.20 L 525.04,154.75 L 526.12,155.22 L 527.20,155.64 L 528.28,155.98 L 529.36,156.25 L 531.63,156.49 L 535.09,156.69 L 539.73,156.86 L 545.57,156.98 L 550.00,157.15 L 553.00,157.36 L 554.59,157.61 L 554.76,157.90 L 554.89,158.55 L 554.98,159.57 L 555.02,160.96 L 555.02,162.71 L 555.02,164.71 L 555.02,166.96 L 555.02,169.46 L 555.02,172.21 L 554.97,174.35 L 554.89,175.89 L 554.76,176.83 L 554.59,177.16 L 552.86,177.43 L 549.56,177.64 L 544.71,177.78 L 538.29,177.87 L 533.15,178.01 L 529.27,178.21 L 526.67,178.47 L 525.33,178.79 L 524.02,179.20 L 522.73,179.72 L 521.46,180.35 L 520.21,181.07 L 519.06,181.88 L 518.03,182.76 L 517.10,183.73 L 516.27,184.77 L 515.60,185.70 L 515.06,186.51 L 514.67,187.21 L 514.43,187.79 L 514.22,188.40 L 514.06,189.02 L 513.93,189.67 L 513.83,190.33 L 513.79,191.17 L 513.80,192.17 L 513.87,193.33 L 513.98,194.67 L 514.26,195.98 L 514.70,197.27 L 515.31,198.54 L 516.07,199.79 L 517.01,200.98 L 518.11,202.10 L 519.39,203.17 L 520.83,204.17 L 522.31,205.04 L 523.83,205.79 L 525.38,206.41 L 526.96,206.91 L 528.58,207.32 L 530.25,207.63 L 531.96,207.86 L 533.71,207.99 L 535.56,208.06 L 537.52,208.07 L 539.58,208.01 L 541.75,207.88 L 543.83,207.67 L 545.83,207.36 L 547.75,206.96 L 549.58,206.47 L 551.24,205.97 L 552.73,205.47 L 554.04,204.96 L 555.18,204.44 L 556.44,203.80 L 557.81,203.04 L 559.30,202.16 L 560.92,201.16 L 562.50,200.09 L 564.06,198.96 L 565.58,197.76 L 567.08,196.50 L 569.15,196.61 L 571.78,198.07 L 574.97,200.89 L 578.73,205.07 L 581.43,208.35 L 583.10,210.73 L 583.71,212.21 L 583.28,212.79 L 582.58,213.54 L 581.62,214.46 L 580.39,215.54 L 578.89,216.79 L 577.12,218.11 L 575.08,219.49 L 572.78,220.93 L 570.20,222.44 L 567.54,223.83 L 564.79,225.10 L 561.96,226.25 L 559.04,227.27 L 556.02,228.16 L 552.90,228.90 L 549.67,229.51 L 546.33,229.98 L 543.25,230.33 L 540.42,230.58 Z M 765.25,230.68 L 762.75,230.68 L 760.33,230.62 L 758.00,230.50 L 755.75,230.33 L 753.58,230.09 L 751.25,229.74 L 748.75,229.25 L 746.08,228.64 L 743.25,227.90 L 740.58,227.09 L 738.08,226.21 L 735.75,225.26 L 733.58,224.23 L 731.56,223.16 L 729.69,222.04 L 727.96,220.88 L 726.38,219.68 L 724.88,218.43 L 723.49,217.14 L 722.18,215.80 L 720.97,214.41 L 719.88,213.02 L 718.89,211.62 L 718.02,210.21 L 717.26,208.79 L 716.57,207.21 L 715.94,205.46 L 715.38,203.54 L 714.89,201.46 L 714.53,199.33 L 714.30,197.17 L 714.21,194.96 L 714.25,192.71 L 714.39,190.60 L 714.63,188.65 L 714.98,186.83 L 715.43,185.17 L 715.90,183.67 L 716.39,182.33 L 716.90,181.17 L 717.43,180.17 L 718.01,179.19 L 718.62,178.23 L 719.28,177.29 L 719.98,176.38 L 720.70,175.50 L 721.44,174.67 L 722.20,173.88 L 722.98,173.12 L 723.84,172.38 L 724.78,171.62 L 725.81,170.88 L 726.91,170.12 L 728.07,169.40 L 729.30,168.69 L 730.58,168.00 L 731.93,167.33 L 732.57,166.60 L 732.50,165.81 L 731.73,164.96 L 730.25,164.04 L 728.90,163.15 L 727.70,162.29 L 726.64,161.45 L 725.72,160.63 L 724.77,159.66 L 723.80,158.54 L 722.80,157.26 L 721.78,155.82 L 720.89,154.45 L 720.14,153.15 L 719.52,151.92 L 719.04,150.75 L 718.61,149.52 L 718.23,148.23 L 717.90,146.88 L 717.62,145.46 L 717.41,144.08 L 717.27,142.75 L 717.20,141.46 L 717.20,140.21 L 717.26,138.92 L 717.38,137.58 L 717.56,136.21 L 717.79,134.79 L 718.10,133.38 L 718.47,131.96 L 718.92,130.54 L 719.43,129.12 L 720.11,127.60 L 720.98,125.98 L 722.02,124.25 L 723.24,122.42 L 724.40,120.81 L 725.50,119.43 L 726.54,118.27 L 727.53,117.35 L 728.53,116.46 L 729.57,115.61 L 730.62,114.80 L 731.71,114.03 L 732.90,113.27 L 734.19,112.51 L 735.58,111.75 L 737.08,111.00 L 738.56,110.31 L 740.02,109.69 L 741.46,109.13 L 742.88,108.64 L 744.62,108.14 L 746.71,107.64 L 749.12,107.13 L 751.88,106.62 L 754.52,106.21 L 757.06,105.91 L 759.50,105.72 L 761.83,105.63 L 764.15,105.59 L 766.44,105.58 L 768.71,105.63 L 770.96,105.71 L 773.08,105.85 L 775.08,106.03 L 776.96,106.26 L 778.71,106.55 L 780.46,106.88 L 782.21,107.25 L 783.96,107.68 L 785.71,108.15 L 787.47,108.70 L 789.26,109.32 L 791.05,110.03 L 792.87,110.82 L 794.54,111.60 L 796.07,112.37 L 797.45,113.12 L 798.70,113.88 L 799.97,114.69 L 801.26,115.56 L 802.58,116.50 L 803.93,117.50 L 805.18,118.50 L 806.35,119.50 L 807.42,120.50 L 808.39,121.50 L 808.62,122.92 L 808.11,124.75 L 806.84,127.00 L 804.83,129.67 L 802.94,132.10 L 801.17,134.30 L 799.51,136.27 L 797.97,138.01 L 796.38,138.97 L 794.74,139.13 L 793.04,138.52 L 791.29,137.11 L 789.54,135.82 L 787.79,134.62 L 786.04,133.53 L 784.29,132.55 L 782.60,131.68 L 780.98,130.92 L 779.42,130.28 L 777.92,129.75 L 776.35,129.29 L 774.73,128.89 L 773.04,128.56 L 771.29,128.29 L 769.48,128.10 L 767.60,127.98 L 765.67,127.95 L 763.67,127.99 L 761.71,128.14 L 759.79,128.40 L 757.91,128.78 L 756.06,129.27 L 754.37,129.84 L 752.83,130.50 L 751.44,131.25 L 750.20,132.08 L 749.08,132.98 L 748.09,133.95 L 747.21,134.98 L 746.46,136.08 L 745.84,137.19 L 745.36,138.32 L 745.01,139.46 L 744.79,140.61 L 744.68,141.78 L 744.67,142.98 L 744.77,144.21 L 744.97,145.46 L 745.30,146.67 L 745.76,147.83 L 746.35,148.96 L 747.07,150.04 L 747.85,151.03 L 748.70,151.92 L 749.60,152.72 L 750.56,153.42 L 751.45,154.02 L 752.26,154.52 L 753.00,154.91 L 753.67,155.21 L 754.48,155.50 L 755.44,155.79 L 756.54,156.08 L 757.79,156.37 L 760.18,156.62 L 763.72,156.83 L 768.39,157.00 L 774.21,157.13 L 778.59,158.42 L 781.53,160.86 L 783.03,164.46 L 783.10,169.21 L 783.09,172.85 L 783.02,175.39 L 782.87,176.83 L 782.66,177.16 L 780.87,177.43 L 777.51,177.64 L 772.58,177.78 L 766.08,177.86 L 760.92,178.00 L 757.08,178.19 L 754.58,178.43 L 753.42,178.73 L 752.29,179.07 L 751.21,179.47 L 750.17,179.92 L 749.17,180.42 L 748.27,180.91 L 747.48,181.40 L 746.79,181.87 L 746.21,182.35 L 745.64,182.87 L 745.10,183.43 L 744.57,184.04 L 744.05,184.69 L 743.60,185.32 L 743.21,185.94 L 742.87,186.54 L 742.60,187.12 L 742.35,187.79 L 742.13,188.54 L 741.93,189.38 L 741.77,190.29 L 741.69,191.33 L 741.70,192.50 L 741.81,193.79 L 742.00,195.21 L 742.32,196.54 L 742.77,197.79 L 743.36,198.96 L 744.07,200.04 L 744.74,200.98 L 745.37,201.76 L 745.96,202.40 L 746.51,202.88 L 747.14,203.38 L 747.86,203.88 L 748.67,204.38 L 749.56,204.90 L 750.63,205.41 L 751.88,205.91 L 753.31,206.41 L 754.92,206.91 L 756.59,207.31 L 758.31,207.62 L 760.08,207.83 L 761.92,207.95 L 763.79,208.01 L 765.71,208.02 L 767.67,207.97 L 769.67,207.86 L 771.65,207.66 L 773.60,207.36 L 775.54,206.96 L 777.46,206.46 L 779.18,205.95 L 780.69,205.45 L 782.01,204.94 L 783.13,204.43 L 784.36,203.80 L 785.70,203.04 L 787.16,202.17 L 788.72,201.17 L 790.22,200.12 L 791.66,199.03 L 793.04,197.89 L 794.36,196.70 L 795.41,195.80 L 796.19,195.19 L 796.71,194.86 L 796.96,194.81 L 798.07,195.81 L 800.04,197.86 L 802.87,200.96 L 806.56,205.11 L 809.20,208.39 L 810.79,210.79 L 811.31,212.33 L 810.79,212.99 L 810.05,213.78 L 809.10,214.69 L 807.94,215.74 L 806.57,216.91 L 805.16,218.04 L 803.70,219.13 L 802.20,220.17 L 800.65,221.17 L 799.12,222.11 L 797.59,222.99 L 796.08,223.80 L 794.58,224.55 L 792.85,225.31 L 790.90,226.07 L 788.71,226.84 L 786.29,227.63 L 783.62,228.33 L 780.71,228.96 L 777.54,229.50 L 774.12,229.97 L 770.94,230.33 L 767.98,230.56 Z M 457.46,228.34 L 452.21,228.32 L 448.15,228.27 L 445.27,228.17 L 443.58,228.04 L 443.08,227.86 L 439.21,223.27 L 431.96,214.24 L 421.33,200.80 L 407.33,182.93 L 396.80,169.60 L 389.75,160.82 L 386.16,156.58 L 386.05,156.88 L 385.96,161.50 L 385.91,170.45 L 385.88,183.71 L 385.88,201.29 L 385.83,214.52 L 385.72,223.39 L 385.55,227.91 L 385.33,228.06 L 383.62,228.18 L 380.43,228.27 L 375.75,228.31 L 369.58,228.31 L 364.92,228.29 L 361.75,228.25 L 360.08,228.17 L 359.92,228.08 L 359.77,227.78 L 359.64,227.28 L 359.53,226.58 L 359.44,225.68 L 359.39,217.73 L 359.39,202.73 L 359.44,180.68 L 359.53,151.57 L 360.89,129.73 L 363.52,115.14 L 367.42,107.81 L 372.58,107.75 L 376.61,107.72 L 379.51,107.73 L 381.26,107.78 L 381.88,107.87 L 385.48,112.03 L 392.07,120.27 L 401.63,132.59 L 414.18,148.98 L 423.91,161.67 L 430.82,170.67 L 434.91,175.98 L 436.18,177.59 L 437.21,178.83 L 438.00,179.71 L 438.55,180.23 L 438.87,180.39 L 439.10,175.99 L 439.27,167.03 L 439.35,153.52 L 439.37,135.44 L 439.44,121.85 L 439.56,112.72 L 439.74,108.07 L 439.98,107.90 L 441.70,107.77 L 444.90,107.68 L 449.58,107.64 L 455.75,107.63 L 460.43,107.65 L 463.61,107.70 L 465.31,107.77 L 465.51,107.86 L 465.68,115.39 L 465.80,130.35 L 465.89,152.75 L 465.94,182.58 L 465.94,205.02 L 465.87,220.07 L 465.76,227.72 L 465.59,227.97 L 464.15,228.16 L 461.44,228.28 Z M 618.08,228.38 L 611.92,228.38 L 607.19,228.31 L 603.92,228.17 L 602.08,227.98 L 601.69,227.72 L 601.41,220.09 L 601.22,205.09 L 601.15,182.71 L 601.17,152.96 L 601.28,130.60 L 601.47,115.64 L 601.75,108.06 L 602.12,107.88 L 605.81,107.75 L 612.83,107.67 L 623.17,107.64 L 636.83,107.65 L 647.69,107.75 L 655.73,107.91 L 660.96,108.16 L 663.38,108.47 L 665.79,108.90 L 668.21,109.43 L 670.62,110.07 L 673.04,110.82 L 675.31,111.62 L 677.44,112.48 L 679.42,113.40 L 681.25,114.38 L 683.02,115.43 L 684.72,116.56 L 686.36,117.78 L 687.93,119.07 L 689.39,120.37 L 690.74,121.68 L 691.99,123.00 L 693.13,124.33 L 694.23,125.81 L 695.30,127.44 L 696.34,129.21 L 697.34,131.12 L 698.21,133.00 L 698.96,134.83 L 699.58,136.62 L 700.08,138.38 L 700.51,140.40 L 700.87,142.69 L 701.17,145.25 L 701.40,148.08 L 701.51,150.75 L 701.50,153.25 L 701.36,155.58 L 701.10,157.75 L 700.84,159.65 L 700.59,161.27 L 700.34,162.62 L 700.09,163.71 L 699.78,164.83 L 699.41,166.00 L 698.98,167.21 L 698.49,168.46 L 697.88,169.81 L 697.13,171.27 L 696.26,172.83 L 695.25,174.50 L 694.18,176.09 L 693.05,177.61 L 691.84,179.05 L 690.57,180.42 L 689.17,181.77 L 687.65,183.11 L 686.00,184.42 L 684.22,185.72 L 682.33,186.94 L 680.33,188.09 L 678.22,189.17 L 676.00,190.17 L 673.85,191.05 L 671.76,191.80 L 669.75,192.42 L 667.80,192.92 L 665.87,193.34 L 663.95,193.70 L 662.05,193.97 L 660.16,194.18 L 657.02,194.34 L 652.62,194.47 L 646.96,194.57 L 640.04,194.62 L 634.79,194.68 L 631.21,194.76 L 629.29,194.85 L 629.04,194.95 L 628.84,197.01 L 628.67,201.05 L 628.55,207.06 L 628.48,215.04 L 628.35,221.10 L 628.19,225.27 L 627.98,227.52 L 627.72,227.87 L 625.98,228.13 L 622.77,228.30 Z M 949.67,228.37 L 943.67,228.36 L 939.12,228.32 L 936.04,228.23 L 934.41,228.10 L 934.23,227.92 L 934.09,223.39 L 933.96,214.51 L 933.86,201.26 L 933.78,183.66 L 933.64,170.54 L 933.44,161.92 L 933.18,157.78 L 932.86,158.14 L 930.72,161.82 L 926.75,168.83 L 920.96,179.17 L 913.35,192.83 L 907.56,203.21 L 903.60,210.29 L 901.46,214.08 L 901.14,214.58 L 900.82,214.99 L 900.50,215.31 L 900.17,215.54 L 899.83,215.69 L 898.92,215.80 L 897.42,215.88 L 895.33,215.91 L 892.67,215.91 L 890.58,215.89 L 889.08,215.83 L 888.17,215.75 L 887.83,215.64 L 885.54,212.02 L 881.29,204.89 L 875.08,194.25 L 866.92,180.11 L 860.76,169.59 L 856.62,162.69 L 854.49,159.43 L 854.38,159.79 L 854.29,164.27 L 854.24,172.87 L 854.22,185.58 L 854.22,202.42 L 854.17,215.09 L 854.06,223.61 L 853.90,227.97 L 853.67,228.17 L 852.02,228.31 L 848.95,228.41 L 844.46,228.45 L 838.54,228.44 L 834.07,228.40 L 831.03,228.35 L 829.44,228.26 L 829.28,228.16 L 829.14,228.04 L 829.02,227.90 L 828.92,227.75 L 828.83,227.58 L 828.78,220.00 L 828.77,205.00 L 828.81,182.58 L 828.89,152.75 L 830.34,130.35 L 833.17,115.38 L 837.38,107.85 L 842.96,107.75 L 847.23,107.69 L 850.19,107.69 L 851.84,107.75 L 852.17,107.85 L 854.90,112.35 L 860.03,121.26 L 867.55,134.58 L 877.46,152.30 L 884.98,165.72 L 890.09,174.85 L 892.81,179.67 L 893.12,180.20 L 893.43,180.64 L 893.72,180.99 L 894.00,181.24 L 894.27,181.41 L 897.02,176.92 L 902.25,167.80 L 909.96,154.03 L 920.16,135.62 L 927.95,121.78 L 933.32,112.53 L 936.28,107.85 L 936.84,107.75 L 938.59,107.69 L 941.53,107.67 L 945.67,107.70 L 951.00,107.77 L 955.03,115.29 L 957.77,130.26 L 959.20,152.67 L 959.34,182.54 L 959.39,205.00 L 959.35,220.06 L 959.22,227.73 L 959.00,227.99 L 957.33,228.18 L 954.22,228.31 Z M 657.14,171.26 L 658.42,170.98 L 659.65,170.66 L 660.83,170.28 L 661.97,169.86 L 663.07,169.38 L 664.13,168.84 L 665.18,168.22 L 666.19,167.53 L 667.18,166.78 L 668.11,165.96 L 668.98,165.08 L 669.79,164.14 L 670.54,163.13 L 671.23,162.05 L 671.87,160.89 L 672.45,159.64 L 672.96,158.32 L 673.38,157.01 L 673.70,155.73 L 673.91,154.46 L 674.02,153.21 L 674.07,151.90 L 674.06,150.52 L 674.00,149.08 L 673.87,147.58 L 673.65,146.15 L 673.34,144.77 L 672.94,143.46 L 672.44,142.21 L 671.90,141.06 L 671.31,140.02 L 670.68,139.08 L 670.01,138.24 L 669.28,137.43 L 668.48,136.64 L 667.62,135.87 L 666.71,135.12 L 665.77,134.44 L 664.81,133.83 L 663.83,133.28 L 662.83,132.80 L 661.85,132.37 L 660.87,131.99 L 659.92,131.67 L 658.97,131.40 L 657.87,131.17 L 656.62,130.97 L 655.22,130.81 L 653.67,130.68 L 651.10,130.60 L 647.53,130.56 L 642.96,130.58 L 637.38,130.65 L 633.15,130.73 L 630.29,130.84 L 628.78,130.97 L 628.63,131.11 L 628.53,133.72 L 628.47,138.80 L 628.44,146.33 L 628.46,156.33 L 628.55,163.86 L 628.71,168.93 L 628.93,171.52 L 629.23,171.65 L 631.04,171.73 L 634.39,171.77 L 639.25,171.77 L 645.64,171.73 L 650.76,171.63 L 654.59,171.47 Z"/></svg></div>'
+st.markdown('<div class="hero"><div class="lock"><svg class="mark" viewBox="22 24 274 289" aria-hidden="true"><path class="mk-heart" fill-rule="evenodd" d="M 158.71,311.45 L 158.29,311.27 L 157.06,310.45 L 155.02,308.98 L 152.17,306.86 L 148.50,304.11 L 143.50,300.28 L 137.17,295.38 L 129.50,289.41 L 120.50,282.37 L 112.36,275.89 L 105.08,269.98 L 98.66,264.63 L 93.11,259.85 L 87.93,255.28 L 83.14,250.92 L 78.73,246.78 L 74.71,242.86 L 70.94,239.09 L 67.42,235.48 L 64.17,232.04 L 61.17,228.75 L 58.23,225.40 L 55.37,221.98 L 52.57,218.51 L 49.84,214.97 L 47.23,211.40 L 44.73,207.80 L 42.34,204.17 L 40.07,200.51 L 37.94,196.83 L 35.93,193.12 L 34.06,189.39 L 32.32,185.63 L 30.76,181.92 L 29.39,178.25 L 28.19,174.62 L 27.18,171.04 L 26.36,167.96 L 25.72,165.38 L 25.27,163.29 L 25.02,161.71 L 24.78,159.90 L 24.57,157.85 L 24.39,155.58 L 24.22,153.08 L 24.15,150.48 L 24.16,147.77 L 24.26,144.96 L 24.45,142.04 L 24.70,139.27 L 25.04,136.65 L 25.44,134.17 L 25.92,131.83 L 26.40,129.69 L 26.90,127.73 L 27.40,125.96 L 27.92,124.38 L 28.49,122.75 L 29.14,121.08 L 29.84,119.38 L 30.61,117.62 L 31.45,115.88 L 32.33,114.12 L 33.28,112.38 L 34.29,110.62 L 35.60,108.62 L 37.22,106.38 L 39.15,103.88 L 41.38,101.12 L 43.49,98.67 L 45.47,96.52 L 47.33,94.67 L 49.06,93.11 L 50.62,91.77 L 51.98,90.64 L 53.17,89.72 L 54.17,89.02 L 55.35,88.23 L 56.73,87.36 L 58.29,86.42 L 60.04,85.39 L 61.77,84.43 L 63.48,83.54 L 65.17,82.72 L 66.83,81.97 L 68.48,81.27 L 70.10,80.64 L 71.71,80.07 L 73.29,79.55 L 75.00,79.05 L 76.83,78.57 L 78.79,78.10 L 80.88,77.65 L 83.19,77.27 L 85.73,76.96 L 88.50,76.71 L 91.50,76.54 L 94.25,76.44 L 96.75,76.42 L 99.00,76.47 L 101.00,76.60 L 102.88,76.76 L 104.62,76.96 L 106.25,77.19 L 107.75,77.45 L 109.31,77.77 L 110.94,78.15 L 112.62,78.58 L 114.38,79.07 L 116.15,79.62 L 117.94,80.25 L 119.75,80.95 L 121.58,81.72 L 123.77,82.79 L 126.31,84.17 L 129.21,85.84 L 132.46,87.82 L 135.52,89.88 L 138.40,92.01 L 141.08,94.22 L 143.58,96.51 L 145.96,98.88 L 148.22,101.32 L 150.35,103.84 L 152.37,106.44 L 154.48,109.46 L 156.69,112.91 L 158.99,116.79 L 161.40,121.10 L 163.80,123.66 L 166.21,124.46 L 168.62,123.51 L 171.04,120.81 L 173.29,118.36 L 175.38,116.15 L 177.29,114.19 L 179.04,112.47 L 181.25,110.49 L 183.92,108.25 L 187.04,105.75 L 190.62,102.99 L 193.94,100.54 L 196.98,98.40 L 199.75,96.58 L 202.25,95.08 L 204.77,93.64 L 207.31,92.26 L 209.88,90.95 L 212.46,89.70 L 215.06,88.51 L 217.69,87.39 L 220.33,86.34 L 223.00,85.35 L 225.36,84.54 L 227.40,83.89 L 229.13,83.42 L 230.55,83.12 L 231.62,82.93 L 232.32,82.87 L 232.66,82.92 L 232.65,83.08 L 231.67,83.88 L 229.72,85.29 L 226.82,87.33 L 222.94,90.00 L 219.45,92.50 L 216.33,94.83 L 213.60,97.00 L 211.24,99.00 L 208.80,101.19 L 206.26,103.56 L 203.64,106.12 L 200.92,108.88 L 198.45,111.44 L 196.24,113.82 L 194.28,116.01 L 192.57,118.02 L 190.78,120.23 L 188.91,122.65 L 186.97,125.27 L 184.96,128.10 L 183.01,130.96 L 181.12,133.88 L 179.31,136.83 L 177.56,139.83 L 175.87,142.92 L 174.24,146.08 L 172.67,149.33 L 171.15,152.67 L 169.76,155.90 L 168.50,159.02 L 167.36,162.04 L 166.35,164.96 L 165.47,167.65 L 164.72,170.10 L 164.10,172.33 L 163.60,174.33 L 163.09,176.65 L 162.57,179.27 L 162.05,182.21 L 161.52,185.46 L 161.07,188.71 L 160.72,191.96 L 160.45,195.21 L 160.27,198.46 L 160.20,201.83 L 160.23,205.33 L 160.35,208.96 L 160.58,212.71 L 160.88,216.29 L 161.24,219.71 L 161.66,222.96 L 162.14,226.04 L 162.75,229.29 L 163.50,232.71 L 164.37,236.29 L 165.37,240.04 L 166.49,243.85 L 167.75,247.73 L 169.12,251.67 L 170.63,255.67 L 172.02,259.20 L 173.28,262.28 L 174.43,264.90 L 175.46,267.05 L 176.49,268.50 L 177.54,269.25 L 178.59,269.30 L 179.65,268.65 L 181.39,267.41 L 183.81,265.59 L 186.90,263.19 L 190.67,260.20 L 195.23,256.46 L 200.58,251.96 L 206.71,246.70 L 213.64,240.69 L 219.85,235.14 L 225.35,230.04 L 230.14,225.41 L 234.21,221.25 L 237.97,217.29 L 241.39,213.54 L 244.49,210.00 L 247.27,206.66 L 250.03,203.10 L 252.79,199.31 L 255.54,195.29 L 258.28,191.04 L 260.59,187.33 L 262.47,184.17 L 263.91,181.54 L 264.93,179.46 L 265.87,177.40 L 266.75,175.35 L 267.57,173.33 L 268.31,171.33 L 268.99,169.33 L 269.61,167.33 L 270.16,165.33 L 270.65,163.33 L 271.08,161.36 L 271.44,159.42 L 271.74,157.51 L 271.98,155.63 L 272.12,153.24 L 272.17,150.32 L 272.12,146.88 L 271.99,142.93 L 272.36,139.42 L 273.26,136.36 L 274.66,133.75 L 276.59,131.58 L 278.50,129.24 L 280.41,126.73 L 282.30,124.04 L 284.18,121.18 L 285.64,119.06 L 286.68,117.68 L 287.29,117.05 L 287.49,117.16 L 287.74,117.48 L 288.05,117.99 L 288.42,118.71 L 288.84,119.62 L 289.35,120.98 L 289.94,122.77 L 290.62,125.00 L 291.39,127.67 L 292.08,130.52 L 292.68,133.56 L 293.19,136.79 L 293.62,140.21 L 293.91,143.65 L 294.05,147.10 L 294.04,150.58 L 293.89,154.08 L 293.71,157.10 L 293.50,159.65 L 293.26,161.71 L 292.99,163.29 L 292.59,165.19 L 292.07,167.40 L 291.43,169.92 L 290.65,172.75 L 289.83,175.50 L 288.95,178.17 L 288.01,180.75 L 287.02,183.25 L 285.90,185.85 L 284.66,188.56 L 283.29,191.38 L 281.79,194.29 L 280.29,197.08 L 278.77,199.75 L 277.25,202.29 L 275.71,204.71 L 273.56,207.79 L 270.80,211.54 L 267.42,215.96 L 263.42,221.04 L 259.56,225.74 L 255.84,230.07 L 252.26,234.01 L 248.82,237.57 L 245.60,240.84 L 242.59,243.84 L 239.79,246.57 L 237.20,249.01 L 233.64,252.22 L 229.10,256.21 L 223.58,260.96 L 217.08,266.50 L 209.21,272.95 L 199.96,280.34 L 189.33,288.64 L 177.33,297.87 L 168.23,304.75 L 162.02,309.28 Z M 147.41,269.38 L 145.96,264.29 L 144.69,259.65 L 143.59,255.44 L 142.67,251.67 L 141.92,248.33 L 141.23,245.00 L 140.60,241.67 L 140.03,238.33 L 139.52,235.00 L 139.07,231.65 L 138.69,228.27 L 138.37,224.88 L 138.12,221.46 L 137.98,217.54 L 137.98,213.12 L 138.09,208.21 L 138.32,202.79 L 138.64,197.88 L 139.02,193.46 L 139.48,189.54 L 140.02,186.12 L 140.67,182.65 L 141.43,179.10 L 142.31,175.50 L 143.30,171.83 L 144.41,168.15 L 145.63,164.44 L 146.98,160.71 L 148.43,156.96 L 149.32,153.52 L 149.64,150.40 L 149.39,147.59 L 148.57,145.10 L 147.58,142.45 L 146.41,139.64 L 145.08,136.67 L 143.58,133.55 L 142.02,130.54 L 140.40,127.66 L 138.71,124.89 L 136.96,122.25 L 135.15,119.75 L 133.27,117.39 L 131.33,115.17 L 129.33,113.10 L 127.29,111.18 L 125.21,109.39 L 123.08,107.75 L 120.92,106.25 L 118.71,104.87 L 116.46,103.62 L 114.17,102.49 L 111.83,101.48 L 109.31,100.60 L 106.60,99.85 L 103.71,99.23 L 100.62,98.74 L 97.61,98.43 L 94.65,98.31 L 91.77,98.38 L 88.94,98.63 L 86.26,98.99 L 83.72,99.48 L 81.32,100.09 L 79.06,100.81 L 76.80,101.67 L 74.54,102.66 L 72.29,103.79 L 70.04,105.05 L 67.92,106.38 L 65.94,107.77 L 64.09,109.22 L 62.37,110.73 L 60.64,112.45 L 58.90,114.37 L 57.16,116.50 L 55.40,118.83 L 53.83,121.12 L 52.44,123.38 L 51.25,125.58 L 50.24,127.75 L 49.35,129.83 L 48.60,131.83 L 47.97,133.75 L 47.47,135.58 L 47.04,137.77 L 46.67,140.31 L 46.37,143.21 L 46.13,146.46 L 46.07,149.73 L 46.21,153.02 L 46.54,156.33 L 47.05,159.67 L 47.69,162.90 L 48.45,166.02 L 49.33,169.04 L 50.33,171.96 L 51.47,174.90 L 52.72,177.85 L 54.11,180.83 L 55.62,183.83 L 57.25,186.83 L 59.00,189.83 L 60.85,192.83 L 62.82,195.83 L 64.87,198.79 L 67.00,201.71 L 69.19,204.58 L 71.47,207.42 L 73.99,210.42 L 76.75,213.58 L 79.76,216.92 L 83.02,220.42 L 86.47,223.98 L 90.10,227.60 L 93.92,231.29 L 97.93,235.04 L 101.81,238.60 L 105.56,241.98 L 109.18,245.17 L 112.68,248.17 L 117.12,251.86 L 122.50,256.23 L 128.82,261.30 L 136.09,267.06 L 141.67,271.47 L 145.56,274.53 L 147.75,276.24 L 148.25,276.60 L 148.66,276.86 L 148.98,277.02 L 149.21,277.09 L 149.36,277.05 L 149.10,275.76 L 148.45,273.20 Z"/><path class="mk-leaf" fill-rule="evenodd" d="M 200.79,151.67 L 197.54,151.67 L 194.90,151.65 L 192.85,151.60 L 191.42,151.53 L 190.58,151.44 L 189.84,151.31 L 189.18,151.14 L 188.60,150.94 L 188.11,150.70 L 189.14,150.08 L 191.68,149.10 L 195.74,147.75 L 201.31,146.04 L 206.28,144.37 L 210.65,142.77 L 214.42,141.22 L 217.58,139.73 L 220.71,138.11 L 223.79,136.36 L 226.83,134.48 L 229.83,132.47 L 232.77,130.33 L 235.63,128.06 L 238.44,125.66 L 241.17,123.13 L 243.73,120.56 L 246.10,117.95 L 248.30,115.30 L 250.31,112.62 L 252.33,109.63 L 254.34,106.33 L 256.36,102.74 L 258.37,98.84 L 260.14,95.17 L 261.64,91.72 L 262.89,88.50 L 263.88,85.50 L 264.75,82.67 L 265.49,80.00 L 266.11,77.50 L 266.60,75.16 L 267.08,72.43 L 267.55,69.30 L 268.00,65.78 L 268.45,61.87 L 268.72,58.88 L 268.80,56.81 L 268.70,55.65 L 268.42,55.42 L 267.21,55.46 L 265.07,55.76 L 262.00,56.33 L 258.00,57.17 L 253.19,58.02 L 247.56,58.87 L 241.12,59.72 L 233.88,60.58 L 227.88,61.36 L 223.12,62.05 L 219.62,62.66 L 217.38,63.18 L 215.00,63.82 L 212.50,64.59 L 209.88,65.47 L 207.12,66.48 L 204.50,67.55 L 202.00,68.67 L 199.62,69.85 L 197.38,71.08 L 195.09,72.45 L 192.77,73.95 L 190.41,75.58 L 188.01,77.35 L 185.69,79.22 L 183.44,81.20 L 181.26,83.29 L 179.16,85.48 L 177.04,87.90 L 174.90,90.55 L 172.75,93.43 L 170.58,96.53 L 168.88,98.88 L 167.62,100.48 L 166.83,101.31 L 166.50,101.39 L 166.29,101.10 L 166.21,100.45 L 166.26,99.44 L 166.44,98.06 L 166.76,96.43 L 167.23,94.53 L 167.84,92.38 L 168.61,89.96 L 169.69,87.21 L 171.07,84.12 L 172.77,80.71 L 174.79,76.96 L 176.67,73.67 L 178.43,70.83 L 180.07,68.46 L 181.58,66.54 L 183.26,64.61 L 185.12,62.65 L 187.15,60.68 L 189.36,58.69 L 191.57,56.83 L 193.80,55.10 L 196.04,53.51 L 198.29,52.04 L 200.52,50.68 L 202.73,49.44 L 204.92,48.31 L 207.08,47.29 L 209.52,46.27 L 212.23,45.25 L 215.21,44.24 L 218.46,43.22 L 223.31,42.05 L 229.77,40.73 L 237.83,39.26 L 247.50,37.64 L 255.54,36.17 L 261.96,34.86 L 266.75,33.70 L 269.92,32.70 L 273.21,31.53 L 276.62,30.20 L 280.17,28.70 L 283.83,27.04 L 286.66,26.18 L 288.64,26.12 L 289.79,26.85 L 290.09,28.38 L 290.34,30.42 L 290.55,32.97 L 290.71,36.04 L 290.83,39.62 L 290.89,43.08 L 290.89,46.42 L 290.83,49.62 L 290.72,52.71 L 290.51,56.00 L 290.20,59.50 L 289.80,63.21 L 289.31,67.12 L 288.74,70.90 L 288.11,74.52 L 287.40,78.00 L 286.63,81.33 L 285.80,84.54 L 284.93,87.62 L 284.00,90.58 L 283.02,93.42 L 282.04,96.10 L 281.04,98.65 L 280.03,101.04 L 279.00,103.29 L 277.93,105.50 L 276.81,107.67 L 275.64,109.79 L 274.42,111.88 L 273.13,113.92 L 271.78,115.92 L 270.37,117.88 L 268.89,119.80 L 267.30,121.74 L 265.59,123.69 L 263.78,125.67 L 261.85,127.67 L 260.04,129.48 L 258.33,131.10 L 256.73,132.54 L 255.24,133.78 L 253.63,135.03 L 251.90,136.28 L 250.05,137.53 L 248.08,138.79 L 246.22,139.91 L 244.47,140.91 L 242.83,141.77 L 241.30,142.51 L 239.46,143.31 L 237.32,144.18 L 234.88,145.13 L 232.12,146.14 L 229.25,147.08 L 226.25,147.95 L 223.12,148.75 L 219.88,149.48 L 216.85,150.09 L 214.06,150.59 L 211.50,150.98 L 209.17,151.26 L 206.60,151.46 L 203.81,151.60 Z"/></svg><svg class="wordmark" viewBox="355 101 609 134" role="img" aria-label="Nɛpɛ́m"><path fill="currentColor" fill-rule="evenodd" d="M 537.83,230.70 L 535.50,230.72 L 533.17,230.67 L 530.83,230.55 L 528.50,230.36 L 526.17,230.11 L 523.71,229.74 L 521.12,229.24 L 518.42,228.63 L 515.58,227.89 L 512.92,227.08 L 510.42,226.21 L 508.08,225.27 L 505.92,224.27 L 503.88,223.21 L 501.96,222.09 L 500.17,220.91 L 498.50,219.68 L 496.94,218.38 L 495.48,217.02 L 494.12,215.60 L 492.88,214.12 L 491.75,212.65 L 490.75,211.19 L 489.88,209.74 L 489.12,208.30 L 488.44,206.67 L 487.82,204.85 L 487.27,202.84 L 486.79,200.64 L 486.42,198.67 L 486.17,196.95 L 486.03,195.46 L 486.02,194.21 L 486.07,192.90 L 486.18,191.52 L 486.37,190.09 L 486.62,188.59 L 487.00,187.01 L 487.52,185.34 L 488.16,183.59 L 488.94,181.76 L 489.70,180.13 L 490.45,178.71 L 491.19,177.50 L 491.91,176.50 L 492.65,175.56 L 493.40,174.69 L 494.18,173.88 L 494.97,173.12 L 495.84,172.38 L 496.79,171.62 L 497.81,170.88 L 498.92,170.12 L 500.10,169.40 L 501.35,168.69 L 502.67,168.00 L 504.06,167.33 L 504.73,166.60 L 504.69,165.81 L 503.93,164.96 L 502.45,164.04 L 501.12,163.17 L 499.96,162.33 L 498.95,161.54 L 498.09,160.79 L 497.21,159.92 L 496.31,158.93 L 495.38,157.81 L 494.43,156.57 L 493.59,155.39 L 492.86,154.26 L 492.25,153.18 L 491.75,152.15 L 491.30,151.14 L 490.91,150.13 L 490.58,149.14 L 490.29,148.15 L 490.05,146.95 L 489.85,145.54 L 489.70,143.92 L 489.58,142.08 L 489.54,140.33 L 489.56,138.67 L 489.65,137.08 L 489.81,135.58 L 490.05,134.08 L 490.38,132.58 L 490.79,131.08 L 491.28,129.58 L 491.77,128.22 L 492.27,127.01 L 492.76,125.93 L 493.26,124.99 L 493.82,124.04 L 494.44,123.08 L 495.12,122.11 L 495.87,121.14 L 496.68,120.17 L 497.56,119.21 L 498.50,118.25 L 499.50,117.31 L 500.52,116.43 L 501.56,115.59 L 502.62,114.81 L 503.70,114.09 L 505.07,113.28 L 506.74,112.40 L 508.70,111.44 L 510.95,110.40 L 513.45,109.43 L 516.21,108.55 L 519.21,107.74 L 522.46,107.00 L 525.52,106.43 L 528.40,106.02 L 531.08,105.76 L 533.58,105.66 L 536.08,105.62 L 538.58,105.62 L 541.08,105.66 L 543.58,105.75 L 545.83,105.89 L 547.83,106.06 L 549.58,106.28 L 551.08,106.53 L 552.65,106.84 L 554.27,107.21 L 555.96,107.64 L 557.71,108.12 L 559.48,108.68 L 561.27,109.31 L 563.08,110.01 L 564.92,110.77 L 566.60,111.54 L 568.15,112.29 L 569.54,113.05 L 570.79,113.79 L 572.12,114.67 L 573.54,115.66 L 575.04,116.78 L 576.62,118.02 L 577.98,119.11 L 579.09,120.04 L 579.98,120.81 L 580.63,121.42 L 581.14,121.94 L 581.51,122.37 L 581.74,122.71 L 581.83,122.96 L 581.26,123.96 L 580.02,125.73 L 578.11,128.24 L 575.53,131.52 L 573.41,134.20 L 571.75,136.28 L 570.54,137.77 L 569.79,138.66 L 569.17,139.37 L 568.67,139.88 L 568.29,140.21 L 568.04,140.35 L 567.41,140.10 L 566.41,139.48 L 565.03,138.47 L 563.27,137.08 L 561.52,135.79 L 559.77,134.60 L 558.02,133.50 L 556.28,132.51 L 554.62,131.63 L 553.04,130.88 L 551.54,130.25 L 550.12,129.74 L 548.58,129.29 L 546.92,128.89 L 545.12,128.55 L 543.21,128.26 L 541.27,128.06 L 539.31,127.95 L 537.33,127.93 L 535.33,128.00 L 533.40,128.17 L 531.52,128.44 L 529.71,128.82 L 527.96,129.30 L 526.32,129.89 L 524.80,130.58 L 523.39,131.39 L 522.09,132.30 L 520.93,133.27 L 519.91,134.31 L 519.04,135.42 L 518.31,136.58 L 517.72,137.71 L 517.28,138.79 L 516.99,139.83 L 516.85,140.83 L 516.77,141.83 L 516.76,142.83 L 516.80,143.83 L 516.90,144.83 L 517.11,145.83 L 517.41,146.83 L 517.82,147.83 L 518.32,148.83 L 518.90,149.77 L 519.56,150.65 L 520.30,151.47 L 521.11,152.24 L 521.99,152.94 L 522.94,153.60 L 523.96,154.20 L 525.04,154.75 L 526.12,155.22 L 527.20,155.64 L 528.28,155.98 L 529.36,156.25 L 531.63,156.49 L 535.09,156.69 L 539.73,156.86 L 545.57,156.98 L 550.00,157.15 L 553.00,157.36 L 554.59,157.61 L 554.76,157.90 L 554.89,158.55 L 554.98,159.57 L 555.02,160.96 L 555.02,162.71 L 555.02,164.71 L 555.02,166.96 L 555.02,169.46 L 555.02,172.21 L 554.97,174.35 L 554.89,175.89 L 554.76,176.83 L 554.59,177.16 L 552.86,177.43 L 549.56,177.64 L 544.71,177.78 L 538.29,177.87 L 533.15,178.01 L 529.27,178.21 L 526.67,178.47 L 525.33,178.79 L 524.02,179.20 L 522.73,179.72 L 521.46,180.35 L 520.21,181.07 L 519.06,181.88 L 518.03,182.76 L 517.10,183.73 L 516.27,184.77 L 515.60,185.70 L 515.06,186.51 L 514.67,187.21 L 514.43,187.79 L 514.22,188.40 L 514.06,189.02 L 513.93,189.67 L 513.83,190.33 L 513.79,191.17 L 513.80,192.17 L 513.87,193.33 L 513.98,194.67 L 514.26,195.98 L 514.70,197.27 L 515.31,198.54 L 516.07,199.79 L 517.01,200.98 L 518.11,202.10 L 519.39,203.17 L 520.83,204.17 L 522.31,205.04 L 523.83,205.79 L 525.38,206.41 L 526.96,206.91 L 528.58,207.32 L 530.25,207.63 L 531.96,207.86 L 533.71,207.99 L 535.56,208.06 L 537.52,208.07 L 539.58,208.01 L 541.75,207.88 L 543.83,207.67 L 545.83,207.36 L 547.75,206.96 L 549.58,206.47 L 551.24,205.97 L 552.73,205.47 L 554.04,204.96 L 555.18,204.44 L 556.44,203.80 L 557.81,203.04 L 559.30,202.16 L 560.92,201.16 L 562.50,200.09 L 564.06,198.96 L 565.58,197.76 L 567.08,196.50 L 569.15,196.61 L 571.78,198.07 L 574.97,200.89 L 578.73,205.07 L 581.43,208.35 L 583.10,210.73 L 583.71,212.21 L 583.28,212.79 L 582.58,213.54 L 581.62,214.46 L 580.39,215.54 L 578.89,216.79 L 577.12,218.11 L 575.08,219.49 L 572.78,220.93 L 570.20,222.44 L 567.54,223.83 L 564.79,225.10 L 561.96,226.25 L 559.04,227.27 L 556.02,228.16 L 552.90,228.90 L 549.67,229.51 L 546.33,229.98 L 543.25,230.33 L 540.42,230.58 Z M 765.25,230.68 L 762.75,230.68 L 760.33,230.62 L 758.00,230.50 L 755.75,230.33 L 753.58,230.09 L 751.25,229.74 L 748.75,229.25 L 746.08,228.64 L 743.25,227.90 L 740.58,227.09 L 738.08,226.21 L 735.75,225.26 L 733.58,224.23 L 731.56,223.16 L 729.69,222.04 L 727.96,220.88 L 726.38,219.68 L 724.88,218.43 L 723.49,217.14 L 722.18,215.80 L 720.97,214.41 L 719.88,213.02 L 718.89,211.62 L 718.02,210.21 L 717.26,208.79 L 716.57,207.21 L 715.94,205.46 L 715.38,203.54 L 714.89,201.46 L 714.53,199.33 L 714.30,197.17 L 714.21,194.96 L 714.25,192.71 L 714.39,190.60 L 714.63,188.65 L 714.98,186.83 L 715.43,185.17 L 715.90,183.67 L 716.39,182.33 L 716.90,181.17 L 717.43,180.17 L 718.01,179.19 L 718.62,178.23 L 719.28,177.29 L 719.98,176.38 L 720.70,175.50 L 721.44,174.67 L 722.20,173.88 L 722.98,173.12 L 723.84,172.38 L 724.78,171.62 L 725.81,170.88 L 726.91,170.12 L 728.07,169.40 L 729.30,168.69 L 730.58,168.00 L 731.93,167.33 L 732.57,166.60 L 732.50,165.81 L 731.73,164.96 L 730.25,164.04 L 728.90,163.15 L 727.70,162.29 L 726.64,161.45 L 725.72,160.63 L 724.77,159.66 L 723.80,158.54 L 722.80,157.26 L 721.78,155.82 L 720.89,154.45 L 720.14,153.15 L 719.52,151.92 L 719.04,150.75 L 718.61,149.52 L 718.23,148.23 L 717.90,146.88 L 717.62,145.46 L 717.41,144.08 L 717.27,142.75 L 717.20,141.46 L 717.20,140.21 L 717.26,138.92 L 717.38,137.58 L 717.56,136.21 L 717.79,134.79 L 718.10,133.38 L 718.47,131.96 L 718.92,130.54 L 719.43,129.12 L 720.11,127.60 L 720.98,125.98 L 722.02,124.25 L 723.24,122.42 L 724.40,120.81 L 725.50,119.43 L 726.54,118.27 L 727.53,117.35 L 728.53,116.46 L 729.57,115.61 L 730.62,114.80 L 731.71,114.03 L 732.90,113.27 L 734.19,112.51 L 735.58,111.75 L 737.08,111.00 L 738.56,110.31 L 740.02,109.69 L 741.46,109.13 L 742.88,108.64 L 744.62,108.14 L 746.71,107.64 L 749.12,107.13 L 751.88,106.62 L 754.52,106.21 L 757.06,105.91 L 759.50,105.72 L 761.83,105.63 L 764.15,105.59 L 766.44,105.58 L 768.71,105.63 L 770.96,105.71 L 773.08,105.85 L 775.08,106.03 L 776.96,106.26 L 778.71,106.55 L 780.46,106.88 L 782.21,107.25 L 783.96,107.68 L 785.71,108.15 L 787.47,108.70 L 789.26,109.32 L 791.05,110.03 L 792.87,110.82 L 794.54,111.60 L 796.07,112.37 L 797.45,113.12 L 798.70,113.88 L 799.97,114.69 L 801.26,115.56 L 802.58,116.50 L 803.93,117.50 L 805.18,118.50 L 806.35,119.50 L 807.42,120.50 L 808.39,121.50 L 808.62,122.92 L 808.11,124.75 L 806.84,127.00 L 804.83,129.67 L 802.94,132.10 L 801.17,134.30 L 799.51,136.27 L 797.97,138.01 L 796.38,138.97 L 794.74,139.13 L 793.04,138.52 L 791.29,137.11 L 789.54,135.82 L 787.79,134.62 L 786.04,133.53 L 784.29,132.55 L 782.60,131.68 L 780.98,130.92 L 779.42,130.28 L 777.92,129.75 L 776.35,129.29 L 774.73,128.89 L 773.04,128.56 L 771.29,128.29 L 769.48,128.10 L 767.60,127.98 L 765.67,127.95 L 763.67,127.99 L 761.71,128.14 L 759.79,128.40 L 757.91,128.78 L 756.06,129.27 L 754.37,129.84 L 752.83,130.50 L 751.44,131.25 L 750.20,132.08 L 749.08,132.98 L 748.09,133.95 L 747.21,134.98 L 746.46,136.08 L 745.84,137.19 L 745.36,138.32 L 745.01,139.46 L 744.79,140.61 L 744.68,141.78 L 744.67,142.98 L 744.77,144.21 L 744.97,145.46 L 745.30,146.67 L 745.76,147.83 L 746.35,148.96 L 747.07,150.04 L 747.85,151.03 L 748.70,151.92 L 749.60,152.72 L 750.56,153.42 L 751.45,154.02 L 752.26,154.52 L 753.00,154.91 L 753.67,155.21 L 754.48,155.50 L 755.44,155.79 L 756.54,156.08 L 757.79,156.37 L 760.18,156.62 L 763.72,156.83 L 768.39,157.00 L 774.21,157.13 L 778.59,158.42 L 781.53,160.86 L 783.03,164.46 L 783.10,169.21 L 783.09,172.85 L 783.02,175.39 L 782.87,176.83 L 782.66,177.16 L 780.87,177.43 L 777.51,177.64 L 772.58,177.78 L 766.08,177.86 L 760.92,178.00 L 757.08,178.19 L 754.58,178.43 L 753.42,178.73 L 752.29,179.07 L 751.21,179.47 L 750.17,179.92 L 749.17,180.42 L 748.27,180.91 L 747.48,181.40 L 746.79,181.87 L 746.21,182.35 L 745.64,182.87 L 745.10,183.43 L 744.57,184.04 L 744.05,184.69 L 743.60,185.32 L 743.21,185.94 L 742.87,186.54 L 742.60,187.12 L 742.35,187.79 L 742.13,188.54 L 741.93,189.38 L 741.77,190.29 L 741.69,191.33 L 741.70,192.50 L 741.81,193.79 L 742.00,195.21 L 742.32,196.54 L 742.77,197.79 L 743.36,198.96 L 744.07,200.04 L 744.74,200.98 L 745.37,201.76 L 745.96,202.40 L 746.51,202.88 L 747.14,203.38 L 747.86,203.88 L 748.67,204.38 L 749.56,204.90 L 750.63,205.41 L 751.88,205.91 L 753.31,206.41 L 754.92,206.91 L 756.59,207.31 L 758.31,207.62 L 760.08,207.83 L 761.92,207.95 L 763.79,208.01 L 765.71,208.02 L 767.67,207.97 L 769.67,207.86 L 771.65,207.66 L 773.60,207.36 L 775.54,206.96 L 777.46,206.46 L 779.18,205.95 L 780.69,205.45 L 782.01,204.94 L 783.13,204.43 L 784.36,203.80 L 785.70,203.04 L 787.16,202.17 L 788.72,201.17 L 790.22,200.12 L 791.66,199.03 L 793.04,197.89 L 794.36,196.70 L 795.41,195.80 L 796.19,195.19 L 796.71,194.86 L 796.96,194.81 L 798.07,195.81 L 800.04,197.86 L 802.87,200.96 L 806.56,205.11 L 809.20,208.39 L 810.79,210.79 L 811.31,212.33 L 810.79,212.99 L 810.05,213.78 L 809.10,214.69 L 807.94,215.74 L 806.57,216.91 L 805.16,218.04 L 803.70,219.13 L 802.20,220.17 L 800.65,221.17 L 799.12,222.11 L 797.59,222.99 L 796.08,223.80 L 794.58,224.55 L 792.85,225.31 L 790.90,226.07 L 788.71,226.84 L 786.29,227.63 L 783.62,228.33 L 780.71,228.96 L 777.54,229.50 L 774.12,229.97 L 770.94,230.33 L 767.98,230.56 Z M 457.46,228.34 L 452.21,228.32 L 448.15,228.27 L 445.27,228.17 L 443.58,228.04 L 443.08,227.86 L 439.21,223.27 L 431.96,214.24 L 421.33,200.80 L 407.33,182.93 L 396.80,169.60 L 389.75,160.82 L 386.16,156.58 L 386.05,156.88 L 385.96,161.50 L 385.91,170.45 L 385.88,183.71 L 385.88,201.29 L 385.83,214.52 L 385.72,223.39 L 385.55,227.91 L 385.33,228.06 L 383.62,228.18 L 380.43,228.27 L 375.75,228.31 L 369.58,228.31 L 364.92,228.29 L 361.75,228.25 L 360.08,228.17 L 359.92,228.08 L 359.77,227.78 L 359.64,227.28 L 359.53,226.58 L 359.44,225.68 L 359.39,217.73 L 359.39,202.73 L 359.44,180.68 L 359.53,151.57 L 360.89,129.73 L 363.52,115.14 L 367.42,107.81 L 372.58,107.75 L 376.61,107.72 L 379.51,107.73 L 381.26,107.78 L 381.88,107.87 L 385.48,112.03 L 392.07,120.27 L 401.63,132.59 L 414.18,148.98 L 423.91,161.67 L 430.82,170.67 L 434.91,175.98 L 436.18,177.59 L 437.21,178.83 L 438.00,179.71 L 438.55,180.23 L 438.87,180.39 L 439.10,175.99 L 439.27,167.03 L 439.35,153.52 L 439.37,135.44 L 439.44,121.85 L 439.56,112.72 L 439.74,108.07 L 439.98,107.90 L 441.70,107.77 L 444.90,107.68 L 449.58,107.64 L 455.75,107.63 L 460.43,107.65 L 463.61,107.70 L 465.31,107.77 L 465.51,107.86 L 465.68,115.39 L 465.80,130.35 L 465.89,152.75 L 465.94,182.58 L 465.94,205.02 L 465.87,220.07 L 465.76,227.72 L 465.59,227.97 L 464.15,228.16 L 461.44,228.28 Z M 618.08,228.38 L 611.92,228.38 L 607.19,228.31 L 603.92,228.17 L 602.08,227.98 L 601.69,227.72 L 601.41,220.09 L 601.22,205.09 L 601.15,182.71 L 601.17,152.96 L 601.28,130.60 L 601.47,115.64 L 601.75,108.06 L 602.12,107.88 L 605.81,107.75 L 612.83,107.67 L 623.17,107.64 L 636.83,107.65 L 647.69,107.75 L 655.73,107.91 L 660.96,108.16 L 663.38,108.47 L 665.79,108.90 L 668.21,109.43 L 670.62,110.07 L 673.04,110.82 L 675.31,111.62 L 677.44,112.48 L 679.42,113.40 L 681.25,114.38 L 683.02,115.43 L 684.72,116.56 L 686.36,117.78 L 687.93,119.07 L 689.39,120.37 L 690.74,121.68 L 691.99,123.00 L 693.13,124.33 L 694.23,125.81 L 695.30,127.44 L 696.34,129.21 L 697.34,131.12 L 698.21,133.00 L 698.96,134.83 L 699.58,136.62 L 700.08,138.38 L 700.51,140.40 L 700.87,142.69 L 701.17,145.25 L 701.40,148.08 L 701.51,150.75 L 701.50,153.25 L 701.36,155.58 L 701.10,157.75 L 700.84,159.65 L 700.59,161.27 L 700.34,162.62 L 700.09,163.71 L 699.78,164.83 L 699.41,166.00 L 698.98,167.21 L 698.49,168.46 L 697.88,169.81 L 697.13,171.27 L 696.26,172.83 L 695.25,174.50 L 694.18,176.09 L 693.05,177.61 L 691.84,179.05 L 690.57,180.42 L 689.17,181.77 L 687.65,183.11 L 686.00,184.42 L 684.22,185.72 L 682.33,186.94 L 680.33,188.09 L 678.22,189.17 L 676.00,190.17 L 673.85,191.05 L 671.76,191.80 L 669.75,192.42 L 667.80,192.92 L 665.87,193.34 L 663.95,193.70 L 662.05,193.97 L 660.16,194.18 L 657.02,194.34 L 652.62,194.47 L 646.96,194.57 L 640.04,194.62 L 634.79,194.68 L 631.21,194.76 L 629.29,194.85 L 629.04,194.95 L 628.84,197.01 L 628.67,201.05 L 628.55,207.06 L 628.48,215.04 L 628.35,221.10 L 628.19,225.27 L 627.98,227.52 L 627.72,227.87 L 625.98,228.13 L 622.77,228.30 Z M 949.67,228.37 L 943.67,228.36 L 939.12,228.32 L 936.04,228.23 L 934.41,228.10 L 934.23,227.92 L 934.09,223.39 L 933.96,214.51 L 933.86,201.26 L 933.78,183.66 L 933.64,170.54 L 933.44,161.92 L 933.18,157.78 L 932.86,158.14 L 930.72,161.82 L 926.75,168.83 L 920.96,179.17 L 913.35,192.83 L 907.56,203.21 L 903.60,210.29 L 901.46,214.08 L 901.14,214.58 L 900.82,214.99 L 900.50,215.31 L 900.17,215.54 L 899.83,215.69 L 898.92,215.80 L 897.42,215.88 L 895.33,215.91 L 892.67,215.91 L 890.58,215.89 L 889.08,215.83 L 888.17,215.75 L 887.83,215.64 L 885.54,212.02 L 881.29,204.89 L 875.08,194.25 L 866.92,180.11 L 860.76,169.59 L 856.62,162.69 L 854.49,159.43 L 854.38,159.79 L 854.29,164.27 L 854.24,172.87 L 854.22,185.58 L 854.22,202.42 L 854.17,215.09 L 854.06,223.61 L 853.90,227.97 L 853.67,228.17 L 852.02,228.31 L 848.95,228.41 L 844.46,228.45 L 838.54,228.44 L 834.07,228.40 L 831.03,228.35 L 829.44,228.26 L 829.28,228.16 L 829.14,228.04 L 829.02,227.90 L 828.92,227.75 L 828.83,227.58 L 828.78,220.00 L 828.77,205.00 L 828.81,182.58 L 828.89,152.75 L 830.34,130.35 L 833.17,115.38 L 837.38,107.85 L 842.96,107.75 L 847.23,107.69 L 850.19,107.69 L 851.84,107.75 L 852.17,107.85 L 854.90,112.35 L 860.03,121.26 L 867.55,134.58 L 877.46,152.30 L 884.98,165.72 L 890.09,174.85 L 892.81,179.67 L 893.12,180.20 L 893.43,180.64 L 893.72,180.99 L 894.00,181.24 L 894.27,181.41 L 897.02,176.92 L 902.25,167.80 L 909.96,154.03 L 920.16,135.62 L 927.95,121.78 L 933.32,112.53 L 936.28,107.85 L 936.84,107.75 L 938.59,107.69 L 941.53,107.67 L 945.67,107.70 L 951.00,107.77 L 955.03,115.29 L 957.77,130.26 L 959.20,152.67 L 959.34,182.54 L 959.39,205.00 L 959.35,220.06 L 959.22,227.73 L 959.00,227.99 L 957.33,228.18 L 954.22,228.31 Z M 657.14,171.26 L 658.42,170.98 L 659.65,170.66 L 660.83,170.28 L 661.97,169.86 L 663.07,169.38 L 664.13,168.84 L 665.18,168.22 L 666.19,167.53 L 667.18,166.78 L 668.11,165.96 L 668.98,165.08 L 669.79,164.14 L 670.54,163.13 L 671.23,162.05 L 671.87,160.89 L 672.45,159.64 L 672.96,158.32 L 673.38,157.01 L 673.70,155.73 L 673.91,154.46 L 674.02,153.21 L 674.07,151.90 L 674.06,150.52 L 674.00,149.08 L 673.87,147.58 L 673.65,146.15 L 673.34,144.77 L 672.94,143.46 L 672.44,142.21 L 671.90,141.06 L 671.31,140.02 L 670.68,139.08 L 670.01,138.24 L 669.28,137.43 L 668.48,136.64 L 667.62,135.87 L 666.71,135.12 L 665.77,134.44 L 664.81,133.83 L 663.83,133.28 L 662.83,132.80 L 661.85,132.37 L 660.87,131.99 L 659.92,131.67 L 658.97,131.40 L 657.87,131.17 L 656.62,130.97 L 655.22,130.81 L 653.67,130.68 L 651.10,130.60 L 647.53,130.56 L 642.96,130.58 L 637.38,130.65 L 633.15,130.73 L 630.29,130.84 L 628.78,130.97 L 628.63,131.11 L 628.53,133.72 L 628.47,138.80 L 628.44,146.33 L 628.46,156.33 L 628.55,163.86 L 628.71,168.93 L 628.93,171.52 L 629.23,171.65 L 631.04,171.73 L 634.39,171.77 L 639.25,171.77 L 645.64,171.73 L 650.76,171.63 L 654.59,171.47 Z"/></svg></div>'
             '<p class="means"><span class="ken" lang="ken">Nɛpɛ́m</span> means life.</p></div>',
             unsafe_allow_html=True)
 
@@ -2107,10 +2576,20 @@ st.markdown('<div class="hero"><div class="lock"><svg class="mark" viewBox="22 2
 # Deliberately plain: st.empty() and st.info() have existed forever. st.status() is newer
 # and its container doesn't carry .update() on every version — which crashed the whole
 # page for me. Boot code is the last place to use a command with a version floor.
+@st.cache_resource(show_spinner=False)
+def _log_start(files, passages, how):
+    """One line in the log per process start, so the log says how often the app cold-starts
+    and whether each start loaded the index or re-embedded it."""
+    print(f"[nepem] start: {files} files, {passages:,} passages, index {how}", flush=True)
+    return True
+
+
 signature = kb_signature()
 boot = st.empty()
-boot.info("Waking Nɛpɛm — reading the knowledge folder. The PDFs are the slow part, "
-          "and only on a cold start.")
+# What a learner sees is plain. The detail (files, passages, and whether the index was
+# loaded or rebuilt) goes to the sidebar and the log, where it is a warning light.
+boot.info("Nɛpɛ́m is waking up.")
+INDEX_HOW = "not built"
 
 always_on, chunks, manifest, overflow, vectors, lexicon, troubles = \
     "", [], [], 0, None, None, []
@@ -2118,9 +2597,8 @@ try:
     always_on, chunks, manifest, overflow, troubles = build_corpus(signature)
     lexicon = build_lexicon(signature)
     if USE_EMBEDDINGS and chunks:
-        boot.info(f"{len(manifest)} files, {len(chunks):,} passages. Indexing for "
-                  f"meaning-based search — first run only.")
-        vectors = build_index(signature)
+        vectors, INDEX_HOW = build_index(signature)
+    _log_start(len(manifest), len(chunks), INDEX_HOW)
     boot.empty()
 except Exception as e:
     # Anything that goes wrong here gets shown, not swallowed. A visible error beats a
@@ -2175,6 +2653,11 @@ FULL_TEXT = full_block(signature) if (full_mode and chunks) else ""
 
 _held = held_back(signature) if chunks else {"lines": {}, "forms": {}, "phrases": []}
 HELD, HELD_FORMS, HELD_PHRASES = _held["lines"], _held["forms"], _held["phrases"]
+# The numbers, by the variants order, travel with every question beside the verified
+# files. Book-only forms in it count as "from written sources" for the flag.
+NUMBERS = number_forms(signature) if chunks else {}
+if NUMBERS:
+    always_on += "\n\n" + numbers_block(NUMBERS)
 
 STATIC_CONTEXT = SYSTEM_PROMPT + recordings_block() + "\n\n" + always_on
 
@@ -2192,9 +2675,12 @@ with st.sidebar:
         st.caption(f"{len(chunks):,} passages · "
                    + ("semantic search" if vectors is not None else "keyword search"))
         if vectors is not None:
-            src = "loaded from index.npz" if os.path.exists(INDEX_FILE) else "built just now"
-            st.caption(f"index: {src}")
-            if src == "built just now":
+            st.caption(f"index: {INDEX_HOW}")
+            if INDEX_HOW.startswith("re-embedded"):
+                st.error("The index was rebuilt on this start, so every passage was "
+                         "embedded again. If index.npz is committed and current, the "
+                         "fingerprint has failed. Run `python build_index.py` and commit.")
+            if not INDEX_HOW.startswith("loaded"):
                 st.caption("Run `python build_index.py` and commit index.npz for instant "
                            "cold starts on Streamlit Cloud.")
         approx = corpus_chars // 4
@@ -2230,7 +2716,7 @@ with st.sidebar:
                      + "\n\n".join(f"**{t['file']}** — {t['problem']}" for t in troubles))
 
         # Overlapping files aren't fatal — retrieval drops near-duplicates now — but they
-        # cost tokens and make it harder to tell which spelling Nɛpɛm is teaching from.
+        # cost tokens and make it harder to tell which spelling Nɛpɛ́m is teaching from.
         wordlists = [r["file"] for r in manifest
                      if any(k in r["file"].lower() for k in ("dictionary", "lexicon"))]
         if len(wordlists) > 2:
@@ -2246,7 +2732,7 @@ with st.sidebar:
                             f"{row['chars']:,} chars, {row['chunks']} passages{tag}")
 
         # --- is it actually in my data? -------------------------------------
-        # When Nɛpɛm says "I don't have that", there are two possible reasons: the rule
+        # When Nɛpɛ́m says "I don't have that", there are two possible reasons: the rule
         # isn't in my folder, or search failed to find it. Guessing between those wastes
         # hours. This searches the raw passages directly, no model involved, so I get a
         # yes or no on what I actually own.
@@ -2263,10 +2749,10 @@ with st.sidebar:
                     idx = c["text"].lower().find(needle.lower())
                     st.text(c["text"][max(0, idx - 220): idx + 320])
             else:
-                st.error("Not anywhere in the corpus. Nɛpɛm genuinely doesn't have this — "
+                st.error("Not anywhere in the corpus. Nɛpɛ́m genuinely doesn't have this — "
                          "it's a gap in the folder, not a search failure.")
     else:
-        st.error(f"No readable files found in ./{KB_ROOT}. Nɛpɛm has nothing to teach from.")
+        st.error(f"No readable files found in ./{KB_ROOT}. Nɛpɛ́m has nothing to teach from.")
     st.markdown("---")
     if st.button("Start a new conversation"):
         st.session_state.messages = []
@@ -2280,7 +2766,7 @@ if "pending" not in st.session_state:
 
 # Say this once, up front. A learner who loses twenty minutes without warning doesn't return.
 st.markdown('<p class="note">This conversation is kept on our side while you are away, for '
-            'about half an hour. Refreshing the page starts a fresh one. Nɛpɛm does not keep '
+            'about half an hour. Refreshing the page starts a fresh one. Nɛpɛ́m does not keep '
             'a record of it after that. To answer, your messages are sent to OpenAI, which may '
             'keep them for up to 30 days.</p>',
             unsafe_allow_html=True)
@@ -2289,12 +2775,12 @@ st.markdown('<p class="note">This conversation is kept on our side while you are
 opening = WELCOME if st.session_state.messages else WELCOME + "\n" + START_HINT
 st.markdown(bubble("assistant", opening), unsafe_allow_html=True)
 
-# Anything above the marker is on screen but past what Nɛpɛm can see. I draw the line
+# Anything above the marker is on screen but past what Nɛpɛ́m can see. I draw the line
 # rather than let him quietly forget and confuse someone.
 horizon = max(0, len(st.session_state.messages) - MAX_HISTORY_TURNS)
 for i, m in enumerate(st.session_state.messages):
     if i == horizon and horizon > 0:
-        st.markdown('<div class="memmark">Nɛpɛm remembers from here on</div>',
+        st.markdown('<div class="memmark">Nɛpɛ́m remembers from here on</div>',
                     unsafe_allow_html=True)
     st.markdown(bubble(m["role"], m["content"], hear=m.get("hear", "")),
                 unsafe_allow_html=True)
@@ -2329,12 +2815,12 @@ if st.session_state.pending:
 
     if not api_key():
         slot.markdown(bubble("assistant", "Add OPENAI_API_KEY to Streamlit Secrets to bring "
-                                          "Nɛpɛm to life."), unsafe_allow_html=True)
+                                          "Nɛpɛ́m to life."), unsafe_allow_html=True)
         st.session_state.pending = False
     else:
         history = st.session_state.messages[-MAX_HISTORY_TURNS:]
 
-        # Search on the learner's question PLUS what Nɛpɛm just said. On its own, a reply
+        # Search on the learner's question PLUS what Nɛpɛ́m just said. On its own, a reply
         # like "ok" or "yes" carries nothing to search for — the previous turn is what
         # tells me we're still on greetings.
         last_user = next((m["content"] for m in reversed(history)
@@ -2359,7 +2845,7 @@ if st.session_state.pending:
             knowledge = passages_block(found)
         # Keep them so I can audit the answer afterwards. Without this I cannot tell a
         # word that came out of the corpus from one the model invented, and neither can
-        # a speaker reviewing Nɛpɛm's Kenyang.
+        # a speaker reviewing Nɛpɛ́m's Kenyang.
         st.session_state.last_query = query
         st.session_state.last_passages = found
         st.session_state.last_probes = probes_for(query)
@@ -2443,6 +2929,9 @@ if st.session_state.pending:
             # verified form in its place (see swap_held_back).
             reply, swapped = swap_held_back(reply, HELD_FORMS, HELD_PHRASES)
             st.session_state.last_swaps = swapped
+            # Rule 4: a number no source has is never built. The code checks every run of
+            # number words in the reply against the sources (see enforce_numbers).
+            reply, built_numbers = enforce_numbers(reply, last_user, NUMBERS)
             if reply.strip():
                 # Which words can be heard is a fact the code can check, so the code says
                 # it. The model is told never to; it once claimed a recording that did not
@@ -2455,7 +2944,10 @@ if st.session_state.pending:
                 # Check every Kenyang word against what a speaker has confirmed, and say
                 # where any unconfirmed one came from. Code, not an instruction: the model
                 # is also told to say when a form is unconfirmed, and once did not.
-                flag = flag_html(*check_words(reply, found, always_on, last_user))
+                nowhere, written = check_words(reply, found, always_on, last_user)
+                # A built number is real words in an order no source has: not found.
+                nowhere += [b for b in built_numbers if b not in nowhere]
+                flag = flag_html(nowhere, written)
                 if flag:
                     st.markdown(flag, unsafe_allow_html=True)
             else:
@@ -2483,11 +2975,11 @@ if st.session_state.get("last_passages"):
         st.markdown("---")
         st.markdown("### Check the last answer")
         st.caption("Every Kenyang word in the reply should appear somewhere below. "
-                   "If it doesn't, Nɛpɛm invented it.")
+                   "If it doesn't, Nɛpɛ́m invented it.")
         if HELD:
             with st.expander(f"{len(HELD)} book entries held back"):
                 st.caption("A book's plural that the verified file contradicts. Left out "
-                           "of what Nɛpɛm sees; the files are unchanged.")
+                           "of what Nɛpɛ́m sees; the files are unchanged.")
                 for why in sorted(HELD.values()):
                     st.text(why)
         if st.session_state.get("last_swaps"):

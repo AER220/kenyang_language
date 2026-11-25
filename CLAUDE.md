@@ -1,4 +1,4 @@
-# Nɛpɛm
+# Nɛpɛ́m
 
 An AI tutor for Kenyang (Kɛ́nyāŋ), a language of about the Manyu and Meme
 Divisions of Southwest Cameroon. Built by Agbor Edouard Ransome, from the Manyu Division,
@@ -89,7 +89,7 @@ reply that already has the verified form, which is comparing the two.
 files, so every pair Ed adds there extends its reach.** Today there are two: ɛkɛt → beket and ékwá → békwá. It covers plurals only,
 not singulars, prose or compounds.
 
-**Nɛpɛm names no source, and the code makes sure.** The book passages carry page
+**Nɛpɛ́m names no source, and the code makes sure.** The book passages carry page
 numbers "(p.22)", "[cite: 3]", "chapter: 14", record ids and a publisher's address.
 `scrub_sources()` takes those out of the book and course passages sent to the model
 (never the verified ones, never a Kenyang word, and never the chunks themselves, which
@@ -110,7 +110,7 @@ Ed's originals and are sources, never published: a page gets an optimised web
 copy, added to the copy list only when a page actually asks for it.
 
 ```
-knowledge_base/          everything Nɛpɛm reads. Nothing else belongs here.
+knowledge_base/          everything Nɛpɛ́m reads. Nothing else belongs here.
   kenyang_verified_speaker.md    the grammar rules, speaker-confirmed
   kenyang_texts_verified.md      nine recorded speeches, line by line
   kenyang_sentences_verified.md  181 confirmed sentences
@@ -125,7 +125,7 @@ english_words.txt        English words (SCOWL), so the chat's word check can tel
 
 **`QUESTIONS_for_Ed.md` must never be moved into `knowledge_base/`.** It holds
 guesses and unresolved readings. Indexing it would put exactly the material
-this project refuses into Nɛpɛm's mouth.
+this project refuses into Nɛpɛ́m's mouth.
 
 ---
 
@@ -136,7 +136,12 @@ python build_index.py
 git add -A && git commit -m "..." && git push
 ```
 
-The index is keyed to a fingerprint of the folder. Edit the knowledge without
+**Waiting for the next rebuild:** in `knowledge_base/kenyang_lexicon_new_words_ref.md`,
+change the name Nɛpɛm to Nɛpɛ́m (three places). Ed approved it on 25 November 2026 and
+asked that it wait for a rebuild that is needed anyway, rather than cost one of its own.
+
+The index is keyed to a fingerprint of the folder: each file's name and a hash of its
+contents (not its modified time, which a fresh clone resets). Edit the knowledge without
 rebuilding and the app re-embeds the whole corpus on its next cold start, which
 is slow and costs money.
 
@@ -156,6 +161,8 @@ Ask the running app these. They are chosen because each has failed before.
 | my grandmother's name is Helen | N-ném first, owner second |
 | what is the word for grandfather | étá nsinsi |
 | what is the word for stepmother | **must refuse** |
+| how do you say 37 | **must not build it**: says it does not have 37 |
+| how do I say I have 37 goats | **no form for 37**, and never 23's form |
 
 The last one matters most. It is in none of the books, so a confident answer
 means something has started inventing. If it is ever confirmed and added, pick
@@ -252,15 +259,61 @@ the model, ask the running app twenty questions (the eight in Testing below, plu
 twelve ordinary learner questions), each in a fresh session, and count the two kinds of
 flag separately. They mean different things:
 
-- **"Not found"** means Nɛpɛm may have invented something. That is a bug. Limit: one
+- **"Not found"** means Nɛpɛ́m may have invented something. That is a bug. Limit: one
   or fewer replies in twenty. More means stop.
-- **"From written sources"** means Nɛpɛm used a book or course word and said so. That
+- **"From written sources"** means Nɛpɛ́m used a book or course word and said so. That
   is the system working, so it has no limit. Report it every time, as a percentage of
-  the twenty. It measures how much of what Nɛpɛm teaches comes from books rather than
+  the twenty. It measures how much of what Nɛpɛ́m teaches comes from books rather than
   from Ed's voice, and it should fall as Ed records and confirms more.
 
 Total flags matter only if most replies carry a box. If more than about half of the
 twenty carry one, tell Ed.
+
+---
+
+## When sources differ: the variants order
+
+Set by Ed on 25 November 2026, for every word, so no word has to be decided by hand.
+
+Where sources give different forms, every form is kept as a variant, searchable, and
+nobody is told a form does not exist. Which one Nɛpɛ́m teaches is decided by this order,
+never by hand:
+
+1. **Ed's recording**, if one exists. Speech is the primary evidence.
+2. Otherwise **Ed's verified text**.
+3. Otherwise **a course or book form**, taught with the "from written sources" flag.
+4. If **no source has it at all**, Nɛpɛ́m says he does not have it. He never builds one
+   and presents it as correct.
+
+Every form not chosen is kept as a variant with its source, so the disagreement is
+preserved rather than erased. As recordings arrive, forms move up the order on their
+own, with no decision from Ed.
+
+Where the order alone does not pick one form, the code breaks the tie the same way every
+time: course before book (their tiers), then the form more sources agree on, and a tie
+left after that is shown as both. This tie-break was added by Claude, not decided by Ed;
+Ed accepted it on 25 November 2026 as sensible. Do not mistake it for one of his rules. Two
+different forms in Ed's own verified text, with no recording to decide, are not broken
+by the code: both are shown as verified, and the case is listed for Ed (14 today:
+Byó nɛ mɛ́nwi in the speaker file, byó nɛ ánwi in the recorded texts).
+
+For numbers this is code: `number_forms()` reads every source and the recordings,
+applies the order, and the result travels with every question. A word list is not
+written by hand anywhere.
+
+**Rule 4 for numbers is code too** (`enforce_numbers()`). The model, told not to, built
+37 and 55 and called them correct, and asked for "37 goats" gave 23's form and said it
+had assembled it from parts. So every reply is read: each run of number words is
+matched against the forms the sources have. A line that gives a number no source has,
+or puts a real form under a number it is not, is replaced by one line the code writes
+("I don't have thirty-seven in Kenyang yet. No speaker has given it to me, and I won't
+build it from parts."), with the nearest numbers it does have. A range is one sentence,
+in Ed's wording: "I have up to thirty-two, then forty. Thirty-three to thirty-nine
+have not been given to me by a speaker." A sentence vouching for a removed line ("these
+are the correct forms", "I assembled this") goes with it. Book-only numbers are never
+refused: one the learner asked for and the reply left out is added, with "from written
+sources". A number built from real words (each word passes the word check) is reported
+by the flag as not found.
 
 ---
 
@@ -279,7 +332,7 @@ Settled on 25 November 2026:
 
 - `beket`, houses: canonical. It is in the verified file and in Ed's speech, and
   verified outranks book. `bɛkɛt` and `bɛket` are recorded as book spellings: a search
-  finds them and nobody is told they do not exist, but Nɛpɛm teaches beket. The course
+  finds them and nobody is told they do not exist, but Nɛpɛ́m teaches beket. The course
   chapter's class 7/8 rule (ɛ- to bɛ-) is not changed: a confirmed pair outranks a
   derived form (QUESTIONS section 24).
 - `Nɛpɛ́m`, the project's name: capital N, acute on the second ɛ. The course chapter's
@@ -336,7 +389,7 @@ Plain, direct, in the owner's voice. Short sentences. No marketing register, no
 exclamation marks, no "revolutionary" or "empowering". The site's strength is
 that it sounds like a person who loves his language.
 
-Two claims that must stay accurate: Nɛpɛm says when he does not know, and a
+Two claims that must stay accurate: Nɛpɛ́m says when he does not know, and a
 speaker checks every submission before he learns it. Do not write anything that
 contradicts either, and do not soften them into vagueness.
 

@@ -2,7 +2,7 @@
 
 Open questions and unresolved readings. Nothing here is confirmed.
 
-This file must never go in knowledge_base/. If it were indexed, Nɛpɛm would treat
+This file must never go in knowledge_base/. If it were indexed, Nɛpɛ́m would treat
 these guesses as Kenyang he can teach.
 
 Each note was moved out of a verified file. The line number is where it sat
@@ -110,7 +110,7 @@ bɛsa bɛ́rát nsɛm byó (three twenties and ten), but the verified file skips
 
 [TO CONFIRM: 49 numbers between 21 and 99 are in no file at all: 33 to 39, and
 every number from 3 to 9 past each ten from 40 to 90. When a learner asks for one,
-Nɛpɛm can only build it from the pattern. Should he build them and say so, or
+Nɛpɛ́m can only build it from the pattern. Should he build them and say so, or
 refuse until they are confirmed?]
 
 ---
@@ -128,7 +128,7 @@ amɔt. This is the same question as 6 above, now with a verified file on each si
 
 ---
 
-## 10. Where Nɛpɛm's answers left the verified forms
+## 10. Where Nɛpɛ́m's answers left the verified forms
 
 Seen on 2026-10-23, running the test questions in CLAUDE.md. The checker passed
 every word here, because each one is in some file. In each case the verified form
@@ -166,11 +166,11 @@ change, and does it answer question 6?]
 ## 11. Which spelling each number recording says
 
 Found on 2026-11-11, from the class audit. A student found that some numbers in
-Nɛpɛm's answers could be tapped to hear them and others could not. The tap only
+Nɛpɛ́m's answers could be tapped to hear them and others could not. The tap only
 works when the word in the answer is spelled exactly as in audio_words.json, tone
 marks included. The recordings were listed under the spellings in
 Numbers_in_Kenyang_core.jsonl, and the speaker file's table spells three numbers
-differently. When Nɛpɛm copies the speaker table, those three cannot be tapped.
+differently. When Nɛpɛ́m copies the speaker table, those three cannot be tapped.
 
                  speaker file         recording listed as
     one          Ɛmɔ́t                 ɛ́mɔt            015_one.mp3
@@ -261,7 +261,7 @@ the same spelling, that is the point to revisit it.
 ## 15. Unconfirmed book words inside a verified file
 
 From `knowledge_base/kenyang_verified_speaker.md`, line 1206
-Part: New words the lexicon can give Nɛpɛm (with its Family and people, Time,
+Part: New words the lexicon can give Nɛpɛ́m (with its Family and people, Time,
 Colours, Around you, Feeling and doing, and Small words lists)
 
 The file's name makes everything in it verified, so all of it travels with every
@@ -270,7 +270,7 @@ as a speaker before it goes into the verified file." It is the book's words,
 waiting on a speaker, sitting where a speaker's words go. It is the same problem
 as the [TO CONFIRM] notes that were moved out into this file earlier.
 
-It has already taught a learner: asked for "tomorrow", Nɛpɛm gave the book's
+It has already taught a learner: asked for "tomorrow", Nɛpɛ́m gave the book's
 mbwɔ́rɛ́ rather than your Mbuere, because this is the only place in the verified
 material where "tomorrow" appears as a word with a meaning.
 
@@ -278,7 +278,7 @@ Nothing has been moved. The section is yours to sort.
 
 [TO CONFIRM: should this section move out of the verified file, into a `_ref`
 file or here, until each word is confirmed? And for each word you do confirm,
-which spelling should Nɛpɛm teach first, yours or the book's?]
+which spelling should Nɛpɛ́m teach first, yours or the book's?]
 
 ---
 
@@ -288,7 +288,7 @@ From `games.html`, the LETTERS list (the "which word has this letter" game)
 
 The game describes each letter's sound in English terms. None of these is in a
 verified file; they were written for the game and no speaker has checked them.
-Nɛpɛm himself is told never to describe a sound by an English likeness, so these
+Nɛpɛ́m himself is told never to describe a sound by an English likeness, so these
 are the only place on the site that does.
 
     ɛ   the open e, as in bed
@@ -319,7 +319,7 @@ From `knowledge_base/kenyang_verified_speaker.md`, the word lists
     Erehti bhisi   beautiful face   (Size, quality and shape, before the noun)
 
 [TO CONFIRM: is bhisi in *Erehti bhisi* the same word as besí, spelled two ways,
-or a different word? If it is the same, which spelling should Nɛpɛm teach first,
+or a different word? If it is the same, which spelling should Nɛpɛ́m teach first,
 and should the other be kept as a variant?]
 
 ---
@@ -368,7 +368,7 @@ has been in the code since an early commit. What is confirmed nearby:
     nɛ      with, and     (verified, line 557)
 
 So it may be "mothers and fathers", a respectful greeting, but that reading is a
-guess built from pieces, which is exactly what Nɛpɛm is told never to do.
+guess built from pieces, which is exactly what Nɛpɛ́m is told never to do.
 
 Even if the phrase is real, its spelling has lost its marks. The corpus writes
 mmá, étá and nɛ; "Mma ne eta" has no acute on either a, no ɛ, and a plain e
@@ -411,7 +411,7 @@ and the books:
 - `knowledge_base/kenyang_grammar_ref.md`, line 73: "class 5 → 6  nepɛm / bapɛm
   life / lives" (nepɛm with a plain e)
 
-Nɛpɛm is the project's own name, so this matters beyond the one reply.
+Nɛpɛ́m is the project's own name, so this matters beyond the one reply.
 
 The spelling is settled (Ed, 25 November 2026): Nɛpɛ́m, capital N, acute on the
 second ɛ. nɛpɛm and nepɛm are recorded as book spellings.
@@ -461,3 +461,22 @@ beket. The rule itself is not declared wrong, and ɛkɛt is not declared an exce
 some nouns and not others, or is ɛkɛt an exception? Every ɛ- noun Ed confirms with its
 plural (in the form "singular → plural   gloss → glosses") will tell us more, and the
 code will start holding back the books' contradicting form for it.]
+
+---
+
+## 25. M'má, from a chat reply
+
+Found on 25 November 2026, in a test run. Asked "Teach me something new", the chat
+taught mmá (mother, which is verified) and then built this sentence:
+
+    "M'má nɛ — "My mother is here." Here, M' is the prefix for "I," and nɛ means
+    "is here.""
+
+M'má appears in no file in knowledge_base and in no recording. The flag marked it not
+found. The explanation is the model's own: nothing in the material says M' marks "I"
+on a noun, or that nɛ means "is here". Ed's settled form for my mother is Ma'ya.
+
+Not confirmed. Not to be taught or treated as confirmed until Ed says.
+
+[TO CONFIRM: is M'má a real form? If it is, what does it mean? Is "M'má nɛ" a real
+sentence, and does it mean "my mother is here"?]
