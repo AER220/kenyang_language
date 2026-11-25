@@ -544,7 +544,17 @@ h2.big b,h2.big em{color:var(--head);font-style:normal}
 .fld input:focus,.fld textarea:focus{border-color:var(--p2)}
 .fld input::placeholder,.fld textarea::placeholder{color:#5C6B78}
 .fld textarea{min-height:76px;resize:vertical;line-height:1.5}
-.fld .ken input{font-family:var(--serif);font-size:19px}
+.fld.ken input{font-family:var(--serif);font-size:19px}
+/* Which box is which. Ed typed the Kenyang in the English box three times in a
+   row with 12.5px grey labels, so the language is now the first thing in each
+   label, as a tag, and each box holds an example. The Kenyang box is also the
+   only one in the serif face the Kenyang is set in everywhere else. */
+.fld.lang label{font-size:15px;color:var(--text);font-weight:600}
+.fld .tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;padding:2px 9px;margin:0 7px 0 0;border-radius:999px;
+  color:var(--head);border:1px solid var(--head);vertical-align:1px}
+.swapw{margin:0 0 12px}
+.swapw .btn{margin-top:9px}
 .fnote{font-size:12.5px;color:var(--mute);margin:2px 0 14px;line-height:1.5}
 .fsend{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
 .fmsg{margin:13px 0 0;padding:12px 15px;border-radius:12px;font-size:14px;line-height:1.55}
@@ -1098,11 +1108,13 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
       <div id="tfDone" class="done"></div>
 
       <div class="frow">
-        <div class="fld"><label for="tfEn">The English</label>
-          <input id="tfEn" placeholder="tomorrow" autocomplete="off" maxlength="300"></div>
-        <div class="fld ken"><label for="tfKen">The Kenyang</label>
-          <input id="tfKen" placeholder="type it as you say it" autocomplete="off" maxlength="200"></div>
+        <div class="fld lang"><label for="tfEn"><span class="tag">English</span>What it means</label>
+          <input id="tfEn" placeholder="for example: house" autocomplete="off" maxlength="300"></div>
+        <div class="fld lang ken"><label for="tfKen"><span class="tag">Kenyang</span>How you say it</label>
+          <input id="tfKen" placeholder="for example: ɛkɛt" autocomplete="off" maxlength="200"></div>
       </div>
+      <!-- shown when the boxes look the wrong way round; see checkBoxes() -->
+      <div class="fmsg bad swapw" id="tfSwap" hidden></div>
       <!-- The list's Kenyang can be tapped, so a speaker can hear a word before
            adding a voice. say.js plays only what its manifests name, which is
            only approved recordings, so nothing pending is ever reachable from
@@ -1193,13 +1205,14 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
         has read it. That gate is deliberate.</p>
 
       <div class="fld"><label for="rfQ">What did you ask him?</label>
-        <input id="rfQ" placeholder="how do you say tell them I am going to church"
+        <input id="rfQ" placeholder="for example: how do you say tell them I am going to church"
                autocomplete="off"></div>
       <div class="fld"><label for="rfA">What did he answer?</label>
         <textarea id="rfA" placeholder="paste or type what he said"></textarea></div>
-      <div class="fld ken"><label for="rfK">What should he have said?</label>
-        <input id="rfK" placeholder="ghati bho bɛ mme rong ekeré-Mandɛm"
+      <div class="fld lang ken"><label for="rfK"><span class="tag">Kenyang</span>What he should have said</label>
+        <input id="rfK" placeholder="for example: ghati bho bɛ mme rong ekeré-Mandɛm"
                autocomplete="off"></div>
+      <div class="fmsg bad swapw" id="rfSwap" hidden></div>
       <div class="fld"><label for="rfN">Why is his version wrong?</label>
         <textarea id="rfN" placeholder="angati is only for passing a message through somebody else. One telling needs just ghati."></textarea></div>
       <p class="fnote">The reason matters more than the correction. One explained
@@ -2370,6 +2383,7 @@ $("tfCancel").addEventListener("click", () => {
   $("tfDone").innerHTML = "";
   recDiscard();
   paintHas();
+  checkTeach();
 });
 $("rfCancel").addEventListener("click", () => showForm(null));
 
@@ -2387,6 +2401,7 @@ function nextWord(thanks){
   $("tfMsg").innerHTML = "";
   recDiscard();
   paintHas();
+  checkTeach();
   $("tfDone").innerHTML = thanks;
   /* one frame later, once the cleared fields have settled, or the browser's
      own scroll adjustment can carry the page past the thank-you */
@@ -2423,6 +2438,8 @@ $("tfSend").addEventListener("click", async () => {
       Nothing was sent.</div>`;
     return;
   }
+  const sig = checkTeach();
+  if (sig && sig !== tfWarned){ tfWarned = sig; msg.innerHTML = ASK_AGAIN; return; }
   if (REC.ctx) recStop();
   $("tfDone").innerHTML = "";
   $("tfSend").disabled = true;
@@ -2765,6 +2782,74 @@ function paintHas(){
 }
 $("tfKen").addEventListener("input", paintHas);
 
+/* ── the right words in the right boxes ─────────────────────────────
+   Ed put the Kenyang in the English box three times in a row, so the code
+   checks rather than trusting the labels to be read.
+   Kenyang in the English box: one of ɛ ɔ ŋ or a tone mark, or a recorded
+   Kenyang word that is not also the English of a recorded word.
+   English in the Kenyang box: no Kenyang letter, not a recorded Kenyang word,
+   and either the English of a recorded word or two everyday English words.
+   It warns, never refuses: the first Send while a warning shows stops once,
+   the second sends it as it is, because a person can be right where the check
+   is not. It is checked when a box is left and at Send, not on every letter,
+   so nobody is nagged halfway through a word. */
+const KEN_LETTER = /[ɛɔŋƐƆŊ\u0300-\u036f]/;
+const EN_COMMON = new Set(("the is are am was were what my your this that and with you "
+  + "they she how say word means mean of for it we he in to me his her our their "
+  + "not do go going have has").split(" "));
+/* the English of every recorded word, whole and split at commas: "house, home" */
+const knownEnglish = () => new Set([...KNOWN.values()].flatMap(w =>
+  [w.english || "", ...String(w.english || "").split(/[,;\/]/)]).map(foldWord).filter(Boolean));
+function looksKenyang(s){
+  const k = foldWord(s || "");
+  if (!k) return false;
+  if (KEN_LETTER.test(k.normalize("NFD"))) return true;
+  return KNOWN.has(k) && !knownEnglish().has(k);
+}
+function looksEnglish(s){
+  const k = foldWord(s || "");
+  if (!k || KEN_LETTER.test(k.normalize("NFD")) || KNOWN.has(k)) return false;
+  if (knownEnglish().has(k)) return true;
+  return k.split(/[^a-z']+/).filter(w => EN_COMMON.has(w)).length >= 2;
+}
+let tfWarned = "", rfWarned = "";
+function checkTeach(){
+  const en = $("tfEn").value.trim(), ken = $("tfKen").value.trim(), box = $("tfSwap");
+  const wrongEn = looksKenyang(en), wrongKen = looksEnglish(ken);
+  if (!wrongEn && !wrongKen){ box.hidden = true; return ""; }
+  const why = wrongEn && wrongKen
+    ? `These look the wrong way round. “${esc(en)}” looks like Kenyang, and “${esc(ken)}” looks like English.`
+    : wrongEn
+      ? `“${esc(en)}” is in the English box, and it looks like Kenyang.`
+      : `“${esc(ken)}” is in the Kenyang box, and it looks like English.`;
+  box.innerHTML = why + ` The English box is for what the word means. The Kenyang box
+    is for how you say it.<br><button class="btn" type="button" id="tfSwapGo">Swap the two boxes</button>`;
+  box.hidden = false;
+  $("tfSwapGo").onclick = () => {
+    const a = $("tfEn").value;
+    $("tfEn").value = $("tfKen").value;
+    $("tfKen").value = a;
+    checkTeach(); paintHas();
+  };
+  return en + "\u0000" + ken;
+}
+function checkReport(){
+  const ken = $("rfK").value.trim(), box = $("rfSwap");
+  if (!looksEnglish(ken)){ box.hidden = true; return ""; }
+  box.textContent = `“${ken}” looks like English. This box is for what he should have `
+    + "said, in Kenyang. What you asked him goes in the first box.";
+  box.hidden = false;
+  return ken;
+}
+["tfEn","tfKen"].forEach(id => {
+  $(id).addEventListener("change", checkTeach);
+  $(id).addEventListener("input", () => { if (!$("tfSwap").hidden) checkTeach(); });
+});
+$("rfK").addEventListener("change", checkReport);
+$("rfK").addEventListener("input", () => { if (!$("rfSwap").hidden) checkReport(); });
+const ASK_AGAIN = `<div class="fmsg bad">Nothing was sent yet. Look at the warning
+  above. If the boxes are right as they are, press Send again.</div>`;
+
 recPaint();
 paintMine();
 loadKnown();
@@ -2777,6 +2862,8 @@ $("rfSend").addEventListener("click", async () => {
       have said. Nothing was sent.</div>`;
     return;
   }
+  const sig = checkReport();
+  if (sig && sig !== rfWarned){ rfWarned = sig; msg.innerHTML = ASK_AGAIN; return; }
   $("rfSend").disabled = true;
   $("rfSend").textContent = "Sending…";
   const res = await sendToSupabase({
@@ -2792,6 +2879,7 @@ $("rfSend").addEventListener("click", async () => {
     msg.innerHTML = `<div class="fmsg ok">Thank you. This is the most useful
       thing anybody sends. A speaker will read it before anything changes.</div>`;
     ["rfQ","rfA","rfK","rfN"].forEach(id => $(id).value = "");
+    checkReport();
     loadWall();
   } else {
     msg.innerHTML = `<div class="fmsg bad">Nothing was saved, because

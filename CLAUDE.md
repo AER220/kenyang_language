@@ -469,6 +469,15 @@ every gloss is stored under the form exactly as written and folded, and a word a
 its exact spelling first, falling back to the folded one only if there is none. Any new
 lookup that folds (case, tone marks, ɛ/e) to find a word's meaning should do the same.
 
+**A CSS rule can silently not apply.** `.fld .ken input` (a space: a `.ken` inside a
+`.fld`) never matched, because `ken` is a class on the `.fld` itself; it needed
+`.fld.ken input`. So the Kenyang box was never set in the serif face, the English and
+Kenyang boxes looked identical, and Ed typed the Kenyang into the English box three
+times in a row. Nothing errors when a selector matches nothing. The fix, and the labels
+and swapped-box check that came with it, are in `index.html` (search `.fld.ken input`
+and `checkTeach`). After writing a style for a specific element, confirm it reaches
+that element.
+
 **Kenyang letters are not their Latin look-alikes.** `ɛ` is U+025B, not Greek
 epsilon. `ɔ` is U+0254. Mixing them up makes words unsearchable.
 

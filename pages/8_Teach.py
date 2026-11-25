@@ -16,6 +16,7 @@ which arrive as ?mode=teach&word=sleep.
 """
 
 import html
+import unicodedata
 import streamlit as st
 
 import community
@@ -70,10 +71,12 @@ is_new = kind.startswith("A word")
 
 with st.form("teach", clear_on_submit=True):
     if is_new:
-        english = st.text_input("What does it mean, in English?",
-                                value=prefill_en, placeholder="tomorrow")
-        kenyang = st.text_input("And in Kenyang?",
-                                placeholder="write it the way you say it")
+        # The language comes first in each label, and each box holds an example:
+        # Ed typed the Kenyang into the English box three times in a row.
+        english = st.text_input("**ENGLISH** · what it means",
+                                value=prefill_en, placeholder="for example: house")
+        kenyang = st.text_input("**KENYANG** · how you say it",
+                                placeholder="for example: ɛkɛt")
         answer = ""
         note = st.text_area(
             "Anything worth knowing about it?", height=90,
@@ -81,11 +84,13 @@ with st.form("teach", clear_on_submit=True):
                         "changes when there is more than one")
     else:
         english = st.text_input("What did you ask him?",
-                                placeholder="how do you say tell them I am going to church")
+                                placeholder="for example: how do you say tell them "
+                                            "I am going to church")
         answer = st.text_area("What did he say?", height=80,
                               placeholder="paste his answer here")
-        kenyang = st.text_input("What should it have been?",
-                                placeholder="ghati bho bɛ mme rong ekeré-Mandɛm")
+        kenyang = st.text_input("**KENYANG** · what he should have said",
+                                placeholder="for example: ghati bho bɛ mme rong "
+                                            "ekeré-Mandɛm")
         note = st.text_area(
             "Why is his version wrong? This is the part I most need.", height=90,
             placeholder="angati is only for passing a message through somebody "
@@ -101,9 +106,23 @@ with st.form("teach", clear_on_submit=True):
     sent = st.form_submit_button("Send it to Ed", type="primary",
                                  use_container_width=True)
 
+# Kenyang in the English box: ɛ, ɔ, ŋ or a tone mark are never English. The
+# website checks more (recorded words, English glosses), and the Review page
+# flags an English word in the Kenyang box before anything is approved.
+def kenyang_letters(text):
+    return any(c in "ɛɔŋƐƆŊ" or unicodedata.category(c) == "Mn"
+               for c in unicodedata.normalize("NFD", text or ""))
+
+
 if sent:
     if not kenyang.strip():
         st.warning("Nothing was sent. The Kenyang is the part I need.")
+    elif is_new and kenyang_letters(english) and not kenyang_letters(kenyang):
+        st.warning(
+            f"Nothing was sent. **{english.strip()}** is in the English box, and it "
+            f"looks like Kenyang. The English box is for what the word means; the "
+            f"Kenyang box is for how you say it. Please put them in again, the "
+            f"other way round.")
     else:
         rec = community.make(
             "new_word" if is_new else "correction",
