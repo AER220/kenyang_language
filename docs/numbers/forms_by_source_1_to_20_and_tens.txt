@@ -1,0 +1,128 @@
+
+  1  DISAGREE
+        émot                         core:Context_Rich_Kenyang_Ch1_core.txt:49; reference:dictionary_ref.txt:647
+      V ɛmɔ́t                        reference:Dictionary_Ch1_ref.txt:54; reference:kenyang_wordbank_ref.jsonl:1699; verified:kenyang_verified_speaker.md:1441
+        ɛ́mɔt                        core:Numbers_in_Kenyang_core.jsonl:1; recording:audio_words.json (015_one.mp3):0; reference:kenyang_lexicon_merged_ref.jsonl:2252
+
+  2  DISAGREE
+        bhépay                       core:Context_Rich_Kenyang_Ch1_core.txt:50
+      V bɛ́pay                       core:Numbers_in_Kenyang_core.jsonl:2; recording:audio_words.json (016_two.mp3):0; reference:Dictionary_Ch1_ref.txt:55; reference:kenyang_lexicon_merged_ref.jsonl:284; reference:kenyang_wordbank_ref.jsonl:2533; verified:kenyang_ver
+        bépay                        reference:dictionary_ref.txt:232
+
+  3  DISAGREE
+        bhérát                       core:Context_Rich_Kenyang_Ch1_core.txt:51
+      V bɛ́rát                       core:Numbers_in_Kenyang_core.jsonl:3; recording:audio_words.json (017_three.mp3):0; reference:Dictionary_Ch1_ref.txt:56; reference:kenyang_lexicon_merged_ref.jsonl:285; reference:kenyang_wordbank_ref.jsonl:2443; verified:kenyang_v
+        bérát                        reference:dictionary_ref.txt:235
+
+  4  DISAGREE
+        ménwi                        core:Context_Rich_Kenyang_Ch1_core.txt:52; reference:dictionary_ref.txt:1229
+      V mɛ́nwi                       core:Numbers_in_Kenyang_core.jsonl:4; recording:audio_words.json (018_four.mp3):0; reference:Dictionary_Ch1_ref.txt:57; reference:kenyang_lexicon_merged_ref.jsonl:917; reference:kenyang_wordbank_ref.jsonl:988; verified:kenyang_ver
+
+  5  DISAGREE
+        bhétay                       core:Context_Rich_Kenyang_Ch1_core.txt:53
+      V bɛ́tay                       core:Numbers_in_Kenyang_core.jsonl:5; recording:audio_words.json (019_five.mp3):0; reference:Dictionary_Ch1_ref.txt:58; reference:kenyang_lexicon_merged_ref.jsonl:289; reference:kenyang_wordbank_ref.jsonl:924; verified:kenyang_ver
+        bétay                        reference:dictionary_ref.txt:278
+
+  6  DISAGREE
+        bhétándat                    core:Context_Rich_Kenyang_Ch1_core.txt:54
+      V tándat                       reference:Dictionary_Ch1_ref.txt:59; verified:kenyang_verified_speaker.md:1442
+        bɛ́tandat                    core:Numbers_in_Kenyang_core.jsonl:6; recording:audio_words.json (020_six.mp3):0
+        bétándat                     reference:dictionary_ref.txt:276
+        bɛ́tándat                    reference:kenyang_lexicon_merged_ref.jsonl:290; reference:kenyang_wordbank_ref.jsonl:2161
+
+  7  DISAGREE
+      V tándrámɔt                    core:Context_Rich_Kenyang_Ch1_core.txt:55; core:Numbers_in_Kenyang_core.jsonl:7; recording:audio_words.json (021_seven.mp3):0; verified:kenyang_texts_verified.md:1800
+      V tándat nɛ amɔt               reference:Dictionary_Ch1_ref.txt:60; verified:kenyang_verified_speaker.md:1443
+
+  8  DISAGREE
+        ménen                        core:Context_Rich_Kenyang_Ch1_core.txt:56; reference:dictionary_ref.txt:1221
+      V mɛ́nɛn                       core:Numbers_in_Kenyang_core.jsonl:8; recording:audio_words.json (022_eight.mp3):0; reference:Dictionary_Ch1_ref.txt:61; reference:kenyang_lexicon_merged_ref.jsonl:921; reference:kenyang_wordbank_ref.jsonl:768; verified:kenyang_ve
+
+  9  DISAGREE
+        ménén nɛ amot                core:Context_Rich_Kenyang_Ch1_core.txt:57
+      V mɛ́nɛn nɛ amɔt               core:Numbers_in_Kenyang_core.jsonl:9; recording:audio_words.json (023_nine.mp3):0; reference:Dictionary_Ch1_ref.txt:62; reference:kenyang_wordbank_ref.jsonl:1655; verified:kenyang_verified_speaker.md:1443
+        ménén ne amɔt                reference:dictionary_ref.txt:1222
+        mɛ́nɛ́n nɛ amɔt              reference:kenyang_lexicon_merged_ref.jsonl:925
+
+ 10  AGREE
+      V byó                          core:Context_Rich_Kenyang_Ch1_core.txt:58; core:Numbers_in_Kenyang_core.jsonl:10; recording:audio_words.json (024_ten.mp3):0; reference:Dictionary_Ch1_ref.txt:63; reference:dictionary_ref.txt:324; reference:kenyang_lexicon_merged_
+
+ 11  DISAGREE
+        byó nɛ amot                  core:Context_Rich_Kenyang_Ch1_core.txt:59
+      V byó nɛ amɔt                  core:Numbers_in_Kenyang_core.jsonl:11; reference:Dictionary_Ch1_ref.txt:64; reference:kenyang_lexicon_merged_ref.jsonl:170; reference:kenyang_wordbank_ref.jsonl:784; verified:kenyang_verified_speaker.md:1444
+        byó ne amɔt                  reference:dictionary_ref.txt:326
+
+ 12  DISAGREE
+        byó nɛ bépay                 core:Context_Rich_Kenyang_Ch1_core.txt:60
+      V byó nɛ bɛ́pay                core:Numbers_in_Kenyang_core.jsonl:12; reference:Dictionary_Ch1_ref.txt:65; reference:kenyang_lexicon_merged_ref.jsonl:171; reference:kenyang_wordbank_ref.jsonl:2524; verified:kenyang_verified_speaker.md:1444
+        byó ne bepay                 reference:dictionary_ref.txt:327
+
+ 13  DISAGREE
+        byó nɛ bérát                 core:Context_Rich_Kenyang_Ch1_core.txt:61
+      V byó nɛ bɛ́rát                core:Numbers_in_Kenyang_core.jsonl:13; reference:Dictionary_Ch1_ref.txt:66; reference:kenyang_lexicon_merged_ref.jsonl:172; reference:kenyang_wordbank_ref.jsonl:2434; verified:kenyang_verified_speaker.md:1445
+        byó ne bérát                 reference:dictionary_ref.txt:328
+
+ 14  DISAGREE
+        byó nɛ ménwi                 core:Context_Rich_Kenyang_Ch1_core.txt:62
+      V byó nɛ mɛ́nwi                core:Numbers_in_Kenyang_core.jsonl:14; reference:Dictionary_Ch1_ref.txt:67; reference:kenyang_lexicon_merged_ref.jsonl:173; reference:kenyang_wordbank_ref.jsonl:990; verified:kenyang_verified_speaker.md:1445
+        byó ne ménwi                 reference:dictionary_ref.txt:329
+
+ 15  AGREE
+      V nɛkú                         core:Context_Rich_Kenyang_Ch1_core.txt:63; core:Numbers_in_Kenyang_core.jsonl:15; reference:Dictionary_Ch1_ref.txt:68; reference:kenyang_lexicon_merged_ref.jsonl:1444; reference:kenyang_wordbank_ref.jsonl:886; verified:kenyang_ver
+
+ 16  DISAGREE
+        nekú ne émot                 core:Context_Rich_Kenyang_Ch1_core.txt:64
+      V nɛkú nɛ amɔ́t                reference:Dictionary_Ch1_ref.txt:69; reference:kenyang_wordbank_ref.jsonl:2162; verified:kenyang_verified_speaker.md:1446
+        nɛkú nɛ amɔt                 core:Numbers_in_Kenyang_core.jsonl:16
+
+ 17  DISAGREE
+        nɛkú nɛ bépay                core:Context_Rich_Kenyang_Ch1_core.txt:65
+      V nɛkú nɛ bɛ́pay               core:Numbers_in_Kenyang_core.jsonl:17; reference:Dictionary_Ch1_ref.txt:70; reference:kenyang_lexicon_merged_ref.jsonl:1446; reference:kenyang_wordbank_ref.jsonl:2091; verified:kenyang_verified_speaker.md:1446
+
+ 18  DISAGREE
+        nɛkú ne bérát                core:Context_Rich_Kenyang_Ch1_core.txt:66
+      V nɛkú nɛ bɛ́rat               reference:Dictionary_Ch1_ref.txt:71; reference:kenyang_wordbank_ref.jsonl:769; verified:kenyang_verified_speaker.md:1446
+        nɛkú nɛ bɛ́rát               core:Numbers_in_Kenyang_core.jsonl:18; reference:kenyang_lexicon_merged_ref.jsonl:1447
+
+ 19  DISAGREE
+        nɛkú nɛ ménwi                core:Context_Rich_Kenyang_Ch1_core.txt:67
+      V nɛkú nɛ mɛ́nwi               core:Numbers_in_Kenyang_core.jsonl:19; reference:Dictionary_Ch1_ref.txt:72; reference:kenyang_wordbank_ref.jsonl:1656; verified:kenyang_verified_speaker.md:1447
+
+ 20  DISAGREE
+        esa                          core:Context_Rich_Kenyang_Ch1_core.txt:68; reference:dictionary_ref.txt:741
+      V ɛsa                          core:Numbers_in_Kenyang_core.jsonl:20; reference:Dictionary_Ch1_ref.txt:73; reference:kenyang_lexicon_merged_ref.jsonl:2147; reference:kenyang_wordbank_ref.jsonl:2525; verified:kenyang_verified_speaker.md:1447
+        ɛ̌kwɔ́t                      reference:kenyang_lexicon_merged_ref.jsonl:2284
+
+ 21  DISAGREE
+        ɛsa nsɛm émot                core:Context_Rich_Kenyang_Ch1_core.txt:69
+        ɛsa nsɛm ɛ́mɔt               reference:Dictionary_Ch1_ref.txt:74; reference:kenyang_lexicon_merged_ref.jsonl:2149
+        ɛsa nsɛm meso ɛ́mɔt          core:Numbers_in_Kenyang_core.jsonl:21
+        esa nsem émɔt                reference:dictionary_ref.txt:743
+        ɛsa nsɛm ɛ́mot               reference:kenyang_wordbank_ref.jsonl:2526
+
+ 30  DISAGREE
+        ɛsa nsɛm byó                 core:Context_Rich_Kenyang_Ch1_core.txt:70; core:Numbers_in_Kenyang_core.jsonl:30; reference:Dictionary_Ch1_ref.txt:76; reference:kenyang_lexicon_merged_ref.jsonl:2148
+        esa nsem byó                 reference:dictionary_ref.txt:744
+
+ 40  DISAGREE
+        bhesa bépay                  core:Context_Rich_Kenyang_Ch1_core.txt:71
+        bɛsa bɛ́pay                  core:Numbers_in_Kenyang_core.jsonl:31; reference:Dictionary_Ch1_ref.txt:79; reference:kenyang_lexicon_merged_ref.jsonl:241; reference:kenyang_wordbank_ref.jsonl:987
+        besa bépay                   reference:dictionary_ref.txt:247
+
+ 50  DISAGREE
+        bhesa bépay nsɛm byó         core:Context_Rich_Kenyang_Ch1_core.txt:72
+        bɛsa bɛ́pay nsɛm byó         core:Numbers_in_Kenyang_core.jsonl:32; reference:Dictionary_Ch1_ref.txt:82
+
+ 60  DISAGREE
+        bhesa bhérát                 core:Context_Rich_Kenyang_Ch1_core.txt:73
+        bɛsa bɛ́rat                  reference:Dictionary_Ch1_ref.txt:85
+        bɛsa bɛ́rát                  core:Numbers_in_Kenyang_core.jsonl:33; reference:kenyang_lexicon_merged_ref.jsonl:243
+        besa bérát                   reference:dictionary_ref.txt:249
+
+ 70  DISAGREE
+        bhesa bhérát nsɛm byó        core:Context_Rich_Kenyang_Ch1_core.txt:74
+        bɛsa bɛ́rat nsɛm byó         reference:Dictionary_Ch1_ref.txt:88
+        bɛsa bɛ́rát nsɛm byó         core:Numbers_in_Kenyang_core.jsonl:34; reference:kenyang_lexicon_merged_ref.jsonl:244
+        besa bépay nsem byó          reference:dictionary_ref.txt:248
+        besa bérát nsem byó          reference:dictionary_ref.txt:250
+        bɛsa bɛ́pay nsɛm byó         reference:kenyang_lexicon_merged_ref.jsonl:242; reference:kenyang_wordbank_ref.jsonl:2092

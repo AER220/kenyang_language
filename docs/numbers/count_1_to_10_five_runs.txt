@@ -1,0 +1,355 @@
+====================================================================================================
+d_1to10.jsonl run 1   Q: count from 1 to 10 in Kenyang
+REPLY (full):
+  Here are the numbers from 1 to 10 in Kenyang:
+  
+  1. ɛ́mɔt
+  2. bɛ́pay
+  3. bɛ́rát
+  4. mɛ́nwi
+  5. bɛ́tay
+  6. bɛ́tandat
+  7. tándrámɔt
+  8. mɛ́nɛn
+  9. mɛ́nɛn nɛ amɔt
+  10. byó
+  
+  Feel free to try repeating them!
+TAP LINE: Tap any underlined word to hear it said.
+FLAG: not found=[]  written=[]
+PASSAGES (40):
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: mɛ́nɛn nɛ amɔt=9, bɛ́tandat=6, tándrámɔt=7, bɛ́rát=3, mɛ́nɛn=8, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, ɛ́mɔt=1
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: mɛ́nɛn nɛ amɔt=9, ɛsa nsɛm byó=30, bɛsa bɛ́pay=40, tándrámɔt=7, mɛ́nɛn=8, bɛ́pay=2, byó=10, ɛsa=20
+   [reference] Dictionary_Ch1_ref.txt                     numbers: mɛ́nɛn nɛ amɔt=9, tándat nɛ amɔt=7, byó nɛ bɛ́pay=12, byó nɛ amɔt=11, mɛ́nɛn=8, bɛ́pay=2, tándat=6, byó=10
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_verified_speaker.md                numbers: nɛkú nɛ mɛ́nwi=19, mɛ́nɛn nɛ amɔt=9, nɛkú nɛ bɛ́pay=17, nɛkú nɛ bɛ́rat=18, tándat nɛ amɔt=7, byó nɛ bɛ́pay=12, byó nɛ mɛ́nwi=14, byó nɛ bɛ́rát=13, nɛkú nɛ amɔ́t=16, byó nɛ amɔt=11, bɛ́rát=3, mɛ́nɛn=8, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, tándat=6, ɛmɔ́t=1, nɛkú=15, byó=10, ɛsa=20
+   [verified ] kenyang_verified_speaker.md                numbers: bɛsa bɛ́pay nsɛm byó=50/70, ɛsa nsɛm byó=30, bɛsa bɛ́pay=40, bɛsa bɛ́rat=60, bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, nɛkú=15, byó=10, ɛsa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: ménén nɛ amot=9, bhétándat=6, tándrámɔt=7, bhépay=2, bhétay=5, bhérát=3, ménwi=4, ménen=8, émot=1, byó=10
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: nɛkú nɛ bépay=17, nɛkú ne bérát=18, nɛkú nɛ ménwi=19, byó nɛ ménwi=14, byó nɛ bérát=13, byó nɛ bépay=12, nekú ne émot=16, byó nɛ amot=11, bépay=2, ménwi=4, bérát=3, nɛkú=15, émot=1, byó=10, esa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: -
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: bɛsa bɛ́rát nsɛm byó=70, bɛsa bɛ́pay nsɛm byó=50/70, bɛsa bɛ́pay=40, bɛsa bɛ́rát=60, bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, byó=10
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: bhesa bhérát nsɛm byó=70, bhesa bépay nsɛm byó=50, ɛsa nsɛm émot=21, ɛsa nsɛm byó=30, bhesa bhérát=60, bhesa bépay=40, bhérát=3, bépay=2, ménwi=4, bétay=5, émot=1, byó=10, ɛsa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: bétay=5, byó=10, ɛsa=20
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: bɛ́tay=5, nɛkú=15, ɛsa=20
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: ɛsa nsɛm meso ɛ́mɔt=21, nɛkú nɛ mɛ́nwi=19, nɛkú nɛ bɛ́rát=18, bɛ́rát=3, mɛ́nwi=4, ɛ́mɔt=1, nɛkú=15, ɛsa=20
+   [verified ] kenyang_sentences_verified.md              numbers: -
+   [reference] kenyang_noun_rameres_ref.txt               numbers: -
+   [verified ] kenyang_verified_speaker.md                numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: ɛsa nsɛm ɛ́mɔt=21, ɛsa nsɛm byó=30, ɛ́mɔt=1, byó=10, ɛsa=20
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: bɛsa bɛ́rát nsɛm byó=70, bɛsa bɛ́rát=60, bɛ́rát=3, bɛ́tay=5, byó=10
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: nɛkú nɛ bɛ́pay=17, nɛkú nɛ amɔt=16, bɛ́pay=2, nɛkú=15
+   [verified ] kenyang_texts_verified.md                  numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: mɛ́nwi=4, nɛkú=15, byó=10
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [verified ] kenyang_texts_verified.md                  numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: bɛ́tándat=6, bɛ́tay=5, tándat=6
+   [reference] Dictionary_Ch1_ref.txt                     numbers: bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4
+   [reference] kenyang_grammar_ref.md                     numbers: -
+   [reference] kenyang_grammar_ref.md                     numbers: -
+   [reference] Dictionary_Ch1_ref.txt                     numbers: bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, ɛsa=20
+   [reference] kenyang_orthography_ref.jsonl              numbers: -
+ANSWER, NUMBER BY NUMBER:
+     1  ɛ́mɔt                        verified+Ed's recording+course+book
+     2  bɛ́pay                       verified+Ed's recording+course+book
+     3  bɛ́rát                       verified+Ed's recording+course+book
+     4  mɛ́nwi                       verified+Ed's recording+course+book
+     5  bɛ́tay                       verified+Ed's recording+course+book
+     6  bɛ́tandat                    Ed's recording+course
+     7  tándrámɔt                    verified+Ed's recording+course
+     8  mɛ́nɛn                       verified+Ed's recording+course+book
+     9  mɛ́nɛn nɛ amɔt               verified+Ed's recording+course+book
+    10  byó                          verified+Ed's recording+course+book
+====================================================================================================
+d_1to10.jsonl run 2   Q: count from 1 to 10 in Kenyang
+REPLY (full):
+  Here are the numbers from 1 to 10 in Kenyang:
+  
+  1. ɛ́mɔt
+  2. bɛ́pay
+  3. bɛ́rát
+  4. mɛ́nwi
+  5. bɛ́tay
+  6. bɛ́tandat
+  7. tándrámɔt
+  8. mɛ́nɛn
+  9. mɛ́nɛn nɛ amɔt
+  10. byó
+  
+  Would you like to try counting higher?
+TAP LINE: Tap any underlined word to hear it said.
+FLAG: not found=[]  written=[]
+PASSAGES (40):
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: mɛ́nɛn nɛ amɔt=9, bɛ́tandat=6, tándrámɔt=7, bɛ́rát=3, mɛ́nɛn=8, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, ɛ́mɔt=1
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: mɛ́nɛn nɛ amɔt=9, ɛsa nsɛm byó=30, bɛsa bɛ́pay=40, tándrámɔt=7, mɛ́nɛn=8, bɛ́pay=2, byó=10, ɛsa=20
+   [reference] Dictionary_Ch1_ref.txt                     numbers: mɛ́nɛn nɛ amɔt=9, tándat nɛ amɔt=7, byó nɛ bɛ́pay=12, byó nɛ amɔt=11, mɛ́nɛn=8, bɛ́pay=2, tándat=6, byó=10
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_verified_speaker.md                numbers: nɛkú nɛ mɛ́nwi=19, mɛ́nɛn nɛ amɔt=9, nɛkú nɛ bɛ́pay=17, nɛkú nɛ bɛ́rat=18, tándat nɛ amɔt=7, byó nɛ bɛ́pay=12, byó nɛ mɛ́nwi=14, byó nɛ bɛ́rát=13, nɛkú nɛ amɔ́t=16, byó nɛ amɔt=11, bɛ́rát=3, mɛ́nɛn=8, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, tándat=6, ɛmɔ́t=1, nɛkú=15, byó=10, ɛsa=20
+   [verified ] kenyang_verified_speaker.md                numbers: bɛsa bɛ́pay nsɛm byó=50/70, ɛsa nsɛm byó=30, bɛsa bɛ́pay=40, bɛsa bɛ́rat=60, bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, nɛkú=15, byó=10, ɛsa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: ménén nɛ amot=9, bhétándat=6, tándrámɔt=7, bhépay=2, bhétay=5, bhérát=3, ménwi=4, ménen=8, émot=1, byó=10
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: nɛkú nɛ bépay=17, nɛkú ne bérát=18, nɛkú nɛ ménwi=19, byó nɛ ménwi=14, byó nɛ bérát=13, byó nɛ bépay=12, nekú ne émot=16, byó nɛ amot=11, bépay=2, ménwi=4, bérát=3, nɛkú=15, émot=1, byó=10, esa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: -
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: bɛsa bɛ́rát nsɛm byó=70, bɛsa bɛ́pay nsɛm byó=50/70, bɛsa bɛ́pay=40, bɛsa bɛ́rát=60, bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, byó=10
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: bhesa bhérát nsɛm byó=70, bhesa bépay nsɛm byó=50, ɛsa nsɛm émot=21, ɛsa nsɛm byó=30, bhesa bhérát=60, bhesa bépay=40, bhérát=3, bépay=2, ménwi=4, bétay=5, émot=1, byó=10, ɛsa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: bétay=5, byó=10, ɛsa=20
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: bɛ́tay=5, nɛkú=15, ɛsa=20
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: ɛsa nsɛm meso ɛ́mɔt=21, nɛkú nɛ mɛ́nwi=19, nɛkú nɛ bɛ́rát=18, bɛ́rát=3, mɛ́nwi=4, ɛ́mɔt=1, nɛkú=15, ɛsa=20
+   [verified ] kenyang_sentences_verified.md              numbers: -
+   [reference] kenyang_noun_rameres_ref.txt               numbers: -
+   [verified ] kenyang_verified_speaker.md                numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: ɛsa nsɛm ɛ́mɔt=21, ɛsa nsɛm byó=30, ɛ́mɔt=1, byó=10, ɛsa=20
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: bɛsa bɛ́rát nsɛm byó=70, bɛsa bɛ́rát=60, bɛ́rát=3, bɛ́tay=5, byó=10
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: nɛkú nɛ bɛ́pay=17, nɛkú nɛ amɔt=16, bɛ́pay=2, nɛkú=15
+   [verified ] kenyang_texts_verified.md                  numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: mɛ́nwi=4, nɛkú=15, byó=10
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [verified ] kenyang_texts_verified.md                  numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: bɛ́tándat=6, bɛ́tay=5, tándat=6
+   [reference] Dictionary_Ch1_ref.txt                     numbers: bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4
+   [reference] kenyang_grammar_ref.md                     numbers: -
+   [reference] kenyang_grammar_ref.md                     numbers: -
+   [reference] Dictionary_Ch1_ref.txt                     numbers: bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, ɛsa=20
+   [reference] kenyang_orthography_ref.jsonl              numbers: -
+ANSWER, NUMBER BY NUMBER:
+     1  ɛ́mɔt                        verified+Ed's recording+course+book
+     2  bɛ́pay                       verified+Ed's recording+course+book
+     3  bɛ́rát                       verified+Ed's recording+course+book
+     4  mɛ́nwi                       verified+Ed's recording+course+book
+     5  bɛ́tay                       verified+Ed's recording+course+book
+     6  bɛ́tandat                    Ed's recording+course
+     7  tándrámɔt                    verified+Ed's recording+course
+     8  mɛ́nɛn                       verified+Ed's recording+course+book
+     9  mɛ́nɛn nɛ amɔt               verified+Ed's recording+course+book
+    10  byó                          verified+Ed's recording+course+book
+====================================================================================================
+d_1to10.jsonl run 3   Q: count from 1 to 10 in Kenyang
+REPLY (full):
+  Here are the numbers from 1 to 10 in Kenyang:
+  
+  1. ɛ́mɔt
+  2. bɛ́pay
+  3. bɛ́rát
+  4. mɛ́nwi
+  5. bɛ́tay
+  6. bɛ́tandat
+  7. tándrámɔt
+  8. mɛ́nɛn
+  9. mɛ́nɛn nɛ amɔt
+  10. byó
+  
+  Feel free to try saying them!
+TAP LINE: Tap any underlined word to hear it said.
+FLAG: not found=[]  written=[]
+PASSAGES (40):
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: mɛ́nɛn nɛ amɔt=9, bɛ́tandat=6, tándrámɔt=7, bɛ́rát=3, mɛ́nɛn=8, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, ɛ́mɔt=1
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: mɛ́nɛn nɛ amɔt=9, ɛsa nsɛm byó=30, bɛsa bɛ́pay=40, tándrámɔt=7, mɛ́nɛn=8, bɛ́pay=2, byó=10, ɛsa=20
+   [reference] Dictionary_Ch1_ref.txt                     numbers: mɛ́nɛn nɛ amɔt=9, tándat nɛ amɔt=7, byó nɛ bɛ́pay=12, byó nɛ amɔt=11, mɛ́nɛn=8, bɛ́pay=2, tándat=6, byó=10
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_verified_speaker.md                numbers: nɛkú nɛ mɛ́nwi=19, mɛ́nɛn nɛ amɔt=9, nɛkú nɛ bɛ́pay=17, nɛkú nɛ bɛ́rat=18, tándat nɛ amɔt=7, byó nɛ bɛ́pay=12, byó nɛ mɛ́nwi=14, byó nɛ bɛ́rát=13, nɛkú nɛ amɔ́t=16, byó nɛ amɔt=11, bɛ́rát=3, mɛ́nɛn=8, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, tándat=6, ɛmɔ́t=1, nɛkú=15, byó=10, ɛsa=20
+   [verified ] kenyang_verified_speaker.md                numbers: bɛsa bɛ́pay nsɛm byó=50/70, ɛsa nsɛm byó=30, bɛsa bɛ́pay=40, bɛsa bɛ́rat=60, bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, nɛkú=15, byó=10, ɛsa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: ménén nɛ amot=9, bhétándat=6, tándrámɔt=7, bhépay=2, bhétay=5, bhérát=3, ménwi=4, ménen=8, émot=1, byó=10
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: nɛkú nɛ bépay=17, nɛkú ne bérát=18, nɛkú nɛ ménwi=19, byó nɛ ménwi=14, byó nɛ bérát=13, byó nɛ bépay=12, nekú ne émot=16, byó nɛ amot=11, bépay=2, ménwi=4, bérát=3, nɛkú=15, émot=1, byó=10, esa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: -
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: bɛsa bɛ́rát nsɛm byó=70, bɛsa bɛ́pay nsɛm byó=50/70, bɛsa bɛ́pay=40, bɛsa bɛ́rát=60, bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, byó=10
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: bhesa bhérát nsɛm byó=70, bhesa bépay nsɛm byó=50, ɛsa nsɛm émot=21, ɛsa nsɛm byó=30, bhesa bhérát=60, bhesa bépay=40, bhérát=3, bépay=2, ménwi=4, bétay=5, émot=1, byó=10, ɛsa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: bétay=5, byó=10, ɛsa=20
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: bɛ́tay=5, nɛkú=15, ɛsa=20
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: ɛsa nsɛm meso ɛ́mɔt=21, nɛkú nɛ mɛ́nwi=19, nɛkú nɛ bɛ́rát=18, bɛ́rát=3, mɛ́nwi=4, ɛ́mɔt=1, nɛkú=15, ɛsa=20
+   [verified ] kenyang_sentences_verified.md              numbers: -
+   [reference] kenyang_noun_rameres_ref.txt               numbers: -
+   [verified ] kenyang_verified_speaker.md                numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: ɛsa nsɛm ɛ́mɔt=21, ɛsa nsɛm byó=30, ɛ́mɔt=1, byó=10, ɛsa=20
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: bɛsa bɛ́rát nsɛm byó=70, bɛsa bɛ́rát=60, bɛ́rát=3, bɛ́tay=5, byó=10
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: nɛkú nɛ bɛ́pay=17, nɛkú nɛ amɔt=16, bɛ́pay=2, nɛkú=15
+   [verified ] kenyang_texts_verified.md                  numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: mɛ́nwi=4, nɛkú=15, byó=10
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [verified ] kenyang_texts_verified.md                  numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: bɛ́tándat=6, bɛ́tay=5, tándat=6
+   [reference] Dictionary_Ch1_ref.txt                     numbers: bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4
+   [reference] kenyang_grammar_ref.md                     numbers: -
+   [reference] kenyang_grammar_ref.md                     numbers: -
+   [reference] Dictionary_Ch1_ref.txt                     numbers: bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, ɛsa=20
+   [reference] kenyang_orthography_ref.jsonl              numbers: -
+ANSWER, NUMBER BY NUMBER:
+     1  ɛ́mɔt                        verified+Ed's recording+course+book
+     2  bɛ́pay                       verified+Ed's recording+course+book
+     3  bɛ́rát                       verified+Ed's recording+course+book
+     4  mɛ́nwi                       verified+Ed's recording+course+book
+     5  bɛ́tay                       verified+Ed's recording+course+book
+     6  bɛ́tandat                    Ed's recording+course
+     7  tándrámɔt                    verified+Ed's recording+course
+     8  mɛ́nɛn                       verified+Ed's recording+course+book
+     9  mɛ́nɛn nɛ amɔt               verified+Ed's recording+course+book
+    10  byó                          verified+Ed's recording+course+book
+====================================================================================================
+d_1to10.jsonl run 4   Q: count from 1 to 10 in Kenyang
+REPLY (full):
+  Here are the numbers from 1 to 10 in Kenyang:
+  
+  1. ɛ́mɔt
+  2. bɛ́pay
+  3. bɛ́rát
+  4. mɛ́nwi
+  5. bɛ́tay
+  6. bɛ́tandat
+  7. tándrámɔt
+  8. mɛ́nɛn
+  9. mɛ́nɛn nɛ amɔt
+  10. byó
+  
+  Feel free to try counting in Kenyang!
+TAP LINE: Tap any underlined word to hear it said.
+FLAG: not found=[]  written=[]
+PASSAGES (40):
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: mɛ́nɛn nɛ amɔt=9, bɛ́tandat=6, tándrámɔt=7, bɛ́rát=3, mɛ́nɛn=8, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, ɛ́mɔt=1
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: mɛ́nɛn nɛ amɔt=9, ɛsa nsɛm byó=30, bɛsa bɛ́pay=40, tándrámɔt=7, mɛ́nɛn=8, bɛ́pay=2, byó=10, ɛsa=20
+   [reference] Dictionary_Ch1_ref.txt                     numbers: mɛ́nɛn nɛ amɔt=9, tándat nɛ amɔt=7, byó nɛ bɛ́pay=12, byó nɛ amɔt=11, mɛ́nɛn=8, bɛ́pay=2, tándat=6, byó=10
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_verified_speaker.md                numbers: nɛkú nɛ mɛ́nwi=19, mɛ́nɛn nɛ amɔt=9, nɛkú nɛ bɛ́pay=17, nɛkú nɛ bɛ́rat=18, tándat nɛ amɔt=7, byó nɛ bɛ́pay=12, byó nɛ mɛ́nwi=14, byó nɛ bɛ́rát=13, nɛkú nɛ amɔ́t=16, byó nɛ amɔt=11, bɛ́rát=3, mɛ́nɛn=8, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, tándat=6, ɛmɔ́t=1, nɛkú=15, byó=10, ɛsa=20
+   [verified ] kenyang_verified_speaker.md                numbers: bɛsa bɛ́pay nsɛm byó=50/70, ɛsa nsɛm byó=30, bɛsa bɛ́pay=40, bɛsa bɛ́rat=60, bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, nɛkú=15, byó=10, ɛsa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: ménén nɛ amot=9, bhétándat=6, tándrámɔt=7, bhépay=2, bhétay=5, bhérát=3, ménwi=4, ménen=8, émot=1, byó=10
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: nɛkú nɛ bépay=17, nɛkú ne bérát=18, nɛkú nɛ ménwi=19, byó nɛ ménwi=14, byó nɛ bérát=13, byó nɛ bépay=12, nekú ne émot=16, byó nɛ amot=11, bépay=2, ménwi=4, bérát=3, nɛkú=15, émot=1, byó=10, esa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: -
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: bɛsa bɛ́rát nsɛm byó=70, bɛsa bɛ́pay nsɛm byó=50/70, bɛsa bɛ́pay=40, bɛsa bɛ́rát=60, bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, byó=10
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: bhesa bhérát nsɛm byó=70, bhesa bépay nsɛm byó=50, ɛsa nsɛm émot=21, ɛsa nsɛm byó=30, bhesa bhérát=60, bhesa bépay=40, bhérát=3, bépay=2, ménwi=4, bétay=5, émot=1, byó=10, ɛsa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: bétay=5, byó=10, ɛsa=20
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: bɛ́tay=5, nɛkú=15, ɛsa=20
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: ɛsa nsɛm meso ɛ́mɔt=21, nɛkú nɛ mɛ́nwi=19, nɛkú nɛ bɛ́rát=18, bɛ́rát=3, mɛ́nwi=4, ɛ́mɔt=1, nɛkú=15, ɛsa=20
+   [verified ] kenyang_sentences_verified.md              numbers: -
+   [reference] kenyang_noun_rameres_ref.txt               numbers: -
+   [verified ] kenyang_verified_speaker.md                numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: ɛsa nsɛm ɛ́mɔt=21, ɛsa nsɛm byó=30, ɛ́mɔt=1, byó=10, ɛsa=20
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: bɛsa bɛ́rát nsɛm byó=70, bɛsa bɛ́rát=60, bɛ́rát=3, bɛ́tay=5, byó=10
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: nɛkú nɛ bɛ́pay=17, nɛkú nɛ amɔt=16, bɛ́pay=2, nɛkú=15
+   [verified ] kenyang_texts_verified.md                  numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: mɛ́nwi=4, nɛkú=15, byó=10
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [verified ] kenyang_texts_verified.md                  numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: bɛ́tándat=6, bɛ́tay=5, tándat=6
+   [reference] Dictionary_Ch1_ref.txt                     numbers: bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4
+   [reference] kenyang_grammar_ref.md                     numbers: -
+   [reference] kenyang_grammar_ref.md                     numbers: -
+   [reference] Dictionary_Ch1_ref.txt                     numbers: bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, ɛsa=20
+   [reference] kenyang_orthography_ref.jsonl              numbers: -
+ANSWER, NUMBER BY NUMBER:
+     1  ɛ́mɔt                        verified+Ed's recording+course+book
+     2  bɛ́pay                       verified+Ed's recording+course+book
+     3  bɛ́rát                       verified+Ed's recording+course+book
+     4  mɛ́nwi                       verified+Ed's recording+course+book
+     5  bɛ́tay                       verified+Ed's recording+course+book
+     6  bɛ́tandat                    Ed's recording+course
+     7  tándrámɔt                    verified+Ed's recording+course
+     8  mɛ́nɛn                       verified+Ed's recording+course+book
+     9  mɛ́nɛn nɛ amɔt               verified+Ed's recording+course+book
+    10  byó                          verified+Ed's recording+course+book
+====================================================================================================
+d_1to10.jsonl run 5   Q: count from 1 to 10 in Kenyang
+REPLY (full):
+  Here are the numbers from 1 to 10 in Kenyang:
+  
+  1. ɛ́mɔt
+  2. bɛ́pay
+  3. bɛ́rát
+  4. mɛ́nwi
+  5. bɛ́tay
+  6. bɛ́tandat
+  7. tándrámɔt
+  8. mɛ́nɛn
+  9. mɛ́nɛn nɛ amɔt
+  10. byó
+  
+  Feel free to try counting in Kenyang!
+TAP LINE: Tap any underlined word to hear it said.
+FLAG: not found=[]  written=[]
+PASSAGES (40):
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: mɛ́nɛn nɛ amɔt=9, bɛ́tandat=6, tándrámɔt=7, bɛ́rát=3, mɛ́nɛn=8, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, ɛ́mɔt=1
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: mɛ́nɛn nɛ amɔt=9, ɛsa nsɛm byó=30, bɛsa bɛ́pay=40, tándrámɔt=7, mɛ́nɛn=8, bɛ́pay=2, byó=10, ɛsa=20
+   [reference] Dictionary_Ch1_ref.txt                     numbers: mɛ́nɛn nɛ amɔt=9, tándat nɛ amɔt=7, byó nɛ bɛ́pay=12, byó nɛ amɔt=11, mɛ́nɛn=8, bɛ́pay=2, tándat=6, byó=10
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_texts_verified.md                  numbers: byó nɛ ánwi=14, tándrámɔt=7, byó=10
+   [verified ] kenyang_verified_speaker.md                numbers: nɛkú nɛ mɛ́nwi=19, mɛ́nɛn nɛ amɔt=9, nɛkú nɛ bɛ́pay=17, nɛkú nɛ bɛ́rat=18, tándat nɛ amɔt=7, byó nɛ bɛ́pay=12, byó nɛ mɛ́nwi=14, byó nɛ bɛ́rát=13, nɛkú nɛ amɔ́t=16, byó nɛ amɔt=11, bɛ́rát=3, mɛ́nɛn=8, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, tándat=6, ɛmɔ́t=1, nɛkú=15, byó=10, ɛsa=20
+   [verified ] kenyang_verified_speaker.md                numbers: bɛsa bɛ́pay nsɛm byó=50/70, ɛsa nsɛm byó=30, bɛsa bɛ́pay=40, bɛsa bɛ́rat=60, bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, nɛkú=15, byó=10, ɛsa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: ménén nɛ amot=9, bhétándat=6, tándrámɔt=7, bhépay=2, bhétay=5, bhérát=3, ménwi=4, ménen=8, émot=1, byó=10
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: nɛkú nɛ bépay=17, nɛkú ne bérát=18, nɛkú nɛ ménwi=19, byó nɛ ménwi=14, byó nɛ bérát=13, byó nɛ bépay=12, nekú ne émot=16, byó nɛ amot=11, bépay=2, ménwi=4, bérát=3, nɛkú=15, émot=1, byó=10, esa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: -
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: bɛsa bɛ́rát nsɛm byó=70, bɛsa bɛ́pay nsɛm byó=50/70, bɛsa bɛ́pay=40, bɛsa bɛ́rát=60, bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4, byó=10
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: bhesa bhérát nsɛm byó=70, bhesa bépay nsɛm byó=50, ɛsa nsɛm émot=21, ɛsa nsɛm byó=30, bhesa bhérát=60, bhesa bépay=40, bhérát=3, bépay=2, ménwi=4, bétay=5, émot=1, byó=10, ɛsa=20
+   [core     ] Context_Rich_Kenyang_Ch1_core.txt          numbers: bétay=5, byó=10, ɛsa=20
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: bɛ́tay=5, nɛkú=15, ɛsa=20
+   [core     ] Numbers_in_Kenyang_core.jsonl              numbers: ɛsa nsɛm meso ɛ́mɔt=21, nɛkú nɛ mɛ́nwi=19, nɛkú nɛ bɛ́rát=18, bɛ́rát=3, mɛ́nwi=4, ɛ́mɔt=1, nɛkú=15, ɛsa=20
+   [verified ] kenyang_sentences_verified.md              numbers: -
+   [reference] kenyang_noun_rameres_ref.txt               numbers: -
+   [verified ] kenyang_verified_speaker.md                numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] dictionary_ref.txt                         numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: ɛsa nsɛm ɛ́mɔt=21, ɛsa nsɛm byó=30, ɛ́mɔt=1, byó=10, ɛsa=20
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: bɛsa bɛ́rát nsɛm byó=70, bɛsa bɛ́rát=60, bɛ́rát=3, bɛ́tay=5, byó=10
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: nɛkú nɛ bɛ́pay=17, nɛkú nɛ amɔt=16, bɛ́pay=2, nɛkú=15
+   [verified ] kenyang_texts_verified.md                  numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: mɛ́nwi=4, nɛkú=15, byó=10
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [verified ] kenyang_texts_verified.md                  numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [reference] kenyang_phonology_ref.jsonl                numbers: -
+   [reference] kenyang_lexicon_merged_ref.jsonl           numbers: bɛ́tándat=6, bɛ́tay=5, tándat=6
+   [reference] Dictionary_Ch1_ref.txt                     numbers: bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, mɛ́nwi=4
+   [reference] kenyang_grammar_ref.md                     numbers: -
+   [reference] kenyang_grammar_ref.md                     numbers: -
+   [reference] Dictionary_Ch1_ref.txt                     numbers: bɛ́rát=3, bɛ́tay=5, bɛ́pay=2, ɛsa=20
+   [reference] kenyang_orthography_ref.jsonl              numbers: -
+ANSWER, NUMBER BY NUMBER:
+     1  ɛ́mɔt                        verified+Ed's recording+course+book
+     2  bɛ́pay                       verified+Ed's recording+course+book
+     3  bɛ́rát                       verified+Ed's recording+course+book
+     4  mɛ́nwi                       verified+Ed's recording+course+book
+     5  bɛ́tay                       verified+Ed's recording+course+book
+     6  bɛ́tandat                    Ed's recording+course
+     7  tándrámɔt                    verified+Ed's recording+course
+     8  mɛ́nɛn                       verified+Ed's recording+course+book
+     9  mɛ́nɛn nɛ amɔt               verified+Ed's recording+course+book
+    10  byó                          verified+Ed's recording+course+book
