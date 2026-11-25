@@ -29,6 +29,18 @@ are recorded deliberately as variants.
 
 ---
 
+## Never leave a checkable fact to an instruction
+
+If the code can check it, the code does it. The model is told many things and does
+not always do them: it once claimed a recording that did not exist, and it picks a
+book's spelling over a verified one while being told the verified one wins. So the
+code says which words can be heard (`hear_line`, and `drop_tap_claims` removes the
+model's own claims), and the code checks every word against the tiers (the flag).
+When a rule can be enforced in code, enforce it there; an instruction is the fallback,
+never the guarantee.
+
+---
+
 ## How to tell what is trusted
 
 Trust is read from the file name, in `tier_of()` in `streamlit_app.py`:
@@ -39,9 +51,14 @@ Trust is read from the file name, in `tier_of()` in `streamlit_app.py`:
 | `_core` | core | course chapters, trusted but unchecked |
 | `_ref` | reference | a published book, decoded but not speaker-checked |
 
-**A new knowledge file must be named to match its tier.** A book's word list
-dropped in as `words.jsonl` is silently treated as core, which is wrong and
-hard to notice.
+**A file's tier comes from its name, and a new knowledge file must be named to
+match it.** An unmarked file defaults to core. That is how a published dictionary
+(`dictionary.txt`) was read as course material for months, its spellings ranked above
+the books' and competing with the speaker's. On 24 November 2026 all 21 unmarked files
+were renamed (`_core` for the 14 course chapters, `_ref` for the books, including
+`dictionary_ref.txt`); every file in `knowledge_base/` now carries its tier. The name
+lists in `streamlit_app.py` are empty and should stay that way: a name is visible in
+the folder, a list in the code is not.
 
 Verified material travels with **every** question, capped by `ALWAYS_ON_CHARS`.
 Files whose names contain `speaker`, `rules` or `grammar` sort first within the
@@ -119,6 +136,7 @@ knowledge_base first.
 **Bright colour is reserved for meaning.** The grammar colours (`--who`, `--not`,
 `--root`, `--when`, `--where`) and `--sound` own it; everything structural is
 `--accent`, `--head`, `--line` or `--mute`, which are ink and the logo's green.
+Green is ink and structure, never a bright accent.
 `--sound` is the only warm colour on the site and means one thing: this word has
 a recording, tap it. Do not give any other element a warm colour, and do not make
 the dotted underline thinner than it is.
@@ -155,7 +173,10 @@ and five files from brand/web-and-social/ (the favicons, the apple-touch-icon an
 the social card, plus favicon.ico again at the root) and publishes those alone, so the knowledge base,
 QUESTIONS_for_Ed.md, this file and the Python files are not downloadable. A new file
 the site needs (a page, an image, a script) must be added to that list, or it will
-not be served. Nothing else moves: Render reads the repo as it is.
+not be served. Source files stay off it: the scene originals in `scenes/`, the rest of
+`brand/`. Nothing else moves: Render reads the repo as it is. The workflow has a build
+job and a deploy job, with one retry: with both in one job the deploy three times
+could not find the upload made a moment before.
 
 **Tools are offered but `tool_choice` is `"none"`.** The tool round was making
 two full API calls per question and crashing when the model asked for several
@@ -171,6 +192,55 @@ Before Streamlit is ever upgraded, move the loader to `st.iframe`, and check tha
 the frame can still reach the page around it, which is how it adds say.js. If
 `components.v1` is gone, the import at the top of `streamlit_app.py` fails and the
 whole chat stops, not just the audio.
+
+---
+
+## The word flag under each chat reply
+
+`check_words()` sorts every word in a reply that could be Kenyang into confirmed,
+from written sources (in the passages behind the answer, not speaker-checked), or not
+found. Two things it must keep doing, because each caused false flags:
+
+- **Confirmed means verified text AND recordings.** `confirmed_words()` reads the
+  verified files in full plus `audio_words.json` (Ed's recordings), and
+  `speakers_recorded()` adds approved speaker recordings. A word Ed recorded is
+  confirmed even if no verified file spells it.
+- **Words split at hyphens and underscores.** `N-ném` must also count as `ném`, and a
+  course line written `Bheket_e ebhen` holds `bheket`. `\w` matches `_`, so the word
+  pattern uses `[^\W_]`.
+
+Every word that is not English is checked, not only words with ɛ ɔ ŋ or a tone mark.
+English is `english_words.txt` (SCOWL) plus long English endings (`ENGLISH_ENDINGS`);
+a flag on an ordinary English word is a bug. Capitalised words the learner typed count
+as names. Before any push that touches the flag, run the twenty-reply measurement: more
+than two flagged replies in twenty means stop.
+
+---
+
+## Spellings settled by Ed
+
+Settled on 24 November 2026. Do not "correct" them.
+
+- `ɛsyɛ`, market: no accent. `ɛsyɛ́` is unconfirmed.
+- `mme rong`, I am going: canonical. `M'rong` is the same word, the short spoken form.
+- `à rong`, he / she is going: with the grave.
+- `néyi`, good morning: with the acute.
+- `Ma'ya`, my mother: with the apostrophe.
+- `amik` is a homograph: it means ground, and it means eyes.
+
+The rong prefix rule lives in the prefix-pattern section of
+`kenyang_verified_speaker.md` ("The prefix pattern — learn this and you can build
+hundreds of sentences").
+
+---
+
+## The visual section
+
+Scenes are layouts onto words that already exist. A picture never brings a word with
+it: pictures are generated to fit confirmed words, never the reverse, and a scene waits
+until its words are confirmed (and, where it plays sound, recorded). Labels go in HTML
+over the picture, never inside the SVG, so they stay text that can be checked, read
+aloud, tapped for sound and corrected without redrawing anything.
 
 ---
 

@@ -10,35 +10,31 @@ before it was moved, and the section is the rule it belongs to.
 
 ---
 
-## WAITING TO PUSH (24 November 2026)
+## WAITING TO PUSH (end of 24 November 2026)
 
-Committed, not pushed. The house test failed, so by your rule it waits for you.
+Nothing below is live. Do not push until Ed says so.
 
-What is waiting, in one commit:
-- every file in knowledge_base now carries its tier in its name; dictionary.txt is
-  dictionary_ref.txt
-- the chat's word check now looks at every word that is not English, not only words
-  with ɛ ɔ ŋ or a tone mark, and no longer reads Bheket_e as one word
-- english_words.txt, the English list it uses (about 11 MB of memory on Render)
-- the publish workflow split into build and deploy, with one retry
-- the index, rebuilt once for all of it
+Where things stand:
+- Commit 6324988, local, not pushed: every knowledge file named for its tier
+  (dictionary.txt is dictionary_ref.txt), the word flag checking every non-English
+  word, english_words.txt, the two-job publish workflow, one index rebuild.
+- Not committed: the fix for "pluralization" (long English endings count as English),
+  today's decisions written into CLAUDE.md, and this note.
+- Measured on 6324988: the flag fired on 1 of 20 replies, which passes. The house test
+  gave beket 1 time in 5, which fails. The other four said bɛkɛt, from the books.
 
-Why it waits:
-- Flag: 1 of 20 replies. That passes. The one was "What is the plural of house?",
-  flagged for bɛkɛt as from written sources, which is right.
-- House test: beket 1 time in 5. The other four said bɛkɛt.
+Why the house test fails: Ed's "ɛkɛt → beket" reaches the model on this question, at
+the top tier, beside the books' "plural: bɛkɛt". gpt-4o-mini picks the books' form
+anyway. An instruction already says the verified form wins; it does not hold.
 
-Your beket line is not missing. It reaches the model on this question, at the top
-tier, beside the book's "plural: bɛkɛt". The instructions already say a speaker's form
-wins. gpt-4o-mini picks the book's form anyway. Renaming files cannot fix that; it
-needs either the code to hold back a book's form when your file gives a different one
-for the same word, or a stronger model. Your choice.
+Ed decides first tomorrow:
+1. Commit the uncommitted work above, into 6324988 or as its own commit?
+2. Then, in order: the bigger English list; then code that holds back a book's form
+   when the verified file gives a different one for the same word (never leave a
+   checkable fact to an instruction). After both: the twenty replies and the house
+   test again, and push only on Ed's word.
 
-Also seen: in one house reply the flag marked the English word "pluralization" as not
-found. The English list is the common-words size and that word is not in it. A bigger
-list would fix it, at a little more memory.
-
-Nothing goes live until you say push. Delete this section when it is resolved.
+Delete this section when it is resolved.
 
 ---
 
@@ -429,3 +425,4 @@ Two cases found on 24 November 2026, going in opposite directions:
 speaker does not use, and words whose marks look stripped. Not urgent while those
 files stay at reference tier, but worth doing before any of their words is
 promoted to verified.]
+

@@ -1362,14 +1362,32 @@ def _looks_kenyang(w):
             or any(unicodedata.category(c) == "Mn" for c in unicodedata.normalize("NFD", w)))
 
 
+# Long English endings. A word the list lacks is still English if it is an English word
+# plus one of these: pluralization is plural + ization. Short endings (-ed, -er, -ly,
+# -ing) are left out on purpose: too many plain-letter Kenyang words end that way.
+ENGLISH_ENDINGS = ("izations", "isations", "ization", "isation", "ations", "ation",
+                   "nesses", "ness", "ments", "ment", "ically", "ingly", "fully",
+                   "lessly", "ities", "ity", "able", "ible")
+
+
 def _is_english(f):
-    """f is folded. English as itself, as a possessive, or as hyphenated English parts."""
+    """f is folded. English as itself, as a possessive, as hyphenated English parts, or
+    as an English word with a long English ending."""
     if f in ENGLISH:
         return True
     if f.endswith("'s") and f[:-2] in ENGLISH:
         return True
     parts = [p for p in f.split("-") if p]
-    return len(parts) > 1 and all(p in ENGLISH for p in parts)
+    if len(parts) > 1 and all(p in ENGLISH for p in parts):
+        return True
+    for end in ENGLISH_ENDINGS:
+        stem = f[:-len(end)]
+        if f.endswith(end) and len(stem) >= 4 and (
+                stem in ENGLISH or stem + "e" in ENGLISH or stem + "ize" in ENGLISH
+                or stem + "ise" in ENGLISH or stem + "y" in ENGLISH
+                or (stem.endswith("i") and stem[:-1] + "y" in ENGLISH)):
+            return True
+    return False
 
 
 def words_to_check(reply, asked=""):
