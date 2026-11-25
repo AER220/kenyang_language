@@ -431,6 +431,15 @@ into: the website's forms, Review, submissions, the chat's input. Review lists a
 stored spelling that still has them, with a button to straighten them. Tone marks are
 never touched beyond NFC.
 
+**A lookup that folds case can silently take another entry's meaning.** The body scene's
+`Nsem` (back, from the poster) got its English, "Back.", from `nsem` in a different book,
+because the gloss lookup matched case-insensitively and took whichever file came first.
+Here the meaning happened to agree; two books sharing letters for different words would
+not, and nothing would say so. The fix is in `build_scenes.py`, `glosses()` and `state()`:
+every gloss is stored under the form exactly as written and folded, and a word asks for
+its exact spelling first, falling back to the folded one only if there is none. Any new
+lookup that folds (case, tone marks, ɛ/e) to find a word's meaning should do the same.
+
 **Kenyang letters are not their Latin look-alikes.** `ɛ` is U+025B, not Greek
 epsilon. `ɔ` is U+0254. Mixing them up makes words unsearchable.
 
