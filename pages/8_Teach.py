@@ -3,7 +3,7 @@ pages/8_Teach.py — a page of its own, so nothing in streamlit_app.py has to ch
 
 Why a separate page rather than a box under every reply
 -------------------------------------------------------
-Putting it inline would be better for a speaker who has just watched Nɛpɛm get
+Putting it inline would be better for a speaker who has just watched Nɛpɛ́m get
 something wrong: they could fix it right there. But it means editing the middle
 of a 1,700 line file that is currently working, and a broken tutor is worse than
 a slightly less convenient correction form.
@@ -21,7 +21,7 @@ import streamlit as st
 import community
 from settings import all_secrets
 
-st.set_page_config(page_title="Teach Nɛpɛm", page_icon="🌿", layout="centered")
+st.set_page_config(page_title="Teach Nɛpɛ́m", page_icon="🌿", layout="centered")
 
 INK, GOLD, LEAF, PINK = "#243029", "#B07D2B", "#1B6B4C", "#B0517D"
 
@@ -37,9 +37,9 @@ st.markdown(f"""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("Teach Nɛpɛm")
+st.title("Teach Nɛpɛ́m")
 st.markdown(
-    '<p class="lead">If you speak Kenyang, you know things Nɛpɛm does not. '
+    '<p class="lead">If you speak Kenyang, you know things Nɛpɛ́m does not. '
     'A word he is missing, or an answer he got wrong. Put it here and it comes '
     'to me. I read every one before he teaches it to anybody, which is why he '
     'can be trusted with a child.</p>',
@@ -62,7 +62,7 @@ if q.get("mode") == "teach" and q.get("word"):
 
 kind = st.radio(
     "What are you telling me?",
-    ["A word Nɛpɛm does not have", "Nɛpɛm said something wrong"],
+    ["A word Nɛpɛ́m does not have", "Nɛpɛ́m said something wrong"],
     horizontal=False,
     index=0 if prefill_en else 0,
 )
@@ -114,7 +114,7 @@ if sent:
 
         if durable:
             st.success(f"Thank you. **{kenyang.strip()}** is written down now. "
-                       "I read every one of these myself before Nɛpɛm teaches it.")
+                       "I read every one of these myself before Nɛpɛ́m teaches it.")
             if prefill_en:
                 st.caption("Go back to the website, there are five more this week.")
         else:
@@ -128,6 +128,6 @@ if sent:
                     st.caption(n)
 
 st.divider()
-st.caption("Nothing sent here changes what Nɛpɛm teaches until I have read it. "
+st.caption("Nothing sent here changes what Nɛpɛ́m teaches until I have read it. "
            "That is deliberate. A tool that learns from everybody learns "
            "everybody's mistakes too.")

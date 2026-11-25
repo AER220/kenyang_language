@@ -7,7 +7,7 @@
 
    index.html loads this as it is. The chat on Render loads it from nepem.org
    with two settings on the script tag: data-base, where the audio lives, and
-   data-scope, the only elements whose words may be marked (Nɛpɛm's replies).
+   data-scope, the only elements whose words may be marked (Nɛpɛ́m's replies).
    With neither set it behaves as it always did on the main page.
 
    A second, optional list holds recordings other speakers sent and Ed approved.
@@ -170,7 +170,7 @@
      somebody's phone can be found rather than looking like nothing happened.
      AbortError is only a second tap cutting off the first, so it is not one. */
   const failed = (key, why) =>
-    console.warn(`Nɛpɛm: the recording of "${key}" (${player.src}) did not play: ${why}`);
+    console.warn(`Nɛpɛ́m: the recording of "${key}" (${player.src}) did not play: ${why}`);
   let playing = null;
   player.addEventListener("error", () => {
     const e = player.error;
@@ -361,7 +361,7 @@
       mine = m;
       merge();
     })
-    .catch(e => console.warn(`Nɛpɛm: could not load ${BASE}manifest.json, so no words are marked: ${e}`));
+    .catch(e => console.warn(`Nɛpɛ́m: could not load ${BASE}manifest.json, so no words are marked: ${e}`));
 
   /* the contributors' list: separate, and allowed to fail on its own */
   if (LIVE) fetch(LIVE + "manifest.json", {cache: "no-cache"})
@@ -376,5 +376,5 @@
       theirs = t;
       merge();
     })
-    .catch(e => console.warn(`Nɛpɛm: could not load the speakers' recordings (${LIVE}manifest.json); Ed's still work: ${e}`));
+    .catch(e => console.warn(`Nɛpɛ́m: could not load the speakers' recordings (${LIVE}manifest.json); Ed's still work: ${e}`));
 })();

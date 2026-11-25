@@ -1,5 +1,5 @@
 """
-Nɛpɛm Games — Kenyang word games for children.
+Nɛpɛ́m Games — Kenyang word games for children.
 
 Built by Agbor Edouard Ransome, from the Manyu Division of Cameroon.
 
@@ -34,7 +34,7 @@ WORDS_FILE = os.path.join(_ROOT, "words.jsonl")
 AUDIO_DIR = os.path.join(_ROOT, "audio")
 ROUNDS = 8                      # questions in one round of a game
 
-st.set_page_config(page_title="Nɛpɛm — Games", page_icon="🎮",
+st.set_page_config(page_title="Nɛpɛ́m — Games", page_icon="🎮",
                    layout="centered", initial_sidebar_state="collapsed")
 
 # =============================================================================
@@ -415,7 +415,7 @@ if not os.path.exists(os.path.join(AUDIO_DIR, "manifest.json")):
     GAMES = [g for g in GAMES if g[0] != "listen"]
 LEVELS = ["Easy", "Medium", "Hard", "Everything"]
 
-st.markdown('<div class="hero"><p class="name">Nɛpɛm Games</p><div class="rule"></div>'
+st.markdown('<div class="hero"><p class="name">Nɛpɛ́m Games</p><div class="rule"></div>'
             '<p class="tag">Kɛ́nyāŋ — play and learn</p></div>', unsafe_allow_html=True)
 
 with st.sidebar:

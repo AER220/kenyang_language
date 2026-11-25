@@ -1,9 +1,9 @@
 """
-community.py — catching what speakers teach Nɛpɛm, so none of it is lost.
+community.py — catching what speakers teach Nɛpɛ́m, so none of it is lost.
 
 The problem this solves
 -----------------------
-People who speak Kenyang correct Nɛpɛm all the time. Until now those corrections
+People who speak Kenyang correct Nɛpɛ́m all the time. Until now those corrections
 lived in a chat window that vanished when the tab closed. This catches them,
 keeps them somewhere I can actually read, and turns the ones I approve into text
 I can paste straight into kenyang_verified_speaker.md.
@@ -24,7 +24,7 @@ the module uses whichever is configured, in this order:
 If nothing is configured it still works, writing locally, and warns me plainly
 rather than pretending the submission was saved.
 
-Nothing a contributor sends goes anywhere near what Nɛpɛm teaches until I have
+Nothing a contributor sends goes anywhere near what Nɛpɛ́m teaches until I have
 read it and marked it approved. That gate is the whole point: the project's one
 promise is that it does not teach unverified Kenyang.
 """
@@ -39,8 +39,8 @@ from datetime import datetime, timezone
 LOCAL_PATH = "community_submissions.jsonl"
 
 KINDS = {
-    "correction": "Nɛpɛm said something wrong",
-    "new_word":   "A word or phrase Nɛpɛm does not have",
+    "correction": "Nɛpɛ́m said something wrong",
+    "new_word":   "A word or phrase Nɛpɛ́m does not have",
     "issue":      "Something else is wrong",
 }
 
@@ -461,7 +461,7 @@ def to_markdown(rows):
     if fixes:
         out += ["### Corrections", ""]
         for r in fixes:
-            out += [f"Nɛpɛm said: {r.get('answer','').strip()[:220]}",
+            out += [f"Nɛpɛ́m said: {r.get('answer','').strip()[:220]}",
                     f"A speaker corrected it to: **{r.get('correction','').strip()}**"]
             if r.get("note"):
                 out.append(f"Why: {r['note'].strip()}")

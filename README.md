@@ -1,6 +1,6 @@
-# Nɛpɛm - a Kenyang language tutor
+# Nɛpɛ́m - a Kenyang language tutor
 
-Nɛpɛm is a conversational tutor for **Kenyang (Kɛ́nyāŋ)**, a language of the Manyu and
+Nɛpɛ́m is a conversational tutor for **Kenyang (Kɛ́nyāŋ)**, a language of the Manyu and
 Meme Divisions of Southwest Cameroon. It teaches greetings, counting, vocabulary and
 sentence-building from a curated body of Kenyang material, and is careful never to invent
 words — everything it teaches is drawn from its own knowledge base.
@@ -56,7 +56,7 @@ In GitHub Codespaces, open the app through the **PORTS** tab (port 8501), not th
 
 ## The knowledge base
 
-Everything Nɛpɛm teaches lives in `knowledge_base/`. To add material, drop a `.txt`,
+Everything Nɛpɛ́m teaches lives in `knowledge_base/`. To add material, drop a `.txt`,
 `.md` or `.jsonl` file into that folder. Formatting that helps:
 
 - **One entry per line** for word lists, so each stays retrievable on its own.

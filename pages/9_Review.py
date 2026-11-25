@@ -4,7 +4,7 @@ ones into text I can paste into kenyang_verified_speaker.md.
 
 This page is for me, not for learners. It is behind a password because the
 submissions contain people's names and villages, and because approving a
-correction changes what Nɛpɛm teaches everybody.
+correction changes what Nɛpɛ́m teaches everybody.
 
 Set the password as the environment variable REVIEW_PASSWORD (Render), or in
 .streamlit/secrets.toml (my Codespace):
@@ -26,7 +26,7 @@ import recordings
 from build_audio_manifest import fold
 from settings import all_secrets, secret
 
-st.set_page_config(page_title="Review · Nɛpɛm", page_icon="🔍", layout="wide")
+st.set_page_config(page_title="Review · Nɛpɛ́m", page_icon="🔍", layout="wide")
 
 st.markdown("""
 <style>
@@ -43,14 +43,14 @@ def unlocked():
         st.error("Review is not configured on this server. Set REVIEW_PASSWORD "
                  "before using this page.")
         st.caption("Without it anybody could read contributors' names and "
-                   "change what Nɛpɛm teaches.")
+                   "change what Nɛpɛ́m teaches.")
         return False
     if st.session_state.get("review_ok"):
         return True
     st.markdown("**Only for verified contributors.**")
     st.caption("Submissions carry people's names and villages, and approving "
-               "one changes what Nɛpɛm teaches everybody. If you have taught "
-               "Nɛpɛm something and would like to help review, write to "
+               "one changes what Nɛpɛ́m teaches everybody. If you have taught "
+               "Nɛpɛ́m something and would like to help review, write to "
                "agboredouard51@gmail.com.")
     got = st.text_input("Password", type="password")
     if got and got == want:
@@ -96,7 +96,7 @@ st.divider()
 tab_rec, tab_new, tab_all, tab_out = st.tabs(
     ["Recordings", "Waiting for me", "Everything", "Export"])
 
-KIND_LABEL = {"correction": "Nɛpɛm was wrong",
+KIND_LABEL = {"correction": "Nɛpɛ́m was wrong",
               "new_word": "a word it did not have",
               "issue": "something else"}
 
@@ -118,7 +118,7 @@ def show(r, allow_decide=True, tab=""):
         if r.get("question"):
             st.markdown(f"**Asked:** {r['question']}")
         if r.get("answer"):
-            st.markdown("**Nɛpɛm answered:**")
+            st.markdown("**Nɛpɛ́m answered:**")
             st.code(r["answer"], language=None)
         if r.get("correction"):
             st.markdown(f"**A speaker says it is:** `{r['correction']}`")
@@ -338,7 +338,7 @@ with tab_rec:
 
 with tab_new:
     if not rows:
-        st.info("Nothing yet. When somebody corrects Nɛpɛm or teaches it a word, "
+        st.info("Nothing yet. When somebody corrects Nɛpɛ́m or teaches it a word, "
                 "it lands here.")
         st.caption(f"Reading from the {where}.")
     elif not new:

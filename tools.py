@@ -1,11 +1,11 @@
 """
-tools.py — function calling for Nɛpɛm.
+tools.py — function calling for Nɛpɛ́m.
 
 Why these four, and not more
 ----------------------------
 The lecture makes the cost point plainly: tool definitions are injected into the
 system message, count against the context limit, and are billed as input tokens.
-Nɛpɛm is already brushing a tokens-per-minute ceiling, so every tool has to earn
+Nɛpɛ́m is already brushing a tokens-per-minute ceiling, so every tool has to earn
 its place. These four each fix a failure I have actually watched happen.
 
     1. look_up_kenyang     — fixes "tell me more", "use it in a sentence"
