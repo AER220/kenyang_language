@@ -173,6 +173,26 @@ def how_captured(r):
             f"automatic volume {off('autoGainControl')}")
 
 
+def spelling_warning(spelling):
+    """Warn, never block: a spelling no verified file has, or with marks Ed's own
+    recording does not use, becomes 'confirmed' the moment it is approved, and the
+    chat's flag stops warning about it. A new word is the normal case; a typo approved
+    once becomes truth. So: look before approving."""
+    if not spelling.strip():
+        return
+    problems = recordings.spelling_check(spelling)
+    if not problems:
+        return
+    lines = []
+    for word, why, near in problems:
+        line = f"**{word}**: {why}."
+        if near:
+            line += " Closest: " + ", ".join(f"**{n}**" for n in near) + "."
+        lines.append(line)
+    st.warning("Look before approving: once approved, this spelling counts as confirmed "
+               "and the chat stops flagging it.\n\n" + "\n\n".join(f"- {l}" for l in lines))
+
+
 def show_recording(store, r, mine):
     rid = r["id"]
     heard = st.session_state.setdefault("heard", {})
@@ -226,6 +246,7 @@ def show_recording(store, r, mine):
         if fold(spelling) in mine:
             st.caption("You have recorded this word yourself. Yours stays the one "
                        "that plays; this one is kept beside it.")
+        spelling_warning(spelling)
 
         yes, nope = st.columns(2)
         if yes.button("Approve", key=f"ok{rid}", type="primary", use_container_width=True,
@@ -316,6 +337,7 @@ with tab_rec:
                                     format_func=lambda w: f"{w['kenyang']} · {w['english']}")
                 new_ken = st.text_input("Kenyang", value=pick["kenyang"], key=f"fk{pick['id']}")
                 new_en = st.text_input("English", value=pick["english"], key=f"fe{pick['id']}")
+                spelling_warning(new_ken)
                 if st.button("Save", key="fixsave",
                              disabled=(new_ken, new_en) == (pick["kenyang"], pick["english"])):
                     try:
@@ -323,6 +345,33 @@ with tab_rec:
                         st.success("Saved, and the public files rebuilt.")
                     except recordings.Trouble as e:
                         st.error(f"Not saved: {e}")
+
+        # A phone curls apostrophes whatever is typed, so a correction typed on one can
+        # look identical to the old spelling. This finds every stored spelling with a
+        # phone's characters in it and straightens them, only when the button is pressed.
+        try:
+            messy = recordings.unclean_words(recordings.words(store))
+        except recordings.Trouble as e:
+            messy = []
+            st.error(f"Could not check the spellings: {e}")
+        if messy:
+            with st.expander(f"{len(messy)} stored spelling"
+                             f"{'' if len(messy) == 1 else 's'} with a phone's characters"):
+                st.caption("Curly apostrophes, curly quotes, dashes and invisible spaces, "
+                           "which phones put in. Nothing changes until you press the button.")
+                for w, k, e in messy:
+                    changed = [x for x in (("Kenyang", w["kenyang"], k),
+                                           ("English", w.get("english") or "", e)) if x[1] != x[2]]
+                    st.markdown(" · ".join(f"{name}: `{old}` → `{new}`" for name, old, new in changed))
+                if st.button(f"Straighten {'it' if len(messy) == 1 else 'all ' + str(len(messy))}",
+                             key="straighten", type="primary"):
+                    done, failed = recordings.clean_stored(store, messy)
+                    if done:
+                        st.success(f"Straightened {done}, and the public files rebuilt.")
+                    for spelling, why in failed:
+                        st.error(f"{spelling}: not saved. {why}")
+                    if not failed:
+                        st.rerun()
 
         st.divider()
         st.caption("The public list and manifest are rebuilt after every decision. "

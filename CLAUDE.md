@@ -250,6 +250,13 @@ found. Two things it must keep doing, because each caused false flags:
   verified files in full plus `audio_words.json` (Ed's recordings), and
   `speakers_recorded()` adds approved speaker recordings. A word Ed recorded is
   confirmed even if no verified file spells it.
+  **So approving a recording promotes its spelling to confirmed**, and the flag stops
+  warning about it. That is how Neyi and Eh, Ed's néyi and Éh with the marks lost, became
+  confirmed. The Review page therefore warns, never blocks, before Approve and on a
+  correction (`recordings.spelling_check()`): a spelling no verified file has, an English
+  word in the Kenyang box, or the same letters with other tone marks than Ed's own
+  recording. It checks against the verified files and Ed's recordings only, never other
+  speakers' recordings, or one approved typo would vouch for the next.
 - **Words split at hyphens and underscores.** `N-ném` must also count as `ném`, and a
   course line written `Bheket_e ebhen` holds `bheket`. `\w` matches `_`, so the word
   pattern uses `[^\W_]`.
@@ -374,6 +381,13 @@ aloud, tapped for sound and corrected without redrawing anything.
 **`\w` does not match combining tone marks.** They are category Mn. A regex over
 Kenyang needs `\u0300-\u036f` in the character class, or `bɛ́tandat` silently
 becomes `bɛ`. This has caused real bugs.
+
+**Phones change what people type.** A curly apostrophe (Eta’ya for Eta'ya), a dash for
+two hyphens, curly quotes, no-break and invisible spaces. `textnorm.clean()` (and the same
+rules in `index.html`) turns them into what the files use, on every field a person types
+into: the website's forms, Review, submissions, the chat's input. Review lists any
+stored spelling that still has them, with a button to straighten them. Tone marks are
+never touched beyond NFC.
 
 **Kenyang letters are not their Latin look-alikes.** `ɛ` is U+025B, not Greek
 epsilon. `ɔ` is U+0254. Mixing them up makes words unsearchable.

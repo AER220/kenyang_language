@@ -39,6 +39,7 @@ import json
 from datetime import datetime, timezone
 
 from build_audio_manifest import fold
+from textnorm import clean
 
 PENDING, PUBLIC = "recordings-pending", "recordings"
 ID_OK = set("0123456789abcdef")
@@ -166,7 +167,8 @@ def approve(st, rec, kenyang, english):
       4. delete the pending copy
       5. rebuild the two public files
     """
-    kenyang, english = kenyang.strip(), english.strip()
+    # A phone's curly apostrophe, dash or no-break space is stored as the files write it.
+    kenyang, english = clean(kenyang, kenyang=True), clean(english)
     if not kenyang:
         raise Trouble("the Kenyang spelling is empty")
     if not _valid_id(rec["id"]):
@@ -204,7 +206,7 @@ def edit_word(st, word, kenyang, english):
     two public files are rebuilt, and no file is touched. A spelling that folds
     to another word's is refused: that would be two rows for one spelling.
     """
-    kenyang, english = kenyang.strip(), english.strip()
+    kenyang, english = clean(kenyang, kenyang=True), clean(english)
     if not kenyang:
         raise Trouble("the Kenyang spelling is empty")
     other = word_for(st, kenyang)
@@ -376,3 +378,138 @@ def mark_pasted(st, todo):
     for w in todo:
         st.patch("words", {"id": f"eq.{w['id']}"},
                  {"kb_spelling": w["kenyang"], "updated_at": _now()})
+
+
+# ── checks before a spelling becomes truth ───────────────────────────────────
+#
+# An approved recording makes its spelling count as confirmed: the chat's flag stops
+# warning about it. So a typo approved once becomes truth. That is how Neyi and Eh,
+# Ed's own néyi and Éh with the marks lost, became confirmed misspellings. These checks
+# run on the Review page before Approve; they warn and never block, because a genuinely
+# new word is the normal case.
+
+import difflib
+import glob
+import os
+import re
+import unicodedata
+
+_KB = os.path.join(os.path.dirname(os.path.abspath(__file__)), "knowledge_base")
+_ROOT = os.path.dirname(os.path.abspath(__file__))
+_WORD = re.compile(r"(?:[^\W\d_]|[̀-ͯ'’])+(?:-(?:[^\W\d_]|[̀-ͯ'’])+)*")
+# a verified file's "book spelling: ..." line names forms that are NOT confirmed
+_BOOK_LINE = re.compile(r"^\s+book spelling:", re.IGNORECASE)
+_CACHE = {}
+
+
+def _bare(w):
+    """Without tone marks, for finding the word a typo was meant to be."""
+    return "".join(c for c in unicodedata.normalize("NFD", w) if unicodedata.category(c) != "Mn")
+
+
+def verified_vocabulary():
+    """
+    Every word in the verified files, folded, plus Ed's own recordings. Not the
+    other speakers' recordings: checking against those would let one approved typo
+    vouch for the next. Words in capitals are left out: the crossword section writes
+    NEYI and ƐKATI without their marks on purpose, one letter per square.
+    """
+    if "vocab" not in _CACHE:
+        words = set()
+        for path in glob.glob(os.path.join(_KB, "*verified*")):
+            with open(path, encoding="utf-8") as f:
+                for line in f:
+                    if _BOOK_LINE.match(line):
+                        continue
+                    for w in _WORD.findall(unicodedata.normalize("NFC", line)):
+                        if len(w) > 1 and w.upper() == w and w.lower() != w:
+                            continue
+                        words.add(fold(w))
+                        words.update(fold(p) for p in w.split("-") if p)
+        eds = set()
+        try:
+            with open(os.path.join(_ROOT, "audio_words.json"), encoding="utf-8") as f:
+                for e in json.load(f):
+                    eds.update(fold(w) for w in _WORD.findall(e.get("kenyang", "")))
+        except (OSError, ValueError):
+            pass
+        _CACHE["vocab"] = words | eds
+        _CACHE["eds"] = eds
+    return _CACHE["vocab"]
+
+
+def _english():
+    if "english" not in _CACHE:
+        try:
+            with open(os.path.join(_ROOT, "english_words.txt"), encoding="utf-8") as f:
+                _CACHE["english"] = {l.strip() for l in f if l.strip() and not l.startswith("#")}
+        except OSError:
+            _CACHE["english"] = set()
+    return _CACHE["english"]
+
+
+def spelling_check(spelling):
+    """
+    [(word, why, [closest verified words])] for each word of the spelling that the
+    verified files do not have. `why` is "not in the verified files", or "an English
+    word" when it is also English (the English typed into the Kenyang box, as
+    "Mine (my)" was). Empty when every word is there.
+    """
+    vocab, english = verified_vocabulary(), _english()
+    eds = _CACHE.get("eds", set())
+    out = []
+    for w in _WORD.findall(clean(spelling, kenyang=True)):
+        f = fold(w)
+        parts = [f] + [p for p in f.split("-") if p and p != f]
+        if f in eds:
+            continue                    # Ed recorded exactly this
+        # The same letters with other tone marks. Against Ed's recordings it always
+        # warns: Neyi beside his recorded néyi is how the marks got lost. Against the
+        # verified text only when the spelling itself is not there, since the verified
+        # files keep some variants on purpose (Byó nɛ amɔt beside Nɛkú nɛ amɔ́t).
+        same = {v for v in vocab if v != f and _bare(v) == _bare(f)}
+        rec = sorted(v for v in same if v in eds)
+        if rec:
+            out.append((w, "your recording writes it with tone marks this lacks", rec[:3]))
+            continue
+        if same and f not in vocab:
+            out.append((w, "your verified files write it with other tone marks", sorted(same)[:3]))
+            continue
+        if any(p in vocab for p in parts) and f not in english:
+            continue
+        why = "an English word" if f in english else "not in the verified files"
+        bare = _bare(f)
+        near = sorted(vocab, key=lambda v: (_bare(v) != bare,
+                                            -difflib.SequenceMatcher(None, bare, _bare(v)).ratio()))
+        near = [v for v in near[:5]
+                if _bare(v) == bare or difflib.SequenceMatcher(None, bare, _bare(v)).ratio() >= 0.6]
+        if f in vocab and why == "an English word":
+            why = "also an English word"
+        out.append((w, why, near[:3]))
+    return out
+
+
+def unclean_words(word_rows):
+    """[(row, cleaned kenyang, cleaned english)] for each stored word that clean()
+    would change: a phone's curly apostrophe, dash or invisible space."""
+    out = []
+    for w in word_rows:
+        k = clean(w.get("kenyang", ""), kenyang=True)
+        e = clean(w.get("english", "") or "")
+        if (k, e) != (w.get("kenyang", ""), w.get("english", "") or ""):
+            out.append((w, k, e))
+    return out
+
+
+def clean_stored(st, items):
+    """Store the cleaned spellings, one edit_word() each, so every rule there (no two
+    rows for one spelling, the public files rebuilt) still holds. Returns
+    (done, [(spelling, why it was not saved)])."""
+    done, failed = 0, []
+    for w, k, e in items:
+        try:
+            edit_word(st, w, k, e)
+            done += 1
+        except Trouble as ex:
+            failed.append((w.get("kenyang", ""), str(ex)))
+    return done, failed

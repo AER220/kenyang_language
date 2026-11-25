@@ -1556,6 +1556,26 @@ const GAPS = [
 ];
 
 const $ = id => document.getElementById(id);
+/* What a phone types, made into what the files use: the same rules as textnorm.py.
+   A phone curls the apostrophe (Eta'ya becomes Eta’ya), turns two hyphens into a dash,
+   curls quotes and slips in no-break and invisible spaces. The verified files use the
+   plain forms, so every field is cleaned before it is sent. In a Kenyang field a dash
+   between letters is the hyphen of N-ném, and the Greek ε, which looks like ɛ, is ɛ.
+   Tone marks are never touched beyond NFC. */
+const clean = (t, kenyang) => {
+  t = (t || "").normalize("NFC")
+    .replace(/[\u2019\u2018\u02BC\u02BB\u2032\u201B]/g, "'")
+    .replace(/[\u201C\u201D\u201E\u201F\u2033]/g, '"')
+    .replace(/[\u00A0\u202F\u2007\u2009\u200A\u2002\u2003\u3000]/g, " ")
+    .replace(/[\u200B\u200C\u200D\u2060\uFEFF\u00AD]/g, "")
+    .replace(/[\u2010\u2011\u2012\u2212]/g, "-");
+  /* no lookbehind: Safari before 16.4 rejects it, and the whole page script with it */
+  if (kenyang) t = t.replace(/([\p{L}\p{M}])[\u2013\u2014](?=[\p{L}\p{M}])/gu, "$1-")
+                    .replace(/\u03B5/g, "\u025B");
+  return t.replace(/[ \t]+/g, " ").split("\n").map(l => l.trim()).join("\n")
+          .normalize("NFC").trim();
+};
+const val = (id, kenyang) => clean($(id).value, kenyang);
 const shuffle = a => a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
 const pick = a => a[Math.floor(Math.random()*a.length)];
 const esc = s => String(s).replace(/[&<>"]/g,
@@ -2293,7 +2313,7 @@ $("doorBtn").addEventListener("click", () => {
 });
 
 $("tfSend").addEventListener("click", async () => {
-  const en = $("tfEn").value.trim(), ken = $("tfKen").value.trim();
+  const en = val("tfEn"), ken = val("tfKen", true);
   const msg = $("tfMsg");
   if (!ken){
     msg.innerHTML = `<div class="fmsg bad">The Kenyang is the part Nɛpɛ́m needs.
@@ -2328,8 +2348,8 @@ $("tfSend").addEventListener("click", async () => {
 
   const res = await sendToSupabase({
     id: newId(), kind: "new_word", question: en, answer: "",
-    correction: ken, note: $("tfNote").value.trim(),
-    speaker: $("tfWho").value.trim(), village: $("tfVil").value.trim(),
+    correction: ken, note: val("tfNote", true),
+    speaker: val("tfWho"), village: val("tfVil"),
     source: "words of the week", status: "new"
   });
 
@@ -2526,9 +2546,9 @@ async function sendRecording(en, ken){
       headers:{...auth, "Content-Type":"application/json", "Prefer":"return=minimal"},
       body: JSON.stringify({
         id, typed_kenyang: ken.slice(0, 200), typed_english: en.slice(0, 300),
-        note: $("tfNote").value.trim().slice(0, 2000),
-        speaker: $("tfWho").value.trim().slice(0, 120),
-        village: $("tfVil").value.trim().slice(0, 120),
+        note: val("tfNote", true).slice(0, 2000),
+        speaker: val("tfWho").slice(0, 120),
+        village: val("tfVil").slice(0, 120),
         voice: $("tfVoice").value, speaker_code: voiceCode(),
         consent_public: true, consent_speech_tools: $("recTools").checked,
         consent_version: CONSENT_VERSION,
@@ -2648,7 +2668,7 @@ loadKnown();
 
 /* ── the report form ────────────────────────────────────────────── */
 $("rfSend").addEventListener("click", async () => {
-  const ken = $("rfK").value.trim(), msg = $("rfMsg");
+  const ken = val("rfK", true), msg = $("rfMsg");
   if (!ken){
     msg.innerHTML = `<div class="fmsg bad">Nɛpɛ́m needs to know what it should
       have said. Nothing was sent.</div>`;
@@ -2658,9 +2678,9 @@ $("rfSend").addEventListener("click", async () => {
   $("rfSend").textContent = "Sending…";
   const res = await sendToSupabase({
     id: newId(), kind: "correction",
-    question: $("rfQ").value.trim(), answer: $("rfA").value.trim(),
-    correction: ken, note: $("rfN").value.trim(),
-    speaker: $("rfWho").value.trim(), village: $("rfVil").value.trim(),
+    question: val("rfQ"), answer: val("rfA", true),
+    correction: ken, note: val("rfN", true),
+    speaker: val("rfWho"), village: val("rfVil"),
     source: "website", status: "new"
   });
   $("rfSend").disabled = false;

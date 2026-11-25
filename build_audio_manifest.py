@@ -18,6 +18,8 @@ import re
 import sys
 import unicodedata
 
+from textnorm import clean
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 AUDIO = os.path.join(ROOT, "audio")
 
@@ -27,7 +29,7 @@ APOSTROPHES = "’‘ʼʻ`´"
 def fold(word):
     """Lowercase, one kind of apostrophe, single spaces, no end punctuation.
     Tone marks are kept: they are part of the word."""
-    w = unicodedata.normalize("NFC", word).lower()
+    w = clean(word, kenyang=True).lower()      # a phone's no-break space, ε, dash
     for a in APOSTROPHES:
         w = w.replace(a, "'")
     w = re.sub(r"\s+", " ", w).strip()

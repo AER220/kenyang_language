@@ -34,6 +34,8 @@ from __future__ import annotations
 import json
 import os
 import uuid
+
+from textnorm import clean
 from datetime import datetime, timezone
 
 LOCAL_PATH = "community_submissions.jsonl"
@@ -55,17 +57,21 @@ def _now():
 
 def make(kind, *, question="", answer="", correction="", note="",
          speaker="", village="", source="chat"):
-    """Build one submission. Kept as a plain dict so every backend can take it."""
+    """Build one submission. Kept as a plain dict so every backend can take it.
+
+    What a person typed is cleaned first (textnorm.clean: a phone's curly apostrophe
+    becomes the straight one the files use). The answer is Nɛpɛ́m's own reply, kept
+    exactly as it was said, because it is the evidence of what he got wrong."""
     return {
         "id": uuid.uuid4().hex[:12],
         "at": _now(),
         "kind": kind if kind in KINDS else "issue",
-        "question": (question or "").strip()[:2000],
+        "question": clean(question or "")[:2000],
         "answer": (answer or "").strip()[:4000],
-        "correction": (correction or "").strip()[:2000],
-        "note": (note or "").strip()[:2000],
-        "speaker": (speaker or "").strip()[:80],
-        "village": (village or "").strip()[:80],
+        "correction": clean(correction or "", kenyang=True)[:2000],
+        "note": clean(note or "", kenyang=True)[:2000],
+        "speaker": clean(speaker or "")[:80],
+        "village": clean(village or "")[:80],
         "source": source,
         "status": "new",          # new · approved · rejected
     }

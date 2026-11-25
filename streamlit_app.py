@@ -41,6 +41,7 @@ from openai import OpenAI
 # retrieval code has no content words to search on — but the model knows what the
 # sentence is about and can say so. Retrieval stops being a guess.
 import tools
+from textnorm import clean
 from settings import secret
 
 # =============================================================================
@@ -2800,6 +2801,8 @@ if not st.session_state.messages:
         starter = "I'm a complete beginner. Where should we start?"
 
 prompt = st.chat_input("Type in English…") or starter
+# A phone curls apostrophes and adds no-break spaces: Ma’ya must be searched as Ma'ya.
+prompt = clean(prompt, kenyang=True) if prompt else prompt
 
 # Save and rerun straight away, so the learner's bubble and the thinking dots appear
 # together instead of after the model finishes.
