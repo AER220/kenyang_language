@@ -548,3 +548,34 @@ Two ways to fix it, for Ed to choose:
 
 [TO DECIDE before recording the body words on the phone.]
 
+
+## 30. Words in the recorded sentences that may name a picture's object
+
+Found on 25 November 2026 while placing words on compound.png, outdoors.png and
+people.png. Each of these objects has no word in a word list or a recording, but a
+verified sentence seems to contain one. A word is never cut out of a sentence by
+guessing where it starts and ends, so none of these is on a picture. Each needs Ed to
+say the word on its own, and its English.
+
+    door        "Leave the key behind the door"       Rɔ ɛfíŋí ansɛm mbi-nnywɔ́p
+    bed         "My mud bed heals my back pain"       Ɛmbó áwà ɛ bú nɛme nsɛm bɛbe áwà
+    thatch/roof "The thatch has much thatch roof holes"  Nchú á bhɔ́ŋ beya nnyɛ́sɛ́-nnywɔp
+    tree        "You will see a big tree in the forest"  Chɔŋ wɔ ngɔ ɛmɔ́ptí ɛnɔk ndú nchót
+    mango tree  "Make the medicine with mango tree barks"  Kɨ babhɛ nɛ nkwɔp-ɛnɔk nsɨŋɨ́-mɛ́nyú
+    baby        "Wash the baby and bask him too"      Só mmɔ wɔ bháp yí nkwɔ   (mmɔ, child?)
+
+Two things the list raises:
+- If ɛnɔk is tree, it sits very close to enok, stick (recorded). Same word, or two?
+- palm trees is bagyɛ́p in Text 2, plural only. The picture shows one palm tree, and its
+  singular is not in any file, so it is not built.
+
+## 31. Spellings that circle one word, found placing the people picture
+
+Not resolved, only listed (25 November 2026):
+- woman: Ngoré (recorded, "woman, wife"), ngɔrɛ (Texts 2, 6, 7), Ngoreh and Ngorh
+  (speaker file: Ngoreh woman, Ngorh female). The picture uses the recorded Ngoré.
+- man: Mbaghanem (speaker file) and mbakanɛm (Text 2), both verified, neither
+  recorded. The picture uses Mbaghanem.
+- stone: ntay (Text 6 word list) and Ntai (a verified sentence). The pictures use ntay.
+- husband: nném (recorded, husband) and nnɛ́m (Text 7, "husband, male"); the poster's
+  "male" is section 27. Not on the people picture: no figure is a husband.

@@ -435,6 +435,15 @@ head-regions.png (25 November 2026) give 32 of the 46 body words a region; these
 the parts that do not have one. Head, skin and body are whole-body words: they get a
 label and no region, and that is correct.
 
+**When compound.png or outdoors.png is regenerated for colouring** (region check of
+25 November 2026; colour mode is not built yet, so neither matters for labels):
+the footpath in outdoors.png is two loose lines with no ends, so it has no region and
+colouring it fills the whole background, and it needs closing; the doorways of the
+zinc-roofed house and the thatched house in compound.png reach the ground with no line
+across, so each is part of the background, and needs a line across the bottom if a door
+is to be coloured. people.png has no such gap: every figure's face, hair, clothes, arms
+and legs are closed separately.
+
 **Squarer, not a long line.** A very wide thin band (animals.png is 1600x361 once
 cropped) leaves the subjects small and crowds the numbered points on a phone. Future
 pictures should be closer to square: two rows rather than one long line.

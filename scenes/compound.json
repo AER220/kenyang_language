@@ -1,0 +1,40 @@
+{
+ "image": "compound",
+ "title": "Home and village",
+ "layout": "points",
+ "points": [
+  {
+   "word": "ɛkɛt",
+   "x": 14.0,
+   "y": 23.8
+  },
+  {
+   "word": "ntay",
+   "x": 8.8,
+   "y": 55.9
+  },
+  {
+   "word": "ɛkáti",
+   "x": 14.0,
+   "y": 81.3
+  },
+  {
+   "word": "ekeré-ékáti",
+   "x": 41.4,
+   "y": 82.8
+  },
+  {
+   "word": "ekeré-Mandɛm",
+   "x": 61.6,
+   "y": 81.8
+  },
+  {
+   "word": "enok",
+   "x": 84.9,
+   "y": 80.7
+  }
+ ],
+ "list": [
+  "beket"
+ ]
+}
