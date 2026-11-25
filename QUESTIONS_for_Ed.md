@@ -513,3 +513,38 @@ this yet.
 
 [TO SETTLE: does nném also mean male in general, or only husband?]
 
+---
+
+## 28. WORK TO DO: the chat does not apply the variants order to words
+
+Raised by Ed on 25 November 2026. The variants order (CLAUDE.md, "When sources differ")
+is applied in code for numbers (number_forms) and for the pictures (build_scenes.py).
+For every other word in the chat it is not: the model is shown the passages and the
+list of recorded words, and chooses. So the chat and the pictures can teach different
+forms of the same word. Found: asked for knee, the chat gave nɛ́nɛ́n (another book) while
+the body picture shows the poster's Nehnen. Both are marked "from written sources", but
+a learner sees two answers to one question, which is exactly what loses trust.
+
+[TO DO, not now: apply the order in code for the chat as it is for numbers. Ed's
+recording, then his verified text, then one book form by the tie-break, with the others
+kept as variants; and the pictures and the chat reading the same choice.]
+
+---
+
+## 29. Ed's phone recordings do not count as Ed's on the pictures
+
+Found on 25 November 2026, before Ed records the 41 body words. The pictures (and the
+Review page's spelling check) count only Ed's own recordings in audio_words.json. A
+recording sent from the website goes to the Review page with other speakers', and is
+not counted, on purpose: an approved typo must not vouch for itself. Ed's family words
+(Eta'ya and the rest) went that way, so on the pictures they are not "Ed's".
+
+Two ways to fix it, for Ed to choose:
+1. Record into files and add them to audio_words.json, as the first 108 were. Nothing
+   in the rule changes.
+2. Mark Ed's own recordings on the Review page as his (by his speaker code), so that
+   approving one of his own counts it as Ed's. The rule stays: other speakers' still
+   never count. This is the phone route.
+
+[TO DECIDE before recording the body words on the phone.]
+

@@ -55,3 +55,61 @@ are blank: fill them by saying them.
 Fourteen has two forms in your own verified text (`Byó nɛ mɛ́nwi` in the speaker file,
 `byó nɛ ánwi` in the recorded texts). Your recording of it settles which Nɛpɛ́m teaches.
 
+## 3. The body words: 41 not yet recorded
+
+The English is what the picture matches your recording on. **Type it exactly as in the
+second column**: the same words, nothing added or dropped ("back of the head", not "back
+of head"; "tooth", not "teeth"). Capitals and punctuation do not matter. When your
+recording's English matches exactly one of these, the picture teaches your word and
+keeps the form below as "also written"; the publish log lists every one.
+
+**Before you record on your phone, read this.** The pictures count only *your own*
+recordings, the ones in `audio_words.json`. A recording sent from the website goes to
+the Review page with every other speaker's, and the pictures do not count those, on
+purpose (one approved typo must not vouch for itself). So recorded on the phone today,
+these would play in the chat and on the site but would **not** move up on the pictures.
+See QUESTIONS 29 for the two ways to fix that.
+
+| # | English, exactly | What the picture shows now | Now | You say |
+|---|---|---|---|---|
+| 1 | `hair` | Emeneh *(head and mouth)* | from written sources | |
+| 2 | `forehead` | Nefó *(head and mouth)* | from written sources | |
+| 3 | `eye` | amík *(head and mouth)* | verified, not recorded | |
+| 4 | `nose` | N'nyuen *(head and mouth)* | from written sources | |
+| 5 | `nostril` | Mboko n'nyuen *(head and mouth)* | from written sources | |
+| 6 | `cheek` | Atah *(head and mouth)* | from written sources | |
+| 7 | `lip` | Ebhebhe Nnyu *(head and mouth)* | from written sources | |
+| 8 | `chin` | Enyiak *(head and mouth)* | from written sources | |
+| 9 | `jaw` | Eghebe Nnyu *(head and mouth)* | from written sources | |
+| 10 | `neck` | Emirh *(head and mouth)* | from written sources | |
+| 11 | `throat` | Ngongho *(head and mouth)* | from written sources | |
+| 12 | `mouth` | N'Nyu *(head and mouth)* | from written sources | |
+| 13 | `tongue` | Nereurh *(head and mouth)* | from written sources | |
+| 14 | `tooth` | Nenyen *(head and mouth)* | from written sources | |
+| 15 | `head` | ntí *(body)* | verified, not recorded | |
+| 16 | `back of the head` | Nnere Nti *(body)* | from written sources | |
+| 17 | `shoulder` | Nenkirh *(body)* | from written sources | |
+| 18 | `armpit` | Ewap *(body)* | from written sources | |
+| 19 | `chest` | Ebhokewad *(body)* | from written sources | |
+| 20 | `ribs` | Mbiapak *(body)* | from written sources | |
+| 21 | `stomach` | Menay *(body)* | from written sources | |
+| 22 | `navel` | Netong *(body)* | from written sources | |
+| 23 | `lower abdomen` | Ntenne mmieng *(body)* | from written sources | |
+| 24 | `back` | Nsem *(body)* | from written sources | |
+| 25 | `waist` | Ebhóh *(body)* | from written sources | |
+| 26 | `buttocks` | Bheraka nned *(body)* | from written sources | |
+| 27 | `arm` | Ereb awuor *(body)* | from written sources | |
+| 28 | `elbow` | Nnere amoh *(body)* | from written sources | |
+| 29 | `palm` | Nekak awuor *(body)* | from written sources | |
+| 30 | `finger` | sɛnɔŋ-áwɔ́ *(body)* | verified, not recorded | |
+| 31 | `fingernail` | Ne'nyaï *(body)* | from written sources | |
+| 32 | `knee` | Nehnen *(body)* | from written sources | |
+| 33 | `calf` | Sechoko *(body)* | from written sources | |
+| 34 | `foot` | Neyard ekak *(body)* | from written sources | |
+| 35 | `heel` | Nned ekak *(body)* | from written sources | |
+| 36 | `toe` | Senong Ekak *(body)* | from written sources | |
+| 37 | `toenail` | Amaï bhekak *(body)* | from written sources | |
+| 38 | `skin` | Nkwor mmuet *(body)* | from written sources | |
+| 39 | `breast` | Nebheurh *(body)* | from written sources | |
+| 40 | `vagina` | Nekwed *(body)* | from written sources | |
+| 41 | `anus` | Mboko nned *(body)* | from written sources | |
