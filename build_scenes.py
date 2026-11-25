@@ -97,13 +97,21 @@ def confirmed():
     sys.path.insert(0, ROOT)
     from build_audio_manifest import fold
     from recordings import verified_vocabulary
-    ed = {}
+    ed, by_gloss = {}, {}
     with open(os.path.join(ROOT, "audio_words.json"), encoding="utf-8") as f:
         for e in json.load(f):
             if e.get("kenyang", "").strip():
                 ed[fold(e["kenyang"])] = e.get("english", "")
+                by_gloss.setdefault(gloss_key(e.get("english", "")), {}).setdefault(
+                    fold(e["kenyang"]), unicodedata.normalize("NFC", e["kenyang"].strip()))
     vocab = verified_vocabulary()
-    return fold, ed, vocab
+    return fold, ed, vocab, by_gloss
+
+
+def gloss_key(english):
+    """An English gloss, compared plainly: case, punctuation and spacing ignored, and
+    nothing more. "Back." and "back" match; "back" and "back of the head" do not."""
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z' ]", " ", (english or "").lower().replace("’", "'"))).strip()
 
 
 _PAIR_COLS = re.compile(r"\s{2,}|\t+")
@@ -165,7 +173,7 @@ def words(out_dir):
       book       only in a course or book file: shown with "from written sources"
       (dropped)  nowhere at all: left out, and named in this log
     """
-    fold, ed, vocab = confirmed()
+    fold, ed, vocab, by_gloss = confirmed()
     from recordings import _english
     english = _english()
     vgloss, bgloss = glosses(fold, True), glosses(fold, False)
@@ -177,7 +185,7 @@ def words(out_dir):
     word_rx = re.compile(r"(?:[^\W\d_]|[\u0300-\u036f'’])+(?:-(?:[^\W\d_]|[\u0300-\u036f'’])+)*")
     failed = 0
 
-    def state(name, word):
+    def base(word):
         key = fold(word)
         exact = ("exact", unicodedata.normalize("NFC", word.strip()))
         if key in ed:
@@ -192,20 +200,48 @@ def words(out_dir):
             return "book", bgloss.get(exact, bgloss.get(key, ""))
         return None, ""
 
+    def state(name, word):
+        """
+        (state, English, the word to show, the variant it replaced or "").
+
+        A recording outranks everything, so when the scene's word is not one of Ed's
+        recordings but its English is exactly the English of ONE of them, the scene
+        shows Ed's recorded form, and keeps its own word as a variant. Every such
+        substitution is listed below with both forms side by side. Where the English
+        matches more than one of Ed's recordings, nothing is guessed: it is listed, and
+        the scene's own word stays.
+        """
+        st, gloss = base(word)
+        if st not in ("verified", "book") or not gloss:
+            return st, gloss, word, ""
+        mine = by_gloss.get(gloss_key(gloss), {})
+        if len(mine) == 1:
+            form = next(iter(mine.values()))
+            substituted.append((name, gloss, word, st, form))
+            return "recorded", ed[fold(form)], form, word
+        if len(mine) > 1:
+            ambiguous.append((name, gloss, word, sorted(mine.values())))
+        return st, gloss, word, ""
+
+    substituted, ambiguous = [], []
+
     for name, scene in layouts():
         with open(os.path.join(WEB, scene["image"] + ".crop.json")) as f:
             meta = json.load(f)
         (sw, sh), (x0, y0, x1, y1) = meta["source_size"], meta["crop"]
         points, listed = [], []
         for p in scene.get("points", []) + [{"word": w} for w in scene.get("list", [])]:
-            st, gloss = state(name, p["word"])
+            st, gloss, shown, variant = state(name, p["word"])
             if st is None:
                 print(f"LEFT OUT of {name}: {p['word']!r} is in no file of any kind and has "
                       f"no recording of Ed's")
                 failed += 1
                 continue
-            entry = {"word": unicodedata.normalize("NFC", p["word"]), "english": gloss,
+            entry = {"word": unicodedata.normalize("NFC", shown), "english": gloss,
                      "state": st}
+            if variant:
+                # never discarded: the form the scene was written with, kept beside Ed's
+                entry["variant"] = unicodedata.normalize("NFC", variant)
             if "x" in p:
                 # percent of the original picture -> percent of the cropped web copy
                 entry["x"] = round((p["x"] / 100 * sw - x0) / (x1 - x0) * 100, 2)
@@ -224,6 +260,13 @@ def words(out_dir):
               f"{len(scene.get('points', [])) + len(scene.get('list', []))} words shown "
               f"({counts['recorded']} recorded, {counts['verified']} verified, "
               f"{counts['book']} from written sources)")
+    for name, gloss, was, st, form in substituted:
+        print(f"SUBSTITUTED in {name}: {gloss!r}  {was}  ->  {form}   "
+              f"(Ed's recording; {was} was {'verified text' if st == 'verified' else 'a book form'}, "
+              f"kept as a variant)")
+    for name, gloss, was, forms in ambiguous:
+        print(f"NOT SUBSTITUTED in {name}: {gloss!r} matches {len(forms)} of Ed's recordings "
+              f"({', '.join(forms)}); {was} stays until the layout names one")
     return failed
 
 

@@ -379,6 +379,16 @@ reads, each word in one of four states, by the variants order (Ed, 25 November 2
    chat's marker, so a learner knows no speaker has checked it;
 4. **nowhere**: left out entirely, and named in the log.
 
+**A recording outranks the scene's own spelling.** If a scene's word is not one of Ed's
+recordings but its English is exactly the English of ONE of them (`gloss_key()`: case,
+punctuation and spacing ignored, nothing more), the scene shows Ed's recorded form and
+keeps its own word as a variant, shown as "also written …" and never discarded. So
+recording the poster's body words moves each one up with no layout edit. Every
+substitution is printed in the publish log, both forms side by side ("SUBSTITUTED");
+where the English matches more than one of Ed's recordings nothing is guessed, it is
+printed ("NOT SUBSTITUTED") and the scene's word stays. This is for the pictures only:
+the chat does not yet apply the order in code to words other than numbers.
+
 Ed's recordings and verified files only; never another speaker's recording, and never
 an English word that only appears in the verified files' prose. A word's English comes
 from the entry spelled exactly as the scene writes it. The page's labels are HTML text,

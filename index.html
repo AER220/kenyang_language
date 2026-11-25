@@ -876,6 +876,8 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
   border-radius:9px;font:500 11px/17px var(--sans);color:var(--mute);vertical-align:2px}
 .scene .lbl .wsrc{display:block;margin:3px auto 0;width:max-content}
 .scene ol.words li.plain{cursor:default}
+.scene small.also{display:block;margin:2px 0 0;font-size:12px;color:var(--mute)}
+.scene ol.words small.also{margin:2px 0 0 0}
 .scene ol.words li.plain .n{border-color:transparent}
 /* many words: numbered points and the list, on every screen; the list in columns */
 .scene.points .lbl{display:none}
@@ -3420,7 +3422,9 @@ function drawScene(name, sc){
   const where = p => `left:${p.x}%;top:${p.y}%`;
   const mark = p => p.state === "book"
     ? `<span class="wsrc" title="From written sources, not yet checked by a speaker">from written sources</span>` : "";
-  const label = p => `<b lang="ken">${esc(p.word)}</b>` + (p.english ? `<small>${esc(p.english)}</small>` : "") + mark(p);
+  /* a form Ed's recording replaced is kept and shown, never discarded */
+  const also = p => p.variant ? `<small class="also">also written <span lang="ken">${esc(p.variant)}</span></small>` : "";
+  const label = p => `<b lang="ken">${esc(p.word)}</b>` + (p.english ? `<small>${esc(p.english)}</small>` : "") + mark(p) + also(p);
   const dots = pts.map((p, i) => `<span class="dot" style="${where(p)}" data-i="${i}" aria-hidden="true">${i + 1}</span>`).join("");
   const lbls = sc.layout === "points" ? "" : pts.map(p => `<span class="lbl" style="${where(p)}">${label(p)}</span>`).join("");
   const pic = `<div class="pic"><img src="${esc(sc.image)}" alt="${esc(sc.title)}" width="${sc.size[0]}" height="${sc.size[1]}">${lbls}${dots}</div>`;
