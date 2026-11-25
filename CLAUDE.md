@@ -136,10 +136,6 @@ python build_index.py
 git add -A && git commit -m "..." && git push
 ```
 
-**Waiting for the next rebuild:** in `knowledge_base/kenyang_lexicon_new_words_ref.md`,
-change the name Nɛpɛm to Nɛpɛ́m (three places). Ed approved it on 25 November 2026 and
-asked that it wait for a rebuild that is needed anyway, rather than cost one of its own.
-
 The index is keyed to a fingerprint of the folder: each file's name and a hash of its
 contents (not its modified time, which a fresh clone resets). Edit the knowledge without
 rebuilding and the app re-embeds the whole corpus on its next cold start, which
@@ -375,11 +371,22 @@ spelling of its own; `word` is only the key. `python build_scenes.py images` mak
 copy in `scenes/web/` (cropped to the drawing, near-white made pure white, lossless WebP);
 run it after adding or changing a picture, and commit `scenes/web/`. The publish workflow
 runs `python build_scenes.py words _site/scenes` every time, which writes what the page
-reads and **leaves out any word Ed has not confirmed** (in a verified file, or recorded by
-Ed himself; never another speaker's recording, and never an English word that only
-appears in the verified files' prose), naming it in the log. The page's labels are HTML
-text, so say.js plays them unchanged. A phone shows numbered points with the words beneath;
-the printed sheet puts each word under its animal so the drawing is clear to colour.
+reads, each word in one of four states, by the variants order (Ed, 25 November 2026):
+
+1. **recorded** by Ed: tappable (say.js plays it);
+2. **verified**, in Ed's verified files but not recorded: shown plain, no sound claim;
+3. **book**, only in a course or book file: shown with "from written sources", the
+   chat's marker, so a learner knows no speaker has checked it;
+4. **nowhere**: left out entirely, and named in the log.
+
+Ed's recordings and verified files only; never another speaker's recording, and never
+an English word that only appears in the verified files' prose. A word's English comes
+from the entry spelled exactly as the scene writes it. The page's labels are HTML text,
+so say.js plays them unchanged. `"layout": "points"` (the head and body scenes) numbers
+the words on the picture and lists them beneath on every screen; `"list"` holds words
+shown beneath the picture with no point (breast, vagina, anus: no warning, no
+euphemism). On paper, "from written sources" is an asterisk explained at the foot, and
+each sheet fits one A4 page (the tall body picture prints portrait).
 To add a scene: the picture in `scenes/`, its layout beside it, `images`, then add its
 name to `SCENE_NAMES` in index.html.
 
@@ -391,6 +398,13 @@ animals.png the cat is one region from ears to tail, which works because each an
 one word, but a picture for "colour the ear" needs each ear closed off on its own. Check
 a new picture's regions before building on it (count the closed regions, and confirm
 the background is one region, so no colour can leak out of the drawing).
+
+**When the body picture is regenerated for colouring**, the colouring version needs, each
+closed on its own: the fingers and toes (closed off from the hand and foot), the palm,
+the nails, the nostrils, a navel and an armpit area. body-regions.png and
+head-regions.png (25 November 2026) give 32 of the 46 body words a region; these are
+the parts that do not have one. Head, skin and body are whole-body words: they get a
+label and no region, and that is correct.
 
 **Squarer, not a long line.** A very wide thin band (animals.png is 1600x361 once
 cropped) leaves the subjects small and crowds the numbered points on a phone. Future

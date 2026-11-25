@@ -54,7 +54,7 @@ jobs:
           mkdir -p _site/scenes/web
           cp scenes/web/*.webp _site/scenes/web/
           python3 build_scenes.py words _site/scenes
-          test -f _site/scenes/animals.json
+          for f in animals head body; do test -f _site/scenes/$f.json; done
           # Browsers also ask for /favicon.ico on their own, whatever the page says.
           cp brand/web-and-social/favicon.ico _site/favicon.ico
           echo "Publishing:"; find _site -maxdepth 1 | sort; echo "audio files: $(ls _site/audio | wc -l)"

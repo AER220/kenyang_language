@@ -871,6 +871,21 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
 .scene ol.words b{font:600 20px/1.3 var(--serif)}
 .scene ol.words small{color:var(--mute);font-size:14px;margin-left:10px}
 .scenetools{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 0}
+/* "from written sources": the chat's words, no warm and no bright colour */
+.wsrc{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--line);
+  border-radius:9px;font:500 11px/17px var(--sans);color:var(--mute);vertical-align:2px}
+.scene .lbl .wsrc{display:block;margin:3px auto 0;width:max-content}
+.scene ol.words li.plain{cursor:default}
+.scene ol.words li.plain .n{border-color:transparent}
+/* many words: numbered points and the list, on every screen; the list in columns */
+.scene.points .lbl{display:none}
+.scene.points .dot{display:block}
+.scene.points ol.words{display:block}
+/* many points on a phone-width picture: smaller dots, so they do not cover the parts */
+@media (max-width:720px){ .scene.points .dot{width:17px;height:17px;border-width:1.5px;
+  font-size:9px;line-height:14px} }
+@media (min-width:721px){ .scene.points ol.words{columns:2;column-gap:28px}
+  .scene.points ol.words li{break-inside:avoid} }
 .scenenote{color:var(--mute);font-size:14px;margin:10px 0 0}
 /* a phone: numbered points on the picture, the words beneath */
 @media (max-width:720px){
@@ -886,14 +901,30 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
   .printsheet{display:block;color:#000;background:#fff;font-family:Georgia,serif}
   .printsheet h1{font-size:28pt;margin:0 0 4mm}
   /* the words go under their animals, so the drawing is clear to colour */
-  .printsheet .pic{position:relative;border:none;padding:0 0 24mm}
-  .printsheet .pic img{width:100%}
+  .printsheet .pic{position:relative;border:none;padding:0 0 24mm;width:fit-content;margin:0 auto}
+  .printsheet .pic img{display:block;width:auto;max-width:100%;max-height:105mm}
+  .printsheet.tall{page:tall}
+  .printsheet.tall .pic img{max-height:130mm}
+  /* numbered points need no room under the picture for labels */
+  .printsheet .pic:has(.pdot){padding-bottom:0}
   .printsheet .lbl{position:absolute;top:auto !important;bottom:0;transform:translateX(-50%);background:#fff;
     border:1.5pt solid #000;border-radius:8pt;padding:1mm 3mm;text-align:center;white-space:nowrap}
   .printsheet .lbl b{display:block;font-size:20pt}
   .printsheet .lbl small{display:block;font-size:10pt}
-  .printsheet .foot{margin-top:8mm;font-size:10pt;color:#333}
+  .printsheet .foot{margin-top:5mm;font-size:10pt;color:#333}
+  .printsheet .pdot{position:absolute;transform:translate(-50%,-50%);width:6mm;height:6mm;
+    border:1pt solid #000;border-radius:50%;background:#fff;font:bold 8pt/6mm Arial,sans-serif;text-align:center}
+  .printsheet .plist{columns:3;font-size:11pt;margin:5mm 0 0;padding-left:7mm}
+  .printsheet .plist li{break-inside:avoid;margin:0 0 1.2mm}
+  .printsheet:not(.tall) .plist{columns:4}
+  .printsheet .plist li.plain{list-style:none}
+  .printsheet .plist b{font-size:13pt;margin-right:2mm}
+  .printsheet .plist small{color:#333}
+  /* on paper the marker is an asterisk, explained once at the foot */
+  .printsheet .wsrc{border:0;padding:0;margin:0 0 0 0.5mm;font-size:0;vertical-align:super}
+  .printsheet .wsrc::after{content:"*";font-size:11pt}
   @page{size:A4 landscape;margin:12mm}
+  @page tall{size:A4 portrait;margin:12mm}
   ::highlight(nepem-say){text-decoration:none}
 }
 </style>
@@ -3363,7 +3394,7 @@ if (dock.style.left) restoreDock();
 }
 
 /* ── pictures ───────────────────────────────────────────────────── */
-const SCENE_NAMES = ["animals"];
+const SCENE_NAMES = ["animals", "head", "body"];
 async function loadScenes(){
   const box = $("scenes");
   if (!box) return;
@@ -3379,23 +3410,39 @@ async function loadScenes(){
   box.querySelectorAll(".scene").forEach(wireScene);
 }
 function drawScene(name, sc){
-  const pts = sc.points || [];
+  /* sc.layout: "labels" puts each word on the picture (a few words, room to spare);
+     "points" numbers them on the picture and lists them beneath, on every screen
+     (many words, where labels would pile up). Each word carries its state:
+       recorded  Ed recorded it; say.js underlines it and plays it
+       verified  in Ed's verified files, not recorded: shown plain, no sound claim
+       book      only in a course or book file: marked "from written sources" */
+  const pts = sc.points || [], extra = sc.list || [];
   const where = p => `left:${p.x}%;top:${p.y}%`;
-  const label = p => `<b lang="ken">${esc(p.word)}</b>` + (p.english ? `<small>${esc(p.english)}</small>` : "");
-  const pic = `<div class="pic"><img src="${esc(sc.image)}" alt="${esc(sc.title)}: ${
-      esc(pts.map(p => p.english || p.word).join(", "))}" width="${sc.size[0]}" height="${sc.size[1]}">
-    ${pts.map((p, i) => `<span class="lbl" style="${where(p)}">${label(p)}</span>
-      <span class="dot" style="${where(p)}" data-i="${i}" aria-hidden="true">${i + 1}</span>`).join("")}</div>`;
-  return `<div class="scene" data-name="${esc(name)}">
+  const mark = p => p.state === "book"
+    ? `<span class="wsrc" title="From written sources, not yet checked by a speaker">from written sources</span>` : "";
+  const label = p => `<b lang="ken">${esc(p.word)}</b>` + (p.english ? `<small>${esc(p.english)}</small>` : "") + mark(p);
+  const dots = pts.map((p, i) => `<span class="dot" style="${where(p)}" data-i="${i}" aria-hidden="true">${i + 1}</span>`).join("");
+  const lbls = sc.layout === "points" ? "" : pts.map(p => `<span class="lbl" style="${where(p)}">${label(p)}</span>`).join("");
+  const pic = `<div class="pic"><img src="${esc(sc.image)}" alt="${esc(sc.title)}" width="${sc.size[0]}" height="${sc.size[1]}">${lbls}${dots}</div>`;
+  const rows = pts.map((p, i) => `<li data-i="${i}"><span class="n" aria-hidden="true">${i + 1}</span><span>${label(p)}</span></li>`).join("")
+    + extra.map(p => `<li class="plain"><span class="n" aria-hidden="true"></span><span>${label(p)}</span></li>`).join("");
+  const anyBook = [...pts, ...extra].some(p => p.state === "book");
+  const printPic = `<div class="pic"><img src="${esc(sc.image)}" alt="">${sc.layout === "points"
+      ? pts.map((p, i) => `<span class="pdot" style="${where(p)}">${i + 1}</span>`).join("")
+      : pts.map(p => `<span class="lbl" style="${where(p)}">${label(p)}</span>`).join("")}</div>`;
+  const printList = sc.layout === "points" || extra.length
+    ? `<ol class="plist">${pts.map((p, i) => sc.layout === "points" ? `<li value="${i + 1}">${label(p)}</li>` : "").join("")}${
+        extra.map(p => `<li class="plain">${label(p)}</li>`).join("")}</ol>` : "";
+  return `<div class="scene ${sc.layout === "points" ? "points" : "labels"}" data-name="${esc(name)}">
     <h3>${esc(sc.title)}</h3>${pic}
-    <ol class="words">${pts.map((p, i) => `<li data-i="${i}"><span class="n" aria-hidden="true">${i + 1}</span>
-      <span>${label(p)}</span></li>`).join("")}</ol>
+    <ol class="words">${rows}</ol>
+    ${anyBook ? `<p class="scenenote"><span class="wsrc">from written sources</span> means the word is
+      from a book or a course, and no speaker has checked it yet.</p>` : ""}
     <div class="scenetools"><button class="btn" data-print="${esc(name)}">Print a colouring page</button></div>
-    <div class="printsheet" hidden><h1>${esc(sc.title)} · Kɛ́nyāŋ</h1>
-      <div class="pic"><img src="${esc(sc.image)}" alt="">${pts.map(p =>
-        `<span class="lbl" style="${where(p)}">${label(p)}</span>`).join("")}</div>
-      <p class="foot">nepem.org · Nɛpɛ́m, Kenyang for the whole family. Every word on this
-        page was checked by a native speaker.</p></div>
+    <div class="printsheet${sc.size[1] > sc.size[0] ? " tall" : ""}" hidden><h1>${esc(sc.title)} · Kɛ́nyāŋ</h1>${printPic}${printList}
+      <p class="foot">nepem.org · Nɛpɛ́m, Kenyang for the whole family.${anyBook
+        ? " * From written sources: from a book, not yet checked by a speaker. Every other word was checked by a native speaker."
+        : " Every word on this page was checked by a native speaker."}</p></div>
   </div>`;
 }
 function wireScene(el){

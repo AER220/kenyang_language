@@ -480,3 +480,36 @@ Not confirmed. Not to be taught or treated as confirmed until Ed says.
 
 [TO CONFIRM: is M'má a real form? If it is, what does it mean? Is "M'má nɛ" a real
 sentence, and does it mean "my mother is here"?]
+
+---
+
+## 26. amík: eyes, and ground
+
+Found on 25 November 2026, while adding the body words. The speaker file has amik
+for ground (kenyang_verified_speaker.md, the position words). A published body-words
+poster has Amik for eyes.
+
+Ed's reading, settled in CLAUDE.md: a homograph, one word with both meanings. Ed's own
+recorded texts support it from his speech, not from the poster:
+`knowledge_base/kenyang_texts_verified.md:1088`, "amík abú-ábú: eyes full of evil".
+That is evidence, not a guess. The body scene teaches amík for eye (the verified form,
+with the acute the recorded text writes); the poster's Amik is listed as a book
+spelling of it.
+
+[TO CONFIRM, when there is time: is amík (eyes) said with the same tone as amik
+(ground)? The texts write amík, the position words amik.]
+
+---
+
+## 27. nném: husband, or male
+
+Raised by Ed on 25 November 2026. The verified files have nném for husband (Ed's
+recording 046_husband.mp3, and nném wah, my husband). Ed reports that a published
+body-words poster uses it for "male". That is from the poster itself: the draft list
+of body words (body_words_draft.md) does not include it. Not settled.
+
+The body scene does not use the poster's "male", so nothing on the site depends on
+this yet.
+
+[TO SETTLE: does nném also mean male in general, or only husband?]
+

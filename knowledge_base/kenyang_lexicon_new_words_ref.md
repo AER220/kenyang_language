@@ -1,13 +1,13 @@
-# New words the lexicon can give Nɛpɛm (unconfirmed)
+# New words the lexicon can give Nɛpɛ́m (unconfirmed)
 
 Moved out of kenyang_verified_speaker.md on 24 November 2026. These are the Kenyang
 Lexicon's words, in the book's standard spelling, and no speaker has confirmed them.
 Sitting inside the verified file they were treated as verified, and one of them
 (ɛsyɛ́, market) went into a wrong answer with no caveat. Here they are reference
-material: Nɛpɛm may give one, saying plainly that a speaker has not confirmed it.
+material: Nɛpɛ́m may give one, saying plainly that a speaker has not confirmed it.
 A word moves back into a verified file only once Ed has confirmed it.
 
-Words Nɛpɛm does not have, that the Kenyang Lexicon does. Written in the book's standard
+Words Nɛpɛ́m does not have, that the Kenyang Lexicon does. Written in the book's standard
 spelling, with the page so you can check it.
 
 **Confirm each one as a speaker before it goes into the verified file.** Where the book's

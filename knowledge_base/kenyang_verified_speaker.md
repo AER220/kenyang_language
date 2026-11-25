@@ -89,6 +89,17 @@ things, and is the word you would use affectionately with a small child.
     besí                face
     atú                 ear
 
+A published body-words poster writes some of these, and others in this file, its own
+way. Those are book spellings: not wrong to find, but not the forms to teach.
+
+    book spelling: Bhisí       confirmed: besí       face
+    book spelling: Àtú       confirmed: atú       ear
+    book spelling: Awuor       confirmed: awó       hand
+    book spelling: Ekak       confirmed: ɛkak       leg
+    book spelling: Senong awuor       confirmed: sɛnɔŋ-áwɔ́       finger
+    book spelling: Nti       confirmed: ntí       head
+    book spelling: Amik       confirmed: amík       eye
+
 ### Saying things
 
     Mba'aaah            Hello

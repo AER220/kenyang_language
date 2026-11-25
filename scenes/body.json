@@ -1,0 +1,152 @@
+{
+ "image": "body-regions",
+ "title": "The body",
+ "layout": "points",
+ "points": [
+  {
+   "word": "ntí",
+   "x": 29.3,
+   "y": 6.84
+  },
+  {
+   "word": "besí",
+   "x": 29.3,
+   "y": 13.67
+  },
+  {
+   "word": "Nnere Nti",
+   "x": 70.8,
+   "y": 7.81
+  },
+  {
+   "word": "Nenkirh",
+   "x": 20.02,
+   "y": 24.9
+  },
+  {
+   "word": "Ewap",
+   "x": 21.68,
+   "y": 29.3
+  },
+  {
+   "word": "Ebhokewad",
+   "x": 29.3,
+   "y": 25.88
+  },
+  {
+   "word": "Mbiapak",
+   "x": 29.3,
+   "y": 33.69
+  },
+  {
+   "word": "Menay",
+   "x": 29.3,
+   "y": 39.55
+  },
+  {
+   "word": "Netong",
+   "x": 29.3,
+   "y": 44.14
+  },
+  {
+   "word": "Ntenne mmieng",
+   "x": 29.3,
+   "y": 48.83
+  },
+  {
+   "word": "Nsem",
+   "x": 70.8,
+   "y": 29.3
+  },
+  {
+   "word": "Ebhóh",
+   "x": 70.8,
+   "y": 40.04
+  },
+  {
+   "word": "Bheraka nned",
+   "x": 66.41,
+   "y": 49.32
+  },
+  {
+   "word": "Ereb awuor",
+   "x": 18.55,
+   "y": 32.23
+  },
+  {
+   "word": "Nnere amoh",
+   "x": 18.55,
+   "y": 38.28
+  },
+  {
+   "word": "Nekak awuor",
+   "x": 43.65,
+   "y": 52.73
+  },
+  {
+   "word": "awó",
+   "x": 14.65,
+   "y": 52.25
+  },
+  {
+   "word": "sɛnɔŋ-áwɔ́",
+   "x": 14.45,
+   "y": 57.81
+  },
+  {
+   "word": "Ne'nyaï",
+   "x": 84.96,
+   "y": 57.62
+  },
+  {
+   "word": "ɛkak",
+   "x": 33.69,
+   "y": 58.59
+  },
+  {
+   "word": "Nehnen",
+   "x": 25.39,
+   "y": 69.82
+  },
+  {
+   "word": "Sechoko",
+   "x": 65.43,
+   "y": 75.68
+  },
+  {
+   "word": "Neyard ekak",
+   "x": 24.61,
+   "y": 90.04
+  },
+  {
+   "word": "Nned ekak",
+   "x": 66.89,
+   "y": 92.77
+  },
+  {
+   "word": "Senong Ekak",
+   "x": 34.96,
+   "y": 92.58
+  },
+  {
+   "word": "Amaï bhekak",
+   "x": 22.07,
+   "y": 94.34
+  },
+  {
+   "word": "Nkwor mmuet",
+   "x": 41.02,
+   "y": 43.95
+  },
+  {
+   "word": "amʉɛt",
+   "x": 29.3,
+   "y": 62.5
+  }
+ ],
+ "list": [
+  "Nebheurh",
+  "Nekwed",
+  "Mboko nned"
+ ]
+}

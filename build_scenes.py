@@ -21,12 +21,18 @@ Two jobs, run separately:
 
     python build_scenes.py words OUT     what the page reads, into OUT (the publish
                                          workflow runs this on every publish). Standard
-                                         library only. THE RULE, IN CODE: a word shows
-                                         only if Ed confirmed it, in a verified file or
-                                         by recording it himself. Other speakers'
-                                         recordings do not count, so one approved typo
-                                         cannot put itself on a picture. A word that
-                                         fails is left out and named in the log.
+                                         library only. THE RULE, IN CODE, by the
+                                         variants order: Ed's recording (tappable), else
+                                         his verified text (shown, no sound claim), else
+                                         a course or book file (shown, marked "from
+                                         written sources"), else nowhere: left out and
+                                         named in the log. Other speakers' recordings do
+                                         not count, so one approved typo cannot vouch
+                                         for itself on a picture.
+
+A layout may also carry "layout": "points" (numbered points and a list on every screen,
+for a picture with many words) and "list": [...] (words shown beneath the picture, with
+no point on it).
 """
 
 import glob
@@ -100,44 +106,124 @@ def confirmed():
     return fold, ed, vocab
 
 
+_PAIR_COLS = re.compile(r"\s{2,}|\t+")
+_BOOK_LINE = re.compile(r"^\s+book spelling:\s*(?P<forms>\S.*?)\s{2,}confirmed:\s*(?P<canon>\S+)"
+                        r"\s{2,}(?P<gloss>\S.*?)\s*$", re.IGNORECASE)
+HEAD_KEYS = ("kenyang", "k", "kenyang_word", "kenyang_translation", "kenyang_phrase")
+GLOSS_KEYS = ("english", "e", "english_word", "english_translation")
+
+
+def glosses(fold, verified):
+    """{folded form: English} from the knowledge files of one kind: the verified files
+    (verified=True) or the course and book files. Indented "form   gloss" columns, JSON
+    records, and (verified only) the confirmed form on a book-spelling line.
+    Each is kept twice: under the form exactly as written, and folded. A scene asks for
+    the exact spelling first, so a word takes its gloss from the entry it was copied
+    from, not from another book that happens to share the letters."""
+    out = {}
+    put = lambda form, gloss: (out.setdefault(("exact", unicodedata.normalize("NFC", form.strip())), gloss),
+                               out.setdefault(fold(form), gloss))
+    for path in sorted(glob.glob(os.path.join(ROOT, "knowledge_base", "*"))):
+        n = os.path.basename(path)
+        if ("verified" in n) != verified or n.lower().endswith(".pdf"):
+            continue
+        with open(path, encoding="utf-8", errors="replace") as f:
+            for line in f:
+                s = line.strip()
+                m = _BOOK_LINE.match(line)
+                if m:
+                    if verified:
+                        put(m["canon"], m["gloss"])
+                    continue
+                if s.startswith("{"):
+                    try:
+                        d = json.loads(s)
+                    except Exception:
+                        continue
+                    if isinstance(d, dict):
+                        h = next((d[k] for k in HEAD_KEYS if isinstance(d.get(k), str)), "")
+                        g = next((d[k] for k in GLOSS_KEYS if isinstance(d.get(k), str)), "")
+                        if h.strip() and g.strip():
+                            put(h, g.strip().rstrip("."))
+                    continue
+                if not line.startswith((" ", "\t")):
+                    continue
+                cols = [c for c in _PAIR_COLS.split(s) if c]
+                for k in range(0, len(cols) - 1, 2):
+                    if not cols[k][:1].isdigit():
+                        put(cols[k], cols[k + 1])
+    return out
+
+
 def words(out_dir):
+    """
+    What each scene's page shows, by the variants order (CLAUDE.md, "When sources
+    differ"), in four states:
+
+      recorded   Ed recorded it: shown, tappable (say.js plays it)
+      verified   in Ed's verified files, not recorded: shown, no sound claim
+      book       only in a course or book file: shown with "from written sources"
+      (dropped)  nowhere at all: left out, and named in this log
+    """
     fold, ed, vocab = confirmed()
     from recordings import _english
     english = _english()
+    vgloss, bgloss = glosses(fold, True), glosses(fold, False)
+    book_text = " ".join(
+        fold(open(p, encoding="utf-8", errors="replace").read())
+        for p in glob.glob(os.path.join(ROOT, "knowledge_base", "*"))
+        if "verified" not in os.path.basename(p) and not p.lower().endswith(".pdf"))
     os.makedirs(out_dir, exist_ok=True)
-    word_rx = re.compile(r"(?:[^\W\d_]|[̀-ͯ'’])+(?:-(?:[^\W\d_]|[̀-ͯ'’])+)*")
+    word_rx = re.compile(r"(?:[^\W\d_]|[\u0300-\u036f'’])+(?:-(?:[^\W\d_]|[\u0300-\u036f'’])+)*")
     failed = 0
+
+    def state(name, word):
+        key = fold(word)
+        exact = ("exact", unicodedata.normalize("NFC", word.strip()))
+        if key in ed:
+            return "recorded", ed[key]
+        parts = [fold(w) for w in word_rx.findall(word)]
+        in_text = bool(parts) and all(w in vocab for w in parts)
+        # The verified files hold English prose too, so "in a verified file" alone
+        # would let an English word onto a picture: it must not be English.
+        if in_text and not any(w in english for w in parts):
+            return "verified", vgloss.get(exact, vgloss.get(key, ""))
+        if key in bgloss or re.search(r"(?<![^\W_])" + re.escape(key) + r"(?![^\W_])", book_text):
+            return "book", bgloss.get(exact, bgloss.get(key, ""))
+        return None, ""
+
     for name, scene in layouts():
         with open(os.path.join(WEB, scene["image"] + ".crop.json")) as f:
             meta = json.load(f)
         (sw, sh), (x0, y0, x1, y1) = meta["source_size"], meta["crop"]
-        points = []
-        for p in scene["points"]:
-            key = fold(p["word"])
-            recorded = key in ed
-            parts = [fold(w) for w in word_rx.findall(p["word"])]
-            in_text = bool(parts) and all(w in vocab for w in parts)
-            # The verified files hold English prose too, so "in a verified file" alone
-            # would let an English word onto a picture. Unless Ed recorded it, it must
-            # not be English.
-            english_word = any(w in english for w in parts)
-            if not (recorded or (in_text and not english_word)):
-                why = ("is an English word" if english_word and in_text
-                       else "is in no verified file and has no recording of Ed's")
-                print(f"LEFT OUT of {name}: {p['word']!r} {why}")
+        points, listed = [], []
+        for p in scene.get("points", []) + [{"word": w} for w in scene.get("list", [])]:
+            st, gloss = state(name, p["word"])
+            if st is None:
+                print(f"LEFT OUT of {name}: {p['word']!r} is in no file of any kind and has "
+                      f"no recording of Ed's")
                 failed += 1
                 continue
-            # percent of the original picture -> percent of the cropped web copy
-            x = (p["x"] / 100 * sw - x0) / (x1 - x0) * 100
-            y = (p["y"] / 100 * sh - y0) / (y1 - y0) * 100
-            points.append({"word": unicodedata.normalize("NFC", p["word"]),
-                           "english": ed.get(key, ""),
-                           "x": round(x, 2), "y": round(y, 2)})
+            entry = {"word": unicodedata.normalize("NFC", p["word"]), "english": gloss,
+                     "state": st}
+            if "x" in p:
+                # percent of the original picture -> percent of the cropped web copy
+                entry["x"] = round((p["x"] / 100 * sw - x0) / (x1 - x0) * 100, 2)
+                entry["y"] = round((p["y"] / 100 * sh - y0) / (y1 - y0) * 100, 2)
+                points.append(entry)
+            else:
+                listed.append(entry)
         page = {"title": scene.get("title", name), "image": f"scenes/web/{scene['image']}.webp",
-                "size": meta["size"], "points": points}
+                "size": meta["size"], "layout": scene.get("layout", "labels"),
+                "points": points, "list": listed}
         with open(os.path.join(out_dir, name + ".json"), "w", encoding="utf-8") as f:
             json.dump(page, f, ensure_ascii=False, indent=1)
-        print(f"{name}: {len(points)} of {len(scene['points'])} words shown")
+        counts = {k: sum(1 for e in points + listed if e["state"] == k)
+                  for k in ("recorded", "verified", "book")}
+        print(f"{name}: {len(points) + len(listed)} of "
+              f"{len(scene.get('points', [])) + len(scene.get('list', []))} words shown "
+              f"({counts['recorded']} recorded, {counts['verified']} verified, "
+              f"{counts['book']} from written sources)")
     return failed
 
 

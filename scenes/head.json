@@ -1,0 +1,82 @@
+{
+ "image": "head-regions",
+ "title": "The head and the mouth",
+ "layout": "points",
+ "points": [
+  {
+   "word": "Emeneh",
+   "x": 27.34,
+   "y": 20.51
+  },
+  {
+   "word": "Nefó",
+   "x": 26.86,
+   "y": 31.25
+  },
+  {
+   "word": "amík",
+   "x": 18.55,
+   "y": 43.95
+  },
+  {
+   "word": "N'nyuen",
+   "x": 26.86,
+   "y": 47.85
+  },
+  {
+   "word": "Mboko n'nyuen",
+   "x": 25.59,
+   "y": 54.2
+  },
+  {
+   "word": "Atah",
+   "x": 16.6,
+   "y": 49.8
+  },
+  {
+   "word": "Ebhebhe Nnyu",
+   "x": 26.95,
+   "y": 58.69
+  },
+  {
+   "word": "Enyiak",
+   "x": 26.86,
+   "y": 66.41
+  },
+  {
+   "word": "Eghebe Nnyu",
+   "x": 15.62,
+   "y": 58.59
+  },
+  {
+   "word": "atú",
+   "x": 9.28,
+   "y": 47.85
+  },
+  {
+   "word": "Emirh",
+   "x": 12.7,
+   "y": 76.17
+  },
+  {
+   "word": "Ngongho",
+   "x": 26.86,
+   "y": 74.22
+  },
+  {
+   "word": "N'Nyu",
+   "x": 74.22,
+   "y": 24.9
+  },
+  {
+   "word": "Nereurh",
+   "x": 74.22,
+   "y": 57.62
+  },
+  {
+   "word": "Nenyen",
+   "x": 76.17,
+   "y": 33.69
+  }
+ ]
+}
