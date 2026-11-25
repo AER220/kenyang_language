@@ -419,7 +419,7 @@ tell a story.
     fa              here
     fá              where
     afo             there
-    ambi            Road, 
+    ambi            road, path
     ansem           after
     ansem mpok      later
     kéfú            again
@@ -1063,7 +1063,7 @@ Note: anfai and a'nfai are different words, not spellings of one. anfai is "up" 
 direction (look up); a'nfai is "on top of / the one on top". The apostrophe marks the
 difference — keep them apart.
 
-Note: ambi is NOT a position word — ambi means "road". Do not confuse it with ambeuh
+Note: ambi is NOT a position word — ambi means "road, path". Do not confuse it with ambeuh
 (in front).
 
 ## "Come, let us go"

@@ -328,7 +328,7 @@ and should the other be kept as a variant?]
 
 From `knowledge_base/kenyang_verified_speaker.md`
 
-    ambi        road           (Where things are; recorded)
+    ambi        road, path     (Where things are; recorded; "road, path" confirmed by Ed 25 Nov 2026)
     mbi         road           (More verbs)
 
 [TO CONFIRM: are mbi and ambi the same word? If so, which spelling is canonical,
@@ -579,3 +579,17 @@ Not resolved, only listed (25 November 2026):
 - stone: ntay (Text 6 word list) and Ntai (a verified sentence). The pictures use ntay.
 - husband: nném (recorded, husband) and nnɛ́m (Text 7, "husband, male"); the poster's
   "male" is section 27. Not on the people picture: no figure is a husband.
+
+## 32. ékwá: the fruit, the plant, or both?
+
+Raised by Ed on 25 November 2026. On the Sky and land picture ékwá is placed on the
+plantain bunch, and his recording glosses it "plantain", which in English can be the
+fruit or the plant. The verified files use it both ways, so they do not settle it:
+
+    the fruit, as food   Éh Che mme ékwá!          Yes, give me plantain!   (speaker file)
+                         Mma, buereh ékwá?         Mummy, shall I keep you plantain?
+                         M'pop ékwá                I am tired of plantain
+    the plant            Apɨ chí bɛ́kwá             If he plants plantains   (Text 9)
+
+[TO CONFIRM: does ékwá name the fruit, the plant, or both? If the plant has a word of
+its own, it goes on the recording list for the picture, and ékwá stays on the bunch.]

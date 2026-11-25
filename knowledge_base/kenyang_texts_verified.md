@@ -511,7 +511,7 @@ or spreads it out.
     ɛbhɨ           bush, farm           nɛnyɛ́       food
     nsi            fish                 bagyɛ́p      palm trees
     ɛkak           leg                  sɛnɔŋ-áwɔ́   finger
-    ambi           road                 mpok        time
+    ambi           road, path           mpok        time
     antɛn          below                awu         there
     ɛ̌tí            because of           maŋák       happiness
     ghók           listen, hear         kaká        thank
@@ -697,7 +697,7 @@ This is the yɛ-ntɨkɨ already in this file for *every*.
     nnɛrɛ́-ɛkɛt    family               nɛkwak       help
     ɛnyiŋ         thing                mɛnyiŋ       things
     koŋo          follow               bɛtɨk        work
-    ansɛm         behind               ambi         road, in front
+    ansɛm         behind               ambi         road, path, in front
     ntí           head                 mmwɛ́t       body
     ɛbhɨ          bush                 awu          over there
 
