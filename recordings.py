@@ -227,6 +227,58 @@ def reject(st, rec):
              {"status": "rejected", "decided_at": _now()})
 
 
+# ── Ed's own recordings ──────────────────────────────────────────────────────
+#
+# The pictures count only Ed's own recordings, never other speakers', so one approved
+# typo cannot vouch for itself. Ed's phone recordings arrive here like anyone's, so the
+# Review page, behind Ed's password, is where he marks one as his: a tick, off by
+# default. Not a speaker code: that changes with the device, and a code in a browser is
+# not a credential. The marks live in their own table, eds_recordings, with row level
+# security on and no policies, so only this module's service key can read or write it;
+# the website's anon key cannot. The SQL is in CLAUDE.md.
+
+EDS_TABLE = "eds_recordings"
+
+
+def eds_ids(st):
+    """The ids of recordings Ed has marked as his own. None if the table does not
+    exist yet (the SQL has not been run), so callers can say so instead of failing."""
+    try:
+        return {r["recording_id"] for r in st.rows(EDS_TABLE, select="recording_id")}
+    except Trouble as e:
+        if "404" in str(e) or "does not exist" in str(e) or "PGRST205" in str(e):
+            return None
+        raise
+
+
+def mark_mine(st, rec, mine):
+    """Mark an approved recording as Ed's own, or not, and rebuild the public files."""
+    if not _valid_id(rec["id"]):
+        raise Trouble("not a recording id")
+    if mine:
+        st.call("POST", f"/rest/v1/{EDS_TABLE}", json_body={"recording_id": rec["id"]},
+                headers={"Content-Type": "application/json",
+                         "Prefer": "resolution=ignore-duplicates,return=minimal"})
+    else:
+        st.delete_row(EDS_TABLE, {"recording_id": f"eq.{rec['id']}"})
+    rebuild_public(st)
+
+
+def eds_words(word_rows, approved_rows, ids):
+    """[{kenyang, english}] for every approved recording Ed marked as his, on a
+    confirmed word: what the pictures count as Ed's recordings, beside audio_words.json.
+    Text only, as recorded_words.json is."""
+    by_id = {w["id"]: w for w in word_rows}
+    out, seen = [], set()
+    for r in approved_rows:
+        w = by_id.get(r.get("word_id"))
+        if (r.get("status") == "approved" and r["id"] in (ids or ()) and w
+                and w.get("status") == "confirmed" and w["kenyang"] not in seen):
+            seen.add(w["kenyang"])
+            out.append({"kenyang": w["kenyang"], "english": w.get("english", "")})
+    return out
+
+
 def remove(st, rec):
     """
     Take an approved recording down, when somebody asks for theirs to be
@@ -236,6 +288,10 @@ def remove(st, rec):
     if not _valid_id(rec["id"]):
         raise Trouble("not a recording id")
     st.delete_file(PUBLIC, f"{rec['id']}.wav")
+    try:
+        st.delete_row(EDS_TABLE, {"recording_id": f"eq.{rec['id']}"})
+    except Trouble:
+        pass                                    # no table yet, so no mark to clear
     st.delete_row("recordings", {"id": f"eq.{rec['id']}"})
     if rec.get("is_primary") and rec.get("word_id"):
         others = st.rows("recordings", word_id=f"eq.{rec['word_id']}",
@@ -329,9 +385,14 @@ def credits(approved_rows, hide=None):
 
 def rebuild_public(st):
     done = approved(st)
-    manifest, listed = public_files(words(st), done)
-    for name, body in (("manifest.json", manifest), ("recorded_words.json", listed),
-                       ("contributors.json", credits(done))):
+    word_rows = words(st)
+    manifest, listed = public_files(word_rows, done)
+    files = [("manifest.json", manifest), ("recorded_words.json", listed),
+             ("contributors.json", credits(done))]
+    ids = eds_ids(st)
+    if ids is not None:
+        files.append(("eds_words.json", eds_words(word_rows, done, ids)))
+    for name, body in files:
         st.put_file(PUBLIC, name, json.dumps(body, ensure_ascii=False, indent=1).encode(),
                     "application/json", "public, max-age=60")
     return manifest, listed
@@ -448,7 +509,7 @@ def _english():
     return _CACHE["english"]
 
 
-def spelling_check(spelling):
+def spelling_check(spelling, own=()):
     """
     [(word, why, [closest verified words])] for each word of the spelling that the
     verified files do not have. `why` is "not in the verified files", or "an English
@@ -456,7 +517,11 @@ def spelling_check(spelling):
     "Mine (my)" was). Empty when every word is there.
     """
     vocab, english = verified_vocabulary(), _english()
-    eds = _CACHE.get("eds", set())
+    # `own`: the Kenyang of recordings Ed marked as his on the Review page, which count
+    # as his recordings exactly as audio_words.json does
+    extra = {fold(w) for k in own for w in _WORD.findall(clean(k, kenyang=True))}
+    eds = _CACHE.get("eds", set()) | extra
+    vocab = vocab | extra
     out = []
     for w in _WORD.findall(clean(spelling, kenyang=True)):
         f = fold(w)

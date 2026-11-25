@@ -91,6 +91,9 @@ def images():
               f"(from {img.size[0]}x{img.size[1]}, cropped to {box})")
 
 
+EDS_FILE = None      # set by --eds: eds_words.json from the Review page's public bucket
+
+
 def confirmed():
     """{folded word: english or ""} for every word Ed confirmed: his recordings, then
     the words of his verified files. The same rule as the Review page's check."""
@@ -98,8 +101,22 @@ def confirmed():
     from build_audio_manifest import fold
     from recordings import verified_vocabulary
     ed, by_gloss = {}, {}
+    entries = []
     with open(os.path.join(ROOT, "audio_words.json"), encoding="utf-8") as f:
-        for e in json.load(f):
+        entries += json.load(f)
+    # Ed's phone recordings, the ones he marked as his own on the Review page (behind his
+    # password). Other speakers' recordings are not in this file, and never count here.
+    if EDS_FILE:
+        try:
+            with open(EDS_FILE, encoding="utf-8") as f:
+                own = json.load(f)
+            if isinstance(own, list):
+                entries += [e for e in own if isinstance(e, dict)]
+                print(f"Ed's own phone recordings: {len(own)}")
+        except (OSError, ValueError) as e:
+            print(f"Ed's own phone recordings: none read ({type(e).__name__})")
+    if True:
+        for e in entries:
             if e.get("kenyang", "").strip():
                 ed[fold(e["kenyang"])] = e.get("english", "")
                 by_gloss.setdefault(gloss_key(e.get("english", "")), {}).setdefault(
@@ -275,6 +292,8 @@ if __name__ == "__main__":
     if job == "images":
         images()
     elif job == "words" and len(sys.argv) > 2:
+        if "--eds" in sys.argv:
+            EDS_FILE = sys.argv[sys.argv.index("--eds") + 1]
         words(sys.argv[2])
     else:
         sys.exit(__doc__)

@@ -53,7 +53,10 @@ jobs:
           # out any word Ed has not confirmed and names it in this log.
           mkdir -p _site/scenes/web
           cp scenes/web/*.webp _site/scenes/web/
-          python3 build_scenes.py words _site/scenes
+          # Ed's own phone recordings, the ones he marked on the Review page. If the file
+          # cannot be fetched the pictures are built from audio_words.json alone.
+          curl -fsS https://xkrjlihldrrwyeglszyg.supabase.co/storage/v1/object/public/recordings/eds_words.json -o eds_words.json || echo "[]" > eds_words.json
+          python3 build_scenes.py words _site/scenes --eds eds_words.json
           for f in animals head body; do test -f _site/scenes/$f.json; done
           # Browsers also ask for /favicon.ico on their own, whatever the page says.
           cp brand/web-and-social/favicon.ico _site/favicon.ico

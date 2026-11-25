@@ -379,6 +379,25 @@ reads, each word in one of four states, by the variants order (Ed, 25 November 2
    chat's marker, so a learner knows no speaker has checked it;
 4. **nowhere**: left out entirely, and named in the log.
 
+**Ed's own recordings.** The pictures count Ed's recordings only: `audio_words.json`, plus
+any phone recording Ed has marked as his on the Review page ("This recording is mine",
+off by default, behind his password). Not a speaker code: that changes with the device,
+and a code in a browser is not a credential. Review publishes the marked ones, text only,
+as `eds_words.json` in the public bucket; the publish workflow fetches it and passes it to
+`build_scenes.py words --eds`. Other speakers' recordings never count for the pictures,
+whatever is ticked. The marks are a table of their own, which must exist once in
+Supabase (SQL editor):
+
+    create table if not exists public.eds_recordings (
+      recording_id text primary key,
+      marked_at timestamptz not null default now()
+    );
+    alter table public.eds_recordings enable row level security;
+    -- no policies, on purpose: only the Review page's service key can read or write it
+
+A mark reaches the pictures at the next publish (a push, or "Run workflow" on the
+Actions page); marking is not a push.
+
 **A recording outranks the scene's own spelling.** If a scene's word is not one of Ed's
 recordings but its English is exactly the English of ONE of them (`gloss_key()`: case,
 punctuation and spacing ignored, nothing more), the scene shows Ed's recorded form and

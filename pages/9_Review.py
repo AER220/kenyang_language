@@ -180,7 +180,7 @@ def spelling_warning(spelling):
     once becomes truth. So: look before approving."""
     if not spelling.strip():
         return
-    problems = recordings.spelling_check(spelling)
+    problems = recordings.spelling_check(spelling, st.session_state.get("own_words", ()))
     if not problems:
         return
     lines = []
@@ -248,11 +248,18 @@ def show_recording(store, r, mine):
                        "that plays; this one is kept beside it.")
         spelling_warning(spelling)
 
+        # Off by default. Ticked, approving counts this as Ed's own recording for the
+        # pictures; other speakers' recordings never count there, whatever is ticked.
+        mine = st.checkbox("This recording is mine, in my own voice", value=False,
+                           key=f"mine{rid}",
+                           help="Only your own recordings move a word up on the pictures.")
         yes, nope = st.columns(2)
         if yes.button("Approve", key=f"ok{rid}", type="primary", use_container_width=True,
                       disabled=not spelling.strip()):
             try:
                 recordings.approve(store, r, spelling, english)
+                if mine:
+                    recordings.mark_mine(store, r, True)
             except recordings.Trouble as e:
                 st.error(f"Not approved: {e}")
                 return
@@ -268,9 +275,18 @@ def show_recording(store, r, mine):
             st.rerun()
 
 
-def show_approved(store, r):
+def show_approved(store, r, own_ids=None):
     rid = r["id"]
     left, right = st.columns([4, 1])
+    if own_ids is not None:
+        was = rid in own_ids
+        now = left.checkbox("Mine, in my own voice", value=was, key=f"own{rid}")
+        if now != was:
+            try:
+                recordings.mark_mine(store, r, now)
+                st.rerun()
+            except recordings.Trouble as e:
+                st.error(f"Not changed: {e}")
     left.markdown(f"**{r['typed_kenyang']}** "
                   + ("· primary " if r.get("is_primary") else "")
                   + f"· {r.get('speaker') or 'unnamed'} · "
@@ -308,6 +324,13 @@ with tab_rec:
             st.caption(f"{len(queue)} waiting. Press Listen to hear one; "
                        "Approve appears once you have.")
         mine = my_own_words()
+        # the words of recordings marked as Ed's: the spelling check counts them as his
+        try:
+            ids = recordings.eds_ids(store)
+            st.session_state.own_words = [w["kenyang"] for w in recordings.eds_words(
+                recordings.words(store), recordings.approved(store), ids)] if ids else []
+        except recordings.Trouble:
+            st.session_state.own_words = []
         for r in queue:
             show_recording(store, r, mine)
 
@@ -320,8 +343,16 @@ with tab_rec:
                 st.error(f"Could not read them: {e}")
             if not done:
                 st.caption("None approved yet.")
+            try:
+                own_ids = recordings.eds_ids(store)
+            except recordings.Trouble as e:
+                own_ids = None
+                st.error(f"Could not read which recordings are yours: {e}")
+            if own_ids is None:
+                st.info("To mark recordings as your own, run the SQL in CLAUDE.md "
+                        "(\"Ed's own recordings\") once in Supabase.")
             for r in reversed(done):
-                show_approved(store, r)
+                show_approved(store, r, own_ids)
 
         with st.expander("Correct a word's spelling or English"):
             st.caption("The recordings stay as they are; only the word changes, and "
