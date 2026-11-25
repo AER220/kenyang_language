@@ -383,6 +383,19 @@ the printed sheet puts each word under its animal so the drawing is clear to col
 To add a scene: the picture in `scenes/`, its layout beside it, `images`, then add its
 name to `SCENE_NAMES` in index.html.
 
+**What a picture must be, for the colouring to work.** Clean line art: thick, even
+outlines, no shading or texture, a plain white background, nothing touching the edge,
+no text. **Every part that will be coloured separately needs its own closed outline.**
+The fill follows the drawing's closed regions, not what a part is called: in
+animals.png the cat is one region from ears to tail, which works because each animal is
+one word, but a picture for "colour the ear" needs each ear closed off on its own. Check
+a new picture's regions before building on it (count the closed regions, and confirm
+the background is one region, so no colour can leak out of the drawing).
+
+**Squarer, not a long line.** A very wide thin band (animals.png is 1600x361 once
+cropped) leaves the subjects small and crowds the numbered points on a phone. Future
+pictures should be closer to square: two rows rather than one long line.
+
 Scenes are layouts onto words that already exist. A picture never brings a word with
 it: pictures are generated to fit confirmed words, never the reverse, and a scene waits
 until its words are confirmed (and, where it plays sound, recorded). Labels go in HTML
