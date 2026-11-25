@@ -21,6 +21,7 @@ import json
 import math
 import html
 import unicodedata
+import hashlib
 import numpy as np
 import streamlit as st
 import streamlit.components.v1 as components
@@ -412,17 +413,22 @@ def chunk_text(text, size=CHUNK_CHARS, overlap=CHUNK_OVERLAP):
 
 def kb_signature():
     """
-    Fingerprint of the folder: names, sizes, modified times.
+    Fingerprint of the folder: each file's name and a hash of its contents.
 
     Passed into the cached builders purely as a cache key. Edit a knowledge file and
     the key changes, so corpus and search index both rebuild. Without it, a disk cache
     would serve last week's Kenyang forever.
+
+    Contents, not modified times: a fresh clone (Render, every deploy) stamps every file
+    with the time of the clone, so a time-based fingerprint never matched index.npz there
+    and every cold start re-embedded the whole corpus.
     """
     marks = []
     for path in sorted(glob.glob(os.path.join(KB_ROOT, "**", "*"), recursive=True)):
         if os.path.isfile(path) and path.lower().endswith(READABLE):
-            s = os.stat(path)
-            marks.append(f"{os.path.basename(path)}:{s.st_size}:{int(s.st_mtime)}")
+            with open(path, "rb") as f:
+                digest = hashlib.sha256(f.read()).hexdigest()[:16]
+            marks.append(f"{os.path.basename(path)}:{digest}")
     return "|".join(marks)
 
 
