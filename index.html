@@ -840,6 +840,62 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
    answer, a builder option), the Kenyang carries lang="ken" (ISO 639-3) and
    this rule gives it the serif. */
 :lang(ken){font-family:var(--serif)}
+
+/* ── pictures: a Kenyang word on a picture ─────────────────────────
+   A scene is a layout: scenes/<name>.json (built by build_scenes.py at publish)
+   says where each confirmed word sits, in percent of the picture. The labels are
+   plain HTML text over the picture, so say.js marks and plays them like any word
+   on the page. The picture is ink on paper in both themes; the labels are chips
+   in the page's own colours. No warm colour here but say.js's sound mark. */
+.scene{margin:0 0 30px}
+.scene h3{font:600 20px/1.3 var(--serif);color:var(--head);margin:0 0 12px}
+.scene .pic{position:relative;background:#FCFBF8;border:1px solid var(--edge);
+  border-radius:var(--r);padding:10px;overflow:hidden}
+.scene .pic img{display:block;width:100%;height:auto}
+.scene .lbl{position:absolute;transform:translate(-50%,-50%);text-align:center;
+  background:var(--base);color:var(--text);border:1px solid var(--edge-hi);
+  border-radius:12px;padding:4px 10px 5px;line-height:1.2;white-space:nowrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.scene .lbl b{display:block;font:600 19px/1.25 var(--serif)}
+.scene .lbl small{display:block;font-size:12px;color:var(--mute)}
+.scene .dot{position:absolute;transform:translate(-50%,-50%);width:26px;height:26px;
+  border-radius:50%;border:2px solid var(--accent);background:var(--base);
+  color:var(--head);font:700 13px/22px var(--sans);text-align:center;display:none}
+.scene .dot.lit{background:var(--accent);color:var(--on-accent)}
+.scene ol.words{display:none;margin:12px 0 0;padding:0;list-style:none}
+.scene ol.words li{display:flex;gap:12px;align-items:baseline;padding:10px 12px;
+  border-bottom:1px solid var(--edge);cursor:pointer}
+.scene ol.words li .n{min-width:22px;height:22px;border-radius:50%;border:2px solid var(--accent);
+  color:var(--head);font:700 12px/18px var(--sans);text-align:center;flex:none}
+.scene ol.words li.lit .n{background:var(--accent);color:var(--on-accent)}
+.scene ol.words b{font:600 20px/1.3 var(--serif)}
+.scene ol.words small{color:var(--mute);font-size:14px;margin-left:10px}
+.scenetools{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 0}
+.scenenote{color:var(--mute);font-size:14px;margin:10px 0 0}
+/* a phone: numbered points on the picture, the words beneath */
+@media (max-width:720px){
+  .scene .lbl{display:none}
+  .scene .dot{display:block}
+  .scene ol.words{display:block}
+}
+/* the printed sheet: the picture large, the words in place and listed, black on white */
+.printsheet{display:none}
+@media print{
+  body > *:not(.printsheet), html > div{display:none !important}
+  html, body{background:#fff !important}
+  .printsheet{display:block;color:#000;background:#fff;font-family:Georgia,serif}
+  .printsheet h1{font-size:28pt;margin:0 0 4mm}
+  /* the words go under their animals, so the drawing is clear to colour */
+  .printsheet .pic{position:relative;border:none;padding:0 0 24mm}
+  .printsheet .pic img{width:100%}
+  .printsheet .lbl{position:absolute;top:auto !important;bottom:0;transform:translateX(-50%);background:#fff;
+    border:1.5pt solid #000;border-radius:8pt;padding:1mm 3mm;text-align:center;white-space:nowrap}
+  .printsheet .lbl b{display:block;font-size:20pt}
+  .printsheet .lbl small{display:block;font-size:10pt}
+  .printsheet .foot{margin-top:8mm;font-size:10pt;color:#333}
+  @page{size:A4 landscape;margin:12mm}
+  ::highlight(nepem-say){text-decoration:none}
+}
 </style>
 <script>
 /* Runs before the page paints, so nobody sees the wrong colours flash first.
@@ -935,6 +991,20 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
 
     <div class="picks" id="picks" role="tablist" aria-label="Choose an activity"></div>
     <div class="stage" id="stage" role="tabpanel" aria-live="polite"></div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ══ PICTURES ═══════════════════════════════════════════════════
+       Each scene is a layout of words that already exist: a picture never
+       brings a word with it. Built from scenes/*.json by build_scenes.py,
+       which leaves out any word Ed has not confirmed. -->
+  <section class="sec" id="pictures">
+    <h2 class="big">Point at it, and hear it said.</h2>
+    <p class="lead">Tap a word to hear it in a speaker's voice. A word with no
+      recording yet is shown without one. Print a page to colour in, with the
+      words on it.</p>
+    <div id="scenes" aria-live="polite"></div>
   </section>
 
   <hr class="rule">
@@ -3142,6 +3212,7 @@ document.addEventListener("pointerdown", e => {
 const PLAN = [
   ["learn",    "Learn",    "✦", [".hero", "#numbers", "#alone"]],
   ["play",     "Play",     "🧩", ["#table"]],
+  ["pictures", "Pictures", "◐",  ["#pictures"]],
   ["feedback", "Feedback", "🌿", ["#help", "#wall"]],
   ["about",    "About",    "◇",  ["#honest", "#about", "#governance", "#invent"]]
 ];
@@ -3290,6 +3361,67 @@ if (dock.style.left) restoreDock();
   if (!matchMedia("(prefers-reduced-motion: reduce)").matches)
     setInterval(turn, 5200);
 }
+
+/* ── pictures ───────────────────────────────────────────────────── */
+const SCENE_NAMES = ["animals"];
+async function loadScenes(){
+  const box = $("scenes");
+  if (!box) return;
+  const parts = [];
+  for (const name of SCENE_NAMES){
+    try{
+      const r = await fetch(`scenes/${name}.json`, {cache:"no-cache"});
+      if (!r.ok) continue;
+      parts.push(drawScene(name, await r.json()));
+    }catch(e){}
+  }
+  box.innerHTML = parts.join("") || `<p class="scenenote">The pictures could not be loaded.</p>`;
+  box.querySelectorAll(".scene").forEach(wireScene);
+}
+function drawScene(name, sc){
+  const pts = sc.points || [];
+  const where = p => `left:${p.x}%;top:${p.y}%`;
+  const label = p => `<b lang="ken">${esc(p.word)}</b>` + (p.english ? `<small>${esc(p.english)}</small>` : "");
+  const pic = `<div class="pic"><img src="${esc(sc.image)}" alt="${esc(sc.title)}: ${
+      esc(pts.map(p => p.english || p.word).join(", "))}" width="${sc.size[0]}" height="${sc.size[1]}">
+    ${pts.map((p, i) => `<span class="lbl" style="${where(p)}">${label(p)}</span>
+      <span class="dot" style="${where(p)}" data-i="${i}" aria-hidden="true">${i + 1}</span>`).join("")}</div>`;
+  return `<div class="scene" data-name="${esc(name)}">
+    <h3>${esc(sc.title)}</h3>${pic}
+    <ol class="words">${pts.map((p, i) => `<li data-i="${i}"><span class="n" aria-hidden="true">${i + 1}</span>
+      <span>${label(p)}</span></li>`).join("")}</ol>
+    <div class="scenetools"><button class="btn" data-print="${esc(name)}">Print a colouring page</button></div>
+    <div class="printsheet" hidden><h1>${esc(sc.title)} · Kɛ́nyāŋ</h1>
+      <div class="pic"><img src="${esc(sc.image)}" alt="">${pts.map(p =>
+        `<span class="lbl" style="${where(p)}">${label(p)}</span>`).join("")}</div>
+      <p class="foot">nepem.org · Nɛpɛ́m, Kenyang for the whole family. Every word on this
+        page was checked by a native speaker.</p></div>
+  </div>`;
+}
+function wireScene(el){
+  const light = i => {
+    el.querySelectorAll(".dot, ol.words li").forEach(x => x.classList.toggle("lit", x.dataset.i === String(i)));
+  };
+  /* say.js plays the word itself; this only lights its point on the picture */
+  el.querySelectorAll("ol.words li").forEach(li => li.addEventListener("click", () => light(li.dataset.i)));
+  el.querySelectorAll(".dot").forEach(d => d.addEventListener("click", () => {
+    light(d.dataset.i);
+    const row = el.querySelector(`ol.words li[data-i="${d.dataset.i}"]`);
+    if (row) row.scrollIntoView({block:"nearest", behavior:"smooth"});
+  }));
+  el.querySelector("[data-print]").addEventListener("click", () => {
+    /* the sheet must sit directly under body for the print rule to show it alone */
+    const sheet = el.querySelector(".printsheet").cloneNode(true);
+    sheet.hidden = false;
+    document.body.appendChild(sheet);
+    const done = () => { sheet.remove(); window.removeEventListener("afterprint", done); };
+    window.addEventListener("afterprint", done);
+    const img = sheet.querySelector("img");
+    const go = () => window.print();
+    if (img.complete) go(); else img.addEventListener("load", go, {once:true});
+  });
+}
+loadScenes();
 </script>
 <script src="say.js"></script>
 </body>

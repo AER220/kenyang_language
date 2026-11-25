@@ -48,6 +48,13 @@ jobs:
           for f in favicon.ico favicon-16x16.png favicon-32x32.png apple-touch-icon.png nepem-og-social-card.png; do
             cp "brand/web-and-social/$f" _site/brand/web-and-social/
           done
+          # The pictures: the web copies only (the originals in scenes/ are sources), and
+          # each scene's word layout, built now from the sources. build_scenes.py leaves
+          # out any word Ed has not confirmed and names it in this log.
+          mkdir -p _site/scenes/web
+          cp scenes/web/*.webp _site/scenes/web/
+          python3 build_scenes.py words _site/scenes
+          test -f _site/scenes/animals.json
           # Browsers also ask for /favicon.ico on their own, whatever the page says.
           cp brand/web-and-social/favicon.ico _site/favicon.ico
           echo "Publishing:"; find _site -maxdepth 1 | sort; echo "audio files: $(ls _site/audio | wc -l)"

@@ -214,7 +214,8 @@ the social card, plus favicon.ico again at the root) and publishes those alone, 
 QUESTIONS_for_Ed.md, this file and the Python files are not downloadable. A new file
 the site needs (a page, an image, a script) must be added to that list, or it will
 not be served. Source files stay off it: the scene originals in `scenes/`, the rest of
-`brand/`. Nothing else moves: Render reads the repo as it is. The workflow has a build
+`brand/`. The pictures are published as `scenes/web/*.webp` and the scene files the
+workflow builds. Nothing else moves: Render reads the repo as it is. The workflow has a build
 job and a deploy job: with both in one job the deploy three times could not find the
 upload made a moment before. The deploy retries three times, after 1, 2 and 4 minutes,
 before the run goes red; one retry after 30 seconds failed twice on 25 November 2026.
@@ -367,6 +368,20 @@ hundreds of sentences").
 ---
 
 ## The visual section
+
+**How a scene is built.** `scenes/<name>.json` is the layout and nothing else: the picture's
+name and, for each word, where it sits, in percent of the ORIGINAL picture. No English, no
+spelling of its own; `word` is only the key. `python build_scenes.py images` makes the web
+copy in `scenes/web/` (cropped to the drawing, near-white made pure white, lossless WebP);
+run it after adding or changing a picture, and commit `scenes/web/`. The publish workflow
+runs `python build_scenes.py words _site/scenes` every time, which writes what the page
+reads and **leaves out any word Ed has not confirmed** (in a verified file, or recorded by
+Ed himself; never another speaker's recording, and never an English word that only
+appears in the verified files' prose), naming it in the log. The page's labels are HTML
+text, so say.js plays them unchanged. A phone shows numbered points with the words beneath;
+the printed sheet puts each word under its animal so the drawing is clear to colour.
+To add a scene: the picture in `scenes/`, its layout beside it, `images`, then add its
+name to `SCENE_NAMES` in index.html.
 
 Scenes are layouts onto words that already exist. A picture never brings a word with
 it: pictures are generated to fit confirmed words, never the reverse, and a scene waits
