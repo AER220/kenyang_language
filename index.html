@@ -3513,7 +3513,7 @@ function drawScene(name, sc){
   /* a form Ed's recording replaced is kept and shown, never discarded */
   const also = p => p.variant ? `<small class="also">also written <span lang="ken">${esc(p.variant)}</span></small>` : "";
   const label = p => `<b lang="ken">${esc(p.word)}</b>` + (p.english ? `<small>${esc(p.english)}</small>` : "") + mark(p) + also(p);
-  const dots = pts.map((p, i) => `<span class="dot" style="${where(p)}" data-i="${i}" aria-hidden="true">${i + 1}</span>`).join("");
+  const dots = pts.map((p, i) => `<span class="dot" style="${where(p)}" data-i="${i}" data-state="${esc(p.state || "")}" aria-hidden="true">${i + 1}</span>`).join("");
   const lbls = sc.layout === "points" ? "" : pts.map(p => `<span class="lbl" style="${where(p)}">${label(p)}</span>`).join("");
   const pic = `<div class="pic"><img src="${esc(sc.image)}" alt="${esc(sc.title)}" width="${sc.size[0]}" height="${sc.size[1]}">${lbls}${dots}</div>`;
   const rows = pts.map((p, i) => `<li data-i="${i}"><span class="n" aria-hidden="true">${i + 1}</span><span>${label(p)}</span></li>`).join("")
@@ -3541,12 +3541,30 @@ function wireScene(el){
   const light = i => {
     el.querySelectorAll(".dot, ol.words li").forEach(x => x.classList.toggle("lit", x.dataset.i === String(i)));
   };
-  /* say.js plays the word itself; this only lights its point on the picture */
+  /* say.js plays a word tapped in the list; this only lights its point */
   el.querySelectorAll("ol.words li").forEach(li => li.addEventListener("click", () => light(li.dataset.i)));
+  /* A dot plays its word by handing the tap to the word in the list. say.js
+     finds a word by where a click lands, not by which element was clicked, so
+     the click is sent to the word's own element at that word's place on the
+     screen: exactly what a finger on the word does, and say.js is unchanged.
+     It is sent inside the dot's own tap, so the browser counts it as the
+     person's gesture and lets the sound play. say.js decides as always: a word
+     it has no recording of stays silent. A "from written sources" word is never
+     handed on at all, even if some recording happens to share its letters. */
+  const sayRow = (row, dot) => {
+    if (dot.dataset.state === "book") return;
+    const w = row.querySelector("b[lang=ken]");
+    const r = w && w.getClientRects()[0];
+    if (!r) return;
+    w.dispatchEvent(new MouseEvent("click", {bubbles:true, cancelable:true, view:window,
+      clientX: r.left + r.width / 2, clientY: r.top + r.height / 2}));
+  };
   el.querySelectorAll(".dot").forEach(d => d.addEventListener("click", () => {
     light(d.dataset.i);
     const row = el.querySelector(`ol.words li[data-i="${d.dataset.i}"]`);
-    if (row) row.scrollIntoView({block:"nearest", behavior:"smooth"});
+    if (!row) return;
+    sayRow(row, d);
+    row.scrollIntoView({block:"nearest", behavior:"smooth"});
   }));
   el.querySelector("[data-print]").addEventListener("click", () => {
     /* the sheet must sit directly under body for the print rule to show it alone */
