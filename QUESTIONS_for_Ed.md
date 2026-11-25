@@ -10,34 +10,6 @@ before it was moved, and the section is the rule it belongs to.
 
 ---
 
-## WAITING TO PUSH (end of 24 November 2026)
-
-Nothing below is live. Do not push until Ed says so.
-
-Where things stand:
-- Commit 6324988, local, not pushed: every knowledge file named for its tier
-  (dictionary.txt is dictionary_ref.txt), the word flag checking every non-English
-  word, english_words.txt, the two-job publish workflow, one index rebuild.
-- Not committed: the fix for "pluralization" (long English endings count as English),
-  today's decisions written into CLAUDE.md, and this note.
-- Measured on 6324988: the flag fired on 1 of 20 replies, which passes. The house test
-  gave beket 1 time in 5, which fails. The other four said bɛkɛt, from the books.
-
-Why the house test fails: Ed's "ɛkɛt → beket" reaches the model on this question, at
-the top tier, beside the books' "plural: bɛkɛt". gpt-4o-mini picks the books' form
-anyway. An instruction already says the verified form wins; it does not hold.
-
-Ed decides first tomorrow:
-1. Commit the uncommitted work above, into 6324988 or as its own commit?
-2. Then, in order: the bigger English list; then code that holds back a book's form
-   when the verified file gives a different one for the same word (never leave a
-   checkable fact to an instruction). After both: the twenty replies and the house
-   test again, and push only on Ed's word.
-
-Delete this section when it is resolved.
-
----
-
 ## 1. The person words, standing alone
 
 From `knowledge_base/kenyang_verified_speaker.md`, line 1319
@@ -426,3 +398,66 @@ speaker does not use, and words whose marks look stripped. Not urgent while thos
 files stay at reference tier, but worth doing before any of their words is
 promoted to verified.]
 
+---
+
+## 22. nɛpɛm: does it mean life, and is bapɛm its plural?
+
+Found on 25 November 2026. Asked how to make a noun plural, the chat said nɛpɛm means
+"life" and bapɛm "lives". Neither is in a verified file. Both come from the course
+and the books:
+
+- `knowledge_base/Context_Rich_Kenyang_Ch1_core.txt`, line 86 (noun class 5/6):
+  singular example "nɛpɛm (life)", plural example "bapɛm (lives)"
+- `knowledge_base/kenyang_grammar_ref.md`, line 73: "class 5 → 6  nepɛm / bapɛm
+  life / lives" (nepɛm with a plain e)
+
+Nɛpɛm is the project's own name, so this matters beyond the one reply.
+
+The spelling is settled (Ed, 25 November 2026): Nɛpɛ́m, capital N, acute on the
+second ɛ. nɛpɛm and nepɛm are recorded as book spellings.
+
+The chat's header says "Nɛpɛ́m means life", from the course chapter. Left as it is
+until Ed says.
+
+[TO CONFIRM: does Nɛpɛ́m mean life? Is bapɛm its plural?]
+
+---
+
+## 23. grandfather: Eta nsinsi or étá nsinsi
+
+Found on 25 November 2026. Asked for grandfather, the chat said "Eta nsinsi":
+capital E, no tone marks. The verified file writes `étá  nsinsi`
+(`kenyang_verified_speaker.md`, line 1228), and the CLAUDE.md test expects that.
+The chat's form is the course's:
+
+- `knowledge_base/ch4_Relationship_chategories_core.txt`, line 24: "Eta nsinsi",
+  with "Etaya Ne nsinsi" for my grandfather
+- `knowledge_base/Ch4_Context_Rich_core.txt`, line 26: the same
+
+The same drift as section 21: the course drops marks the speaker writes, and adds a
+capital. The house fix (holding back a book form the verified file contradicts) covers
+plurals only, so it will not catch this.
+
+[TO SETTLE: is "Eta nsinsi" an acceptable written form, or should the chat always give
+étá nsinsi? And is the capital E just the course's habit for a headword?]
+
+---
+
+## 24. The course's plural rule and Ed's beket
+
+Found on 25 November 2026. The course chapter gives class 7/8 as ɛ- to bɛ-:
+
+- `knowledge_base/Context_Rich_Kenyang_Ch1_core.txt`: class 7/8, singular prefix ɛ-,
+  example ɛtok (village), plural prefix bɛ-, example bɛtok (villages)
+
+Applied to ɛkɛt, that rule gives bɛket, and the chat built exactly that, with no book
+form in front of it. Ed's verified form is beket. Ed's verified file also has
+ékwá → békwá, where the ɛ- of the books becomes é.
+
+Nothing is changed. A confirmed pair outranks a derived form, so the chat teaches
+beket. The rule itself is not declared wrong, and ɛkɛt is not declared an exception.
+
+[WAITING ON MORE CONFIRMED PLURALS: is the course's ɛ- to bɛ- wrong, does it hold for
+some nouns and not others, or is ɛkɛt an exception? Every ɛ- noun Ed confirms with its
+plural (in the form "singular → plural   gloss → glosses") will tell us more, and the
+code will start holding back the books' contradicting form for it.]

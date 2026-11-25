@@ -869,6 +869,7 @@ def full_block(signature):
     so the whole thing sits in the model's prompt cache and costs the reduced rate.
     """
     _a, chunks, _m, _o, _t = build_corpus(signature)
+    chunks = hold_back(chunks, held_back(signature)["lines"])
     out = ["===== THE COMPLETE KENYANG MATERIAL — everything I have, nothing held back. "
            "If a word or rule is not in here, it is not something you know. ====="]
     for tier, note in (("verified", "native-speaker verified — outranks everything"),
@@ -878,8 +879,253 @@ def full_block(signature):
         group = [c for c in chunks if c["tier"] == tier]
         if group:
             out.append(f"\n--- {tier.upper()} ({note}) ---")
-            out += [c["text"] for c in group]
+            out += [c["text"] if tier == "verified" else scrub_sources(c["text"])
+                    for c in group]
     return "\n\n".join(out)
+
+
+# =============================================================================
+# HOLDING BACK A BOOK'S FORM THE SPEAKER CONTRADICTS
+# =============================================================================
+# The model is told the verified form wins, and with "ɛkɛt → beket" and a book's
+# "plural: bɛkɛt" both in front of it, it picked the book's four times in five. So the
+# code decides: a book entry for the same word with a plural the speaker never writes
+# is left out of what the model is shown. The files are not touched, and the whole entry
+# goes, never a rewritten line. Only plurals, and only from the explicit
+# "singular → plural   gloss → glosses" lines in the verified files: each pair Ed adds
+# there extends this.
+
+# One indented line: Kenyang pair, two or more spaces, English pair, optional note.
+_PAIR = re.compile(r"^\s+(?P<sg>\S.*?)\s+→\s+(?P<pl>.+?)\s{2,}(?P<en>\S.*?)\s*→\s*"
+                   r"(?P<enpl>.+?)(?:\s{2,}.*)?$")
+# A book spelling Ed has recorded beside his own form, in a verified file:
+#     book spelling: bɛkɛt, bɛket       confirmed: beket       houses
+# The book forms are not confirmed by being written there. They are recorded so that a
+# learner who meets one is told it is a book's spelling, never that it does not exist.
+_BOOK_SPELLING = re.compile(r"^\s+book spelling:\s*(?P<forms>\S.*?)\s{2,}confirmed:\s*"
+                            r"(?P<canon>\S+)(?:\s{2,}.*)?$", re.IGNORECASE)
+
+
+def without_book_spellings(text):
+    """A verified file's text with its book-spelling lines taken out, for every check
+    that asks what a speaker confirmed."""
+    return "\n".join(l for l in text.split("\n") if not _BOOK_SPELLING.match(l))
+
+
+_HEAD_KEYS = ("kenyang", "k", "kenyang_word", "kenyang_translation", "kenyang_phrase")
+_PLURAL_KEYS = ("plural", "pl", "plural_form")
+_GLOSS_KEYS = ("english", "e", "english_word", "english_translation")
+
+
+def _fold_head(w):
+    """For deciding two headwords are the same word: case, tone marks, ɛ/e, ɔ/o and
+    hyphens ignored. Never used on the plural, where those differences are the point."""
+    w = unicodedata.normalize("NFD", w.lower())
+    w = "".join(c for c in w if unicodedata.category(c) != "Mn")
+    return w.replace("ɛ", "e").replace("ɔ", "o").replace("-", "").strip()
+
+
+def _fold_gloss(e):
+    """The gloss guards against homographs (amik is ground, and amik is eyes)."""
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z ]", " ", e.lower())).strip()
+
+
+def _nfc(w):
+    return unicodedata.normalize("NFC", w).lower().strip()
+
+
+def verified_plurals(paths):
+    """{(folded singular, folded gloss): {plural, ...}} from the verified files' arrow
+    lines, and every whole word the verified files contain, as written."""
+    pairs, words = {}, set()
+    for path in paths:
+        with open(path, encoding="utf-8", errors="replace") as f:
+            text = without_book_spellings(f.read())
+        words |= {_nfc(w) for w in _WORD.findall(unicodedata.normalize("NFC", text))}
+        for line in text.split("\n"):
+            m = _PAIR.match(line)
+            if m:
+                key = (_fold_head(m["sg"]), _fold_gloss(m["en"]))
+                pairs.setdefault(key, set()).add(_nfc(m["pl"]))
+    return pairs, words
+
+
+@st.cache_data(show_spinner=False, persist="disk")
+def held_back(signature):
+    """
+    What to hold back: {"lines": {rendered book line: reason}, "forms": {the book's
+    plural: the one verified plural}}. "forms" is what swap_held_back() may replace.
+
+    A book entry is the same word as a verified pair when its headword matches after
+    folding AND its gloss matches. Its plural is held back only if that exact spelling
+    appears nowhere in any verified file: the books' bɛ́kwá (plantains) is also in the
+    recorded texts, so it stays, while bɛkɛt and bɛket (houses) go.
+    """
+    _ = signature
+    paths = sorted(glob.glob(os.path.join(KB_ROOT, "**", "*"), recursive=True))
+    paths = [p for p in paths if os.path.isfile(p) and p.lower().endswith(READABLE)]
+    pairs, vwords = verified_plurals(
+        [p for p in paths if tier_of(os.path.basename(p)) == "verified"])
+    out, forms, phrases = {}, {}, set()
+    if not pairs:
+        return {"lines": out, "forms": forms, "phrases": []}
+    for path in paths:
+        if tier_of(os.path.basename(path)) in (None, "verified") or path.lower().endswith(".pdf"):
+            continue
+        with open(path, encoding="utf-8", errors="replace") as f:
+            for raw in f:
+                raw = raw.strip()
+                if not raw.startswith("{"):
+                    continue
+                try:
+                    d = json.loads(raw)
+                except Exception:
+                    continue
+                if not isinstance(d, dict):
+                    continue
+                head = next((d[k] for k in _HEAD_KEYS if isinstance(d.get(k), str)), "")
+                plural = next((d[k] for k in _PLURAL_KEYS if isinstance(d.get(k), str)), "")
+                gloss = next((d[k] for k in _GLOSS_KEYS if isinstance(d.get(k), str)), "")
+                for v in (head, plural):
+                    if " " in v.strip():
+                        phrases.add(_nfc(v))
+                if not (head and plural.strip() and gloss):
+                    continue
+                theirs = pairs.get((_fold_head(head), _fold_gloss(gloss)))
+                if not theirs or _nfc(plural) in theirs or _nfc(plural) in vwords:
+                    continue
+                line = tidy(parse_json_records(raw))
+                if line:
+                    out[line] = (f"{os.path.basename(path)}: {head} / {plural} — the "
+                                 f"verified file gives {' or '.join(sorted(theirs))}")
+                    if len(theirs) == 1:
+                        forms[_nfc(plural)] = next(iter(theirs))
+    # Book phrases of several words that hold a held-back form ("bɛkɛt bɛ́so mmwɛ́t",
+    # bathrooms): the swap must never touch one, or the code would build a phrase.
+    keep = sorted({p for p in phrases for f in forms
+                   if f in (_nfc(w) for w in _WORD.findall(p))}, key=len, reverse=True)
+    return {"lines": out, "forms": forms, "phrases": keep}
+
+
+def hold_back(found, held):
+    """The passages with every held-back book line taken out. Copies, so the cached
+    chunks (and their row-for-row match with index.npz) are never changed."""
+    if not held:
+        return found
+    out = []
+    for c in found:
+        if c["tier"] == "verified" or not any(h in c["text"] for h in held):
+            out.append(c)
+            continue
+        text = c["text"]
+        for h in held:
+            text = text.replace(h, "")
+        text = re.sub(r"\n{2,}", "\n", text).strip()
+        if text:
+            out.append({**c, "text": text})
+    return out
+
+
+# =============================================================================
+# NAMING NO SOURCE
+# =============================================================================
+# The model is told never to name where its Kenyang comes from, and the book passages
+# hand it page numbers "(p.22)", "[cite: 3]", "chapter: 14" and a publisher's address on
+# every other line. So the code takes those out of what the model sees (scrub_sources),
+# and takes any sentence naming a source out of what the learner sees
+# (drop_source_claims). The flag under a reply says "from written sources" and nothing
+# more specific. Only the text sent to the model is scrubbed: the chunks, and their
+# row-for-row match with index.npz, are never changed, and no Kenyang is touched.
+
+# Record keys that say where an entry came from, never what it means. Not "tier",
+# "verified" or "decode_confidence": they name no source, and they tell the model an
+# entry is unchecked, which it needs.
+_SOURCE_KEYS = ("citation", "chapter", "id", "src", "seen_in", "document_id", "source",
+                "source_file", "page")
+_KEY_FIELD = re.compile(r"(^|\s\|\s)(?:" + "|".join(_SOURCE_KEYS) + r"):[^|\n]*(?=\s\||$)",
+                        re.MULTILINE)
+# "(p.22)" or "(page 22)", never "(P1)": the tone book labels a past tense P1.
+_PAGE_REF = re.compile(r"\s*\((?:pp?\.|page)\s*\d+(?:\s*[-–]\s*\d+)?\)", re.IGNORECASE)
+_CITE = re.compile(r"\s*\[cite:[^\]]*\]", re.IGNORECASE)
+# A topic that only says which book section it was ("Dictionary: E").
+_BOOK_TOPIC = re.compile(r"(^|\s\|\s)topic: Dictionary[^|\n]*(?=\s\||$)", re.MULTILINE)
+# Book titles, publishers and file names. Not authors' surnames: Mbuagbaw and Tanyi are
+# also Bayangi family names, and a learner's own name must never be taken out.
+_SOURCE_NAMES = re.compile(
+    r"CABTAL|Bible Translation|EyaLingo|Ram[ií]rez|Hortatory Discourse|"
+    r"Conversational Kenyang|\b\w+\.(?:txt|jsonl|json|md|pdf|npz)\b", re.IGNORECASE)
+_SOURCE_LINE = re.compile(r"^\s*(?:Source|Sources|Citation|Reference)s?\s*:", re.IGNORECASE)
+
+
+def scrub_sources(text):
+    """A book or course passage with the marks that name its source taken out."""
+    lines = []
+    for line in text.split("\n"):
+        if _SOURCE_LINE.match(line) or _SOURCE_NAMES.search(line):
+            continue
+        line = _CITE.sub("", _PAGE_REF.sub("", line))
+        cut = _BOOK_TOPIC.sub(r"\1", _KEY_FIELD.sub(r"\1", line))
+        if cut != line:
+            # Close only the gaps a removed field left, so a table row keeps its borders.
+            cut = re.sub(r"\s*\|(?:\s*\|)+\s*", " | ", cut)
+            line = re.sub(r"^\s*\|\s*|\s*\|\s*$", "", cut)
+        lines.append(line)
+    return "\n".join(lines).strip()
+
+
+# In a reply: a page or chapter number, a cite marker, a file name, or a title.
+_SOURCE_CLAIM = re.compile(
+    r"\bpp?\.\s*\d+|\bpages?\s+\d+|\[cite|\bchapter\s+\d+|\bch\.\s*\d+|"
+    + _SOURCE_NAMES.pattern, re.IGNORECASE)
+
+
+def drop_source_claims(reply):
+    """Take out any sentence of the model's that names a source: a page, a chapter, a
+    file or a book. Line breaks are kept. The same pattern as drop_tap_claims. A bare
+    "(p.22)" or "[cite: 3]" after a word is taken out on its own, so the word stays."""
+    reply = _CITE.sub("", _PAGE_REF.sub("", reply))
+    if not _SOURCE_CLAIM.search(reply):
+        return reply
+    lines = []
+    for line in reply.split("\n"):
+        parts = re.split(r"(?<=[.!?])\s+", line)
+        kept = [p for p in parts if not _SOURCE_CLAIM.search(p)]
+        if kept or not line.strip():
+            lines.append(" ".join(kept))
+    return "\n".join(lines).strip()
+
+
+def swap_held_back(reply, forms, phrases=()):
+    """
+    Put the verified plural where a reply gives one the code held back: "bɛket" becomes
+    "beket". Only forms held_back() found (a book's plural for a word Ed gave a
+    different one for), only as whole words, never inside a compound. A reply that also
+    has the verified form is left alone: it is comparing the two, and both are real.
+    Returns (reply, [(from, to), ...]).
+    """
+    done = []
+    norm = unicodedata.normalize("NFC", reply)
+    for bad, good in forms.items():
+        edge = r"(?<![^\W_])(?<![-\u0300-\u036f'’])"
+        tail = r"(?![^\W_])(?![-\u0300-\u036f'’])"
+        good_rx = re.compile(edge + re.escape(good) + tail, re.IGNORECASE)
+        bad_rx = re.compile(edge + re.escape(bad) + tail, re.IGNORECASE)
+        if not bad_rx.search(norm) or good_rx.search(norm):
+            continue
+        low = norm.lower()
+        guard = [(m.start(), m.end()) for p in phrases
+                 for m in re.finditer(re.escape(p), low)]
+        def put(m):
+            if any(a <= m.start() < b for a, b in guard):
+                return m.group(0)
+            done.append((bad, good))
+            return good[0].upper() + good[1:] if m.group(0)[0].isupper() else good
+        norm = bad_rx.sub(put, norm)
+    seen = []
+    for x in done:
+        if x not in seen:
+            seen.append(x)
+    return norm, seen
 
 
 def passages_block(found):
@@ -897,7 +1143,9 @@ def passages_block(found):
         group = [c for c in found if c["tier"] == tier]
         if group:
             out.append(f"\n--- {tier.upper()} ({note}) ---")
-            out += [f"\n[{c['label']}]\n{c['text']}" for c in group]
+            out += [f"\n[{c['label']}]\n"
+                    + (c["text"] if tier == "verified" else scrub_sources(c["text"]))
+                    for c in group]
     return "\n".join(out)
 
 
@@ -1429,7 +1677,7 @@ def confirmed_words(signature):
     for path in glob.glob(os.path.join(KB_ROOT, "**", "*"), recursive=True):
         if os.path.isfile(path) and tier_of(os.path.basename(path)) == "verified":
             with open(path, encoding="utf-8", errors="ignore") as f:
-                words |= _word_set(f.read())
+                words |= _word_set(without_book_spellings(f.read()))
     try:
         with open("audio_words.json", encoding="utf-8") as f:
             for e in json.load(f):
@@ -1919,6 +2167,9 @@ else:                                    # "auto"
     full_mode = 0 < corpus_chars <= FULL_CONTEXT_CHARS
 FULL_TEXT = full_block(signature) if (full_mode and chunks) else ""
 
+_held = held_back(signature) if chunks else {"lines": {}, "forms": {}, "phrases": []}
+HELD, HELD_FORMS, HELD_PHRASES = _held["lines"], _held["forms"], _held["phrases"]
+
 STATIC_CONTEXT = SYSTEM_PROMPT + recordings_block() + "\n\n" + always_on
 
 # --- sidebar: my own instrument panel ----------------------------------------
@@ -2093,10 +2344,12 @@ if st.session_state.pending:
         # In full mode there is nothing to search for — everything goes. `found` is set
         # to the whole corpus so the attested-word check in lesson_note still works.
         if full_mode and FULL_TEXT:
-            found = chunks
+            found = hold_back(chunks, HELD)
             knowledge = FULL_TEXT
         else:
-            found = search(query, chunks, vectors, lexicon)
+            # A book form the verified file contradicts is taken out here, in code; the
+            # instruction that the verified form wins did not hold (see held_back).
+            found = hold_back(search(query, chunks, vectors, lexicon), HELD)
             knowledge = passages_block(found)
         # Keep them so I can audit the answer afterwards. Without this I cannot tell a
         # word that came out of the corpus from one the model invented, and neither can
@@ -2157,10 +2410,9 @@ if st.session_state.pending:
                 # Most turns use no tool, so this halves the cost and the wait.
                 # What it costs: no typing effect on those turns. The reply lands whole,
                 # and it lands sooner than the first word used to.
+                # Painted once, below, after the code's checks: painting it here first
+                # showed a learner the unchecked reply for a moment.
                 reply = (probe.choices[0].message.content or "").strip()
-                if reply:
-                    slot.markdown(bubble("assistant", reply), unsafe_allow_html=True)
-                    painted = len(reply)
             else:
                 # It asked for a lookup. Stream the real answer with the tool output in
                 # view. Tools are NOT offered again: one lookup round is enough, and
@@ -2180,7 +2432,11 @@ if st.session_state.pending:
                                       unsafe_allow_html=True)
                         painted = len(reply)
 
-            reply = drop_tap_claims(reply)
+            reply = drop_source_claims(drop_tap_claims(reply))
+            # A plural the code held back is a checkable fact, so the code puts the
+            # verified form in its place (see swap_held_back).
+            reply, swapped = swap_held_back(reply, HELD_FORMS, HELD_PHRASES)
+            st.session_state.last_swaps = swapped
             if reply.strip():
                 # Which words can be heard is a fact the code can check, so the code says
                 # it. The model is told never to; it once claimed a recording that did not
@@ -2222,6 +2478,16 @@ if st.session_state.get("last_passages"):
         st.markdown("### Check the last answer")
         st.caption("Every Kenyang word in the reply should appear somewhere below. "
                    "If it doesn't, Nɛpɛm invented it.")
+        if HELD:
+            with st.expander(f"{len(HELD)} book entries held back"):
+                st.caption("A book's plural that the verified file contradicts. Left out "
+                           "of what Nɛpɛm sees; the files are unchanged.")
+                for why in sorted(HELD.values()):
+                    st.text(why)
+        if st.session_state.get("last_swaps"):
+            st.caption("In the last reply the code put the verified form in place of a "
+                       "held-back one: " + ", ".join(f"{a} → {b}" for a, b in
+                                                     st.session_state.last_swaps))
         shown = st.session_state.last_passages[:40]
         with st.expander(f"{len(st.session_state.last_passages)} passages used"
                          + (" (showing 40)" if len(st.session_state.last_passages) > 40 else "")):

@@ -66,6 +66,39 @@ tier, so the grammar is never the thing that gets cut. If the sidebar shows the
 red "verified material is being cut" warning, raise `ALWAYS_ON_CHARS`; do not
 reorder or trim the rules.
 
+**A book's plural the verified file contradicts is held back in code** (`held_back()`
+and `hold_back()` in `streamlit_app.py`). The instruction that the verified form wins
+did not hold: with "ɛkɛt → beket" and a book's "plural: bɛkɛt" side by side, the model
+picked the book's four times in five. So a book entry is left out of what the model
+sees when all three hold:
+
+- its headword is the same word as a verified singular, compared with case, tone marks,
+  ɛ/e, ɔ/o and hyphens ignored;
+- its English gloss matches too (the guard against homographs: amik is ground and eyes);
+- its plural, compared exactly, appears nowhere in any verified file. The books' bɛ́kwá
+  stays because the recorded texts have it.
+
+The whole entry goes; a book line is never rewritten, and the files are not touched.
+The sidebar lists what is held back. If a reply still gives a held-back plural (the
+model can build bɛket itself from the course's ɛ- to bɛ- rule), `swap_held_back()` puts
+the verified form in its place. Only forms the code held back, only whole words, never
+inside a book phrase of several words ("bɛkɛt bɛ́so mmwɛ́t", bathrooms), and never in a
+reply that already has the verified form, which is comparing the two.
+
+**It works off the explicit `singular → plural   gloss → glosses` lines in the verified
+files, so every pair Ed adds there extends its reach.** Today there are two: ɛkɛt → beket and ékwá → békwá. It covers plurals only,
+not singulars, prose or compounds.
+
+**Nɛpɛm names no source, and the code makes sure.** The book passages carry page
+numbers "(p.22)", "[cite: 3]", "chapter: 14", record ids and a publisher's address.
+`scrub_sources()` takes those out of the book and course passages sent to the model
+(never the verified ones, never a Kenyang word, and never the chunks themselves, which
+index.npz is matched to row by row). `drop_source_claims()` takes out of a reply any
+page or cite mark, and any sentence naming a chapter number, a file, or a title or
+publisher in `_SOURCE_NAMES`. Authors' surnames are deliberately not in that list:
+Mbuagbaw and Tanyi are also Bayangi family names, and a learner's name must never be
+cut. The flag says "from written sources" and nothing more specific.
+
 ---
 
 ## Where things live
@@ -212,8 +245,22 @@ found. Two things it must keep doing, because each caused false flags:
 Every word that is not English is checked, not only words with ɛ ɔ ŋ or a tone mark.
 English is `english_words.txt` (SCOWL) plus long English endings (`ENGLISH_ENDINGS`);
 a flag on an ordinary English word is a bug. Capitalised words the learner typed count
-as names. Before any push that touches the flag, run the twenty-reply measurement: more
-than two flagged replies in twenty means stop.
+as names.
+
+**The twenty-reply measurement.** Before any push that touches the flag or what reaches
+the model, ask the running app twenty questions (the eight in Testing below, plus
+twelve ordinary learner questions), each in a fresh session, and count the two kinds of
+flag separately. They mean different things:
+
+- **"Not found"** means Nɛpɛm may have invented something. That is a bug. Limit: one
+  or fewer replies in twenty. More means stop.
+- **"From written sources"** means Nɛpɛm used a book or course word and said so. That
+  is the system working, so it has no limit. Report it every time, as a percentage of
+  the twenty. It measures how much of what Nɛpɛm teaches comes from books rather than
+  from Ed's voice, and it should fall as Ed records and confirms more.
+
+Total flags matter only if most replies carry a box. If more than about half of the
+twenty carry one, tell Ed.
 
 ---
 
@@ -227,6 +274,26 @@ Settled on 24 November 2026. Do not "correct" them.
 - `néyi`, good morning: with the acute.
 - `Ma'ya`, my mother: with the apostrophe.
 - `amik` is a homograph: it means ground, and it means eyes.
+
+Settled on 25 November 2026:
+
+- `beket`, houses: canonical. It is in the verified file and in Ed's speech, and
+  verified outranks book. `bɛkɛt` and `bɛket` are recorded as book spellings: a search
+  finds them and nobody is told they do not exist, but Nɛpɛm teaches beket. The course
+  chapter's class 7/8 rule (ɛ- to bɛ-) is not changed: a confirmed pair outranks a
+  derived form (QUESTIONS section 24).
+- `Nɛpɛ́m`, the project's name: capital N, acute on the second ɛ. The course chapter's
+  `nɛpɛm` and the grammar book's `nepɛm` are recorded as book spellings. That it means
+  "life", and that bapɛm is its plural, is not confirmed (QUESTIONS section 22).
+
+A book spelling is recorded in a verified file on a line of its own, in this form, and
+the code reads it (`_BOOK_SPELLING`):
+
+    book spelling: bɛkɛt, bɛket       confirmed: beket       houses
+
+The forms on such a line are never counted as confirmed: not by the flag, not by the
+hold-back. They count as "from written sources", so a learner who meets one is told it
+is a book's spelling.
 
 The rong prefix rule lives in the prefix-pattern section of
 `kenyang_verified_speaker.md` ("The prefix pattern — learn this and you can build

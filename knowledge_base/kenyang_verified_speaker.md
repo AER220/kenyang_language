@@ -8,6 +8,17 @@ written here, this wins.
 
 ---
 
+## The name Nɛpɛ́m
+
+    Nɛpɛ́m              the name of this tutor and this project
+
+Written with a capital N and the acute on the second ɛ. The course and the books write
+it other ways. Those are book spellings, not the form to use:
+
+    book spelling: nɛpɛm, nepɛm       confirmed: Nɛpɛ́m       the name
+
+---
+
 ## Word order in the noun phrase
 
 Kenyang does NOT put every adjective in the same place. It depends on what kind of
@@ -1097,6 +1108,11 @@ This is a rule, not just a word: Boh + the thing = more than one of it.
 Note also the be- / bé- prefix doing the same job on other nouns:
     ɛkɛt  →  beket       house  →  houses      (beket bépay = two houses)
     ékwá  →  békwá       plantain → plantains
+
+Teach beket for houses. The books and the course write it other ways. Those are book
+spellings: not wrong to find, but not the form to teach.
+
+    book spelling: bɛkɛt, bɛket       confirmed: beket       houses
 
     ### Helping with the crossword
 
