@@ -63,17 +63,32 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url || steps.retry.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.page_url || steps.retry1.outputs.page_url || steps.retry2.outputs.page_url || steps.retry3.outputs.page_url }}
     steps:
+      # GitHub's deployment API sometimes answers "Failed to create deployment
+      # (status: 500)" for a few minutes. That is GitHub's server, not this workflow, so
+      # wait and ask again: three retries, after 1, 2 and 4 minutes. The last one is not
+      # allowed to fail quietly, so a site that did not update is never green.
       - id: deploy
         uses: actions/deploy-pages@v4
         continue-on-error: true
 
-      # If GitHub still has not registered the upload, wait and ask once more. A
-      # second failure fails the run, so a site that did not update is never green.
       - if: steps.deploy.outcome == 'failure'
-        run: sleep 30
-
-      - id: retry
+        run: sleep 60
+      - id: retry1
         if: steps.deploy.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - if: steps.deploy.outcome == 'failure' && steps.retry1.outcome == 'failure'
+        run: sleep 120
+      - id: retry2
+        if: steps.deploy.outcome == 'failure' && steps.retry1.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - if: steps.deploy.outcome == 'failure' && steps.retry1.outcome == 'failure' && steps.retry2.outcome == 'failure'
+        run: sleep 240
+      - id: retry3
+        if: steps.deploy.outcome == 'failure' && steps.retry1.outcome == 'failure' && steps.retry2.outcome == 'failure'
         uses: actions/deploy-pages@v4

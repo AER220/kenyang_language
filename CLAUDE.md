@@ -215,8 +215,13 @@ QUESTIONS_for_Ed.md, this file and the Python files are not downloadable. A new 
 the site needs (a page, an image, a script) must be added to that list, or it will
 not be served. Source files stay off it: the scene originals in `scenes/`, the rest of
 `brand/`. Nothing else moves: Render reads the repo as it is. The workflow has a build
-job and a deploy job, with one retry: with both in one job the deploy three times
-could not find the upload made a moment before.
+job and a deploy job: with both in one job the deploy three times could not find the
+upload made a moment before. The deploy retries three times, after 1, 2 and 4 minutes,
+before the run goes red; one retry after 30 seconds failed twice on 25 November 2026.
+
+**If the deploy step fails with "Failed to create deployment (status: 500)", it is
+GitHub's server, not our workflow.** Wait, then re-run the failed jobs from the Actions
+page. Do not change the workflow for it: it cleared on a re-run on 25 November 2026.
 
 **Tools are offered but `tool_choice` is `"none"`.** The tool round was making
 two full API calls per question and crashing when the model asked for several
