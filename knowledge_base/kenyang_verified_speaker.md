@@ -1558,3 +1558,38 @@ A greeting and the answer that comes back, as a speaker uses them.
 
                                     étá nsinsi                  grandfather
     Eta'ya nsinsi               my grandfather
+---
+
+## Words from the recorded texts, confirmed one by one
+
+These words sit inside the recorded speeches and sentences. Each was confirmed on its
+own, with its English, on 26 November 2026.
+
+    Ngɔbhu          nursing mother
+    Ɔ́nkaka          you should greet
+    sɛ́bhɨŋɨ         we are calling
+    nɛ́twó           is coming
+    ɛrɨ́rɨ́           good, well
+    arɔŋ            has travelled
+    Ghó             here is, look
+    báchí           who are at          (not bachi, eggs: other tone marks)
+    nchú            thatch
+    awa             my, mine            (saying something belongs to you)
+    baghɔrɛ         ladies, women       (plural: many women)
+    manɛ́m           men                 (plural: many men)
+    annywɔp         home                (the same word as anyuop: one word, two spellings)
+    annyɛ́n          in the river, in the water      (nnyɛ́n is river)
+    Yɛ̌              not a single one; even if       (Yɛ̌ mpútí: not a single one. Yɛ̌ … chí: even if)
+
+baghɔrɛ and manɛ́m are adults, many women and many men, not children.
+
+awa and wah are both "my, mine". Whether they are one word or two is not settled:
+neither is a spelling of the other.
+
+## Mother of: Nor, and mamí
+
+    Nor             mother of           (Nor John: John's mother. The Kenyang form.)
+    mamí            mother of           (mamí John: John's mother. What people say now, borrowed from Pidgin)
+
+Nor is the Kenyang. mamí is current usage, taken from Pidgin; it means the same, and
+it is not the Kenyang form.

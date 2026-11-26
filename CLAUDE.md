@@ -149,9 +149,22 @@ is slow and costs money.
     python run_checks.py --table    the table's ten rows only
 
 **Run it before every push**, alongside the twenty (it is the twenty: the table's ten
-plus ten ordinary questions). It asks each question in a fresh local session, prints
-PASS or FAIL per row and both flag counts, and exits non-zero on a failed row or more
-than one "not found". The rows and their checks live in `run_checks.py`; this table is
+plus ten ordinary questions). It asks each question in a fresh local session and prints
+PASS or FAIL per row and both flag counts. Run it bare and read its exit status: do not
+pipe it through another command, whose status then hides its own (a filter once
+reported success over a failed run).
+
+**The gate is a regression check** (Ed, 26 November 2026). Requiring every row to pass
+held back a fix behind failures nobody had solved. A push may go when:
+
+- no row that passes on the live code fails after the change;
+- "not found" stays at one or fewer in twenty.
+
+A row already failing on the live code does not block a push, but it must be named in
+the push report, every time, so it is never forgotten. The known baseline is
+`LIVE_FAILING` in `run_checks.py`: on 26 November 2026, rows 4 (drops nyaka), 5 (bépay)
+and 7 (an example sentence built from parts). A push that makes one pass takes it out of
+`LIVE_FAILING` in the same commit. The rows and their checks live in `run_checks.py`; this table is
 the readable copy, and a row added here must be added there. Nobody was running the
 table as a list: rows 5 and 6 failed for some time unseen (found 26 November 2026). A
 row passing is not the reply being good: read the replies too (row 7, QUESTIONS 34).

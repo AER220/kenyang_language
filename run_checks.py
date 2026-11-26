@@ -10,9 +10,14 @@ chat, run locally through Streamlit's test harness (it reads .streamlit/secrets.
 so it makes real calls to the model: about one per question).
 
 It prints, for each question, PASS or FAIL against the table's expectation, and the
-two kinds of flag the word check put under the reply. It exits non-zero if any table
-row fails, or if more than one reply in the run carries a "not found" flag (CLAUDE.md,
-"The twenty-reply measurement").
+two kinds of flag the word check put under the reply.
+
+THE GATE IS A REGRESSION CHECK (Ed, 26 November 2026). It exits non-zero if a row that
+passes on the live code fails, or if more than one reply carries a "not found" flag. A
+row in LIVE_FAILING, already failing on the live code, does not block a push, and is
+named in the summary so it is never forgotten. When a push makes one of those rows
+pass, take it out of LIVE_FAILING in the same commit; when a row starts failing on the
+live code for a reason nobody can fix now, it goes in only with Ed's agreement.
 
 The rows live here, not only in CLAUDE.md, so that nobody has to remember to read a
 table: rows 6 and 7 were failing for some time while the table only sat in a file.
@@ -54,6 +59,11 @@ def both(*checks):
 
 REFUSES = lambda r: bool(re.search(r"\b(don't|do not|doesn't|does not) have\b|\bno word\b|"
                                    r"\bnot (been )?given\b", norm(r)))
+
+# Rows that fail on the live code: the known baseline. 26 November 2026: 4 (drops
+# nyaka), 5 (bépay for Ed's recorded bɛ́pay), 7 (an example sentence built from parts,
+# QUESTIONS 34). Row 6 failed on live too, and its fix is in the push that set this up.
+LIVE_FAILING = {4, 5, 7}
 
 ONE_TO_TEN = ["ɛ́mɔt", "bɛ́pay", "bɛ́rát", "mɛ́nwi", "bɛ́tay", "bɛ́tandat", "tándrámɔt",
               "mɛ́nɛn", "mɛ́nɛn nɛ amɔt", "byó"]
@@ -129,15 +139,27 @@ def main():
                         "not_found": nf, "written": ws, "errors": errors})
     n = len(rows)
     print()
-    print(f"Testing table: {len(TABLE) - len(failed)} of {len(TABLE)} pass"
-          + (f"; FAIL on row {', '.join(map(str, failed))}" if failed else ""))
+    regressed = [i for i in failed if i not in LIVE_FAILING]
+    known = [i for i in failed if i in LIVE_FAILING]
+    fixed = sorted(i for i in LIVE_FAILING if i not in failed and i <= len(TABLE))
+    print(f"Testing table: {len(TABLE) - len(failed)} of {len(TABLE)} pass")
+    if regressed:
+        print(f"  REGRESSION: row {', '.join(map(str, regressed))} passes on live and fails now")
+    if known:
+        print(f"  Still failing, as on live (name these in the push report): "
+              f"row {', '.join(map(str, known))}")
+    if fixed:
+        print(f"  Failing on live, passing now: row {', '.join(map(str, fixed))} "
+              f"(take it out of LIVE_FAILING in this push)")
     print(f"'Not found' in {not_found} of {n} replies (limit: one in twenty)")
     print(f"'From written sources' in {written} of {n} replies ({round(100 * written / n)}%)")
+    ok = not regressed and not_found <= 1
+    print("GATE: PASS" if ok else "GATE: FAIL")
     out = os.path.join(ROOT, ".run_checks_last.json")
     with open(out, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=1)
     print(f"Every reply in full: {out}")
-    sys.exit(1 if failed or not_found > 1 else 0)
+    sys.exit(0 if ok else 1)
 
 
 if __name__ == "__main__":

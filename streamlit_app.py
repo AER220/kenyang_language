@@ -1695,6 +1695,33 @@ def enforce_name_order(reply):
     return re.sub(r"[ \t]{2,}", " ", "".join(result)).strip(), changes
 
 
+def number_swaps(numbers):
+    """
+    {n: ({other spelling: Ed's recorded form}, [other numbers' multi-word forms])} for
+    every number Ed recorded. The variants order (CLAUDE.md): a recording outranks
+    every other form, Ed's verified text included, so a reply that writes bépay for two
+    gets bɛ́pay. The model, told the recording wins, wrote bépay in every run of Testing
+    row 5 (found 26 November 2026). Swapped by swap_held_back: whole words only, never
+    in a reply that already has the recorded form (it is comparing them), and never
+    inside another number's multi-word form ("Tándat" is a book's six, and also the
+    start of a book's seven, "Tándat nɛ amɔt").
+    """
+    key = lambda f: re.sub(r"\s+", " ", unicodedata.normalize("NFC", f)).lower().strip()
+    teach = {key(t) for e in numbers.values() for t in e.get("teach", [])}
+    out = {}
+    for n, e in numbers.items():
+        if e.get("why") != "recording" or len(e.get("teach", [])) != 1:
+            continue
+        good = e["teach"][0]
+        bad = {form: good for form, _ in e.get("forms", [])
+               if key(form) != key(good) and key(form) not in teach and len(key(form)) > 1}
+        if bad:
+            others = sorted({key(f) for m, x in numbers.items() if m != n
+                             for f, _ in x.get("forms", []) if " " in key(f)})
+            out[n] = (bad, others)
+    return out
+
+
 def passages_block(found):
     """Group the retrieved passages under their trust headers, highest tier first."""
     if not found:
@@ -2750,6 +2777,7 @@ HELD, HELD_FORMS, HELD_PHRASES = _held["lines"], _held["forms"], _held["phrases"
 NUMBERS = number_forms(signature) if chunks else {}
 if NUMBERS:
     always_on += "\n\n" + numbers_block(NUMBERS)
+NUMBER_SWAPS = number_swaps(NUMBERS)
 
 STATIC_CONTEXT = SYSTEM_PROMPT + recordings_block() + "\n\n" + always_on
 
@@ -3022,6 +3050,10 @@ if st.session_state.pending:
             # A plural the code held back is a checkable fact, so the code puts the
             # verified form in its place (see swap_held_back).
             reply, swapped = swap_held_back(reply, HELD_FORMS, HELD_PHRASES)
+            # A number Ed recorded is taught in his recorded form (see number_swaps).
+            for bad, others in NUMBER_SWAPS.values():
+                reply, more = swap_held_back(reply, bad, others)
+                swapped += [x for x in more if x not in swapped]
             st.session_state.last_swaps = swapped
             # Rule 4: a number no source has is never built. The code checks every run of
             # number words in the reply against the sources (see enforce_numbers).
@@ -3083,8 +3115,8 @@ if st.session_state.get("last_passages"):
             st.caption("In the last reply the code put N-ném first in a name sentence: "
                        + "; ".join(f"{a} → {b}" for a, b in st.session_state.last_name_fixes))
         if st.session_state.get("last_swaps"):
-            st.caption("In the last reply the code put the verified form in place of a "
-                       "held-back one: " + ", ".join(f"{a} → {b}" for a, b in
+            st.caption("In the last reply the code put Ed's form in place of another "
+                       "(a held-back plural, or a number he recorded): " + ", ".join(f"{a} → {b}" for a, b in
                                                      st.session_state.last_swaps))
         shown = st.session_state.last_passages[:40]
         with st.expander(f"{len(st.session_state.last_passages)} passages used"

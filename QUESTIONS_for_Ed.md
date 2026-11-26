@@ -559,6 +559,8 @@ say the word on its own, and its English.
 
     door        "Leave the key behind the door"       Rɔ ɛfíŋí ansɛm mbi-nnywɔ́p
     bed         "My mud bed heals my back pain"       Ɛmbó áwà ɛ bú nɛme nsɛm bɛbe áwà
+                (26 November 2026: Ed cannot confirm whether Ɛmbó is bed or mud bed, or
+                whether its tone differs from the book's ɛ̌mbó. Left open.)
     thatch/roof "The thatch has much thatch roof holes"  Nchú á bhɔ́ŋ beya nnyɛ́sɛ́-nnywɔp
     tree        "You will see a big tree in the forest"  Chɔŋ wɔ ngɔ ɛmɔ́ptí ɛnɔk ndú nchót
     mango tree  "Make the medicine with mango tree barks"  Kɨ babhɛ nɛ nkwɔp-ɛnɔk nsɨŋɨ́-mɛ́nyú
@@ -627,3 +629,23 @@ the path", both built from parts. Not fixed yet: Ed asked for it to be listed.
 The kind of fix this needs is in code, not in the prompt: an example sentence in a
 reply that is not in a verified file is either taken out, or marked as built and not
 checked by a speaker. Row 6's name order (N-ném first) is the first piece of that.
+
+## 35. awa and wah: one word or two?
+
+Both confirmed by Ed as "my, mine" (wah in the speaker file; awa on 26 November 2026,
+from the recorded texts, 17 times). Not settled whether they are one word or two. Filed
+as two entries; neither is marked a spelling of the other.
+
+## 36. The English of texts:1204 and texts:1207
+
+Ed confirmed (26 November 2026) that manɛ́m is men and baghɔrɛ is ladies, women: adults,
+plural. The recorded text's English on those two lines says "Let the male children come
+first" and "let the female children follow". Those glosses may be loose and may need
+correcting. The texts are not changed until Ed says how.
+
+## 37. Is a- a general "in"?
+
+annyɛ́n is "in the river, in the water" and nnyɛ́n is river (confirmed 26 November 2026).
+amem is inside, and the recorded texts have annywɔp, home ("leave her home"). Whether
+an a- on the front of a place word means "in" generally is NOT settled. A possible
+grammar rule, not filed as one.
