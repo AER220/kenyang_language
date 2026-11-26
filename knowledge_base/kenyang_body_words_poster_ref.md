@@ -72,3 +72,19 @@ The compounds are given exactly as the poster writes them, on the poster's own r
     Nebheurh            breast
     Nekwed              vagina
     Mboko nned          anus
+
+## Greetings and replies
+
+From the same poster, Peti Peti Chi Nekor, filed 26 November 2026 ahead of its full
+list. The poster's spellings, unconfirmed by a speaker. Each greeting is on one line
+with the reply the poster gives for it; the poster calls each of these "reply" and gives
+it no English of its own. Oki'ah and M'kaka are one entry on the poster, "Oki'ah /
+M'kaka", for thank you.
+
+    Neyí                good morning        reply: Eh Neyi nkwor
+    Erehti ngohsi       good afternoon      reply: Ngohsi bheri bheri
+    Erehti bheku        good evening        reply: bheku bheri bheri
+    O'buereh ah         good night          reply: O'buereh nkwor
+    Otuor?              welcome             reply: Eh Bha'chi?
+    Oki'ah              thank you
+    M'kaka              thank you

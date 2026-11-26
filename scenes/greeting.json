@@ -1,0 +1,185 @@
+{
+ "layout": "conversation",
+ "title": "Say hello",
+ "image": "greeting-hero",
+ "print_image": "greeting",
+ "panels": [
+  {
+   "name": "Morning",
+   "box": [
+    51,
+    73,
+    666,
+    999
+   ],
+   "bubbles": [
+    {
+     "word": "Neyí",
+     "at": [
+      11.35,
+      12.03
+     ],
+     "print_at": [
+      13.21,
+      14.49
+     ]
+    },
+    {
+     "word": "Neyi nkuo",
+     "at": [
+      24.05,
+      14.39
+     ],
+     "print_at": [
+      24.41,
+      13.98
+     ],
+     "also": "Eh Neyi nkwor"
+    }
+   ]
+  },
+  {
+   "name": "Midday",
+   "box": [
+    716,
+    73,
+    1332,
+    999
+   ],
+   "bubbles": [
+    {
+     "word": "Erehti ngohsi",
+     "at": [
+      44.21,
+      13.39
+     ],
+     "print_at": [
+      43.19,
+      15.05
+     ]
+    },
+    {
+     "word": "Ngohsi bheri bheri",
+     "at": [
+      56.86,
+      15.62
+     ],
+     "print_at": [
+      57.3,
+      14.47
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Late day",
+   "box": [
+    1382,
+    73,
+    1997,
+    999
+   ],
+   "bubbles": [
+    {
+     "word": "Erehti bheku",
+     "at": [
+      76.56,
+      12.3
+     ],
+     "print_at": [
+      75.71,
+      13.98
+     ]
+    },
+    {
+     "word": "bheku bheri bheri",
+     "at": [
+      89.16,
+      14.98
+     ],
+     "print_at": [
+      86.84,
+      14.49
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Night",
+   "box": [
+    51,
+    1049,
+    666,
+    1976
+   ],
+   "bubbles": [
+    {
+     "word": "O'buereh ah",
+     "at": [
+      11.5,
+      60.27
+     ],
+     "print_at": [
+      11.6,
+      61.59
+     ]
+    },
+    {
+     "word": "O'buereh nkwor",
+     "at": [
+      24.1,
+      62.95
+     ],
+     "print_at": [
+      25.51,
+      60.9
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Welcome",
+   "box": [
+    716,
+    1049,
+    1332,
+    1976
+   ],
+   "bubbles": [
+    {
+     "word": "Otuor?",
+     "at": [
+      56.49,
+      63.08
+     ],
+     "print_at": [
+      55.98,
+      61.8
+     ]
+    },
+    {
+     "word": "Eh Bha'chi?",
+     "at": [
+      44.09,
+      59.68
+     ],
+     "print_at": [
+      44.21,
+      60.41
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Thanks",
+   "box": [
+    1382,
+    1050,
+    1997,
+    1975
+   ],
+   "bubbles": [],
+   "held": "The man receiving says thank you (right). Held until Ed answers QUESTIONS 42 (M'kaka) and 43 (Oki'ah). The woman giving (left) has no confirmed word for you're welcome."
+  }
+ ]
+}

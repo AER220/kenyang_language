@@ -908,6 +908,31 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
   .scene .dot{display:block}
   .scene ol.words{display:block}
 }
+/* ── say hello: a conversation, one panel at a time ──────────────────
+   The picture is coloured, the first on the site. It is content, like the logo,
+   not page chrome: nothing round it is coloured, and only one panel shows at a
+   time. The bubbles are white in the picture in both themes, so their words are
+   ink, and the sound underline inside them uses --sound's paper value. */
+.convo{max-width:460px}
+.cpanel{position:relative;container-type:inline-size;border:1px solid var(--edge);
+  border-radius:6px;overflow:hidden;line-height:0}
+.cpanel img{display:block;width:100%;height:auto}
+.bub{position:absolute;transform:translate(-50%,-50%);width:33%;text-align:center;
+  line-height:1.18;--sound:#9A5D1D}
+.bub b{font:400 15px var(--serif);font-size:clamp(13px,4.6cqw,21px);color:#15201B}
+.bub sup{font:400 12px var(--sans);color:#56665E;margin-left:1px}
+.ccap{margin:12px 0 4px;font:600 19px var(--serif);color:var(--head)}
+.cwords{list-style:none;margin:0 0 12px;padding:0;font-size:15px;line-height:1.5}
+.cwords b{font-family:var(--serif);font-weight:600}
+.cwords small{color:var(--mute)}
+.cthumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin:6px 0 4px}
+.cthumbs button{padding:0;border:1px solid var(--edge);border-radius:4px;background:none;
+  cursor:pointer;color:var(--mute);font:12px var(--sans)}
+.cthumbs button[aria-pressed="true"]{border:2px solid var(--head);color:var(--head)}
+.cthumbs i{display:block;aspect-ratio:110/166;background-size:600% 100%;border-radius:3px}
+.cthumbs span{display:block;padding:3px 0 2px;line-height:1.2}
+.cnote{color:var(--mute);font-size:14px;margin:8px 0 0}
+
 /* the printed sheet: the picture large, the words in place and listed, black on white */
 .printsheet{display:none}
 @media print{
@@ -921,7 +946,7 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
   .printsheet.tall{page:tall}
   .printsheet.tall .pic img{max-height:130mm}
   /* numbered points need no room under the picture for labels */
-  .printsheet .pic:has(.pdot){padding-bottom:0}
+  .printsheet .pic:has(.pdot),.printsheet .pic:has(.pbub){padding-bottom:0}
   .printsheet .lbl{position:absolute;top:auto !important;bottom:0;transform:translateX(-50%);background:#fff;
     border:1.5pt solid #000;border-radius:8pt;padding:1mm 3mm;text-align:center;white-space:nowrap}
   .printsheet .lbl b{display:block;font-size:20pt}
@@ -938,6 +963,10 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
   /* on paper the marker is an asterisk, explained once at the foot */
   .printsheet .wsrc{border:0;padding:0;margin:0 0 0 0.5mm;font-size:0;vertical-align:super}
   .printsheet .wsrc::after{content:"*";font-size:11pt}
+  /* the conversation sheet: the line art, each word inside its bubble */
+  .printsheet.conv .pic img{max-height:200mm}
+  .printsheet .pbub{position:absolute;transform:translate(-50%,-50%);width:9.2%;
+    text-align:center;font:8.5pt/1.15 Georgia,serif;color:#000}
   @page{size:A4 landscape;margin:12mm}
   @page tall{size:A4 portrait;margin:12mm}
   ::highlight(nepem-say){text-decoration:none}
@@ -1023,6 +1052,18 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
       <span><i style="background:var(--when)"></i>when</span>
       <span><i style="background:var(--where)"></i>where</span>
     </div>
+  </section>
+
+  <!-- ══ SAY HELLO ═══════════════════════════════════════════════════
+       Greetings as a conversation: two people, one panel at a time, the words in
+       the picture's own speech bubbles. Built from scenes/greeting.json by
+       build_scenes.py; every word in the four states of every picture. It sits
+       below the hero on purpose: ɛkɛt stays the first and loudest thing.       -->
+  <section class="sec" id="hello">
+    <h2 class="big">Say hello</h2>
+    <p class="lead">Two people meeting, at each time of day. A word with a recording
+      plays when you tap it.</p>
+    <div id="helloBox" aria-live="polite"></div>
   </section>
 
   <hr class="rule">
@@ -3334,7 +3375,7 @@ document.addEventListener("pointerdown", e => {
    instead of leaving the site.
    ═══════════════════════════════════════════════════════════════════════════ */
 const PLAN = [
-  ["learn",    "Learn",    "✦", [".hero", "#numbers", "#alone"]],
+  ["learn",    "Learn",    "✦", [".hero", "#hello", "#numbers", "#alone"]],
   ["play",     "Play",     "🧩", ["#table"]],
   /* shown as Visuals; the id stays "pictures", because it is the address people have */
   ["pictures", "Visuals",  "◐",  ["#pictures"]],
@@ -3592,6 +3633,74 @@ function wireScene(el){
   });
 }
 loadScenes();
+
+/* ── say hello: the greetings as a conversation ───────────────────
+   One panel at a time, chosen from a strip of six small ones: at phone width six
+   panels at once leave each bubble about 40px, too small for a word. A word in a
+   bubble is marked like every word on the site: Ed's recording carries the dotted
+   sound underline (say.js), a verified word is plain, and a book's form carries an
+   asterisk, explained once below. A word that is not recorded is data-nosay, so no
+   part of a phrase plays for the whole. A held panel shows its picture and nothing
+   in its bubbles: its words wait on Ed (QUESTIONS 42, 43). */
+async function loadHello(){
+  const box = $("helloBox");
+  if (!box) return;
+  let sc;
+  try{
+    const r = await fetch("scenes/greeting.json", {cache:"no-cache"});
+    if (!r.ok) throw 0;
+    sc = await r.json();
+  }catch(e){ box.innerHTML = `<p class="scenenote">The greetings could not be loaded.</p>`; return; }
+  const star = b => b.state === "book" ? "<sup>*</sup>" : "";
+  const nosay = b => b.state === "recorded" ? "" : " data-nosay";
+  const bubble = b => `<span class="bub" style="left:${b.x}%;top:${b.y}%"><b lang="ken"${nosay(b)}>${esc(b.word)}</b>${star(b)}</span>`;
+  const line = b => `<li><b lang="ken"${nosay(b)}>${esc(b.word)}</b>${star(b)}`
+    + (b.english ? ` <span data-nosay>${esc(b.english.toLowerCase())}</span>` : "")
+    + ((b.also || []).length ? ` <small data-nosay>also written <span lang="ken">${b.also.map(esc).join(", ")}</span></small>` : "")
+    + `</li>`;
+  const anyBook = sc.panels.some(p => p.bubbles.some(b => b.state === "book"));
+  let at = 0;
+  const show = i => {
+    at = i;
+    const p = sc.panels[i];
+    box.querySelector(".cpanel").innerHTML =
+      `<img src="${esc(p.image)}" width="${p.size[0]}" height="${p.size[1]}" alt="${esc(p.name)}: two people greeting each other">`
+      + p.bubbles.map(bubble).join("");
+    box.querySelector(".ccap").textContent = `${i + 1}  ${p.name}`;
+    box.querySelector(".cwords").innerHTML = p.held
+      ? `<li><small>The words for this one are waiting on a speaker.</small></li>`
+      : p.bubbles.map(line).join("");
+    box.querySelectorAll(".cthumbs button").forEach((t, k) => t.setAttribute("aria-pressed", k === i ? "true" : "false"));
+  };
+  const n = sc.panels.length;
+  const printPic = `<div class="pic"><img src="${esc(sc.print_image)}" alt="">${sc.panels.flatMap(p =>
+      p.bubbles.map(b => `<span class="pbub" style="left:${b.px}%;top:${b.py}%">${esc(b.word)}${b.state === "book" ? "*" : ""}</span>`)).join("")}</div>`;
+  box.innerHTML = `<div class="convo">
+      <div class="cpanel"></div>
+      <p class="ccap"></p>
+      <ul class="cwords"></ul>
+      <div class="cthumbs" role="group" aria-label="Choose a scene">${sc.panels.map((p, k) =>
+        `<button type="button" aria-pressed="false" aria-label="${esc(p.name)}"><i style="background-image:url('${esc(sc.strip)}');background-position:${n > 1 ? (k * 100 / (n - 1)) : 0}% 0"></i><span>${esc(p.name)}</span></button>`).join("")}</div>
+      ${anyBook ? `<p class="cnote">* from written sources: a book's form, not yet checked by a speaker.</p>` : ""}
+      <div class="scenetools"><button class="btn" data-print-hello>Print a colouring page</button></div>
+      <div class="printsheet tall conv" hidden><h1>${esc(sc.title)} · Kɛ́nyāŋ</h1>${printPic}
+        <p class="foot">nepem.org · Nɛpɛ́m, Kenyang for the whole family.${anyBook
+          ? " * From written sources: from a book, not yet checked by a speaker."
+          : ""}</p></div>
+    </div>`;
+  box.querySelectorAll(".cthumbs button").forEach((t, k) => t.addEventListener("click", () => show(k)));
+  box.querySelector("[data-print-hello]").addEventListener("click", () => {
+    const sheet = box.querySelector(".printsheet").cloneNode(true);
+    sheet.hidden = false;
+    document.body.appendChild(sheet);
+    const done = () => { sheet.remove(); window.removeEventListener("afterprint", done); };
+    window.addEventListener("afterprint", done);
+    const img = sheet.querySelector("img");
+    if (img.complete) window.print(); else img.addEventListener("load", () => window.print(), {once:true});
+  });
+  show(0);
+}
+loadHello();
 </script>
 <script src="say.js"></script>
 </body>

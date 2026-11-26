@@ -77,10 +77,54 @@ def crop_box(img):
             min(img.size[0], box[2] + pad), min(img.size[1], box[3] + pad))
 
 
+PANEL_WIDTH = 660      # one panel of a conversation, sharp at phone width on a 2x screen
+PANEL_QUALITY = 70     # lossy: a coloured picture saved lossless is megabytes (2.6 MB)
+THUMB = (110, 166)     # each panel in the strip of small ones
+
+
+def conversation_images(name, scene):
+    """A conversation (the greeting scenes): the coloured picture is served one panel at a
+    time, lossy, with a strip of small panels to choose from; the line-art picture is the
+    printable sheet, lossless like every other drawing. Weight measured 26 November 2026:
+    36-68 KB a panel, 18 KB the strip, against 2.6 MB for the whole picture lossless."""
+    from PIL import Image
+    hero = Image.open(os.path.join(SCENES, scene["image"] + ".png")).convert("RGB")
+    strip = Image.new("RGB", (THUMB[0] * len(scene["panels"]), THUMB[1]), (255, 255, 255))
+    sizes = []
+    for i, panel in enumerate(scene["panels"], 1):
+        crop = hero.crop(tuple(panel["box"]))
+        out = crop.resize((PANEL_WIDTH, round(crop.size[1] * PANEL_WIDTH / crop.size[0])), Image.LANCZOS)
+        dest = os.path.join(WEB, f"{scene['image']}-{i}.webp")
+        out.save(dest, "WEBP", quality=PANEL_QUALITY, method=6)
+        sizes.append(out.size)
+        strip.paste(crop.resize(THUMB, Image.LANCZOS), ((i - 1) * THUMB[0], 0))
+        print(f"{dest}: {out.size[0]}x{out.size[1]}, {os.path.getsize(dest) // 1024} KB")
+    dest = os.path.join(WEB, f"{scene['image']}-strip.webp")
+    strip.save(dest, "WEBP", quality=PANEL_QUALITY, method=6)
+    print(f"{dest}: {os.path.getsize(dest) // 1024} KB")
+    with open(os.path.join(WEB, scene["image"] + ".crop.json"), "w") as f:
+        json.dump({"source_size": hero.size, "panels": sizes}, f)
+    # the printable sheet: the line art, the same way as every other drawing
+    art = Image.open(os.path.join(SCENES, scene["print_image"] + ".png")).convert("RGB")
+    box = crop_box(art)
+    out = art.crop(box)
+    if out.size[0] > WIDTH:
+        out = out.resize((WIDTH, round(out.size[1] * WIDTH / out.size[0])), Image.LANCZOS)
+    out = out.point(lambda v: 255 if v > 232 else v)
+    dest = os.path.join(WEB, scene["print_image"] + ".webp")
+    out.save(dest, "WEBP", lossless=True, method=6)
+    with open(os.path.join(WEB, scene["print_image"] + ".crop.json"), "w") as f:
+        json.dump({"source_size": art.size, "crop": box, "size": out.size}, f)
+    print(f"{dest}: {out.size[0]}x{out.size[1]}, {os.path.getsize(dest) // 1024} KB (printable)")
+
+
 def images():
     from PIL import Image
     os.makedirs(WEB, exist_ok=True)
     for name, scene in layouts():
+        if scene.get("layout") == "conversation":
+            conversation_images(name, scene)
+            continue
         src = os.path.join(SCENES, scene["image"] + ".png")
         img = Image.open(src).convert("RGB")
         box = crop_box(img)
@@ -196,6 +240,59 @@ def glosses(fold, verified):
     return out
 
 
+def conversation_words(name, scene, state, out_dir, verified_text, book_text, fold):
+    """What the page reads for a conversation: each panel's bubbles, in speaking order,
+    each word in the same four states as every picture, placed in percent of its panel
+    (the coloured copy) and of the printable sheet (the line art). A form the layout
+    keeps "also" beside a word is shown only if a file has it. Returns words left out."""
+    with open(os.path.join(WEB, scene["image"] + ".crop.json")) as f:
+        hero = json.load(f)
+    with open(os.path.join(WEB, scene["print_image"] + ".crop.json")) as f:
+        art = json.load(f)
+    (aw, ah), (ax0, ay0, ax1, ay1) = art["source_size"], art["crop"]
+    sw, sh = hero["source_size"]
+    has = lambda form: any(re.search(r"(?<![^\W_])" + re.escape(fold(form)) + r"(?![^\W_])", t)
+                           for t in (verified_text, book_text))
+    panels, failed, shown = [], 0, 0
+    for i, panel in enumerate(scene["panels"], 1):
+        x0, y0, x1, y1 = panel["box"]
+        bubbles = []
+        for b in panel.get("bubbles", []):
+            st, gloss, word, variant = state(name, b["word"])
+            if st is None:
+                print(f"LEFT OUT of {name} ({panel['name']}): {b['word']!r} is in no file and "
+                      f"has no recording of Ed's")
+                failed += 1
+                continue
+            also = [v for v in (variant, b.get("also", "")) if v]
+            for v in also:
+                if not has(v):
+                    print(f"NOT SHOWN in {name}: 'also written {v}' is in no file")
+            entry = {"word": unicodedata.normalize("NFC", word), "english": gloss, "state": st,
+                     "x": round((b["at"][0] / 100 * sw - x0) / (x1 - x0) * 100, 2),
+                     "y": round((b["at"][1] / 100 * sh - y0) / (y1 - y0) * 100, 2),
+                     "px": round((b["print_at"][0] / 100 * aw - ax0) / (ax1 - ax0) * 100, 2),
+                     "py": round((b["print_at"][1] / 100 * ah - ay0) / (ay1 - ay0) * 100, 2)}
+            also = [unicodedata.normalize("NFC", v) for v in also if has(v)]
+            if also:
+                entry["also"] = also
+            bubbles.append(entry)
+            shown += 1
+        panels.append({"name": panel["name"], "image": f"scenes/web/{scene['image']}-{i}.webp",
+                       "size": hero["panels"][i - 1], "bubbles": bubbles,
+                       "held": bool(panel.get("held"))})
+    page = {"title": scene.get("title", name), "layout": "conversation", "panels": panels,
+            "strip": f"scenes/web/{scene['image']}-strip.webp",
+            "print_image": f"scenes/web/{scene['print_image']}.webp", "print_size": art["size"]}
+    with open(os.path.join(out_dir, name + ".json"), "w", encoding="utf-8") as f:
+        json.dump(page, f, ensure_ascii=False, indent=1)
+    counts = {k: sum(1 for p in panels for e in p["bubbles"] if e["state"] == k)
+              for k in ("recorded", "verified", "book")}
+    print(f"{name}: {shown} words shown in {len(panels)} panels ({counts['recorded']} recorded, "
+          f"{counts['verified']} verified, {counts['book']} from written sources)")
+    return failed
+
+
 def words(out_dir):
     """
     What each scene's page shows, by the variants order (CLAUDE.md, "When sources
@@ -211,6 +308,10 @@ def words(out_dir):
     english = _english()
     heads = confirmed_headwords()
     vgloss, bgloss = glosses(fold, True), glosses(fold, False)
+    # Ed's verified text, folded, without its book-spelling lines (they name a book's form)
+    verified_text = "\n".join(
+        fold(line) for p in glob.glob(os.path.join(ROOT, "knowledge_base", "*verified*"))
+        for line in open(p, encoding="utf-8", errors="replace") if not _BOOK_LINE.match(line))
     book_text = " ".join(
         fold(open(p, encoding="utf-8", errors="replace").read())
         for p in glob.glob(os.path.join(ROOT, "knowledge_base", "*"))
@@ -238,7 +339,15 @@ def words(out_dir):
         if key in ed:
             return "recorded", ed[key]
         parts = [fold(w) for w in word_rx.findall(word)]
-        in_text = bool(parts) and all(w in vocab for w in parts)
+        # A phrase is in Ed's verified text only if the WHOLE phrase is, as written there
+        # (case, spacing and apostrophes folded, tone marks kept). Each of its words being
+        # somewhere in his files is not enough: "Eh Neyi nkwor", the poster's phrase, has
+        # all three words in his text and is not his (Ed, 26 November 2026). The same
+        # class of error as a folded gloss lookup taking "Back." from another entry.
+        if len(parts) > 1:
+            in_text = bool(re.search(r"(?<![^\W_])" + re.escape(key) + r"(?![^\W_])", verified_text))
+        else:
+            in_text = bool(parts) and all(w in vocab for w in parts)
         # The verified files hold English prose too, so "in a verified file" alone
         # would let an English word onto a picture: it must not be English.
         # His confirmed words first, then the English list: Nor (mother of) is spelled
@@ -302,6 +411,9 @@ def words(out_dir):
         return out
 
     for name, scene in layouts():
+        if scene.get("layout") == "conversation":
+            failed += conversation_words(name, scene, state, out_dir, verified_text, book_text, fold)
+            continue
         with open(os.path.join(WEB, scene["image"] + ".crop.json")) as f:
             meta = json.load(f)
         (sw, sh), (x0, y0, x1, y1) = meta["source_size"], meta["crop"]

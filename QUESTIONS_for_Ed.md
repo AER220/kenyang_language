@@ -682,3 +682,21 @@ Raised by Ed, 26 November 2026, answering 39. Both are "go". In the verified fil
 appears as a command ("Dɔ́k nɛ mmɛn ndú ɛsyɛ", go with the goat to the market) and rong
 as ongoing ("mme rong", I am going). Whether that is a real rule (dɔk for go!, rong for
 am going) is NOT settled. Not filed as a rule.
+
+## 41. "Eh" at the front of the reply to Neyi
+
+Ed's verified reply to Neyi is Neyi nkuo (also written Neyi nkwor). The poster's is
+"Eh Neyi nkwor", with Eh in front. Possibly the same reply with and without a particle.
+Not settled (Ed, 26 November 2026). The greeting picture teaches Neyi nkuo, Ed's form,
+and keeps the poster's phrase beside it.
+
+## 42. M'kaka: thanks, or a general greeting?
+
+For the Thanks panel of the greeting picture. The poster gives "Oki'ah / M'kaka" for thank
+you. A course chapter glosses M'kaka "General/Bypass Greeting". Ed's own file has kaká as
+both "thank" and "to greet". The bubble is held until Ed says (26 November 2026).
+
+## 43. Oki'ah and Ed's recorded "Oki ah": one phrase?
+
+Ed recorded "Oki ah", thank you, you have done it. The poster writes Oki'ah. Same phrase
+written two ways, or two? The Thanks bubble is held until Ed says (26 November 2026).

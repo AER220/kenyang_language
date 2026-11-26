@@ -496,6 +496,30 @@ each sheet fits one A4 page (the tall body picture prints portrait).
 To add a scene: the picture in `scenes/`, its layout beside it, `images`, then add its
 name to `SCENE_NAMES` in index.html.
 
+**A conversation: the greetings** (`scenes/greeting.json`, 26 November 2026). Two
+pictures of the same six scenes: `greeting-hero.png` (coloured, shown on the page) and
+`greeting.png` (line art, the printable sheet). They are drawn differently (frames,
+bubble sizes and places), so the one layout holds each phrase once with two positions:
+`at` on the coloured picture and `print_at` on the line art, in percent of the original.
+`"layout": "conversation"`; phrases are listed in speaking order (in Welcome the host, on
+the right, speaks first). A held panel (`"held"`) shows its picture with empty bubbles.
+`also` keeps a variant beside a word, shown only if a file has it.
+
+- `build_scenes.py images` serves the coloured picture **one panel at a time**, lossy
+  WebP 660 px wide (36–68 KB a panel) with an 18 KB strip of six thumbnails, because the
+  whole picture lossless is 2.6 MB and at phone width six panels leave each bubble about
+  40 px, too small for a word. The line art is lossless like every drawing (386 KB),
+  fetched only to print.
+- It is the "Say hello" section on **Learn**, directly below the hero. ɛkɛt stays the
+  first and loudest thing: nothing goes above it.
+- In a bubble: Ed's recording carries the dotted sound underline; verified is plain ink;
+  from written sources carries an asterisk, explained once under the panel. The bubbles
+  are white in both themes, so their words are ink and the underline inside uses
+  --sound's paper value.
+- **A coloured picture is content, not page chrome**, like the logo. Its warm skies are
+  not a breach of the warm-colour rule, and they are not a reason to give any page
+  element a warm colour. Nothing round it is coloured.
+
 **What a picture must be, for the colouring to work.** Clean line art: thick, even
 outlines, no shading or texture, a plain white background, nothing touching the edge,
 no text. **Every part that will be coloured separately needs its own closed outline.**
@@ -577,6 +601,14 @@ not, and nothing would say so. The fix is in `build_scenes.py`, `glosses()` and 
 every gloss is stored under the form exactly as written and folded, and a word asks for
 its exact spelling first, falling back to the folded one only if there is none. Any new
 lookup that folds (case, tone marks, ɛ/e) to find a word's meaning should do the same.
+
+**A phrase is Ed's only if the whole phrase is in his verified text.** `build_scenes.py`
+once counted a phrase as verified when each of its words appeared somewhere in his files,
+so the poster's "Eh Neyi nkwor" (eh, Neyi and nkwor are all in his text, separately)
+would have shown as confirmed. The same class of error as the folded gloss lookup above:
+a match on the parts standing in for a match on the whole. Fixed 26 November 2026 in
+`words()`, `base()`: a phrase of more than one word must be found whole in his verified
+text (book-spelling lines excluded); a single word is checked as before.
 
 **A CSS rule can silently not apply.** `.fld .ken input` (a space: a `.ken` inside a
 `.fld`) never matched, because `ken` is a class on the `.fld` itself; it needed
