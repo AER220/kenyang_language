@@ -162,9 +162,10 @@ held back a fix behind failures nobody had solved. A push may go when:
 
 A row already failing on the live code does not block a push, but it must be named in
 the push report, every time, so it is never forgotten. The known baseline is
-`LIVE_FAILING` in `run_checks.py`: on 26 November 2026, rows 4 (drops nyaka), 5 (bépay)
-and 7 (an example sentence built from parts). A push that makes one pass takes it out of
-`LIVE_FAILING` in the same commit. The rows and their checks live in `run_checks.py`; this table is
+`LIVE_FAILING` in `run_checks.py`: on 26 November 2026, rows 4 (drops nyaka) and 7 (an
+example sentence built from parts); rows 5 and 6 were fixed in code in that push. A push
+whose change fixes one takes it out of `LIVE_FAILING` in the same commit. A row that
+passes by chance in one run, with nothing fixed, stays in. The rows and their checks live in `run_checks.py`; this table is
 the readable copy, and a row added here must be added there. Nobody was running the
 table as a list: rows 5 and 6 failed for some time unseen (found 26 November 2026). A
 row passing is not the reply being good: read the replies too (row 7, QUESTIONS 34).

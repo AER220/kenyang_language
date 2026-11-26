@@ -61,9 +61,11 @@ REFUSES = lambda r: bool(re.search(r"\b(don't|do not|doesn't|does not) have\b|\b
                                    r"\bnot (been )?given\b", norm(r)))
 
 # Rows that fail on the live code: the known baseline. 26 November 2026: 4 (drops
-# nyaka), 5 (bépay for Ed's recorded bɛ́pay), 7 (an example sentence built from parts,
-# QUESTIONS 34). Row 6 failed on live too, and its fix is in the push that set this up.
-LIVE_FAILING = {4, 5, 7}
+# nyaka) and 7 (an example sentence built from parts, QUESTIONS 34). Rows 6 (name order)
+# and 5 (bépay for Ed's recorded bɛ́pay) also failed on live; both were fixed in code in
+# the push that set this up, and taken out. Take a row out only when a change fixes it:
+# row 7 passed in that push's run by chance (no sentence was built), so it stays.
+LIVE_FAILING = {4, 7}
 
 ONE_TO_TEN = ["ɛ́mɔt", "bɛ́pay", "bɛ́rát", "mɛ́nwi", "bɛ́tay", "bɛ́tandat", "tándrámɔt",
               "mɛ́nɛn", "mɛ́nɛn nɛ amɔt", "byó"]
