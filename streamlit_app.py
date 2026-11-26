@@ -1613,7 +1613,7 @@ def swap_held_back(reply, forms, phrases=()):
 # code writes, never guessed at. Only the hyphenated N-ném (name); nném is husband.
 _NAME_WORD = re.compile(r"(?<![^\W_])(?<![-'’\u0300-\u036f])n-ném(?![^\W_])(?![-'’\u0300-\u036f])",
                         re.IGNORECASE)
-_SENTENCE = re.compile(r"[^.!?\n]+[.!?]*")
+_SENTENCE = re.compile(r"[^.!?\n]+[.!?]*[\"”’']?")   # a closing quote stays with its sentence
 _OWNERISH = {"my", "your", "his", "her", "our", "their", "its"}
 NAME_ORDER_LINE = ("I can't put that name sentence together safely. The order is N-ném "
                    "first, then whose name it is, then chi, then the name: N-ném Ma'ya "
@@ -1623,6 +1623,21 @@ NAME_ORDER_LINE = ("I can't put that name sentence together safely. The order is
 def _kenyang_token(t):
     f = _fold_word(t)
     return bool(f) and (_looks_kenyang(t) or not _is_english(f))
+
+
+def _name_without_nem(sent):
+    """A name sentence with N-ném left out: a Kenyang word, chi, then a capitalised
+    name, and the sentence's own English says "name"."""
+    if not re.search(r"\bnames?\b", sent, re.IGNORECASE):
+        return False
+    words = [(w.start(), w.end(), w.group(0)) for w in _WORD.finditer(sent)]
+    for i in range(1, len(words) - 1):
+        (a0, b0, before), (a1, b1, chi), (a2, b2, name) = words[i - 1], words[i], words[i + 1]
+        joined = not sent[b0:a1].strip() and not sent[b1:a2].strip()
+        if (joined and chi.lower() == "chi" and name[:1].isupper()
+                and _kenyang_token(before) and not _looks_kenyang(name)):
+            return True
+    return False
 
 
 def enforce_name_order(reply):
@@ -1637,16 +1652,26 @@ def enforce_name_order(reply):
       - An owner but no chi after N-ném, N-ném twice, or an English possessive just before
         the owner ("my Ma'ya nsinsi n-ném"): the sentence is replaced by NAME_ORDER_LINE,
         and a sentence saying it was assembled goes with it.
+      - N-ném left out: Kenyang, then chi, then a capitalised name, in a sentence whose
+        own English says "name" ("Eta'ya nsinsi chi Helen, which means my grandfather's
+        name is Helen"; Testing row 7, 26 November 2026). The same error as the wrong
+        order, with the word missing, refused the same way. chi alone is also "is"
+        (mmok chi nɛfí), so a sentence that does not say "name" is never touched.
     """
     text = unicodedata.normalize("NFC", reply)
-    if not _NAME_WORD.search(text):
+    if not _NAME_WORD.search(text) and not re.search(r"\bchi\b", text, re.IGNORECASE):
         return reply, []
     changes, out, refused = [], [], False
     for m in _SENTENCE.finditer(text):
         sent = m.group(0)
         hits = list(_NAME_WORD.finditer(sent))
         if not hits:
-            out.append((m.start(), m.end(), sent))
+            if _name_without_nem(sent):
+                changes.append((sent.strip(), NAME_ORDER_LINE))
+                out.append((m.start(), m.end(), " " + NAME_ORDER_LINE + " "))
+                refused = True
+            else:
+                out.append((m.start(), m.end(), sent))
             continue
         words = [(w.start(), w.end(), w.group(0)) for w in _WORD.finditer(sent)]
         plan = []

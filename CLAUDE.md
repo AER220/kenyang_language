@@ -497,6 +497,25 @@ and legs are closed separately.
 last two figures, are drawn with no step, stair or slope, so they read as stepping and
 walking. Each needs something to climb up or come down (26 November 2026).
 
+**When positions.png is regenerated** (26 November 2026): rows 1 and 2 work and are
+placed (amem, neku, a'nfai, a'nten; ambeuh, ansem, anfai, amik). Row 3 is not placed and
+must not be: Fa (here), Afo (there) and Awuh (over there, further than Afo) say how far a
+thing is from the SPEAKER, and a box and a ball cannot show where the speaker stands; a
+big ball and a small ball read as two sizes as easily as near and far. nefi (outside)
+has no scene a learner could tell from neku (beside): a ball next to a closed box is
+both. A remade picture needs:
+
+- **A person in each distance scene, the same person in the same place**, with one
+  ground line running back so that distance reads as distance. Fa: the ball at the
+  person's feet or in their hand. Afo: the ball some way off, the person pointing at it.
+  Awuh: the ball far off near the horizon, the person pointing further. Three panels
+  with only the ball moving, so the one difference is how far it is.
+- **Inside and outside as a pair, round the same container**, one a person can be in:
+  a house with an open door (ɛkɛt, a confirmed word), or a fenced yard. amem: the ball
+  (or a child) inside, seen through the door. nefi: the same ball in the yard, outside the
+  same house. Not a ball beside a box, which is neku.
+- The box-and-ball scenes for the other eight can stay as they are.
+
 **Squarer, not a long line.** A very wide thin band (animals.png is 1600x361 once
 cropped) leaves the subjects small and crowds the numbered points on a phone. Future
 pictures should be closer to square: two rows rather than one long line.
