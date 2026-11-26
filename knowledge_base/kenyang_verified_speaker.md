@@ -159,8 +159,8 @@ choose the right form and write it plainly.
 chi means "is". It joins a thing to what it is.
 
     n-ném Eta'ya chi John       My father's name is John
-        n-ném Eta'ya  =  my father's name
-        chi John      =  is John
+        n-ném Eta'ya     my father's name
+        chi John         is John
 
 ## Loving and liking
 
@@ -284,8 +284,8 @@ of the word.
 
 Éh Èh is NO. Never use it to agree with something.
 
-    Èh  M'chi siri              Yes, I am fine
-    Éh Èh  M'chi siri           NO, I am fine   — a contradiction, never write this
+    Èh M'chi siri               Yes, I am fine
+    Éh Èh M'chi siri            NO, I am fine   — a contradiction, never write this
 
 ## Being well, being unwell
 
@@ -550,7 +550,7 @@ is what makes it "where IS the dog".
 For a whole family loving someone, use bá (they):
 
     Nneré-eket Ngoré wah bá kong mme
-                    my wife's family loves me   (my in-laws love me)
+                    my wife's family loves me (my in-laws love me)
     nneré-eket      family
     bá              they
 
@@ -624,7 +624,7 @@ AFTER the noun:
     Ndɨ́ndɨ́         good        Mmɔ Ndɨ́ndɨ́     good child      Nfor Ndɨ́ndɨ́   good king
     pɛ́pɛ́p          white       ɛkɛt pɛ́pɛ́p     white house
     pyɔ             black       mmú pyɔ         black dog
-    (numbers)                   beket bɛ́pay     two houses
+    bɛ́pay           two         beket bɛ́pay     two houses
 
 So "good" goes AFTER, like colours and numbers — not before, like big and beautiful. The
 safest guide: treat size words (big, small) and "beautiful" as BEFORE; treat good,
@@ -959,7 +959,7 @@ like "I am not going"); Kɛ́ negates a command.
 
     ɛnyɨŋ ɛnɛ ɛ́fákárí          the thing that happened
     Kɛ́ ghati yɛ̌ mmu ɛnyɨŋ ɛnɛ ɛ́fákárí
-        Do not tell anyone what happened  (tell no one the thing that happened)
+        Do not tell anyone what happened (tell no one the thing that happened)
 
 ## Going to a person — ntá (to your)
 
@@ -1206,15 +1206,15 @@ that nothing of how we actually write it is lost.
 **The pattern is always the same.** Where the two differ, the spoken spelling uses a plain
 letter and the written standard uses the Kenyang letter in its place:
 
-    e  ->  ɛ          o  ->  ɔ          n  ->  ŋ
+e  ->  ɛ          o  ->  ɔ          n  ->  ŋ
 
 Eleven of my own words differ in exactly this way, and in no other way. The sound is the
 same; only the letter chosen to write it changes.
 
 ### The pairs
 
-    spoken          written           meaning
-    ------          -------           -------
+spoken          written           meaning
+------          -------           -------
     étá             ɛ́tá              father
     anwa            aŋwa              cat
     ékwá            ɛ́kwá             plantain
@@ -1229,8 +1229,8 @@ same; only the letter chosen to write it changes.
 
 These differ only in the tone mark:
 
-    spoken          written           meaning
-    ------          -------           -------
+spoken          written           meaning
+------          -------           -------
     nkok            nkók              fowl
     Mandu           mandu             small
 
@@ -1275,7 +1275,7 @@ has its place.
 
 Against the bound markers already in this file:
 
-    bound       standing alone
+bound       standing alone
     mme         meh             I
     O'          Wo              you
     à           Yí              he, she
@@ -1296,7 +1296,7 @@ standing by itself.
 
 These are built from the short possessives already in this file. Ey goes in front:
 
-    short       standing alone
+short       standing alone
     wah         Eya             my, mine
     yeh         Eyèh            your, yours
     yi          Eyí             his, hers

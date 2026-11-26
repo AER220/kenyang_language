@@ -420,8 +420,8 @@ dry season brings, and ends asking protection for those who work the farms.
 This is the rule Text 1 only hinted at. The letters are the same; the mark over
 the vowel changes who is being spoken to.
 
-    high tone     bá-, mán-      they
-    rising tone   bǎ-, mǎn-      you people
+    bá-, mán-      they          (high tone)
+    bǎ-, mǎn-      you people    (rising tone)
 
 Every example across both texts, with no exception:
 
