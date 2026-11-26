@@ -1604,6 +1604,97 @@ def swap_held_back(reply, forms, phrases=()):
     return norm, seen
 
 
+# ── the order of a name sentence: N-ném first ────────────────────────────────
+# Ed, 26 November 2026: "N-ném Ma'ya nsinsi chi Helen" (my grandmother's name is
+# Helen). N-ném first, then whose it is, then chi, then the name. The model was told
+# and still wrote "Ma'ya nsinsi n-ném chi Helen", for some time and unseen (Testing row
+# 6), so the code checks it. Only the reply's own words move: nothing is added or
+# respelled. Where the order cannot be read safely, the sentence is replaced by one the
+# code writes, never guessed at. Only the hyphenated N-ném (name); nném is husband.
+_NAME_WORD = re.compile(r"(?<![^\W_])(?<![-'’\u0300-\u036f])n-ném(?![^\W_])(?![-'’\u0300-\u036f])",
+                        re.IGNORECASE)
+_SENTENCE = re.compile(r"[^.!?\n]+[.!?]*")
+_OWNERISH = {"my", "your", "his", "her", "our", "their", "its"}
+NAME_ORDER_LINE = ("I can't put that name sentence together safely. The order is N-ném "
+                   "first, then whose name it is, then chi, then the name: N-ném Ma'ya "
+                   "nsinsi chi Helen means my grandmother's name is Helen.")
+
+
+def _kenyang_token(t):
+    f = _fold_word(t)
+    return bool(f) and (_looks_kenyang(t) or not _is_english(f))
+
+
+def enforce_name_order(reply):
+    """
+    Returns (reply, [(was, now), ...]); now is NAME_ORDER_LINE where a sentence was
+    replaced. In each sentence holding N-ném:
+      - Kenyang words straight before N-ném (nothing but spaces between, back to
+        punctuation or an English word) are the owner. If chi follows N-ném, N-ném
+        moves in front of them: "Ma'ya nsinsi n-ném chi Helen" becomes
+        "N-ném Ma'ya nsinsi chi Helen".
+      - No owner before it: left alone ("N-ném Ma'ya nsinsi chi Helen", "name = n-ném").
+      - An owner but no chi after N-ném, N-ném twice, or an English possessive just before
+        the owner ("my Ma'ya nsinsi n-ném"): the sentence is replaced by NAME_ORDER_LINE,
+        and a sentence saying it was assembled goes with it.
+    """
+    text = unicodedata.normalize("NFC", reply)
+    if not _NAME_WORD.search(text):
+        return reply, []
+    changes, out, refused = [], [], False
+    for m in _SENTENCE.finditer(text):
+        sent = m.group(0)
+        hits = list(_NAME_WORD.finditer(sent))
+        if not hits:
+            out.append((m.start(), m.end(), sent))
+            continue
+        words = [(w.start(), w.end(), w.group(0)) for w in _WORD.finditer(sent)]
+        plan = []
+        for h in hits:
+            i = next(k for k, w in enumerate(words) if w[0] == h.start())
+            j, owner = i, []
+            while j > 0:
+                a, b, t = words[j - 1]
+                if sent[b:words[j][0]].strip() or not _kenyang_token(t):
+                    break
+                owner.insert(0, words[j - 1])
+                j -= 1
+            if not owner:
+                plan.append(None)
+                continue
+            nxt = words[i + 1][2].lower() if i + 1 < len(words) and not sent[
+                words[i][1]:words[i + 1][0]].strip() else ""
+            before = words[j - 1][2].lower() if j > 0 and not sent[
+                words[j - 1][1]:owner[0][0]].strip() else ""
+            if nxt != "chi" or before in _OWNERISH or before.endswith("'s"):
+                plan.append("refuse")
+            else:
+                plan.append((owner[0][0], words[i][1], owner))
+        if "refuse" in plan or (len(hits) > 1 and any(plan)):
+            changes.append((sent.strip(), NAME_ORDER_LINE))
+            out.append((m.start(), m.end(), " " + NAME_ORDER_LINE + " "))
+            refused = True
+            continue
+        for p in reversed([p for p in plan if p]):
+            a, b, owner = p
+            was = sent[a:b]
+            now = "N-ném " + sent[a:owner[-1][1]]
+            sent = sent[:a] + now + sent[b:]
+            changes.append((was, now))
+        out.append((m.start(), m.end(), sent))
+    if not changes:
+        return reply, []
+    vouch = re.compile(r"\bassembled\b|\bput (it|this|those) together\b", re.IGNORECASE)
+    result, last = [], 0
+    for a, b, s in out:
+        result.append(text[last:a])          # what lay between sentences: newlines kept
+        if not (refused and vouch.search(s) and NAME_ORDER_LINE not in s):
+            result.append(s)
+        last = b
+    result.append(text[last:])
+    return re.sub(r"[ \t]{2,}", " ", "".join(result)).strip(), changes
+
+
 def passages_block(found):
     """Group the retrieved passages under their trust headers, highest tier first."""
     if not found:
@@ -2935,6 +3026,9 @@ if st.session_state.pending:
             # Rule 4: a number no source has is never built. The code checks every run of
             # number words in the reply against the sources (see enforce_numbers).
             reply, built_numbers = enforce_numbers(reply, last_user, NUMBERS)
+            # A name sentence's order (N-ném first) is checkable, so the code checks it.
+            reply, name_fixes = enforce_name_order(reply)
+            st.session_state.last_name_fixes = name_fixes
             if reply.strip():
                 # Which words can be heard is a fact the code can check, so the code says
                 # it. The model is told never to; it once claimed a recording that did not
@@ -2985,6 +3079,9 @@ if st.session_state.get("last_passages"):
                            "of what Nɛpɛ́m sees; the files are unchanged.")
                 for why in sorted(HELD.values()):
                     st.text(why)
+        if st.session_state.get("last_name_fixes"):
+            st.caption("In the last reply the code put N-ném first in a name sentence: "
+                       + "; ".join(f"{a} → {b}" for a, b in st.session_state.last_name_fixes))
         if st.session_state.get("last_swaps"):
             st.caption("In the last reply the code put the verified form in place of a "
                        "held-back one: " + ", ".join(f"{a} → {b}" for a, b in
