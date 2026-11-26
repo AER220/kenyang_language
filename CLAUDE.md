@@ -337,6 +337,12 @@ Settled on 24 November 2026. Do not "correct" them.
 - `Ma'ya`, my mother: with the apostrophe.
 - `amik` is a homograph: it means ground, and it means eyes.
 
+Settled on 26 November 2026:
+
+- `Èh` is yes, with the grave. `Éh Èh` is no. `Éh` is not a spelling of yes: Ed's own
+  recordings were stored as `Éh`, and the audio is right but the mark was wrong. (The
+  course chapters' `Éh`, "What did you say?", is a different word and stays.)
+
 Settled on 25 November 2026:
 
 - `beket`, houses: canonical. It is in the verified file and in Ed's speech, and

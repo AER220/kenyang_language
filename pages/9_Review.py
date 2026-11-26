@@ -252,7 +252,7 @@ def show_recording(store, r, mine):
         # pictures; other speakers' recordings never count there, whatever is ticked.
         mine = st.checkbox("This recording is mine, in my own voice", value=False,
                            key=f"mine{rid}",
-                           help="Only your own recordings move a word up on the pictures.")
+                           help="Only your own recordings move a word up on the Visuals.")
         yes, nope = st.columns(2)
         if yes.button("Approve", key=f"ok{rid}", type="primary", use_container_width=True,
                       disabled=not spelling.strip()):

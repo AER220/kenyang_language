@@ -279,12 +279,12 @@ of the word.
 
 ## Yes and No — do not mix these up
 
-    Éh              yes
+    Èh              yes
     Éh Èh           no
 
 Éh Èh is NO. Never use it to agree with something.
 
-    Éh  M'chi siri              Yes, I am fine
+    Èh  M'chi siri              Yes, I am fine
     Éh Èh  M'chi siri           NO, I am fine   — a contradiction, never write this
 
 ## Being well, being unwell
@@ -303,12 +303,12 @@ of the word.
     buereh          keep
     buereh kenor    sleep
 
-    Éh Che mme ékwá!            Yes, give me plantain!
+    Èh Che mme ékwá!            Yes, give me plantain!
     Meh yan buereh kenor        I want to sleep   (lit. I am looking to sleep)
     M'pop, mma. Meh yan buereh kenor
                                 I am tired, Mum. I want to sleep.
     Mma, buereh ékwá?           Mummy, shall I keep you plantain?
-    Éh! Sé buereh               Yes, let us sleep
+    Èh! Sé buereh               Yes, let us sleep
 
 Careful: "M'pop ékwá" does NOT mean "I want plantain". It means "I am TIRED of plantain".
 To ask for something, use Che mme.

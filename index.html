@@ -1038,7 +1038,7 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
 
   <hr class="rule">
 
-  <!-- ══ PICTURES ═══════════════════════════════════════════════════
+  <!-- ══ VISUALS (id "pictures", the address) ═══════════════════════════════════════════════════
        Each scene is a layout of words that already exist: a picture never
        brings a word with it. Built from scenes/*.json by build_scenes.py,
        which leaves out any word Ed has not confirmed. -->
@@ -1599,7 +1599,7 @@ const STEPS = [
 {id:"howare", n:"Step 6", title:"Ask if someone is well",
  sub:"A whole conversation, both halves of it.",
  words:[["Mma O'chi siri?","Mother, are you well?","O' is the mark for you."],
-        ["Éh, M'chi siri","yes, I am well","M' is the mark for I. Same shape, other person."],
+        ["Èh, M'chi siri","yes, I am well","M' is the mark for I. Same shape, other person."],
         ["M'pu siri","I am not well","pu is the little word that turns it around."]],
  mission:"Ask somebody at home <b>Mma O'chi siri?</b> and see whether they can answer."},
 {id:"polite", n:"Step 7", title:"Please and thank you",
@@ -3333,7 +3333,8 @@ document.addEventListener("pointerdown", e => {
 const PLAN = [
   ["learn",    "Learn",    "✦", [".hero", "#numbers", "#alone"]],
   ["play",     "Play",     "🧩", ["#table"]],
-  ["pictures", "Pictures", "◐",  ["#pictures"]],
+  /* shown as Visuals; the id stays "pictures", because it is the address people have */
+  ["pictures", "Visuals",  "◐",  ["#pictures"]],
   ["feedback", "Feedback", "🌿", ["#help", "#wall"]],
   ["about",    "About",    "◇",  ["#honest", "#about", "#governance", "#invent"]]
 ];
@@ -3484,7 +3485,7 @@ if (dock.style.left) restoreDock();
 }
 
 /* ── pictures ───────────────────────────────────────────────────── */
-const SCENE_NAMES = ["animals", "people", "head", "body", "compound", "outdoors"];
+const SCENE_NAMES = ["animals", "people", "actions", "head", "body", "compound", "outdoors", "positions"];
 async function loadScenes(){
   const box = $("scenes");
   if (!box) return;
@@ -3496,7 +3497,7 @@ async function loadScenes(){
       parts.push(drawScene(name, await r.json()));
     }catch(e){}
   }
-  box.innerHTML = parts.join("") || `<p class="scenenote">The pictures could not be loaded.</p>`;
+  box.innerHTML = parts.join("") || `<p class="scenenote">The visuals could not be loaded.</p>`;
   box.querySelectorAll(".scene").forEach(wireScene);
 }
 function drawScene(name, sc){
@@ -3511,8 +3512,13 @@ function drawScene(name, sc){
   const mark = p => p.state === "book"
     ? `<span class="wsrc" title="From written sources, not yet checked by a speaker">from written sources</span>` : "";
   /* a form Ed's recording replaced is kept and shown, never discarded */
-  const also = p => p.variant ? `<small class="also">also written <span lang="ken">${esc(p.variant)}</span></small>` : "";
-  const label = p => `<b lang="ken">${esc(p.word)}</b>` + (p.english ? `<small>${esc(p.english)}</small>` : "") + mark(p) + also(p);
+  const also = p => p.variant ? `<small class="also" data-nosay>also written <span lang="ken">${esc(p.variant)}</span></small>` : "";
+  /* A label carries its own recording or none. Without data-nosay, say.js would mark
+     any recorded word inside a phrase that is not itself recorded: nnyɛ́n (river)
+     inside ngɔk nnyɛ́n (river bank), or each half of étá nsinsi on its own. So only a
+     recorded label is left for say.js; a phrase recorded whole is matched whole,
+     longest first, as everywhere on the site. */
+  const label = p => `<b lang="ken"${p.state === "recorded" ? "" : " data-nosay"}>${esc(p.word)}</b>` + (p.english ? `<small>${esc(p.english)}</small>` : "") + mark(p) + also(p);
   const dots = pts.map((p, i) => `<span class="dot" style="${where(p)}" data-i="${i}" data-state="${esc(p.state || "")}" aria-hidden="true">${i + 1}</span>`).join("");
   const lbls = sc.layout === "points" ? "" : pts.map(p => `<span class="lbl" style="${where(p)}">${label(p)}</span>`).join("");
   const pic = `<div class="pic"><img src="${esc(sc.image)}" alt="${esc(sc.title)}" width="${sc.size[0]}" height="${sc.size[1]}">${lbls}${dots}</div>`;
@@ -3550,9 +3556,10 @@ function wireScene(el){
      It is sent inside the dot's own tap, so the browser counts it as the
      person's gesture and lets the sound play. say.js decides as always: a word
      it has no recording of stays silent. A "from written sources" word is never
-     handed on at all, even if some recording happens to share its letters. */
+     handed on at all, even if some recording happens to share its letters, and
+     nor is any other label that is not recorded. */
   const sayRow = (row, dot) => {
-    if (dot.dataset.state === "book") return;
+    if (dot.dataset.state !== "recorded") return;
     const w = row.querySelector("b[lang=ken]");
     const r = w && w.getClientRects()[0];
     if (!r) return;

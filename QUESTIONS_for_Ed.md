@@ -586,10 +586,31 @@ Raised by Ed on 25 November 2026. On the Sky and land picture ékwá is placed o
 plantain bunch, and his recording glosses it "plantain", which in English can be the
 fruit or the plant. The verified files use it both ways, so they do not settle it:
 
-    the fruit, as food   Éh Che mme ékwá!          Yes, give me plantain!   (speaker file)
+    the fruit, as food   Èh Che mme ékwá!          Yes, give me plantain!   (speaker file)
                          Mma, buereh ékwá?         Mummy, shall I keep you plantain?
                          M'pop ékwá                I am tired of plantain
     the plant            Apɨ chí bɛ́kwá             If he plants plantains   (Text 9)
 
 [TO CONFIRM: does ékwá name the fruit, the plant, or both? If the plant has a word of
 its own, it goes on the recording list for the picture, and ékwá stays on the bunch.]
+
+## 33. Found placing the actions and positions pictures (26 November 2026)
+
+Listed, not resolved:
+- **Tæ** (stand): æ is not one of the thirty letters of the alphabet. It is in the
+  speaker file and in the course chapters (Tæ nine times, Fatæ twice), and nowhere in
+  the recorded texts. Is æ how it is written, or a stand-in for a letter of the
+  alphabet? The picture shows Tæ as written.
+- **down**: two forms in the speaker file. amik, "ground; also down depending on use"
+  (position words), and ammik, "on the ground, down" (Where things are). The picture
+  uses amik. It is also the same spelling as amík (eye) and amik (ground): QUESTIONS 26.
+- **under**: the course has a'nten (Under). The speaker file has anten (below) and the
+  recorded texts antɛn (below). Your note says anfai and a'nfai are two words, the
+  apostrophe marking the difference, so a'nten and anten are not taken as one. The
+  picture shows a'nten, from written sources.
+- **behind**: ansem is "after" in the speaker file's "When and how" list and "behind"
+  (confirmed) in its position words. Two meanings, or one word used two ways? The
+  picture chooses "behind".
+- **Awuh** (over there) is also in the list of Bayangi family names.
+- **eh**, unmarked, is listed as "the plain everyday yes" beside ě. With Èh settled as
+  yes, is eh the same word with its mark lost, or a form of its own?

@@ -30,6 +30,11 @@ Two jobs, run separately:
                                          not count, so one approved typo cannot vouch
                                          for itself on a picture.
 
+A point may carry "sense": an English word that chooses among the word's OWN glosses in
+the files, for a word listed with more than one (ansem is "after" in one list and
+"behind" in another). It adds nothing: if none of the word's glosses contains it, the
+build says so and shows the first.
+
 A layout may also carry "layout": "points" (numbered points and a list on every screen,
 for a picture with many words) and "list": [...] (words shown beneath the picture, with
 no point on it).
@@ -146,8 +151,15 @@ def glosses(fold, verified):
     the exact spelling first, so a word takes its gloss from the entry it was copied
     from, not from another book that happens to share the letters."""
     out = {}
-    put = lambda form, gloss: (out.setdefault(("exact", unicodedata.normalize("NFC", form.strip())), gloss),
-                               out.setdefault(fold(form), gloss))
+    def put(form, gloss):
+        exact = unicodedata.normalize("NFC", form.strip())
+        out.setdefault(("exact", exact), gloss)
+        out.setdefault(fold(form), gloss)
+        # every gloss of the form, in file order, so a layout's "sense" can choose
+        # among them (ansem is "after" in one list and "behind" in another)
+        for k in (("all", exact), ("allfold", fold(form))):
+            if gloss not in out.setdefault(k, []):
+                out[k].append(gloss)
     for path in sorted(glob.glob(os.path.join(ROOT, "knowledge_base", "*"))):
         n = os.path.basename(path)
         if ("verified" in n) != verified or n.lower().endswith(".pdf"):
@@ -202,7 +214,20 @@ def words(out_dir):
     word_rx = re.compile(r"(?:[^\W\d_]|[\u0300-\u036f'’])+(?:-(?:[^\W\d_]|[\u0300-\u036f'’])+)*")
     failed = 0
 
-    def base(word):
+    def pick(table, word, sense):
+        """The gloss to show: with no sense, the first; with one, the first of the
+        word's own glosses that contains the sense as whole words. None if none does:
+        a sense chooses among what the files say, and never adds to it."""
+        w = unicodedata.normalize("NFC", word.strip())
+        if not sense:
+            return table.get(("exact", w), table.get(fold(w), ""))
+        rx = re.compile(r"(?<![a-z])" + re.escape(sense.lower()) + r"(?![a-z])")
+        for g in table.get(("all", w), []) + table.get(("allfold", fold(w)), []):
+            if rx.search(g.lower()):
+                return g
+        return None
+
+    def base(word, sense=""):
         key = fold(word)
         exact = ("exact", unicodedata.normalize("NFC", word.strip()))
         if key in ed:
@@ -212,12 +237,20 @@ def words(out_dir):
         # The verified files hold English prose too, so "in a verified file" alone
         # would let an English word onto a picture: it must not be English.
         if in_text and not any(w in english for w in parts):
-            return "verified", vgloss.get(exact, vgloss.get(key, ""))
+            g = pick(vgloss, word, sense)
+            if g is None:
+                bad_sense.append((word, sense, vgloss.get(("all", exact[1]), [])))
+                g = pick(vgloss, word, "")
+            return "verified", g
         if key in bgloss or re.search(r"(?<![^\W_])" + re.escape(key) + r"(?![^\W_])", book_text):
-            return "book", bgloss.get(exact, bgloss.get(key, ""))
+            g = pick(bgloss, word, sense)
+            if g is None:
+                bad_sense.append((word, sense, bgloss.get(("all", exact[1]), [])))
+                g = pick(bgloss, word, "")
+            return "book", g
         return None, ""
 
-    def state(name, word):
+    def state(name, word, sense=""):
         """
         (state, English, the word to show, the variant it replaced or "").
 
@@ -228,7 +261,7 @@ def words(out_dir):
         matches more than one of Ed's recordings, nothing is guessed: it is listed, and
         the scene's own word stays.
         """
-        st, gloss = base(word)
+        st, gloss = base(word, sense)
         if st not in ("verified", "book") or not gloss:
             return st, gloss, word, ""
         mine = by_gloss.get(gloss_key(gloss), {})
@@ -240,7 +273,7 @@ def words(out_dir):
             ambiguous.append((name, gloss, word, sorted(mine.values())))
         return st, gloss, word, ""
 
-    substituted, ambiguous = [], []
+    substituted, ambiguous, bad_sense = [], [], []
 
     for name, scene in layouts():
         with open(os.path.join(WEB, scene["image"] + ".crop.json")) as f:
@@ -248,7 +281,7 @@ def words(out_dir):
         (sw, sh), (x0, y0, x1, y1) = meta["source_size"], meta["crop"]
         points, listed = [], []
         for p in scene.get("points", []) + [{"word": w} for w in scene.get("list", [])]:
-            st, gloss, shown, variant = state(name, p["word"])
+            st, gloss, shown, variant = state(name, p["word"], p.get("sense", ""))
             if st is None:
                 print(f"LEFT OUT of {name}: {p['word']!r} is in no file of any kind and has "
                       f"no recording of Ed's")
@@ -281,6 +314,10 @@ def words(out_dir):
         print(f"SUBSTITUTED in {name}: {gloss!r}  {was}  ->  {form}   "
               f"(Ed's recording; {was} was {'verified text' if st == 'verified' else 'a book form'}, "
               f"kept as a variant)")
+    for word, sense, have in bad_sense:
+        print(f"SENSE NOT FOUND: {word!r} has no gloss containing {sense!r} "
+              f"(its glosses: {have}); the first is shown. Fix the layout.")
+        failed += 1
     for name, gloss, was, forms in ambiguous:
         print(f"NOT SUBSTITUTED in {name}: {gloss!r} matches {len(forms)} of Ed's recordings "
               f"({', '.join(forms)}); {was} stays until the layout names one")

@@ -1,0 +1,49 @@
+{
+ "image": "positions",
+ "title": "Where things are",
+ "layout": "points",
+ "points": [
+  {
+   "word": "amem",
+   "x": 13.9,
+   "y": 22.3
+  },
+  {
+   "word": "neku",
+   "x": 44.2,
+   "y": 24.3
+  },
+  {
+   "word": "a'nfai",
+   "x": 61.6,
+   "y": 13.2
+  },
+  {
+   "word": "a'nten",
+   "x": 84.7,
+   "y": 24.8
+  },
+  {
+   "word": "ambeuh",
+   "x": 15.3,
+   "y": 56.9
+  },
+  {
+   "word": "ansem",
+   "x": 41.6,
+   "y": 44.0,
+   "sense": "behind"
+  },
+  {
+   "word": "anfai",
+   "x": 61.6,
+   "y": 41.4
+  },
+  {
+   "word": "amik",
+   "x": 84.7,
+   "y": 59.8,
+   "sense": "down"
+  }
+ ]
+}
