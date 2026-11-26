@@ -163,7 +163,9 @@ held back a fix behind failures nobody had solved. A push may go when:
 A row already failing on the live code does not block a push, but it must be named in
 the push report, every time, so it is never forgotten. The known baseline is
 `LIVE_FAILING` in `run_checks.py`: on 26 November 2026, rows 4 (drops nyaka) and 7 (an
-example sentence built from parts); rows 5 and 6 were fixed in code in that push. A push
+example sentence built from parts), and row 1 until Ed answers QUESTIONS 38 (not a code
+failure: his counting table and his recordings disagree on one and seven); rows 5 and 6
+were fixed in code in that push. A push
 whose change fixes one takes it out of `LIVE_FAILING` in the same commit. A row that
 passes by chance in one run, with nothing fixed, stays in. The rows and their checks live in `run_checks.py`; this table is
 the readable copy, and a row added here must be added there. Nobody was running the
@@ -425,6 +427,17 @@ the code reads it (`_BOOK_SPELLING`):
 The forms on such a line are never counted as confirmed: not by the flag, not by the
 hold-back. They count as "from written sources", so a learner who meets one is told it
 is a book's spelling.
+
+**RULE: a book form of a word or phrase Ed already has gets its book-spelling line in
+the same commit that files it.** Not afterwards, when something has gone wrong. Adding
+book material makes the model MORE likely to teach it, whatever the rules say about
+Ed's form winning: filing the poster's greetings (26 November 2026) is exactly what let
+the chat teach the poster's "Eh Neyi nkwor" over Ed's own Neyi nkuo, and the word flag
+did not catch it, because each of its words is in his text. So whenever a book or course
+form is filed, check it against his verified forms and recordings first, and where he
+has the word or phrase, write the line, in the form above, in his verified file, in the
+same change. A book form he does not have needs no line: the flag already calls it
+"from written sources".
 
 The rong prefix rule lives in the prefix-pattern section of
 `kenyang_verified_speaker.md` ("The prefix pattern — learn this and you can build

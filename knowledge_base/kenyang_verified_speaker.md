@@ -1125,6 +1125,7 @@ spellings: not wrong to find, but not the form to teach.
 
     book spelling: bɛkɛt, bɛket       confirmed: beket       houses
     book spelling: bépay       confirmed: bɛ́pay       two
+    book spelling: Eh Neyi nkwor       confirmed: Neyi nkuo       good morning to you too
 
     ### Helping with the crossword
 

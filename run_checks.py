@@ -65,7 +65,13 @@ REFUSES = lambda r: bool(re.search(r"\b(don't|do not|doesn't|does not) have\b|\b
 # and 5 (bépay for Ed's recorded bɛ́pay) also failed on live; both were fixed in code in
 # the push that set this up, and taken out. Take a row out only when a change fixes it:
 # row 7 passed in that push's run by chance (no sentence was built), so it stays.
-LIVE_FAILING = {4, 7}
+#
+# Row 1 (count 1 to 10), added 26 November 2026 with Ed's agreement, is NOT a code
+# failure: Ed's own counting table (Ɛmɔ́t, Tándat nɛ amɔt) disagrees with his own
+# recordings (ɛ́mɔt, tándrámɔt), and the swap rightly leaves his written forms alone, so
+# a reply that draws on the table fails the row. QUESTIONS 38. Ed will settle it by
+# saying the forms aloud; take row 1 out again as soon as he answers.
+LIVE_FAILING = {1, 4, 7}
 
 ONE_TO_TEN = ["ɛ́mɔt", "bɛ́pay", "bɛ́rát", "mɛ́nwi", "bɛ́tay", "bɛ́tandat", "tándrámɔt",
               "mɛ́nɛn", "mɛ́nɛn nɛ amɔt", "byó"]
