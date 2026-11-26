@@ -1774,9 +1774,9 @@ def number_swaps(numbers):
 _MEANING_STOP = {"my", "the", "a", "an", "to", "your", "of", "is", "are", "in", "kenyang",
                  "word", "for", "it", "this", "that", "and", "or", "also", "you", "say", "be",
                  "means", "mean"}
-# Held out until Ed answers: rong is "going" in his files and dɔk "go"; the model calls
-# rong "to go". Whether rong is also "go" is QUESTIONS 39.
-MEANING_PENDING = {"rong"}
+# Words held out of the check until Ed answers a question about their meaning. Empty:
+# rong was held until Ed confirmed it is "go, going" (QUESTIONS 39, 26 November 2026).
+MEANING_PENDING = set()
 
 
 @st.cache_data(show_spinner=False)

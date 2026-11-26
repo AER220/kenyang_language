@@ -672,3 +672,13 @@ as "go". The model calls rong the verb "to go" ("go = rong"), three times in 65 
 If rong is only "going", those are two confirmed words swapped and the check should
 replace them. If rong is also "go", they are right, and its gloss should say so.
 Until Ed answers, rong is held out of the check (MEANING_PENDING in streamlit_app.py).
+
+[ANSWERED by Ed, 26 November 2026: rong is "go, going", both. The three cases were not
+errors. The recording's English is now "go, going", and rong is checked like any word.]
+
+## 40. dɔk and rong: do they differ in use?
+
+Raised by Ed, 26 November 2026, answering 39. Both are "go". In the verified files dɔk
+appears as a command ("Dɔ́k nɛ mmɛn ndú ɛsyɛ", go with the goat to the market) and rong
+as ongoing ("mme rong", I am going). Whether that is a real rule (dɔk for go!, rong for
+am going) is NOT settled. Not filed as a rule.

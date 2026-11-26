@@ -241,7 +241,8 @@ sentence glossed as a whole is not checked: that is QUESTIONS 34. A list is read
 item, on separate lines or run together with no full stop: a wrong "two = beket" is
 replaced on its own ("beket = house, houses") and the other items stay. A claim in prose
 replaces its sentence, so no wrong word is left around a corrected one. Words in
-`MEANING_PENDING` are held out until Ed answers (rong, QUESTIONS 39).
+`MEANING_PENDING` are held out until Ed answers a question about them (empty now: rong
+was held until Ed confirmed "go, going", QUESTIONS 39).
 
 ## Things not to change without asking
 
