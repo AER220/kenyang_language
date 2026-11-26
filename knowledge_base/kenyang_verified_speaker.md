@@ -38,7 +38,7 @@ wrong produces sentences a Kenyang speaker would not say.
 ### Colour and number come AFTER the noun
 
     ɛkɛt Piór           white house         (house + white)
-    beket bépay         two houses          (houses + two)
+    beket bɛ́pay         two houses          (houses + two)
 
 A grammar guide describing this construction used a colour as its example, which is why
 a rule written only from that guide puts every adjective after the noun. That is correct
@@ -624,7 +624,7 @@ AFTER the noun:
     Ndɨ́ndɨ́         good        Mmɔ Ndɨ́ndɨ́     good child      Nfor Ndɨ́ndɨ́   good king
     pɛ́pɛ́p          white       ɛkɛt pɛ́pɛ́p     white house
     pyɔ             black       mmú pyɔ         black dog
-    (numbers)                   beket bépay     two houses
+    (numbers)                   beket bɛ́pay     two houses
 
 So "good" goes AFTER, like colours and numbers — not before, like big and beautiful. The
 safest guide: treat size words (big, small) and "beautiful" as BEFORE; treat good,
@@ -1117,13 +1117,14 @@ Boh in front of a word makes it plural.
 This is a rule, not just a word: Boh + the thing = more than one of it.
 
 Note also the be- / bé- prefix doing the same job on other nouns:
-    ɛkɛt  →  beket       house  →  houses      (beket bépay = two houses)
+    ɛkɛt  →  beket       house  →  houses      (beket bɛ́pay = two houses)
     ékwá  →  békwá       plantain → plantains
 
 Teach beket for houses. The books and the course write it other ways. Those are book
 spellings: not wrong to find, but not the form to teach.
 
     book spelling: bɛkɛt, bɛket       confirmed: beket       houses
+    book spelling: bépay       confirmed: bɛ́pay       two
 
     ### Helping with the crossword
 

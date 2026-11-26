@@ -1718,7 +1718,8 @@ def number_swaps(numbers):
     for path in glob.glob(os.path.join(KB_ROOT, "**", "*verified*"), recursive=True):
         try:
             with open(path, encoding="utf-8") as f:
-                mine += "\n" + key(f.read())
+                # a book-spelling line names a book's form, not one of Ed's
+                mine += "\n" + key(without_book_spellings(f.read()))
         except OSError:
             pass
     in_mine = lambda form: re.search(r"(?<![^\W_])" + re.escape(key(form)) + r"(?![^\W_])", mine)
