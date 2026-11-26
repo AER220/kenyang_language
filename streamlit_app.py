@@ -1835,9 +1835,10 @@ def _english_run(words, reverse=False):
 
 
 def meaning_claims(text, table):
-    """(start, end, shown form, folded form, claimed meaning) for each "X means Y" the
-    patterns find: X means Y, X, which means Y, X (Y), X — Y, X = Y, Y = X, the word for
-    Y is X, Y in Kenyang is X."""
+    """(start, end, shown form, folded form, claimed meaning, is a "=" pair) for each
+    "X means Y" the patterns find: X means Y, X, which means Y, X (Y), X — Y, X = Y,
+    Y = X, the word for Y is X, Y in Kenyang is X. For a "=" pair, start and end cover
+    the pair itself ("two = beket"), so a list is read item by item."""
     if not table:
         return []
     heads = sorted(table, key=len, reverse=True)
@@ -1848,18 +1849,25 @@ def meaning_claims(text, table):
     for m in rx.finditer(text):
         rest, pre = text[m.end():m.end() + 90], text[max(text.rfind("\n", 0, m.start()) + 1,
                                                           m.start() - 80):m.start()]
-        ys = []
-        a = re.match(r"\s*" + q + r"\s*(?:,\s*which\s+means|\s+means|\s+meaning|\s*[—–]|\s+-|\s*=|\s*:)\s*"
+        ys, eq = [], []
+        a = re.match(r"\s*" + q + r"\s*(,\s*which\s+means|\s+means|\s+meaning|\s*[—–]|\s+-|\s*=|\s*:)\s*"
                      + q + r"([^\"“”\n.!?;=]{1,60})", rest)
         if a:
-            ys.append(_english_run(a.group(1).split()))
+            y = _english_run(a.group(2).split())
+            if a.group(1).strip() == "=" and y:
+                eq.append((m.start(), m.end() + a.start(2) + len(y), y))
+            else:
+                ys.append(y)
         else:
             a = re.match(r"\s*" + q + r"\s*\(([^)]{1,60})\)", rest)
             if a:
                 ys.append(a.group(1))
         b = re.search(r"\s*=\s*" + q + r"\s*$", pre)
         if b:
-            ys.append(_english_run(re.findall(r"[^\s\"“”]+", pre[:b.start()]), reverse=True))
+            y = _english_run(re.findall(r"[^\s\"“”]+", pre[:b.start()]), reverse=True)
+            if y:
+                at = pre.rfind(y.split()[0], 0, b.start())
+                eq.append((m.start() - len(pre) + max(at, 0), m.end(), y))
         else:
             b = re.search(r"(?:word|phrase) for\s+" + q + r"([^\"“”\n.!?]{1,40}?)" + q
                           + r"\s+(?:in Kenyang\s+)?is\s+" + q + r"\s*$", pre, re.IGNORECASE) or \
@@ -1868,7 +1876,10 @@ def meaning_claims(text, table):
                 ys.append(b.group(1))
         for y in ys:
             if y and _gloss_words(y) and not _looks_kenyang(y):
-                out.append((m.start(), m.end(), m.group(1), _fold_word(m.group(1)), y.strip()))
+                out.append((m.start(), m.end(), m.group(1), _fold_word(m.group(1)), y.strip(), False))
+        for a0, a1, y in eq:
+            if _gloss_words(y) and not _looks_kenyang(y):
+                out.append((a0, a1, m.group(1), _fold_word(m.group(1)), y.strip(), True))
     return out
 
 
@@ -1888,15 +1899,21 @@ def meaning_verdict(form, y, table):
 
 
 def enforce_meanings(reply, table):
-    """Returns (reply, [(sentence, replacement)]). A sentence holding a STRONG claim is
-    replaced by "X means <Ed's glosses>." Weak claims and agreeing ones are left alone."""
+    """Returns (reply, [(was, now)]). A STRONG claim in prose replaces its sentence with
+    "X means <Ed's glosses>." A strong "=" pair in a list ("two = beket") is replaced on
+    its own ("beket = house, houses"), and the other items stay: a list is read item by
+    item, on separate lines or run together. Weak and agreeing claims are left alone."""
     text = unicodedata.normalize("NFC", reply)
     changes, result, last = [], [], 0
     for m in _SENTENCE.finditer(text):
         sent = m.group(0)
-        lines = []
-        for _, _, shown, form, y in meaning_claims(sent, table):
+        lines, pairs = [], []
+        for a0, a1, shown, form, y, is_pair in meaning_claims(sent, table):
             if form in MEANING_PENDING or meaning_verdict(form, y, table) != "strong":
+                continue
+            if is_pair:
+                # one item of a list: only that item is replaced, the others stay
+                pairs.append((a0, a1, f"{shown} = {', '.join(table[form])}"))
                 continue
             line = f"{shown} means {'; '.join(table[form])}."
             if line not in lines:
@@ -1907,6 +1924,9 @@ def enforce_meanings(reply, table):
             changes.append((sent.strip(), now.strip()))
             result.append(now)
         else:
+            for a0, a1, now in sorted(set(pairs), reverse=True):
+                changes.append((sent[a0:a1], now))
+                sent = sent[:a0] + now + sent[a1:]
             result.append(sent)
         last = m.end()
     result.append(text[last:])

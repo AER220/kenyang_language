@@ -237,8 +237,10 @@ The decision came from a report-only pass over 65 saved replies: 88 claims, 80 a
 5 strong, 3 weak. **It is a net, not a guarantee.** The extraction took three passes to
 get right on those replies (it first read "rong past" as nyaka's meaning and "parts i"
 as mmɛ's), and live replies will phrase claims in ways the patterns miss. A whole
-sentence glossed as a whole is not checked: that is QUESTIONS 34. Where a breakdown runs
-on with no full stop, the whole run is the sentence, and all of it is replaced. Words in
+sentence glossed as a whole is not checked: that is QUESTIONS 34. A list is read item by
+item, on separate lines or run together with no full stop: a wrong "two = beket" is
+replaced on its own ("beket = house, houses") and the other items stay. A claim in prose
+replaces its sentence, so no wrong word is left around a corrected one. Words in
 `MEANING_PENDING` are held out until Ed answers (rong, QUESTIONS 39).
 
 ## Things not to change without asking
