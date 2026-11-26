@@ -207,8 +207,9 @@ def words(out_dir):
       (dropped)  nowhere at all: left out, and named in this log
     """
     fold, ed, vocab, by_gloss = confirmed()
-    from recordings import _english
+    from recordings import _english, confirmed_headwords
     english = _english()
+    heads = confirmed_headwords()
     vgloss, bgloss = glosses(fold, True), glosses(fold, False)
     book_text = " ".join(
         fold(open(p, encoding="utf-8", errors="replace").read())
@@ -240,7 +241,9 @@ def words(out_dir):
         in_text = bool(parts) and all(w in vocab for w in parts)
         # The verified files hold English prose too, so "in a verified file" alone
         # would let an English word onto a picture: it must not be English.
-        if in_text and not any(w in english for w in parts):
+        # His confirmed words first, then the English list: Nor (mother of) is spelled
+        # like the English nor, and is his word (Ed, 26 November 2026)
+        if in_text and (key in heads or not any(w in english and w not in heads for w in parts)):
             g = pick(vgloss, word, sense)
             if g is None:
                 bad_sense.append((word, sense, vgloss.get(("all", exact[1]), [])))

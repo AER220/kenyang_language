@@ -1593,3 +1593,39 @@ neither is a spelling of the other.
 
 Nor is the Kenyang. mamí is current usage, taken from Pidgin; it means the same, and
 it is not the Kenyang form.
+
+---
+
+## Four small words that work inside a pattern: ákɛ́, Yɛ, bhák, abhɛ́n
+
+Confirmed one by one on 26 November 2026. Each works inside a pattern, so each is shown
+in the lines of the recorded texts where it was said, and in no other sentence. Use a
+pattern only as these lines use it.
+
+    ákɛ́             should not          (see the pattern below)
+    Yɛ              if, as              (see the pattern below)
+    bhák            be                  (see the pattern below)
+    abhɛ́n           those who, these people     (see the pattern below)
+
+**ákɛ́, should not.** The recorded texts split it as á-kɛ́: the a- person marker, then
+kɛ́. The same kɛ́ takes ɔ́- for "you": ɔ́kɛ́.
+
+    Ntí ákɛ́ sáy mmú                     nobody should have any head ache
+    Yɛ̌ mpútí ákɛ́ bhák arɛ́.             there should be no arguments
+    ɔ́kɛ́ ka nnyɔ́ ámfú mmɛ kɛ́kwɔ́t mmwɛ́t   don't allow a snake to come near me
+
+**bhák, be.** In the recorded texts it follows ákɛ́:
+
+    ákɛ́ bhák                          it should not be
+
+**Yɛ, if, as.** It comes with chí:
+
+    Yɛ chí nɛme nɛ́twó, nɛ́ndɔp chí ambi.   If sickness is coming, let it remain on the road
+    yɛ chí ɛnɛm ɛ́twó nɛ                 as dry season is approaching
+
+**abhɛ́n, those who, these people.** It comes with báchí (who are at), or after bo:
+
+    Beka abhɛ́n báchí awu antɛn          Those of you who are below
+    Beka abhɛ́n báchí                    those of you who are
+    bo abhɛ́n                           these people
+    abhɛ́n baghɔrɛ abhɛ́n ɛgba.          you women who dance egba dance

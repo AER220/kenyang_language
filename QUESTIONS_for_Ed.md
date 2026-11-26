@@ -649,3 +649,18 @@ annyɛ́n is "in the river, in the water" and nnyɛ́n is river (confirmed 26 No
 amem is inside, and the recorded texts have annywɔp, home ("leave her home"). Whether
 an a- on the front of a place word means "in" generally is NOT settled. A possible
 grammar rule, not filed as one.
+
+## 38. Ed's counting table and his recordings disagree on one, six and seven
+
+Found 26 November 2026, when the chat's number swap (recorded form wins) was turning
+Ed's own written forms into his recorded ones. Held: the swap leaves alone any form his
+verified text has, until he answers. The table is "Counting, the whole system" in the
+speaker file.
+
+    one     table: Ɛmɔ́t              recording: ɛ́mɔt         (the tone mark on the other syllable)
+    six     table: Tándat            recording: bɛ́tandat
+    seven   table: Tándat nɛ amɔt    recording: tándrámɔt
+
+[TO DECIDE: for each, is the table's form a different form of the number (a counting
+form beside an agreeing one, say), or an older spelling of the recorded one? If it is a
+spelling, the table is corrected at the source with Ed's approval.]

@@ -283,6 +283,16 @@ found. Two things it must keep doing, because each caused false flags:
   course line written `Bheket_e ebhen` holds `bheket`. `\w` matches `_`, so the word
   pattern uses `[^\W_]`.
 
+**Ed's confirmed words are looked at before the English list** (26 November 2026).
+`recordings.confirmed_headwords()` is the Kenyang column of every word line in the
+verified files, plus his recordings. A word there is his, even when English spells it too:
+Nor (mother of), Kong, pop, fa, na, meh, Che, manor. The Visuals build and the Review
+spelling check use it. Whole entries only, never the prose words of the verified files,
+which would let any English word through. Some table headers come in with it, because the
+format cannot tell them from a word line: spoken, bound, short, aeroplane, airport, high
+tone, rising tone. In the chat's flag it changes nothing: a confirmed word gets no flag
+either way.
+
 Every word that is not English is checked, not only words with ɛ ɔ ŋ or a tone mark.
 English is `english_words.txt` (SCOWL) plus long English endings (`ENGLISH_ENDINGS`);
 a flag on an ordinary English word is a bug. Capitalised words the learner typed count

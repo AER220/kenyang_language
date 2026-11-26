@@ -499,6 +499,28 @@ def verified_vocabulary():
     return _CACHE["vocab"]
 
 
+def confirmed_headwords():
+    """
+    Ed's confirmed Kenyang words, folded: the Kenyang column of every word line in his
+    verified files, and his recordings. Checked BEFORE the English list (Ed, 26 November
+    2026), so a Kenyang word spelled like an English one (Nor, mother of; Kong, pop, fa,
+    na, meh, Che) is his word, not an English one. Whole entries only, never their parts
+    or the prose words of the files, and no single letters (the alphabet table). Some
+    table headers come in too ("spoken  written", "bound  standing alone"): the format
+    cannot tell them from a word line, and they are listed in CLAUDE.md.
+    """
+    if "heads" not in _CACHE:
+        from build_scenes import glosses
+        heads = {k for k in glosses(fold, True) if isinstance(k, str)}
+        try:
+            with open(os.path.join(_ROOT, "audio_words.json"), encoding="utf-8") as f:
+                heads |= {fold(e.get("kenyang", "")) for e in json.load(f)}
+        except (OSError, ValueError):
+            pass
+        _CACHE["heads"] = {h for h in heads if len(h.replace(" ", "")) > 1}
+    return _CACHE["heads"]
+
+
 def _english():
     if "english" not in _CACHE:
         try:
@@ -523,8 +545,14 @@ def spelling_check(spelling, own=()):
     eds = _CACHE.get("eds", set()) | extra
     vocab = vocab | extra
     out = []
+    heads = confirmed_headwords() | {fold(k) for k in own}
+    whole = fold(clean(spelling, kenyang=True))
+    if whole in heads and whole in eds:
+        return out                      # exactly one of Ed's recordings
     for w in _WORD.findall(clean(spelling, kenyang=True)):
         f = fold(w)
+        if f in heads and f not in eds and not any(v != f and _bare(v) == _bare(f) for v in eds):
+            continue                    # his confirmed word, even if English spells it too
         parts = [f] + [p for p in f.split("-") if p and p != f]
         if f in eds:
             continue                    # Ed recorded exactly this

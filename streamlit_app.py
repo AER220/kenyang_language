@@ -1703,18 +1703,33 @@ def number_swaps(numbers):
     gets bɛ́pay. The model, told the recording wins, wrote bépay in every run of Testing
     row 5 (found 26 November 2026). Swapped by swap_held_back: whole words only, never
     in a reply that already has the recorded form (it is comparing them), and never
-    inside another number's multi-word form ("Tándat" is a book's six, and also the
-    start of a book's seven, "Tándat nɛ amɔt").
+    inside another number's multi-word form.
+
+    Never a form Ed's own verified text has (Ed, 26 November 2026): where his file and
+    his recording disagree, the file is corrected at the source with his approval, not
+    patched over at runtime. Tándat (six), Tándat nɛ amɔt (seven) and Ɛmɔ́t (one) are in
+    his counting table and wait on him (QUESTIONS 38); bépay was in three of his lines.
     """
     key = lambda f: re.sub(r"\s+", " ", unicodedata.normalize("NFC", f)).lower().strip()
     teach = {key(t) for e in numbers.values() for t in e.get("teach", [])}
+    # all of Ed's verified text, not only his counting table: "beket bépay" is a number
+    # inside a phrase, which number_forms does not read as a number row
+    mine = ""
+    for path in glob.glob(os.path.join(KB_ROOT, "**", "*verified*"), recursive=True):
+        try:
+            with open(path, encoding="utf-8") as f:
+                mine += "\n" + key(f.read())
+        except OSError:
+            pass
+    in_mine = lambda form: re.search(r"(?<![^\W_])" + re.escape(key(form)) + r"(?![^\W_])", mine)
     out = {}
     for n, e in numbers.items():
         if e.get("why") != "recording" or len(e.get("teach", [])) != 1:
             continue
         good = e["teach"][0]
-        bad = {form: good for form, _ in e.get("forms", [])
-               if key(form) != key(good) and key(form) not in teach and len(key(form)) > 1}
+        bad = {form: good for form, tiers in e.get("forms", [])
+               if key(form) != key(good) and key(form) not in teach and len(key(form)) > 1
+               and "verified" not in tiers and not in_mine(form)}
         if bad:
             others = sorted({key(f) for m, x in numbers.items() if m != n
                              for f, _ in x.get("forms", []) if " " in key(f)})
