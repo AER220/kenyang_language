@@ -216,6 +216,31 @@ structure colour (the logo green on paper, `#6FB58E` on dark, where `#135C3C` is
 2.2:1). Do not make the leaf green, and do not use the logo as a reason to give any
 other element a warm colour.
 
+## A meaning claimed for one of Ed's words
+
+The third checkable fact taken out of the prompt and put in code, after the tap claims
+and the numbers (26 November 2026). `enforce_meanings()` in `streamlit_app.py` reads
+every "X means Y" a reply makes about a word Ed glosses (X means Y, X, which means Y,
+X (Y), X — Y, X = Y, Y = X, the word for Y is X, Y in Kenyang is X) and compares Y with
+his glosses: his verified word lines and recordings, never a book.
+
+- **Agree**: Y fits any one of the word's glosses (a word with several, like amik, is
+  never made to choose). Left alone.
+- **Strong**: Y is Ed's gloss of a DIFFERENT word (Ma'ya nsinsi "my grandfather"; beket
+  "two"). That is two confirmed words swapped, so the sentence is replaced by one the
+  code writes from his glosses: "Ma'ya nsinsi means my grandmother."
+- **Weak**: Y is no gloss of any of his words. Left alone: in the report-only pass these
+  were bracketed grammar notes ("class 1", "for negation"), not wrong meanings. No
+  synonym list.
+
+The decision came from a report-only pass over 65 saved replies: 88 claims, 80 agreeing,
+5 strong, 3 weak. **It is a net, not a guarantee.** The extraction took three passes to
+get right on those replies (it first read "rong past" as nyaka's meaning and "parts i"
+as mmɛ's), and live replies will phrase claims in ways the patterns miss. A whole
+sentence glossed as a whole is not checked: that is QUESTIONS 34. Where a breakdown runs
+on with no full stop, the whole run is the sentence, and all of it is replaced. Words in
+`MEANING_PENDING` are held out until Ed answers (rong, QUESTIONS 39).
+
 ## Things not to change without asking
 
 **`requirements.txt` is pinned deliberately.** Streamlit is pinned to an exact

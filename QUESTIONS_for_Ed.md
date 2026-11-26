@@ -664,3 +664,11 @@ speaker file.
 [TO DECIDE: for each, is the table's form a different form of the number (a counting
 form beside an agreeing one, say), or an older spelling of the recorded one? If it is a
 spelling, the table is corrected at the source with Ed's approval.]
+
+## 39. rong: "going" only, or also "go"?
+
+Found 26 November 2026 by the meaning check. Ed's files gloss rong as "going" and dɔk
+as "go". The model calls rong the verb "to go" ("go = rong"), three times in 65 replies.
+If rong is only "going", those are two confirmed words swapped and the check should
+replace them. If rong is also "go", they are right, and its gloss should say so.
+Until Ed answers, rong is held out of the check (MEANING_PENDING in streamlit_app.py).

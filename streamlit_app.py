@@ -1763,6 +1763,158 @@ def number_swaps(numbers):
     return out
 
 
+# ── a meaning claimed for one of Ed's words ─────────────────────────────────
+# "X means Y" for a word Ed glosses is a checkable claim. Report-only over 65 saved
+# replies (26 November 2026): 88 claims, 80 agreeing, 5 STRONG (Y is Ed's gloss of a
+# DIFFERENT word: Ma'ya nsinsi "my grandfather", beket "two"), 3 weak (bracketed grammar
+# notes, not meanings). So: a strong claim's sentence is replaced by one the code writes
+# from Ed's glosses; a weak one is left alone; no synonym list. The extraction took
+# three passes to get right, and live replies will phrase claims in ways it misses: it
+# is a net, not a guarantee.
+_MEANING_STOP = {"my", "the", "a", "an", "to", "your", "of", "is", "are", "in", "kenyang",
+                 "word", "for", "it", "this", "that", "and", "or", "also", "you", "say", "be",
+                 "means", "mean"}
+# Held out until Ed answers: rong is "going" in his files and dɔk "go"; the model calls
+# rong "to go". Whether rong is also "go" is QUESTIONS 39.
+MEANING_PENDING = {"rong"}
+
+
+@st.cache_data(show_spinner=False)
+def ed_glosses(signature):
+    """{folded form: [Ed's glosses]} from the Kenyang column of his verified word lines
+    and his recordings. Words and short phrases only; not the alphabet table."""
+    _ = signature
+    from build_audio_manifest import fold as afold
+    from build_scenes import glosses
+    out = {}
+    for k, v in glosses(afold, True).items():
+        if isinstance(k, tuple) and k[0] == "all":
+            out.setdefault(afold(k[1]), []).extend(x for x in v if x not in out.get(afold(k[1]), []))
+    try:
+        with open("audio_words.json", encoding="utf-8") as f:
+            for e in json.load(f):
+                g = out.setdefault(afold(e.get("kenyang", "")), [])
+                if e.get("english") and e["english"] not in g:
+                    g.append(e["english"])
+    except (OSError, ValueError):
+        pass
+    return {k: v for k, v in out.items() if v and 0 < len(k.split()) <= 4
+            and re.search(r"[^\W\d_]", k) and not re.fullmatch(r"(\w{1,2}) \1", k)}
+
+
+def _gloss_words(t):
+    t = re.sub(r"\(.*?\)", " ", t.lower().replace("’", "'"))
+    out = set()
+    for w in re.findall(r"[a-z]+(?:'[a-z]+)?", t):
+        w = re.sub(r"'s$", "", w)
+        if w in _MEANING_STOP or len(w) < 2:
+            continue
+        if len(w) > 3 and w.endswith("s") and not w.endswith("ss"):
+            w = w[:-1]
+        out.add(w)
+    return out
+
+
+def _gloss_parts(g):
+    return [p for p in re.split(r"[,;/+]|\bor\b", re.sub(r"\(.*?\)", " ", g)) if _gloss_words(p)] + [g]
+
+
+def _english_run(words, reverse=False):
+    """Whole English words from one end of a list, stopping at punctuation or a word
+    that is not English: "I rong" is I; "parts: I" before an = is I."""
+    out = []
+    for t in (reversed(words) if reverse else words):
+        w = t.strip("()'\"“”").lower()
+        if reverse and out and re.search(r"[.,:;!?]$", w):
+            break
+        w = w.strip(".,:;!?")
+        if not w or w not in ENGLISH:
+            break
+        out.append(t.strip(".,:;!?()'\"“”"))
+    return " ".join(reversed(out) if reverse else out)
+
+
+def meaning_claims(text, table):
+    """(start, end, shown form, folded form, claimed meaning) for each "X means Y" the
+    patterns find: X means Y, X, which means Y, X (Y), X — Y, X = Y, Y = X, the word for
+    Y is X, Y in Kenyang is X."""
+    if not table:
+        return []
+    heads = sorted(table, key=len, reverse=True)
+    rx = re.compile(r"(?<![^\W_])(?<![-'’\u0300-\u036f])(" + "|".join(re.escape(h) for h in heads)
+                    + r")(?![^\W_])(?![-'’\u0300-\u036f])", re.IGNORECASE)
+    q = r"[\"“”'‘’]?"
+    out = []
+    for m in rx.finditer(text):
+        rest, pre = text[m.end():m.end() + 90], text[max(text.rfind("\n", 0, m.start()) + 1,
+                                                          m.start() - 80):m.start()]
+        ys = []
+        a = re.match(r"\s*" + q + r"\s*(?:,\s*which\s+means|\s+means|\s+meaning|\s*[—–]|\s+-|\s*=|\s*:)\s*"
+                     + q + r"([^\"“”\n.!?;=]{1,60})", rest)
+        if a:
+            ys.append(_english_run(a.group(1).split()))
+        else:
+            a = re.match(r"\s*" + q + r"\s*\(([^)]{1,60})\)", rest)
+            if a:
+                ys.append(a.group(1))
+        b = re.search(r"\s*=\s*" + q + r"\s*$", pre)
+        if b:
+            ys.append(_english_run(re.findall(r"[^\s\"“”]+", pre[:b.start()]), reverse=True))
+        else:
+            b = re.search(r"(?:word|phrase) for\s+" + q + r"([^\"“”\n.!?]{1,40}?)" + q
+                          + r"\s+(?:in Kenyang\s+)?is\s+" + q + r"\s*$", pre, re.IGNORECASE) or \
+                re.search(q + r"([A-Za-z' ]{1,40}?)" + q + r"\s+in Kenyang is\s+" + q + r"\s*$", pre, re.IGNORECASE)
+            if b:
+                ys.append(b.group(1))
+        for y in ys:
+            if y and _gloss_words(y) and not _looks_kenyang(y):
+                out.append((m.start(), m.end(), m.group(1), _fold_word(m.group(1)), y.strip()))
+    return out
+
+
+def meaning_verdict(form, y, table):
+    """"agree", "strong" (y is Ed's gloss of a different word, never of this one) or
+    "weak" (y matches no gloss of any of his words)."""
+    Y = _gloss_words(y)
+    for g in table.get(form, []):
+        for p in _gloss_parts(g):
+            P = _gloss_words(p)
+            if P and (Y <= P or P <= Y):
+                return "agree"
+    if any(h != form and any(_gloss_words(p) == Y for g in gs for p in _gloss_parts(g))
+           for h, gs in table.items()):
+        return "strong"
+    return "weak"
+
+
+def enforce_meanings(reply, table):
+    """Returns (reply, [(sentence, replacement)]). A sentence holding a STRONG claim is
+    replaced by "X means <Ed's glosses>." Weak claims and agreeing ones are left alone."""
+    text = unicodedata.normalize("NFC", reply)
+    changes, result, last = [], [], 0
+    for m in _SENTENCE.finditer(text):
+        sent = m.group(0)
+        lines = []
+        for _, _, shown, form, y in meaning_claims(sent, table):
+            if form in MEANING_PENDING or meaning_verdict(form, y, table) != "strong":
+                continue
+            line = f"{shown} means {'; '.join(table[form])}."
+            if line not in lines:
+                lines.append(line)
+        result.append(text[last:m.start()])
+        if lines:
+            now = " " + " ".join(lines) + " "
+            changes.append((sent.strip(), now.strip()))
+            result.append(now)
+        else:
+            result.append(sent)
+        last = m.end()
+    result.append(text[last:])
+    if not changes:
+        return reply, []
+    return re.sub(r"[ \t]{2,}", " ", "".join(result)).strip(), changes
+
+
 def passages_block(found):
     """Group the retrieved passages under their trust headers, highest tier first."""
     if not found:
@@ -3102,6 +3254,10 @@ if st.session_state.pending:
             # A name sentence's order (N-ném first) is checkable, so the code checks it.
             reply, name_fixes = enforce_name_order(reply)
             st.session_state.last_name_fixes = name_fixes
+            # A meaning claimed for one of Ed's words that is his gloss of a different
+            # word is checkable, so the code checks it (see enforce_meanings).
+            reply, meaning_fixes = enforce_meanings(reply, ed_glosses(kb_signature()))
+            st.session_state.last_meaning_fixes = meaning_fixes
             if reply.strip():
                 # Which words can be heard is a fact the code can check, so the code says
                 # it. The model is told never to; it once claimed a recording that did not
@@ -3152,6 +3308,10 @@ if st.session_state.get("last_passages"):
                            "of what Nɛpɛ́m sees; the files are unchanged.")
                 for why in sorted(HELD.values()):
                     st.text(why)
+        if st.session_state.get("last_meaning_fixes"):
+            st.caption("In the last reply the code replaced a meaning that is Ed's gloss of "
+                       "another word: " + "; ".join(f"{a} → {b}" for a, b in
+                                                   st.session_state.last_meaning_fixes))
         if st.session_state.get("last_name_fixes"):
             st.caption("In the last reply the code put N-ném first in a name sentence: "
                        + "; ".join(f"{a} → {b}" for a, b in st.session_state.last_name_fixes))
