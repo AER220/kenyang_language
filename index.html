@@ -888,6 +888,9 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
 .scene ol.words li.plain{cursor:default}
 .scene small.also{display:block;margin:2px 0 0;font-size:12px;color:var(--mute)}
 .scene ol.words small.also{margin:2px 0 0 0}
+.scene small.mine{display:block;margin:2px 0 0;font-size:13px;color:var(--mute)}
+.scene small.mine span[lang]{font-family:var(--serif);font-size:15px;color:var(--text)}
+.scene ol.words small.mine{margin:2px 0 0 0}
 .scene ol.words li.plain .n{border-color:transparent}
 /* many words: numbered points and the list, on every screen; the list in columns */
 .scene.points .lbl{display:none}
@@ -3518,7 +3521,10 @@ function drawScene(name, sc){
      inside ngɔk nnyɛ́n (river bank), or each half of étá nsinsi on its own. So only a
      recorded label is left for say.js; a phrase recorded whole is matched whole,
      longest first, as everywhere on the site. */
-  const label = p => `<b lang="ken"${p.state === "recorded" ? "" : " data-nosay"}>${esc(p.word)}</b>` + (p.english ? `<small>${esc(p.english)}</small>` : "") + mark(p) + also(p);
+  /* Ed's own "my" form of the word, recorded: an extra line, never the label itself */
+  const mine = p => (p.mine || []).map(m =>
+    `<small class="mine"><span data-nosay>${esc(m.english)}: </span><span lang="ken">${esc(m.word)}</span></small>`).join("");
+  const label = p => `<b lang="ken"${p.state === "recorded" ? "" : " data-nosay"}>${esc(p.word)}</b>` + (p.english ? `<small>${esc(p.english)}</small>` : "") + mark(p) + also(p) + mine(p);
   const dots = pts.map((p, i) => `<span class="dot" style="${where(p)}" data-i="${i}" data-state="${esc(p.state || "")}" aria-hidden="true">${i + 1}</span>`).join("");
   const lbls = sc.layout === "points" ? "" : pts.map(p => `<span class="lbl" style="${where(p)}">${label(p)}</span>`).join("");
   const pic = `<div class="pic"><img src="${esc(sc.image)}" alt="${esc(sc.title)}" width="${sc.size[0]}" height="${sc.size[1]}">${lbls}${dots}</div>`;

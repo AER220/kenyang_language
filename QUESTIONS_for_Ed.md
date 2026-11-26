@@ -614,3 +614,16 @@ Listed, not resolved:
 - **Awuh** (over there) is also in the list of Bayangi family names.
 - **eh**, unmarked, is listed as "the plain everyday yes" beside ě. With Èh settled as
   yes, is eh the same word with its mark lost, or a form of its own?
+
+## 34. WORK TO DO: example sentences the model builds from parts
+
+Found 26 November 2026, Testing row 7. Asked for grandfather, Nɛpɛ́m gave étá nsinsi
+(right), then an example it built: "Ma'ya étá nsinsi chi Helen", glossed "My
+grandfather's name is Helen". It is wrong twice (Ma'ya is my mother; N-ném is missing
+and must come first), and the word flag cannot see it, because every word in it is real.
+The same day it gave "mmú ɛkɛt" as "dog house" and "Meh koh ambi" as "I am walking on
+the path", both built from parts. Not fixed yet: Ed asked for it to be listed.
+
+The kind of fix this needs is in code, not in the prompt: an example sentence in a
+reply that is not in a verified file is either taken out, or marked as built and not
+checked by a speaker. Row 6's name order (N-ném first) is the first piece of that.

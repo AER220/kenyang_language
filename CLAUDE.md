@@ -145,7 +145,18 @@ is slow and costs money.
 
 ## Testing
 
-Ask the running app these. They are chosen because each has failed before.
+    python run_checks.py            the table below and the twenty-reply measurement
+    python run_checks.py --table    the table's ten rows only
+
+**Run it before every push**, alongside the twenty (it is the twenty: the table's ten
+plus ten ordinary questions). It asks each question in a fresh local session, prints
+PASS or FAIL per row and both flag counts, and exits non-zero on a failed row or more
+than one "not found". The rows and their checks live in `run_checks.py`; this table is
+the readable copy, and a row added here must be added there. Nobody was running the
+table as a list: rows 5 and 6 failed for some time unseen (found 26 November 2026). A
+row passing is not the reply being good: read the replies too (row 7, QUESTIONS 34).
+
+They are chosen because each has failed before.
 
 | ask | expect |
 |---|---|
@@ -154,7 +165,7 @@ Ask the running app these. They are chosen because each has failed before.
 | what is the plural of house | beket |
 | how do you say they were not going to school | bá pú rong nyaka ekeré-ékáti |
 | how do you say two small houses | Mandu ɛkɛt bɛ́pay |
-| my grandmother's name is Helen | N-ném first, owner second |
+| my grandmother's name is Helen | N-ném Ma'ya nsinsi chi Helen: N-ném first, then whose, then chi, then the name (Ed, 26 November 2026) |
 | what is the word for grandfather | étá nsinsi |
 | what is the word for stepmother | **must refuse** |
 | how do you say 37 | **must not build it**: says it does not have 37 |
@@ -404,6 +415,14 @@ Supabase (SQL editor):
 A mark reaches the pictures at the next publish (a push, or "Run workflow" on the
 Actions page); marking is not a push.
 
+**A possessed recording sits beside the label, never in its place.** An Ed recording whose
+English is "my" plus one of the label's meanings (the label's gloss split at commas) is
+shown under the label as its own tappable line: Moh'wa (my child) under mmɔ, Ngoré-wa
+(my wife) under Ngoré. It never substitutes: Eta'ya nsinsi is not a spelling of étá
+nsinsi, and a picture of a grandfather must not teach "my grandfather" as the word. The
+match is the English exactly, after the "my": "My grand mother" does not match
+"grandmother".
+
 **A recording outranks the scene's own spelling.** If a scene's word is not one of Ed's
 recordings but its English is exactly the English of ONE of them (`gloss_key()`: case,
 punctuation and spacing ignored, nothing more), the scene shows Ed's recorded form and
@@ -449,6 +468,10 @@ zinc-roofed house and the thatched house in compound.png reach the ground with n
 across, so each is part of the background, and needs a line across the bottom if a door
 is to be coloured. people.png has no such gap: every figure's face, hair, clothes, arms
 and legs are closed separately.
+
+**When actions.png is regenerated:** ascend (Kó) and descend (Seb), the third row's
+last two figures, are drawn with no step, stair or slope, so they read as stepping and
+walking. Each needs something to climb up or come down (26 November 2026).
 
 **Squarer, not a long line.** A very wide thin band (animals.png is 1600x361 once
 cropped) leaves the subjects small and crowds the numbered points on a phone. Future

@@ -30,6 +30,10 @@ Two jobs, run separately:
                                          not count, so one approved typo cannot vouch
                                          for itself on a picture.
 
+Ed's recordings whose English is "my" plus one of a label's meanings ("my grandfather"
+for a label meaning grandfather) are listed beside the label as "mine", each tappable,
+and never replace it: a possessed form is not a spelling of the bare word.
+
 A point may carry "sense": an English word that chooses among the word's OWN glosses in
 the files, for a word listed with more than one (ansem is "after" in one list and
 "behind" in another). It adds nothing: if none of the word's glosses contains it, the
@@ -275,6 +279,25 @@ def words(out_dir):
 
     substituted, ambiguous, bad_sense = [], [], []
 
+    # Ed's recordings whose English is "my" + something: {that something: [(form, english)]}
+    owned = {}
+    for k, forms in by_gloss.items():
+        if k.startswith("my ") and len(k) > 3:
+            for form in forms.values():
+                owned.setdefault(k[3:], []).append((form, ed[fold(form)]))
+
+    def possessed(gloss, shown):
+        """Ed's recordings that are "my" + one of the label's meanings, the label's
+        gloss split at commas: Ngoré is "woman, wife", so Ngoré-wa, "my wife", is
+        one. Added beside the label, never instead of it."""
+        out, seen = [], set()
+        for part in [gloss] + re.split(r"[,;]", gloss or ""):
+            for form, english in owned.get(gloss_key(part), []):
+                if fold(form) != fold(shown) and form not in seen:
+                    seen.add(form)
+                    out.append({"word": unicodedata.normalize("NFC", form), "english": english})
+        return out
+
     for name, scene in layouts():
         with open(os.path.join(WEB, scene["image"] + ".crop.json")) as f:
             meta = json.load(f)
@@ -289,6 +312,11 @@ def words(out_dir):
                 continue
             entry = {"word": unicodedata.normalize("NFC", shown), "english": gloss,
                      "state": st}
+            # Ed's possessed recordings ("my grandfather") beside the label, never in
+            # its place: Eta'ya nsinsi is not a spelling of étá nsinsi.
+            mine = possessed(gloss, shown)
+            if mine:
+                entry["mine"] = mine
             if variant:
                 # never discarded: the form the scene was written with, kept beside Ed's
                 entry["variant"] = unicodedata.normalize("NFC", variant)
