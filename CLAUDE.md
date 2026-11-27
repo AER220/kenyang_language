@@ -258,9 +258,19 @@ failed to connect.
 
 **`CNAME` contains `nepem.org`.** Deleting it breaks the custom domain.
 
+**No page loads anything from another host before it can paint.** Gentium was a Google
+Fonts stylesheet in `<head>`, and a stylesheet there holds the whole page back until it
+arrives. From Cameroon fonts.googleapis.com did not answer, so nepem.org showed a blank
+white page forever and people said it could not open (27 November 2026). The fonts are now
+in `fonts/`, built by `python build_fonts.py` (regular and bold, subset to Latin, IPA and
+the tone marks; italic is not used). The chat and the Streamlit games page fetch the same
+files from nepem.org. Nothing goes back to Google Fonts, and no new stylesheet or script
+from another host goes in `<head>`. If a new character is ever shown that Gentium lacks
+in the subset, `python build_fonts.py check` names it.
+
 **nepem.org publishes only a list of files.** `.github/workflows/pages.yml` copies
 index.html, games.html, say.js, audio_words.json, CNAME, ed-portrait.jpg, audio/,
-and five files from brand/web-and-social/ (the favicons, the apple-touch-icon and
+the two Gentium fonts and their licence from fonts/, and five files from brand/web-and-social/ (the favicons, the apple-touch-icon and
 the social card, plus favicon.ico again at the root) and publishes those alone, so the knowledge base,
 QUESTIONS_for_Ed.md, this file and the Python files are not downloadable. A new file
 the site needs (a page, an image, a script) must be added to that list, or it will

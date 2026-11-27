@@ -42,7 +42,11 @@ st.set_page_config(page_title="Nɛpɛ́m — Games", page_icon="🎮",
 # =============================================================================
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400;700&family=Inter:wght@400;600;700&display=swap');
+/* Gentium from nepem.org, never Google. Inter is gone: the phone's own face instead */
+@font-face{font-family:"Gentium Book Plus";font-style:normal;font-weight:400;font-display:swap;
+  src:url("https://nepem.org/fonts/gentium-book-plus-400.woff2") format("woff2")}
+@font-face{font-family:"Gentium Book Plus";font-style:normal;font-weight:700;font-display:swap;
+  src:url("https://nepem.org/fonts/gentium-book-plus-700.woff2") format("woff2")}
 
 #MainMenu, footer, [data-testid="stToolbar"], [data-testid="stDecoration"],
 .stDeployButton, [data-testid="stAppDeployButton"]{display:none !important;}
@@ -54,7 +58,7 @@ header[data-testid="stHeader"]{background:transparent;}
 }
 html{color-scheme: light;}
 html, body, [data-testid="stAppViewContainer"] *{
-  font-family:'Inter','Gentium Book Plus',system-ui,sans-serif;}
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,'Gentium Book Plus',sans-serif;}
 [data-testid="stAppViewContainer"]{background:var(--paper); color-scheme:light;}
 .block-container{max-width:640px;padding-top:.6rem;padding-bottom:3rem;}
 

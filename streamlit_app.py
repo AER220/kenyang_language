@@ -2617,7 +2617,11 @@ def lesson_note(messages, found=None, always_on=""):
 
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400;700&display=swap');
+/* Gentium from nepem.org, never Google: no third-party host can hold a page back */
+@font-face{font-family:"Gentium Book Plus";font-style:normal;font-weight:400;font-display:swap;
+  src:url("https://nepem.org/fonts/gentium-book-plus-400.woff2") format("woff2")}
+@font-face{font-family:"Gentium Book Plus";font-style:normal;font-weight:700;font-display:swap;
+  src:url("https://nepem.org/fonts/gentium-book-plus-700.woff2") format("woff2")}
 
 /* I hide Streamlit's chrome, but NOT the status widget. That little "Running" marker is
    the only sign the app is alive while the knowledge loads, and hiding it turned a slow

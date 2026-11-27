@@ -42,6 +42,11 @@ jobs:
           cp index.html games.html say.js audio_words.json CNAME ed-portrait.jpg _site/
           cp -r audio _site/audio
           test -f _site/audio/manifest.json
+          # Gentium, served from here and never from Google: a font stylesheet from a host
+          # that does not answer leaves the page blank. The subsets and their licence only;
+          # fonts/src (the full fonts) is not in the repo.
+          mkdir -p _site/fonts
+          cp fonts/gentium-book-plus-400.woff2 fonts/gentium-book-plus-700.woff2 fonts/OFL.txt _site/fonts/
           # The browser icons and the social preview card, at the paths the
           # pages name. Only these: the rest of brand/ is source files.
           mkdir -p _site/brand/web-and-social

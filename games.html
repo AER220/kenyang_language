@@ -9,9 +9,10 @@
 <link rel="icon" type="image/png" sizes="32x32" href="brand/web-and-social/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="brand/web-and-social/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="brand/web-and-social/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400;700&display=swap" rel="stylesheet">
+<!-- Gentium is served from nepem.org itself (fonts/, built by build_fonts.py). It was a
+     Google Fonts stylesheet here, and a stylesheet in <head> holds the page back until it
+     arrives: where Google did not answer, the page never painted at all. -->
+<link rel="preload" href="fonts/gentium-book-plus-400.woff2" as="font" type="font/woff2" crossorigin>
 <script>
 /* before anything paints, so the wrong colours never flash */
 (function(){try{var t=localStorage.getItem("nepem.theme");
@@ -19,6 +20,10 @@ if(!t)t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";
 document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme="dark";}})();
 </script>
 <style>
+@font-face{font-family:"Gentium Book Plus";font-style:normal;font-weight:400;font-display:swap;
+  src:url("fonts/gentium-book-plus-400.woff2") format("woff2")}
+@font-face{font-family:"Gentium Book Plus";font-style:normal;font-weight:700;font-display:swap;
+  src:url("fonts/gentium-book-plus-700.woff2") format("woff2")}
 /* The same palette as the rest of the site, so this does not read as a page
    from somewhere else. Both themes, switched the same way. Bright colour is
    reserved for meaning, as on index.html: here that is right (--who) and
