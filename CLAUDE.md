@@ -460,8 +460,20 @@ hundreds of sentences").
 **How a scene is built.** `scenes/<name>.json` is the layout and nothing else: the picture's
 name and, for each word, where it sits, in percent of the ORIGINAL picture. No English, no
 spelling of its own; `word` is only the key. `python build_scenes.py images` makes the web
-copy in `scenes/web/` (cropped to the drawing, near-white made pure white, lossless WebP);
-run it after adding or changing a picture, and commit `scenes/web/`. The publish workflow
+copies in `scenes/web/`, each cropped to the drawing with near-white made pure white: a
+screen copy (`<name>.webp`, 1200 px, lossy WebP at 75, 20–82 KB) and a printable one
+(`<name>-print.webp`, 1600 px, lossless, 100–440 KB, since lossy leaves blotches round
+lines on paper). Run it after adding or changing a picture, and commit `scenes/web/`.
+
+**A picture is fetched only when it is about to be seen** (27 November 2026). Every scene
+used to be written into the hidden Visuals view with its `src` set, and a browser
+downloads an image even inside a hidden view: 3 MB on every visit, which on a slow line
+kept the loading indicator going for seventy seconds and was read in Cameroon as "the site
+is still loading". Now a scene's `<img>` carries `data-src`, and `lazyPics()` in
+index.html sets `src` when it comes within 600 px of the screen. A printable sheet's
+`<img>` carries `data-print-src`, set only when Print is pressed (`printSheet()`). Any new
+picture follows the same rule: never a plain `src` inside a hidden view, and first load
+stays under 400 KB. The publish workflow
 runs `python build_scenes.py words _site/scenes` every time, which writes what the page
 reads, each word in one of four states, by the variants order (Ed, 25 November 2026):
 
@@ -531,8 +543,9 @@ the right, speaks first). A held panel (`"held"`) shows its picture with empty b
 - `build_scenes.py images` serves the coloured picture **one panel at a time**, lossy
   WebP 660 px wide (36–68 KB a panel) with an 18 KB strip of six thumbnails, because the
   whole picture lossless is 2.6 MB and at phone width six panels leave each bubble about
-  40 px, too small for a word. The line art is lossless like every drawing (386 KB),
-  fetched only to print.
+  40 px, too small for a word. The line art is lossless like every printable sheet
+  (386 KB), fetched only when Print is pressed. (Until 27 November 2026 that was not
+  true: it was fetched on every visit, with the eight Visuals pictures.)
 - It is the "Say hello" section on **Learn**, directly below the hero. ɛkɛt stays the
   first and loudest thing: nothing goes above it.
 - In a bubble: Ed's recording carries the dotted sound underline; verified is plain ink;

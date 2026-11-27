@@ -14,7 +14,8 @@ files and audio_words.json. Correct a spelling once and every scene follows.
 Two jobs, run separately:
 
     python build_scenes.py images        the web copy of each picture: cropped to the
-                                         drawing, resized, WebP. Run it after adding or
+                                         drawing, WebP: a lossy screen copy and a
+                                         lossless printable one. Run it after adding or
                                          changing a picture in scenes/, and commit
                                          scenes/web/. Needs Pillow. The originals stay
                                          in scenes/ as sources and are never published.
@@ -55,7 +56,15 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 SCENES = os.path.join(ROOT, "scenes")
 WEB = os.path.join(SCENES, "web")
 MARGIN = 0.03          # of the drawing's width, kept round it when cropping
-WIDTH = 1600           # the web copy's width; enough for a printed page
+WIDTH = 1600           # the printable copy's width; enough for a printed page
+# What the screen shows, measured 27 November 2026. The lossless 1600 px copies were
+# 280-450 KB each, and every one was downloaded on every visit. A scene is at most about
+# 1100 px wide on a desktop and about 1070 device pixels on a 3x phone, so 1200 px is
+# enough; lossy at 75 cannot be told from lossless at phone width, and at three times
+# zoom the outlines are as clean (1000 px at 60 starts to soften them). The labels and
+# their tone marks are HTML text over the picture, so compression never touches them.
+SCREEN_WIDTH = 1200
+SCREEN_QUALITY = 75
 
 
 def layouts():
@@ -135,12 +144,20 @@ def images():
         # sheet has no grey haze to colour over. Lossless, because lossy compression
         # leaves blotches round line art, and line art compresses well without it.
         out = out.point(lambda v: 255 if v > 232 else v)
-        dest = os.path.join(WEB, scene["image"] + ".webp")
+        # the printable copy: lossless, fetched only when Print is pressed
+        dest = os.path.join(WEB, scene["image"] + "-print.webp")
         out.save(dest, "WEBP", lossless=True, method=6)
+        print(f"{dest}: {out.size[0]}x{out.size[1]}, {os.path.getsize(dest) // 1024} KB (printable)")
+        # the screen copy: smaller and lossy, fetched only when it is about to be seen
+        screen = out.resize((SCREEN_WIDTH, round(out.size[1] * SCREEN_WIDTH / out.size[0])),
+                            Image.LANCZOS) if out.size[0] > SCREEN_WIDTH else out
+        screen = screen.point(lambda v: 255 if v > 232 else v)
+        dest = os.path.join(WEB, scene["image"] + ".webp")
+        screen.save(dest, "WEBP", quality=SCREEN_QUALITY, method=6)
         meta = {"source_size": img.size, "crop": box, "size": out.size}
         with open(os.path.join(WEB, scene["image"] + ".crop.json"), "w") as f:
             json.dump(meta, f)
-        print(f"{dest}: {out.size[0]}x{out.size[1]}, {os.path.getsize(dest) // 1024} KB "
+        print(f"{dest}: {screen.size[0]}x{screen.size[1]}, {os.path.getsize(dest) // 1024} KB "
               f"(from {img.size[0]}x{img.size[1]}, cropped to {box})")
 
 
@@ -443,6 +460,7 @@ def words(out_dir):
             else:
                 listed.append(entry)
         page = {"title": scene.get("title", name), "image": f"scenes/web/{scene['image']}.webp",
+                "print_image": f"scenes/web/{scene['image']}-print.webp",
                 "size": meta["size"], "layout": scene.get("layout", "labels"),
                 "points": points, "list": listed}
         with open(os.path.join(out_dir, name + ".json"), "w", encoding="utf-8") as f:

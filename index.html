@@ -988,7 +988,19 @@ footer .fquiet{font-size:12.5px;color:var(--mute);margin-top:5px;max-width:520px
   }catch(e){ document.documentElement.dataset.theme = "dark"; }
 })();
 </script>
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "befbccb9132f459eb44dd05e676d8832"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics, added only once the page has loaded. Any script in the page,
+     async or not, holds the browser's "load" back until it arrives: with Cloudflare not
+     answering, the loading indicator never stopped (measured 27 November 2026). Added
+     after "load", it holds nothing, and the visit is still counted. -->
+<script>
+addEventListener("load", () => {
+  const s = document.createElement("script");
+  s.defer = true;
+  s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  s.dataset.cfBeacon = '{"token": "befbccb9132f459eb44dd05e676d8832"}';
+  document.head.appendChild(s);
+});
+</script>
 </head>
 <body>
 
@@ -3534,20 +3546,63 @@ if (dock.style.left) restoreDock();
 }
 
 /* ── pictures ───────────────────────────────────────────────────── */
+/* A picture is fetched when it is about to be seen, never at start-up. Every scene used
+   to be written into the hidden Visuals view with its src set, and a browser downloads
+   an image even inside a hidden view: 3 MB on every visit, for pictures nobody had
+   opened (measured 27 November 2026). So a scene's <img> carries data-src, and this
+   sets src when the picture comes within 600px of the screen. A hidden view has no
+   layout, so nothing in it ever comes near: opening Visuals fetches the first scene or
+   two, and the rest as they are scrolled to. A browser without IntersectionObserver
+   gets them all at once, as before. */
+const lazyPics = (() => {
+  const load = img => { img.src = img.dataset.src; img.removeAttribute("data-src"); };
+  if (!("IntersectionObserver" in window))
+    return root => root.querySelectorAll("img[data-src]").forEach(load);
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting){ io.unobserve(e.target); load(e.target); }
+  }), {rootMargin: "600px 0px"});
+  return root => root.querySelectorAll("img[data-src]").forEach(i => io.observe(i));
+})();
+/* A printable sheet's picture (the lossless copy) is fetched only when Print is
+   pressed, and the page prints once it has arrived, or failed. */
+function printSheet(hidden, btn){
+  /* a sheet whose print never happened (cancelled before it opened) must not print too */
+  document.querySelectorAll("body > .printsheet").forEach(s => s.remove());
+  const sheet = hidden.cloneNode(true);
+  sheet.hidden = false;
+  document.body.appendChild(sheet);
+  const label = btn.textContent;
+  const done = () => { sheet.remove(); window.removeEventListener("afterprint", done); };
+  window.addEventListener("afterprint", done);
+  let printed = false;
+  const go = () => {
+    if (printed) return;
+    printed = true;
+    btn.textContent = label; btn.disabled = false;
+    window.print();
+  };
+  const img = sheet.querySelector("img[data-print-src]");
+  if (!img) return go();
+  btn.textContent = "Getting the page ready…"; btn.disabled = true;
+  img.addEventListener("load", go, {once:true});
+  img.addEventListener("error", go, {once:true});
+  img.src = img.dataset.printSrc;
+  if (img.complete && img.naturalWidth) go();
+}
 const SCENE_NAMES = ["animals", "people", "actions", "head", "body", "compound", "outdoors", "positions"];
 async function loadScenes(){
   const box = $("scenes");
   if (!box) return;
-  const parts = [];
-  for (const name of SCENE_NAMES){
+  /* all at once, not one after another: on a slow line each fetch is a round trip */
+  const parts = (await Promise.all(SCENE_NAMES.map(async name => {
     try{
       const r = await fetch(`scenes/${name}.json`, {cache:"no-cache"});
-      if (!r.ok) continue;
-      parts.push(drawScene(name, await r.json()));
-    }catch(e){}
-  }
+      return r.ok ? drawScene(name, await r.json()) : "";
+    }catch(e){ return ""; }
+  }))).filter(Boolean);
   box.innerHTML = parts.join("") || `<p class="scenenote">The visuals could not be loaded.</p>`;
   box.querySelectorAll(".scene").forEach(wireScene);
+  lazyPics(box);
 }
 function drawScene(name, sc){
   /* sc.layout: "labels" puts each word on the picture (a few words, room to spare);
@@ -3573,11 +3628,11 @@ function drawScene(name, sc){
   const label = p => `<b lang="ken"${p.state === "recorded" ? "" : " data-nosay"}>${esc(p.word)}</b>` + (p.english ? `<small>${esc(p.english)}</small>` : "") + mark(p) + also(p) + mine(p);
   const dots = pts.map((p, i) => `<span class="dot" style="${where(p)}" data-i="${i}" data-state="${esc(p.state || "")}" aria-hidden="true">${i + 1}</span>`).join("");
   const lbls = sc.layout === "points" ? "" : pts.map(p => `<span class="lbl" style="${where(p)}">${label(p)}</span>`).join("");
-  const pic = `<div class="pic"><img src="${esc(sc.image)}" alt="${esc(sc.title)}" width="${sc.size[0]}" height="${sc.size[1]}">${lbls}${dots}</div>`;
+  const pic = `<div class="pic"><img data-src="${esc(sc.image)}" loading="lazy" decoding="async" alt="${esc(sc.title)}" width="${sc.size[0]}" height="${sc.size[1]}" style="aspect-ratio:${sc.size[0]}/${sc.size[1]}">${lbls}${dots}</div>`;
   const rows = pts.map((p, i) => `<li data-i="${i}"><span class="n" aria-hidden="true">${i + 1}</span><span>${label(p)}</span></li>`).join("")
     + extra.map(p => `<li class="plain"><span class="n" aria-hidden="true"></span><span>${label(p)}</span></li>`).join("");
   const anyBook = [...pts, ...extra].some(p => p.state === "book");
-  const printPic = `<div class="pic"><img src="${esc(sc.image)}" alt="">${sc.layout === "points"
+  const printPic = `<div class="pic"><img data-print-src="${esc(sc.print_image || sc.image)}" alt="">${sc.layout === "points"
       ? pts.map((p, i) => `<span class="pdot" style="${where(p)}">${i + 1}</span>`).join("")
       : pts.map(p => `<span class="lbl" style="${where(p)}">${label(p)}</span>`).join("")}</div>`;
   const printList = sc.layout === "points" || extra.length
@@ -3625,17 +3680,9 @@ function wireScene(el){
     sayRow(row, d);
     row.scrollIntoView({block:"nearest", behavior:"smooth"});
   }));
-  el.querySelector("[data-print]").addEventListener("click", () => {
-    /* the sheet must sit directly under body for the print rule to show it alone */
-    const sheet = el.querySelector(".printsheet").cloneNode(true);
-    sheet.hidden = false;
-    document.body.appendChild(sheet);
-    const done = () => { sheet.remove(); window.removeEventListener("afterprint", done); };
-    window.addEventListener("afterprint", done);
-    const img = sheet.querySelector("img");
-    const go = () => window.print();
-    if (img.complete) go(); else img.addEventListener("load", go, {once:true});
-  });
+  /* the sheet must sit directly under body for the print rule to show it alone */
+  const pb = el.querySelector("[data-print]");
+  pb.addEventListener("click", () => printSheet(el.querySelector(".printsheet"), pb));
 }
 loadScenes();
 
@@ -3669,7 +3716,7 @@ async function loadHello(){
     at = i;
     const p = sc.panels[i];
     box.querySelector(".cpanel").innerHTML =
-      `<img src="${esc(p.image)}" width="${p.size[0]}" height="${p.size[1]}" alt="${esc(p.name)}: two people greeting each other">`
+      `<img src="${esc(p.image)}" loading="lazy" decoding="async" width="${p.size[0]}" height="${p.size[1]}" alt="${esc(p.name)}: two people greeting each other">`
       + p.bubbles.map(bubble).join("");
     box.querySelector(".ccap").textContent = `${i + 1}  ${p.name}`;
     box.querySelector(".cwords").innerHTML = p.held
@@ -3678,7 +3725,7 @@ async function loadHello(){
     box.querySelectorAll(".cthumbs button").forEach((t, k) => t.setAttribute("aria-pressed", k === i ? "true" : "false"));
   };
   const n = sc.panels.length;
-  const printPic = `<div class="pic"><img src="${esc(sc.print_image)}" alt="">${sc.panels.flatMap(p =>
+  const printPic = `<div class="pic"><img data-print-src="${esc(sc.print_image)}" alt="">${sc.panels.flatMap(p =>
       p.bubbles.map(b => `<span class="pbub" style="left:${b.px}%;top:${b.py}%">${esc(b.word)}${b.state === "book" ? "*" : ""}</span>`)).join("")}</div>`;
   box.innerHTML = `<div class="convo">
       <div class="cpanel"></div>
@@ -3694,15 +3741,8 @@ async function loadHello(){
           : ""}</p></div>
     </div>`;
   box.querySelectorAll(".cthumbs button").forEach((t, k) => t.addEventListener("click", () => show(k)));
-  box.querySelector("[data-print-hello]").addEventListener("click", () => {
-    const sheet = box.querySelector(".printsheet").cloneNode(true);
-    sheet.hidden = false;
-    document.body.appendChild(sheet);
-    const done = () => { sheet.remove(); window.removeEventListener("afterprint", done); };
-    window.addEventListener("afterprint", done);
-    const img = sheet.querySelector("img");
-    if (img.complete) window.print(); else img.addEventListener("load", () => window.print(), {once:true});
-  });
+  const hb = box.querySelector("[data-print-hello]");
+  hb.addEventListener("click", () => printSheet(box.querySelector(".printsheet"), hb));
   show(0);
 }
 loadHello();
